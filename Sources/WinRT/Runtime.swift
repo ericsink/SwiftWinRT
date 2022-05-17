@@ -3,26 +3,13 @@
 
 import CWinRT
 
-@_transparent
-public var RuntimeClass_Windows_System_DispatcherQueueController: String {
-  return withUnsafeBytes(of: CWinRT.RuntimeClass_Windows_System_DispatcherQueueController) {
-    String(decodingCString: $0.baseAddress!.assumingMemoryBound(to: UTF16.CodeUnit.self),
-           as: UTF16.self)
-  }
+// TODO this is a dreadfully bad solution to the problem
+// of needing an initializer for an arbitrary type.
+
+public func defaultValue<T>() -> T {
+    let ptr = UnsafeMutablePointer<T>.allocate(capacity: 1)
+    let retval = ptr.pointee
+    ptr.deallocate()
+    return retval;
 }
 
-@_transparent
-public var RuntimeClass_Windows_System_Profile_SystemIdentification: String {
-  return withUnsafeBytes(of: CWinRT.RuntimeClass_Windows_System_Profile_SystemIdentification) {
-    String(decodingCString: $0.baseAddress!.assumingMemoryBound(to: UTF16.CodeUnit.self),
-           as: UTF16.self)
-  }
-}
-
-@_transparent
-public var RuntimeClass_Windows_Security_Cryptography_CryptographicBuffer: String {
-  return withUnsafeBytes(of: CWinRT.RuntimeClass_Windows_Security_Cryptography_CryptographicBuffer) {
-    String(decodingCString: $0.baseAddress!.assumingMemoryBound(to: UTF16.CodeUnit.self),
-           as: UTF16.self)
-  }
-}

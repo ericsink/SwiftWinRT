@@ -8,8 +8,8 @@ internal protocol Future {
   func get() throws -> ValueType
 }
 
-extension IAsyncAction: Future {
-  private final class CompletedHandler: AsyncActionCompletedHandler {
+extension Windows.Foundation.IAsyncAction: Future {
+  private final class CompletedHandler: Windows.Foundation.AsyncActionCompletedHandler {
     private var hEvent: HANDLE
 
     public init(signal event: HANDLE) {
@@ -17,25 +17,25 @@ extension IAsyncAction: Future {
       super.init()
     }
 
-    override func Invoke(_ asyncInfo: IAsyncAction?,
-                         _ asyncStatus: AsyncStatus) -> HRESULT {
+    override func Invoke(asyncInfo: Windows.Foundation.IAsyncAction?,
+                         asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
       _ = SetEvent(self.hEvent)
       return S_OK
     }
   }
 
   internal func get() throws -> Void {
-    let info: IAsyncInfo = try QueryInterface()
-    if try info.Status == CWinRT.Started {
+    let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+    if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
       let event: HANDLE =
           CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
       // TODO(compnerd) validate event
       defer { _ = CloseHandle(event) }
 
-      let completion: AsyncActionCompletedHandler =
-          IAsyncAction.CompletedHandler(signal: event)
+      let completion: Windows.Foundation.AsyncActionCompletedHandler =
+          Windows.Foundation.IAsyncAction.CompletedHandler(signal: event)
       try withExtendedLifetime(completion) {
-        try self.put_Completed(RawPointer(Interface(completion)))
+        try self.put_Completed(handler: completion.Interface())
         _ = WaitForSingleObject(event, INFINITE)
       }
     }

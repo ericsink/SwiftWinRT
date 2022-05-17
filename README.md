@@ -1,11 +1,70 @@
+
+Notes on this fork
+-----------
+
+This fork of compnerd/SwiftWinRT contains some work
+I've been doing toward automatic generation of the
+Swift bindings for WinRT.
+
+As much as possible, I have tried to avoid modifying
+the contents of this repo.  Quite a few things are
+unchanged.
+
+The `ABI` directory from the original repo has been
+removed, as all that stuff has been replaced with 
+automatically generated code.
+
+The generated code is in `Sources/WinRT/sg`.  Also,
+`Sources/CWinRT/include/W.h`.
+
+This fork does not rely on the `__x__ABI` prefixed
+symbols from the WinRT header files.  I started
+with that approach, but I was constantly running
+into problems where things were missing from
+the headers, so I changed course and added code
+to generate my own header file, which is the `Sources/CWinRT/include/W.h`
+file mentioned above.  The symbols defined there use a different
+prefix, to avoid confusion.
+
+Currently, the generated code is still only a small
+portion of the WinRT API surface.  The main problem
+is that if I generate everything, I get a lot of
+build problems because of the sheer size.  The resulting library exceeds the limit of 65535 exported
+symbols.  Also, if I break things up into one file per
+namespace, the resulting `swiftc` command line exceeds
+the 32KB limit, and if I put everything in one file,
+the build takes a VERY long time.  I'll log an issue
+to discuss these problems in more detail.
+
+So as a possibly-temporary solution, my generator has
+an ugly config setting where I can declare which methods
+I want to call, and the generator outputs only those
+methods plus anything they require.  Currently,
+the config is setup to include everything needed by
+the 3 samples here, and not much else.
+
+The code generator currently cannot handle anything
+with generic/parameterized types.
+
+The original repo says it requires a pre-release
+toolchain, but some time has passed, and I'm using
+the Swift 5.6.1 release without problems.
+
+The two original samples are still here and have been
+modified a little bit to build with the new bindings.
+
+A new Toast sample has been added.  It just displays
+a toast notification.
+
+The generator itself is not here, and is (currently)
+not open souce, sorry.
+
+The original README content:
+
 Swift/WinRT
 -----------
 
-<p align="center">
-  <a href="https://github.com/compnerd/SwiftWinRT/actions?query=workflow%3Aci">
-    <img alt="CI Status" src="https://github.com/compnerd/SwiftWinRT/actions/workflows/ci.yml/badge.svg">
-  </a>
-</p>
+(CI badge deleted here)
 
 Bridging to WinRT (Windows Runtime) to [Swift](https://www.swift.org).
 

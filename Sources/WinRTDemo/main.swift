@@ -8,17 +8,18 @@ class WinRTDemo {
   public static func main() throws {
     try RoInitialize()
 
-    let buffer: ISystemIdentificationInfo =
-        try Windows.System.Profile.SystemIdentification.GetSystemIdForPublisher()
+    let buffer: Windows.System.Profile.ISystemIdentificationInfo =
+        try Windows.System.Profile.SystemIdentificationStatics.GetSystemIdForPublisher()!
 
-    let id: IBuffer = try buffer.Id
+    let id: Windows.Storage.Streams.IBuffer = try buffer.Id!
 
     let hex: String =
-        try Windows.Security.Cryptography.CryptographicBuffer.EncodeToHexString(id)
+        try Windows.Security.Cryptography.CryptographicBufferStatics.EncodeToHexString(buffer: id)
     let base64: String =
-        try Windows.Security.Cryptography.CryptographicBuffer.EncodeToBase64String(id)
+        try Windows.Security.Cryptography.CryptographicBufferStatics.EncodeToBase64String(buffer: id)
 
     print("System ID for Publisher [hex]: \(hex)")
     print("System ID for Publisher [base64]: \(base64)")
   }
 }
+

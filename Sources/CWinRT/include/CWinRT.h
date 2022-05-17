@@ -12,10 +12,8 @@
 #include <roapi.h>
 #include <winstring.h>
 
-#include <windows.system.h>
-#include <windows.system.profile.h>
-
-#include <windows.security.cryptography.h>
+// the following file contains stuff that is automatically generated from winmd
+#include <W.h>
 
 #pragma comment(lib, "runtimeobject")
 

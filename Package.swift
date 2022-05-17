@@ -7,13 +7,19 @@ let SwiftWinRT = Package(
   products: [
     .executable(name: "WinRTDemo", targets: ["WinRTDemo"]),
     .executable(name: "WinRTAsyncDemo", targets: ["WinRTAsyncDemo"]),
-    .library(name: "SwiftWinRT", type: .dynamic, targets: ["WinRT"]),
+    .executable(name: "WinRTToastDemo", targets: ["WinRTToastDemo"]),
+    .library(name: "SwiftWinRT", targets: ["WinRT"]),
   ],
   targets: [
     .target(name: "CWinRT"),
     .target(name: "WinRT", dependencies: ["CWinRT"],
+            exclude: ["sg/README.md"],
             linkerSettings: [
               .linkedLibrary("Ole32"),
+            ]),
+    .target(name: "WinRTToastDemo", dependencies: ["WinRT"],
+            swiftSettings: [
+              .unsafeFlags(["-parse-as-library"]),
             ]),
     .target(name: "WinRTAsyncDemo", dependencies: ["WinRT"],
             swiftSettings: [
