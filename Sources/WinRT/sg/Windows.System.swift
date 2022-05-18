@@ -77,9 +77,9 @@ public class IUser
 // method not needed: get_NonRoamableId
 // method not needed: get_AuthenticationStatus
 // method not needed: get_Type
-// TODO COPE (write_all_methods) (generic) Windows.Foundation.IAsyncOperation<System.Object> GetPropertyAsync(System.String)
-// TODO COPE (write_all_methods) (generic) Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IPropertySet> GetPropertiesAsync(Windows.Foundation.Collections.IVectorView<System.String>)
-// TODO COPE (write_all_methods) (generic) Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamReference> GetPictureAsync(Windows.System.UserPictureSize)
+// method not needed: GetPropertyAsync
+// method not needed: GetPropertiesAsync
+// method not needed: GetPictureAsync
 } // IUser
 
 

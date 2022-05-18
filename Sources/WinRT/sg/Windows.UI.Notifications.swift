@@ -13,13 +13,13 @@ public class IToastNotification
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x997e2675, Data2: 0x059e, Data3 : 0x4e60, Data4 : (0x8b, 0x06, 0x17, 0x60, 0x91, 0x7c, 0x8b, 0x80)) }
 // method not needed: get_Content
-// TODO COPE (write_all_methods) (generic) [IsSpecialName] void put_ExpirationTime(Windows.Foundation.IReference<Windows.Foundation.DateTime>)
-// TODO COPE (write_all_methods) (generic) [IsSpecialName] Windows.Foundation.IReference<Windows.Foundation.DateTime> get_ExpirationTime()
-// TODO COPE (write_all_methods) (generic) [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Dismissed(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastDismissedEventArgs>)
+// method not needed: put_ExpirationTime
+// method not needed: get_ExpirationTime
+// method not needed: add_Dismissed
 // method not needed: remove_Dismissed
-// TODO COPE (write_all_methods) (generic) [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Activated(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,System.Object>)
+// method not needed: add_Activated
 // method not needed: remove_Activated
-// TODO COPE (write_all_methods) (generic) [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Failed(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastFailedEventArgs>)
+// method not needed: add_Failed
 // method not needed: remove_Failed
 } // IToastNotification
 
@@ -91,7 +91,7 @@ public class IToastNotifier
 // method not needed: get_Setting
 // method not needed: AddToSchedule
 // method not needed: RemoveFromSchedule
-// TODO COPE (write_all_methods) (generic) Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledToastNotification> GetScheduledToastNotifications()
+// method not needed: GetScheduledToastNotifications
 } // IToastNotifier
 
 
