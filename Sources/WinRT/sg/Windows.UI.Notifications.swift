@@ -32,13 +32,13 @@ public class IToastNotificationFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x04124b20, Data2: 0x82c6, Data3 : 0x4229, Data4 : (0xb1, 0x09, 0xfd, 0x9e, 0xd4, 0x66, 0x2b, 0x53)) }
     // Windows.UI.Notifications.ToastNotification CreateToastNotification(Windows.Data.Xml.Dom.XmlDocument)
-    public func _n_CreateToastNotification(_ content : Optional<UnsafeMutablePointer<__q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<__q_CWindows_CUI_CNotifications_CIToastNotification>>>?) throws {
-        return try perform(as: __q_CWindows_CUI_CNotifications_CIToastNotificationFactory.self) { pThis in
+    public func _n_CreateToastNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>>?) throws {
+        return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotification(pThis, content, __presult))
         }
     }
     public func CreateToastNotification(content : Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument>) throws -> Optional<WinRT.Windows.UI.Notifications.IToastNotification> {
-        var __result : Optional<UnsafeMutablePointer<__q_CWindows_CUI_CNotifications_CIToastNotification>> = nil;
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>> = nil;
         try self._n_CreateToastNotification(RawPointer(content), &__result);
         return WinRT.Windows.UI.Notifications.IToastNotification(consuming: __result);
     }
@@ -54,15 +54,15 @@ public class IToastNotificationManagerStatics
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x50ac103f, Data2: 0xd235, Data3 : 0x4598, Data4 : (0xbb, 0xef, 0x98, 0xfe, 0x4d, 0x1a, 0x3a, 0xd4)) }
 // method not needed: CreateToastNotifier
     // Windows.UI.Notifications.ToastNotifier CreateToastNotifier(System.String)
-    public func _n_CreateToastNotifierWithId(_ applicationId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<__q_CWindows_CUI_CNotifications_CIToastNotifier>>>?) throws {
-        return try perform(as: __q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics.self) { pThis in
+    public func _n_CreateToastNotifierWithId(_ applicationId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>>?) throws {
+        return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotifierWithId(pThis, applicationId, __presult))
         }
     }
     public func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.IToastNotifier> {
         let __hstr_applicationId = try HString(applicationId);
         return try withExtendedLifetime(__hstr_applicationId) {
-        var __result : Optional<UnsafeMutablePointer<__q_CWindows_CUI_CNotifications_CIToastNotifier>> = nil;
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>> = nil;
         try self._n_CreateToastNotifierWithId(__hstr_applicationId.hRef.hString, &__result);
         return WinRT.Windows.UI.Notifications.IToastNotifier(consuming: __result);
         }
@@ -79,8 +79,8 @@ public class IToastNotifier
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x75927b93, Data2: 0x03f3, Data3 : 0x41ec, Data4 : (0x91, 0xd3, 0x6e, 0x5b, 0xac, 0x1b, 0x38, 0xe7)) }
     // void Show(Windows.UI.Notifications.ToastNotification)
-    public func _n_Show(_ notification : Optional<UnsafeMutablePointer<__q_CWindows_CUI_CNotifications_CIToastNotification>>) throws {
-        return try perform(as: __q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
+    public func _n_Show(_ notification : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>) throws {
+        return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Show(pThis, notification))
         }
     }

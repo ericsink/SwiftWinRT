@@ -29,8 +29,8 @@ public class ICryptographicBufferStatics
 // method not needed: CopyToByteArray
 // method not needed: DecodeFromHexString
     // System.String EncodeToHexString(Windows.Storage.Streams.IBuffer)
-    public func _n_EncodeToHexString(_ buffer : Optional<UnsafeMutablePointer<__q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: __q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
+    public func _n_EncodeToHexString(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.EncodeToHexString(pThis, buffer, __presult))
         }
     }
@@ -41,8 +41,8 @@ public class ICryptographicBufferStatics
     }
 // method not needed: DecodeFromBase64String
     // System.String EncodeToBase64String(Windows.Storage.Streams.IBuffer)
-    public func _n_EncodeToBase64String(_ buffer : Optional<UnsafeMutablePointer<__q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: __q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
+    public func _n_EncodeToBase64String(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.EncodeToBase64String(pThis, buffer, __presult))
         }
     }

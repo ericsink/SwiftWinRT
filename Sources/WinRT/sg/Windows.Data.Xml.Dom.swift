@@ -41,7 +41,7 @@ public class IXmlDocumentIO
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6cd0e74e, Data2: 0xee65, Data3 : 0x4489, Data4 : (0x9e, 0xbf, 0xca, 0x43, 0xe8, 0x7b, 0xa6, 0x37)) }
     // void LoadXml(System.String)
     public func _n_LoadXml(_ xml : Optional<HSTRING>) throws {
-        return try perform(as: __q_CWindows_CData_CXml_CDom_CIXmlDocumentIO.self) { pThis in
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXml(pThis, xml))
         }
     }

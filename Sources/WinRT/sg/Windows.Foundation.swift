@@ -5,6 +5,151 @@
 import CWinRT;
 
 extension Windows.Foundation {
+// closed interface type
+public class IAsyncOperation_1_boolean
+    :
+    WinRT.IInspectable
+{
+    // TODO IID
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<bool>)
+    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean>) throws {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<bool> get_Completed()
+    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>> = nil;
+        try self._n_get_Completed(&__result);
+        return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean(consuming: __result);
+    }
+    // bool GetResults()
+    public func _n_GetResults(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_GetResults(&__result);
+        return __result;
+    }
+} // IAsyncOperation_1_boolean
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1_boolean
+    :
+    WinRT.IInspectable
+{
+    // TODO IID
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<bool>, Windows.Foundation.AsyncStatus)
+    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1_boolean
+// closed generic delegate type
+public class _abstract_IAsyncOperationCompletedHandler_1_boolean
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_booleanVtbl = .init(
+    QueryInterface: {
+    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+    return E_INVALIDARG
+    }
+    switch riid.pointee {
+    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean.IID:
+    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+    return S_OK
+    default:
+    ppvObject.pointee = nil
+    return E_NOINTERFACE
+    }
+    },
+    AddRef: {
+    let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
+    _ = instance?.retain()
+    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+    },
+    Release: {
+    let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
+    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+    },
+    Invoke: {
+    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+    guard let self = _abstract_IAsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
+    return E_INVALIDARG
+    }
+    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
+    }
+    )
+    private struct WithTrailingObjects {
+    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean
+    public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), wrapper: nil)
+    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
+    }
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>? {
+    return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
+    return S_OK
+    }
+    internal func Interface()
+    -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
+    return withUnsafeMutablePointer(to: &self.instance.super) {
+    WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean(UnsafeMutableRawPointer($0))
+    }
+}
+}
+}
+extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
+    private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1_boolean {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperation_1_boolean?,
+            asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
+            _ = SetEvent(self.hEvent)
+            return S_OK
+        }
+}
+        internal func get() throws -> boolean {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1_boolean =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension Windows.Foundation {
 // type: Windows.Foundation.AsyncActionCompletedHandler
 // delegate type
 open class IAsyncActionCompletedHandler
@@ -13,19 +158,78 @@ open class IAsyncActionCompletedHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa4ed5c81, Data2: 0x76c9, Data3 : 0x40bd, Data4 : (0x8b, 0xe6, 0xb1, 0xd9, 0x0f, 0xb2, 0x0a, 0xe7)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncAction, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<__q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : __q_CWindows_CFoundation_CAsyncStatus) throws {
-        return try perform(as: __q_CWindows_CFoundation_CIAsyncActionCompletedHandler.self) { pThis in
+    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : __q_CWindows_CFoundation_CAsyncStatus) throws {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
+}
+// closed generic delegate type
+public class _abstract_AsyncActionCompletedHandler
+{
+    private static var vtable: _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl = .init(
+    QueryInterface: {
+    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+    return E_INVALIDARG
+    }
+    switch riid.pointee {
+    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncActionCompletedHandler.IID:
+    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+    return S_OK
+    default:
+    ppvObject.pointee = nil
+    return E_NOINTERFACE
+    }
+    },
+    AddRef: {
+    let instance = _abstract_AsyncActionCompletedHandler.from($0)
+    _ = instance?.retain()
+    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+    },
+    Release: {
+    let instance = _abstract_AsyncActionCompletedHandler.from($0)
+    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+    },
+    Invoke: {
+    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+    guard let self = _abstract_AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
+    return E_INVALIDARG
+    }
+    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
+    }
+    )
+    private struct WithTrailingObjects {
+    public var `super`: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler
+    public var wrapper: Unmanaged<_abstract_AsyncActionCompletedHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+    self.instance = WithTrailingObjects(super: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), wrapper: nil)
+    self.instance.wrapper = Unmanaged<_abstract_AsyncActionCompletedHandler>.passUnretained(self)
+    }
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_AsyncActionCompletedHandler>? {
+    return pUnk?.bindMemory(to: _abstract_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
+    return S_OK
+    }
+    internal func Interface()
+    -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
+    return withUnsafeMutablePointer(to: &self.instance.super) {
+    WinRT.Windows.Foundation.IAsyncActionCompletedHandler(UnsafeMutableRawPointer($0))
+    }
+}
 }
 
 // type: Windows.Foundation.AsyncStatus
 // enum type
-public typealias AsyncStatus = __q_CWindows_CFoundation_CAsyncStatus;
+public typealias AsyncStatus = _q_CWindows_CFoundation_CAsyncStatus;
 
 // type: Windows.Foundation.IAsyncAction
 // interface type
@@ -35,8 +239,8 @@ public class IAsyncAction
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5a648006, Data2: 0x843a, Data3 : 0x4da9, Data4 : (0x86, 0x5b, 0x9d, 0x26, 0xe5, 0xdf, 0xad, 0x7b)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncActionCompletedHandler)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<__q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>) throws {
-        return try perform(as: __q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
+    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
     }
@@ -44,19 +248,19 @@ public class IAsyncAction
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncActionCompletedHandler get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<__q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>>?) throws {
-        return try perform(as: __q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
+    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
     }
     public func get_Completed() throws -> Optional<WinRT.Windows.Foundation.IAsyncActionCompletedHandler> {
-        var __result : Optional<UnsafeMutablePointer<__q_CWindows_CFoundation_CIAsyncActionCompletedHandler>> = nil;
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>> = nil;
         try self._n_get_Completed(&__result);
         return WinRT.Windows.Foundation.IAsyncActionCompletedHandler(consuming: __result);
     }
     // void GetResults()
     public func _n_GetResults() throws {
-        return try perform(as: __q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis))
         }
     }
@@ -80,20 +284,20 @@ public class IAsyncInfo
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x00000036, Data2: 0x0000, Data3 : 0x0000, Data4 : (0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46)) }
 // method not needed: get_Id
     // [IsSpecialName] Windows.Foundation.AsyncStatus get_Status()
-    public func _n_get_Status(_ __presult: UnsafeMutablePointer<__q_CWindows_CFoundation_CAsyncStatus>?) throws {
-        return try perform(as: __q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
+    public func _n_get_Status(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CAsyncStatus>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Status(pThis, __presult))
         }
     }
-    public func get_Status() throws -> __q_CWindows_CFoundation_CAsyncStatus {
-        var __result : __q_CWindows_CFoundation_CAsyncStatus = defaultValue();
+    public func get_Status() throws -> _q_CWindows_CFoundation_CAsyncStatus {
+        var __result : _q_CWindows_CFoundation_CAsyncStatus = defaultValue();
         try self._n_get_Status(&__result);
         return __result;
     }
 // method not needed: get_ErrorCode
 // method not needed: Cancel
 // method not needed: Close
-    public var Status : __q_CWindows_CFoundation_CAsyncStatus {
+    public var Status : _q_CWindows_CFoundation_CAsyncStatus {
         get throws {
             return try get_Status();
         }
@@ -101,26 +305,29 @@ public class IAsyncInfo
 } // IAsyncInfo
 
 
+// type: Windows.Foundation.IAsyncOperation`1
+// TODO generic interface: Windows.Foundation.IAsyncOperation`1
+
 }
 extension WinRT.Windows.Foundation.AsyncStatus {
     public static var Canceled : Self {
         get {
-            return __q_CWindows_CFoundation_CAsyncStatus_Canceled;
+            return _q_CWindows_CFoundation_CAsyncStatus_Canceled;
         }
     }
     public static var Completed : Self {
         get {
-            return __q_CWindows_CFoundation_CAsyncStatus_Completed;
+            return _q_CWindows_CFoundation_CAsyncStatus_Completed;
         }
     }
     public static var Error : Self {
         get {
-            return __q_CWindows_CFoundation_CAsyncStatus_Error;
+            return _q_CWindows_CFoundation_CAsyncStatus_Error;
         }
     }
     public static var Started : Self {
         get {
-            return __q_CWindows_CFoundation_CAsyncStatus_Started;
+            return _q_CWindows_CFoundation_CAsyncStatus_Started;
         }
     }
 }

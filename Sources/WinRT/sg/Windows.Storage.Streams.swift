@@ -27,12 +27,25 @@ public class IOutputStream
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe6, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
 // method not needed: WriteAsync
     // Windows.Foundation.IAsyncOperation<bool> FlushAsync()
-    public func _n_FlushAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<__cg_IAsyncOperation_1_boolean>>>?) throws {
-        return try perform(as: __q_CWindows_CStorage_CStreams_CIOutputStream.self) { pThis in
+    public func _n_FlushAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIOutputStream.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FlushAsync(pThis, __presult))
         }
     }
-// TODO COPE (generic): Windows.Foundation.IAsyncOperation<bool> FlushAsync()
+    public func FlushAsync() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
+        try self._n_FlushAsync(&__result);
+        return WinRT.Windows.Foundation.IAsyncOperation_1_boolean(consuming: __result);
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
 } // IOutputStream
 
 
