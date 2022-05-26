@@ -5,9 +5,9 @@ import PackageDescription
 let SwiftWinRT = Package(
   name: "SwiftWinRT",
   products: [
-    .executable(name: "WinRTDemo", targets: ["WinRTDemo"]),
-    .executable(name: "WinRTAsyncDemo", targets: ["WinRTAsyncDemo"]),
-    .executable(name: "WinRTToastDemo", targets: ["WinRTToastDemo"]),
+    .executable(name: "SystemIdentification", targets: ["SystemIdentification"]),
+    .executable(name: "DispatcherQueue", targets: ["DispatcherQueue"]),
+    .executable(name: "Toast", targets: ["Toast"]),
     .executable(name: "HttpClient", targets: ["HttpClient"]),
     .library(name: "SwiftWinRT", targets: ["WinRT"]),
   ],
@@ -22,15 +22,15 @@ let SwiftWinRT = Package(
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ]),
-    .target(name: "WinRTToastDemo", dependencies: ["WinRT"],
+    .target(name: "Toast", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ]),
-    .target(name: "WinRTAsyncDemo", dependencies: ["WinRT"],
+    .target(name: "DispatcherQueue", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ]),
-    .target(name: "WinRTDemo", dependencies: ["WinRT"],
+    .target(name: "SystemIdentification", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ]),
