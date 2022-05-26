@@ -45,7 +45,7 @@ public class IXmlDocumentIO
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXml(pThis, xml))
         }
     }
-    public func LoadXml(xml : Swift.String) throws {
+    public func LoadXml(xml : Swift.String) throws -> Void {
         let __hstr_xml = try HString(xml);
         return try withExtendedLifetime(__hstr_xml) {
         try self._n_LoadXml(__hstr_xml.hRef.hString);
@@ -58,6 +58,43 @@ public class IXmlDocumentIO
 
 // type: Windows.Data.Xml.Dom.XmlDocument
 // runtime class
-// TODO not needed: Windows.Data.Xml.Dom.IXmlDocumentStatics
+public class XmlDocument
+{
+    public init() throws {
+        _self = try RoActivateInstance(HString("Windows.Data.Xml.Dom.XmlDocument"))
+        _IXmlDocument = try _self.QueryInterface();
+        _IXmlDocumentIO = try _self.QueryInterface();
+    }
+    // static interface not needed: Windows.Data.Xml.Dom.IXmlDocumentStatics
+    private var _self : IInspectable;
+    public var _IXmlDocument : IXmlDocument;
+    // method not needed: get_Doctype
+    // method not needed: get_Implementation
+    // method not needed: get_DocumentElement
+    // method not needed: CreateElement
+    // method not needed: CreateDocumentFragment
+    // method not needed: CreateTextNode
+    // method not needed: CreateComment
+    // method not needed: CreateProcessingInstruction
+    // method not needed: CreateAttribute
+    // method not needed: CreateEntityReference
+    // method not needed: GetElementsByTagName
+    // method not needed: CreateCDataSection
+    // method not needed: get_DocumentUri
+    // method not needed: CreateAttributeNS
+    // method not needed: CreateElementNS
+    // method not needed: GetElementById
+    // method not needed: ImportNode
+    // instance interface not needed: Windows.Data.Xml.Dom.IXmlNode
+    // instance interface not needed: Windows.Data.Xml.Dom.IXmlNodeSerializer
+    // instance interface not needed: Windows.Data.Xml.Dom.IXmlNodeSelector
+    public var _IXmlDocumentIO : IXmlDocumentIO;
+    public func LoadXml(xml : Swift.String) throws -> Void {
+        return try _IXmlDocumentIO.LoadXml(xml: xml);
+    }
+    // method not needed: LoadXml
+    // method not needed: SaveToFileAsync
+    // instance interface not needed: Windows.Data.Xml.Dom.IXmlDocumentIO2
+}
 
 }

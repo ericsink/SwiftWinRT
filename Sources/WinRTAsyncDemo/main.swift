@@ -9,7 +9,7 @@ class WinRTAsyncDemo {
     try RoInitialize()
 
     let controller: Windows.System.IDispatcherQueueController =
-        try Windows.System.DispatcherQueueControllerStatics.CreateOnDedicatedThread()!
+        try Windows.System.DispatcherQueueController.CreateOnDedicatedThread()!
 
     try await controller.ShutdownQueue()
 

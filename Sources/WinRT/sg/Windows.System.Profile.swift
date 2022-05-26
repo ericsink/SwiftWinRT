@@ -65,16 +65,29 @@ public class ISystemIdentificationStatics
 
 
 // type: Windows.System.Profile.SystemIdentification
-// runtime class
-private struct _ISystemIdentificationStatics {
-static var x : ISystemIdentificationStatics =
-    try! RoGetActivationFactory(HString("Windows.System.Profile.SystemIdentification"))
-}
-public static var SystemIdentificationStatics : ISystemIdentificationStatics {
-    _ISystemIdentificationStatics.x
+// static class
+// static class
+public class SystemIdentification
+{
+    private struct _ISystemIdentificationStatics {
+        static var x : ISystemIdentificationStatics =
+            try! RoGetActivationFactory(HString("Windows.System.Profile.SystemIdentification"))
+    }
+    public static var SystemIdentificationStatics : ISystemIdentificationStatics {
+        _ISystemIdentificationStatics.x
+    }
+    public static func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
+        return try SystemIdentificationStatics.GetSystemIdForPublisher();
+    }
+    public static func GetSystemIdForUser(user : Optional<WinRT.Windows.System.IUser>) throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
+        return try SystemIdentificationStatics.GetSystemIdForUser(user: user);
+    }
 }
 
 // type: Windows.System.Profile.SystemIdentificationInfo
 // runtime class
+public class SystemIdentificationInfo
+{
+}
 
 }

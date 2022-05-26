@@ -8,6 +8,7 @@ let SwiftWinRT = Package(
     .executable(name: "WinRTDemo", targets: ["WinRTDemo"]),
     .executable(name: "WinRTAsyncDemo", targets: ["WinRTAsyncDemo"]),
     .executable(name: "WinRTToastDemo", targets: ["WinRTToastDemo"]),
+    //.executable(name: "HttpClient", targets: ["HttpClient"]),
     .library(name: "SwiftWinRT", targets: ["WinRT"]),
   ],
   targets: [
@@ -17,6 +18,10 @@ let SwiftWinRT = Package(
             linkerSettings: [
               .linkedLibrary("Ole32"),
             ]),
+    //.target(name: "HttpClient", dependencies: ["WinRT"],
+            //swiftSettings: [
+              //.unsafeFlags(["-parse-as-library"]),
+            //]),
     .target(name: "WinRTToastDemo", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),

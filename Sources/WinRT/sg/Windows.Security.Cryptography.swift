@@ -6,13 +6,32 @@ import CWinRT;
 
 extension Windows.Security.Cryptography {
 // type: Windows.Security.Cryptography.CryptographicBuffer
-// runtime class
-private struct _ICryptographicBufferStatics {
-static var x : ICryptographicBufferStatics =
-    try! RoGetActivationFactory(HString("Windows.Security.Cryptography.CryptographicBuffer"))
-}
-public static var CryptographicBufferStatics : ICryptographicBufferStatics {
-    _ICryptographicBufferStatics.x
+// static class
+// static class
+public class CryptographicBuffer
+{
+    private struct _ICryptographicBufferStatics {
+        static var x : ICryptographicBufferStatics =
+            try! RoGetActivationFactory(HString("Windows.Security.Cryptography.CryptographicBuffer"))
+    }
+    public static var CryptographicBufferStatics : ICryptographicBufferStatics {
+        _ICryptographicBufferStatics.x
+    }
+// method not needed: Compare
+// method not needed: GenerateRandom
+// method not needed: GenerateRandomNumber
+// method not needed: CreateFromByteArray
+// method not needed: CopyToByteArray
+// method not needed: DecodeFromHexString
+    public static func EncodeToHexString(buffer : Optional<WinRT.Windows.Storage.Streams.IBuffer>) throws -> Swift.String {
+        return try CryptographicBufferStatics.EncodeToHexString(buffer: buffer);
+    }
+// method not needed: DecodeFromBase64String
+    public static func EncodeToBase64String(buffer : Optional<WinRT.Windows.Storage.Streams.IBuffer>) throws -> Swift.String {
+        return try CryptographicBufferStatics.EncodeToBase64String(buffer: buffer);
+    }
+// method not needed: ConvertStringToBinary
+// method not needed: ConvertBinaryToString
 }
 
 // type: Windows.Security.Cryptography.ICryptographicBufferStatics

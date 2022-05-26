@@ -7,12 +7,18 @@ import CWinRT;
 extension Windows.System {
 // type: Windows.System.DispatcherQueueController
 // runtime class
-private struct _IDispatcherQueueControllerStatics {
-static var x : IDispatcherQueueControllerStatics =
-    try! RoGetActivationFactory(HString("Windows.System.DispatcherQueueController"))
-}
-public static var DispatcherQueueControllerStatics : IDispatcherQueueControllerStatics {
-    _IDispatcherQueueControllerStatics.x
+public class DispatcherQueueController
+{
+    private struct _IDispatcherQueueControllerStatics {
+        static var x : IDispatcherQueueControllerStatics =
+            try! RoGetActivationFactory(HString("Windows.System.DispatcherQueueController"))
+    }
+    public static var DispatcherQueueControllerStatics : IDispatcherQueueControllerStatics {
+        _IDispatcherQueueControllerStatics.x
+    }
+    public static func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.IDispatcherQueueController> {
+        return try DispatcherQueueControllerStatics.CreateOnDedicatedThread();
+    }
 }
 
 // type: Windows.System.IDispatcherQueueController
@@ -85,6 +91,9 @@ public class IUser
 
 // type: Windows.System.User
 // runtime class
-// TODO not needed: Windows.System.IUserStatics
+public class User
+{
+    // static interface not needed: Windows.System.IUserStatics
+}
 
 }

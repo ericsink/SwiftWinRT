@@ -17,7 +17,7 @@ public class IAsyncOperation_1_boolean
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
     }
-    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean>) throws {
+    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean>) throws -> Void {
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<bool> get_Completed()
@@ -42,6 +42,11 @@ public class IAsyncOperation_1_boolean
         try self._n_GetResults(&__result);
         return __result;
     }
+    public var Completed : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean> {
+        get throws {
+            return try get_Completed();
+        }
+    }
 } // IAsyncOperation_1_boolean
 // closed generic delegate type
 public class IAsyncOperationCompletedHandler_1_boolean
@@ -55,7 +60,7 @@ public class IAsyncOperationCompletedHandler_1_boolean
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationCompletedHandler_1_boolean
@@ -163,7 +168,7 @@ open class IAsyncActionCompletedHandler
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 }
@@ -244,7 +249,7 @@ public class IAsyncAction
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
     }
-    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncActionCompletedHandler>) throws {
+    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncActionCompletedHandler>) throws -> Void {
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncActionCompletedHandler get_Completed()
@@ -264,7 +269,7 @@ public class IAsyncAction
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis))
         }
     }
-    public func GetResults() throws {
+    public func GetResults() throws -> Void {
         try self._n_GetResults();
     }
     public var Completed : Optional<WinRT.Windows.Foundation.IAsyncActionCompletedHandler> {
