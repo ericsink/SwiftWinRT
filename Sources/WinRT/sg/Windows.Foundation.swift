@@ -96,7 +96,6 @@ public class _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundatio
         guard let self = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(asyncInfo), asyncStatus: asyncStatus)
     }
     )
@@ -214,7 +213,6 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
         guard let self = _abstract_IAsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_IAsyncOperationCompletedHandler_1_boolean")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
     }
     )
@@ -357,7 +355,6 @@ public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_C
         guard let self = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
     }
     )
@@ -440,7 +437,6 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
         guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
     }
     )
@@ -583,7 +579,6 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
         guard let self = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
     }
     )
@@ -658,7 +653,6 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
         guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
     }
     )
@@ -856,7 +850,6 @@ public class _abstract_AsyncActionCompletedHandler
         guard let self = _abstract_AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        print("INVOKE on _abstract_AsyncActionCompletedHandler")
         return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
     }
     )
