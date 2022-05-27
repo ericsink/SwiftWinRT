@@ -6,28 +6,28 @@ typedef struct _q_CWindows_CFoundation_CIAsyncActionCompletedHandler _q_CWindows
 // enums
 typedef enum _q_CWindows_CFoundation_CAsyncStatus
 {
-    _q_CWindows_CFoundation_CAsyncStatus_Canceled,
-    _q_CWindows_CFoundation_CAsyncStatus_Completed,
-    _q_CWindows_CFoundation_CAsyncStatus_Error,
-    _q_CWindows_CFoundation_CAsyncStatus_Started,
+    _q_CWindows_CFoundation_CAsyncStatus_Canceled = 2,
+    _q_CWindows_CFoundation_CAsyncStatus_Completed = 1,
+    _q_CWindows_CFoundation_CAsyncStatus_Error = 3,
+    _q_CWindows_CFoundation_CAsyncStatus_Started = 0,
 } _q_CWindows_CFoundation_CAsyncStatus;
 typedef enum _q_CWindows_CNetworking_CHostNameSortOptions
 {
-    _q_CWindows_CNetworking_CHostNameSortOptions_None,
-    _q_CWindows_CNetworking_CHostNameSortOptions_OptimizeForLongConnections,
+    _q_CWindows_CNetworking_CHostNameSortOptions_None = 0,
+    _q_CWindows_CNetworking_CHostNameSortOptions_OptimizeForLongConnections = 2,
 } _q_CWindows_CNetworking_CHostNameSortOptions;
 typedef enum _q_CWindows_CWeb_CHttp_CHttpProgressStage
 {
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_None,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_DetectingProxy,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ResolvingName,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ConnectingToServer,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_NegotiatingSsl,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_SendingHeaders,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_SendingContent,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_WaitingForResponse,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ReceivingHeaders,
-    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ReceivingContent,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_None = 0,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_DetectingProxy = 10,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ResolvingName = 20,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ConnectingToServer = 30,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_NegotiatingSsl = 40,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_SendingHeaders = 50,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_SendingContent = 60,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_WaitingForResponse = 70,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ReceivingHeaders = 80,
+    _q_CWindows_CWeb_CHttp_CHttpProgressStage_ReceivingContent = 90,
 } _q_CWindows_CWeb_CHttp_CHttpProgressStage;
 // forward decls for value types
 typedef struct _q_CWindows_CWeb_CHttp_CHttpProgress _q_CWindows_CWeb_CHttp_CHttpProgress;

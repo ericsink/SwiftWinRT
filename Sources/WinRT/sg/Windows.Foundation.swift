@@ -10,7 +10,7 @@ public class IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xafc2ff8e, Data2: 0xe393, Data3 : 0x566a, Data4 : (0x89, 0xc4, 0xd0, 0x43, 0xe9, 0x40, 0x05, 0x0d)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>>)
     public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.self) { pThis in
@@ -53,7 +53,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x20d6faab, Data2: 0x3b8e, Data3 : 0x5a1f, Data4 : (0x83, 0x97, 0xb0, 0x1c, 0xb2, 0x19, 0xa1, 0x8d)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>>, Windows.Foundation.AsyncStatus)
     public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.self) { pThis in
@@ -69,66 +69,66 @@ public class _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundatio
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-    guard let self = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(asyncInfo), asyncStatus: asyncStatus)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(asyncInfo), asyncStatus: asyncStatus)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-    public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>?
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
+        public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>? {
-    return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 // closed interface type
 public class IAsyncOperation_1_boolean
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcdb5efb3, Data2: 0x5788, Data3 : 0x509d, Data4 : (0x9b, 0xe1, 0x71, 0xcc, 0xb8, 0xa3, 0x36, 0x2a)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<bool>)
     public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
@@ -171,7 +171,7 @@ public class IAsyncOperationCompletedHandler_1_boolean
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc1d3d1a2, Data2: 0xae17, Data3 : 0x5a5f, Data4 : (0xb5, 0xa2, 0xbd, 0xcc, 0x88, 0x44, 0x88, 0x9a)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<bool>, Windows.Foundation.AsyncStatus)
     public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean.self) { pThis in
@@ -187,66 +187,66 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_booleanVtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-    guard let self = _abstract_IAsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = _abstract_IAsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_IAsyncOperationCompletedHandler_1_boolean")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean
-    public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>?
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean
+        public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>? {
-    return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 // closed interface type
 public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5d144364, Data2: 0x77d7, Data3 : 0x5eca, Data4 : (0x8b, 0x09, 0x93, 0x6a, 0x69, 0x44, 0x66, 0x52)) }
     // [IsSpecialName] void put_Progress(Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>)
     public func _n_put_Progress(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
@@ -314,7 +314,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRespon
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x68e4606a, Data2: 0x76ec, Data3 : 0x5816, Data4 : (0xb2, 0xfe, 0xa0, 0x4e, 0xcd, 0xe4, 0x12, 0x6a)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>, Windows.Web.Http.HttpProgress)
     public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
@@ -330,66 +330,66 @@ public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_C
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-    guard let self = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
+        guard let self = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
-    public var wrapper: Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+        public var wrapper: Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
-    return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 // closed interface type
 public class IReference_1_UINT64
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6755e376, Data2: 0x53bb, Data3 : 0x568b, Data4 : (0xa1, 0x1d, 0x17, 0x23, 0x98, 0x68, 0x30, 0x9e)) }
 // method not needed: get_Value
 } // IReference_1_UINT64
 // closed generic delegate type
@@ -397,7 +397,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbeadb572, Data2: 0xf9a3, Data3 : 0x5e93, Data4 : (0xb6, 0xca, 0xe3, 0x11, 0xb6, 0x59, 0x33, 0xfc)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>, Windows.Foundation.AsyncStatus)
     public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
@@ -413,66 +413,66 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-    guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
-    public var wrapper: Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+        public var wrapper: Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
-    return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 // closed interface type
 public class IAsyncOperationWithProgress_2_HSTRING_UINT64
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc8bbcb29, Data2: 0x6b64, Data3 : 0x5ce2, Data4 : (0xa8, 0x31, 0x03, 0x8f, 0x6e, 0x02, 0x19, 0x9e)) }
     // [IsSpecialName] void put_Progress(Windows.Foundation.AsyncOperationProgressHandler<System.String,System.UInt64>)
     public func _n_put_Progress(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64.self) { pThis in
@@ -540,7 +540,7 @@ public class IAsyncOperationProgressHandler_2_HSTRING_UINT64
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x14da7de7, Data2: 0x40df, Data3 : 0x5d4c, Data4 : (0x82, 0x3f, 0xcf, 0x31, 0x06, 0x25, 0xad, 0x39)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64>, System.UInt64)
     public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64.self) { pThis in
@@ -556,66 +556,66 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) in
-    guard let self = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) in
+        guard let self = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64
-    public var wrapper: Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>?
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64
+        public var wrapper: Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>? {
-    return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : UINT64) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 // closed generic delegate type
 public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbd75eebe, Data2: 0xe7b5, Data3 : 0x5af6, Data4 : (0x84, 0x15, 0xa4, 0xb9, 0xc9, 0x04, 0x52, 0x02)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64>, Windows.Foundation.AsyncStatus)
     public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.self) { pThis in
@@ -631,59 +631,59 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-    guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
-    public var wrapper: Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>?
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
+        public var wrapper: Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>? {
-    return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 }
 extension WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair : Future {
@@ -829,59 +829,59 @@ public class _abstract_AsyncActionCompletedHandler
 {
     private static var vtable: _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl = .init(
     QueryInterface: {
-    guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-    return E_INVALIDARG
-    }
-    switch riid.pointee {
-    case IUnknown.IID, WinRT.Windows.Foundation.IAsyncActionCompletedHandler.IID:
-    _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-    ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-    return S_OK
-    default:
-    ppvObject.pointee = nil
-    return E_NOINTERFACE
-    }
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncActionCompletedHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
     },
     AddRef: {
-    let instance = _abstract_AsyncActionCompletedHandler.from($0)
-    _ = instance?.retain()
-    return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let instance = _abstract_AsyncActionCompletedHandler.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-    let instance = _abstract_AsyncActionCompletedHandler.from($0)
-    return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let instance = _abstract_AsyncActionCompletedHandler.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
-    (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-    guard let self = _abstract_AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
-    return E_INVALIDARG
-    }
-    return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = _abstract_AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        print("INVOKE on _abstract_AsyncActionCompletedHandler")
+        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
     }
     )
     private struct WithTrailingObjects {
-    public var `super`: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler
-    public var wrapper: Unmanaged<_abstract_AsyncActionCompletedHandler>?
+        public var `super`: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler
+        public var wrapper: Unmanaged<_abstract_AsyncActionCompletedHandler>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
-    self.instance = WithTrailingObjects(super: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), wrapper: nil)
-    self.instance.wrapper = Unmanaged<_abstract_AsyncActionCompletedHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(super: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_AsyncActionCompletedHandler>.passUnretained(self)
     }
     fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_AsyncActionCompletedHandler>? {
-    return pUnk?.bindMemory(to: _abstract_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: _abstract_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
-    return S_OK
+        return S_OK
     }
-    internal func Interface()
-    -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
-    return withUnsafeMutablePointer(to: &self.instance.super) {
-    WinRT.Windows.Foundation.IAsyncActionCompletedHandler(UnsafeMutableRawPointer($0))
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncActionCompletedHandler(UnsafeMutableRawPointer($0))
+        }
     }
-}
 }
 
 // type: Windows.Foundation.AsyncStatus

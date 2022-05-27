@@ -10,7 +10,7 @@ public class IVectorView_1__q_CWindows_CNetworking_CEndpointPair
     :
     WinRT.IInspectable
 {
-    // TODO IID
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8780a851, Data2: 0x6d48, Data3 : 0x5006, Data4 : (0x92, 0x88, 0x81, 0xf3, 0xd7, 0x04, 0x5a, 0x96)) }
 // method not needed: GetAt
 // method not needed: get_Size
 // method not needed: IndexOf
