@@ -66,7 +66,6 @@ public class ISystemIdentificationStatics
 
 // type: Windows.System.Profile.SystemIdentification
 // static class
-// static class
 public class SystemIdentification
 {
     private struct _ISystemIdentificationStatics {

@@ -9,7 +9,6 @@ extension Windows.Web.Http {
 // runtime class
 public class HttpClient
 {
-    // TODO Activatable ctor Windows.Web.Http.IHttpClientFactory
     public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
         let _af : IHttpClientFactory = try! RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
         _self = try _af.Create(filter: filter)!;
@@ -51,7 +50,11 @@ public typealias HttpProgressStage = _q_CWindows_CWeb_CHttp_CHttpProgressStage;
 // runtime class
 public class HttpResponseMessage
 {
-    // activatable interface not needed: Windows.Web.Http.IHttpResponseMessageFactory
+    public init(statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode) throws {
+        let _af : IHttpResponseMessageFactory = try! RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
+        _self = try _af.Create(statusCode: statusCode)!;
+        _IHttpResponseMessage = try _self.QueryInterface();
+    }
     public init() throws {
         _self = try RoActivateInstance(HString("Windows.Web.Http.HttpResponseMessage"))
         _IHttpResponseMessage = try _self.QueryInterface();
@@ -80,6 +83,10 @@ public class HttpResponseMessage
     // instance interface not needed: Windows.Foundation.IClosable
     // instance interface not needed: Windows.Foundation.IStringable
 }
+
+// type: Windows.Web.Http.HttpStatusCode
+// enum type
+public typealias HttpStatusCode = _q_CWindows_CWeb_CHttp_CHttpStatusCode;
 
 // type: Windows.Web.Http.IHttpClient
 // interface type
@@ -228,6 +235,27 @@ public class IHttpResponseMessage
 } // IHttpResponseMessage
 
 
+// type: Windows.Web.Http.IHttpResponseMessageFactory
+// interface type
+public class IHttpResponseMessageFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x52a8af99, Data2: 0xf095, Data3 : 0x43da, Data4 : (0xb6, 0x0f, 0x7c, 0xfc, 0x2b, 0xc7, 0xea, 0x2f)) }
+    // Windows.Web.Http.HttpResponseMessage Create(Windows.Web.Http.HttpStatusCode)
+    public func _n_Create(_ statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, statusCode, __presult))
+        }
+    }
+    public func Create(statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode) throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>> = nil;
+        try self._n_Create(statusCode, &__result);
+        return WinRT.Windows.Web.Http.IHttpResponseMessage(consuming: __result);
+    }
+} // IHttpResponseMessageFactory
+
+
 }
 extension WinRT.Windows.Web.Http.HttpProgressStage {
     public static var None : Self {
@@ -278,6 +306,298 @@ extension WinRT.Windows.Web.Http.HttpProgressStage {
     public static var ReceivingContent : Self {
         get {
             return _q_CWindows_CWeb_CHttp_CHttpProgressStage_ReceivingContent;
+        }
+    }
+}
+extension WinRT.Windows.Web.Http.HttpStatusCode {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_None;
+        }
+    }
+    public static var Continue : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Continue;
+        }
+    }
+    public static var SwitchingProtocols : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_SwitchingProtocols;
+        }
+    }
+    public static var Processing : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Processing;
+        }
+    }
+    public static var Ok : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Ok;
+        }
+    }
+    public static var Created : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Created;
+        }
+    }
+    public static var Accepted : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Accepted;
+        }
+    }
+    public static var NonAuthoritativeInformation : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NonAuthoritativeInformation;
+        }
+    }
+    public static var NoContent : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NoContent;
+        }
+    }
+    public static var ResetContent : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_ResetContent;
+        }
+    }
+    public static var PartialContent : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_PartialContent;
+        }
+    }
+    public static var MultiStatus : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_MultiStatus;
+        }
+    }
+    public static var AlreadyReported : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_AlreadyReported;
+        }
+    }
+    public static var IMUsed : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_IMUsed;
+        }
+    }
+    public static var MultipleChoices : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_MultipleChoices;
+        }
+    }
+    public static var MovedPermanently : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_MovedPermanently;
+        }
+    }
+    public static var Found : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Found;
+        }
+    }
+    public static var SeeOther : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_SeeOther;
+        }
+    }
+    public static var NotModified : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NotModified;
+        }
+    }
+    public static var UseProxy : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_UseProxy;
+        }
+    }
+    public static var TemporaryRedirect : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_TemporaryRedirect;
+        }
+    }
+    public static var PermanentRedirect : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_PermanentRedirect;
+        }
+    }
+    public static var BadRequest : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_BadRequest;
+        }
+    }
+    public static var Unauthorized : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Unauthorized;
+        }
+    }
+    public static var PaymentRequired : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_PaymentRequired;
+        }
+    }
+    public static var Forbidden : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Forbidden;
+        }
+    }
+    public static var NotFound : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NotFound;
+        }
+    }
+    public static var MethodNotAllowed : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_MethodNotAllowed;
+        }
+    }
+    public static var NotAcceptable : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NotAcceptable;
+        }
+    }
+    public static var ProxyAuthenticationRequired : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_ProxyAuthenticationRequired;
+        }
+    }
+    public static var RequestTimeout : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_RequestTimeout;
+        }
+    }
+    public static var Conflict : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Conflict;
+        }
+    }
+    public static var Gone : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Gone;
+        }
+    }
+    public static var LengthRequired : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_LengthRequired;
+        }
+    }
+    public static var PreconditionFailed : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_PreconditionFailed;
+        }
+    }
+    public static var RequestEntityTooLarge : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_RequestEntityTooLarge;
+        }
+    }
+    public static var RequestUriTooLong : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_RequestUriTooLong;
+        }
+    }
+    public static var UnsupportedMediaType : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_UnsupportedMediaType;
+        }
+    }
+    public static var RequestedRangeNotSatisfiable : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_RequestedRangeNotSatisfiable;
+        }
+    }
+    public static var ExpectationFailed : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_ExpectationFailed;
+        }
+    }
+    public static var UnprocessableEntity : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_UnprocessableEntity;
+        }
+    }
+    public static var Locked : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_Locked;
+        }
+    }
+    public static var FailedDependency : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_FailedDependency;
+        }
+    }
+    public static var UpgradeRequired : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_UpgradeRequired;
+        }
+    }
+    public static var PreconditionRequired : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_PreconditionRequired;
+        }
+    }
+    public static var TooManyRequests : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_TooManyRequests;
+        }
+    }
+    public static var RequestHeaderFieldsTooLarge : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_RequestHeaderFieldsTooLarge;
+        }
+    }
+    public static var InternalServerError : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_InternalServerError;
+        }
+    }
+    public static var NotImplemented : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NotImplemented;
+        }
+    }
+    public static var BadGateway : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_BadGateway;
+        }
+    }
+    public static var ServiceUnavailable : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_ServiceUnavailable;
+        }
+    }
+    public static var GatewayTimeout : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_GatewayTimeout;
+        }
+    }
+    public static var HttpVersionNotSupported : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_HttpVersionNotSupported;
+        }
+    }
+    public static var VariantAlsoNegotiates : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_VariantAlsoNegotiates;
+        }
+    }
+    public static var InsufficientStorage : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_InsufficientStorage;
+        }
+    }
+    public static var LoopDetected : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_LoopDetected;
+        }
+    }
+    public static var NotExtended : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NotExtended;
+        }
+    }
+    public static var NetworkAuthenticationRequired : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CHttpStatusCode_NetworkAuthenticationRequired;
         }
     }
 }

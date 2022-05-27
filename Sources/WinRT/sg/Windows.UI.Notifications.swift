@@ -99,7 +99,6 @@ public class IToastNotifier
 // runtime class
 public class ToastNotification
 {
-    // TODO Activatable ctor Windows.UI.Notifications.IToastNotificationFactory
     public init(content : Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument>) throws {
         let _af : IToastNotificationFactory = try! RoGetActivationFactory(HString("Windows.UI.Notifications.ToastNotification"));
         _self = try _af.CreateToastNotification(content: content)!;
@@ -123,7 +122,6 @@ public class ToastNotification
 }
 
 // type: Windows.UI.Notifications.ToastNotificationManager
-// static class
 // static class
 public class ToastNotificationManager
 {

@@ -1257,7 +1257,23 @@ public class IUriRuntimeClassFactory
         return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
         }
     }
-// method not needed: CreateWithRelativeUri
+    // Windows.Foundation.Uri CreateWithRelativeUri(System.String, System.String)
+    public func _n_CreateWithRelativeUri(_ baseUri : Optional<HSTRING>, _ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithRelativeUri(pThis, baseUri, relativeUri, __presult))
+        }
+    }
+    public func CreateWithRelativeUri(baseUri : Swift.String, relativeUri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IUriRuntimeClass> {
+        let __hstr_baseUri = try HString(baseUri);
+        return try withExtendedLifetime(__hstr_baseUri) {
+        let __hstr_relativeUri = try HString(relativeUri);
+        return try withExtendedLifetime(__hstr_relativeUri) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
+        try self._n_CreateWithRelativeUri(__hstr_baseUri.hRef.hString, __hstr_relativeUri.hRef.hString, &__result);
+        return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
+        }
+        }
+    }
 } // IUriRuntimeClassFactory
 
 
@@ -1272,17 +1288,44 @@ public class IWwwFormUrlDecoderRuntimeClass
 } // IWwwFormUrlDecoderRuntimeClass
 
 
+// type: Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
+// interface type
+public class IWwwFormUrlDecoderRuntimeClassFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5b8c6b3d, Data2: 0x24ae, Data3 : 0x41b5, Data4 : (0xa1, 0xbf, 0xf0, 0xc3, 0xd5, 0x44, 0x84, 0x5b)) }
+    // Windows.Foundation.WwwFormUrlDecoder CreateWwwFormUrlDecoder(System.String)
+    public func _n_CreateWwwFormUrlDecoder(_ query : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWwwFormUrlDecoder(pThis, query, __presult))
+        }
+    }
+    public func CreateWwwFormUrlDecoder(query : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass> {
+        let __hstr_query = try HString(query);
+        return try withExtendedLifetime(__hstr_query) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>> = nil;
+        try self._n_CreateWwwFormUrlDecoder(__hstr_query.hRef.hString, &__result);
+        return WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass(consuming: __result);
+        }
+    }
+} // IWwwFormUrlDecoderRuntimeClassFactory
+
+
 // type: Windows.Foundation.Uri
 // runtime class
 public class Uri
 {
-    // TODO Activatable ctor Windows.Foundation.IUriRuntimeClassFactory
     public init(uri : Swift.String) throws {
         let _af : IUriRuntimeClassFactory = try! RoGetActivationFactory(HString("Windows.Foundation.Uri"));
         _self = try _af.CreateUri(uri: uri)!;
         _IUriRuntimeClass = try _self.QueryInterface();
     }
-// init not needed: CreateWithRelativeUri
+    public init(baseUri : Swift.String, relativeUri : Swift.String) throws {
+        let _af : IUriRuntimeClassFactory = try! RoGetActivationFactory(HString("Windows.Foundation.Uri"));
+        _self = try _af.CreateWithRelativeUri(baseUri: baseUri, relativeUri: relativeUri)!;
+        _IUriRuntimeClass = try _self.QueryInterface();
+    }
     // static interface not needed: Windows.Foundation.IUriEscapeStatics
     private var _self : IInspectable;
     public var _IUriRuntimeClass : IUriRuntimeClass;
@@ -1345,7 +1388,16 @@ public class Uri
 // runtime class
 public class WwwFormUrlDecoder
 {
-    // activatable interface not needed: Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
+    public init(query : Swift.String) throws {
+        let _af : IWwwFormUrlDecoderRuntimeClassFactory = try! RoGetActivationFactory(HString("Windows.Foundation.WwwFormUrlDecoder"));
+        _self = try _af.CreateWwwFormUrlDecoder(query: query)!;
+        _IWwwFormUrlDecoderRuntimeClass = try _self.QueryInterface();
+    }
+    private var _self : IInspectable;
+    public var _IWwwFormUrlDecoderRuntimeClass : IWwwFormUrlDecoderRuntimeClass;
+    // method not needed: GetFirstValueByName
+    // instance interface not needed: Windows.Foundation.Collections.IVectorView`1[[Windows.Foundation.IWwwFormUrlDecoderEntry, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Windows.Foundation.IWwwFormUrlDecoderEntry, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
 }
 
 }

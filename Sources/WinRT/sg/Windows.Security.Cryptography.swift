@@ -7,7 +7,6 @@ import CWinRT;
 extension Windows.Security.Cryptography {
 // type: Windows.Security.Cryptography.CryptographicBuffer
 // static class
-// static class
 public class CryptographicBuffer
 {
     private struct _ICryptographicBufferStatics {

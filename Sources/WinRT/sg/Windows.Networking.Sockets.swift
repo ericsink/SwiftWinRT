@@ -11,6 +11,7 @@ public class DatagramSocket
 {
     public init() throws {
         _self = try RoActivateInstance(HString("Windows.Networking.Sockets.DatagramSocket"))
+        _IDatagramSocket = try _self.QueryInterface();
     }
     private struct _IDatagramSocketStatics {
         static var x : IDatagramSocketStatics =
@@ -26,11 +27,45 @@ public class DatagramSocket
         return try DatagramSocketStatics.GetEndpointPairsWithSortOptionsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, sortOptions: sortOptions);
     }
     private var _self : IInspectable;
-    // instance interface not needed: Windows.Networking.Sockets.IDatagramSocket
+    public var _IDatagramSocket : IDatagramSocket;
+    // method not needed: get_Control
+    // method not needed: get_Information
+    // method not needed: get_OutputStream
+    // method not needed: ConnectAsync
+    // method not needed: ConnectAsync
+    // method not needed: BindServiceNameAsync
+    // method not needed: BindEndpointAsync
+    // method not needed: JoinMulticastGroup
+    // method not needed: GetOutputStreamAsync
+    // method not needed: GetOutputStreamAsync
+    // method not needed: add_MessageReceived
+    // method not needed: remove_MessageReceived
     // instance interface not needed: Windows.Foundation.IClosable
     // instance interface not needed: Windows.Networking.Sockets.IDatagramSocket2
     // instance interface not needed: Windows.Networking.Sockets.IDatagramSocket3
 }
+
+// type: Windows.Networking.Sockets.IDatagramSocket
+// interface type
+public class IDatagramSocket
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7fe25bbb, Data2: 0xc3bc, Data3 : 0x4677, Data4 : (0x84, 0x46, 0xca, 0x28, 0xa4, 0x65, 0xa3, 0xaf)) }
+// method not needed: get_Control
+// method not needed: get_Information
+// method not needed: get_OutputStream
+// method not needed: ConnectAsync
+// method not needed: ConnectWithEndpointPairAsync
+// method not needed: BindServiceNameAsync
+// method not needed: BindEndpointAsync
+// method not needed: JoinMulticastGroup
+// method not needed: GetOutputStreamAsync
+// method not needed: GetOutputStreamWithEndpointPairAsync
+// method not needed: add_MessageReceived
+// method not needed: remove_MessageReceived
+} // IDatagramSocket
+
 
 // type: Windows.Networking.Sockets.IDatagramSocketStatics
 // interface type
