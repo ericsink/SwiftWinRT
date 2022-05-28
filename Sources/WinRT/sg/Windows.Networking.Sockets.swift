@@ -8,10 +8,14 @@ extension Windows.Networking.Sockets {
 // type: Windows.Networking.Sockets.DatagramSocket
 // runtime class
 public class DatagramSocket
+    :
+    WinRT.Windows.Networking.Sockets.IDatagramSocket
 {
-    public init() throws {
-        _self = try RoActivateInstance(HString("Windows.Networking.Sockets.DatagramSocket"))
-        _IDatagramSocket = try _self.QueryInterface();
+    public convenience init() throws {
+        var instance: UnsafeMutablePointer<CWinRT.IInspectable>?
+        let _classId = try HString("Windows.Networking.Sockets.DatagramSocket")
+        try CHECKED(RoActivateInstance(_classId.hRef.hString, &instance))
+        self.init(consuming: UnsafeMutableRawPointer(instance)?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
     }
     private struct _IDatagramSocketStatics {
         static var x : IDatagramSocketStatics =
@@ -20,26 +24,12 @@ public class DatagramSocket
     public static var DatagramSocketStatics : IDatagramSocketStatics {
         _IDatagramSocketStatics.x
     }
-    public static func GetEndpointPairsAsync(remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public static func GetEndpointPairsAsync(remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try DatagramSocketStatics.GetEndpointPairsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName);
     }
-    public static func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public static func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String, sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try DatagramSocketStatics.GetEndpointPairsWithSortOptionsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, sortOptions: sortOptions);
     }
-    private var _self : IInspectable;
-    public var _IDatagramSocket : IDatagramSocket;
-    // method not needed: get_Control
-    // method not needed: get_Information
-    // method not needed: get_OutputStream
-    // method not needed: ConnectAsync
-    // method not needed: ConnectAsync
-    // method not needed: BindServiceNameAsync
-    // method not needed: BindEndpointAsync
-    // method not needed: JoinMulticastGroup
-    // method not needed: GetOutputStreamAsync
-    // method not needed: GetOutputStreamAsync
-    // method not needed: add_MessageReceived
-    // method not needed: remove_MessageReceived
     // instance interface not needed: Windows.Foundation.IClosable
     // instance interface not needed: Windows.Networking.Sockets.IDatagramSocket2
     // instance interface not needed: Windows.Networking.Sockets.IDatagramSocket3
@@ -80,7 +70,7 @@ public class IDatagramSocketStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEndpointPairsAsync(pThis, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func GetEndpointPairsAsync(remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairsAsync(remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         let __hstr_remoteServiceName = try HString(remoteServiceName);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
@@ -88,7 +78,7 @@ public class IDatagramSocketStatics
         return WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
         }
     }
-    public func GetEndpointPairs(remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String) async throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairs(remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String) async throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetEndpointPairsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!.get())
@@ -103,7 +93,7 @@ public class IDatagramSocketStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEndpointPairsWithSortOptionsAsync(pThis, remoteHostName, remoteServiceName, sortOptions, __presult))
         }
     }
-    public func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String, sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         let __hstr_remoteServiceName = try HString(remoteServiceName);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
@@ -111,7 +101,7 @@ public class IDatagramSocketStatics
         return WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
         }
     }
-    public func GetEndpointPairsWithSortOptions(remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions) async throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairsWithSortOptions(remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String, sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions) async throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetEndpointPairsWithSortOptionsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, sortOptions: sortOptions)!.get())

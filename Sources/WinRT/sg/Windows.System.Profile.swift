@@ -45,10 +45,10 @@ public class ISystemIdentificationStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemIdForPublisher(pThis, __presult))
         }
     }
-    public func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
+    public func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>> = nil;
         try self._n_GetSystemIdForPublisher(&__result);
-        return WinRT.Windows.System.Profile.ISystemIdentificationInfo(consuming: __result);
+        return WinRT.Windows.System.Profile.SystemIdentificationInfo(consuming: __result);
     }
     // Windows.System.Profile.SystemIdentificationInfo GetSystemIdForUser(Windows.System.User)
     public func _n_GetSystemIdForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>>>?) throws {
@@ -56,10 +56,10 @@ public class ISystemIdentificationStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemIdForUser(pThis, user, __presult))
         }
     }
-    public func GetSystemIdForUser(user : Optional<WinRT.Windows.System.IUser>) throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
+    public func GetSystemIdForUser(user : Optional<WinRT.Windows.System.User>) throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>> = nil;
         try self._n_GetSystemIdForUser(RawPointer(user), &__result);
-        return WinRT.Windows.System.Profile.ISystemIdentificationInfo(consuming: __result);
+        return WinRT.Windows.System.Profile.SystemIdentificationInfo(consuming: __result);
     }
 } // ISystemIdentificationStatics
 
@@ -75,10 +75,10 @@ public class SystemIdentification
     public static var SystemIdentificationStatics : ISystemIdentificationStatics {
         _ISystemIdentificationStatics.x
     }
-    public static func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
+    public static func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
         return try SystemIdentificationStatics.GetSystemIdForPublisher();
     }
-    public static func GetSystemIdForUser(user : Optional<WinRT.Windows.System.IUser>) throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
+    public static func GetSystemIdForUser(user : Optional<WinRT.Windows.System.User>) throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
         return try SystemIdentificationStatics.GetSystemIdForUser(user: user);
     }
 }
@@ -86,6 +86,8 @@ public class SystemIdentification
 // type: Windows.System.Profile.SystemIdentificationInfo
 // runtime class
 public class SystemIdentificationInfo
+    :
+    WinRT.Windows.System.Profile.ISystemIdentificationInfo
 {
 }
 

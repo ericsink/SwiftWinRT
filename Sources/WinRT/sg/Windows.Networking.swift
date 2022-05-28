@@ -8,42 +8,28 @@ extension Windows.Networking {
 // type: Windows.Networking.EndpointPair
 // runtime class
 public class EndpointPair
+    :
+    WinRT.Windows.Networking.IEndpointPair
 {
-    public init(localHostName : Optional<WinRT.Windows.Networking.IHostName>, localServiceName : Swift.String, remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws {
+    public convenience init(localHostName : Optional<WinRT.Windows.Networking.HostName>, localServiceName : Swift.String, remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String) throws {
         let _af : IEndpointPairFactory = try! RoGetActivationFactory(HString("Windows.Networking.EndpointPair"));
-        _self = try _af.CreateEndpointPair(localHostName: localHostName, localServiceName: localServiceName, remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!;
-        _IEndpointPair = try _self.QueryInterface();
+        let _instance = try _af.CreateEndpointPair(localHostName: localHostName, localServiceName: localServiceName, remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!;
+        self.init(RawPointer(_instance))
     }
-    private var _self : IInspectable;
-    public var _IEndpointPair : IEndpointPair;
-    // method not needed: get_LocalHostName
-    // method not needed: put_LocalHostName
-    // method not needed: get_LocalServiceName
-    // method not needed: put_LocalServiceName
-    // method not needed: get_RemoteHostName
-    // method not needed: put_RemoteHostName
-    // method not needed: get_RemoteServiceName
-    // method not needed: put_RemoteServiceName
 }
 
 // type: Windows.Networking.HostName
 // runtime class
 public class HostName
+    :
+    WinRT.Windows.Networking.IHostName
 {
-    public init(hostName : Swift.String) throws {
+    public convenience init(hostName : Swift.String) throws {
         let _af : IHostNameFactory = try! RoGetActivationFactory(HString("Windows.Networking.HostName"));
-        _self = try _af.CreateHostName(hostName: hostName)!;
-        _IHostName = try _self.QueryInterface();
+        let _instance = try _af.CreateHostName(hostName: hostName)!;
+        self.init(RawPointer(_instance))
     }
     // static interface not needed: Windows.Networking.IHostNameStatics
-    private var _self : IInspectable;
-    public var _IHostName : IHostName;
-    // method not needed: get_IPInformation
-    // method not needed: get_RawName
-    // method not needed: get_DisplayName
-    // method not needed: get_CanonicalName
-    // method not needed: get_Type
-    // method not needed: IsEqual
     // instance interface not needed: Windows.Foundation.IStringable
 }
 
@@ -82,14 +68,14 @@ public class IEndpointPairFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEndpointPair(pThis, localHostName, localServiceName, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func CreateEndpointPair(localHostName : Optional<WinRT.Windows.Networking.IHostName>, localServiceName : Swift.String, remoteHostName : Optional<WinRT.Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<WinRT.Windows.Networking.IEndpointPair> {
+    public func CreateEndpointPair(localHostName : Optional<WinRT.Windows.Networking.HostName>, localServiceName : Swift.String, remoteHostName : Optional<WinRT.Windows.Networking.HostName>, remoteServiceName : Swift.String) throws -> Optional<WinRT.Windows.Networking.EndpointPair> {
         let __hstr_localServiceName = try HString(localServiceName);
         return try withExtendedLifetime(__hstr_localServiceName) {
         let __hstr_remoteServiceName = try HString(remoteServiceName);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CIEndpointPair>> = nil;
         try self._n_CreateEndpointPair(RawPointer(localHostName), __hstr_localServiceName.hRef.hString, RawPointer(remoteHostName), __hstr_remoteServiceName.hRef.hString, &__result);
-        return WinRT.Windows.Networking.IEndpointPair(consuming: __result);
+        return WinRT.Windows.Networking.EndpointPair(consuming: __result);
         }
         }
     }
@@ -125,12 +111,12 @@ public class IHostNameFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateHostName(pThis, hostName, __presult))
         }
     }
-    public func CreateHostName(hostName : Swift.String) throws -> Optional<WinRT.Windows.Networking.IHostName> {
+    public func CreateHostName(hostName : Swift.String) throws -> Optional<WinRT.Windows.Networking.HostName> {
         let __hstr_hostName = try HString(hostName);
         return try withExtendedLifetime(__hstr_hostName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CIHostName>> = nil;
         try self._n_CreateHostName(__hstr_hostName.hRef.hString, &__result);
-        return WinRT.Windows.Networking.IHostName(consuming: __result);
+        return WinRT.Windows.Networking.HostName(consuming: __result);
         }
     }
 } // IHostNameFactory

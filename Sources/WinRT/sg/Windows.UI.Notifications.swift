@@ -37,10 +37,10 @@ public class IToastNotificationFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotification(pThis, content, __presult))
         }
     }
-    public func CreateToastNotification(content : Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument>) throws -> Optional<WinRT.Windows.UI.Notifications.IToastNotification> {
+    public func CreateToastNotification(content : Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument>) throws -> Optional<WinRT.Windows.UI.Notifications.ToastNotification> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>> = nil;
         try self._n_CreateToastNotification(RawPointer(content), &__result);
-        return WinRT.Windows.UI.Notifications.IToastNotification(consuming: __result);
+        return WinRT.Windows.UI.Notifications.ToastNotification(consuming: __result);
     }
 } // IToastNotificationFactory
 
@@ -59,12 +59,12 @@ public class IToastNotificationManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotifierWithId(pThis, applicationId, __presult))
         }
     }
-    public func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.IToastNotifier> {
+    public func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.ToastNotifier> {
         let __hstr_applicationId = try HString(applicationId);
         return try withExtendedLifetime(__hstr_applicationId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>> = nil;
         try self._n_CreateToastNotifierWithId(__hstr_applicationId.hRef.hString, &__result);
-        return WinRT.Windows.UI.Notifications.IToastNotifier(consuming: __result);
+        return WinRT.Windows.UI.Notifications.ToastNotifier(consuming: __result);
         }
     }
 // method not needed: GetTemplateContent
@@ -84,7 +84,7 @@ public class IToastNotifier
             try CHECKED(pThis.pointee.lpVtbl.pointee.Show(pThis, notification))
         }
     }
-    public func Show(notification : Optional<WinRT.Windows.UI.Notifications.IToastNotification>) throws -> Void {
+    public func Show(notification : Optional<WinRT.Windows.UI.Notifications.ToastNotification>) throws -> Void {
         try self._n_Show(RawPointer(notification));
     }
 // method not needed: Hide
@@ -98,23 +98,14 @@ public class IToastNotifier
 // type: Windows.UI.Notifications.ToastNotification
 // runtime class
 public class ToastNotification
+    :
+    WinRT.Windows.UI.Notifications.IToastNotification
 {
-    public init(content : Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument>) throws {
+    public convenience init(content : Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument>) throws {
         let _af : IToastNotificationFactory = try! RoGetActivationFactory(HString("Windows.UI.Notifications.ToastNotification"));
-        _self = try _af.CreateToastNotification(content: content)!;
-        _IToastNotification = try _self.QueryInterface();
+        let _instance = try _af.CreateToastNotification(content: content)!;
+        self.init(RawPointer(_instance))
     }
-    private var _self : IInspectable;
-    public var _IToastNotification : IToastNotification;
-    // method not needed: get_Content
-    // method not needed: put_ExpirationTime
-    // method not needed: get_ExpirationTime
-    // method not needed: add_Dismissed
-    // method not needed: remove_Dismissed
-    // method not needed: add_Activated
-    // method not needed: remove_Activated
-    // method not needed: add_Failed
-    // method not needed: remove_Failed
     // instance interface not needed: Windows.UI.Notifications.IToastNotification2
     // instance interface not needed: Windows.UI.Notifications.IToastNotification3
     // instance interface not needed: Windows.UI.Notifications.IToastNotification4
@@ -134,7 +125,7 @@ public class ToastNotificationManager
         _IToastNotificationManagerStatics.x
     }
 // method not needed: CreateToastNotifier
-    public static func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.IToastNotifier> {
+    public static func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.ToastNotifier> {
         return try ToastNotificationManagerStatics.CreateToastNotifierWithId(applicationId: applicationId);
     }
 // method not needed: GetTemplateContent
@@ -145,7 +136,11 @@ public class ToastNotificationManager
 // type: Windows.UI.Notifications.ToastNotifier
 // runtime class
 public class ToastNotifier
+    :
+    WinRT.Windows.UI.Notifications.IToastNotifier
 {
+    // instance interface not needed: Windows.UI.Notifications.IToastNotifier2
+    // instance interface not needed: Windows.UI.Notifications.IToastNotifier3
 }
 
 }

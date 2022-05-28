@@ -8,6 +8,8 @@ extension Windows.System {
 // type: Windows.System.DispatcherQueueController
 // runtime class
 public class DispatcherQueueController
+    :
+    WinRT.Windows.System.IDispatcherQueueController
 {
     private struct _IDispatcherQueueControllerStatics {
         static var x : IDispatcherQueueControllerStatics =
@@ -16,7 +18,7 @@ public class DispatcherQueueController
     public static var DispatcherQueueControllerStatics : IDispatcherQueueControllerStatics {
         _IDispatcherQueueControllerStatics.x
     }
-    public static func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.IDispatcherQueueController> {
+    public static func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.DispatcherQueueController> {
         return try DispatcherQueueControllerStatics.CreateOnDedicatedThread();
     }
 }
@@ -65,10 +67,10 @@ public class IDispatcherQueueControllerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateOnDedicatedThread(pThis, __presult))
         }
     }
-    public func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.IDispatcherQueueController> {
+    public func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.DispatcherQueueController> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueueController>> = nil;
         try self._n_CreateOnDedicatedThread(&__result);
-        return WinRT.Windows.System.IDispatcherQueueController(consuming: __result);
+        return WinRT.Windows.System.DispatcherQueueController(consuming: __result);
     }
 } // IDispatcherQueueControllerStatics
 
@@ -92,6 +94,8 @@ public class IUser
 // type: Windows.System.User
 // runtime class
 public class User
+    :
+    WinRT.Windows.System.IUser
 {
     // static interface not needed: Windows.System.IUserStatics
 }
