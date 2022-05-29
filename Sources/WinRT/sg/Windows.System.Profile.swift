@@ -23,10 +23,25 @@ public class ISystemIdentificationInfo
         try self._n_get_Id(&__result);
         return WinRT.Windows.Storage.Streams.IBuffer(consuming: __result);
     }
-// method not needed: get_Source
+    // [IsSpecialName] Windows.System.Profile.SystemIdentificationSource get_Source()
+    public func _n_get_Source(_ __presult: UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CSystemIdentificationSource>?) throws {
+        return try perform(as: _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Source(pThis, __presult))
+        }
+    }
+    public func get_Source() throws -> _q_CWindows_CSystem_CProfile_CSystemIdentificationSource {
+        var __result : _q_CWindows_CSystem_CProfile_CSystemIdentificationSource = defaultValue();
+        try self._n_get_Source(&__result);
+        return __result;
+    }
     public var Id : Optional<WinRT.Windows.Storage.Streams.IBuffer> {
         get throws {
             return try get_Id();
+        }
+    }
+    public var Source : _q_CWindows_CSystem_CProfile_CSystemIdentificationSource {
+        get throws {
+            return try get_Source();
         }
     }
 } // ISystemIdentificationInfo
@@ -91,4 +106,30 @@ public class SystemIdentificationInfo
 {
 }
 
+// type: Windows.System.Profile.SystemIdentificationSource
+// enum type
+public typealias SystemIdentificationSource = _q_CWindows_CSystem_CProfile_CSystemIdentificationSource;
+
+}
+extension WinRT.Windows.System.Profile.SystemIdentificationSource {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_None;
+        }
+    }
+    public static var Tpm : Self {
+        get {
+            return _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Tpm;
+        }
+    }
+    public static var Uefi : Self {
+        get {
+            return _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Uefi;
+        }
+    }
+    public static var Registry : Self {
+        get {
+            return _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Registry;
+        }
+    }
 }

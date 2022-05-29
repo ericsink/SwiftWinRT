@@ -6,9 +6,6 @@ extension Windows { public struct Data { } }
 extension Windows.Data { public struct Xml { } }
 extension Windows.Data.Xml { public struct Dom { } }
 extension Windows { public struct Foundation { } }
-extension Windows.Foundation { public struct Collections { } }
-extension Windows { public struct Networking { } }
-extension Windows.Networking { public struct Sockets { } }
 extension Windows { public struct Security { } }
 extension Windows.Security { public struct Cryptography { } }
 extension Windows { public struct Storage { } }

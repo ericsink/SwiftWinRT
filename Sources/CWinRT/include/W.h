@@ -11,11 +11,13 @@ typedef enum _q_CWindows_CFoundation_CAsyncStatus
     _q_CWindows_CFoundation_CAsyncStatus_Error = 3,
     _q_CWindows_CFoundation_CAsyncStatus_Started = 0,
 } _q_CWindows_CFoundation_CAsyncStatus;
-typedef enum _q_CWindows_CNetworking_CHostNameSortOptions
+typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
 {
-    _q_CWindows_CNetworking_CHostNameSortOptions_None = 0,
-    _q_CWindows_CNetworking_CHostNameSortOptions_OptimizeForLongConnections = 2,
-} _q_CWindows_CNetworking_CHostNameSortOptions;
+    _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_None = 0,
+    _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Tpm = 1,
+    _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Uefi = 2,
+    _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Registry = 3,
+} _q_CWindows_CSystem_CProfile_CSystemIdentificationSource;
 typedef enum _q_CWindows_CWeb_CHttp_CHttpProgressStage
 {
     _q_CWindows_CWeb_CHttp_CHttpProgressStage_None = 0,
@@ -91,6 +93,7 @@ typedef enum _q_CWindows_CWeb_CHttp_CHttpStatusCode
     _q_CWindows_CWeb_CHttp_CHttpStatusCode_NetworkAuthenticationRequired = 511,
 } _q_CWindows_CWeb_CHttp_CHttpStatusCode;
 // forward decls for value types
+typedef struct _q_CWindows_CFoundation_CHResult _q_CWindows_CFoundation_CHResult;
 typedef struct _q_CWindows_CWeb_CHttp_CHttpProgress _q_CWindows_CWeb_CHttp_CHttpProgress;
 // forward decls for interfaces
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocument _q_CWindows_CData_CXml_CDom_CIXmlDocument;
@@ -99,14 +102,6 @@ typedef struct _q_CWindows_CFoundation_CIAsyncAction _q_CWindows_CFoundation_CIA
 typedef struct _q_CWindows_CFoundation_CIAsyncInfo _q_CWindows_CFoundation_CIAsyncInfo;
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClass _q_CWindows_CFoundation_CIUriRuntimeClass;
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassFactory _q_CWindows_CFoundation_CIUriRuntimeClassFactory;
-typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass;
-typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory;
-typedef struct _q_CWindows_CNetworking_CIEndpointPair _q_CWindows_CNetworking_CIEndpointPair;
-typedef struct _q_CWindows_CNetworking_CIEndpointPairFactory _q_CWindows_CNetworking_CIEndpointPairFactory;
-typedef struct _q_CWindows_CNetworking_CIHostName _q_CWindows_CNetworking_CIHostName;
-typedef struct _q_CWindows_CNetworking_CIHostNameFactory _q_CWindows_CNetworking_CIHostNameFactory;
-typedef struct _q_CWindows_CNetworking_CSockets_CIDatagramSocket _q_CWindows_CNetworking_CSockets_CIDatagramSocket;
-typedef struct _q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics _q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics;
 typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics;
 typedef struct _q_CWindows_CStorage_CStreams_CIBuffer _q_CWindows_CStorage_CStreams_CIBuffer;
 typedef struct _q_CWindows_CStorage_CStreams_CIOutputStream _q_CWindows_CStorage_CStreams_CIOutputStream;
@@ -126,9 +121,6 @@ typedef struct _q_CWindows_CWeb_CHttp_CIHttpContent _q_CWindows_CWeb_CHttp_CIHtt
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpResponseMessage _q_CWindows_CWeb_CHttp_CIHttpResponseMessage;
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory;
 // forward decls for parameterized interfaces
-typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair;
-typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair;
-typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1_boolean _cg_CWindows_CFoundation_IAsyncOperation_1_boolean;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress;
@@ -139,6 +131,10 @@ typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UI
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64;
 // definition of structs for value types
+struct _q_CWindows_CFoundation_CHResult
+{
+    INT32 Value;
+};
 struct _q_CWindows_CWeb_CHttp_CHttpProgress
 {
     _q_CWindows_CWeb_CHttp_CHttpProgressStage Stage;
@@ -231,18 +227,16 @@ typedef struct _q_CWindows_CFoundation_CIAsyncInfoVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIAsyncInfo* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIAsyncInfo* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIAsyncInfo* This, TrustLevel* trustLevel);
-    void* unneeded_get_Id;
+    HRESULT (STDMETHODCALLTYPE* get_Id)(_q_CWindows_CFoundation_CIAsyncInfo* pThis, UINT32* __pret);
     HRESULT (STDMETHODCALLTYPE* get_Status)(_q_CWindows_CFoundation_CIAsyncInfo* pThis, _q_CWindows_CFoundation_CAsyncStatus* __pret);
-    void* unneeded_get_ErrorCode;
-    void* unneeded_Cancel;
-    void* unneeded_Close;
+    HRESULT (STDMETHODCALLTYPE* get_ErrorCode)(_q_CWindows_CFoundation_CIAsyncInfo* pThis, _q_CWindows_CFoundation_CHResult* __pret);
+    HRESULT (STDMETHODCALLTYPE* Cancel)(_q_CWindows_CFoundation_CIAsyncInfo* pThis);
+    HRESULT (STDMETHODCALLTYPE* Close)(_q_CWindows_CFoundation_CIAsyncInfo* pThis);
 } _q_CWindows_CFoundation_CIAsyncInfoVtbl;
 struct _q_CWindows_CFoundation_CIAsyncInfo
 {
     _q_CWindows_CFoundation_CIAsyncInfoVtbl* lpVtbl;
 };
-// _q_CWindows_CFoundation_CIAsyncOperation`1 is a generic defined type
-// _q_CWindows_CFoundation_CIAsyncOperationWithProgress`2 is a generic defined type
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, REFIID riid, void** ppvObject);
@@ -251,23 +245,23 @@ typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_AbsoluteUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_DisplayUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Domain)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Extension)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Fragment)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Host)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Password)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Path)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Query)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_QueryParsed)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass** __pret);
-    HRESULT (STDMETHODCALLTYPE* get_RawUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_SchemeName)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_UserName)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Port)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, INT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Suspicious)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, boolean* __pret);
-    HRESULT (STDMETHODCALLTYPE* Equals)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* pUri, boolean* __pret);
-    HRESULT (STDMETHODCALLTYPE* CombineUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING relativeUri, _q_CWindows_CFoundation_CIUriRuntimeClass** __pret);
+    void* unneeded_get_AbsoluteUri;
+    void* unneeded_get_DisplayUri;
+    void* unneeded_get_Domain;
+    void* unneeded_get_Extension;
+    void* unneeded_get_Fragment;
+    void* unneeded_get_Host;
+    void* unneeded_get_Password;
+    void* unneeded_get_Path;
+    void* unneeded_get_Query;
+    void* unneeded_get_QueryParsed;
+    void* unneeded_get_RawUri;
+    void* unneeded_get_SchemeName;
+    void* unneeded_get_UserName;
+    void* unneeded_get_Port;
+    void* unneeded_get_Suspicious;
+    void* unneeded_Equals;
+    void* unneeded_CombineUri;
 } _q_CWindows_CFoundation_CIUriRuntimeClassVtbl;
 struct _q_CWindows_CFoundation_CIUriRuntimeClass
 {
@@ -287,142 +281,6 @@ typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassFactoryVtbl
 struct _q_CWindows_CFoundation_CIUriRuntimeClassFactory
 {
     _q_CWindows_CFoundation_CIUriRuntimeClassFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, TrustLevel* trustLevel);
-    void* unneeded_GetFirstValueByName;
-} _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassVtbl;
-struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass
-{
-    _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateWwwFormUrlDecoder)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* pThis, HSTRING query, _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass** __pret);
-} _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl;
-struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory
-{
-    _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CNetworking_CIEndpointPairVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CNetworking_CIEndpointPair* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CNetworking_CIEndpointPair* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CNetworking_CIEndpointPair* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CNetworking_CIEndpointPair* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CNetworking_CIEndpointPair* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CNetworking_CIEndpointPair* This, TrustLevel* trustLevel);
-    void* unneeded_get_LocalHostName;
-    void* unneeded_put_LocalHostName;
-    void* unneeded_get_LocalServiceName;
-    void* unneeded_put_LocalServiceName;
-    void* unneeded_get_RemoteHostName;
-    void* unneeded_put_RemoteHostName;
-    void* unneeded_get_RemoteServiceName;
-    void* unneeded_put_RemoteServiceName;
-} _q_CWindows_CNetworking_CIEndpointPairVtbl;
-struct _q_CWindows_CNetworking_CIEndpointPair
-{
-    _q_CWindows_CNetworking_CIEndpointPairVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CNetworking_CIEndpointPairFactoryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CNetworking_CIEndpointPairFactory* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CNetworking_CIEndpointPairFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CNetworking_CIEndpointPairFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CNetworking_CIEndpointPairFactory* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CNetworking_CIEndpointPairFactory* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CNetworking_CIEndpointPairFactory* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateEndpointPair)(_q_CWindows_CNetworking_CIEndpointPairFactory* pThis, _q_CWindows_CNetworking_CIHostName* localHostName, HSTRING localServiceName, _q_CWindows_CNetworking_CIHostName* remoteHostName, HSTRING remoteServiceName, _q_CWindows_CNetworking_CIEndpointPair** __pret);
-} _q_CWindows_CNetworking_CIEndpointPairFactoryVtbl;
-struct _q_CWindows_CNetworking_CIEndpointPairFactory
-{
-    _q_CWindows_CNetworking_CIEndpointPairFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CNetworking_CIHostNameVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CNetworking_CIHostName* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CNetworking_CIHostName* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CNetworking_CIHostName* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CNetworking_CIHostName* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CNetworking_CIHostName* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CNetworking_CIHostName* This, TrustLevel* trustLevel);
-    void* unneeded_get_IPInformation;
-    void* unneeded_get_RawName;
-    void* unneeded_get_DisplayName;
-    void* unneeded_get_CanonicalName;
-    void* unneeded_get_Type;
-    void* unneeded_IsEqual;
-} _q_CWindows_CNetworking_CIHostNameVtbl;
-struct _q_CWindows_CNetworking_CIHostName
-{
-    _q_CWindows_CNetworking_CIHostNameVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CNetworking_CIHostNameFactoryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CNetworking_CIHostNameFactory* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CNetworking_CIHostNameFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CNetworking_CIHostNameFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CNetworking_CIHostNameFactory* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CNetworking_CIHostNameFactory* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CNetworking_CIHostNameFactory* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateHostName)(_q_CWindows_CNetworking_CIHostNameFactory* pThis, HSTRING hostName, _q_CWindows_CNetworking_CIHostName** __pret);
-} _q_CWindows_CNetworking_CIHostNameFactoryVtbl;
-struct _q_CWindows_CNetworking_CIHostNameFactory
-{
-    _q_CWindows_CNetworking_CIHostNameFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CNetworking_CSockets_CIDatagramSocketVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CNetworking_CSockets_CIDatagramSocket* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CNetworking_CSockets_CIDatagramSocket* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CNetworking_CSockets_CIDatagramSocket* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CNetworking_CSockets_CIDatagramSocket* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CNetworking_CSockets_CIDatagramSocket* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CNetworking_CSockets_CIDatagramSocket* This, TrustLevel* trustLevel);
-    void* unneeded_get_Control;
-    void* unneeded_get_Information;
-    void* unneeded_get_OutputStream;
-    void* unneeded_ConnectAsync;
-    void* unneeded_ConnectWithEndpointPairAsync;
-    void* unneeded_BindServiceNameAsync;
-    void* unneeded_BindEndpointAsync;
-    void* unneeded_JoinMulticastGroup;
-    void* unneeded_GetOutputStreamAsync;
-    void* unneeded_GetOutputStreamWithEndpointPairAsync;
-    void* unneeded_add_MessageReceived;
-    void* unneeded_remove_MessageReceived;
-} _q_CWindows_CNetworking_CSockets_CIDatagramSocketVtbl;
-struct _q_CWindows_CNetworking_CSockets_CIDatagramSocket
-{
-    _q_CWindows_CNetworking_CSockets_CIDatagramSocketVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CNetworking_CSockets_CIDatagramSocketStaticsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetEndpointPairsAsync)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* pThis, _q_CWindows_CNetworking_CIHostName* remoteHostName, HSTRING remoteServiceName, _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair** __pret);
-    HRESULT (STDMETHODCALLTYPE* GetEndpointPairsWithSortOptionsAsync)(_q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics* pThis, _q_CWindows_CNetworking_CIHostName* remoteHostName, HSTRING remoteServiceName, _q_CWindows_CNetworking_CHostNameSortOptions sortOptions, _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair** __pret);
-} _q_CWindows_CNetworking_CSockets_CIDatagramSocketStaticsVtbl;
-struct _q_CWindows_CNetworking_CSockets_CIDatagramSocketStatics
-{
-    _q_CWindows_CNetworking_CSockets_CIDatagramSocketStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsVtbl
 {
@@ -536,7 +394,7 @@ typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfoVtbl
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo* This, TrustLevel* trustLevel);
     HRESULT (STDMETHODCALLTYPE* get_Id)(_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo* pThis, _q_CWindows_CStorage_CStreams_CIBuffer** __pret);
-    void* unneeded_get_Source;
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo* pThis, _q_CWindows_CSystem_CProfile_CSystemIdentificationSource* __pret);
 } _q_CWindows_CSystem_CProfile_CISystemIdentificationInfoVtbl;
 struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo
 {
@@ -743,50 +601,6 @@ struct _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory
     _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactoryVtbl* lpVtbl;
 };
 // definitions for parameterized interfaces
-typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* handler);
-    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair** __pret);
-    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair** __pret);
-} _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl;
-struct _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-{
-    _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl* lpVtbl;
-};
-typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
-} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl;
-struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-{
-    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl* lpVtbl;
-};
-typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair* This, TrustLevel* trustLevel);
-    void* unneeded_GetAt;
-    void* unneeded_get_Size;
-    void* unneeded_IndexOf;
-    void* unneeded_GetMany;
-} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl;
-struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-{
-    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl* lpVtbl;
-};
 typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1_booleanVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1_boolean* This, REFIID riid, void** ppvObject);

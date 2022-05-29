@@ -6,123 +6,6 @@ import CWinRT;
 
 extension Windows.Foundation {
 // closed interface type
-public class IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xafc2ff8e, Data2: 0xe393, Data3 : 0x566a, Data4 : (0x89, 0xc4, 0xd0, 0x43, 0xe9, 0x40, 0x05, 0x0d)) }
-    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
-        }
-    }
-    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>) throws -> Void {
-        try self._n_put_Completed(RawPointer(handler));
-    }
-    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
-        }
-    }
-    public func get_Completed() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
-        try self._n_get_Completed(&__result);
-        return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
-    }
-    // Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
-        }
-    }
-    public func GetResults() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
-        try self._n_GetResults(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
-    }
-    public var Completed : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        get throws {
-            return try get_Completed();
-        }
-    }
-} // IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-// closed generic delegate type
-public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x20d6faab, Data2: 0x3b8e, Data3 : 0x5a1f, Data4 : (0x83, 0x97, 0xb0, 0x1c, 0xb2, 0x19, 0xa1, 0x8d)) }
-    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair>>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
-        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
-        }
-    }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
-        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
-    }
-} // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-// closed generic delegate type
-public class _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-{
-    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        default:
-            ppvObject.pointee = nil
-            return E_NOINTERFACE
-        }
-    },
-    AddRef: {
-        let instance = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from($0)
-        _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
-    },
-    Release: {
-        let instance = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
-    },
-    Invoke: {
-        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from(pThis)?.takeUnretainedValue() else {
-            return E_INVALIDARG
-        }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(asyncInfo), asyncStatus: asyncStatus)
-    }
-    )
-    private struct WithTrailingObjects {
-        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
-        public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>?
-    }
-    private var instance: WithTrailingObjects
-
-    public init() {
-        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>.passUnretained(self)
-    }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>? {
-        return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1).pointee.wrapper
-    }
-
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
-        return S_OK
-    }
-    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
-            WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(UnsafeMutableRawPointer($0))
-        }
-    }
-}
-// closed interface type
 public class IAsyncOperation_1_boolean
     :
     WinRT.IInspectable
@@ -680,36 +563,6 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
     }
 }
 }
-extension WinRT.Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair : Future {
-    private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {
-        private var hEvent: HANDLE
-        public init(signal event: HANDLE) {
-            self.hEvent = event
-            super.init()
-        }
-        override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair?,
-            asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
-            _ = SetEvent(self.hEvent)
-            return S_OK
-        }
-}
-        internal func get() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
-            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
-            let event: HANDLE =
-            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
-            // TODO(compnerd) validate event
-            defer { _ = CloseHandle(event) }
-            let completion: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair =
-            MyCompletedHandler(signal: event)
-            try withExtendedLifetime(completion) {
-            try self.put_Completed(handler: completion.Interface())
-            _ = WaitForSingleObject(event, INFINITE)
-            }
-        }
-        return try self.GetResults();
-        }
-}
 extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
     private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1_boolean {
         private var hEvent: HANDLE
@@ -881,6 +734,10 @@ public class _abstract_AsyncActionCompletedHandler
 // enum type
 public typealias AsyncStatus = _q_CWindows_CFoundation_CAsyncStatus;
 
+// type: Windows.Foundation.HResult
+// struct type
+public typealias HResult = _q_CWindows_CFoundation_CHResult;
+
 // type: Windows.Foundation.IAsyncAction
 // interface type
 public class IAsyncAction
@@ -932,7 +789,17 @@ public class IAsyncInfo
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x00000036, Data2: 0x0000, Data3 : 0x0000, Data4 : (0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46)) }
-// method not needed: get_Id
+    // [IsSpecialName] System.UInt32 get_Id()
+    public func _n_get_Id(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Id(pThis, __presult))
+        }
+    }
+    public func get_Id() throws -> UINT32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Id(&__result);
+        return __result;
+    }
     // [IsSpecialName] Windows.Foundation.AsyncStatus get_Status()
     public func _n_get_Status(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CAsyncStatus>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
@@ -944,9 +811,45 @@ public class IAsyncInfo
         try self._n_get_Status(&__result);
         return __result;
     }
-// method not needed: get_ErrorCode
-// method not needed: Cancel
-// method not needed: Close
+    // [IsSpecialName] Windows.Foundation.HResult get_ErrorCode()
+    public func _n_get_ErrorCode(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CHResult>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ErrorCode(pThis, __presult))
+        }
+    }
+    public func get_ErrorCode() throws -> WinRT.Windows.Foundation.HResult {
+        var __result : _q_CWindows_CFoundation_CHResult = defaultValue();
+        try self._n_get_ErrorCode(&__result);
+        return __result;
+    }
+    // void Cancel()
+    public func _n_Cancel() throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Cancel(pThis))
+        }
+    }
+    public func Cancel() throws -> Void {
+        try self._n_Cancel();
+    }
+    // void Close()
+    public func _n_Close() throws {
+        return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Close(pThis))
+        }
+    }
+    public func Close() throws -> Void {
+        try self._n_Close();
+    }
+    public var ErrorCode : WinRT.Windows.Foundation.HResult {
+        get throws {
+            return try get_ErrorCode();
+        }
+    }
+    public var Id : UINT32 {
+        get throws {
+            return try get_Id();
+        }
+    }
     public var Status : _q_CWindows_CFoundation_CAsyncStatus {
         get throws {
             return try get_Status();
@@ -955,12 +858,6 @@ public class IAsyncInfo
 } // IAsyncInfo
 
 
-// type: Windows.Foundation.IAsyncOperationWithProgress`2
-// TODO generic interface: Windows.Foundation.IAsyncOperationWithProgress`2
-
-// type: Windows.Foundation.IAsyncOperation`1
-// TODO generic interface: Windows.Foundation.IAsyncOperation`1
-
 // type: Windows.Foundation.IUriRuntimeClass
 // interface type
 public class IUriRuntimeClass
@@ -968,271 +865,23 @@ public class IUriRuntimeClass
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9e365e57, Data2: 0x48b2, Data3 : 0x4160, Data4 : (0x95, 0x6f, 0xc7, 0x38, 0x51, 0x20, 0xbb, 0xfc)) }
-    // [IsSpecialName] System.String get_AbsoluteUri()
-    public func _n_get_AbsoluteUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AbsoluteUri(pThis, __presult))
-        }
-    }
-    public func get_AbsoluteUri() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_AbsoluteUri(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_DisplayUri()
-    public func _n_get_DisplayUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayUri(pThis, __presult))
-        }
-    }
-    public func get_DisplayUri() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_DisplayUri(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Domain()
-    public func _n_get_Domain(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Domain(pThis, __presult))
-        }
-    }
-    public func get_Domain() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Domain(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Extension()
-    public func _n_get_Extension(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Extension(pThis, __presult))
-        }
-    }
-    public func get_Extension() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Extension(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Fragment()
-    public func _n_get_Fragment(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Fragment(pThis, __presult))
-        }
-    }
-    public func get_Fragment() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Fragment(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Host()
-    public func _n_get_Host(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Host(pThis, __presult))
-        }
-    }
-    public func get_Host() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Host(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Password()
-    public func _n_get_Password(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Password(pThis, __presult))
-        }
-    }
-    public func get_Password() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Password(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Path()
-    public func _n_get_Path(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, __presult))
-        }
-    }
-    public func get_Path() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Path(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_Query()
-    public func _n_get_Query(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Query(pThis, __presult))
-        }
-    }
-    public func get_Query() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_Query(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] Windows.Foundation.WwwFormUrlDecoder get_QueryParsed()
-    public func _n_get_QueryParsed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_QueryParsed(pThis, __presult))
-        }
-    }
-    public func get_QueryParsed() throws -> Optional<WinRT.Windows.Foundation.WwwFormUrlDecoder> {
-        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>> = nil;
-        try self._n_get_QueryParsed(&__result);
-        return WinRT.Windows.Foundation.WwwFormUrlDecoder(consuming: __result);
-    }
-    // [IsSpecialName] System.String get_RawUri()
-    public func _n_get_RawUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RawUri(pThis, __presult))
-        }
-    }
-    public func get_RawUri() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_RawUri(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_SchemeName()
-    public func _n_get_SchemeName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SchemeName(pThis, __presult))
-        }
-    }
-    public func get_SchemeName() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_SchemeName(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.String get_UserName()
-    public func _n_get_UserName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UserName(pThis, __presult))
-        }
-    }
-    public func get_UserName() throws -> Swift.String {
-        var __result : Optional<HSTRING> = nil;
-        try self._n_get_UserName(&__result);
-        return Swift.String(from: __result);
-    }
-    // [IsSpecialName] System.Int32 get_Port()
-    public func _n_get_Port(_ __presult: UnsafeMutablePointer<INT32>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Port(pThis, __presult))
-        }
-    }
-    public func get_Port() throws -> INT32 {
-        var __result : INT32 = 0;
-        try self._n_get_Port(&__result);
-        return __result;
-    }
-    // [IsSpecialName] bool get_Suspicious()
-    public func _n_get_Suspicious(_ __presult: UnsafeMutablePointer<boolean>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Suspicious(pThis, __presult))
-        }
-    }
-    public func get_Suspicious() throws -> boolean {
-        var __result : boolean = 0;
-        try self._n_get_Suspicious(&__result);
-        return __result;
-    }
-    // bool Equals(Windows.Foundation.Uri)
-    public func _n_Equals(_ pUri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Equals(pThis, pUri, __presult))
-        }
-    }
-    public func Equals(pUri : Optional<WinRT.Windows.Foundation.Uri>) throws -> boolean {
-        var __result : boolean = 0;
-        try self._n_Equals(RawPointer(pUri), &__result);
-        return __result;
-    }
-    // Windows.Foundation.Uri CombineUri(System.String)
-    public func _n_CombineUri(_ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.CombineUri(pThis, relativeUri, __presult))
-        }
-    }
-    public func CombineUri(relativeUri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.Uri> {
-        let __hstr_relativeUri = try HString(relativeUri);
-        return try withExtendedLifetime(__hstr_relativeUri) {
-        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
-        try self._n_CombineUri(__hstr_relativeUri.hRef.hString, &__result);
-        return WinRT.Windows.Foundation.Uri(consuming: __result);
-        }
-    }
-    public var AbsoluteUri : Swift.String {
-        get throws {
-            return try get_AbsoluteUri();
-        }
-    }
-    public var DisplayUri : Swift.String {
-        get throws {
-            return try get_DisplayUri();
-        }
-    }
-    public var Domain : Swift.String {
-        get throws {
-            return try get_Domain();
-        }
-    }
-    public var Extension : Swift.String {
-        get throws {
-            return try get_Extension();
-        }
-    }
-    public var Fragment : Swift.String {
-        get throws {
-            return try get_Fragment();
-        }
-    }
-    public var Host : Swift.String {
-        get throws {
-            return try get_Host();
-        }
-    }
-    public var Password : Swift.String {
-        get throws {
-            return try get_Password();
-        }
-    }
-    public var Path : Swift.String {
-        get throws {
-            return try get_Path();
-        }
-    }
-    public var Port : INT32 {
-        get throws {
-            return try get_Port();
-        }
-    }
-    public var Query : Swift.String {
-        get throws {
-            return try get_Query();
-        }
-    }
-    public var QueryParsed : Optional<WinRT.Windows.Foundation.WwwFormUrlDecoder> {
-        get throws {
-            return try get_QueryParsed();
-        }
-    }
-    public var RawUri : Swift.String {
-        get throws {
-            return try get_RawUri();
-        }
-    }
-    public var SchemeName : Swift.String {
-        get throws {
-            return try get_SchemeName();
-        }
-    }
-    public var Suspicious : boolean {
-        get throws {
-            return try get_Suspicious();
-        }
-    }
-    public var UserName : Swift.String {
-        get throws {
-            return try get_UserName();
-        }
-    }
+// method not needed: get_AbsoluteUri
+// method not needed: get_DisplayUri
+// method not needed: get_Domain
+// method not needed: get_Extension
+// method not needed: get_Fragment
+// method not needed: get_Host
+// method not needed: get_Password
+// method not needed: get_Path
+// method not needed: get_Query
+// method not needed: get_QueryParsed
+// method not needed: get_RawUri
+// method not needed: get_SchemeName
+// method not needed: get_UserName
+// method not needed: get_Port
+// method not needed: get_Suspicious
+// method not needed: Equals
+// method not needed: CombineUri
 } // IUriRuntimeClass
 
 
@@ -1277,41 +926,6 @@ public class IUriRuntimeClassFactory
 } // IUriRuntimeClassFactory
 
 
-// type: Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
-// interface type
-public class IWwwFormUrlDecoderRuntimeClass
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd45a0451, Data2: 0xf225, Data3 : 0x4542, Data4 : (0x92, 0x96, 0x0e, 0x1d, 0xf5, 0xd2, 0x54, 0xdf)) }
-// method not needed: GetFirstValueByName
-} // IWwwFormUrlDecoderRuntimeClass
-
-
-// type: Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
-// interface type
-public class IWwwFormUrlDecoderRuntimeClassFactory
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5b8c6b3d, Data2: 0x24ae, Data3 : 0x41b5, Data4 : (0xa1, 0xbf, 0xf0, 0xc3, 0xd5, 0x44, 0x84, 0x5b)) }
-    // Windows.Foundation.WwwFormUrlDecoder CreateWwwFormUrlDecoder(System.String)
-    public func _n_CreateWwwFormUrlDecoder(_ query : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
-        return try perform(as: _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWwwFormUrlDecoder(pThis, query, __presult))
-        }
-    }
-    public func CreateWwwFormUrlDecoder(query : Swift.String) throws -> Optional<WinRT.Windows.Foundation.WwwFormUrlDecoder> {
-        let __hstr_query = try HString(query);
-        return try withExtendedLifetime(__hstr_query) {
-        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>> = nil;
-        try self._n_CreateWwwFormUrlDecoder(__hstr_query.hRef.hString, &__result);
-        return WinRT.Windows.Foundation.WwwFormUrlDecoder(consuming: __result);
-        }
-    }
-} // IWwwFormUrlDecoderRuntimeClassFactory
-
-
 // type: Windows.Foundation.Uri
 // runtime class
 public class Uri
@@ -1331,21 +945,6 @@ public class Uri
     // static interface not needed: Windows.Foundation.IUriEscapeStatics
     // instance interface not needed: Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
     // instance interface not needed: Windows.Foundation.IStringable
-}
-
-// type: Windows.Foundation.WwwFormUrlDecoder
-// runtime class
-public class WwwFormUrlDecoder
-    :
-    WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
-{
-    public convenience init(query : Swift.String) throws {
-        let _af : IWwwFormUrlDecoderRuntimeClassFactory = try! RoGetActivationFactory(HString("Windows.Foundation.WwwFormUrlDecoder"));
-        let _instance = try _af.CreateWwwFormUrlDecoder(query: query)!;
-        self.init(RawPointer(_instance))
-    }
-    // instance interface not needed: Windows.Foundation.Collections.IVectorView`1[[Windows.Foundation.IWwwFormUrlDecoderEntry, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
-    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Windows.Foundation.IWwwFormUrlDecoderEntry, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
 }
 
 }
