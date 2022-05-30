@@ -25,7 +25,7 @@ public class DispatcherQueueController
 
 // type: Windows.System.IDispatcherQueueController
 // interface type
-public class IDispatcherQueueController
+open class IDispatcherQueueController
     :
     WinRT.IInspectable
 {
@@ -56,7 +56,7 @@ public class IDispatcherQueueController
 
 // type: Windows.System.IDispatcherQueueControllerStatics
 // interface type
-public class IDispatcherQueueControllerStatics
+open class IDispatcherQueueControllerStatics
     :
     WinRT.IInspectable
 {
@@ -77,7 +77,7 @@ public class IDispatcherQueueControllerStatics
 
 // type: Windows.System.IUser
 // interface type
-public class IUser
+open class IUser
     :
     WinRT.IInspectable
 {

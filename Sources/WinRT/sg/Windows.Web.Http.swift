@@ -62,7 +62,7 @@ public typealias HttpStatusCode = _q_CWindows_CWeb_CHttp_CHttpStatusCode;
 
 // type: Windows.Web.Http.IHttpClient
 // interface type
-public class IHttpClient
+open class IHttpClient
     :
     WinRT.IInspectable
 {
@@ -102,7 +102,7 @@ public class IHttpClient
 
 // type: Windows.Web.Http.IHttpClientFactory
 // interface type
-public class IHttpClientFactory
+open class IHttpClientFactory
     :
     WinRT.IInspectable
 {
@@ -123,7 +123,7 @@ public class IHttpClientFactory
 
 // type: Windows.Web.Http.IHttpContent
 // interface type
-public class IHttpContent
+open class IHttpContent
     :
     WinRT.IInspectable
 {
@@ -159,7 +159,7 @@ public class IHttpContent
 
 // type: Windows.Web.Http.IHttpResponseMessage
 // interface type
-public class IHttpResponseMessage
+open class IHttpResponseMessage
     :
     WinRT.IInspectable
 {
@@ -209,7 +209,7 @@ public class IHttpResponseMessage
 
 // type: Windows.Web.Http.IHttpResponseMessageFactory
 // interface type
-public class IHttpResponseMessageFactory
+open class IHttpResponseMessageFactory
     :
     WinRT.IInspectable
 {

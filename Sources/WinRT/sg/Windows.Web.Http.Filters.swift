@@ -7,7 +7,7 @@ import CWinRT;
 extension Windows.Web.Http.Filters {
 // type: Windows.Web.Http.Filters.IHttpFilter
 // interface type
-public class IHttpFilter
+open class IHttpFilter
     :
     WinRT.IInspectable
 {

@@ -7,7 +7,7 @@ import CWinRT;
 extension Windows.Storage.Streams {
 // type: Windows.Storage.Streams.IBuffer
 // interface type
-public class IBuffer
+open class IBuffer
     :
     WinRT.IInspectable
 {
@@ -20,7 +20,7 @@ public class IBuffer
 
 // type: Windows.Storage.Streams.IOutputStream
 // interface type
-public class IOutputStream
+open class IOutputStream
     :
     WinRT.IInspectable
 {

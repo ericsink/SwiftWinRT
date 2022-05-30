@@ -562,6 +562,80 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
         }
     }
 }
+// closed generic delegate type
+public class IEventHandler_1_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc50898f6, Data2: 0xc536, Data3 : 0x5f47, Data4 : (0x85, 0x83, 0x8b, 0x2c, 0x24, 0x38, 0xa1, 0x3b)) }
+    // [IsSpecialName] void Invoke(System.Object, System.Object)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // IEventHandler_1_IInspectable
+// closed generic delegate type
+public class _abstract_IEventHandler_1_IInspectable
+{
+    private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IEventHandler_1_IInspectable.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = _abstract_IEventHandler_1_IInspectable.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+    },
+    Release: {
+        let instance = _abstract_IEventHandler_1_IInspectable.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
+        guard let self = _abstract_IEventHandler_1_IInspectable.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        return self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.IInspectable(args))
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
+        public var wrapper: Unmanaged<_abstract_IEventHandler_1_IInspectable>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<_abstract_IEventHandler_1_IInspectable>.passUnretained(self)
+    }
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IEventHandler_1_IInspectable>? {
+        return pUnk?.bindMemory(to: _abstract_IEventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) -> HRESULT {
+        return S_OK
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.IEventHandler_1_IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IEventHandler_1_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
 }
 extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
     private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1_boolean {
@@ -734,13 +808,17 @@ public class _abstract_AsyncActionCompletedHandler
 // enum type
 public typealias AsyncStatus = _q_CWindows_CFoundation_CAsyncStatus;
 
+// type: Windows.Foundation.EventRegistrationToken
+// struct type
+public typealias EventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken;
+
 // type: Windows.Foundation.HResult
 // struct type
 public typealias HResult = _q_CWindows_CFoundation_CHResult;
 
 // type: Windows.Foundation.IAsyncAction
 // interface type
-public class IAsyncAction
+open class IAsyncAction
     :
     WinRT.IInspectable
 {
@@ -784,7 +862,7 @@ public class IAsyncAction
 
 // type: Windows.Foundation.IAsyncInfo
 // interface type
-public class IAsyncInfo
+open class IAsyncInfo
     :
     WinRT.IInspectable
 {
@@ -860,7 +938,7 @@ public class IAsyncInfo
 
 // type: Windows.Foundation.IUriRuntimeClass
 // interface type
-public class IUriRuntimeClass
+open class IUriRuntimeClass
     :
     WinRT.IInspectable
 {
@@ -887,7 +965,7 @@ public class IUriRuntimeClass
 
 // type: Windows.Foundation.IUriRuntimeClassFactory
 // interface type
-public class IUriRuntimeClassFactory
+open class IUriRuntimeClassFactory
     :
     WinRT.IInspectable
 {
@@ -925,6 +1003,10 @@ public class IUriRuntimeClassFactory
     }
 } // IUriRuntimeClassFactory
 
+
+// type: Windows.Foundation.TimeSpan
+// struct type
+public typealias TimeSpan = _q_CWindows_CFoundation_CTimeSpan;
 
 // type: Windows.Foundation.Uri
 // runtime class

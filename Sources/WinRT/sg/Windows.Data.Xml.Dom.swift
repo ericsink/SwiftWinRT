@@ -7,7 +7,7 @@ import CWinRT;
 extension Windows.Data.Xml.Dom {
 // type: Windows.Data.Xml.Dom.IXmlDocument
 // interface type
-public class IXmlDocument
+open class IXmlDocument
     :
     WinRT.IInspectable
 {
@@ -34,7 +34,7 @@ public class IXmlDocument
 
 // type: Windows.Data.Xml.Dom.IXmlDocumentIO
 // interface type
-public class IXmlDocumentIO
+open class IXmlDocumentIO
     :
     WinRT.IInspectable
 {

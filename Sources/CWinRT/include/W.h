@@ -11,6 +11,25 @@ typedef enum _q_CWindows_CFoundation_CAsyncStatus
     _q_CWindows_CFoundation_CAsyncStatus_Error = 3,
     _q_CWindows_CFoundation_CAsyncStatus_Started = 0,
 } _q_CWindows_CFoundation_CAsyncStatus;
+typedef enum _q_CWindows_CSystem_CPower_CBatteryStatus
+{
+    _q_CWindows_CSystem_CPower_CBatteryStatus_NotPresent = 0,
+    _q_CWindows_CSystem_CPower_CBatteryStatus_Discharging = 1,
+    _q_CWindows_CSystem_CPower_CBatteryStatus_Idle = 2,
+    _q_CWindows_CSystem_CPower_CBatteryStatus_Charging = 3,
+} _q_CWindows_CSystem_CPower_CBatteryStatus;
+typedef enum _q_CWindows_CSystem_CPower_CEnergySaverStatus
+{
+    _q_CWindows_CSystem_CPower_CEnergySaverStatus_Disabled = 0,
+    _q_CWindows_CSystem_CPower_CEnergySaverStatus_Off = 1,
+    _q_CWindows_CSystem_CPower_CEnergySaverStatus_On = 2,
+} _q_CWindows_CSystem_CPower_CEnergySaverStatus;
+typedef enum _q_CWindows_CSystem_CPower_CPowerSupplyStatus
+{
+    _q_CWindows_CSystem_CPower_CPowerSupplyStatus_NotPresent = 0,
+    _q_CWindows_CSystem_CPower_CPowerSupplyStatus_Inadequate = 1,
+    _q_CWindows_CSystem_CPower_CPowerSupplyStatus_Adequate = 2,
+} _q_CWindows_CSystem_CPower_CPowerSupplyStatus;
 typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
 {
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_None = 0,
@@ -93,7 +112,9 @@ typedef enum _q_CWindows_CWeb_CHttp_CHttpStatusCode
     _q_CWindows_CWeb_CHttp_CHttpStatusCode_NetworkAuthenticationRequired = 511,
 } _q_CWindows_CWeb_CHttp_CHttpStatusCode;
 // forward decls for value types
+typedef struct _q_CWindows_CFoundation_CEventRegistrationToken _q_CWindows_CFoundation_CEventRegistrationToken;
 typedef struct _q_CWindows_CFoundation_CHResult _q_CWindows_CFoundation_CHResult;
+typedef struct _q_CWindows_CFoundation_CTimeSpan _q_CWindows_CFoundation_CTimeSpan;
 typedef struct _q_CWindows_CWeb_CHttp_CHttpProgress _q_CWindows_CWeb_CHttp_CHttpProgress;
 // forward decls for interfaces
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocument _q_CWindows_CData_CXml_CDom_CIXmlDocument;
@@ -108,6 +129,7 @@ typedef struct _q_CWindows_CStorage_CStreams_CIOutputStream _q_CWindows_CStorage
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueController _q_CWindows_CSystem_CIDispatcherQueueController;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueControllerStatics _q_CWindows_CSystem_CIDispatcherQueueControllerStatics;
 typedef struct _q_CWindows_CSystem_CIUser _q_CWindows_CSystem_CIUser;
+typedef struct _q_CWindows_CSystem_CPower_CIPowerManagerStatics _q_CWindows_CSystem_CPower_CIPowerManagerStatics;
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo;
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification _q_CWindows_CUI_CNotifications_CIToastNotification;
@@ -130,10 +152,19 @@ typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHand
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64;
+typedef struct _cg_CWindows_CFoundation_IEventHandler_1_IInspectable _cg_CWindows_CFoundation_IEventHandler_1_IInspectable;
 // definition of structs for value types
+struct _q_CWindows_CFoundation_CEventRegistrationToken
+{
+    INT64 Value;
+};
 struct _q_CWindows_CFoundation_CHResult
 {
     INT32 Value;
+};
+struct _q_CWindows_CFoundation_CTimeSpan
+{
+    INT64 Duration;
 };
 struct _q_CWindows_CWeb_CHttp_CHttpProgress
 {
@@ -384,6 +415,34 @@ typedef struct _q_CWindows_CSystem_CIUserVtbl
 struct _q_CWindows_CSystem_CIUser
 {
     _q_CWindows_CSystem_CIUserVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_EnergySaverStatus)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CSystem_CPower_CEnergySaverStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_EnergySaverStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_EnergySaverStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_BatteryStatus)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CSystem_CPower_CBatteryStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_BatteryStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_BatteryStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_PowerSupplyStatus)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CSystem_CPower_CPowerSupplyStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_PowerSupplyStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_PowerSupplyStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_RemainingChargePercent)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_RemainingChargePercentChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_RemainingChargePercentChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_RemainingDischargeTime)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CTimeSpan* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_RemainingDischargeTimeChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_RemainingDischargeTimeChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+} _q_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl;
+struct _q_CWindows_CSystem_CPower_CIPowerManagerStatics
+{
+    _q_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfoVtbl
 {
@@ -721,4 +780,15 @@ typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHand
 struct _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 {
     _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64Vtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IEventHandler_1_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IEventHandler_1_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IEventHandler_1_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IEventHandler_1_IInspectable* pThis, IInspectable* sender, IInspectable* args);
+} _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
+{
+    _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl* lpVtbl;
 };

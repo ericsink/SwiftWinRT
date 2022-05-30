@@ -7,7 +7,7 @@ import CWinRT;
 extension Windows.UI.Notifications {
 // type: Windows.UI.Notifications.IToastNotification
 // interface type
-public class IToastNotification
+open class IToastNotification
     :
     WinRT.IInspectable
 {
@@ -26,7 +26,7 @@ public class IToastNotification
 
 // type: Windows.UI.Notifications.IToastNotificationFactory
 // interface type
-public class IToastNotificationFactory
+open class IToastNotificationFactory
     :
     WinRT.IInspectable
 {
@@ -47,7 +47,7 @@ public class IToastNotificationFactory
 
 // type: Windows.UI.Notifications.IToastNotificationManagerStatics
 // interface type
-public class IToastNotificationManagerStatics
+open class IToastNotificationManagerStatics
     :
     WinRT.IInspectable
 {
@@ -73,7 +73,7 @@ public class IToastNotificationManagerStatics
 
 // type: Windows.UI.Notifications.IToastNotifier
 // interface type
-public class IToastNotifier
+open class IToastNotifier
     :
     WinRT.IInspectable
 {

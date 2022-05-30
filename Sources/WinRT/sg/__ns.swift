@@ -11,6 +11,7 @@ extension Windows.Security { public struct Cryptography { } }
 extension Windows { public struct Storage { } }
 extension Windows.Storage { public struct Streams { } }
 extension Windows { public struct System { } }
+extension Windows.System { public struct Power { } }
 extension Windows.System { public struct Profile { } }
 extension Windows { public struct UI { } }
 extension Windows.UI { public struct Notifications { } }

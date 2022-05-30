@@ -7,7 +7,7 @@ import CWinRT;
 extension Windows.System.Profile {
 // type: Windows.System.Profile.ISystemIdentificationInfo
 // interface type
-public class ISystemIdentificationInfo
+open class ISystemIdentificationInfo
     :
     WinRT.IInspectable
 {
@@ -49,7 +49,7 @@ public class ISystemIdentificationInfo
 
 // type: Windows.System.Profile.ISystemIdentificationStatics
 // interface type
-public class ISystemIdentificationStatics
+open class ISystemIdentificationStatics
     :
     WinRT.IInspectable
 {

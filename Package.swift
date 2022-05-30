@@ -8,7 +8,9 @@ let SwiftWinRT = Package(
     .executable(name: "SystemIdentification", targets: ["SystemIdentification"]),
     .executable(name: "DispatcherQueue", targets: ["DispatcherQueue"]),
     .executable(name: "Toast", targets: ["Toast"]),
+    .executable(name: "Power", targets: ["Power"]),
     .executable(name: "HttpClient", targets: ["HttpClient"]),
+    .executable(name: "App", targets: ["App"]),
     .library(name: "SwiftWinRT", targets: ["WinRT"]),
   ],
   targets: [
@@ -17,6 +19,14 @@ let SwiftWinRT = Package(
             exclude: ["sg/README.md"],
             linkerSettings: [
               .linkedLibrary("Ole32"),
+            ]),
+    .target(name: "Power", dependencies: ["WinRT"],
+            swiftSettings: [
+              .unsafeFlags(["-parse-as-library"]),
+            ]),
+    .target(name: "App", dependencies: ["WinRT"],
+            swiftSettings: [
+              .unsafeFlags(["-parse-as-library"]),
             ]),
     .target(name: "HttpClient", dependencies: ["WinRT"],
             swiftSettings: [

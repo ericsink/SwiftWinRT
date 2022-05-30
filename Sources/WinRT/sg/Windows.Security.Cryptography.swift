@@ -35,7 +35,7 @@ public class CryptographicBuffer
 
 // type: Windows.Security.Cryptography.ICryptographicBufferStatics
 // interface type
-public class ICryptographicBufferStatics
+open class ICryptographicBufferStatics
     :
     WinRT.IInspectable
 {
