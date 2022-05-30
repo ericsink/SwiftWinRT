@@ -41,7 +41,7 @@ public class HttpResponseMessage
     :
     WinRT.Windows.Web.Http.IHttpResponseMessage
 {
-    public convenience init(statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode) throws {
+    public convenience init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
         let _af : IHttpResponseMessageFactory = try! RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
         let _instance = try _af.Create(statusCode: statusCode)!;
         self.init(RawPointer(_instance))
@@ -220,7 +220,7 @@ open class IHttpResponseMessageFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, statusCode, __presult))
         }
     }
-    public func Create(statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode) throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+    public func Create(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>> = nil;
         try self._n_Create(statusCode, &__result);
         return WinRT.Windows.Web.Http.HttpResponseMessage(consuming: __result);

@@ -29,7 +29,7 @@ open class ISystemIdentificationInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Source(pThis, __presult))
         }
     }
-    public func get_Source() throws -> _q_CWindows_CSystem_CProfile_CSystemIdentificationSource {
+    public func get_Source() throws -> WinRT.Windows.System.Profile.SystemIdentificationSource {
         var __result : _q_CWindows_CSystem_CProfile_CSystemIdentificationSource = defaultValue();
         try self._n_get_Source(&__result);
         return __result;
@@ -39,7 +39,7 @@ open class ISystemIdentificationInfo
             return try get_Id();
         }
     }
-    public var Source : _q_CWindows_CSystem_CProfile_CSystemIdentificationSource {
+    public var Source : WinRT.Windows.System.Profile.SystemIdentificationSource {
         get throws {
             return try get_Source();
         }

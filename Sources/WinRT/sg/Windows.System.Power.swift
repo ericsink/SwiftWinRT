@@ -26,7 +26,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EnergySaverStatus(pThis, __presult))
         }
     }
-    public func get_EnergySaverStatus() throws -> _q_CWindows_CSystem_CPower_CEnergySaverStatus {
+    public func get_EnergySaverStatus() throws -> WinRT.Windows.System.Power.EnergySaverStatus {
         var __result : _q_CWindows_CSystem_CPower_CEnergySaverStatus = defaultValue();
         try self._n_get_EnergySaverStatus(&__result);
         return __result;
@@ -57,7 +57,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BatteryStatus(pThis, __presult))
         }
     }
-    public func get_BatteryStatus() throws -> _q_CWindows_CSystem_CPower_CBatteryStatus {
+    public func get_BatteryStatus() throws -> WinRT.Windows.System.Power.BatteryStatus {
         var __result : _q_CWindows_CSystem_CPower_CBatteryStatus = defaultValue();
         try self._n_get_BatteryStatus(&__result);
         return __result;
@@ -88,7 +88,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PowerSupplyStatus(pThis, __presult))
         }
     }
-    public func get_PowerSupplyStatus() throws -> _q_CWindows_CSystem_CPower_CPowerSupplyStatus {
+    public func get_PowerSupplyStatus() throws -> WinRT.Windows.System.Power.PowerSupplyStatus {
         var __result : _q_CWindows_CSystem_CPower_CPowerSupplyStatus = defaultValue();
         try self._n_get_PowerSupplyStatus(&__result);
         return __result;
@@ -119,7 +119,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RemainingChargePercent(pThis, __presult))
         }
     }
-    public func get_RemainingChargePercent() throws -> INT32 {
+    public func get_RemainingChargePercent() throws -> Swift.Int32 {
         var __result : INT32 = 0;
         try self._n_get_RemainingChargePercent(&__result);
         return __result;
@@ -175,22 +175,22 @@ open class IPowerManagerStatics
     public func remove_RemainingDischargeTimeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         try self._n_remove_RemainingDischargeTimeChanged(token);
     }
-    public var BatteryStatus : _q_CWindows_CSystem_CPower_CBatteryStatus {
+    public var BatteryStatus : WinRT.Windows.System.Power.BatteryStatus {
         get throws {
             return try get_BatteryStatus();
         }
     }
-    public var EnergySaverStatus : _q_CWindows_CSystem_CPower_CEnergySaverStatus {
+    public var EnergySaverStatus : WinRT.Windows.System.Power.EnergySaverStatus {
         get throws {
             return try get_EnergySaverStatus();
         }
     }
-    public var PowerSupplyStatus : _q_CWindows_CSystem_CPower_CPowerSupplyStatus {
+    public var PowerSupplyStatus : WinRT.Windows.System.Power.PowerSupplyStatus {
         get throws {
             return try get_PowerSupplyStatus();
         }
     }
-    public var RemainingChargePercent : INT32 {
+    public var RemainingChargePercent : Swift.Int32 {
         get throws {
             return try get_RemainingChargePercent();
         }
@@ -214,7 +214,7 @@ public class PowerManager
     public static var PowerManagerStatics : IPowerManagerStatics {
         _IPowerManagerStatics.x
     }
-    public static func get_EnergySaverStatus() throws -> _q_CWindows_CSystem_CPower_CEnergySaverStatus {
+    public static func get_EnergySaverStatus() throws -> WinRT.Windows.System.Power.EnergySaverStatus {
         return try PowerManagerStatics.get_EnergySaverStatus();
     }
     public static func add_EnergySaverStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
@@ -223,7 +223,7 @@ public class PowerManager
     public static func remove_EnergySaverStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_EnergySaverStatusChanged(token: token);
     }
-    public static func get_BatteryStatus() throws -> _q_CWindows_CSystem_CPower_CBatteryStatus {
+    public static func get_BatteryStatus() throws -> WinRT.Windows.System.Power.BatteryStatus {
         return try PowerManagerStatics.get_BatteryStatus();
     }
     public static func add_BatteryStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
@@ -232,7 +232,7 @@ public class PowerManager
     public static func remove_BatteryStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_BatteryStatusChanged(token: token);
     }
-    public static func get_PowerSupplyStatus() throws -> _q_CWindows_CSystem_CPower_CPowerSupplyStatus {
+    public static func get_PowerSupplyStatus() throws -> WinRT.Windows.System.Power.PowerSupplyStatus {
         return try PowerManagerStatics.get_PowerSupplyStatus();
     }
     public static func add_PowerSupplyStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
@@ -241,7 +241,7 @@ public class PowerManager
     public static func remove_PowerSupplyStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_PowerSupplyStatusChanged(token: token);
     }
-    public static func get_RemainingChargePercent() throws -> INT32 {
+    public static func get_RemainingChargePercent() throws -> Swift.Int32 {
         return try PowerManagerStatics.get_RemainingChargePercent();
     }
     public static func add_RemainingChargePercentChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
@@ -259,22 +259,22 @@ public class PowerManager
     public static func remove_RemainingDischargeTimeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_RemainingDischargeTimeChanged(token: token);
     }
-    public static var BatteryStatus : _q_CWindows_CSystem_CPower_CBatteryStatus {
+    public static var BatteryStatus : WinRT.Windows.System.Power.BatteryStatus {
         get throws {
             return try PowerManagerStatics.BatteryStatus;
         }
     }
-    public static var EnergySaverStatus : _q_CWindows_CSystem_CPower_CEnergySaverStatus {
+    public static var EnergySaverStatus : WinRT.Windows.System.Power.EnergySaverStatus {
         get throws {
             return try PowerManagerStatics.EnergySaverStatus;
         }
     }
-    public static var PowerSupplyStatus : _q_CWindows_CSystem_CPower_CPowerSupplyStatus {
+    public static var PowerSupplyStatus : WinRT.Windows.System.Power.PowerSupplyStatus {
         get throws {
             return try PowerManagerStatics.PowerSupplyStatus;
         }
     }
-    public static var RemainingChargePercent : INT32 {
+    public static var RemainingChargePercent : Swift.Int32 {
         get throws {
             return try PowerManagerStatics.RemainingChargePercent;
         }

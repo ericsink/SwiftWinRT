@@ -60,7 +60,7 @@ public class IAsyncOperationCompletedHandler_1_boolean
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationCompletedHandler_1_boolean
@@ -113,7 +113,7 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
         return S_OK
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
@@ -284,7 +284,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -337,7 +337,7 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
         return S_OK
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
@@ -426,7 +426,7 @@ public class IAsyncOperationProgressHandler_2_HSTRING_UINT64
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, progressInfo))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : UINT64) throws -> Void {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), progressInfo);
     }
 } // IAsyncOperationProgressHandler_2_HSTRING_UINT64
@@ -479,7 +479,7 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : UINT64) -> HRESULT {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) -> HRESULT {
         return S_OK
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
@@ -500,7 +500,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
@@ -553,7 +553,7 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
         return S_OK
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
@@ -741,7 +741,7 @@ open class IAsyncActionCompletedHandler
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
     }
-    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws -> Void {
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 }
@@ -794,7 +794,7 @@ public class _abstract_AsyncActionCompletedHandler
         return pUnk?.bindMemory(to: _abstract_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) -> HRESULT {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
         return S_OK
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
@@ -873,7 +873,7 @@ open class IAsyncInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Id(pThis, __presult))
         }
     }
-    public func get_Id() throws -> UINT32 {
+    public func get_Id() throws -> Swift.UInt32 {
         var __result : UINT32 = 0;
         try self._n_get_Id(&__result);
         return __result;
@@ -884,7 +884,7 @@ open class IAsyncInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Status(pThis, __presult))
         }
     }
-    public func get_Status() throws -> _q_CWindows_CFoundation_CAsyncStatus {
+    public func get_Status() throws -> WinRT.Windows.Foundation.AsyncStatus {
         var __result : _q_CWindows_CFoundation_CAsyncStatus = defaultValue();
         try self._n_get_Status(&__result);
         return __result;
@@ -923,12 +923,12 @@ open class IAsyncInfo
             return try get_ErrorCode();
         }
     }
-    public var Id : UINT32 {
+    public var Id : Swift.UInt32 {
         get throws {
             return try get_Id();
         }
     }
-    public var Status : _q_CWindows_CFoundation_CAsyncStatus {
+    public var Status : WinRT.Windows.Foundation.AsyncStatus {
         get throws {
             return try get_Status();
         }
