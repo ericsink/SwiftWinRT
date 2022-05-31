@@ -22,6 +22,11 @@ public var E_NOINTERFACE: HRESULT {
   HRESULT(bitPattern: 0x80004002)
 }
 
+@_transparent
+public var E_FAIL: HRESULT {
+  HRESULT(bitPattern: 0x80004005)
+}
+
 // winnt.h
 
 @_transparent

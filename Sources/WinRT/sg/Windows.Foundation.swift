@@ -96,7 +96,15 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
         guard let self = _abstract_IAsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
+        do {
+            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -113,8 +121,7 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
-        return S_OK
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -238,7 +245,15 @@ public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_C
         guard let self = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
+        do {
+            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -255,8 +270,7 @@ public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_C
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) -> HRESULT {
-        return S_OK
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -320,7 +334,15 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
         guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
+        do {
+            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -337,8 +359,7 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
-        return S_OK
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -462,7 +483,15 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
         guard let self = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
+        do {
+            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -479,8 +508,7 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) -> HRESULT {
-        return S_OK
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -536,7 +564,15 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
         guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
+        do {
+            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -553,8 +589,7 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
         return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
-        return S_OK
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -610,7 +645,15 @@ public class _abstract_IEventHandler_1_IInspectable
         guard let self = _abstract_IEventHandler_1_IInspectable.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.IInspectable(args))
+        do {
+            try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.IInspectable(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -627,8 +670,7 @@ public class _abstract_IEventHandler_1_IInspectable
         return pUnk?.bindMemory(to: _abstract_IEventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) -> HRESULT {
-        return S_OK
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IEventHandler_1_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -645,9 +687,8 @@ extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
             super.init()
         }
         override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperation_1_boolean?,
-            asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
             _ = SetEvent(self.hEvent)
-            return S_OK
         }
 }
         internal func get() throws -> boolean {
@@ -675,9 +716,8 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWe
             super.init()
         }
         override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress?,
-            asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
             _ = SetEvent(self.hEvent)
-            return S_OK
         }
 }
         internal func get() throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
@@ -705,9 +745,8 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64 
             super.init()
         }
         override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64?,
-            asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
             _ = SetEvent(self.hEvent)
-            return S_OK
         }
 }
         internal func get() throws -> Swift.String {
@@ -777,7 +816,15 @@ public class _abstract_AsyncActionCompletedHandler
         guard let self = _abstract_AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
-        return self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
+        do {
+            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
     )
     private struct WithTrailingObjects {
@@ -794,8 +841,7 @@ public class _abstract_AsyncActionCompletedHandler
         return pUnk?.bindMemory(to: _abstract_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) -> HRESULT {
-        return S_OK
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

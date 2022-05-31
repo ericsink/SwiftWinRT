@@ -18,9 +18,8 @@ extension Windows.Foundation.IAsyncAction: Future {
     }
 
     override func Invoke(asyncInfo: Windows.Foundation.IAsyncAction?,
-                         asyncStatus: Windows.Foundation.AsyncStatus) -> HRESULT {
+                         asyncStatus: Windows.Foundation.AsyncStatus) throws {
       _ = SetEvent(self.hEvent)
-      return S_OK
     }
   }
 
