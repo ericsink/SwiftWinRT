@@ -8,9 +8,12 @@ extension Windows.System {
 // type: Windows.System.DispatcherQueueController
 // runtime class
 public class DispatcherQueueController
-    :
-    WinRT.Windows.System.IDispatcherQueueController
 {
+    private var _self : WinRT.Windows.System.IDispatcherQueueController;
+    public init(plok: WinRT.Windows.System.IDispatcherQueueController?) {
+        _self = plok!
+    }
+    public var DefaultInterface : WinRT.Windows.System.IDispatcherQueueController { get { return _self; } }
     private struct _IDispatcherQueueControllerStatics {
         static var x : IDispatcherQueueControllerStatics =
             try! RoGetActivationFactory(HString("Windows.System.DispatcherQueueController"))
@@ -19,7 +22,21 @@ public class DispatcherQueueController
         _IDispatcherQueueControllerStatics.x
     }
     public static func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.DispatcherQueueController> {
-        return try DispatcherQueueControllerStatics.CreateOnDedicatedThread();
+        return try WinRT.Windows.System.DispatcherQueueController(plok: DispatcherQueueControllerStatics.CreateOnDedicatedThread());
+    }
+    // method not needed: get_DispatcherQueue
+    public func ShutdownQueueAsync() throws -> Optional<WinRT.Windows.Foundation.IAsyncAction> {
+        let _ifc : IDispatcherQueueController = try _self.QueryInterface();
+        return try _ifc.ShutdownQueueAsync();
+    }
+    public func ShutdownQueue() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ShutdownQueueAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
     }
 }
 
@@ -67,10 +84,10 @@ open class IDispatcherQueueControllerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateOnDedicatedThread(pThis, __presult))
         }
     }
-    public func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.DispatcherQueueController> {
+    public func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.IDispatcherQueueController> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueueController>> = nil;
         try self._n_CreateOnDedicatedThread(&__result);
-        return WinRT.Windows.System.DispatcherQueueController(consuming: __result);
+        return WinRT.Windows.System.IDispatcherQueueController(consuming: __result);
     }
 } // IDispatcherQueueControllerStatics
 
@@ -94,10 +111,19 @@ open class IUser
 // type: Windows.System.User
 // runtime class
 public class User
-    :
-    WinRT.Windows.System.IUser
 {
+    private var _self : WinRT.Windows.System.IUser;
+    public init(plok: WinRT.Windows.System.IUser?) {
+        _self = plok!
+    }
+    public var DefaultInterface : WinRT.Windows.System.IUser { get { return _self; } }
     // static interface not needed: Windows.System.IUserStatics
+    // method not needed: get_NonRoamableId
+    // method not needed: get_AuthenticationStatus
+    // method not needed: get_Type
+    // method not needed: GetPropertyAsync
+    // method not needed: GetPropertiesAsync
+    // method not needed: GetPictureAsync
 }
 
 }

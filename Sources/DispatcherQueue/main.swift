@@ -8,8 +8,7 @@ class WinRTAsyncDemo {
   public static func main() async throws {
     try RoInitialize()
 
-    let controller: Windows.System.IDispatcherQueueController =
-        try Windows.System.DispatcherQueueController.CreateOnDedicatedThread()!
+    let controller = try Windows.System.DispatcherQueueController.CreateOnDedicatedThread()!
 
     try await controller.ShutdownQueue()
 

@@ -8,10 +8,9 @@ class WinRTDemo {
   public static func main() throws {
     try RoInitialize()
 
-    let buffer: Windows.System.Profile.ISystemIdentificationInfo =
-        try Windows.System.Profile.SystemIdentification.GetSystemIdForPublisher()!
+    let buffer = try Windows.System.Profile.SystemIdentification.GetSystemIdForPublisher()!
 
-    let id: Windows.Storage.Streams.IBuffer = try buffer.Id!
+    let id = try buffer.Id!
 
     let hex: String =
         try Windows.Security.Cryptography.CryptographicBuffer.EncodeToHexString(buffer: id)

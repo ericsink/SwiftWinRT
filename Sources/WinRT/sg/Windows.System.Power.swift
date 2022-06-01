@@ -27,7 +27,7 @@ open class IPowerManagerStatics
         }
     }
     public func get_EnergySaverStatus() throws -> WinRT.Windows.System.Power.EnergySaverStatus {
-        var __result : _q_CWindows_CSystem_CPower_CEnergySaverStatus = defaultValue();
+        var __result : _q_CWindows_CSystem_CPower_CEnergySaverStatus = _q_CWindows_CSystem_CPower_CEnergySaverStatus_Disabled;
         try self._n_get_EnergySaverStatus(&__result);
         return __result;
     }
@@ -38,7 +38,7 @@ open class IPowerManagerStatics
         }
     }
     public func add_EnergySaverStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = defaultValue();
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_EnergySaverStatusChanged(RawPointer(handler), &__result);
         return __result;
     }
@@ -58,7 +58,7 @@ open class IPowerManagerStatics
         }
     }
     public func get_BatteryStatus() throws -> WinRT.Windows.System.Power.BatteryStatus {
-        var __result : _q_CWindows_CSystem_CPower_CBatteryStatus = defaultValue();
+        var __result : _q_CWindows_CSystem_CPower_CBatteryStatus = _q_CWindows_CSystem_CPower_CBatteryStatus_NotPresent;
         try self._n_get_BatteryStatus(&__result);
         return __result;
     }
@@ -69,7 +69,7 @@ open class IPowerManagerStatics
         }
     }
     public func add_BatteryStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = defaultValue();
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_BatteryStatusChanged(RawPointer(handler), &__result);
         return __result;
     }
@@ -89,7 +89,7 @@ open class IPowerManagerStatics
         }
     }
     public func get_PowerSupplyStatus() throws -> WinRT.Windows.System.Power.PowerSupplyStatus {
-        var __result : _q_CWindows_CSystem_CPower_CPowerSupplyStatus = defaultValue();
+        var __result : _q_CWindows_CSystem_CPower_CPowerSupplyStatus = _q_CWindows_CSystem_CPower_CPowerSupplyStatus_NotPresent;
         try self._n_get_PowerSupplyStatus(&__result);
         return __result;
     }
@@ -100,7 +100,7 @@ open class IPowerManagerStatics
         }
     }
     public func add_PowerSupplyStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = defaultValue();
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_PowerSupplyStatusChanged(RawPointer(handler), &__result);
         return __result;
     }
@@ -131,7 +131,7 @@ open class IPowerManagerStatics
         }
     }
     public func add_RemainingChargePercentChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = defaultValue();
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_RemainingChargePercentChanged(RawPointer(handler), &__result);
         return __result;
     }
@@ -151,7 +151,7 @@ open class IPowerManagerStatics
         }
     }
     public func get_RemainingDischargeTime() throws -> WinRT.Windows.Foundation.TimeSpan {
-        var __result : _q_CWindows_CFoundation_CTimeSpan = defaultValue();
+        var __result : _q_CWindows_CFoundation_CTimeSpan = _q_CWindows_CFoundation_CTimeSpan(Duration: 0);
         try self._n_get_RemainingDischargeTime(&__result);
         return __result;
     }
@@ -162,7 +162,7 @@ open class IPowerManagerStatics
         }
     }
     public func add_RemainingDischargeTimeChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = defaultValue();
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_RemainingDischargeTimeChanged(RawPointer(handler), &__result);
         return __result;
     }

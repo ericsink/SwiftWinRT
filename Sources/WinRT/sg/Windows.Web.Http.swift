@@ -8,20 +8,43 @@ extension Windows.Web.Http {
 // type: Windows.Web.Http.HttpClient
 // runtime class
 public class HttpClient
-    :
-    WinRT.Windows.Web.Http.IHttpClient
 {
-    public convenience init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
-        let _af : IHttpClientFactory = try! RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
-        let _instance = try _af.Create(filter: filter)!;
-        self.init(RawPointer(_instance))
+    private var _self : WinRT.Windows.Web.Http.IHttpClient;
+    public init(plok: WinRT.Windows.Web.Http.IHttpClient?) {
+        _self = plok!
     }
-    public convenience init() throws {
-        var instance: UnsafeMutablePointer<CWinRT.IInspectable>?
+    public var DefaultInterface : WinRT.Windows.Web.Http.IHttpClient { get { return _self; } }
+    public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
+        let _af : IHttpClientFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
+        _self = try _af.Create(filter: filter)!;
+    }
+    public init() throws {
         let _classId = try HString("Windows.Web.Http.HttpClient")
-        try CHECKED(RoActivateInstance(_classId.hRef.hString, &instance))
-        self.init(consuming: UnsafeMutableRawPointer(instance)?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
+        _self = try RoActivateInstance(_classId)
     }
+    // method not needed: DeleteAsync
+    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
+        let _ifc : IHttpClient = try _self.QueryInterface();
+        return try _ifc.GetAsync(uri: uri!.DefaultInterface);
+    }
+    public func Get(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetAsync(uri: uri)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // method not needed: GetAsync
+    // method not needed: GetBufferAsync
+    // method not needed: GetInputStreamAsync
+    // method not needed: GetStringAsync
+    // method not needed: PostAsync
+    // method not needed: PutAsync
+    // method not needed: SendRequestAsync
+    // method not needed: SendRequestAsync
+    // method not needed: get_DefaultRequestHeaders
     // instance interface not needed: Windows.Web.Http.IHttpClient2
     // instance interface not needed: Windows.Foundation.IClosable
     // instance interface not needed: Windows.Foundation.IStringable
@@ -38,19 +61,46 @@ public typealias HttpProgressStage = _q_CWindows_CWeb_CHttp_CHttpProgressStage;
 // type: Windows.Web.Http.HttpResponseMessage
 // runtime class
 public class HttpResponseMessage
-    :
-    WinRT.Windows.Web.Http.IHttpResponseMessage
 {
-    public convenience init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
-        let _af : IHttpResponseMessageFactory = try! RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
-        let _instance = try _af.Create(statusCode: statusCode)!;
-        self.init(RawPointer(_instance))
+    private var _self : WinRT.Windows.Web.Http.IHttpResponseMessage;
+    public init(plok: WinRT.Windows.Web.Http.IHttpResponseMessage?) {
+        _self = plok!
     }
-    public convenience init() throws {
-        var instance: UnsafeMutablePointer<CWinRT.IInspectable>?
+    public var DefaultInterface : WinRT.Windows.Web.Http.IHttpResponseMessage { get { return _self; } }
+    public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
+        let _af : IHttpResponseMessageFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
+        _self = try _af.Create(statusCode: statusCode)!;
+    }
+    public init() throws {
         let _classId = try HString("Windows.Web.Http.HttpResponseMessage")
-        try CHECKED(RoActivateInstance(_classId.hRef.hString, &instance))
-        self.init(consuming: UnsafeMutableRawPointer(instance)?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
+        _self = try RoActivateInstance(_classId)
+    }
+    public func get_Content() throws -> Optional<WinRT.Windows.Web.Http.IHttpContent> {
+        let _ifc : IHttpResponseMessage = try _self.QueryInterface();
+        return try _ifc.get_Content();
+    }
+    // method not needed: put_Content
+    // method not needed: get_Headers
+    // method not needed: get_IsSuccessStatusCode
+    // method not needed: get_ReasonPhrase
+    // method not needed: put_ReasonPhrase
+    // method not needed: get_RequestMessage
+    // method not needed: put_RequestMessage
+    // method not needed: get_Source
+    // method not needed: put_Source
+    // method not needed: get_StatusCode
+    // method not needed: put_StatusCode
+    // method not needed: get_Version
+    // method not needed: put_Version
+    public func EnsureSuccessStatusCode() throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+        let _ifc : IHttpResponseMessage = try _self.QueryInterface();
+        return try WinRT.Windows.Web.Http.HttpResponseMessage(plok: _ifc.EnsureSuccessStatusCode());
+    }
+    public var Content : Optional<WinRT.Windows.Web.Http.IHttpContent> {
+        get throws {
+        let _ifc : IHttpResponseMessage = try _self.QueryInterface();
+            return try _ifc.Content;
+        }
     }
     // instance interface not needed: Windows.Foundation.IClosable
     // instance interface not needed: Windows.Foundation.IStringable
@@ -74,12 +124,12 @@ open class IHttpClient
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAsync(pThis, uri, __presult))
         }
     }
-    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
+    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>> = nil;
         try self._n_GetAsync(RawPointer(uri), &__result);
         return WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(consuming: __result);
     }
-    public func Get(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+    public func Get(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetAsync(uri: uri)!.get())
@@ -102,6 +152,7 @@ open class IHttpClient
 
 // type: Windows.Web.Http.IHttpClientFactory
 // interface type
+// ACTIVATION INTERFACE
 open class IHttpClientFactory
     :
     WinRT.IInspectable
@@ -113,10 +164,10 @@ open class IHttpClientFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, filter, __presult))
         }
     }
-    public func Create(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws -> Optional<WinRT.Windows.Web.Http.HttpClient> {
+    public func Create(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws -> Optional<WinRT.Windows.Web.Http.IHttpClient> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpClient>> = nil;
         try self._n_Create(RawPointer(filter), &__result);
-        return WinRT.Windows.Web.Http.HttpClient(consuming: __result);
+        return WinRT.Windows.Web.Http.IHttpClient(consuming: __result);
     }
 } // IHttpClientFactory
 
@@ -194,10 +245,10 @@ open class IHttpResponseMessage
             try CHECKED(pThis.pointee.lpVtbl.pointee.EnsureSuccessStatusCode(pThis, __presult))
         }
     }
-    public func EnsureSuccessStatusCode() throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+    public func EnsureSuccessStatusCode() throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>> = nil;
         try self._n_EnsureSuccessStatusCode(&__result);
-        return WinRT.Windows.Web.Http.HttpResponseMessage(consuming: __result);
+        return WinRT.Windows.Web.Http.IHttpResponseMessage(consuming: __result);
     }
     public var Content : Optional<WinRT.Windows.Web.Http.IHttpContent> {
         get throws {
@@ -209,6 +260,7 @@ open class IHttpResponseMessage
 
 // type: Windows.Web.Http.IHttpResponseMessageFactory
 // interface type
+// ACTIVATION INTERFACE
 open class IHttpResponseMessageFactory
     :
     WinRT.IInspectable
@@ -220,10 +272,10 @@ open class IHttpResponseMessageFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, statusCode, __presult))
         }
     }
-    public func Create(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+    public func Create(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>> = nil;
         try self._n_Create(statusCode, &__result);
-        return WinRT.Windows.Web.Http.HttpResponseMessage(consuming: __result);
+        return WinRT.Windows.Web.Http.IHttpResponseMessage(consuming: __result);
     }
 } // IHttpResponseMessageFactory
 

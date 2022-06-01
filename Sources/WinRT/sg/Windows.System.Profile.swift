@@ -30,7 +30,7 @@ open class ISystemIdentificationInfo
         }
     }
     public func get_Source() throws -> WinRT.Windows.System.Profile.SystemIdentificationSource {
-        var __result : _q_CWindows_CSystem_CProfile_CSystemIdentificationSource = defaultValue();
+        var __result : _q_CWindows_CSystem_CProfile_CSystemIdentificationSource = _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_None;
         try self._n_get_Source(&__result);
         return __result;
     }
@@ -60,10 +60,10 @@ open class ISystemIdentificationStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemIdForPublisher(pThis, __presult))
         }
     }
-    public func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
+    public func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>> = nil;
         try self._n_GetSystemIdForPublisher(&__result);
-        return WinRT.Windows.System.Profile.SystemIdentificationInfo(consuming: __result);
+        return WinRT.Windows.System.Profile.ISystemIdentificationInfo(consuming: __result);
     }
     // Windows.System.Profile.SystemIdentificationInfo GetSystemIdForUser(Windows.System.User)
     public func _n_GetSystemIdForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>>>?) throws {
@@ -71,10 +71,10 @@ open class ISystemIdentificationStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemIdForUser(pThis, user, __presult))
         }
     }
-    public func GetSystemIdForUser(user : Optional<WinRT.Windows.System.User>) throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
+    public func GetSystemIdForUser(user : Optional<WinRT.Windows.System.IUser>) throws -> Optional<WinRT.Windows.System.Profile.ISystemIdentificationInfo> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>> = nil;
         try self._n_GetSystemIdForUser(RawPointer(user), &__result);
-        return WinRT.Windows.System.Profile.SystemIdentificationInfo(consuming: __result);
+        return WinRT.Windows.System.Profile.ISystemIdentificationInfo(consuming: __result);
     }
 } // ISystemIdentificationStatics
 
@@ -91,19 +91,42 @@ public class SystemIdentification
         _ISystemIdentificationStatics.x
     }
     public static func GetSystemIdForPublisher() throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
-        return try SystemIdentificationStatics.GetSystemIdForPublisher();
+        return try WinRT.Windows.System.Profile.SystemIdentificationInfo(plok: SystemIdentificationStatics.GetSystemIdForPublisher());
     }
     public static func GetSystemIdForUser(user : Optional<WinRT.Windows.System.User>) throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
-        return try SystemIdentificationStatics.GetSystemIdForUser(user: user);
+        return try WinRT.Windows.System.Profile.SystemIdentificationInfo(plok: SystemIdentificationStatics.GetSystemIdForUser(user: user!.DefaultInterface));
     }
 }
 
 // type: Windows.System.Profile.SystemIdentificationInfo
 // runtime class
 public class SystemIdentificationInfo
-    :
-    WinRT.Windows.System.Profile.ISystemIdentificationInfo
 {
+    private var _self : WinRT.Windows.System.Profile.ISystemIdentificationInfo;
+    public init(plok: WinRT.Windows.System.Profile.ISystemIdentificationInfo?) {
+        _self = plok!
+    }
+    public var DefaultInterface : WinRT.Windows.System.Profile.ISystemIdentificationInfo { get { return _self; } }
+    public func get_Id() throws -> Optional<WinRT.Windows.Storage.Streams.IBuffer> {
+        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+        return try _ifc.get_Id();
+    }
+    public func get_Source() throws -> WinRT.Windows.System.Profile.SystemIdentificationSource {
+        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+        return try _ifc.get_Source();
+    }
+    public var Id : Optional<WinRT.Windows.Storage.Streams.IBuffer> {
+        get throws {
+        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+            return try _ifc.Id;
+        }
+    }
+    public var Source : WinRT.Windows.System.Profile.SystemIdentificationSource {
+        get throws {
+        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+            return try _ifc.Source;
+        }
+    }
 }
 
 // type: Windows.System.Profile.SystemIdentificationSource

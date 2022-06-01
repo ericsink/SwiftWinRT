@@ -181,10 +181,10 @@ public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseM
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
     }
-    public func GetResults() throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+    public func GetResults() throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>> = nil;
         try self._n_GetResults(&__result);
-        return WinRT.Windows.Web.Http.HttpResponseMessage(consuming: __result);
+        return WinRT.Windows.Web.Http.IHttpResponseMessage(consuming: __result);
     }
     public var Progress : Optional<WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
         get throws {
@@ -720,7 +720,7 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWe
             _ = SetEvent(self.hEvent)
         }
 }
-        internal func get() throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
+        internal func get() throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
             let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
             if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
             let event: HANDLE =
@@ -931,7 +931,7 @@ open class IAsyncInfo
         }
     }
     public func get_Status() throws -> WinRT.Windows.Foundation.AsyncStatus {
-        var __result : _q_CWindows_CFoundation_CAsyncStatus = defaultValue();
+        var __result : _q_CWindows_CFoundation_CAsyncStatus = _q_CWindows_CFoundation_CAsyncStatus_Canceled;
         try self._n_get_Status(&__result);
         return __result;
     }
@@ -942,7 +942,7 @@ open class IAsyncInfo
         }
     }
     public func get_ErrorCode() throws -> WinRT.Windows.Foundation.HResult {
-        var __result : _q_CWindows_CFoundation_CHResult = defaultValue();
+        var __result : _q_CWindows_CFoundation_CHResult = _q_CWindows_CFoundation_CHResult(Value: 0);
         try self._n_get_ErrorCode(&__result);
         return __result;
     }
@@ -1011,6 +1011,7 @@ open class IUriRuntimeClass
 
 // type: Windows.Foundation.IUriRuntimeClassFactory
 // interface type
+// ACTIVATION INTERFACE
 open class IUriRuntimeClassFactory
     :
     WinRT.IInspectable
@@ -1022,12 +1023,12 @@ open class IUriRuntimeClassFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateUri(pThis, uri, __presult))
         }
     }
-    public func CreateUri(uri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.Uri> {
+    public func CreateUri(uri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IUriRuntimeClass> {
         let __hstr_uri = try HString(uri);
         return try withExtendedLifetime(__hstr_uri) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
         try self._n_CreateUri(__hstr_uri.hRef.hString, &__result);
-        return WinRT.Windows.Foundation.Uri(consuming: __result);
+        return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
         }
     }
     // Windows.Foundation.Uri CreateWithRelativeUri(System.String, System.String)
@@ -1036,14 +1037,14 @@ open class IUriRuntimeClassFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithRelativeUri(pThis, baseUri, relativeUri, __presult))
         }
     }
-    public func CreateWithRelativeUri(baseUri : Swift.String, relativeUri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.Uri> {
+    public func CreateWithRelativeUri(baseUri : Swift.String, relativeUri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IUriRuntimeClass> {
         let __hstr_baseUri = try HString(baseUri);
         return try withExtendedLifetime(__hstr_baseUri) {
         let __hstr_relativeUri = try HString(relativeUri);
         return try withExtendedLifetime(__hstr_relativeUri) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
         try self._n_CreateWithRelativeUri(__hstr_baseUri.hRef.hString, __hstr_relativeUri.hRef.hString, &__result);
-        return WinRT.Windows.Foundation.Uri(consuming: __result);
+        return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
         }
         }
     }
@@ -1057,20 +1058,38 @@ public typealias TimeSpan = _q_CWindows_CFoundation_CTimeSpan;
 // type: Windows.Foundation.Uri
 // runtime class
 public class Uri
-    :
-    WinRT.Windows.Foundation.IUriRuntimeClass
 {
-    public convenience init(uri : Swift.String) throws {
-        let _af : IUriRuntimeClassFactory = try! RoGetActivationFactory(HString("Windows.Foundation.Uri"));
-        let _instance = try _af.CreateUri(uri: uri)!;
-        self.init(RawPointer(_instance))
+    private var _self : WinRT.Windows.Foundation.IUriRuntimeClass;
+    public init(plok: WinRT.Windows.Foundation.IUriRuntimeClass?) {
+        _self = plok!
     }
-    public convenience init(baseUri : Swift.String, relativeUri : Swift.String) throws {
-        let _af : IUriRuntimeClassFactory = try! RoGetActivationFactory(HString("Windows.Foundation.Uri"));
-        let _instance = try _af.CreateWithRelativeUri(baseUri: baseUri, relativeUri: relativeUri)!;
-        self.init(RawPointer(_instance))
+    public var DefaultInterface : WinRT.Windows.Foundation.IUriRuntimeClass { get { return _self; } }
+    public init(uri : Swift.String) throws {
+        let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
+        _self = try _af.CreateUri(uri: uri)!;
+    }
+    public init(baseUri : Swift.String, relativeUri : Swift.String) throws {
+        let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
+        _self = try _af.CreateWithRelativeUri(baseUri: baseUri, relativeUri: relativeUri)!;
     }
     // static interface not needed: Windows.Foundation.IUriEscapeStatics
+    // method not needed: get_AbsoluteUri
+    // method not needed: get_DisplayUri
+    // method not needed: get_Domain
+    // method not needed: get_Extension
+    // method not needed: get_Fragment
+    // method not needed: get_Host
+    // method not needed: get_Password
+    // method not needed: get_Path
+    // method not needed: get_Query
+    // method not needed: get_QueryParsed
+    // method not needed: get_RawUri
+    // method not needed: get_SchemeName
+    // method not needed: get_UserName
+    // method not needed: get_Port
+    // method not needed: get_Suspicious
+    // method not needed: Equals
+    // method not needed: CombineUri
     // instance interface not needed: Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
     // instance interface not needed: Windows.Foundation.IStringable
 }

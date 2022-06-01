@@ -59,21 +59,39 @@ open class IXmlDocumentIO
 // type: Windows.Data.Xml.Dom.XmlDocument
 // runtime class
 public class XmlDocument
-    :
-    WinRT.Windows.Data.Xml.Dom.IXmlDocument
 {
-    public convenience init() throws {
-        var instance: UnsafeMutablePointer<CWinRT.IInspectable>?
+    private var _self : WinRT.Windows.Data.Xml.Dom.IXmlDocument;
+    public init(plok: WinRT.Windows.Data.Xml.Dom.IXmlDocument?) {
+        _self = plok!
+    }
+    public var DefaultInterface : WinRT.Windows.Data.Xml.Dom.IXmlDocument { get { return _self; } }
+    public init() throws {
         let _classId = try HString("Windows.Data.Xml.Dom.XmlDocument")
-        try CHECKED(RoActivateInstance(_classId.hRef.hString, &instance))
-        self.init(consuming: UnsafeMutableRawPointer(instance)?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
+        _self = try RoActivateInstance(_classId)
     }
     // static interface not needed: Windows.Data.Xml.Dom.IXmlDocumentStatics
+    // method not needed: get_Doctype
+    // method not needed: get_Implementation
+    // method not needed: get_DocumentElement
+    // method not needed: CreateElement
+    // method not needed: CreateDocumentFragment
+    // method not needed: CreateTextNode
+    // method not needed: CreateComment
+    // method not needed: CreateProcessingInstruction
+    // method not needed: CreateAttribute
+    // method not needed: CreateEntityReference
+    // method not needed: GetElementsByTagName
+    // method not needed: CreateCDataSection
+    // method not needed: get_DocumentUri
+    // method not needed: CreateAttributeNS
+    // method not needed: CreateElementNS
+    // method not needed: GetElementById
+    // method not needed: ImportNode
     // instance interface not needed: Windows.Data.Xml.Dom.IXmlNode
     // instance interface not needed: Windows.Data.Xml.Dom.IXmlNodeSerializer
     // instance interface not needed: Windows.Data.Xml.Dom.IXmlNodeSelector
     public func LoadXml(xml : Swift.String) throws -> Void {
-        let _ifc : IXmlDocumentIO = try QueryInterface();
+        let _ifc : IXmlDocumentIO = try _self.QueryInterface();
         return try _ifc.LoadXml(xml: xml);
     }
     // method not needed: LoadXml
