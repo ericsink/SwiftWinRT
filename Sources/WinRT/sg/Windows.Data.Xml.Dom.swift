@@ -64,7 +64,9 @@ public class XmlDocument
     public init(plok: WinRT.Windows.Data.Xml.Dom.IXmlDocument?) {
         _self = plok!
     }
-    public var DefaultInterface : WinRT.Windows.Data.Xml.Dom.IXmlDocument { get { return _self; } }
+    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+        return try _self.QueryInterface()
+    }
     public init() throws {
         let _classId = try HString("Windows.Data.Xml.Dom.XmlDocument")
         _self = try RoActivateInstance(_classId)

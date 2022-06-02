@@ -94,7 +94,7 @@ public class SystemIdentification
         return try WinRT.Windows.System.Profile.SystemIdentificationInfo(plok: SystemIdentificationStatics.GetSystemIdForPublisher());
     }
     public static func GetSystemIdForUser(user : Optional<WinRT.Windows.System.User>) throws -> Optional<WinRT.Windows.System.Profile.SystemIdentificationInfo> {
-        return try WinRT.Windows.System.Profile.SystemIdentificationInfo(plok: SystemIdentificationStatics.GetSystemIdForUser(user: user!.DefaultInterface));
+        return try WinRT.Windows.System.Profile.SystemIdentificationInfo(plok: SystemIdentificationStatics.GetSystemIdForUser(user: user!.QueryInterface()));
     }
 }
 
@@ -106,7 +106,9 @@ public class SystemIdentificationInfo
     public init(plok: WinRT.Windows.System.Profile.ISystemIdentificationInfo?) {
         _self = plok!
     }
-    public var DefaultInterface : WinRT.Windows.System.Profile.ISystemIdentificationInfo { get { return _self; } }
+    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+        return try _self.QueryInterface()
+    }
     public func get_Id() throws -> Optional<WinRT.Windows.Storage.Streams.IBuffer> {
         let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
         return try _ifc.get_Id();
