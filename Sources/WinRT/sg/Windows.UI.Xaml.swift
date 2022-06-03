@@ -13,7 +13,7 @@ open class Application
     public init(plok: WinRT.Windows.UI.Xaml.IApplication?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // COMPOSABLE: Windows.UI.Xaml.IApplicationFactory
@@ -296,7 +296,7 @@ public class ApplicationInitializationCallbackParams
     public init(plok: WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
 }
@@ -317,7 +317,7 @@ public class DebugSettings
     public init(plok: WinRT.Windows.UI.Xaml.IDebugSettings?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // method not needed: get_EnableFrameRateCounter
@@ -341,7 +341,7 @@ open class DependencyObject
     public init(plok: WinRT.Windows.UI.Xaml.IDependencyObject?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // COMPOSABLE: Windows.UI.Xaml.IDependencyObjectFactory
@@ -1134,7 +1134,7 @@ open class ResourceDictionary
     public init(plok: WinRT.Windows.UI.Xaml.IResourceDictionary?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // COMPOSABLE: Windows.UI.Xaml.IResourceDictionaryFactory
@@ -1241,7 +1241,7 @@ public class UnhandledExceptionEventArgs
     public init(plok: WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // method not needed: get_Exception
@@ -1341,7 +1341,7 @@ public class WindowCreatedEventArgs
     public init(plok: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // method not needed: get_Window

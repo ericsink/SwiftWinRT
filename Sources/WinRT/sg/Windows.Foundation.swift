@@ -1063,7 +1063,7 @@ public class Uri
     public init(plok: WinRT.Windows.Foundation.IUriRuntimeClass?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     public init(uri : Swift.String) throws {

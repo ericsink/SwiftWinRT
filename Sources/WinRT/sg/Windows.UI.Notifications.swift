@@ -104,7 +104,7 @@ public class ToastNotification
     public init(plok: WinRT.Windows.UI.Notifications.IToastNotification?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     public init(content : Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument>) throws {
@@ -155,7 +155,7 @@ public class ToastNotifier
     public init(plok: WinRT.Windows.UI.Notifications.IToastNotifier?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     public func Show(notification : Optional<WinRT.Windows.UI.Notifications.ToastNotification>) throws -> Void {

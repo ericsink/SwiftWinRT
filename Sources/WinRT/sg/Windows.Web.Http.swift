@@ -13,7 +13,7 @@ public class HttpClient
     public init(plok: WinRT.Windows.Web.Http.IHttpClient?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
@@ -68,7 +68,7 @@ public class HttpResponseMessage
     public init(plok: WinRT.Windows.Web.Http.IHttpResponseMessage?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {

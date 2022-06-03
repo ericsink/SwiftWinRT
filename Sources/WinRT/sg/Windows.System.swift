@@ -13,7 +13,7 @@ public class DispatcherQueueController
     public init(plok: WinRT.Windows.System.IDispatcherQueueController?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     private struct _IDispatcherQueueControllerStatics {
@@ -118,7 +118,7 @@ public class User
     public init(plok: WinRT.Windows.System.IUser?) {
         _self = plok!
     }
-    public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
         return try _self.QueryInterface()
     }
     // static interface not needed: Windows.System.IUserStatics
