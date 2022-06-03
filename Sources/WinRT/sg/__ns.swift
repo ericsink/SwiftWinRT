@@ -2,6 +2,8 @@
 // if you modify it by hand, your changes will probably be lost.
 
 public struct Windows { }
+extension Windows { public struct ApplicationModel { } }
+extension Windows.ApplicationModel { public struct Activation { } }
 extension Windows { public struct Data { } }
 extension Windows.Data { public struct Xml { } }
 extension Windows.Data.Xml { public struct Dom { } }
@@ -15,6 +17,9 @@ extension Windows.System { public struct Power { } }
 extension Windows.System { public struct Profile { } }
 extension Windows { public struct UI { } }
 extension Windows.UI { public struct Notifications { } }
+extension Windows.UI { public struct Xaml { } }
+extension Windows.UI.Xaml { public struct Controls { } }
+extension Windows.UI.Xaml.Controls { public struct Primitives { } }
 extension Windows { public struct Web { } }
 extension Windows.Web { public struct Http { } }
 extension Windows.Web.Http { public struct Filters { } }

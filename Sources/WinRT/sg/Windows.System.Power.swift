@@ -261,27 +261,27 @@ public class PowerManager
     }
     public static var BatteryStatus : WinRT.Windows.System.Power.BatteryStatus {
         get throws {
-            return try PowerManagerStatics.BatteryStatus;
+        return try PowerManagerStatics.BatteryStatus;
         }
     }
     public static var EnergySaverStatus : WinRT.Windows.System.Power.EnergySaverStatus {
         get throws {
-            return try PowerManagerStatics.EnergySaverStatus;
+        return try PowerManagerStatics.EnergySaverStatus;
         }
     }
     public static var PowerSupplyStatus : WinRT.Windows.System.Power.PowerSupplyStatus {
         get throws {
-            return try PowerManagerStatics.PowerSupplyStatus;
+        return try PowerManagerStatics.PowerSupplyStatus;
         }
     }
     public static var RemainingChargePercent : Swift.Int32 {
         get throws {
-            return try PowerManagerStatics.RemainingChargePercent;
+        return try PowerManagerStatics.RemainingChargePercent;
         }
     }
     public static var RemainingDischargeTime : WinRT.Windows.Foundation.TimeSpan {
         get throws {
-            return try PowerManagerStatics.RemainingDischargeTime;
+        return try PowerManagerStatics.RemainingDischargeTime;
         }
     }
 }

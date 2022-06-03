@@ -65,7 +65,7 @@ public class IAsyncOperationCompletedHandler_1_boolean
     }
 } // IAsyncOperationCompletedHandler_1_boolean
 // impl delegate type
-public class AsyncOperationCompletedHandler_1_boolean
+open class AsyncOperationCompletedHandler_1_boolean
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_booleanVtbl = .init(
     QueryInterface: {
@@ -214,7 +214,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRespon
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-public class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -303,7 +303,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-public class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -452,7 +452,7 @@ public class IAsyncOperationProgressHandler_2_HSTRING_UINT64
     }
 } // IAsyncOperationProgressHandler_2_HSTRING_UINT64
 // impl delegate type
-public class AsyncOperationProgressHandler_2_HSTRING_UINT64
+open class AsyncOperationProgressHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
@@ -533,7 +533,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 // impl delegate type
-public class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
+open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
@@ -614,7 +614,7 @@ public class IEventHandler_1_IInspectable
     }
 } // IEventHandler_1_IInspectable
 // impl delegate type
-public class EventHandler_1_IInspectable
+open class EventHandler_1_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl = .init(
     QueryInterface: {
@@ -785,7 +785,7 @@ open class IAsyncActionCompletedHandler
     }
 }
 // impl delegate type
-public class AsyncActionCompletedHandler
+open class AsyncActionCompletedHandler
 {
     private static var vtable: _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl = .init(
     QueryInterface: {

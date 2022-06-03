@@ -1,7 +1,6 @@
 
 import WinRT
 
-#if not
 class MyApp : Windows.UI.Xaml.Application
 {
     override func OnLaunched(args : Optional<WinRT.Windows.ApplicationModel.Activation.LaunchActivatedEventArgs>) throws -> Void 
@@ -9,15 +8,20 @@ class MyApp : Windows.UI.Xaml.Application
         // TODO
     }
 }
-#endif
+
+class MyInit : Windows.UI.Xaml.ApplicationInitializationCallback
+{
+    override func Invoke(p : Optional<WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams>) throws {
+        // TODO var x = MyApp();
+    }
+}
 
 @main
 class App {
   public static func main() async throws {
     try RoInitialize()
 
-    // TODO need an ApplicationInitializationCallback
-    //Windows.UI.Xaml.Application.Start(MyApp());
+    try Windows.UI.Xaml.Application.Start(callback: MyInit());
   }
 }
 
