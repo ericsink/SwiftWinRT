@@ -1063,9 +1063,7 @@ public class Uri
     public init(plok: WinRT.Windows.Foundation.IUriRuntimeClass?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.Foundation.IUriRuntimeClass { return _self; }
     public init(uri : Swift.String) throws {
         let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
         _self = try _af.CreateUri(uri: uri)!;

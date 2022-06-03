@@ -13,13 +13,11 @@ open class Application
     public init(plok: WinRT.Windows.UI.Xaml.IApplication?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IApplication { return _self; }
     // COMPOSABLE: Windows.UI.Xaml.IApplicationFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IApplicationFactory = try RoGetActivationFactory(HString("Windows.UI.Xaml.Application"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface!.QueryInterface(), innerInterface: &innerInterface)!;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
     }
     private struct _IApplicationStatics {
         static var x : IApplicationStatics =
@@ -35,10 +33,10 @@ open class Application
         return try ApplicationStatics.Start(callback: callback!.Interface());
     }
     public static func LoadComponent(component : Optional<WinRT.IInspectable>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>) throws -> Void {
-        return try ApplicationStatics.LoadComponent(component: component!.QueryInterface(), resourceLocator: resourceLocator!.QueryInterface());
+        return try ApplicationStatics.LoadComponent(component: component, resourceLocator: resourceLocator!.Interface());
     }
     public static func LoadComponentWithResourceLocation(component : Optional<WinRT.IInspectable>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>, componentResourceLocation : WinRT.Windows.UI.Xaml.Controls.Primitives.ComponentResourceLocation) throws -> Void {
-        return try ApplicationStatics.LoadComponentWithResourceLocation(component: component!.QueryInterface(), resourceLocator: resourceLocator!.QueryInterface(), componentResourceLocation: componentResourceLocation);
+        return try ApplicationStatics.LoadComponentWithResourceLocation(component: component, resourceLocator: resourceLocator!.Interface(), componentResourceLocation: componentResourceLocation);
     }
     public static var Current : Optional<WinRT.Windows.UI.Xaml.Application> {
         get throws {
@@ -51,7 +49,7 @@ open class Application
     }
     public func put_Resources(value : Optional<WinRT.Windows.UI.Xaml.ResourceDictionary>) throws -> Void {
         let _ifc : IApplication = try _self.QueryInterface();
-        return try _ifc.put_Resources(value: value!.QueryInterface());
+        return try _ifc.put_Resources(value: value!.Interface());
     }
     public func get_DebugSettings() throws -> Optional<WinRT.Windows.UI.Xaml.DebugSettings> {
         let _ifc : IApplication = try _self.QueryInterface();
@@ -296,9 +294,7 @@ public class ApplicationInitializationCallbackParams
     public init(plok: WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams { return _self; }
 }
 
 // type: Windows.UI.Xaml.ApplicationRequiresPointerMode
@@ -317,9 +313,7 @@ public class DebugSettings
     public init(plok: WinRT.Windows.UI.Xaml.IDebugSettings?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IDebugSettings { return _self; }
     // method not needed: get_EnableFrameRateCounter
     // method not needed: put_EnableFrameRateCounter
     // method not needed: get_IsBindingTracingEnabled
@@ -341,13 +335,11 @@ open class DependencyObject
     public init(plok: WinRT.Windows.UI.Xaml.IDependencyObject?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IDependencyObject { return _self; }
     // COMPOSABLE: Windows.UI.Xaml.IDependencyObjectFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IDependencyObjectFactory = try RoGetActivationFactory(HString("Windows.UI.Xaml.DependencyObject"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface!.QueryInterface(), innerInterface: &innerInterface)!;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
     }
     // method not needed: GetValue
     // method not needed: SetValue
@@ -1134,13 +1126,11 @@ open class ResourceDictionary
     public init(plok: WinRT.Windows.UI.Xaml.IResourceDictionary?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IResourceDictionary { return _self; }
     // COMPOSABLE: Windows.UI.Xaml.IResourceDictionaryFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IResourceDictionaryFactory = try RoGetActivationFactory(HString("Windows.UI.Xaml.ResourceDictionary"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface!.QueryInterface(), innerInterface: &innerInterface)!;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
     }
     // method not needed: get_Source
     // method not needed: put_Source
@@ -1241,9 +1231,7 @@ public class UnhandledExceptionEventArgs
     public init(plok: WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs { return _self; }
     // method not needed: get_Exception
     // method not needed: get_Message
     // method not needed: get_Handled
@@ -1341,9 +1329,7 @@ public class WindowCreatedEventArgs
     public init(plok: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs { return _self; }
     // method not needed: get_Window
 }
 

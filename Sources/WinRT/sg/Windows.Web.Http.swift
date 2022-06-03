@@ -13,9 +13,7 @@ public class HttpClient
     public init(plok: WinRT.Windows.Web.Http.IHttpClient?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.Web.Http.IHttpClient { return _self; }
     public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
         let _af : IHttpClientFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
         _self = try _af.Create(filter: filter)!;
@@ -27,7 +25,7 @@ public class HttpClient
     // method not needed: DeleteAsync
     public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
         let _ifc : IHttpClient = try _self.QueryInterface();
-        return try _ifc.GetAsync(uri: uri!.QueryInterface());
+        return try _ifc.GetAsync(uri: uri!.Interface());
     }
     public func Get(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -68,9 +66,7 @@ public class HttpResponseMessage
     public init(plok: WinRT.Windows.Web.Http.IHttpResponseMessage?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.Web.Http.IHttpResponseMessage { return _self; }
     public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
         let _af : IHttpResponseMessageFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
         _self = try _af.Create(statusCode: statusCode)!;

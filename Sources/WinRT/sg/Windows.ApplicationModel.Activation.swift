@@ -13,9 +13,7 @@ public class BackgroundActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs { return _self; }
     // method not needed: get_TaskInstance
 }
 
@@ -27,9 +25,7 @@ public class CachedFileUpdaterActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs { return _self; }
     // method not needed: get_CachedFileUpdaterUI
     // method not needed: get_Kind
     // method not needed: get_PreviousExecutionState
@@ -45,9 +41,7 @@ public class FileActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs { return _self; }
     // method not needed: get_Files
     // method not needed: get_Verb
     // method not needed: get_Kind
@@ -68,9 +62,7 @@ public class FileOpenPickerActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs { return _self; }
     // method not needed: get_FileOpenPickerUI
     // method not needed: get_Kind
     // method not needed: get_PreviousExecutionState
@@ -87,9 +79,7 @@ public class FileSavePickerActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs { return _self; }
     // method not needed: get_FileSavePickerUI
     // method not needed: get_Kind
     // method not needed: get_PreviousExecutionState
@@ -210,9 +200,7 @@ public class LaunchActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs { return _self; }
     // method not needed: get_Arguments
     // method not needed: get_TileId
     // method not needed: get_Kind
@@ -233,9 +221,7 @@ public class SearchActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs { return _self; }
     // method not needed: get_QueryText
     // method not needed: get_Language
     // method not needed: get_Kind
@@ -255,9 +241,7 @@ public class ShareTargetActivatedEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs { return _self; }
     // method not needed: get_ShareOperation
     // method not needed: get_Kind
     // method not needed: get_PreviousExecutionState

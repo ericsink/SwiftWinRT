@@ -104,12 +104,10 @@ public class ToastNotification
     public init(plok: WinRT.Windows.UI.Notifications.IToastNotification?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Notifications.IToastNotification { return _self; }
     public init(content : Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument>) throws {
         let _af : IToastNotificationFactory = try RoGetActivationFactory(HString("Windows.UI.Notifications.ToastNotification"));
-        _self = try _af.CreateToastNotification(content: content!.QueryInterface())!;
+        _self = try _af.CreateToastNotification(content: content!.Interface())!;
     }
     // method not needed: get_Content
     // method not needed: put_ExpirationTime
@@ -155,12 +153,10 @@ public class ToastNotifier
     public init(plok: WinRT.Windows.UI.Notifications.IToastNotifier?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.UI.Notifications.IToastNotifier { return _self; }
     public func Show(notification : Optional<WinRT.Windows.UI.Notifications.ToastNotification>) throws -> Void {
         let _ifc : IToastNotifier = try _self.QueryInterface();
-        return try _ifc.Show(notification: notification!.QueryInterface());
+        return try _ifc.Show(notification: notification!.Interface());
     }
     // method not needed: Hide
     // method not needed: get_Setting

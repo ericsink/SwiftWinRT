@@ -13,9 +13,7 @@ public class DispatcherQueueController
     public init(plok: WinRT.Windows.System.IDispatcherQueueController?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.System.IDispatcherQueueController { return _self; }
     private struct _IDispatcherQueueControllerStatics {
         static var x : IDispatcherQueueControllerStatics =
             try! RoGetActivationFactory(HString("Windows.System.DispatcherQueueController"))
@@ -118,9 +116,7 @@ public class User
     public init(plok: WinRT.Windows.System.IUser?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.System.IUser { return _self; }
     // static interface not needed: Windows.System.IUserStatics
     // method not needed: get_NonRoamableId
     // method not needed: get_AuthenticationStatus

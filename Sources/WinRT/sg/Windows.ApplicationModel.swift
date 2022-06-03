@@ -13,9 +13,7 @@ public class EnteredBackgroundEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs { return _self; }
     // method not needed: GetDeferral
 }
 
@@ -60,9 +58,7 @@ public class LeavingBackgroundEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs { return _self; }
     // method not needed: GetDeferral
 }
 
@@ -74,9 +70,7 @@ public class SuspendingEventArgs
     public init(plok: WinRT.Windows.ApplicationModel.ISuspendingEventArgs?) {
         _self = plok!
     }
-    internal func QueryInterface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
-    }
+    internal func Interface() -> WinRT.Windows.ApplicationModel.ISuspendingEventArgs { return _self; }
     // method not needed: get_SuspendingOperation
 }
 
