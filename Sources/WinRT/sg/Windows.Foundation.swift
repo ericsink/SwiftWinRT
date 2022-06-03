@@ -64,8 +64,8 @@ public class IAsyncOperationCompletedHandler_1_boolean
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationCompletedHandler_1_boolean
-// closed generic delegate type
-public class _abstract_IAsyncOperationCompletedHandler_1_boolean
+// impl delegate type
+public class AsyncOperationCompletedHandler_1_boolean
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_booleanVtbl = .init(
     QueryInterface: {
@@ -83,17 +83,17 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
         }
     },
     AddRef: {
-        let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
+        let instance = AsyncOperationCompletedHandler_1_boolean.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_IAsyncOperationCompletedHandler_1_boolean.from($0)
+        let instance = AsyncOperationCompletedHandler_1_boolean.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = _abstract_IAsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
+        guard let self = AsyncOperationCompletedHandler_1_boolean.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -109,16 +109,16 @@ public class _abstract_IAsyncOperationCompletedHandler_1_boolean
     )
     private struct WithTrailingObjects {
         public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean
-        public var wrapper: Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>?
+        public var wrapper: Unmanaged<AsyncOperationCompletedHandler_1_boolean>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationCompletedHandler_1_boolean>? {
-        return pUnk?.bindMemory(to: _abstract_IAsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationCompletedHandler_1_boolean>? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
@@ -213,8 +213,8 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRespon
         try self._n_Invoke(RawPointer(asyncInfo), progressInfo);
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
-// closed generic delegate type
-public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+// impl delegate type
+public class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -232,17 +232,17 @@ public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_C
         }
     },
     AddRef: {
-        let instance = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        let instance = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        let instance = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
+        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -258,16 +258,16 @@ public class _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_C
     )
     private struct WithTrailingObjects {
         public var `super`: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
-        public var wrapper: Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
+        public var wrapper: Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
-        return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
+        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) throws {
@@ -302,8 +302,8 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
-// closed generic delegate type
-public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+// impl delegate type
+public class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -321,17 +321,17 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
         }
     },
     AddRef: {
-        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        let instance = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
+        let instance = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
+        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -347,16 +347,16 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows
     )
     private struct WithTrailingObjects {
         public var `super`: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
-        public var wrapper: Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
+        public var wrapper: Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
-        return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
+        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
@@ -451,8 +451,8 @@ public class IAsyncOperationProgressHandler_2_HSTRING_UINT64
         try self._n_Invoke(RawPointer(asyncInfo), progressInfo);
     }
 } // IAsyncOperationProgressHandler_2_HSTRING_UINT64
-// closed generic delegate type
-public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
+// impl delegate type
+public class AsyncOperationProgressHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
@@ -470,17 +470,17 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
         }
     },
     AddRef: {
-        let instance = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
+        let instance = AsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
+        let instance = AsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) in
-        guard let self = _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
+        guard let self = AsyncOperationProgressHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -496,16 +496,16 @@ public class _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64
     )
     private struct WithTrailingObjects {
         public var `super`: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64
-        public var wrapper: Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>?
+        public var wrapper: Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64>? {
-        return pUnk?.bindMemory(to: _abstract_IAsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>? {
+        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws {
@@ -532,8 +532,8 @@ public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
-// closed generic delegate type
-public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
+// impl delegate type
+public class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
@@ -551,17 +551,17 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
         }
     },
     AddRef: {
-        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
+        let instance = AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
+        let instance = AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
+        guard let self = AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -577,16 +577,16 @@ public class _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UIN
     )
     private struct WithTrailingObjects {
         public var `super`: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
-        public var wrapper: Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>?
+        public var wrapper: Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>? {
-        return pUnk?.bindMemory(to: _abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>? {
+        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
@@ -613,8 +613,8 @@ public class IEventHandler_1_IInspectable
         try self._n_Invoke(RawPointer(sender), RawPointer(args));
     }
 } // IEventHandler_1_IInspectable
-// closed generic delegate type
-public class _abstract_IEventHandler_1_IInspectable
+// impl delegate type
+public class EventHandler_1_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl = .init(
     QueryInterface: {
@@ -632,17 +632,17 @@ public class _abstract_IEventHandler_1_IInspectable
         }
     },
     AddRef: {
-        let instance = _abstract_IEventHandler_1_IInspectable.from($0)
+        let instance = EventHandler_1_IInspectable.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_IEventHandler_1_IInspectable.from($0)
+        let instance = EventHandler_1_IInspectable.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = _abstract_IEventHandler_1_IInspectable.from(pThis)?.takeUnretainedValue() else {
+        guard let self = EventHandler_1_IInspectable.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -658,16 +658,16 @@ public class _abstract_IEventHandler_1_IInspectable
     )
     private struct WithTrailingObjects {
         public var `super`: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
-        public var wrapper: Unmanaged<_abstract_IEventHandler_1_IInspectable>?
+        public var wrapper: Unmanaged<EventHandler_1_IInspectable>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_IEventHandler_1_IInspectable>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<EventHandler_1_IInspectable>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_IEventHandler_1_IInspectable>? {
-        return pUnk?.bindMemory(to: _abstract_IEventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<EventHandler_1_IInspectable>? {
+        return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws {
@@ -680,7 +680,7 @@ public class _abstract_IEventHandler_1_IInspectable
 }
 }
 extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
-    private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1_boolean {
+    private final class MyCompletedHandler: Windows.Foundation.AsyncOperationCompletedHandler_1_boolean {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -698,7 +698,7 @@ extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: Windows.Foundation._abstract_IAsyncOperationCompletedHandler_1_boolean =
+            let completion: Windows.Foundation.AsyncOperationCompletedHandler_1_boolean =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -709,7 +709,7 @@ extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
         }
 }
 extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress : Future {
-    private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: Windows.Foundation.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -727,7 +727,7 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWe
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: Windows.Foundation._abstract_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: Windows.Foundation.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -738,7 +738,7 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWe
         }
 }
 extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64 : Future {
-    private final class MyCompletedHandler: Windows.Foundation._abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
+    private final class MyCompletedHandler: Windows.Foundation.AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -756,7 +756,7 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64 
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: Windows.Foundation._abstract_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 =
+            let completion: Windows.Foundation.AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -784,8 +784,8 @@ open class IAsyncActionCompletedHandler
         try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
     }
 }
-// closed generic delegate type
-public class _abstract_AsyncActionCompletedHandler
+// impl delegate type
+public class AsyncActionCompletedHandler
 {
     private static var vtable: _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl = .init(
     QueryInterface: {
@@ -803,17 +803,17 @@ public class _abstract_AsyncActionCompletedHandler
         }
     },
     AddRef: {
-        let instance = _abstract_AsyncActionCompletedHandler.from($0)
+        let instance = AsyncActionCompletedHandler.from($0)
         _ = instance?.retain()
         return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
     },
     Release: {
-        let instance = _abstract_AsyncActionCompletedHandler.from($0)
+        let instance = AsyncActionCompletedHandler.from($0)
         return ULONG(_getRetainCount(instance!.takeRetainedValue()))
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = _abstract_AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = AsyncActionCompletedHandler.from(pThis)?.takeUnretainedValue() else {
             return E_INVALIDARG
         }
         do {
@@ -829,16 +829,16 @@ public class _abstract_AsyncActionCompletedHandler
     )
     private struct WithTrailingObjects {
         public var `super`: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler
-        public var wrapper: Unmanaged<_abstract_AsyncActionCompletedHandler>?
+        public var wrapper: Unmanaged<AsyncActionCompletedHandler>?
     }
     private var instance: WithTrailingObjects
 
     public init() {
         self.instance = WithTrailingObjects(super: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<_abstract_AsyncActionCompletedHandler>.passUnretained(self)
+        self.instance.wrapper = Unmanaged<AsyncActionCompletedHandler>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<_abstract_AsyncActionCompletedHandler>? {
-        return pUnk?.bindMemory(to: _abstract_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncActionCompletedHandler>? {
+        return pUnk?.bindMemory(to: AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {

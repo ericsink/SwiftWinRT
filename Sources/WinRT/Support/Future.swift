@@ -9,7 +9,7 @@ internal protocol Future {
 }
 
 extension Windows.Foundation.IAsyncAction: Future {
-  private final class CompletedHandler: Windows.Foundation._abstract_AsyncActionCompletedHandler {
+  private final class CompletedHandler: Windows.Foundation.AsyncActionCompletedHandler {
     private var hEvent: HANDLE
 
     public init(signal event: HANDLE) {
@@ -31,7 +31,7 @@ extension Windows.Foundation.IAsyncAction: Future {
       // TODO(compnerd) validate event
       defer { _ = CloseHandle(event) }
 
-      let completion: Windows.Foundation._abstract_AsyncActionCompletedHandler =
+      let completion: Windows.Foundation.AsyncActionCompletedHandler =
           Windows.Foundation.IAsyncAction.CompletedHandler(signal: event)
       try withExtendedLifetime(completion) {
         try self.put_Completed(handler: completion.Interface())
