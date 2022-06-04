@@ -103,7 +103,7 @@ public class SystemIdentification
 public class SystemIdentificationInfo
 {
     private var _self : WinRT.Windows.System.Profile.ISystemIdentificationInfo;
-    public init(plok: WinRT.Windows.System.Profile.ISystemIdentificationInfo?) {
+    internal init(plok: WinRT.Windows.System.Profile.ISystemIdentificationInfo?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.System.Profile.ISystemIdentificationInfo { return _self; }

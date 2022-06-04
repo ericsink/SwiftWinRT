@@ -10,7 +10,7 @@ extension Windows.ApplicationModel.Activation {
 public class BackgroundActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IBackgroundActivatedEventArgs { return _self; }
@@ -22,7 +22,7 @@ public class BackgroundActivatedEventArgs
 public class CachedFileUpdaterActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs { return _self; }
@@ -38,7 +38,7 @@ public class CachedFileUpdaterActivatedEventArgs
 public class FileActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs { return _self; }
@@ -59,7 +59,7 @@ public class FileActivatedEventArgs
 public class FileOpenPickerActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs { return _self; }
@@ -76,7 +76,7 @@ public class FileOpenPickerActivatedEventArgs
 public class FileSavePickerActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs { return _self; }
@@ -197,7 +197,7 @@ open class IShareTargetActivatedEventArgs
 public class LaunchActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs { return _self; }
@@ -218,7 +218,7 @@ public class LaunchActivatedEventArgs
 public class SearchActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs { return _self; }
@@ -238,7 +238,7 @@ public class SearchActivatedEventArgs
 public class ShareTargetActivatedEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs { return _self; }

@@ -10,7 +10,7 @@ extension Windows.ApplicationModel {
 public class EnteredBackgroundEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs { return _self; }
@@ -55,7 +55,7 @@ open class ISuspendingEventArgs
 public class LeavingBackgroundEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs { return _self; }
@@ -67,7 +67,7 @@ public class LeavingBackgroundEventArgs
 public class SuspendingEventArgs
 {
     private var _self : WinRT.Windows.ApplicationModel.ISuspendingEventArgs;
-    public init(plok: WinRT.Windows.ApplicationModel.ISuspendingEventArgs?) {
+    internal init(plok: WinRT.Windows.ApplicationModel.ISuspendingEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.ApplicationModel.ISuspendingEventArgs { return _self; }

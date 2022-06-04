@@ -10,7 +10,7 @@ extension Windows.UI.Xaml {
 open class Application
 {
     private var _self : WinRT.Windows.UI.Xaml.IApplication;
-    public init(plok: WinRT.Windows.UI.Xaml.IApplication?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IApplication?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IApplication { return _self; }
@@ -291,7 +291,7 @@ open class ApplicationInitializationCallback
 public class ApplicationInitializationCallbackParams
 {
     private var _self : WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams;
-    public init(plok: WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams { return _self; }
@@ -310,7 +310,7 @@ public typealias ApplicationTheme = _q_CWindows_CUI_CXaml_CApplicationTheme;
 public class DebugSettings
 {
     private var _self : WinRT.Windows.UI.Xaml.IDebugSettings;
-    public init(plok: WinRT.Windows.UI.Xaml.IDebugSettings?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IDebugSettings?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IDebugSettings { return _self; }
@@ -332,7 +332,7 @@ public class DebugSettings
 open class DependencyObject
 {
     private var _self : WinRT.Windows.UI.Xaml.IDependencyObject;
-    public init(plok: WinRT.Windows.UI.Xaml.IDependencyObject?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IDependencyObject?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IDependencyObject { return _self; }
@@ -841,6 +841,234 @@ open class IApplicationOverrides
     }
 } // IApplicationOverrides
 
+// impl interface type
+open class ApplicationOverrides
+{
+    private static var vtable: _q_CWindows_CUI_CXaml_CIApplicationOverridesVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.UI.Xaml.IApplicationOverrides.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = ApplicationOverrides.from($0)
+        _ = instance?.retain()
+        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+    },
+    Release: {
+        let instance = ApplicationOverrides.from($0)
+        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        return E_FAIL;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        return E_FAIL;
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        return E_FAIL;
+    },
+    OnActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnActivated(args: WinRT.Windows.ApplicationModel.Activation.IActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnLaunched: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnLaunched(args: WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnFileActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnFileActivated(args: WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnSearchActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnSearchActivated(args: WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnShareTargetActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnShareTargetActivated(args: WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnFileOpenPickerActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnFileOpenPickerActivated(args: WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnFileSavePickerActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnFileSavePickerActivated(args: WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnCachedFileUpdaterActivated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnCachedFileUpdaterActivated(args: WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnWindowCreated: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs>>) in
+        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            try self.OnWindowCreated(args: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CWindows_CUI_CXaml_CIApplicationOverrides
+        public var wrapper: Unmanaged<ApplicationOverrides>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<ApplicationOverrides>.passUnretained(self)
+    }
+    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationOverrides>? {
+        return pUnk?.bindMemory(to: ApplicationOverrides.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    internal func Interface() -> WinRT.Windows.UI.Xaml.IApplicationOverrides {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.UI.Xaml.IApplicationOverrides(UnsafeMutableRawPointer($0))
+        }
+    }
+    open func OnActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnLaunched(args : Optional<WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnFileActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnSearchActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnShareTargetActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnFileOpenPickerActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnFileSavePickerActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnCachedFileUpdaterActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+    open func OnWindowCreated(args : Optional<WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs>) throws -> Void {
+        throw Error(hr: E_INVALIDARG);
+    }
+}
 
 // type: Windows.UI.Xaml.IApplicationOverrides2
 // interface type
@@ -1123,7 +1351,7 @@ open class LeavingBackgroundEventHandler
 open class ResourceDictionary
 {
     private var _self : WinRT.Windows.UI.Xaml.IResourceDictionary;
-    public init(plok: WinRT.Windows.UI.Xaml.IResourceDictionary?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IResourceDictionary?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IResourceDictionary { return _self; }
@@ -1228,7 +1456,7 @@ open class SuspendingEventHandler
 public class UnhandledExceptionEventArgs
 {
     private var _self : WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs;
-    public init(plok: WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs { return _self; }
@@ -1326,7 +1554,7 @@ open class UnhandledExceptionEventHandler
 public class WindowCreatedEventArgs
 {
     private var _self : WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs;
-    public init(plok: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs?) {
+    internal init(plok: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs?) {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs { return _self; }
