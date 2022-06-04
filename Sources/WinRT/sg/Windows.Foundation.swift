@@ -117,7 +117,7 @@ open class AsyncOperationCompletedHandler_1_boolean
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationCompletedHandler_1_boolean>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationCompletedHandler_1_boolean>? {
         return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -266,7 +266,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
         return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -355,7 +355,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>? {
         return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -504,7 +504,7 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>? {
         return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -585,7 +585,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>? {
         return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -666,7 +666,7 @@ open class EventHandler_1_IInspectable
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<EventHandler_1_IInspectable>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<EventHandler_1_IInspectable>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<EventHandler_1_IInspectable>? {
         return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -837,7 +837,7 @@ open class AsyncActionCompletedHandler
         self.instance = WithTrailingObjects(super: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncActionCompletedHandler>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncActionCompletedHandler>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncActionCompletedHandler>? {
         return pUnk?.bindMemory(to: AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 

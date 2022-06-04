@@ -273,7 +273,7 @@ open class ApplicationInitializationCallback
         self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<ApplicationInitializationCallback>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationInitializationCallback>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationInitializationCallback>? {
         return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -420,7 +420,7 @@ open class EnteredBackgroundEventHandler
         self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<EnteredBackgroundEventHandler>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<EnteredBackgroundEventHandler>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<EnteredBackgroundEventHandler>? {
         return pUnk?.bindMemory(to: EnteredBackgroundEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -1032,7 +1032,7 @@ open class ApplicationOverrides
         self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<ApplicationOverrides>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationOverrides>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationOverrides>? {
         return pUnk?.bindMemory(to: ApplicationOverrides.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -1333,7 +1333,7 @@ open class LeavingBackgroundEventHandler
         self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<LeavingBackgroundEventHandler>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<LeavingBackgroundEventHandler>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<LeavingBackgroundEventHandler>? {
         return pUnk?.bindMemory(to: LeavingBackgroundEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -1438,7 +1438,7 @@ open class SuspendingEventHandler
         self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CISuspendingEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<SuspendingEventHandler>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<SuspendingEventHandler>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<SuspendingEventHandler>? {
         return pUnk?.bindMemory(to: SuspendingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
@@ -1536,7 +1536,7 @@ open class UnhandledExceptionEventHandler
         self.instance = WithTrailingObjects(super: _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<UnhandledExceptionEventHandler>.passUnretained(self)
     }
-    fileprivate static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<UnhandledExceptionEventHandler>? {
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<UnhandledExceptionEventHandler>? {
         return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
