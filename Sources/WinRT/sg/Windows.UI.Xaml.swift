@@ -253,7 +253,7 @@ open class ApplicationInitializationCallback
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(p: WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams(p))
+            try self.Invoke(p: WinRT.Windows.UI.Xaml.ApplicationInitializationCallbackParams(plok: WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams(p)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -277,7 +277,7 @@ open class ApplicationInitializationCallback
         return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(p : Optional<WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams>) throws {
+    open func Invoke(p : Optional<WinRT.Windows.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IApplicationInitializationCallback {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -400,7 +400,7 @@ open class EnteredBackgroundEventHandler
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs(e))
+            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.ApplicationModel.EnteredBackgroundEventArgs(plok: WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -424,7 +424,7 @@ open class EnteredBackgroundEventHandler
         return pUnk?.bindMemory(to: EnteredBackgroundEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.ApplicationModel.IEnteredBackgroundEventArgs>) throws {
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.ApplicationModel.EnteredBackgroundEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IEnteredBackgroundEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -907,7 +907,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnLaunched(args: WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs(args))
+            try self.OnLaunched(args: WinRT.Windows.ApplicationModel.Activation.LaunchActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -922,7 +922,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnFileActivated(args: WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs(args))
+            try self.OnFileActivated(args: WinRT.Windows.ApplicationModel.Activation.FileActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -937,7 +937,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnSearchActivated(args: WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs(args))
+            try self.OnSearchActivated(args: WinRT.Windows.ApplicationModel.Activation.SearchActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -952,7 +952,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnShareTargetActivated(args: WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs(args))
+            try self.OnShareTargetActivated(args: WinRT.Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -967,7 +967,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnFileOpenPickerActivated(args: WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs(args))
+            try self.OnFileOpenPickerActivated(args: WinRT.Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -982,7 +982,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnFileSavePickerActivated(args: WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs(args))
+            try self.OnFileSavePickerActivated(args: WinRT.Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -997,7 +997,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnCachedFileUpdaterActivated(args: WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs(args))
+            try self.OnCachedFileUpdaterActivated(args: WinRT.Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs(plok: WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1012,7 +1012,7 @@ open class ApplicationOverrides
             return E_INVALIDARG
         }
         do {
-            try self.OnWindowCreated(args: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs(args))
+            try self.OnWindowCreated(args: WinRT.Windows.UI.Xaml.WindowCreatedEventArgs(plok: WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1044,28 +1044,28 @@ open class ApplicationOverrides
     open func OnActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnLaunched(args : Optional<WinRT.Windows.ApplicationModel.Activation.ILaunchActivatedEventArgs>) throws -> Void {
+    open func OnLaunched(args : Optional<WinRT.Windows.ApplicationModel.Activation.LaunchActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnFileActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IFileActivatedEventArgs>) throws -> Void {
+    open func OnFileActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.FileActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnSearchActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.ISearchActivatedEventArgs>) throws -> Void {
+    open func OnSearchActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.SearchActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnShareTargetActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IShareTargetActivatedEventArgs>) throws -> Void {
+    open func OnShareTargetActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.ShareTargetActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnFileOpenPickerActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IFileOpenPickerActivatedEventArgs>) throws -> Void {
+    open func OnFileOpenPickerActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.FileOpenPickerActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnFileSavePickerActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.IFileSavePickerActivatedEventArgs>) throws -> Void {
+    open func OnFileSavePickerActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.FileSavePickerActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnCachedFileUpdaterActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.ICachedFileUpdaterActivatedEventArgs>) throws -> Void {
+    open func OnCachedFileUpdaterActivated(args : Optional<WinRT.Windows.ApplicationModel.Activation.CachedFileUpdaterActivatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
-    open func OnWindowCreated(args : Optional<WinRT.Windows.UI.Xaml.IWindowCreatedEventArgs>) throws -> Void {
+    open func OnWindowCreated(args : Optional<WinRT.Windows.UI.Xaml.WindowCreatedEventArgs>) throws -> Void {
         throw Error(hr: E_INVALIDARG);
     }
 }
@@ -1313,7 +1313,7 @@ open class LeavingBackgroundEventHandler
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs(e))
+            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.ApplicationModel.LeavingBackgroundEventArgs(plok: WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1337,7 +1337,7 @@ open class LeavingBackgroundEventHandler
         return pUnk?.bindMemory(to: LeavingBackgroundEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.ApplicationModel.ILeavingBackgroundEventArgs>) throws {
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.ApplicationModel.LeavingBackgroundEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.ILeavingBackgroundEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1418,7 +1418,7 @@ open class SuspendingEventHandler
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.ApplicationModel.ISuspendingEventArgs(e))
+            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.ApplicationModel.SuspendingEventArgs(plok: WinRT.Windows.ApplicationModel.ISuspendingEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1442,7 +1442,7 @@ open class SuspendingEventHandler
         return pUnk?.bindMemory(to: SuspendingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.ApplicationModel.ISuspendingEventArgs>) throws {
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.ApplicationModel.SuspendingEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.ISuspendingEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1516,7 +1516,7 @@ open class UnhandledExceptionEventHandler
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs(e))
+            try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Windows.UI.Xaml.UnhandledExceptionEventArgs(plok: WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1540,7 +1540,7 @@ open class UnhandledExceptionEventHandler
         return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.UI.Xaml.IUnhandledExceptionEventArgs>) throws {
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Windows.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.UI.Xaml.IUnhandledExceptionEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

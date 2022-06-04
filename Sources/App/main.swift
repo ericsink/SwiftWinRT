@@ -11,7 +11,7 @@ class MyApp : Windows.UI.Xaml.Application
 
 class MyInit : Windows.UI.Xaml.ApplicationInitializationCallback
 {
-    override func Invoke(p : Optional<WinRT.Windows.UI.Xaml.IApplicationInitializationCallbackParams>) throws {
+    override func Invoke(p : Optional<WinRT.Windows.UI.Xaml.ApplicationInitializationCallbackParams>) throws {
         // TODO var x = MyApp();
     }
 }

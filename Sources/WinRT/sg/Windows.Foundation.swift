@@ -121,7 +121,7 @@ open class AsyncOperationCompletedHandler_1_boolean
         return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -270,7 +270,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) throws {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -359,7 +359,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -508,7 +508,7 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
         return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -589,7 +589,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -670,7 +670,7 @@ open class EventHandler_1_IInspectable
         return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws {
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IEventHandler_1_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -841,7 +841,7 @@ open class AsyncActionCompletedHandler
         return pUnk?.bindMemory(to: AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws {
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
