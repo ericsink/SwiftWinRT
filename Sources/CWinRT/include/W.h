@@ -2,13 +2,133 @@
 // if you modify it by hand, your changes will probably be lost.
 
 // forward decls for delegates
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler;
 typedef struct _q_CWindows_CFoundation_CIAsyncActionCompletedHandler _q_CWindows_CFoundation_CIAsyncActionCompletedHandler;
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationInitializationCallback _q_CWindows_CUI_CXaml_CIApplicationInitializationCallback;
-typedef struct _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler;
-typedef struct _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler;
-typedef struct _q_CWindows_CUI_CXaml_CISuspendingEventHandler _q_CWindows_CUI_CXaml_CISuspendingEventHandler;
-typedef struct _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler;
 // enums
+typedef enum _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment
+{
+    _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment_None = 0,
+    _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment_Auto = -1,
+} _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment;
+typedef enum _q_CMicrosoft_CUI_CXaml_CApplicationTheme
+{
+    _q_CMicrosoft_CUI_CXaml_CApplicationTheme_Light = 0,
+    _q_CMicrosoft_CUI_CXaml_CApplicationTheme_Dark = 1,
+} _q_CMicrosoft_CUI_CXaml_CApplicationTheme;
+typedef enum _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation_Application = 0,
+    _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation_Nested = 1,
+} _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation;
+typedef enum _q_CMicrosoft_CUI_CXaml_CFocusVisualKind
+{
+    _q_CMicrosoft_CUI_CXaml_CFocusVisualKind_DottedLine = 0,
+    _q_CMicrosoft_CUI_CXaml_CFocusVisualKind_HighVisibility = 1,
+    _q_CMicrosoft_CUI_CXaml_CFocusVisualKind_Reveal = 2,
+} _q_CMicrosoft_CUI_CXaml_CFocusVisualKind;
+typedef enum _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy
+{
+    _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy_MaxHeight = 0,
+    _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy_BlockLineHeight = 1,
+    _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy_BaselineToBaseline = 2,
+} _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy;
+typedef enum _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment
+{
+    _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment_None = 0,
+    _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment_TrimSideBearings = 1,
+} _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment;
+typedef enum _q_CMicrosoft_CUI_CXaml_CTextAlignment
+{
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_Center = 0,
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_Left = 1,
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_Start = 1,
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_Right = 2,
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_End = 2,
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_Justify = 3,
+    _q_CMicrosoft_CUI_CXaml_CTextAlignment_DetectFromContent = 4,
+} _q_CMicrosoft_CUI_CXaml_CTextAlignment;
+typedef enum _q_CMicrosoft_CUI_CXaml_CTextLineBounds
+{
+    _q_CMicrosoft_CUI_CXaml_CTextLineBounds_Full = 0,
+    _q_CMicrosoft_CUI_CXaml_CTextLineBounds_TrimToCapHeight = 1,
+    _q_CMicrosoft_CUI_CXaml_CTextLineBounds_TrimToBaseline = 2,
+    _q_CMicrosoft_CUI_CXaml_CTextLineBounds_Tight = 3,
+} _q_CMicrosoft_CUI_CXaml_CTextLineBounds;
+typedef enum _q_CMicrosoft_CUI_CXaml_CTextReadingOrder
+{
+    _q_CMicrosoft_CUI_CXaml_CTextReadingOrder_Default = 0,
+    _q_CMicrosoft_CUI_CXaml_CTextReadingOrder_UseFlowDirection = 0,
+    _q_CMicrosoft_CUI_CXaml_CTextReadingOrder_DetectFromContent = 1,
+} _q_CMicrosoft_CUI_CXaml_CTextReadingOrder;
+typedef enum _q_CMicrosoft_CUI_CXaml_CTextTrimming
+{
+    _q_CMicrosoft_CUI_CXaml_CTextTrimming_None = 0,
+    _q_CMicrosoft_CUI_CXaml_CTextTrimming_CharacterEllipsis = 1,
+    _q_CMicrosoft_CUI_CXaml_CTextTrimming_WordEllipsis = 2,
+    _q_CMicrosoft_CUI_CXaml_CTextTrimming_Clip = 3,
+} _q_CMicrosoft_CUI_CXaml_CTextTrimming;
+typedef enum _q_CMicrosoft_CUI_CXaml_CTextWrapping
+{
+    _q_CMicrosoft_CUI_CXaml_CTextWrapping_NoWrap = 1,
+    _q_CMicrosoft_CUI_CXaml_CTextWrapping_Wrap = 2,
+    _q_CMicrosoft_CUI_CXaml_CTextWrapping_WrapWholeWords = 3,
+} _q_CMicrosoft_CUI_CXaml_CTextWrapping;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus_NotPresent = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus_Discharging = 1,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus_Idle = 2,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus_Charging = 3,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus_Off = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus_On = 1,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus_Dimmed = 2,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_BatterySaver = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_BetterBattery = 1,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_Balanced = 2,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_HighPerformance = 3,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_MaxPerformance = 4,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_GameMode = 5,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_MixedReality = 6,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus_Uninitialized = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus_Disabled = 1,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus_Off = 2,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus_On = 3,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind_AC = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind_DC = 1,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus_NotPresent = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus_Inadequate = 1,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus_Adequate = 2,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus_Uninitialized = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus_Entering = 1,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus_AutoResume = 2,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus_ManualResume = 3,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus;
+typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus_Present = 0,
+    _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus_Absent = 1,
+} _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus;
 typedef enum _q_CWindows_CFoundation_CAsyncStatus
 {
     _q_CWindows_CFoundation_CAsyncStatus_Canceled = 2,
@@ -16,25 +136,6 @@ typedef enum _q_CWindows_CFoundation_CAsyncStatus
     _q_CWindows_CFoundation_CAsyncStatus_Error = 3,
     _q_CWindows_CFoundation_CAsyncStatus_Started = 0,
 } _q_CWindows_CFoundation_CAsyncStatus;
-typedef enum _q_CWindows_CSystem_CPower_CBatteryStatus
-{
-    _q_CWindows_CSystem_CPower_CBatteryStatus_NotPresent = 0,
-    _q_CWindows_CSystem_CPower_CBatteryStatus_Discharging = 1,
-    _q_CWindows_CSystem_CPower_CBatteryStatus_Idle = 2,
-    _q_CWindows_CSystem_CPower_CBatteryStatus_Charging = 3,
-} _q_CWindows_CSystem_CPower_CBatteryStatus;
-typedef enum _q_CWindows_CSystem_CPower_CEnergySaverStatus
-{
-    _q_CWindows_CSystem_CPower_CEnergySaverStatus_Disabled = 0,
-    _q_CWindows_CSystem_CPower_CEnergySaverStatus_Off = 1,
-    _q_CWindows_CSystem_CPower_CEnergySaverStatus_On = 2,
-} _q_CWindows_CSystem_CPower_CEnergySaverStatus;
-typedef enum _q_CWindows_CSystem_CPower_CPowerSupplyStatus
-{
-    _q_CWindows_CSystem_CPower_CPowerSupplyStatus_NotPresent = 0,
-    _q_CWindows_CSystem_CPower_CPowerSupplyStatus_Inadequate = 1,
-    _q_CWindows_CSystem_CPower_CPowerSupplyStatus_Adequate = 2,
-} _q_CWindows_CSystem_CPower_CPowerSupplyStatus;
 typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
 {
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_None = 0,
@@ -42,32 +143,31 @@ typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Uefi = 2,
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Registry = 3,
 } _q_CWindows_CSystem_CProfile_CSystemIdentificationSource;
-typedef enum _q_CWindows_CUI_CXaml_CApplicationHighContrastAdjustment
+typedef enum _q_CWindows_CUI_CText_CFontStretch
 {
-    _q_CWindows_CUI_CXaml_CApplicationHighContrastAdjustment_None = 0,
-    _q_CWindows_CUI_CXaml_CApplicationHighContrastAdjustment_Auto = -1,
-} _q_CWindows_CUI_CXaml_CApplicationHighContrastAdjustment;
-typedef enum _q_CWindows_CUI_CXaml_CApplicationRequiresPointerMode
+    _q_CWindows_CUI_CText_CFontStretch_Undefined = 0,
+    _q_CWindows_CUI_CText_CFontStretch_UltraCondensed = 1,
+    _q_CWindows_CUI_CText_CFontStretch_ExtraCondensed = 2,
+    _q_CWindows_CUI_CText_CFontStretch_Condensed = 3,
+    _q_CWindows_CUI_CText_CFontStretch_SemiCondensed = 4,
+    _q_CWindows_CUI_CText_CFontStretch_Normal = 5,
+    _q_CWindows_CUI_CText_CFontStretch_SemiExpanded = 6,
+    _q_CWindows_CUI_CText_CFontStretch_Expanded = 7,
+    _q_CWindows_CUI_CText_CFontStretch_ExtraExpanded = 8,
+    _q_CWindows_CUI_CText_CFontStretch_UltraExpanded = 9,
+} _q_CWindows_CUI_CText_CFontStretch;
+typedef enum _q_CWindows_CUI_CText_CFontStyle
 {
-    _q_CWindows_CUI_CXaml_CApplicationRequiresPointerMode_Auto = 0,
-    _q_CWindows_CUI_CXaml_CApplicationRequiresPointerMode_WhenRequested = 1,
-} _q_CWindows_CUI_CXaml_CApplicationRequiresPointerMode;
-typedef enum _q_CWindows_CUI_CXaml_CApplicationTheme
+    _q_CWindows_CUI_CText_CFontStyle_Normal = 0,
+    _q_CWindows_CUI_CText_CFontStyle_Oblique = 1,
+    _q_CWindows_CUI_CText_CFontStyle_Italic = 2,
+} _q_CWindows_CUI_CText_CFontStyle;
+typedef enum _q_CWindows_CUI_CText_CTextDecorations
 {
-    _q_CWindows_CUI_CXaml_CApplicationTheme_Light = 0,
-    _q_CWindows_CUI_CXaml_CApplicationTheme_Dark = 1,
-} _q_CWindows_CUI_CXaml_CApplicationTheme;
-typedef enum _q_CWindows_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation
-{
-    _q_CWindows_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation_Application = 0,
-    _q_CWindows_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation_Nested = 1,
-} _q_CWindows_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation;
-typedef enum _q_CWindows_CUI_CXaml_CFocusVisualKind
-{
-    _q_CWindows_CUI_CXaml_CFocusVisualKind_DottedLine = 0,
-    _q_CWindows_CUI_CXaml_CFocusVisualKind_HighVisibility = 1,
-    _q_CWindows_CUI_CXaml_CFocusVisualKind_Reveal = 2,
-} _q_CWindows_CUI_CXaml_CFocusVisualKind;
+    _q_CWindows_CUI_CText_CTextDecorations_None = 0,
+    _q_CWindows_CUI_CText_CTextDecorations_Underline = 1,
+    _q_CWindows_CUI_CText_CTextDecorations_Strikethrough = 2,
+} _q_CWindows_CUI_CText_CTextDecorations;
 typedef enum _q_CWindows_CWeb_CHttp_CHttpProgressStage
 {
     _q_CWindows_CWeb_CHttp_CHttpProgressStage_None = 0,
@@ -143,23 +243,64 @@ typedef enum _q_CWindows_CWeb_CHttp_CHttpStatusCode
     _q_CWindows_CWeb_CHttp_CHttpStatusCode_NetworkAuthenticationRequired = 511,
 } _q_CWindows_CWeb_CHttp_CHttpStatusCode;
 // forward decls for value types
+typedef struct _q_CMicrosoft_CUI_CXaml_CThickness _q_CMicrosoft_CUI_CXaml_CThickness;
 typedef struct _q_CWindows_CFoundation_CEventRegistrationToken _q_CWindows_CFoundation_CEventRegistrationToken;
 typedef struct _q_CWindows_CFoundation_CHResult _q_CWindows_CFoundation_CHResult;
+typedef struct _q_CWindows_CFoundation_CRect _q_CWindows_CFoundation_CRect;
 typedef struct _q_CWindows_CFoundation_CTimeSpan _q_CWindows_CFoundation_CTimeSpan;
+typedef struct _q_CWindows_CUI_CColor _q_CWindows_CUI_CColor;
+typedef struct _q_CWindows_CUI_CText_CFontWeight _q_CWindows_CUI_CText_CFontWeight;
 typedef struct _q_CWindows_CWeb_CHttp_CHttpProgress _q_CWindows_CWeb_CHttp_CHttpProgress;
 // forward decls for interfaces
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs;
-typedef struct _q_CWindows_CApplicationModel_CISuspendingEventArgs _q_CWindows_CApplicationModel_CISuspendingEventArgs;
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionBrush _q_CMicrosoft_CUI_CComposition_CICompositionBrush;
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionObject _q_CMicrosoft_CUI_CComposition_CICompositionObject;
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositor _q_CMicrosoft_CUI_CComposition_CICompositor;
+typedef struct _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline;
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement _q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement;
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter;
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplication _q_CMicrosoft_CUI_CXaml_CIApplication;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationFactory _q_CMicrosoft_CUI_CXaml_CIApplicationFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationStatics _q_CMicrosoft_CUI_CXaml_CIApplicationStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDebugSettings _q_CMicrosoft_CUI_CXaml_CIDebugSettings;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyObject _q_CMicrosoft_CUI_CXaml_CIDependencyObject;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyProperty _q_CMicrosoft_CUI_CXaml_CIDependencyProperty;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElement _q_CMicrosoft_CUI_CXaml_CIFrameworkElement;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIResourceDictionary _q_CMicrosoft_CUI_CXaml_CIResourceDictionary;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIUIElement _q_CMicrosoft_CUI_CXaml_CIUIElement;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindow _q_CMicrosoft_CUI_CXaml_CIWindow;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowEventArgs _q_CMicrosoft_CUI_CXaml_CIWindowEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowFactory _q_CMicrosoft_CUI_CXaml_CIWindowFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowStatics _q_CMicrosoft_CUI_CXaml_CIWindowStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory;
+typedef struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics;
+typedef struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2 _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2;
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocument _q_CWindows_CData_CXml_CDom_CIXmlDocument;
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO;
 typedef struct _q_CWindows_CFoundation_CIAsyncAction _q_CWindows_CFoundation_CIAsyncAction;
@@ -172,28 +313,14 @@ typedef struct _q_CWindows_CStorage_CStreams_CIOutputStream _q_CWindows_CStorage
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueController _q_CWindows_CSystem_CIDispatcherQueueController;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueControllerStatics _q_CWindows_CSystem_CIDispatcherQueueControllerStatics;
 typedef struct _q_CWindows_CSystem_CIUser _q_CWindows_CSystem_CIUser;
-typedef struct _q_CWindows_CSystem_CPower_CIPowerManagerStatics _q_CWindows_CSystem_CPower_CIPowerManagerStatics;
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo;
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics;
+typedef struct _q_CWindows_CUI_CCore_CICoreDispatcher _q_CWindows_CUI_CCore_CICoreDispatcher;
+typedef struct _q_CWindows_CUI_CCore_CICoreWindow _q_CWindows_CUI_CCore_CICoreWindow;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification _q_CWindows_CUI_CNotifications_CIToastNotification;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationFactory _q_CWindows_CUI_CNotifications_CIToastNotificationFactory;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifier _q_CWindows_CUI_CNotifications_CIToastNotifier;
-typedef struct _q_CWindows_CUI_CXaml_CIApplication _q_CWindows_CUI_CXaml_CIApplication;
-typedef struct _q_CWindows_CUI_CXaml_CIApplication2 _q_CWindows_CUI_CXaml_CIApplication2;
-typedef struct _q_CWindows_CUI_CXaml_CIApplication3 _q_CWindows_CUI_CXaml_CIApplication3;
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationFactory _q_CWindows_CUI_CXaml_CIApplicationFactory;
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams;
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationOverrides _q_CWindows_CUI_CXaml_CIApplicationOverrides;
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationOverrides2 _q_CWindows_CUI_CXaml_CIApplicationOverrides2;
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationStatics _q_CWindows_CUI_CXaml_CIApplicationStatics;
-typedef struct _q_CWindows_CUI_CXaml_CIDebugSettings _q_CWindows_CUI_CXaml_CIDebugSettings;
-typedef struct _q_CWindows_CUI_CXaml_CIDependencyObject _q_CWindows_CUI_CXaml_CIDependencyObject;
-typedef struct _q_CWindows_CUI_CXaml_CIDependencyObjectFactory _q_CWindows_CUI_CXaml_CIDependencyObjectFactory;
-typedef struct _q_CWindows_CUI_CXaml_CIResourceDictionary _q_CWindows_CUI_CXaml_CIResourceDictionary;
-typedef struct _q_CWindows_CUI_CXaml_CIResourceDictionaryFactory _q_CWindows_CUI_CXaml_CIResourceDictionaryFactory;
-typedef struct _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs;
-typedef struct _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs;
 typedef struct _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter;
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpClient _q_CWindows_CWeb_CHttp_CIHttpClient;
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpClientFactory _q_CWindows_CWeb_CHttp_CIHttpClientFactory;
@@ -211,7 +338,25 @@ typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UI
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64;
 typedef struct _cg_CWindows_CFoundation_IEventHandler_1_IInspectable _cg_CWindows_CFoundation_IEventHandler_1_IInspectable;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs;
 // definition of structs for value types
+struct _q_CMicrosoft_CUI_CXaml_CThickness
+{
+    DOUBLE Left;
+    DOUBLE Top;
+    DOUBLE Right;
+    DOUBLE Bottom;
+};
 struct _q_CWindows_CFoundation_CEventRegistrationToken
 {
     INT64 Value;
@@ -220,9 +365,27 @@ struct _q_CWindows_CFoundation_CHResult
 {
     INT32 Value;
 };
+struct _q_CWindows_CFoundation_CRect
+{
+    FLOAT X;
+    FLOAT Y;
+    FLOAT Width;
+    FLOAT Height;
+};
 struct _q_CWindows_CFoundation_CTimeSpan
 {
     INT64 Duration;
+};
+struct _q_CWindows_CUI_CColor
+{
+    UINT8 A;
+    UINT8 R;
+    UINT8 G;
+    UINT8 B;
+};
+struct _q_CWindows_CUI_CText_CFontWeight
+{
+    UINT16 Weight;
 };
 struct _q_CWindows_CWeb_CHttp_CHttpProgress
 {
@@ -234,6 +397,50 @@ struct _q_CWindows_CWeb_CHttp_CHttpProgress
     UINT32 Retries;
 };
 // definitions for delegates
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback* pThis, _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* p);
+} _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback
+{
+    _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandlerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandlerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIAsyncActionCompletedHandler* This, REFIID riid, void** ppvObject);
@@ -245,234 +452,1308 @@ struct _q_CWindows_CFoundation_CIAsyncActionCompletedHandler
 {
     _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallback* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallback* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallback* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallback* pThis, _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* p);
-} _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackVtbl;
-struct _q_CWindows_CUI_CXaml_CIApplicationInitializationCallback
-{
-    _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandlerVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler* pThis, IInspectable* sender, _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* e);
-} _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandlerVtbl;
-struct _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler
-{
-    _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandlerVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandlerVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler* pThis, IInspectable* sender, _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* e);
-} _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandlerVtbl;
-struct _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler
-{
-    _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandlerVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CISuspendingEventHandlerVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CISuspendingEventHandler* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CISuspendingEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CISuspendingEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CWindows_CUI_CXaml_CISuspendingEventHandler* pThis, IInspectable* sender, _q_CWindows_CApplicationModel_CISuspendingEventArgs* e);
-} _q_CWindows_CUI_CXaml_CISuspendingEventHandlerVtbl;
-struct _q_CWindows_CUI_CXaml_CISuspendingEventHandler
-{
-    _q_CWindows_CUI_CXaml_CISuspendingEventHandlerVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler* pThis, IInspectable* sender, _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* e);
-} _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl;
-struct _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler
-{
-    _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl* lpVtbl;
-};
 // definitions for interface types
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionBrushVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Kind;
-    void* unneeded_get_PreviousExecutionState;
-    void* unneeded_get_SplashScreen;
-} _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CComposition_CICompositionBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CComposition_CICompositionBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CComposition_CICompositionBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CComposition_CICompositionBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CComposition_CICompositionBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CComposition_CICompositionBrush* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CComposition_CICompositionBrushVtbl;
+struct _q_CMicrosoft_CUI_CComposition_CICompositionBrush
 {
-    _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CComposition_CICompositionBrushVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionObjectVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_TaskInstance;
-} _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This, TrustLevel* trustLevel);
+    void* unneeded_get_Compositor;
+    void* unneeded_get_Properties;
+    void* unneeded_StartAnimation;
+    void* unneeded_StopAnimation;
+} _q_CMicrosoft_CUI_CComposition_CICompositionObjectVtbl;
+struct _q_CMicrosoft_CUI_CComposition_CICompositionObject
 {
-    _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CComposition_CICompositionObjectVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositorVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_CachedFileUpdaterUI;
-} _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CComposition_CICompositor* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CComposition_CICompositor* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CComposition_CICompositor* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CComposition_CICompositor* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CComposition_CICompositor* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CComposition_CICompositor* This, TrustLevel* trustLevel);
+    void* unneeded_CreateColorKeyFrameAnimation;
+    void* unneeded_CreateColorBrush;
+    void* unneeded_CreateColorBrushWithColor;
+    void* unneeded_CreateContainerVisual;
+    void* unneeded_CreateCubicBezierEasingFunction;
+    void* unneeded_CreateEffectFactory;
+    void* unneeded_CreateEffectFactoryWithProperties;
+    void* unneeded_CreateExpressionAnimation;
+    void* unneeded_CreateExpressionAnimationWithExpression;
+    void* unneeded_CreateInsetClip;
+    void* unneeded_CreateInsetClipWithInsets;
+    void* unneeded_CreateLinearEasingFunction;
+    void* unneeded_CreatePropertySet;
+    void* unneeded_CreateQuaternionKeyFrameAnimation;
+    void* unneeded_CreateScalarKeyFrameAnimation;
+    void* unneeded_CreateScopedBatch;
+    void* unneeded_CreateSpriteVisual;
+    void* unneeded_CreateSurfaceBrush;
+    void* unneeded_CreateSurfaceBrushWithSurface;
+    void* unneeded_CreateVector2KeyFrameAnimation;
+    void* unneeded_CreateVector3KeyFrameAnimation;
+    void* unneeded_CreateVector4KeyFrameAnimation;
+    void* unneeded_GetCommitBatch;
+} _q_CMicrosoft_CUI_CComposition_CICompositorVtbl;
+struct _q_CMicrosoft_CUI_CComposition_CICompositor
 {
-    _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CComposition_CICompositorVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueueVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Files;
-    void* unneeded_get_Verb;
-} _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue* This, TrustLevel* trustLevel);
+    void* unneeded_CreateTimer;
+    void* unneeded_TryEnqueue;
+    void* unneeded_TryEnqueueWithPriority;
+    void* unneeded_add_ShutdownStarting;
+    void* unneeded_remove_ShutdownStarting;
+    void* unneeded_add_ShutdownCompleted;
+    void* unneeded_remove_ShutdownCompleted;
+} _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueueVtbl;
+struct _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue
 {
-    _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueueVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgsVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_FileOpenPickerUI;
-} _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+    void* unneeded_get_CursorLeft;
+    void* unneeded_get_CursorTop;
+} _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs
 {
-    _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgsVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgsVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_FileSavePickerUI;
-} _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs
 {
-    _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgsVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Arguments;
-    void* unneeded_get_TileId;
-} _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_FontSize)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_FontSize)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_FontFamily)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_FontFamily)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* value);
+    HRESULT (STDMETHODCALLTYPE* get_FontWeight)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CFontWeight* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_FontWeight)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CFontWeight value);
+    HRESULT (STDMETHODCALLTYPE* get_FontStyle)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CFontStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_FontStyle)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CFontStyle value);
+    HRESULT (STDMETHODCALLTYPE* get_FontStretch)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CFontStretch* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_FontStretch)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CFontStretch value);
+    HRESULT (STDMETHODCALLTYPE* get_CharacterSpacing)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CharacterSpacing)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Foreground)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Foreground)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_TextWrapping)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextWrapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextWrapping)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextWrapping value);
+    HRESULT (STDMETHODCALLTYPE* get_TextTrimming)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextTrimming* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextTrimming)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextTrimming value);
+    HRESULT (STDMETHODCALLTYPE* get_TextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_Text)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Text)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_Inlines)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Padding)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CThickness* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Padding)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CThickness value);
+    HRESULT (STDMETHODCALLTYPE* get_LineHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LineHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_LineStackingStrategy)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LineStackingStrategy)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy value);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextSelectionEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsTextSelectionEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_SelectedText)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ContentStart)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ContentEnd)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionStart)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionEnd)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BaselineOffset)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionHighlightColor)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionHighlightColor)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxLines)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaxLines)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_TextLineBounds)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextLineBounds* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextLineBounds)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextLineBounds value);
+    HRESULT (STDMETHODCALLTYPE* get_OpticalMarginAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OpticalMarginAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_IsColorFontEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsColorFontEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_TextReadingOrder)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextReadingOrder* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextReadingOrder)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextReadingOrder value);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextScaleFactorEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsTextScaleFactorEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_TextDecorations)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CTextDecorations* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextDecorations)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CUI_CText_CTextDecorations value);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextTrimmed)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HorizontalTextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HorizontalTextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_TextHighlighters)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionFlyout)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionFlyout)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* value);
+    HRESULT (STDMETHODCALLTYPE* add_SelectionChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_SelectionChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_ContextMenuOpening)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ContextMenuOpening)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_IsTextTrimmedChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_IsTextTrimmedChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* SelectAll)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis);
+    HRESULT (STDMETHODCALLTYPE* Select)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* start, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* end);
+    HRESULT (STDMETHODCALLTYPE* GetAlphaMask)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CopySelectionToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* pThis);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock
 {
-    _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStaticsVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_QueryText;
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_FontSizeProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FontFamilyProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FontWeightProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FontStyleProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FontStretchProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CharacterSpacingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ForegroundProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextWrappingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextTrimmingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextAlignmentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PaddingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LineHeightProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LineStackingStrategyProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextSelectionEnabledProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectedTextProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionHighlightColorProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaxLinesProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextLineBoundsProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_OpticalMarginAlignmentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsColorFontEnabledProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextReadingOrderProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextScaleFactorEnabledProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextDecorationsProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextTrimmedProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HorizontalTextAlignmentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionFlyoutProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* This, TrustLevel* trustLevel);
+    void* unneeded_get_Placement;
+    void* unneeded_put_Placement;
+    void* unneeded_get_Target;
+    void* unneeded_get_AllowFocusOnInteraction;
+    void* unneeded_put_AllowFocusOnInteraction;
+    void* unneeded_get_LightDismissOverlayMode;
+    void* unneeded_put_LightDismissOverlayMode;
+    void* unneeded_get_AllowFocusWhenDisabled;
+    void* unneeded_put_AllowFocusWhenDisabled;
+    void* unneeded_get_ShowMode;
+    void* unneeded_put_ShowMode;
+    void* unneeded_get_InputDevicePrefersPrimaryCommands;
+    void* unneeded_get_AreOpenCloseAnimationsEnabled;
+    void* unneeded_put_AreOpenCloseAnimationsEnabled;
+    void* unneeded_get_ShouldConstrainToRootBounds;
+    void* unneeded_put_ShouldConstrainToRootBounds;
+    void* unneeded_get_IsConstrainedToRootBounds;
+    void* unneeded_get_ElementSoundMode;
+    void* unneeded_put_ElementSoundMode;
+    void* unneeded_get_OverlayInputPassThroughElement;
+    void* unneeded_put_OverlayInputPassThroughElement;
+    void* unneeded_get_IsOpen;
+    void* unneeded_get_XamlRoot;
+    void* unneeded_put_XamlRoot;
+    void* unneeded_add_Opened;
+    void* unneeded_remove_Opened;
+    void* unneeded_add_Closed;
+    void* unneeded_remove_Closed;
+    void* unneeded_add_Opening;
+    void* unneeded_remove_Opening;
+    void* unneeded_add_Closing;
+    void* unneeded_remove_Closing;
+    void* unneeded_ShowAt;
+    void* unneeded_ShowAtWithOptions;
+    void* unneeded_Hide;
+    void* unneeded_TryInvokeKeyboardAccelerator;
+} _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline
+{
+    _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline** __pret);
+} _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement* This, TrustLevel* trustLevel);
+    void* unneeded_get_Name;
+    void* unneeded_get_FontSize;
+    void* unneeded_put_FontSize;
+    void* unneeded_get_FontFamily;
+    void* unneeded_put_FontFamily;
+    void* unneeded_get_FontWeight;
+    void* unneeded_put_FontWeight;
+    void* unneeded_get_FontStyle;
+    void* unneeded_put_FontStyle;
+    void* unneeded_get_FontStretch;
+    void* unneeded_put_FontStretch;
+    void* unneeded_get_CharacterSpacing;
+    void* unneeded_put_CharacterSpacing;
+    void* unneeded_get_Foreground;
+    void* unneeded_put_Foreground;
     void* unneeded_get_Language;
-} _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs
+    void* unneeded_put_Language;
+    void* unneeded_get_IsTextScaleFactorEnabled;
+    void* unneeded_put_IsTextScaleFactorEnabled;
+    void* unneeded_get_TextDecorations;
+    void* unneeded_put_TextDecorations;
+    void* unneeded_get_ContentStart;
+    void* unneeded_get_ContentEnd;
+    void* unneeded_get_ElementStart;
+    void* unneeded_get_ElementEnd;
+    void* unneeded_get_AllowFocusOnInteraction;
+    void* unneeded_put_AllowFocusOnInteraction;
+    void* unneeded_get_AccessKey;
+    void* unneeded_put_AccessKey;
+    void* unneeded_get_ExitDisplayModeOnAccessKeyInvoked;
+    void* unneeded_put_ExitDisplayModeOnAccessKeyInvoked;
+    void* unneeded_get_IsAccessKeyScope;
+    void* unneeded_put_IsAccessKeyScope;
+    void* unneeded_get_AccessKeyScopeOwner;
+    void* unneeded_put_AccessKeyScopeOwner;
+    void* unneeded_get_KeyTipPlacementMode;
+    void* unneeded_put_KeyTipPlacementMode;
+    void* unneeded_get_KeyTipHorizontalOffset;
+    void* unneeded_put_KeyTipHorizontalOffset;
+    void* unneeded_get_KeyTipVerticalOffset;
+    void* unneeded_put_KeyTipVerticalOffset;
+    void* unneeded_get_XamlRoot;
+    void* unneeded_put_XamlRoot;
+    void* unneeded_add_AccessKeyDisplayRequested;
+    void* unneeded_remove_AccessKeyDisplayRequested;
+    void* unneeded_add_AccessKeyDisplayDismissed;
+    void* unneeded_remove_AccessKeyDisplayDismissed;
+    void* unneeded_add_AccessKeyInvoked;
+    void* unneeded_remove_AccessKeyInvoked;
+    void* unneeded_FindName;
+} _q_CMicrosoft_CUI_CXaml_CDocuments_CITextElementVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextElement
 {
-    _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CDocuments_CITextElementVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_ShareOperation;
-} _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* This, TrustLevel* trustLevel);
+    void* unneeded_get_Ranges;
+    void* unneeded_get_Foreground;
+    void* unneeded_put_Foreground;
+    void* unneeded_get_Background;
+    void* unneeded_put_Background;
+} _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter
 {
-    _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactoryVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_GetDeferral;
-} _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter** __pret);
+} _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory
 {
-    _q_CWindows_CApplicationModel_CIEnteredBackgroundEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactoryVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointerVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_GetDeferral;
-} _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer* This, TrustLevel* trustLevel);
+    void* unneeded_get_Parent;
+    void* unneeded_get_VisualParent;
+    void* unneeded_get_LogicalDirection;
+    void* unneeded_get_Offset;
+    void* unneeded_GetCharacterRect;
+    void* unneeded_GetPositionAtOffset;
+} _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointer
 {
-    _q_CWindows_CApplicationModel_CILeavingBackgroundEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CDocuments_CITextPointerVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CApplicationModel_CISuspendingEventArgsVtbl
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CApplicationModel_CISuspendingEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CApplicationModel_CISuspendingEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CApplicationModel_CISuspendingEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CApplicationModel_CISuspendingEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CApplicationModel_CISuspendingEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CApplicationModel_CISuspendingEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_SuspendingOperation;
-} _q_CWindows_CApplicationModel_CISuspendingEventArgsVtbl;
-struct _q_CWindows_CApplicationModel_CISuspendingEventArgs
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIApplication* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIApplication* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIApplication* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIApplication* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIApplication* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIApplication* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Resources)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CIResourceDictionary** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Resources)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CIResourceDictionary* value);
+    HRESULT (STDMETHODCALLTYPE* get_DebugSettings)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CIDebugSettings** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_RequestedTheme)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CApplicationTheme* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RequestedTheme)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CApplicationTheme value);
+    HRESULT (STDMETHODCALLTYPE* get_FocusVisualKind)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CFocusVisualKind* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_FocusVisualKind)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CFocusVisualKind value);
+    HRESULT (STDMETHODCALLTYPE* get_HighContrastAdjustment)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HighContrastAdjustment)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment value);
+    HRESULT (STDMETHODCALLTYPE* add_UnhandledException)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_UnhandledException)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* Exit)(_q_CMicrosoft_CUI_CXaml_CIApplication* pThis);
+} _q_CMicrosoft_CUI_CXaml_CIApplicationVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIApplication
 {
-    _q_CWindows_CApplicationModel_CISuspendingEventArgsVtbl* lpVtbl;
+    _q_CMicrosoft_CUI_CXaml_CIApplicationVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIApplicationFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIApplication** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIApplicationFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIApplicationFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIApplicationFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParamsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParamsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams
+{
+    _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParamsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* OnLaunched)(_q_CMicrosoft_CUI_CXaml_CIApplicationOverrides* pThis, _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* args);
+} _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
+{
+    _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIApplication** __pret);
+    HRESULT (STDMETHODCALLTYPE* Start)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback* callback);
+    HRESULT (STDMETHODCALLTYPE* LoadComponent)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* pThis, IInspectable* component, _q_CWindows_CFoundation_CIUriRuntimeClass* resourceLocator);
+    HRESULT (STDMETHODCALLTYPE* LoadComponentWithResourceLocation)(_q_CMicrosoft_CUI_CXaml_CIApplicationStatics* pThis, IInspectable* component, _q_CWindows_CFoundation_CIUriRuntimeClass* resourceLocator, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation componentResourceLocation);
+} _q_CMicrosoft_CUI_CXaml_CIApplicationStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIApplicationStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CIApplicationStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDebugSettingsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDebugSettings* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIDebugSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIDebugSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIDebugSettings* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIDebugSettings* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIDebugSettings* This, TrustLevel* trustLevel);
+    void* unneeded_get_EnableFrameRateCounter;
+    void* unneeded_put_EnableFrameRateCounter;
+    void* unneeded_get_IsBindingTracingEnabled;
+    void* unneeded_put_IsBindingTracingEnabled;
+    void* unneeded_get_IsTextPerformanceVisualizationEnabled;
+    void* unneeded_put_IsTextPerformanceVisualizationEnabled;
+    void* unneeded_get_FailFastOnErrors;
+    void* unneeded_put_FailFastOnErrors;
+    void* unneeded_add_BindingFailed;
+    void* unneeded_remove_BindingFailed;
+} _q_CMicrosoft_CUI_CXaml_CIDebugSettingsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIDebugSettings
+{
+    _q_CMicrosoft_CUI_CXaml_CIDebugSettingsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyObjectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDependencyObject* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIDependencyObject* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIDependencyObject* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIDependencyObject* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIDependencyObject* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIDependencyObject* This, TrustLevel* trustLevel);
+    void* unneeded_GetValue;
+    void* unneeded_SetValue;
+    void* unneeded_ClearValue;
+    void* unneeded_ReadLocalValue;
+    void* unneeded_GetAnimationBaseValue;
+    void* unneeded_RegisterPropertyChangedCallback;
+    void* unneeded_UnregisterPropertyChangedCallback;
+    void* unneeded_get_Dispatcher;
+    void* unneeded_get_DispatcherQueue;
+} _q_CMicrosoft_CUI_CXaml_CIDependencyObjectVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIDependencyObject
+{
+    _q_CMicrosoft_CUI_CXaml_CIDependencyObjectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIDependencyObject** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDependencyProperty* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIDependencyProperty* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIDependencyProperty* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIDependencyProperty* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIDependencyProperty* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIDependencyProperty* This, TrustLevel* trustLevel);
+    void* unneeded_GetMetadata;
+} _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIDependencyProperty
+{
+    _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElement* This, TrustLevel* trustLevel);
+    void* unneeded_get_Triggers;
+    void* unneeded_get_Resources;
+    void* unneeded_put_Resources;
+    void* unneeded_get_Tag;
+    void* unneeded_put_Tag;
+    void* unneeded_get_Language;
+    void* unneeded_put_Language;
+    void* unneeded_get_ActualWidth;
+    void* unneeded_get_ActualHeight;
+    void* unneeded_get_Width;
+    void* unneeded_put_Width;
+    void* unneeded_get_Height;
+    void* unneeded_put_Height;
+    void* unneeded_get_MinWidth;
+    void* unneeded_put_MinWidth;
+    void* unneeded_get_MaxWidth;
+    void* unneeded_put_MaxWidth;
+    void* unneeded_get_MinHeight;
+    void* unneeded_put_MinHeight;
+    void* unneeded_get_MaxHeight;
+    void* unneeded_put_MaxHeight;
+    void* unneeded_get_HorizontalAlignment;
+    void* unneeded_put_HorizontalAlignment;
+    void* unneeded_get_VerticalAlignment;
+    void* unneeded_put_VerticalAlignment;
+    void* unneeded_get_Margin;
+    void* unneeded_put_Margin;
+    void* unneeded_get_Name;
+    void* unneeded_put_Name;
+    void* unneeded_get_BaseUri;
+    void* unneeded_get_DataContext;
+    void* unneeded_put_DataContext;
+    void* unneeded_get_AllowFocusOnInteraction;
+    void* unneeded_put_AllowFocusOnInteraction;
+    void* unneeded_get_FocusVisualMargin;
+    void* unneeded_put_FocusVisualMargin;
+    void* unneeded_get_FocusVisualSecondaryThickness;
+    void* unneeded_put_FocusVisualSecondaryThickness;
+    void* unneeded_get_FocusVisualPrimaryThickness;
+    void* unneeded_put_FocusVisualPrimaryThickness;
+    void* unneeded_get_FocusVisualSecondaryBrush;
+    void* unneeded_put_FocusVisualSecondaryBrush;
+    void* unneeded_get_FocusVisualPrimaryBrush;
+    void* unneeded_put_FocusVisualPrimaryBrush;
+    void* unneeded_get_AllowFocusWhenDisabled;
+    void* unneeded_put_AllowFocusWhenDisabled;
+    void* unneeded_get_Style;
+    void* unneeded_put_Style;
+    void* unneeded_get_Parent;
+    void* unneeded_get_FlowDirection;
+    void* unneeded_put_FlowDirection;
+    void* unneeded_get_RequestedTheme;
+    void* unneeded_put_RequestedTheme;
+    void* unneeded_get_IsLoaded;
+    void* unneeded_get_ActualTheme;
+    void* unneeded_add_Loaded;
+    void* unneeded_remove_Loaded;
+    void* unneeded_add_Unloaded;
+    void* unneeded_remove_Unloaded;
+    void* unneeded_add_DataContextChanged;
+    void* unneeded_remove_DataContextChanged;
+    void* unneeded_add_SizeChanged;
+    void* unneeded_remove_SizeChanged;
+    void* unneeded_add_LayoutUpdated;
+    void* unneeded_remove_LayoutUpdated;
+    void* unneeded_add_Loading;
+    void* unneeded_remove_Loading;
+    void* unneeded_add_ActualThemeChanged;
+    void* unneeded_remove_ActualThemeChanged;
+    void* unneeded_add_EffectiveViewportChanged;
+    void* unneeded_remove_EffectiveViewportChanged;
+    void* unneeded_FindName;
+    void* unneeded_SetBinding;
+    void* unneeded_GetBindingExpression;
+} _q_CMicrosoft_CUI_CXaml_CIFrameworkElementVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElement
+{
+    _q_CMicrosoft_CUI_CXaml_CIFrameworkElementVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Arguments;
+    void* unneeded_get_UWPLaunchActivatedEventArgs;
+} _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionary* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionary* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionary* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionary* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionary* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionary* This, TrustLevel* trustLevel);
+    void* unneeded_get_Source;
+    void* unneeded_put_Source;
+    void* unneeded_get_MergedDictionaries;
+    void* unneeded_get_ThemeDictionaries;
+} _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIResourceDictionary
+{
+    _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIResourceDictionary** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_OriginalSource;
+} _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIUIElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIUIElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIUIElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIUIElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIUIElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIUIElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIUIElement* This, TrustLevel* trustLevel);
+    void* unneeded_get_DesiredSize;
+    void* unneeded_get_AllowDrop;
+    void* unneeded_put_AllowDrop;
+    void* unneeded_get_Opacity;
+    void* unneeded_put_Opacity;
+    void* unneeded_get_Clip;
+    void* unneeded_put_Clip;
+    void* unneeded_get_RenderTransform;
+    void* unneeded_put_RenderTransform;
+    void* unneeded_get_Projection;
+    void* unneeded_put_Projection;
+    void* unneeded_get_Transform3D;
+    void* unneeded_put_Transform3D;
+    void* unneeded_get_RenderTransformOrigin;
+    void* unneeded_put_RenderTransformOrigin;
+    void* unneeded_get_IsHitTestVisible;
+    void* unneeded_put_IsHitTestVisible;
+    void* unneeded_get_Visibility;
+    void* unneeded_put_Visibility;
+    void* unneeded_get_RenderSize;
+    void* unneeded_get_UseLayoutRounding;
+    void* unneeded_put_UseLayoutRounding;
+    void* unneeded_get_Transitions;
+    void* unneeded_put_Transitions;
+    void* unneeded_get_CacheMode;
+    void* unneeded_put_CacheMode;
+    void* unneeded_get_IsTapEnabled;
+    void* unneeded_put_IsTapEnabled;
+    void* unneeded_get_IsDoubleTapEnabled;
+    void* unneeded_put_IsDoubleTapEnabled;
+    void* unneeded_get_CanDrag;
+    void* unneeded_put_CanDrag;
+    void* unneeded_get_IsRightTapEnabled;
+    void* unneeded_put_IsRightTapEnabled;
+    void* unneeded_get_IsHoldingEnabled;
+    void* unneeded_put_IsHoldingEnabled;
+    void* unneeded_get_ManipulationMode;
+    void* unneeded_put_ManipulationMode;
+    void* unneeded_get_PointerCaptures;
+    void* unneeded_get_ContextFlyout;
+    void* unneeded_put_ContextFlyout;
+    void* unneeded_get_CompositeMode;
+    void* unneeded_put_CompositeMode;
+    void* unneeded_get_Lights;
+    void* unneeded_get_CanBeScrollAnchor;
+    void* unneeded_put_CanBeScrollAnchor;
+    void* unneeded_get_ExitDisplayModeOnAccessKeyInvoked;
+    void* unneeded_put_ExitDisplayModeOnAccessKeyInvoked;
+    void* unneeded_get_IsAccessKeyScope;
+    void* unneeded_put_IsAccessKeyScope;
+    void* unneeded_get_AccessKeyScopeOwner;
+    void* unneeded_put_AccessKeyScopeOwner;
+    void* unneeded_get_AccessKey;
+    void* unneeded_put_AccessKey;
+    void* unneeded_get_KeyTipPlacementMode;
+    void* unneeded_put_KeyTipPlacementMode;
+    void* unneeded_get_KeyTipHorizontalOffset;
+    void* unneeded_put_KeyTipHorizontalOffset;
+    void* unneeded_get_KeyTipVerticalOffset;
+    void* unneeded_put_KeyTipVerticalOffset;
+    void* unneeded_get_KeyTipTarget;
+    void* unneeded_put_KeyTipTarget;
+    void* unneeded_get_XYFocusKeyboardNavigation;
+    void* unneeded_put_XYFocusKeyboardNavigation;
+    void* unneeded_get_XYFocusUpNavigationStrategy;
+    void* unneeded_put_XYFocusUpNavigationStrategy;
+    void* unneeded_get_XYFocusDownNavigationStrategy;
+    void* unneeded_put_XYFocusDownNavigationStrategy;
+    void* unneeded_get_XYFocusLeftNavigationStrategy;
+    void* unneeded_put_XYFocusLeftNavigationStrategy;
+    void* unneeded_get_XYFocusRightNavigationStrategy;
+    void* unneeded_put_XYFocusRightNavigationStrategy;
+    void* unneeded_get_KeyboardAccelerators;
+    void* unneeded_get_KeyboardAcceleratorPlacementTarget;
+    void* unneeded_put_KeyboardAcceleratorPlacementTarget;
+    void* unneeded_get_KeyboardAcceleratorPlacementMode;
+    void* unneeded_put_KeyboardAcceleratorPlacementMode;
+    void* unneeded_get_HighContrastAdjustment;
+    void* unneeded_put_HighContrastAdjustment;
+    void* unneeded_get_TabFocusNavigation;
+    void* unneeded_put_TabFocusNavigation;
+    void* unneeded_get_OpacityTransition;
+    void* unneeded_put_OpacityTransition;
+    void* unneeded_get_Translation;
+    void* unneeded_put_Translation;
+    void* unneeded_get_TranslationTransition;
+    void* unneeded_put_TranslationTransition;
+    void* unneeded_get_Rotation;
+    void* unneeded_put_Rotation;
+    void* unneeded_get_RotationTransition;
+    void* unneeded_put_RotationTransition;
+    void* unneeded_get_Scale;
+    void* unneeded_put_Scale;
+    void* unneeded_get_ScaleTransition;
+    void* unneeded_put_ScaleTransition;
+    void* unneeded_get_TransformMatrix;
+    void* unneeded_put_TransformMatrix;
+    void* unneeded_get_CenterPoint;
+    void* unneeded_put_CenterPoint;
+    void* unneeded_get_RotationAxis;
+    void* unneeded_put_RotationAxis;
+    void* unneeded_get_ActualOffset;
+    void* unneeded_get_ActualSize;
+    void* unneeded_get_XamlRoot;
+    void* unneeded_put_XamlRoot;
+    void* unneeded_get_Shadow;
+    void* unneeded_put_Shadow;
+    void* unneeded_get_RasterizationScale;
+    void* unneeded_put_RasterizationScale;
+    void* unneeded_get_FocusState;
+    void* unneeded_get_UseSystemFocusVisuals;
+    void* unneeded_put_UseSystemFocusVisuals;
+    void* unneeded_get_XYFocusLeft;
+    void* unneeded_put_XYFocusLeft;
+    void* unneeded_get_XYFocusRight;
+    void* unneeded_put_XYFocusRight;
+    void* unneeded_get_XYFocusUp;
+    void* unneeded_put_XYFocusUp;
+    void* unneeded_get_XYFocusDown;
+    void* unneeded_put_XYFocusDown;
+    void* unneeded_get_IsTabStop;
+    void* unneeded_put_IsTabStop;
+    void* unneeded_get_TabIndex;
+    void* unneeded_put_TabIndex;
+    void* unneeded_add_KeyUp;
+    void* unneeded_remove_KeyUp;
+    void* unneeded_add_KeyDown;
+    void* unneeded_remove_KeyDown;
+    void* unneeded_add_GotFocus;
+    void* unneeded_remove_GotFocus;
+    void* unneeded_add_LostFocus;
+    void* unneeded_remove_LostFocus;
+    void* unneeded_add_DragStarting;
+    void* unneeded_remove_DragStarting;
+    void* unneeded_add_DropCompleted;
+    void* unneeded_remove_DropCompleted;
+    void* unneeded_add_CharacterReceived;
+    void* unneeded_remove_CharacterReceived;
+    void* unneeded_add_DragEnter;
+    void* unneeded_remove_DragEnter;
+    void* unneeded_add_DragLeave;
+    void* unneeded_remove_DragLeave;
+    void* unneeded_add_DragOver;
+    void* unneeded_remove_DragOver;
+    void* unneeded_add_Drop;
+    void* unneeded_remove_Drop;
+    void* unneeded_add_PointerPressed;
+    void* unneeded_remove_PointerPressed;
+    void* unneeded_add_PointerMoved;
+    void* unneeded_remove_PointerMoved;
+    void* unneeded_add_PointerReleased;
+    void* unneeded_remove_PointerReleased;
+    void* unneeded_add_PointerEntered;
+    void* unneeded_remove_PointerEntered;
+    void* unneeded_add_PointerExited;
+    void* unneeded_remove_PointerExited;
+    void* unneeded_add_PointerCaptureLost;
+    void* unneeded_remove_PointerCaptureLost;
+    void* unneeded_add_PointerCanceled;
+    void* unneeded_remove_PointerCanceled;
+    void* unneeded_add_PointerWheelChanged;
+    void* unneeded_remove_PointerWheelChanged;
+    void* unneeded_add_Tapped;
+    void* unneeded_remove_Tapped;
+    void* unneeded_add_DoubleTapped;
+    void* unneeded_remove_DoubleTapped;
+    void* unneeded_add_Holding;
+    void* unneeded_remove_Holding;
+    void* unneeded_add_ContextRequested;
+    void* unneeded_remove_ContextRequested;
+    void* unneeded_add_ContextCanceled;
+    void* unneeded_remove_ContextCanceled;
+    void* unneeded_add_RightTapped;
+    void* unneeded_remove_RightTapped;
+    void* unneeded_add_ManipulationStarting;
+    void* unneeded_remove_ManipulationStarting;
+    void* unneeded_add_ManipulationInertiaStarting;
+    void* unneeded_remove_ManipulationInertiaStarting;
+    void* unneeded_add_ManipulationStarted;
+    void* unneeded_remove_ManipulationStarted;
+    void* unneeded_add_ManipulationDelta;
+    void* unneeded_remove_ManipulationDelta;
+    void* unneeded_add_ManipulationCompleted;
+    void* unneeded_remove_ManipulationCompleted;
+    void* unneeded_add_AccessKeyDisplayRequested;
+    void* unneeded_remove_AccessKeyDisplayRequested;
+    void* unneeded_add_AccessKeyDisplayDismissed;
+    void* unneeded_remove_AccessKeyDisplayDismissed;
+    void* unneeded_add_AccessKeyInvoked;
+    void* unneeded_remove_AccessKeyInvoked;
+    void* unneeded_add_ProcessKeyboardAccelerators;
+    void* unneeded_remove_ProcessKeyboardAccelerators;
+    void* unneeded_add_GettingFocus;
+    void* unneeded_remove_GettingFocus;
+    void* unneeded_add_LosingFocus;
+    void* unneeded_remove_LosingFocus;
+    void* unneeded_add_NoFocusCandidateFound;
+    void* unneeded_remove_NoFocusCandidateFound;
+    void* unneeded_add_PreviewKeyDown;
+    void* unneeded_remove_PreviewKeyDown;
+    void* unneeded_add_PreviewKeyUp;
+    void* unneeded_remove_PreviewKeyUp;
+    void* unneeded_add_BringIntoViewRequested;
+    void* unneeded_remove_BringIntoViewRequested;
+    void* unneeded_Measure;
+    void* unneeded_Arrange;
+    void* unneeded_CapturePointer;
+    void* unneeded_ReleasePointerCapture;
+    void* unneeded_ReleasePointerCaptures;
+    void* unneeded_AddHandler;
+    void* unneeded_RemoveHandler;
+    void* unneeded_TransformToVisual;
+    void* unneeded_InvalidateMeasure;
+    void* unneeded_InvalidateArrange;
+    void* unneeded_UpdateLayout;
+    void* unneeded_CancelDirectManipulations;
+    void* unneeded_StartDragAsync;
+    void* unneeded_StartBringIntoView;
+    void* unneeded_StartBringIntoViewWithOptions;
+    void* unneeded_TryInvokeKeyboardAccelerator;
+    void* unneeded_Focus;
+    void* unneeded_StartAnimation;
+    void* unneeded_StopAnimation;
+} _q_CMicrosoft_CUI_CXaml_CIUIElementVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIUIElement
+{
+    _q_CMicrosoft_CUI_CXaml_CIUIElementVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Exception;
+    void* unneeded_get_Message;
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+} _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindow* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindow* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindow* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindow* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindow* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindow* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Bounds)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Visible)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Content)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Content)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
+    HRESULT (STDMETHODCALLTYPE* get_CoreWindow)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CUI_CCore_CICoreWindow** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Compositor)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CMicrosoft_CUI_CComposition_CICompositor** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Dispatcher)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CUI_CCore_CICoreDispatcher** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DispatcherQueue)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Title)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Title)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendsContentIntoTitleBar)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExtendsContentIntoTitleBar)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* add_Activated)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Activated)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Closed)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Closed)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_SizeChanged)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_SizeChanged)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_VisibilityChanged)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_VisibilityChanged)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* Activate)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis);
+    HRESULT (STDMETHODCALLTYPE* Close)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis);
+    HRESULT (STDMETHODCALLTYPE* SetTitleBar)(_q_CMicrosoft_CUI_CXaml_CIWindow* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* titleBar);
+} _q_CMicrosoft_CUI_CXaml_CIWindowVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindow
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+    void* unneeded_get_WindowActivationState;
+} _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+} _q_CMicrosoft_CUI_CXaml_CIWindowEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindowEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIWindowFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIWindow** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIWindowFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindowFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+    void* unneeded_get_Size;
+} _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Current)(_q_CMicrosoft_CUI_CXaml_CIWindowStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIWindow** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIWindowStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindowStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+    void* unneeded_get_Visible;
+} _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* This, TrustLevel* trustLevel);
+    void* unneeded_get_Opacity;
+    void* unneeded_put_Opacity;
+    void* unneeded_get_Transform;
+    void* unneeded_put_Transform;
+    void* unneeded_get_RelativeTransform;
+    void* unneeded_put_RelativeTransform;
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily* This, TrustLevel* trustLevel);
+    void* unneeded_get_Source;
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory* pThis, HSTRING familyName, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* This, TrustLevel* trustLevel);
+    void* unneeded_get_Color;
+    void* unneeded_put_Color;
+} _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithColor)(_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory* pThis, _q_CWindows_CUI_CColor color, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_EnergySaverStatus)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_EnergySaverStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_EnergySaverStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_BatteryStatus)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_BatteryStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_BatteryStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_PowerSupplyStatus)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_PowerSupplyStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_PowerSupplyStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_RemainingChargePercent)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_RemainingChargePercentChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_RemainingChargePercentChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_RemainingDischargeTime)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CTimeSpan* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_RemainingDischargeTimeChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_RemainingDischargeTimeChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_PowerSourceKind)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_PowerSourceKindChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_PowerSourceKindChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_DisplayStatus)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_DisplayStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_DisplayStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_SystemIdleStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_SystemIdleStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_EffectivePowerMode)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode** __pret);
+    HRESULT (STDMETHODCALLTYPE* add_EffectivePowerModeChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_EffectivePowerModeChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_UserPresenceStatus)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_UserPresenceStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_UserPresenceStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_SystemSuspendStatus)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_SystemSuspendStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_SystemSuspendStatusChanged)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+} _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl;
+struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_EffectivePowerMode2)(_q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* __pret);
+} _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2Vtbl;
+struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2
+{
+    _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2Vtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentVtbl
 {
@@ -702,34 +1983,6 @@ struct _q_CWindows_CSystem_CIUser
 {
     _q_CWindows_CSystem_CIUserVtbl* lpVtbl;
 };
-typedef struct _q_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_EnergySaverStatus)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CSystem_CPower_CEnergySaverStatus* __pret);
-    HRESULT (STDMETHODCALLTYPE* add_EnergySaverStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_EnergySaverStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_BatteryStatus)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CSystem_CPower_CBatteryStatus* __pret);
-    HRESULT (STDMETHODCALLTYPE* add_BatteryStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_BatteryStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_PowerSupplyStatus)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CSystem_CPower_CPowerSupplyStatus* __pret);
-    HRESULT (STDMETHODCALLTYPE* add_PowerSupplyStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_PowerSupplyStatusChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_RemainingChargePercent)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, INT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* add_RemainingChargePercentChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_RemainingChargePercentChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* get_RemainingDischargeTime)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CTimeSpan* __pret);
-    HRESULT (STDMETHODCALLTYPE* add_RemainingDischargeTimeChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_RemainingDischargeTimeChanged)(_q_CWindows_CSystem_CPower_CIPowerManagerStatics* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-} _q_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl;
-struct _q_CWindows_CSystem_CPower_CIPowerManagerStatics
-{
-    _q_CWindows_CSystem_CPower_CIPowerManagerStaticsVtbl* lpVtbl;
-};
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfoVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo* This, REFIID riid, void** ppvObject);
@@ -759,6 +2012,88 @@ typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationStaticsVtbl
 struct _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics
 {
     _q_CWindows_CSystem_CProfile_CISystemIdentificationStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CCore_CICoreDispatcherVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CCore_CICoreDispatcher* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CCore_CICoreDispatcher* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CCore_CICoreDispatcher* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CCore_CICoreDispatcher* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CCore_CICoreDispatcher* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CCore_CICoreDispatcher* This, TrustLevel* trustLevel);
+    void* unneeded_get_HasThreadAccess;
+    void* unneeded_ProcessEvents;
+    void* unneeded_RunAsync;
+    void* unneeded_RunIdleAsync;
+} _q_CWindows_CUI_CCore_CICoreDispatcherVtbl;
+struct _q_CWindows_CUI_CCore_CICoreDispatcher
+{
+    _q_CWindows_CUI_CCore_CICoreDispatcherVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CCore_CICoreWindowVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CCore_CICoreWindow* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CCore_CICoreWindow* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CCore_CICoreWindow* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CCore_CICoreWindow* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CCore_CICoreWindow* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CCore_CICoreWindow* This, TrustLevel* trustLevel);
+    void* unneeded_get_AutomationHostProvider;
+    void* unneeded_get_Bounds;
+    void* unneeded_get_CustomProperties;
+    void* unneeded_get_Dispatcher;
+    void* unneeded_get_FlowDirection;
+    void* unneeded_put_FlowDirection;
+    void* unneeded_get_IsInputEnabled;
+    void* unneeded_put_IsInputEnabled;
+    void* unneeded_get_PointerCursor;
+    void* unneeded_put_PointerCursor;
+    void* unneeded_get_PointerPosition;
+    void* unneeded_get_Visible;
+    void* unneeded_Activate;
+    void* unneeded_Close;
+    void* unneeded_GetAsyncKeyState;
+    void* unneeded_GetKeyState;
+    void* unneeded_ReleasePointerCapture;
+    void* unneeded_SetPointerCapture;
+    void* unneeded_add_Activated;
+    void* unneeded_remove_Activated;
+    void* unneeded_add_AutomationProviderRequested;
+    void* unneeded_remove_AutomationProviderRequested;
+    void* unneeded_add_CharacterReceived;
+    void* unneeded_remove_CharacterReceived;
+    void* unneeded_add_Closed;
+    void* unneeded_remove_Closed;
+    void* unneeded_add_InputEnabled;
+    void* unneeded_remove_InputEnabled;
+    void* unneeded_add_KeyDown;
+    void* unneeded_remove_KeyDown;
+    void* unneeded_add_KeyUp;
+    void* unneeded_remove_KeyUp;
+    void* unneeded_add_PointerCaptureLost;
+    void* unneeded_remove_PointerCaptureLost;
+    void* unneeded_add_PointerEntered;
+    void* unneeded_remove_PointerEntered;
+    void* unneeded_add_PointerExited;
+    void* unneeded_remove_PointerExited;
+    void* unneeded_add_PointerMoved;
+    void* unneeded_remove_PointerMoved;
+    void* unneeded_add_PointerPressed;
+    void* unneeded_remove_PointerPressed;
+    void* unneeded_add_PointerReleased;
+    void* unneeded_remove_PointerReleased;
+    void* unneeded_add_TouchHitTesting;
+    void* unneeded_remove_TouchHitTesting;
+    void* unneeded_add_PointerWheelChanged;
+    void* unneeded_remove_PointerWheelChanged;
+    void* unneeded_add_SizeChanged;
+    void* unneeded_remove_SizeChanged;
+    void* unneeded_add_VisibilityChanged;
+    void* unneeded_remove_VisibilityChanged;
+} _q_CWindows_CUI_CCore_CICoreWindowVtbl;
+struct _q_CWindows_CUI_CCore_CICoreWindow
+{
+    _q_CWindows_CUI_CCore_CICoreWindowVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationVtbl
 {
@@ -830,263 +2165,6 @@ typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifierVtbl
 struct _q_CWindows_CUI_CNotifications_CIToastNotifier
 {
     _q_CWindows_CUI_CNotifications_CIToastNotifierVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplication* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplication* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplication* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplication* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplication* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplication* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Resources)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CIResourceDictionary** __pret);
-    HRESULT (STDMETHODCALLTYPE* put_Resources)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CIResourceDictionary* value);
-    HRESULT (STDMETHODCALLTYPE* get_DebugSettings)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CIDebugSettings** __pret);
-    HRESULT (STDMETHODCALLTYPE* get_RequestedTheme)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CApplicationTheme* __pret);
-    HRESULT (STDMETHODCALLTYPE* put_RequestedTheme)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CApplicationTheme value);
-    HRESULT (STDMETHODCALLTYPE* add_UnhandledException)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_UnhandledException)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_Suspending)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CUI_CXaml_CISuspendingEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_Suspending)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_Resuming)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_Resuming)(_q_CWindows_CUI_CXaml_CIApplication* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* Exit)(_q_CWindows_CUI_CXaml_CIApplication* pThis);
-} _q_CWindows_CUI_CXaml_CIApplicationVtbl;
-struct _q_CWindows_CUI_CXaml_CIApplication
-{
-    _q_CWindows_CUI_CXaml_CIApplicationVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplication2Vtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplication2* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplication2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplication2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplication2* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplication2* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplication2* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_FocusVisualKind)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CUI_CXaml_CFocusVisualKind* __pret);
-    HRESULT (STDMETHODCALLTYPE* put_FocusVisualKind)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CUI_CXaml_CFocusVisualKind value);
-    HRESULT (STDMETHODCALLTYPE* get_RequiresPointerMode)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CUI_CXaml_CApplicationRequiresPointerMode* __pret);
-    HRESULT (STDMETHODCALLTYPE* put_RequiresPointerMode)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CUI_CXaml_CApplicationRequiresPointerMode value);
-    HRESULT (STDMETHODCALLTYPE* add_LeavingBackground)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CUI_CXaml_CILeavingBackgroundEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_LeavingBackground)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-    HRESULT (STDMETHODCALLTYPE* add_EnteredBackground)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CUI_CXaml_CIEnteredBackgroundEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
-    HRESULT (STDMETHODCALLTYPE* remove_EnteredBackground)(_q_CWindows_CUI_CXaml_CIApplication2* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
-} _q_CWindows_CUI_CXaml_CIApplication2Vtbl;
-struct _q_CWindows_CUI_CXaml_CIApplication2
-{
-    _q_CWindows_CUI_CXaml_CIApplication2Vtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplication3Vtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplication3* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplication3* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplication3* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplication3* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplication3* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplication3* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_HighContrastAdjustment)(_q_CWindows_CUI_CXaml_CIApplication3* pThis, _q_CWindows_CUI_CXaml_CApplicationHighContrastAdjustment* __pret);
-    HRESULT (STDMETHODCALLTYPE* put_HighContrastAdjustment)(_q_CWindows_CUI_CXaml_CIApplication3* pThis, _q_CWindows_CUI_CXaml_CApplicationHighContrastAdjustment value);
-} _q_CWindows_CUI_CXaml_CIApplication3Vtbl;
-struct _q_CWindows_CUI_CXaml_CIApplication3
-{
-    _q_CWindows_CUI_CXaml_CIApplication3Vtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationFactoryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplicationFactory* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplicationFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplicationFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplicationFactory* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplicationFactory* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplicationFactory* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CWindows_CUI_CXaml_CIApplicationFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CWindows_CUI_CXaml_CIApplication** __pret);
-} _q_CWindows_CUI_CXaml_CIApplicationFactoryVtbl;
-struct _q_CWindows_CUI_CXaml_CIApplicationFactory
-{
-    _q_CWindows_CUI_CXaml_CIApplicationFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParamsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams* This, TrustLevel* trustLevel);
-} _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParamsVtbl;
-struct _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParams
-{
-    _q_CWindows_CUI_CXaml_CIApplicationInitializationCallbackParamsVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationOverridesVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* OnActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CIActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnLaunched)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CILaunchActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnFileActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CIFileActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnSearchActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CISearchActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnShareTargetActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CIShareTargetActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnFileOpenPickerActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CIFileOpenPickerActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnFileSavePickerActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CIFileSavePickerActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnCachedFileUpdaterActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CApplicationModel_CActivation_CICachedFileUpdaterActivatedEventArgs* args);
-    HRESULT (STDMETHODCALLTYPE* OnWindowCreated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides* pThis, _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* args);
-} _q_CWindows_CUI_CXaml_CIApplicationOverridesVtbl;
-struct _q_CWindows_CUI_CXaml_CIApplicationOverrides
-{
-    _q_CWindows_CUI_CXaml_CIApplicationOverridesVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationOverrides2Vtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* OnBackgroundActivated)(_q_CWindows_CUI_CXaml_CIApplicationOverrides2* pThis, _q_CWindows_CApplicationModel_CActivation_CIBackgroundActivatedEventArgs* args);
-} _q_CWindows_CUI_CXaml_CIApplicationOverrides2Vtbl;
-struct _q_CWindows_CUI_CXaml_CIApplicationOverrides2
-{
-    _q_CWindows_CUI_CXaml_CIApplicationOverrides2Vtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIApplicationStaticsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIApplicationStatics* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIApplicationStatics* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIApplicationStatics* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIApplicationStatics* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIApplicationStatics* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIApplicationStatics* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* get_Current)(_q_CWindows_CUI_CXaml_CIApplicationStatics* pThis, _q_CWindows_CUI_CXaml_CIApplication** __pret);
-    HRESULT (STDMETHODCALLTYPE* Start)(_q_CWindows_CUI_CXaml_CIApplicationStatics* pThis, _q_CWindows_CUI_CXaml_CIApplicationInitializationCallback* callback);
-    HRESULT (STDMETHODCALLTYPE* LoadComponent)(_q_CWindows_CUI_CXaml_CIApplicationStatics* pThis, IInspectable* component, _q_CWindows_CFoundation_CIUriRuntimeClass* resourceLocator);
-    HRESULT (STDMETHODCALLTYPE* LoadComponentWithResourceLocation)(_q_CWindows_CUI_CXaml_CIApplicationStatics* pThis, IInspectable* component, _q_CWindows_CFoundation_CIUriRuntimeClass* resourceLocator, _q_CWindows_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation componentResourceLocation);
-} _q_CWindows_CUI_CXaml_CIApplicationStaticsVtbl;
-struct _q_CWindows_CUI_CXaml_CIApplicationStatics
-{
-    _q_CWindows_CUI_CXaml_CIApplicationStaticsVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIDebugSettingsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIDebugSettings* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIDebugSettings* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIDebugSettings* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIDebugSettings* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIDebugSettings* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIDebugSettings* This, TrustLevel* trustLevel);
-    void* unneeded_get_EnableFrameRateCounter;
-    void* unneeded_put_EnableFrameRateCounter;
-    void* unneeded_get_IsBindingTracingEnabled;
-    void* unneeded_put_IsBindingTracingEnabled;
-    void* unneeded_get_IsOverdrawHeatMapEnabled;
-    void* unneeded_put_IsOverdrawHeatMapEnabled;
-    void* unneeded_add_BindingFailed;
-    void* unneeded_remove_BindingFailed;
-} _q_CWindows_CUI_CXaml_CIDebugSettingsVtbl;
-struct _q_CWindows_CUI_CXaml_CIDebugSettings
-{
-    _q_CWindows_CUI_CXaml_CIDebugSettingsVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIDependencyObjectVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIDependencyObject* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIDependencyObject* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIDependencyObject* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIDependencyObject* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIDependencyObject* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIDependencyObject* This, TrustLevel* trustLevel);
-    void* unneeded_GetValue;
-    void* unneeded_SetValue;
-    void* unneeded_ClearValue;
-    void* unneeded_ReadLocalValue;
-    void* unneeded_GetAnimationBaseValue;
-    void* unneeded_get_Dispatcher;
-} _q_CWindows_CUI_CXaml_CIDependencyObjectVtbl;
-struct _q_CWindows_CUI_CXaml_CIDependencyObject
-{
-    _q_CWindows_CUI_CXaml_CIDependencyObjectVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIDependencyObjectFactoryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CWindows_CUI_CXaml_CIDependencyObjectFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CWindows_CUI_CXaml_CIDependencyObject** __pret);
-} _q_CWindows_CUI_CXaml_CIDependencyObjectFactoryVtbl;
-struct _q_CWindows_CUI_CXaml_CIDependencyObjectFactory
-{
-    _q_CWindows_CUI_CXaml_CIDependencyObjectFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIResourceDictionaryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIResourceDictionary* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIResourceDictionary* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIResourceDictionary* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIResourceDictionary* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIResourceDictionary* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIResourceDictionary* This, TrustLevel* trustLevel);
-    void* unneeded_get_Source;
-    void* unneeded_put_Source;
-    void* unneeded_get_MergedDictionaries;
-    void* unneeded_get_ThemeDictionaries;
-} _q_CWindows_CUI_CXaml_CIResourceDictionaryVtbl;
-struct _q_CWindows_CUI_CXaml_CIResourceDictionary
-{
-    _q_CWindows_CUI_CXaml_CIResourceDictionaryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIResourceDictionaryFactoryVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CWindows_CUI_CXaml_CIResourceDictionaryFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CWindows_CUI_CXaml_CIResourceDictionary** __pret);
-} _q_CWindows_CUI_CXaml_CIResourceDictionaryFactoryVtbl;
-struct _q_CWindows_CUI_CXaml_CIResourceDictionaryFactory
-{
-    _q_CWindows_CUI_CXaml_CIResourceDictionaryFactoryVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Exception;
-    void* unneeded_get_Message;
-    void* unneeded_get_Handled;
-    void* unneeded_put_Handled;
-} _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgsVtbl;
-struct _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgs
-{
-    _q_CWindows_CUI_CXaml_CIUnhandledExceptionEventArgsVtbl* lpVtbl;
-};
-typedef struct _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Window;
-} _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgsVtbl;
-struct _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgs
-{
-    _q_CWindows_CUI_CXaml_CIWindowCreatedEventArgsVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilterVtbl
 {
@@ -1334,4 +2412,170 @@ typedef struct _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl
 struct _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
 {
     _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* pThis, _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* __pret);
+} _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+{
+    _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
+} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+{
+    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIWindowEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_GetView;
+    void* unneeded_IndexOf;
+    void* unneeded_SetAt;
+    void* unneeded_InsertAt;
+    void* unneeded_RemoveAt;
+    void* unneeded_Append;
+    void* unneeded_RemoveAtEnd;
+    void* unneeded_Clear;
+    void* unneeded_GetMany;
+    void* unneeded_ReplaceAll;
+} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_GetView;
+    void* unneeded_IndexOf;
+    void* unneeded_SetAt;
+    void* unneeded_InsertAt;
+    void* unneeded_RemoveAt;
+    void* unneeded_Append;
+    void* unneeded_RemoveAtEnd;
+    void* unneeded_Clear;
+    void* unneeded_GetMany;
+    void* unneeded_ReplaceAll;
+} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock* sender, _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgsVtbl* lpVtbl;
 };

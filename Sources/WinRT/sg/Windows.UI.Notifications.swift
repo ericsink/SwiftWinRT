@@ -128,7 +128,8 @@ public class ToastNotification
 // static class
 public class ToastNotificationManager
 {
-    // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics4
+    // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics5
+    // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics2
     private struct _IToastNotificationManagerStatics {
         static var x : IToastNotificationManagerStatics =
             try! RoGetActivationFactory(HString("Windows.UI.Notifications.ToastNotificationManager"))
@@ -141,8 +142,7 @@ public class ToastNotificationManager
         return try WinRT.Windows.UI.Notifications.ToastNotifier(plok: ToastNotificationManagerStatics.CreateToastNotifierWithId(applicationId: applicationId));
     }
 // method not needed: GetTemplateContent
-    // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics2
-    // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics5
+    // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics4
 }
 
 // type: Windows.UI.Notifications.ToastNotifier

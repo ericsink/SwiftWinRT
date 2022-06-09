@@ -19,15 +19,30 @@ let SwiftWinRT = Package(
             exclude: ["sg/README.md"],
             linkerSettings: [
               .linkedLibrary("Ole32"),
-            ]),
+            ]
+            ),
     .target(name: "Power", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
-            ]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
     .target(name: "App", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
-            ]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
     .target(name: "HttpClient", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),

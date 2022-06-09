@@ -118,12 +118,14 @@ public class User
     }
     internal func Interface() -> WinRT.Windows.System.IUser { return _self; }
     // static interface not needed: Windows.System.IUserStatics
+    // static interface not needed: Windows.System.IUserStatics2
     // method not needed: get_NonRoamableId
     // method not needed: get_AuthenticationStatus
     // method not needed: get_Type
     // method not needed: GetPropertyAsync
     // method not needed: GetPropertiesAsync
     // method not needed: GetPictureAsync
+    // instance interface not needed: Windows.System.IUser2
 }
 
 }

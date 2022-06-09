@@ -14,13 +14,13 @@ public class HttpClient
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpClient { return _self; }
-    public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
-        let _af : IHttpClientFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
-        _self = try _af.Create(filter: filter)!;
-    }
     public init() throws {
         let _classId = try HString("Windows.Web.Http.HttpClient")
         _self = try RoActivateInstance(_classId)
+    }
+    public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
+        let _af : IHttpClientFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
+        _self = try _af.Create(filter: filter)!;
     }
     // method not needed: DeleteAsync
     public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
@@ -67,13 +67,13 @@ public class HttpResponseMessage
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpResponseMessage { return _self; }
-    public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
-        let _af : IHttpResponseMessageFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
-        _self = try _af.Create(statusCode: statusCode)!;
-    }
     public init() throws {
         let _classId = try HString("Windows.Web.Http.HttpResponseMessage")
         _self = try RoActivateInstance(_classId)
+    }
+    public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
+        let _af : IHttpResponseMessageFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
+        _self = try _af.Create(statusCode: statusCode)!;
     }
     public func get_Content() throws -> Optional<WinRT.Windows.Web.Http.IHttpContent> {
         let _ifc : IHttpResponseMessage = try _self.QueryInterface();

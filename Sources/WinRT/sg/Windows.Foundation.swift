@@ -85,11 +85,13 @@ open class AsyncOperationCompletedHandler_1_boolean
     AddRef: {
         let instance = AsyncOperationCompletedHandler_1_boolean.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = AsyncOperationCompletedHandler_1_boolean.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
@@ -97,7 +99,7 @@ open class AsyncOperationCompletedHandler_1_boolean
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1_boolean(asyncInfo), asyncStatus: asyncStatus)
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -234,11 +236,13 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
     AddRef: {
         let instance = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
@@ -246,7 +250,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), progressInfo: progressInfo)
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -323,11 +327,13 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     AddRef: {
         let instance = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
@@ -335,7 +341,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(asyncInfo), asyncStatus: asyncStatus)
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -472,11 +478,13 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
     AddRef: {
         let instance = AsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = AsyncOperationProgressHandler_2_HSTRING_UINT64.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) in
@@ -484,7 +492,7 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), progressInfo: progressInfo)
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -553,11 +561,13 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     AddRef: {
         let instance = AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
@@ -565,7 +575,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(asyncInfo), asyncStatus: asyncStatus)
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -634,11 +644,13 @@ open class EventHandler_1_IInspectable
     AddRef: {
         let instance = EventHandler_1_IInspectable.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = EventHandler_1_IInspectable.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
@@ -646,7 +658,7 @@ open class EventHandler_1_IInspectable
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.IInspectable(args))
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.IInspectable(args))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -675,6 +687,547 @@ open class EventHandler_1_IInspectable
     internal func Interface() -> WinRT.Windows.Foundation.IEventHandler_1_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
             WinRT.Windows.Foundation.IEventHandler_1_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed interface type
+public class IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc4dc524f, Data2: 0x9095, Data3 : 0x56f2, Data4 : (0x9a, 0xcf, 0xe1, 0x0f, 0xfa, 0x60, 0x0f, 0xcb)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.System.Power.EffectivePowerMode>)
+    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.System.Power.EffectivePowerMode> get_Completed()
+    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>> = nil;
+        try self._n_get_Completed(&__result);
+        return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(consuming: __result);
+    }
+    // Microsoft.Windows.System.Power.EffectivePowerMode GetResults()
+    public func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
+        var __result : _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode = _q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode_BatterySaver;
+        try self._n_GetResults(&__result);
+        return __result;
+    }
+    public var Completed : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x897713ea, Data2: 0x1f95, Data3 : 0x5c1b, Data4 : (0xa2, 0x4b, 0x93, 0x41, 0xaa, 0xbc, 0x74, 0x3a)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Microsoft.Windows.System.Power.EffectivePowerMode>, Windows.Foundation.AsyncStatus)
+    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerModeVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+        public var wrapper: Unmanaged<AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe5299329, Data2: 0x636a, Data3 : 0x5c20, Data4 : (0xa3, 0x8a, 0x12, 0xdf, 0x43, 0xf6, 0xd0, 0x38)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowActivatedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs
+// impl delegate type
+open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs>>) in
+        guard let self = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2a954d28, Data2: 0x7f8b, Data3 : 0x5479, Data4 : (0x8c, 0xe9, 0x90, 0x04, 0x24, 0xa0, 0x40, 0x9f)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.IWindowEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
+// impl delegate type
+open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs>>) in
+        guard let self = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5ac3fe68, Data2: 0x1312, Data3 : 0x5598, Data4 : (0xb0, 0x97, 0x5c, 0x78, 0x9f, 0xe7, 0x2f, 0xba)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowSizeChangedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs
+// impl delegate type
+open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs>>) in
+        guard let self = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc5011004, Data2: 0xf9a8, Data3 : 0x521d, Data4 : (0x9b, 0x1d, 0xd7, 0xcd, 0x18, 0x48, 0x89, 0xf8)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
+// impl delegate type
+open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs>>) in
+        guard let self = TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x376bf900, Data2: 0xba70, Data3 : 0x54b5, Data4 : (0xab, 0xaf, 0x0d, 0xaf, 0x51, 0xf9, 0x9e, 0x60)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.TextBlock, Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.ITextBlock>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.Controls.TextBlock(plok: WinRT.Microsoft.UI.Xaml.Controls.ITextBlock(sender)), args: WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.TextBlock>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(UnsafeMutableRawPointer($0))
         }
     }
 }
@@ -766,6 +1319,35 @@ extension WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64 
         return try self.GetResults();
         }
 }
+extension WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode : Future {
+    private final class MyCompletedHandler: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        internal func get() throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
 extension Windows.Foundation {
 // type: Windows.Foundation.AsyncActionCompletedHandler
 // delegate type
@@ -805,11 +1387,13 @@ open class AsyncActionCompletedHandler
     AddRef: {
         let instance = AsyncActionCompletedHandler.from($0)
         _ = instance?.retain()
-        return ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let instance = AsyncActionCompletedHandler.from($0)
-        return ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
@@ -817,7 +1401,7 @@ open class AsyncActionCompletedHandler
             return E_INVALIDARG
         }
         do {
-            try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncAction(asyncInfo), asyncStatus: asyncStatus)
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1050,6 +1634,10 @@ open class IUriRuntimeClassFactory
     }
 } // IUriRuntimeClassFactory
 
+
+// type: Windows.Foundation.Rect
+// struct type
+public typealias Rect = _q_CWindows_CFoundation_CRect;
 
 // type: Windows.Foundation.TimeSpan
 // struct type
