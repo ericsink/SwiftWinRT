@@ -7,10 +7,6 @@ class MyApp : Microsoft.UI.Xaml.ApplicationOverrides
     {
         let w = try Microsoft.UI.Xaml.Window();
 
-        //var tb = try Microsoft.UI.Xaml.Controls.TextBlock()
-        //try tb.set_Text("Hola");
-        //w.put_Content(value: tb);
-
         try w.put_Title(value: "Hello from Swift");
         try w.Activate();
     }
@@ -18,10 +14,8 @@ class MyApp : Microsoft.UI.Xaml.ApplicationOverrides
 
 class MyInit : Microsoft.UI.Xaml.ApplicationInitializationCallback
 {
-    // TODO do we need to store this in a static var?
-    static var q : Optional<MyApp> = nil;
     override func Invoke(p : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws {
-        Self.q = try MyApp();
+        _ = try MyApp();
     }
 }
 
