@@ -46,18 +46,46 @@ let SwiftWinRT = Package(
     .target(name: "HttpClient", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
-            ]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
     .target(name: "Toast", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
-            ]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
     .target(name: "DispatcherQueue", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
-            ]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
     .target(name: "SystemIdentification", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
-            ]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
   ]
 )
