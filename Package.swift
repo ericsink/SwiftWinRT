@@ -10,7 +10,7 @@ let SwiftWinRT = Package(
     .executable(name: "Toast", targets: ["Toast"]),
     .executable(name: "Power", targets: ["Power"]),
     .executable(name: "HttpClient", targets: ["HttpClient"]),
-    .executable(name: "App", targets: ["App"]),
+    .executable(name: "XamlApp", targets: ["XamlApp"]),
     .library(name: "SwiftWinRT", targets: ["WinRT"]),
   ],
   targets: [
@@ -32,7 +32,7 @@ let SwiftWinRT = Package(
               .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "App", dependencies: ["WinRT"],
+    .target(name: "XamlApp", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
