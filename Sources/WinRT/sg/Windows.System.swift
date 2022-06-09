@@ -10,7 +10,7 @@ extension Windows.System {
 public class DispatcherQueueController
 {
     private var _self : WinRT.Windows.System.IDispatcherQueueController;
-    internal init(plok: WinRT.Windows.System.IDispatcherQueueController?) {
+    internal init(plok: WinRT.Windows.System.IDispatcherQueueController?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.System.IDispatcherQueueController { return _self; }
@@ -113,7 +113,7 @@ open class IUser
 public class User
 {
     private var _self : WinRT.Windows.System.IUser;
-    internal init(plok: WinRT.Windows.System.IUser?) {
+    internal init(plok: WinRT.Windows.System.IUser?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.System.IUser { return _self; }

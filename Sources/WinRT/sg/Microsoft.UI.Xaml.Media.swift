@@ -8,16 +8,20 @@ extension Microsoft.UI.Xaml.Media {
 // type: Microsoft.UI.Xaml.Media.Brush
 // runtime class
 open class Brush
+    :
+    Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Media.IBrush;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IBrush?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IBrush?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IBrush { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IBrushFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Brush"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -39,7 +43,7 @@ open class Brush
 open class FontFamily
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Media.IFontFamily;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IFontFamily?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IFontFamily?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IFontFamily { return _self; }
@@ -171,19 +175,24 @@ open class ISolidColorBrushFactory
 // type: Microsoft.UI.Xaml.Media.SolidColorBrush
 // runtime class
 public class SolidColorBrush
+    :
+    Microsoft.UI.Xaml.Media.Brush
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush { return _self; }
     public init(color : WinRT.Windows.UI.Color) throws {
         let _af : ISolidColorBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.SolidColorBrush"));
         _self = try _af.CreateInstanceWithColor(color: color)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Media.SolidColorBrush")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.Media.ISolidColorBrushStatics
     // method not needed: get_Color

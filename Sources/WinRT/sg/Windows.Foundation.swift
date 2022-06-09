@@ -1648,7 +1648,7 @@ public typealias TimeSpan = _q_CWindows_CFoundation_CTimeSpan;
 public class Uri
 {
     private var _self : WinRT.Windows.Foundation.IUriRuntimeClass;
-    internal init(plok: WinRT.Windows.Foundation.IUriRuntimeClass?) {
+    internal init(plok: WinRT.Windows.Foundation.IUriRuntimeClass?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.Foundation.IUriRuntimeClass { return _self; }

@@ -12,16 +12,20 @@ public typealias ComponentResourceLocation = _q_CMicrosoft_CUI_CXaml_CControls_C
 // type: Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase
 // runtime class
 open class FlyoutBase
+    :
+    Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IFlyoutBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil

@@ -101,7 +101,7 @@ open class IToastNotifier
 public class ToastNotification
 {
     private var _self : WinRT.Windows.UI.Notifications.IToastNotification;
-    internal init(plok: WinRT.Windows.UI.Notifications.IToastNotification?) {
+    internal init(plok: WinRT.Windows.UI.Notifications.IToastNotification?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Notifications.IToastNotification { return _self; }
@@ -150,7 +150,7 @@ public class ToastNotificationManager
 public class ToastNotifier
 {
     private var _self : WinRT.Windows.UI.Notifications.IToastNotifier;
-    internal init(plok: WinRT.Windows.UI.Notifications.IToastNotifier?) {
+    internal init(plok: WinRT.Windows.UI.Notifications.IToastNotifier?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Notifications.IToastNotifier { return _self; }

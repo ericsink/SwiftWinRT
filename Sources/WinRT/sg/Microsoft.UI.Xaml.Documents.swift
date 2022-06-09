@@ -157,16 +157,20 @@ open class ITextPointer
 // type: Microsoft.UI.Xaml.Documents.Inline
 // runtime class
 open class Inline
+    :
+    Microsoft.UI.Xaml.Documents.TextElement
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Documents.IInline;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.IInline?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.IInline?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.IInline { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.IInlineFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IInlineFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.Inline"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -179,7 +183,7 @@ open class Inline
 public class InlineCollection
 {
     private var _self : WinRT.IInspectable;
-    internal init(plok: WinRT.IInspectable?) {
+    internal init(plok: WinRT.IInspectable?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.IInspectable { return _self; }
@@ -201,10 +205,13 @@ public class InlineCollection
 // type: Microsoft.UI.Xaml.Documents.TextElement
 // runtime class
 open class TextElement
+    :
+    Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Documents.ITextElement;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextElement?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextElement?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.ITextElement { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.ITextElementFactory
@@ -268,7 +275,7 @@ open class TextElement
 open class TextHighlighter
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter { return _self; }
@@ -294,7 +301,7 @@ open class TextHighlighter
 public class TextPointer
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Documents.ITextPointer;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextPointer?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextPointer?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.ITextPointer { return _self; }

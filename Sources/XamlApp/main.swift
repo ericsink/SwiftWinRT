@@ -1,13 +1,18 @@
 
 import WinRT
 
-class MyApp : Microsoft.UI.Xaml.ApplicationOverrides
-{
+class MyApp : Microsoft.UI.Xaml.ApplicationOverrides {
     override func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
         let w = try Microsoft.UI.Xaml.Window();
 
         try w.put_Title(value: "Hello from Swift");
+
+        let tb = try Microsoft.UI.Xaml.Controls.TextBlock();
+        try tb.put_Text(value: "HOLA");
+        try tb.put_FontSize(value: 256);
+        try w.put_Content(value: tb);
+
         try w.Activate();
     }
 }

@@ -10,7 +10,7 @@ extension Windows.Web.Http {
 public class HttpClient
 {
     private var _self : WinRT.Windows.Web.Http.IHttpClient;
-    internal init(plok: WinRT.Windows.Web.Http.IHttpClient?) {
+    internal init(plok: WinRT.Windows.Web.Http.IHttpClient?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpClient { return _self; }
@@ -63,7 +63,7 @@ public typealias HttpProgressStage = _q_CWindows_CWeb_CHttp_CHttpProgressStage;
 public class HttpResponseMessage
 {
     private var _self : WinRT.Windows.Web.Http.IHttpResponseMessage;
-    internal init(plok: WinRT.Windows.Web.Http.IHttpResponseMessage?) {
+    internal init(plok: WinRT.Windows.Web.Http.IHttpResponseMessage?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpResponseMessage { return _self; }

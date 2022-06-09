@@ -10,7 +10,7 @@ extension Microsoft.UI.Xaml {
 open class Application
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IApplication;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IApplication?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IApplication?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplication { return _self; }
@@ -125,8 +125,6 @@ open class Application
             return try WinRT.Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
     }
-    open func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
-    }
 }
 
 // type: Microsoft.UI.Xaml.ApplicationHighContrastAdjustment
@@ -223,7 +221,7 @@ open class ApplicationInitializationCallback
 public class ApplicationInitializationCallbackParams
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams { return _self; }
@@ -238,7 +236,7 @@ public typealias ApplicationTheme = _q_CMicrosoft_CUI_CXaml_CApplicationTheme;
 public class DebugSettings
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDebugSettings;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IDebugSettings?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IDebugSettings?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDebugSettings { return _self; }
@@ -259,7 +257,7 @@ public class DebugSettings
 open class DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDependencyObject;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyObject?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyObject?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyObject { return _self; }
@@ -288,7 +286,7 @@ open class DependencyObject
 public class DependencyProperty
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDependencyProperty;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyProperty?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyProperty?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyProperty { return _self; }
@@ -303,16 +301,20 @@ public typealias FocusVisualKind = _q_CMicrosoft_CUI_CXaml_CFocusVisualKind;
 // type: Microsoft.UI.Xaml.FrameworkElement
 // runtime class
 open class FrameworkElement
+    :
+    Microsoft.UI.Xaml.UIElement
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IFrameworkElement;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IFrameworkElement { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkElementFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IFrameworkElementFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkElement"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -681,27 +683,27 @@ open class ApplicationOverrides
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
-        public var wrapper: Unmanaged<ApplicationOverrides>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
+        public var self_ref: Unmanaged<ApplicationOverrides>?
     }
     private var instance: WithTrailingObjects
     private var _app: Optional<Microsoft.UI.Xaml.Application>
     private var _inner: Optional<WinRT.IInspectable>
 
     public init() throws {
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), self_ref: nil)
         self._app = nil
         self._inner = nil
-        self.instance.wrapper = Unmanaged<ApplicationOverrides>.passUnretained(self)
-        self._app = try Microsoft.UI.Xaml.Application(baseInterface: self.Interface().QueryInterface(), innerInterface: &self._inner)
+        self.instance.self_ref = Unmanaged<ApplicationOverrides>.passUnretained(self)
+        self._app = try Microsoft.UI.Xaml.Application(baseInterface: self.PrivateInterface(), innerInterface: &self._inner)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationOverrides>? {
-        return pUnk?.bindMemory(to: ApplicationOverrides.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: ApplicationOverrides.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
-    public func Interface() -> WinRT.Microsoft.UI.Xaml.IApplicationOverrides {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
-            WinRT.Microsoft.UI.Xaml.IApplicationOverrides(UnsafeMutableRawPointer($0))
+    private func PrivateInterface() -> IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            IInspectable(UnsafeMutableRawPointer($0))
         }
     }
     open func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
@@ -1672,7 +1674,7 @@ open class IWindowVisibilityChangedEventArgs
 public class LaunchActivatedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs { return _self; }
@@ -1691,16 +1693,20 @@ public typealias OpticalMarginAlignment = _q_CMicrosoft_CUI_CXaml_COpticalMargin
 // type: Microsoft.UI.Xaml.ResourceDictionary
 // runtime class
 open class ResourceDictionary
+    :
+    Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IResourceDictionary;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IResourceDictionary?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IResourceDictionary?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IResourceDictionary { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IResourceDictionaryFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IResourceDictionaryFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ResourceDictionary"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -1719,7 +1725,7 @@ open class ResourceDictionary
 open class RoutedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IRoutedEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventArgs { return _self; }
@@ -1847,10 +1853,13 @@ public typealias Thickness = _q_CMicrosoft_CUI_CXaml_CThickness;
 // type: Microsoft.UI.Xaml.UIElement
 // runtime class
 open class UIElement
+    :
+    Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IUIElement;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IUIElement?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IUIElement?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUIElement { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IUIElementFactory
@@ -2091,7 +2100,7 @@ open class UIElement
 public class UnhandledExceptionEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs { return _self; }
@@ -2191,7 +2200,7 @@ open class UnhandledExceptionEventHandler
 open class Window
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindow;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindow?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindow?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindow { return _self; }
@@ -2372,7 +2381,7 @@ open class Window
 public class WindowActivatedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs { return _self; }
@@ -2386,7 +2395,7 @@ public class WindowActivatedEventArgs
 public class WindowEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowEventArgs { return _self; }
@@ -2399,7 +2408,7 @@ public class WindowEventArgs
 public class WindowSizeChangedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs { return _self; }
@@ -2413,7 +2422,7 @@ public class WindowSizeChangedEventArgs
 public class WindowVisibilityChangedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs { return _self; }

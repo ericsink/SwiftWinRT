@@ -10,7 +10,7 @@ extension Microsoft.UI.Dispatching {
 public class DispatcherQueue
 {
     private var _self : WinRT.Microsoft.UI.Dispatching.IDispatcherQueue;
-    internal init(plok: WinRT.Microsoft.UI.Dispatching.IDispatcherQueue?) {
+    internal init(plok: WinRT.Microsoft.UI.Dispatching.IDispatcherQueue?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Dispatching.IDispatcherQueue { return _self; }

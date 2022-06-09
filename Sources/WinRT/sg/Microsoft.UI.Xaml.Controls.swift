@@ -8,10 +8,13 @@ extension Microsoft.UI.Xaml.Controls {
 // type: Microsoft.UI.Xaml.Controls.ContextMenuEventArgs
 // runtime class
 public class ContextMenuEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.IContextMenuEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IContextMenuEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IContextMenuEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContextMenuEventArgs { return _self; }
     // method not needed: get_Handled
@@ -1456,7 +1459,7 @@ open class ITextBlockStatics
 public class IsTextTrimmedChangedEventArgs
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs { return _self; }
@@ -1465,15 +1468,19 @@ public class IsTextTrimmedChangedEventArgs
 // type: Microsoft.UI.Xaml.Controls.TextBlock
 // runtime class
 public class TextBlock
+    :
+    Microsoft.UI.Xaml.FrameworkElement
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock;
-    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.ITextBlock?) {
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.ITextBlock?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.ITextBlock { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Controls.TextBlock")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     private struct _ITextBlockStatics {
         static var x : ITextBlockStatics =

@@ -10,7 +10,7 @@ extension Windows.UI.Core {
 public class CoreDispatcher
 {
     private var _self : WinRT.Windows.UI.Core.ICoreDispatcher;
-    internal init(plok: WinRT.Windows.UI.Core.ICoreDispatcher?) {
+    internal init(plok: WinRT.Windows.UI.Core.ICoreDispatcher?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Core.ICoreDispatcher { return _self; }
@@ -28,7 +28,7 @@ public class CoreDispatcher
 public class CoreWindow
 {
     private var _self : WinRT.Windows.UI.Core.ICoreWindow;
-    internal init(plok: WinRT.Windows.UI.Core.ICoreWindow?) {
+    internal init(plok: WinRT.Windows.UI.Core.ICoreWindow?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.UI.Core.ICoreWindow { return _self; }

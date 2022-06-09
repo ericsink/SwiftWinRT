@@ -8,10 +8,13 @@ extension Microsoft.UI.Composition {
 // type: Microsoft.UI.Composition.CompositionBrush
 // runtime class
 open class CompositionBrush
+    :
+    Microsoft.UI.Composition.CompositionObject
 {
     private var _self : WinRT.Microsoft.UI.Composition.ICompositionBrush;
-    internal init(plok: WinRT.Microsoft.UI.Composition.ICompositionBrush?) {
+    internal init(plok: WinRT.Microsoft.UI.Composition.ICompositionBrush?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Composition.ICompositionBrush { return _self; }
     // COMPOSABLE: Microsoft.UI.Composition.ICompositionBrushFactory
@@ -23,7 +26,7 @@ open class CompositionBrush
 open class CompositionObject
 {
     private var _self : WinRT.Microsoft.UI.Composition.ICompositionObject;
-    internal init(plok: WinRT.Microsoft.UI.Composition.ICompositionObject?) {
+    internal init(plok: WinRT.Microsoft.UI.Composition.ICompositionObject?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Composition.ICompositionObject { return _self; }
@@ -47,7 +50,7 @@ open class CompositionObject
 public class Compositor
 {
     private var _self : WinRT.Microsoft.UI.Composition.ICompositor;
-    internal init(plok: WinRT.Microsoft.UI.Composition.ICompositor?) {
+    internal init(plok: WinRT.Microsoft.UI.Composition.ICompositor?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Composition.ICompositor { return _self; }

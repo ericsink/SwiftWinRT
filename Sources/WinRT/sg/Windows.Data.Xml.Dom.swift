@@ -61,7 +61,7 @@ open class IXmlDocumentIO
 public class XmlDocument
 {
     private var _self : WinRT.Windows.Data.Xml.Dom.IXmlDocument;
-    internal init(plok: WinRT.Windows.Data.Xml.Dom.IXmlDocument?) {
+    internal init(plok: WinRT.Windows.Data.Xml.Dom.IXmlDocument?) throws {
         _self = plok!
     }
     internal func Interface() -> WinRT.Windows.Data.Xml.Dom.IXmlDocument { return _self; }
