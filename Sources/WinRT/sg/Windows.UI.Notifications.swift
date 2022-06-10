@@ -155,7 +155,7 @@ public class ToastNotifier
     }
     internal func Interface() -> WinRT.Windows.UI.Notifications.IToastNotifier { return _self; }
     public func Show(notification : Optional<WinRT.Windows.UI.Notifications.ToastNotification>) throws -> Void {
-        let _ifc : IToastNotifier = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.UI.Notifications.IToastNotifier = try _self.QueryInterface();
         return try _ifc.Show(notification: notification!.Interface());
     }
     // method not needed: Hide

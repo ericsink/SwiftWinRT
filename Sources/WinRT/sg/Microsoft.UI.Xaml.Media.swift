@@ -60,6 +60,140 @@ open class FontFamily
     // method not needed: get_Source
 }
 
+// type: Microsoft.UI.Xaml.Media.GradientBrush
+// runtime class
+open class GradientBrush
+    :
+    Microsoft.UI.Xaml.Media.Brush
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.IGradientBrush;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IGradientBrush?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IGradientBrush { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Media.IGradientBrushFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IGradientBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.GradientBrush"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Media.IGradientBrushStatics
+    // method not needed: get_SpreadMethod
+    // method not needed: put_SpreadMethod
+    // method not needed: get_MappingMode
+    // method not needed: put_MappingMode
+    // method not needed: get_ColorInterpolationMode
+    // method not needed: put_ColorInterpolationMode
+    // method not needed: get_GradientStops
+    // method not needed: put_GradientStops
+}
+
+// type: Microsoft.UI.Xaml.Media.GradientStop
+// runtime class
+public class GradientStop
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.IGradientStop;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IGradientStop?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IGradientStop { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Media.GradientStop")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IGradientStopStatics {
+        static var x : IGradientStopStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.GradientStop"))
+    }
+    public static var GradientStopStatics : IGradientStopStatics {
+        _IGradientStopStatics.x
+    }
+    public static func get_ColorProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GradientStopStatics.get_ColorProperty());
+    }
+    public static func get_OffsetProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GradientStopStatics.get_OffsetProperty());
+    }
+    public static var ColorProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GradientStopStatics.ColorProperty);
+        }
+    }
+    public static var OffsetProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GradientStopStatics.OffsetProperty);
+        }
+    }
+    public func get_Color() throws -> WinRT.Windows.UI.Color {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
+        return try _ifc.get_Color();
+    }
+    public func put_Color(value : WinRT.Windows.UI.Color) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
+        return try _ifc.put_Color(value: value);
+    }
+    public func get_Offset() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
+        return try _ifc.get_Offset();
+    }
+    public func put_Offset(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
+        return try _ifc.put_Offset(value: value);
+    }
+    public var Color : WinRT.Windows.UI.Color {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
+            return try _ifc.Color;
+        }
+    }
+    public var Offset : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
+            return try _ifc.Offset;
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Media.GradientStopCollection
+// runtime class
+public class GradientStopCollection
+{
+    private var _self : WinRT.IInspectable;
+    internal init(plok: WinRT.IInspectable?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.IInspectable { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Media.GradientStopCollection")
+        _self = try RoActivateInstance(_classId)
+    }
+    // method not needed: GetAt
+    // method not needed: get_Size
+    // method not needed: GetView
+    // method not needed: IndexOf
+    // method not needed: SetAt
+    // method not needed: InsertAt
+    // method not needed: RemoveAt
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        return try _ifc.Append(value: value!.Interface());
+    }
+    // method not needed: RemoveAtEnd
+    // method not needed: Clear
+    // method not needed: GetMany
+    // method not needed: ReplaceAll
+    // method not needed: First
+}
+
 // type: Microsoft.UI.Xaml.Media.IBrush
 // interface type
 open class IBrush
@@ -138,6 +272,274 @@ open class IFontFamilyFactory
 } // IFontFamilyFactory
 
 
+// type: Microsoft.UI.Xaml.Media.IGradientBrush
+// interface type
+open class IGradientBrush
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x77c347fa, Data2: 0xc4c4, Data3 : 0x5174, Data4 : (0xa9, 0x45, 0x65, 0xca, 0xb3, 0xaa, 0x1c, 0x75)) }
+// method not needed: get_SpreadMethod
+// method not needed: put_SpreadMethod
+// method not needed: get_MappingMode
+// method not needed: put_MappingMode
+// method not needed: get_ColorInterpolationMode
+// method not needed: put_ColorInterpolationMode
+// method not needed: get_GradientStops
+// method not needed: put_GradientStops
+} // IGradientBrush
+
+
+// type: Microsoft.UI.Xaml.Media.IGradientBrushFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IGradientBrushFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x64ff6177, Data2: 0x1eda, Data3 : 0x565b, Data4 : (0xb7, 0xaa, 0xac, 0x50, 0x15, 0x2e, 0x31, 0x36)) }
+    // Microsoft.UI.Xaml.Media.GradientBrush CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IGradientBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Media.IGradientBrush(consuming: __result);
+    }
+} // IGradientBrushFactory
+
+
+// type: Microsoft.UI.Xaml.Media.IGradientStop
+// interface type
+open class IGradientStop
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x48bcb039, Data2: 0xe8e1, Data3 : 0x5743, Data4 : (0x94, 0xc3, 0xf7, 0x66, 0x01, 0x1d, 0x3b, 0x5d)) }
+    // [IsSpecialName] Windows.UI.Color get_Color()
+    public func _n_get_Color(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Color(pThis, __presult))
+        }
+    }
+    public func get_Color() throws -> WinRT.Windows.UI.Color {
+        var __result : _q_CWindows_CUI_CColor = _q_CWindows_CUI_CColor(A: 0, R: 0, G: 0, B: 0);
+        try self._n_get_Color(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Color(Windows.UI.Color)
+    public func _n_put_Color(_ value : _q_CWindows_CUI_CColor) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Color(pThis, value))
+        }
+    }
+    public func put_Color(value : WinRT.Windows.UI.Color) throws -> Void {
+        try self._n_put_Color(value);
+    }
+    // [IsSpecialName] System.Double get_Offset()
+    public func _n_get_Offset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Offset(pThis, __presult))
+        }
+    }
+    public func get_Offset() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_Offset(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Offset(System.Double)
+    public func _n_put_Offset(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Offset(pThis, value))
+        }
+    }
+    public func put_Offset(value : Swift.Double) throws -> Void {
+        try self._n_put_Offset(value);
+    }
+    public var Color : WinRT.Windows.UI.Color {
+        get throws {
+            return try get_Color();
+        }
+    }
+    public var Offset : Swift.Double {
+        get throws {
+            return try get_Offset();
+        }
+    }
+} // IGradientStop
+
+
+// type: Microsoft.UI.Xaml.Media.IGradientStopStatics
+// interface type
+open class IGradientStopStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0b566c1b, Data2: 0x37de, Data3 : 0x5bfd, Data4 : (0xb4, 0x19, 0x0f, 0x7c, 0x4c, 0x0a, 0x05, 0x23)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColorProperty()
+    public func _n_get_ColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColorProperty(pThis, __presult))
+        }
+    }
+    public func get_ColorProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ColorProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_OffsetProperty()
+    public func _n_get_OffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_OffsetProperty(pThis, __presult))
+        }
+    }
+    public func get_OffsetProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_OffsetProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var ColorProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ColorProperty();
+        }
+    }
+    public var OffsetProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_OffsetProperty();
+        }
+    }
+} // IGradientStopStatics
+
+
+// type: Microsoft.UI.Xaml.Media.ILinearGradientBrush
+// interface type
+open class ILinearGradientBrush
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0ab9638, Data2: 0x1bd9, Data3 : 0x5fa4, Data4 : (0x96, 0x49, 0x48, 0xcf, 0xa1, 0x2f, 0x0d, 0x1e)) }
+    // [IsSpecialName] Windows.Foundation.Point get_StartPoint()
+    public func _n_get_StartPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_StartPoint(pThis, __presult))
+        }
+    }
+    public func get_StartPoint() throws -> WinRT.Windows.Foundation.Point {
+        var __result : _q_CWindows_CFoundation_CPoint = _q_CWindows_CFoundation_CPoint(X: 0, Y: 0);
+        try self._n_get_StartPoint(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_StartPoint(Windows.Foundation.Point)
+    public func _n_put_StartPoint(_ value : _q_CWindows_CFoundation_CPoint) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_StartPoint(pThis, value))
+        }
+    }
+    public func put_StartPoint(value : WinRT.Windows.Foundation.Point) throws -> Void {
+        try self._n_put_StartPoint(value);
+    }
+    // [IsSpecialName] Windows.Foundation.Point get_EndPoint()
+    public func _n_get_EndPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EndPoint(pThis, __presult))
+        }
+    }
+    public func get_EndPoint() throws -> WinRT.Windows.Foundation.Point {
+        var __result : _q_CWindows_CFoundation_CPoint = _q_CWindows_CFoundation_CPoint(X: 0, Y: 0);
+        try self._n_get_EndPoint(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_EndPoint(Windows.Foundation.Point)
+    public func _n_put_EndPoint(_ value : _q_CWindows_CFoundation_CPoint) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_EndPoint(pThis, value))
+        }
+    }
+    public func put_EndPoint(value : WinRT.Windows.Foundation.Point) throws -> Void {
+        try self._n_put_EndPoint(value);
+    }
+    public var EndPoint : WinRT.Windows.Foundation.Point {
+        get throws {
+            return try get_EndPoint();
+        }
+    }
+    public var StartPoint : WinRT.Windows.Foundation.Point {
+        get throws {
+            return try get_StartPoint();
+        }
+    }
+} // ILinearGradientBrush
+
+
+// type: Microsoft.UI.Xaml.Media.ILinearGradientBrushFactory
+// interface type
+// ACTIVATION INTERFACE
+open class ILinearGradientBrushFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0ba7de3, Data2: 0xccfd, Data3 : 0x534c, Data4 : (0x88, 0x2f, 0x3a, 0xb3, 0x9a, 0xe7, 0x23, 0xf3)) }
+    // Microsoft.UI.Xaml.Media.LinearGradientBrush CreateInstanceWithGradientStopCollectionAndAngle(Microsoft.UI.Xaml.Media.GradientStopCollection, System.Double)
+    public func _n_CreateInstanceWithGradientStopCollectionAndAngle(_ gradientStopCollection : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>, _ angle : DOUBLE, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithGradientStopCollectionAndAngle(pThis, gradientStopCollection, angle, __presult))
+        }
+    }
+    public func CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection : Optional<WinRT.IInspectable>, angle : Swift.Double) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush>> = nil;
+        try self._n_CreateInstanceWithGradientStopCollectionAndAngle(RawPointer(gradientStopCollection), angle, &__result);
+        return WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush(consuming: __result);
+    }
+} // ILinearGradientBrushFactory
+
+
+// type: Microsoft.UI.Xaml.Media.ILinearGradientBrushStatics
+// interface type
+open class ILinearGradientBrushStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdf029e84, Data2: 0xf6be, Data3 : 0x5b7e, Data4 : (0xba, 0x22, 0x3b, 0x4e, 0x7a, 0x6b, 0xce, 0xee)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_StartPointProperty()
+    public func _n_get_StartPointProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_StartPointProperty(pThis, __presult))
+        }
+    }
+    public func get_StartPointProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_StartPointProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_EndPointProperty()
+    public func _n_get_EndPointProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EndPointProperty(pThis, __presult))
+        }
+    }
+    public func get_EndPointProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_EndPointProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var EndPointProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_EndPointProperty();
+        }
+    }
+    public var StartPointProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_StartPointProperty();
+        }
+    }
+} // ILinearGradientBrushStatics
+
+
 // type: Microsoft.UI.Xaml.Media.ISolidColorBrush
 // interface type
 open class ISolidColorBrush
@@ -145,8 +547,31 @@ open class ISolidColorBrush
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3865c31, Data2: 0x37c8, Data3 : 0x55c1, Data4 : (0x8a, 0x72, 0xd4, 0x1c, 0x67, 0x64, 0x2e, 0x2a)) }
-// method not needed: get_Color
-// method not needed: put_Color
+    // [IsSpecialName] Windows.UI.Color get_Color()
+    public func _n_get_Color(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Color(pThis, __presult))
+        }
+    }
+    public func get_Color() throws -> WinRT.Windows.UI.Color {
+        var __result : _q_CWindows_CUI_CColor = _q_CWindows_CUI_CColor(A: 0, R: 0, G: 0, B: 0);
+        try self._n_get_Color(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Color(Windows.UI.Color)
+    public func _n_put_Color(_ value : _q_CWindows_CUI_CColor) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Color(pThis, value))
+        }
+    }
+    public func put_Color(value : WinRT.Windows.UI.Color) throws -> Void {
+        try self._n_put_Color(value);
+    }
+    public var Color : WinRT.Windows.UI.Color {
+        get throws {
+            return try get_Color();
+        }
+    }
 } // ISolidColorBrush
 
 
@@ -172,6 +597,107 @@ open class ISolidColorBrushFactory
 } // ISolidColorBrushFactory
 
 
+// type: Microsoft.UI.Xaml.Media.ISolidColorBrushStatics
+// interface type
+open class ISolidColorBrushStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6bc16da0, Data2: 0xc4e6, Data3 : 0x59b8, Data4 : (0x99, 0x5b, 0xb3, 0x1e, 0x48, 0x42, 0x4c, 0x07)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColorProperty()
+    public func _n_get_ColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColorProperty(pThis, __presult))
+        }
+    }
+    public func get_ColorProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ColorProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var ColorProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ColorProperty();
+        }
+    }
+} // ISolidColorBrushStatics
+
+
+// type: Microsoft.UI.Xaml.Media.LinearGradientBrush
+// runtime class
+public class LinearGradientBrush
+    :
+    Microsoft.UI.Xaml.Media.GradientBrush
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush { return _self; }
+    public init(gradientStopCollection : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStopCollection>, angle : Swift.Double) throws {
+        let _af : ILinearGradientBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.LinearGradientBrush"));
+        _self = try _af.CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection: gradientStopCollection!.Interface(), angle: angle)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Media.LinearGradientBrush")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _ILinearGradientBrushStatics {
+        static var x : ILinearGradientBrushStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.LinearGradientBrush"))
+    }
+    public static var LinearGradientBrushStatics : ILinearGradientBrushStatics {
+        _ILinearGradientBrushStatics.x
+    }
+    public static func get_StartPointProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: LinearGradientBrushStatics.get_StartPointProperty());
+    }
+    public static func get_EndPointProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: LinearGradientBrushStatics.get_EndPointProperty());
+    }
+    public static var EndPointProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: LinearGradientBrushStatics.EndPointProperty);
+        }
+    }
+    public static var StartPointProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: LinearGradientBrushStatics.StartPointProperty);
+        }
+    }
+    public func get_StartPoint() throws -> WinRT.Windows.Foundation.Point {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
+        return try _ifc.get_StartPoint();
+    }
+    public func put_StartPoint(value : WinRT.Windows.Foundation.Point) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
+        return try _ifc.put_StartPoint(value: value);
+    }
+    public func get_EndPoint() throws -> WinRT.Windows.Foundation.Point {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
+        return try _ifc.get_EndPoint();
+    }
+    public func put_EndPoint(value : WinRT.Windows.Foundation.Point) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
+        return try _ifc.put_EndPoint(value: value);
+    }
+    public var EndPoint : WinRT.Windows.Foundation.Point {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
+            return try _ifc.EndPoint;
+        }
+    }
+    public var StartPoint : WinRT.Windows.Foundation.Point {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
+            return try _ifc.StartPoint;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Media.SolidColorBrush
 // runtime class
 public class SolidColorBrush
@@ -194,9 +720,35 @@ public class SolidColorBrush
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
     }
-    // static interface not needed: Microsoft.UI.Xaml.Media.ISolidColorBrushStatics
-    // method not needed: get_Color
-    // method not needed: put_Color
+    private struct _ISolidColorBrushStatics {
+        static var x : ISolidColorBrushStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.SolidColorBrush"))
+    }
+    public static var SolidColorBrushStatics : ISolidColorBrushStatics {
+        _ISolidColorBrushStatics.x
+    }
+    public static func get_ColorProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SolidColorBrushStatics.get_ColorProperty());
+    }
+    public static var ColorProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SolidColorBrushStatics.ColorProperty);
+        }
+    }
+    public func get_Color() throws -> WinRT.Windows.UI.Color {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush = try _self.QueryInterface();
+        return try _ifc.get_Color();
+    }
+    public func put_Color(value : WinRT.Windows.UI.Color) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush = try _self.QueryInterface();
+        return try _ifc.put_Color(value: value);
+    }
+    public var Color : WinRT.Windows.UI.Color {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush = try _self.QueryInterface();
+            return try _ifc.Color;
+        }
+    }
 }
 
 }

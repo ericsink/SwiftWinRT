@@ -48,80 +48,80 @@ open class Application
         }
     }
     public func get_Resources() throws -> Optional<WinRT.Microsoft.UI.Xaml.ResourceDictionary> {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.get_Resources());
     }
     public func put_Resources(value : Optional<WinRT.Microsoft.UI.Xaml.ResourceDictionary>) throws -> Void {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.put_Resources(value: value!.Interface());
     }
     public func get_DebugSettings() throws -> Optional<WinRT.Microsoft.UI.Xaml.DebugSettings> {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.DebugSettings(plok: _ifc.get_DebugSettings());
     }
     public func get_RequestedTheme() throws -> WinRT.Microsoft.UI.Xaml.ApplicationTheme {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.get_RequestedTheme();
     }
     public func put_RequestedTheme(value : WinRT.Microsoft.UI.Xaml.ApplicationTheme) throws -> Void {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.put_RequestedTheme(value: value);
     }
     public func get_FocusVisualKind() throws -> WinRT.Microsoft.UI.Xaml.FocusVisualKind {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.get_FocusVisualKind();
     }
     public func put_FocusVisualKind(value : WinRT.Microsoft.UI.Xaml.FocusVisualKind) throws -> Void {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.put_FocusVisualKind(value: value);
     }
     public func get_HighContrastAdjustment() throws -> WinRT.Microsoft.UI.Xaml.ApplicationHighContrastAdjustment {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.get_HighContrastAdjustment();
     }
     public func put_HighContrastAdjustment(value : WinRT.Microsoft.UI.Xaml.ApplicationHighContrastAdjustment) throws -> Void {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.put_HighContrastAdjustment(value: value);
     }
     public func add_UnhandledException(handler : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.add_UnhandledException(handler: handler!.Interface());
     }
     public func remove_UnhandledException(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.remove_UnhandledException(token: token);
     }
     public func Exit() throws -> Void {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.Exit();
     }
     public var DebugSettings : Optional<WinRT.Microsoft.UI.Xaml.DebugSettings> {
         get throws {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.DebugSettings(plok: _ifc.DebugSettings);
         }
     }
     public var FocusVisualKind : WinRT.Microsoft.UI.Xaml.FocusVisualKind {
         get throws {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
             return try _ifc.FocusVisualKind;
         }
     }
     public var HighContrastAdjustment : WinRT.Microsoft.UI.Xaml.ApplicationHighContrastAdjustment {
         get throws {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
             return try _ifc.HighContrastAdjustment;
         }
     }
     public var RequestedTheme : WinRT.Microsoft.UI.Xaml.ApplicationTheme {
         get throws {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
             return try _ifc.RequestedTheme;
         }
     }
     public var Resources : Optional<WinRT.Microsoft.UI.Xaml.ResourceDictionary> {
         get throws {
-        let _ifc : IApplication = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
     }
@@ -230,6 +230,32 @@ public class ApplicationInitializationCallbackParams
 // type: Microsoft.UI.Xaml.ApplicationTheme
 // enum type
 public typealias ApplicationTheme = _q_CMicrosoft_CUI_CXaml_CApplicationTheme;
+
+// type: Microsoft.UI.Xaml.BrushTransition
+// runtime class
+open class BrushTransition
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.IBrushTransition;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IBrushTransition?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.IBrushTransition { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.IBrushTransitionFactory
+    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IBrushTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.BrushTransition"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // method not needed: get_Duration
+    // method not needed: put_Duration
+}
+
+// type: Microsoft.UI.Xaml.CornerRadius
+// struct type
+public typealias CornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius;
 
 // type: Microsoft.UI.Xaml.DebugSettings
 // runtime class
@@ -761,6 +787,42 @@ open class IApplicationStatics
         }
     }
 } // IApplicationStatics
+
+
+// type: Microsoft.UI.Xaml.IBrushTransition
+// interface type
+open class IBrushTransition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa996a7ba, Data2: 0x4567, Data3 : 0x5963, Data4 : (0xa1, 0x12, 0x76, 0xe3, 0xc0, 0x00, 0x02, 0x04)) }
+// method not needed: get_Duration
+// method not needed: put_Duration
+} // IBrushTransition
+
+
+// type: Microsoft.UI.Xaml.IBrushTransitionFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IBrushTransitionFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x13735998, Data2: 0xc3b6, Data3 : 0x5c24, Data4 : (0xb4, 0x0a, 0x7b, 0x16, 0x6a, 0x6f, 0xfc, 0x2c)) }
+    // Microsoft.UI.Xaml.BrushTransition CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIBrushTransitionFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.IBrushTransition> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.IBrushTransition(consuming: __result);
+    }
+} // IBrushTransitionFactory
 
 
 // type: Microsoft.UI.Xaml.IDebugSettings
@@ -2229,148 +2291,148 @@ open class Window
         }
     }
     public func get_Bounds() throws -> WinRT.Windows.Foundation.Rect {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.get_Bounds();
     }
     public func get_Visible() throws -> boolean {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.get_Visible();
     }
     public func get_Content() throws -> Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.get_Content());
     }
     public func put_Content(value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.put_Content(value: value!.Interface());
     }
     public func get_CoreWindow() throws -> Optional<WinRT.Windows.UI.Core.CoreWindow> {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try WinRT.Windows.UI.Core.CoreWindow(plok: _ifc.get_CoreWindow());
     }
     public func get_Compositor() throws -> Optional<WinRT.Microsoft.UI.Composition.Compositor> {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Composition.Compositor(plok: _ifc.get_Compositor());
     }
     public func get_Dispatcher() throws -> Optional<WinRT.Windows.UI.Core.CoreDispatcher> {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try WinRT.Windows.UI.Core.CoreDispatcher(plok: _ifc.get_Dispatcher());
     }
     public func get_DispatcherQueue() throws -> Optional<WinRT.Microsoft.UI.Dispatching.DispatcherQueue> {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.get_DispatcherQueue());
     }
     public func get_Title() throws -> Swift.String {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.get_Title();
     }
     public func put_Title(value : Swift.String) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.put_Title(value: value);
     }
     public func get_ExtendsContentIntoTitleBar() throws -> boolean {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.get_ExtendsContentIntoTitleBar();
     }
     public func put_ExtendsContentIntoTitleBar(value : boolean) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.put_ExtendsContentIntoTitleBar(value: value);
     }
     public func add_Activated(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.add_Activated(handler: handler);
     }
     public func remove_Activated(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_Activated(token: token);
     }
     public func add_Closed(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.add_Closed(handler: handler);
     }
     public func remove_Closed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_Closed(token: token);
     }
     public func add_SizeChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.add_SizeChanged(handler: handler);
     }
     public func remove_SizeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_SizeChanged(token: token);
     }
     public func add_VisibilityChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.add_VisibilityChanged(handler: handler);
     }
     public func remove_VisibilityChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_VisibilityChanged(token: token);
     }
     public func Activate() throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.Activate();
     }
     public func Close() throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.Close();
     }
     public func SetTitleBar(titleBar : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.SetTitleBar(titleBar: titleBar!.Interface());
     }
     public var Bounds : WinRT.Windows.Foundation.Rect {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try _ifc.Bounds;
         }
     }
     public var Compositor : Optional<WinRT.Microsoft.UI.Composition.Compositor> {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Composition.Compositor(plok: _ifc.Compositor);
         }
     }
     public var Content : Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.Content);
         }
     }
     public var CoreWindow : Optional<WinRT.Windows.UI.Core.CoreWindow> {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try WinRT.Windows.UI.Core.CoreWindow(plok: _ifc.CoreWindow);
         }
     }
     public var Dispatcher : Optional<WinRT.Windows.UI.Core.CoreDispatcher> {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try WinRT.Windows.UI.Core.CoreDispatcher(plok: _ifc.Dispatcher);
         }
     }
     public var DispatcherQueue : Optional<WinRT.Microsoft.UI.Dispatching.DispatcherQueue> {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.DispatcherQueue);
         }
     }
     public var ExtendsContentIntoTitleBar : boolean {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try _ifc.ExtendsContentIntoTitleBar;
         }
     }
     public var Title : Swift.String {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try _ifc.Title;
         }
     }
     public var Visible : boolean {
         get throws {
-        let _ifc : IWindow = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
             return try _ifc.Visible;
         }
     }

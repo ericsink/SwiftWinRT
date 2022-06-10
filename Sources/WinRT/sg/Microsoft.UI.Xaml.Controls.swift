@@ -5,6 +5,10 @@
 import CWinRT;
 
 extension Microsoft.UI.Xaml.Controls {
+// type: Microsoft.UI.Xaml.Controls.BackgroundSizing
+// enum type
+public typealias BackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing;
+
 // type: Microsoft.UI.Xaml.Controls.ContextMenuEventArgs
 // runtime class
 public class ContextMenuEventArgs
@@ -122,6 +126,29 @@ open class IContextMenuEventArgs
 } // IContextMenuEventArgs
 
 
+// type: Microsoft.UI.Xaml.Controls.IInsertionPanel
+// interface type
+open class IInsertionPanel
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x84e13e27, Data2: 0x2d24, Data3 : 0x59c4, Data4 : (0xa0, 0x0e, 0x16, 0xc7, 0x25, 0x59, 0x01, 0xe2)) }
+    // void GetInsertionIndexes(Windows.Foundation.Point, ref System.Int32, ref System.Int32)
+    public func _n_GetInsertionIndexes(_ position : _q_CWindows_CFoundation_CPoint, _ first : UnsafeMutablePointer<INT32>, _ second : UnsafeMutablePointer<INT32>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIInsertionPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetInsertionIndexes(pThis, position, first, second))
+        }
+    }
+    public func GetInsertionIndexes(position : WinRT.Windows.Foundation.Point, first : inout Swift.Int32, second : inout Swift.Int32) throws -> Void {
+            var _tmp_out_first: INT32 = 0;
+            var _tmp_out_second: INT32 = 0;
+        try self._n_GetInsertionIndexes(position, &_tmp_out_first, &_tmp_out_second);
+            first = _tmp_out_first;
+            second = _tmp_out_second;
+    }
+} // IInsertionPanel
+
+
 // type: Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs
 // interface type
 open class IIsTextTrimmedChangedEventArgs
@@ -130,6 +157,577 @@ open class IIsTextTrimmedChangedEventArgs
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3c709b2f, Data2: 0x16ba, Data3 : 0x55d2, Data4 : (0xb6, 0xf6, 0xdf, 0xc5, 0x4a, 0x1e, 0xd0, 0x21)) }
 } // IIsTextTrimmedChangedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IPanel
+// interface type
+open class IPanel
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x27a1b418, Data2: 0x56f3, Data3 : 0x525e, Data4 : (0xb8, 0x83, 0xce, 0xfe, 0xd9, 0x05, 0xee, 0xd3)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.UIElementCollection get_Children()
+    public func _n_get_Children(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Children(pThis, __presult))
+        }
+    }
+    public func get_Children() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement>> = nil;
+        try self._n_get_Children(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_Background()
+    public func _n_get_Background(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Background(pThis, __presult))
+        }
+    }
+    public func get_Background() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_Background(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_Background(Microsoft.UI.Xaml.Media.Brush)
+    public func _n_put_Background(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Background(pThis, value))
+        }
+    }
+    public func put_Background(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_Background(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_IsItemsHost()
+    public func _n_get_IsItemsHost(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsItemsHost(pThis, __presult))
+        }
+    }
+    public func get_IsItemsHost() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsItemsHost(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_ChildrenTransitions()
+    public func _n_get_ChildrenTransitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildrenTransitions(pThis, __presult))
+        }
+    }
+    public func get_ChildrenTransitions() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
+        try self._n_get_ChildrenTransitions(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_ChildrenTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
+    public func _n_put_ChildrenTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ChildrenTransitions(pThis, value))
+        }
+    }
+    public func put_ChildrenTransitions(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_ChildrenTransitions(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.BrushTransition get_BackgroundTransition()
+    public func _n_get_BackgroundTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundTransition(pThis, __presult))
+        }
+    }
+    public func get_BackgroundTransition() throws -> Optional<WinRT.Microsoft.UI.Xaml.IBrushTransition> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>> = nil;
+        try self._n_get_BackgroundTransition(&__result);
+        return WinRT.Microsoft.UI.Xaml.IBrushTransition(consuming: __result);
+    }
+    // [IsSpecialName] void put_BackgroundTransition(Microsoft.UI.Xaml.BrushTransition)
+    public func _n_put_BackgroundTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BackgroundTransition(pThis, value))
+        }
+    }
+    public func put_BackgroundTransition(value : Optional<WinRT.Microsoft.UI.Xaml.IBrushTransition>) throws -> Void {
+        try self._n_put_BackgroundTransition(RawPointer(value));
+    }
+    public var Background : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_Background();
+        }
+    }
+    public var BackgroundTransition : Optional<WinRT.Microsoft.UI.Xaml.IBrushTransition> {
+        get throws {
+            return try get_BackgroundTransition();
+        }
+    }
+    public var Children : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Children();
+        }
+    }
+    public var ChildrenTransitions : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_ChildrenTransitions();
+        }
+    }
+    public var IsItemsHost : boolean {
+        get throws {
+            return try get_IsItemsHost();
+        }
+    }
+} // IPanel
+
+
+// type: Microsoft.UI.Xaml.Controls.IPanelFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IPanelFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf5e7e21c, Data2: 0x4c97, Data3 : 0x5d20, Data4 : (0xbe, 0xe6, 0x3e, 0x4f, 0xc6, 0xab, 0x14, 0xe9)) }
+    // Microsoft.UI.Xaml.Controls.Panel CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIPanel>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanelFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IPanel> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIPanel>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IPanel(consuming: __result);
+    }
+} // IPanelFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IPanelStatics
+// interface type
+open class IPanelStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x76a9caa7, Data2: 0xa5d4, Data3 : 0x5061, Data4 : (0xa3, 0x25, 0x17, 0xc7, 0x6f, 0x66, 0xde, 0x51)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundProperty()
+    public func _n_get_BackgroundProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsItemsHostProperty()
+    public func _n_get_IsItemsHostProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsItemsHostProperty(pThis, __presult))
+        }
+    }
+    public func get_IsItemsHostProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsItemsHostProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ChildrenTransitionsProperty()
+    public func _n_get_ChildrenTransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildrenTransitionsProperty(pThis, __presult))
+        }
+    }
+    public func get_ChildrenTransitionsProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ChildrenTransitionsProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var BackgroundProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundProperty();
+        }
+    }
+    public var ChildrenTransitionsProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ChildrenTransitionsProperty();
+        }
+    }
+    public var IsItemsHostProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsItemsHostProperty();
+        }
+    }
+} // IPanelStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IStackPanel
+// interface type
+open class IStackPanel
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x493ab00b, Data2: 0x3a6a, Data3 : 0x5e4a, Data4 : (0x94, 0x52, 0x40, 0x7c, 0xd5, 0x19, 0x74, 0x06)) }
+    // [IsSpecialName] bool get_AreScrollSnapPointsRegular()
+    public func _n_get_AreScrollSnapPointsRegular(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AreScrollSnapPointsRegular(pThis, __presult))
+        }
+    }
+    public func get_AreScrollSnapPointsRegular() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AreScrollSnapPointsRegular(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AreScrollSnapPointsRegular(bool)
+    public func _n_put_AreScrollSnapPointsRegular(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AreScrollSnapPointsRegular(pThis, value))
+        }
+    }
+    public func put_AreScrollSnapPointsRegular(value : boolean) throws -> Void {
+        try self._n_put_AreScrollSnapPointsRegular(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Orientation get_Orientation()
+    public func _n_get_Orientation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_COrientation>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orientation(pThis, __presult))
+        }
+    }
+    public func get_Orientation() throws -> WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_COrientation = _q_CMicrosoft_CUI_CXaml_CControls_COrientation_Vertical;
+        try self._n_get_Orientation(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
+    public func _n_put_Orientation(_ value : _q_CMicrosoft_CUI_CXaml_CControls_COrientation) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Orientation(pThis, value))
+        }
+    }
+    public func put_Orientation(value : WinRT.Microsoft.UI.Xaml.Controls.Orientation) throws -> Void {
+        try self._n_put_Orientation(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.BackgroundSizing get_BackgroundSizing()
+    public func _n_get_BackgroundSizing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizing(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizing() throws -> WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_InnerBorderEdge;
+        try self._n_get_BackgroundSizing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
+    public func _n_put_BackgroundSizing(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BackgroundSizing(pThis, value))
+        }
+    }
+    public func put_BackgroundSizing(value : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        try self._n_put_BackgroundSizing(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_BorderBrush()
+    public func _n_get_BorderBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrush(pThis, __presult))
+        }
+    }
+    public func get_BorderBrush() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_BorderBrush(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
+    public func _n_put_BorderBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderBrush(pThis, value))
+        }
+    }
+    public func put_BorderBrush(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_BorderBrush(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_BorderThickness()
+    public func _n_get_BorderThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThickness(pThis, __presult))
+        }
+    }
+    public func get_BorderThickness() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_BorderThickness(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BorderThickness(Microsoft.UI.Xaml.Thickness)
+    public func _n_put_BorderThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderThickness(pThis, value))
+        }
+    }
+    public func put_BorderThickness(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_BorderThickness(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.CornerRadius get_CornerRadius()
+    public func _n_get_CornerRadius(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CCornerRadius>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadius(pThis, __presult))
+        }
+    }
+    public func get_CornerRadius() throws -> WinRT.Microsoft.UI.Xaml.CornerRadius {
+        var __result : _q_CMicrosoft_CUI_CXaml_CCornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius(TopLeft: 0, TopRight: 0, BottomRight: 0, BottomLeft: 0);
+        try self._n_get_CornerRadius(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
+    public func _n_put_CornerRadius(_ value : _q_CMicrosoft_CUI_CXaml_CCornerRadius) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CornerRadius(pThis, value))
+        }
+    }
+    public func put_CornerRadius(value : WinRT.Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        try self._n_put_CornerRadius(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Padding()
+    public func _n_get_Padding(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Padding(pThis, __presult))
+        }
+    }
+    public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_Padding(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Padding(Microsoft.UI.Xaml.Thickness)
+    public func _n_put_Padding(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Padding(pThis, value))
+        }
+    }
+    public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_Padding(value);
+    }
+    // [IsSpecialName] System.Double get_Spacing()
+    public func _n_get_Spacing(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Spacing(pThis, __presult))
+        }
+    }
+    public func get_Spacing() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_Spacing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Spacing(System.Double)
+    public func _n_put_Spacing(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Spacing(pThis, value))
+        }
+    }
+    public func put_Spacing(value : Swift.Double) throws -> Void {
+        try self._n_put_Spacing(value);
+    }
+    public var AreScrollSnapPointsRegular : boolean {
+        get throws {
+            return try get_AreScrollSnapPointsRegular();
+        }
+    }
+    public var BackgroundSizing : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+            return try get_BackgroundSizing();
+        }
+    }
+    public var BorderBrush : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_BorderBrush();
+        }
+    }
+    public var BorderThickness : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_BorderThickness();
+        }
+    }
+    public var CornerRadius : WinRT.Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+            return try get_CornerRadius();
+        }
+    }
+    public var Orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        get throws {
+            return try get_Orientation();
+        }
+    }
+    public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_Padding();
+        }
+    }
+    public var Spacing : Swift.Double {
+        get throws {
+            return try get_Spacing();
+        }
+    }
+} // IStackPanel
+
+
+// type: Microsoft.UI.Xaml.Controls.IStackPanelFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IStackPanelFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x64c1d388, Data2: 0x47a2, Data3 : 0x5a74, Data4 : (0xa7, 0x5b, 0x55, 0x9d, 0x15, 0x1e, 0xe5, 0xac)) }
+    // Microsoft.UI.Xaml.Controls.StackPanel CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IStackPanel> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IStackPanel(consuming: __result);
+    }
+} // IStackPanelFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IStackPanelStatics
+// interface type
+open class IStackPanelStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x10bb04e3, Data2: 0xeb01, Data3 : 0x5ea8, Data4 : (0x9f, 0x96, 0x69, 0x50, 0x84, 0x79, 0xde, 0xf9)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AreScrollSnapPointsRegularProperty()
+    public func _n_get_AreScrollSnapPointsRegularProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AreScrollSnapPointsRegularProperty(pThis, __presult))
+        }
+    }
+    public func get_AreScrollSnapPointsRegularProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_AreScrollSnapPointsRegularProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_OrientationProperty()
+    public func _n_get_OrientationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_OrientationProperty(pThis, __presult))
+        }
+    }
+    public func get_OrientationProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_OrientationProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundSizingProperty()
+    public func _n_get_BackgroundSizingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizingProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundSizingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderBrushProperty()
+    public func _n_get_BorderBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrushProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderBrushProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderBrushProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderThicknessProperty()
+    public func _n_get_BorderThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThicknessProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderThicknessProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderThicknessProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CornerRadiusProperty()
+    public func _n_get_CornerRadiusProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadiusProperty(pThis, __presult))
+        }
+    }
+    public func get_CornerRadiusProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CornerRadiusProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PaddingProperty()
+    public func _n_get_PaddingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaddingProperty(pThis, __presult))
+        }
+    }
+    public func get_PaddingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PaddingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SpacingProperty()
+    public func _n_get_SpacingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SpacingProperty(pThis, __presult))
+        }
+    }
+    public func get_SpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SpacingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var AreScrollSnapPointsRegularProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_AreScrollSnapPointsRegularProperty();
+        }
+    }
+    public var BackgroundSizingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundSizingProperty();
+        }
+    }
+    public var BorderBrushProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderBrushProperty();
+        }
+    }
+    public var BorderThicknessProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderThicknessProperty();
+        }
+    }
+    public var CornerRadiusProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CornerRadiusProperty();
+        }
+    }
+    public var OrientationProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_OrientationProperty();
+        }
+    }
+    public var PaddingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PaddingProperty();
+        }
+    }
+    public var SpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SpacingProperty();
+        }
+    }
+} // IStackPanelStatics
 
 
 // type: Microsoft.UI.Xaml.Controls.ITextBlock
@@ -1454,6 +2052,25 @@ open class ITextBlockStatics
 } // ITextBlockStatics
 
 
+// type: Microsoft.UI.Xaml.Controls.IUIElementCollection
+// interface type
+open class IUIElementCollection
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x23050cb1, Data2: 0xdb88, Data3 : 0x54ed, Data4 : (0x90, 0x83, 0x5e, 0xcf, 0xb1, 0x25, 0x12, 0xfd)) }
+    // void Move(System.UInt32, System.UInt32)
+    public func _n_Move(_ oldIndex : UINT32, _ newIndex : UINT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIUIElementCollection.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Move(pThis, oldIndex, newIndex))
+        }
+    }
+    public func Move(oldIndex : Swift.UInt32, newIndex : Swift.UInt32) throws -> Void {
+        try self._n_Move(oldIndex, newIndex);
+    }
+} // IUIElementCollection
+
+
 // type: Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs
 // runtime class
 public class IsTextTrimmedChangedEventArgs
@@ -1463,6 +2080,382 @@ public class IsTextTrimmedChangedEventArgs
         _self = plok!
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs { return _self; }
+}
+
+// type: Microsoft.UI.Xaml.Controls.Orientation
+// enum type
+public typealias Orientation = _q_CMicrosoft_CUI_CXaml_CControls_COrientation;
+
+// type: Microsoft.UI.Xaml.Controls.Panel
+// runtime class
+open class Panel
+    :
+    Microsoft.UI.Xaml.FrameworkElement
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IPanel;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IPanel?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IPanel { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IPanelFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IPanelFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Panel"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    private struct _IPanelStatics {
+        static var x : IPanelStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Panel"))
+    }
+    public static var PanelStatics : IPanelStatics {
+        _IPanelStatics.x
+    }
+    public static func get_BackgroundProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: PanelStatics.get_BackgroundProperty());
+    }
+    public static func get_IsItemsHostProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: PanelStatics.get_IsItemsHostProperty());
+    }
+    public static func get_ChildrenTransitionsProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: PanelStatics.get_ChildrenTransitionsProperty());
+    }
+    public static var BackgroundProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: PanelStatics.BackgroundProperty);
+        }
+    }
+    public static var ChildrenTransitionsProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: PanelStatics.ChildrenTransitionsProperty);
+        }
+    }
+    public static var IsItemsHostProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: PanelStatics.IsItemsHostProperty);
+        }
+    }
+    public func get_Children() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.UIElementCollection> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.UIElementCollection(plok: _ifc.get_Children());
+    }
+    public func get_Background() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_Background());
+    }
+    public func put_Background(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try _ifc.put_Background(value: value!.Interface());
+    }
+    public func get_IsItemsHost() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try _ifc.get_IsItemsHost();
+    }
+    public func get_ChildrenTransitions() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.get_ChildrenTransitions());
+    }
+    public func put_ChildrenTransitions(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try _ifc.put_ChildrenTransitions(value: value!.Interface());
+    }
+    public func get_BackgroundTransition() throws -> Optional<WinRT.Microsoft.UI.Xaml.BrushTransition> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.BrushTransition(plok: _ifc.get_BackgroundTransition());
+    }
+    public func put_BackgroundTransition(value : Optional<WinRT.Microsoft.UI.Xaml.BrushTransition>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+        return try _ifc.put_BackgroundTransition(value: value!.Interface());
+    }
+    public var Background : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.Background);
+        }
+    }
+    public var BackgroundTransition : Optional<WinRT.Microsoft.UI.Xaml.BrushTransition> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.BrushTransition(plok: _ifc.BackgroundTransition);
+        }
+    }
+    public var Children : Optional<WinRT.Microsoft.UI.Xaml.Controls.UIElementCollection> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Controls.UIElementCollection(plok: _ifc.Children);
+        }
+    }
+    public var ChildrenTransitions : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.ChildrenTransitions);
+        }
+    }
+    public var IsItemsHost : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IPanel = try _self.QueryInterface();
+            return try _ifc.IsItemsHost;
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.StackPanel
+// runtime class
+open class StackPanel
+    :
+    Microsoft.UI.Xaml.Controls.Panel
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IStackPanel?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IStackPanel { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IStackPanelFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IStackPanelFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.StackPanel"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    private struct _IStackPanelStatics {
+        static var x : IStackPanelStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.StackPanel"))
+    }
+    public static var StackPanelStatics : IStackPanelStatics {
+        _IStackPanelStatics.x
+    }
+    public static func get_AreScrollSnapPointsRegularProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_AreScrollSnapPointsRegularProperty());
+    }
+    public static func get_OrientationProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_OrientationProperty());
+    }
+    public static func get_BackgroundSizingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_BackgroundSizingProperty());
+    }
+    public static func get_BorderBrushProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_BorderBrushProperty());
+    }
+    public static func get_BorderThicknessProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_BorderThicknessProperty());
+    }
+    public static func get_CornerRadiusProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_CornerRadiusProperty());
+    }
+    public static func get_PaddingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_PaddingProperty());
+    }
+    public static func get_SpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.get_SpacingProperty());
+    }
+    public static var AreScrollSnapPointsRegularProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.AreScrollSnapPointsRegularProperty);
+        }
+    }
+    public static var BackgroundSizingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.BackgroundSizingProperty);
+        }
+    }
+    public static var BorderBrushProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.BorderBrushProperty);
+        }
+    }
+    public static var BorderThicknessProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.BorderThicknessProperty);
+        }
+    }
+    public static var CornerRadiusProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.CornerRadiusProperty);
+        }
+    }
+    public static var OrientationProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.OrientationProperty);
+        }
+    }
+    public static var PaddingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.PaddingProperty);
+        }
+    }
+    public static var SpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: StackPanelStatics.SpacingProperty);
+        }
+    }
+    public func get_AreScrollSnapPointsRegular() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_AreScrollSnapPointsRegular();
+    }
+    public func put_AreScrollSnapPointsRegular(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_AreScrollSnapPointsRegular(value: value);
+    }
+    public func get_Orientation() throws -> WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_Orientation();
+    }
+    public func put_Orientation(value : WinRT.Microsoft.UI.Xaml.Controls.Orientation) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_Orientation(value: value);
+    }
+    public func get_BackgroundSizing() throws -> WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_BackgroundSizing();
+    }
+    public func put_BackgroundSizing(value : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_BackgroundSizing(value: value);
+    }
+    public func get_BorderBrush() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_BorderBrush());
+    }
+    public func put_BorderBrush(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_BorderBrush(value: value!.Interface());
+    }
+    public func get_BorderThickness() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_BorderThickness();
+    }
+    public func put_BorderThickness(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_BorderThickness(value: value);
+    }
+    public func get_CornerRadius() throws -> WinRT.Microsoft.UI.Xaml.CornerRadius {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_CornerRadius();
+    }
+    public func put_CornerRadius(value : WinRT.Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_CornerRadius(value: value);
+    }
+    public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_Padding();
+    }
+    public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_Padding(value: value);
+    }
+    public func get_Spacing() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.get_Spacing();
+    }
+    public func put_Spacing(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+        return try _ifc.put_Spacing(value: value);
+    }
+    public var AreScrollSnapPointsRegular : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.AreScrollSnapPointsRegular;
+        }
+    }
+    public var BackgroundSizing : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.BackgroundSizing;
+        }
+    }
+    public var BorderBrush : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.BorderBrush);
+        }
+    }
+    public var BorderThickness : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.BorderThickness;
+        }
+    }
+    public var CornerRadius : WinRT.Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.CornerRadius;
+        }
+    }
+    public var Orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.Orientation;
+        }
+    }
+    public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.Padding;
+        }
+    }
+    public var Spacing : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IStackPanel = try _self.QueryInterface();
+            return try _ifc.Spacing;
+        }
+    }
+    public func get_AreHorizontalSnapPointsRegular() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.get_AreHorizontalSnapPointsRegular();
+    }
+    public func get_AreVerticalSnapPointsRegular() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.get_AreVerticalSnapPointsRegular();
+    }
+    public func add_HorizontalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.add_HorizontalSnapPointsChanged(handler: handler);
+    }
+    public func remove_HorizontalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.remove_HorizontalSnapPointsChanged(token: token);
+    }
+    public func add_VerticalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.add_VerticalSnapPointsChanged(handler: handler);
+    }
+    public func remove_VerticalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.remove_VerticalSnapPointsChanged(token: token);
+    }
+    public func GetIrregularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment) throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1_FLOAT> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.GetIrregularSnapPoints(orientation: orientation, alignment: alignment);
+    }
+    public func GetRegularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment, offset : inout Swift.Float) throws -> Swift.Float {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+        return try _ifc.GetRegularSnapPoints(orientation: orientation, alignment: alignment, offset: &offset);
+    }
+    public var AreHorizontalSnapPointsRegular : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+            return try _ifc.AreHorizontalSnapPointsRegular;
+        }
+    }
+    public var AreVerticalSnapPointsRegular : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
+            return try _ifc.AreVerticalSnapPointsRegular;
+        }
+    }
+    public func GetInsertionIndexes(position : WinRT.Windows.Foundation.Point, first : inout Swift.Int32, second : inout Swift.Int32) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IInsertionPanel = try _self.QueryInterface();
+        return try _ifc.GetInsertionIndexes(position: position, first: &first, second: &second);
+    }
 }
 
 // type: Microsoft.UI.Xaml.Controls.TextBlock
@@ -1706,485 +2699,540 @@ public class TextBlock
         }
     }
     public func get_FontSize() throws -> Swift.Double {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_FontSize();
     }
     public func put_FontSize(value : Swift.Double) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_FontSize(value: value);
     }
     public func get_FontFamily() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.FontFamily> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Media.FontFamily(plok: _ifc.get_FontFamily());
     }
     public func put_FontFamily(value : Optional<WinRT.Microsoft.UI.Xaml.Media.FontFamily>) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_FontFamily(value: value!.Interface());
     }
     public func get_FontWeight() throws -> WinRT.Windows.UI.Text.FontWeight {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_FontWeight();
     }
     public func put_FontWeight(value : WinRT.Windows.UI.Text.FontWeight) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_FontWeight(value: value);
     }
     public func get_FontStyle() throws -> WinRT.Windows.UI.Text.FontStyle {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_FontStyle();
     }
     public func put_FontStyle(value : WinRT.Windows.UI.Text.FontStyle) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_FontStyle(value: value);
     }
     public func get_FontStretch() throws -> WinRT.Windows.UI.Text.FontStretch {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_FontStretch();
     }
     public func put_FontStretch(value : WinRT.Windows.UI.Text.FontStretch) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_FontStretch(value: value);
     }
     public func get_CharacterSpacing() throws -> Swift.Int32 {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_CharacterSpacing();
     }
     public func put_CharacterSpacing(value : Swift.Int32) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_CharacterSpacing(value: value);
     }
     public func get_Foreground() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_Foreground());
     }
     public func put_Foreground(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_Foreground(value: value!.Interface());
     }
     public func get_TextWrapping() throws -> WinRT.Microsoft.UI.Xaml.TextWrapping {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextWrapping();
     }
     public func put_TextWrapping(value : WinRT.Microsoft.UI.Xaml.TextWrapping) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextWrapping(value: value);
     }
     public func get_TextTrimming() throws -> WinRT.Microsoft.UI.Xaml.TextTrimming {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextTrimming();
     }
     public func put_TextTrimming(value : WinRT.Microsoft.UI.Xaml.TextTrimming) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextTrimming(value: value);
     }
     public func get_TextAlignment() throws -> WinRT.Microsoft.UI.Xaml.TextAlignment {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextAlignment();
     }
     public func put_TextAlignment(value : WinRT.Microsoft.UI.Xaml.TextAlignment) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextAlignment(value: value);
     }
     public func get_Text() throws -> Swift.String {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_Text();
     }
     public func put_Text(value : Swift.String) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_Text(value: value);
     }
     public func get_Inlines() throws -> Optional<WinRT.Microsoft.UI.Xaml.Documents.InlineCollection> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Documents.InlineCollection(plok: _ifc.get_Inlines());
     }
     public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_Padding();
     }
     public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_Padding(value: value);
     }
     public func get_LineHeight() throws -> Swift.Double {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_LineHeight();
     }
     public func put_LineHeight(value : Swift.Double) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_LineHeight(value: value);
     }
     public func get_LineStackingStrategy() throws -> WinRT.Microsoft.UI.Xaml.LineStackingStrategy {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_LineStackingStrategy();
     }
     public func put_LineStackingStrategy(value : WinRT.Microsoft.UI.Xaml.LineStackingStrategy) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_LineStackingStrategy(value: value);
     }
     public func get_IsTextSelectionEnabled() throws -> boolean {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_IsTextSelectionEnabled();
     }
     public func put_IsTextSelectionEnabled(value : boolean) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_IsTextSelectionEnabled(value: value);
     }
     public func get_SelectedText() throws -> Swift.String {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_SelectedText();
     }
     public func get_ContentStart() throws -> Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.get_ContentStart());
     }
     public func get_ContentEnd() throws -> Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.get_ContentEnd());
     }
     public func get_SelectionStart() throws -> Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.get_SelectionStart());
     }
     public func get_SelectionEnd() throws -> Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.get_SelectionEnd());
     }
     public func get_BaselineOffset() throws -> Swift.Double {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_BaselineOffset();
     }
     public func get_SelectionHighlightColor() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.SolidColorBrush> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Media.SolidColorBrush(plok: _ifc.get_SelectionHighlightColor());
     }
     public func put_SelectionHighlightColor(value : Optional<WinRT.Microsoft.UI.Xaml.Media.SolidColorBrush>) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_SelectionHighlightColor(value: value!.Interface());
     }
     public func get_MaxLines() throws -> Swift.Int32 {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_MaxLines();
     }
     public func put_MaxLines(value : Swift.Int32) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_MaxLines(value: value);
     }
     public func get_TextLineBounds() throws -> WinRT.Microsoft.UI.Xaml.TextLineBounds {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextLineBounds();
     }
     public func put_TextLineBounds(value : WinRT.Microsoft.UI.Xaml.TextLineBounds) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextLineBounds(value: value);
     }
     public func get_OpticalMarginAlignment() throws -> WinRT.Microsoft.UI.Xaml.OpticalMarginAlignment {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_OpticalMarginAlignment();
     }
     public func put_OpticalMarginAlignment(value : WinRT.Microsoft.UI.Xaml.OpticalMarginAlignment) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_OpticalMarginAlignment(value: value);
     }
     public func get_IsColorFontEnabled() throws -> boolean {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_IsColorFontEnabled();
     }
     public func put_IsColorFontEnabled(value : boolean) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_IsColorFontEnabled(value: value);
     }
     public func get_TextReadingOrder() throws -> WinRT.Microsoft.UI.Xaml.TextReadingOrder {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextReadingOrder();
     }
     public func put_TextReadingOrder(value : WinRT.Microsoft.UI.Xaml.TextReadingOrder) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextReadingOrder(value: value);
     }
     public func get_IsTextScaleFactorEnabled() throws -> boolean {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_IsTextScaleFactorEnabled();
     }
     public func put_IsTextScaleFactorEnabled(value : boolean) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_IsTextScaleFactorEnabled(value: value);
     }
     public func get_TextDecorations() throws -> WinRT.Windows.UI.Text.TextDecorations {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextDecorations();
     }
     public func put_TextDecorations(value : WinRT.Windows.UI.Text.TextDecorations) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextDecorations(value: value);
     }
     public func get_IsTextTrimmed() throws -> boolean {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_IsTextTrimmed();
     }
     public func get_HorizontalTextAlignment() throws -> WinRT.Microsoft.UI.Xaml.TextAlignment {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_HorizontalTextAlignment();
     }
     public func put_HorizontalTextAlignment(value : WinRT.Microsoft.UI.Xaml.TextAlignment) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_HorizontalTextAlignment(value: value);
     }
     public func get_TextHighlighters() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextHighlighters();
     }
     public func get_SelectionFlyout() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.get_SelectionFlyout());
     }
     public func put_SelectionFlyout(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase>) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_SelectionFlyout(value: value!.Interface());
     }
     public func add_SelectionChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.add_SelectionChanged(handler: handler!.Interface());
     }
     public func remove_SelectionChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.remove_SelectionChanged(token: token);
     }
     public func add_ContextMenuOpening(handler : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.add_ContextMenuOpening(handler: handler!.Interface());
     }
     public func remove_ContextMenuOpening(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.remove_ContextMenuOpening(token: token);
     }
     public func add_IsTextTrimmedChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.add_IsTextTrimmedChanged(handler: handler);
     }
     public func remove_IsTextTrimmedChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.remove_IsTextTrimmedChanged(token: token);
     }
     public func SelectAll() throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.SelectAll();
     }
     public func Select(start : Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer>, end : Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer>) throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.Select(start: start!.Interface(), end: end!.Interface());
     }
     public func GetAlphaMask() throws -> Optional<WinRT.Microsoft.UI.Composition.CompositionBrush> {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Composition.CompositionBrush(plok: _ifc.GetAlphaMask());
     }
     public func CopySelectionToClipboard() throws -> Void {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.CopySelectionToClipboard();
     }
     public var BaselineOffset : Swift.Double {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.BaselineOffset;
         }
     }
     public var CharacterSpacing : Swift.Int32 {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.CharacterSpacing;
         }
     }
     public var ContentEnd : Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.ContentEnd);
         }
     }
     public var ContentStart : Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.ContentStart);
         }
     }
     public var FontFamily : Optional<WinRT.Microsoft.UI.Xaml.Media.FontFamily> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Media.FontFamily(plok: _ifc.FontFamily);
         }
     }
     public var FontSize : Swift.Double {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.FontSize;
         }
     }
     public var FontStretch : WinRT.Windows.UI.Text.FontStretch {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.FontStretch;
         }
     }
     public var FontStyle : WinRT.Windows.UI.Text.FontStyle {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.FontStyle;
         }
     }
     public var FontWeight : WinRT.Windows.UI.Text.FontWeight {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.FontWeight;
         }
     }
     public var Foreground : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.Foreground);
         }
     }
     public var HorizontalTextAlignment : WinRT.Microsoft.UI.Xaml.TextAlignment {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.HorizontalTextAlignment;
         }
     }
     public var Inlines : Optional<WinRT.Microsoft.UI.Xaml.Documents.InlineCollection> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Documents.InlineCollection(plok: _ifc.Inlines);
         }
     }
     public var IsColorFontEnabled : boolean {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.IsColorFontEnabled;
         }
     }
     public var IsTextScaleFactorEnabled : boolean {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.IsTextScaleFactorEnabled;
         }
     }
     public var IsTextSelectionEnabled : boolean {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.IsTextSelectionEnabled;
         }
     }
     public var IsTextTrimmed : boolean {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.IsTextTrimmed;
         }
     }
     public var LineHeight : Swift.Double {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.LineHeight;
         }
     }
     public var LineStackingStrategy : WinRT.Microsoft.UI.Xaml.LineStackingStrategy {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.LineStackingStrategy;
         }
     }
     public var MaxLines : Swift.Int32 {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.MaxLines;
         }
     }
     public var OpticalMarginAlignment : WinRT.Microsoft.UI.Xaml.OpticalMarginAlignment {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.OpticalMarginAlignment;
         }
     }
     public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.Padding;
         }
     }
     public var SelectedText : Swift.String {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.SelectedText;
         }
     }
     public var SelectionEnd : Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.SelectionEnd);
         }
     }
     public var SelectionFlyout : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.SelectionFlyout);
         }
     }
     public var SelectionHighlightColor : Optional<WinRT.Microsoft.UI.Xaml.Media.SolidColorBrush> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Media.SolidColorBrush(plok: _ifc.SelectionHighlightColor);
         }
     }
     public var SelectionStart : Optional<WinRT.Microsoft.UI.Xaml.Documents.TextPointer> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.SelectionStart);
         }
     }
     public var Text : Swift.String {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.Text;
         }
     }
     public var TextAlignment : WinRT.Microsoft.UI.Xaml.TextAlignment {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextAlignment;
         }
     }
     public var TextDecorations : WinRT.Windows.UI.Text.TextDecorations {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextDecorations;
         }
     }
     public var TextHighlighters : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextHighlighters;
         }
     }
     public var TextLineBounds : WinRT.Microsoft.UI.Xaml.TextLineBounds {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextLineBounds;
         }
     }
     public var TextReadingOrder : WinRT.Microsoft.UI.Xaml.TextReadingOrder {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextReadingOrder;
         }
     }
     public var TextTrimming : WinRT.Microsoft.UI.Xaml.TextTrimming {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextTrimming;
         }
     }
     public var TextWrapping : WinRT.Microsoft.UI.Xaml.TextWrapping {
         get throws {
-        let _ifc : ITextBlock = try _self.QueryInterface();
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextWrapping;
         }
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.UIElementCollection
+// runtime class
+public class UIElementCollection
+{
+    private var _self : WinRT.IInspectable;
+    internal init(plok: WinRT.IInspectable?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.IInspectable { return _self; }
+    public func Move(oldIndex : Swift.UInt32, newIndex : Swift.UInt32) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IUIElementCollection = try _self.QueryInterface();
+        return try _ifc.Move(oldIndex: oldIndex, newIndex: newIndex);
+    }
+    // method not needed: GetAt
+    // method not needed: get_Size
+    // method not needed: GetView
+    // method not needed: IndexOf
+    // method not needed: SetAt
+    // method not needed: InsertAt
+    // method not needed: RemoveAt
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        return try _ifc.Append(value: value!.Interface());
+    }
+    // method not needed: RemoveAtEnd
+    // method not needed: Clear
+    // method not needed: GetMany
+    // method not needed: ReplaceAll
+    // method not needed: First
+}
+
+}
+extension WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+    public static var InnerBorderEdge : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_InnerBorderEdge;
+        }
+    }
+    public static var OuterBorderEdge : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_OuterBorderEdge;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+    public static var Vertical : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_COrientation_Vertical;
+        }
+    }
+    public static var Horizontal : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_COrientation_Horizontal;
+        }
+    }
 }

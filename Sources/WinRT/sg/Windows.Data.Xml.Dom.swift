@@ -91,7 +91,7 @@ public class XmlDocument
     // instance interface not needed: Windows.Data.Xml.Dom.IXmlNodeSerializer
     // instance interface not needed: Windows.Data.Xml.Dom.IXmlNodeSelector
     public func LoadXml(xml : Swift.String) throws -> Void {
-        let _ifc : IXmlDocumentIO = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.Data.Xml.Dom.IXmlDocumentIO = try _self.QueryInterface();
         return try _ifc.LoadXml(xml: xml);
     }
     // method not needed: LoadXml

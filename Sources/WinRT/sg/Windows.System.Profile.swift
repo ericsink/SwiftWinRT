@@ -108,22 +108,22 @@ public class SystemIdentificationInfo
     }
     internal func Interface() -> WinRT.Windows.System.Profile.ISystemIdentificationInfo { return _self; }
     public func get_Id() throws -> Optional<WinRT.Windows.Storage.Streams.IBuffer> {
-        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.System.Profile.ISystemIdentificationInfo = try _self.QueryInterface();
         return try _ifc.get_Id();
     }
     public func get_Source() throws -> WinRT.Windows.System.Profile.SystemIdentificationSource {
-        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.System.Profile.ISystemIdentificationInfo = try _self.QueryInterface();
         return try _ifc.get_Source();
     }
     public var Id : Optional<WinRT.Windows.Storage.Streams.IBuffer> {
         get throws {
-        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.System.Profile.ISystemIdentificationInfo = try _self.QueryInterface();
             return try _ifc.Id;
         }
     }
     public var Source : WinRT.Windows.System.Profile.SystemIdentificationSource {
         get throws {
-        let _ifc : ISystemIdentificationInfo = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.System.Profile.ISystemIdentificationInfo = try _self.QueryInterface();
             return try _ifc.Source;
         }
     }

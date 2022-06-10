@@ -24,7 +24,7 @@ public class HttpClient
     }
     // method not needed: DeleteAsync
     public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
-        let _ifc : IHttpClient = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.Web.Http.IHttpClient = try _self.QueryInterface();
         return try _ifc.GetAsync(uri: uri!.Interface());
     }
     public func Get(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
@@ -76,7 +76,7 @@ public class HttpResponseMessage
         _self = try _af.Create(statusCode: statusCode)!;
     }
     public func get_Content() throws -> Optional<WinRT.Windows.Web.Http.IHttpContent> {
-        let _ifc : IHttpResponseMessage = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.Web.Http.IHttpResponseMessage = try _self.QueryInterface();
         return try _ifc.get_Content();
     }
     // method not needed: put_Content
@@ -93,12 +93,12 @@ public class HttpResponseMessage
     // method not needed: get_Version
     // method not needed: put_Version
     public func EnsureSuccessStatusCode() throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
-        let _ifc : IHttpResponseMessage = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.Web.Http.IHttpResponseMessage = try _self.QueryInterface();
         return try WinRT.Windows.Web.Http.HttpResponseMessage(plok: _ifc.EnsureSuccessStatusCode());
     }
     public var Content : Optional<WinRT.Windows.Web.Http.IHttpContent> {
         get throws {
-        let _ifc : IHttpResponseMessage = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.Web.Http.IHttpResponseMessage = try _self.QueryInterface();
             return try _ifc.Content;
         }
     }

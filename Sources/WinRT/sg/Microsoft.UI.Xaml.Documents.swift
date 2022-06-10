@@ -194,7 +194,10 @@ public class InlineCollection
     // method not needed: SetAt
     // method not needed: InsertAt
     // method not needed: RemoveAt
-    // method not needed: Append
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Documents.Inline>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline = try _self.QueryInterface();
+        return try _ifc.Append(value: value!.Interface());
+    }
     // method not needed: RemoveAtEnd
     // method not needed: Clear
     // method not needed: GetMany

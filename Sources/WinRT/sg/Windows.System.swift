@@ -26,7 +26,7 @@ public class DispatcherQueueController
     }
     // method not needed: get_DispatcherQueue
     public func ShutdownQueueAsync() throws -> Optional<WinRT.Windows.Foundation.IAsyncAction> {
-        let _ifc : IDispatcherQueueController = try _self.QueryInterface();
+        let _ifc : WinRT.Windows.System.IDispatcherQueueController = try _self.QueryInterface();
         return try _ifc.ShutdownQueueAsync();
     }
     public func ShutdownQueue() async throws -> Void {

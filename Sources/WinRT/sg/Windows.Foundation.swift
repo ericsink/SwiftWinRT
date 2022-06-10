@@ -1635,6 +1635,10 @@ open class IUriRuntimeClassFactory
 } // IUriRuntimeClassFactory
 
 
+// type: Windows.Foundation.Point
+// struct type
+public typealias Point = _q_CWindows_CFoundation_CPoint;
+
 // type: Windows.Foundation.Rect
 // struct type
 public typealias Rect = _q_CWindows_CFoundation_CRect;

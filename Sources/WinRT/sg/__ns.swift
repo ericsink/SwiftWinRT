@@ -10,6 +10,7 @@ extension Microsoft.UI.Xaml { public struct Controls { } }
 extension Microsoft.UI.Xaml.Controls { public struct Primitives { } }
 extension Microsoft.UI.Xaml { public struct Documents { } }
 extension Microsoft.UI.Xaml { public struct Media { } }
+extension Microsoft.UI.Xaml.Media { public struct Animation { } }
 extension Microsoft { public struct Windows { } }
 extension Microsoft.Windows { public struct System { } }
 extension Microsoft.Windows.System { public struct Power { } }
