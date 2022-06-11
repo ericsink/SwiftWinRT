@@ -540,18 +540,151 @@ open class IRangeBase
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x540d6d61, Data2: 0x8fac, Data3 : 0x5d5c, Data4 : (0xb5, 0xb0, 0xe1, 0x72, 0xa7, 0xdd, 0xe1, 0x03)) }
-// method not needed: get_Minimum
-// method not needed: put_Minimum
-// method not needed: get_Maximum
-// method not needed: put_Maximum
-// method not needed: get_SmallChange
-// method not needed: put_SmallChange
-// method not needed: get_LargeChange
-// method not needed: put_LargeChange
-// method not needed: get_Value
-// method not needed: put_Value
-// method not needed: add_ValueChanged
-// method not needed: remove_ValueChanged
+    // [IsSpecialName] System.Double get_Minimum()
+    public func _n_get_Minimum(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Minimum(pThis, __presult))
+        }
+    }
+    public func get_Minimum() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_Minimum(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Minimum(System.Double)
+    public func _n_put_Minimum(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Minimum(pThis, value))
+        }
+    }
+    public func put_Minimum(value : Swift.Double) throws -> Void {
+        try self._n_put_Minimum(value);
+    }
+    // [IsSpecialName] System.Double get_Maximum()
+    public func _n_get_Maximum(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Maximum(pThis, __presult))
+        }
+    }
+    public func get_Maximum() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_Maximum(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Maximum(System.Double)
+    public func _n_put_Maximum(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Maximum(pThis, value))
+        }
+    }
+    public func put_Maximum(value : Swift.Double) throws -> Void {
+        try self._n_put_Maximum(value);
+    }
+    // [IsSpecialName] System.Double get_SmallChange()
+    public func _n_get_SmallChange(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SmallChange(pThis, __presult))
+        }
+    }
+    public func get_SmallChange() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_SmallChange(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SmallChange(System.Double)
+    public func _n_put_SmallChange(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SmallChange(pThis, value))
+        }
+    }
+    public func put_SmallChange(value : Swift.Double) throws -> Void {
+        try self._n_put_SmallChange(value);
+    }
+    // [IsSpecialName] System.Double get_LargeChange()
+    public func _n_get_LargeChange(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LargeChange(pThis, __presult))
+        }
+    }
+    public func get_LargeChange() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_LargeChange(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_LargeChange(System.Double)
+    public func _n_put_LargeChange(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_LargeChange(pThis, value))
+        }
+    }
+    public func put_LargeChange(value : Swift.Double) throws -> Void {
+        try self._n_put_LargeChange(value);
+    }
+    // [IsSpecialName] System.Double get_Value()
+    public func _n_get_Value(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Value(pThis, __presult))
+        }
+    }
+    public func get_Value() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_Value(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Value(System.Double)
+    public func _n_put_Value(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
+        }
+    }
+    public func put_Value(value : Swift.Double) throws -> Void {
+        try self._n_put_Value(value);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ValueChanged(Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler)
+    public func _n_add_ValueChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ValueChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_ValueChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ValueChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ValueChanged(Windows.Foundation.EventRegistrationToken)
+    public func _n_remove_ValueChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ValueChanged(pThis, token))
+        }
+    }
+    public func remove_ValueChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ValueChanged(token);
+    }
+    public var LargeChange : Swift.Double {
+        get throws {
+            return try get_LargeChange();
+        }
+    }
+    public var Maximum : Swift.Double {
+        get throws {
+            return try get_Maximum();
+        }
+    }
+    public var Minimum : Swift.Double {
+        get throws {
+            return try get_Minimum();
+        }
+    }
+    public var SmallChange : Swift.Double {
+        get throws {
+            return try get_SmallChange();
+        }
+    }
+    public var Value : Swift.Double {
+        get throws {
+            return try get_Value();
+        }
+    }
 } // IRangeBase
 
 
@@ -577,6 +710,145 @@ open class IRangeBaseFactory
         return WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase(consuming: __result);
     }
 } // IRangeBaseFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides
+// interface type
+open class IRangeBaseOverrides
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3deb76f, Data2: 0x68a6, Data3 : 0x5c14, Data4 : (0xa8, 0x24, 0xab, 0x58, 0xe8, 0x77, 0x47, 0x45)) }
+    // void OnMinimumChanged(System.Double, System.Double)
+    public func _n_OnMinimumChanged(_ oldMinimum : DOUBLE, _ newMinimum : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnMinimumChanged(pThis, oldMinimum, newMinimum))
+        }
+    }
+    public func OnMinimumChanged(oldMinimum : Swift.Double, newMinimum : Swift.Double) throws -> Void {
+        try self._n_OnMinimumChanged(oldMinimum, newMinimum);
+    }
+    // void OnMaximumChanged(System.Double, System.Double)
+    public func _n_OnMaximumChanged(_ oldMaximum : DOUBLE, _ newMaximum : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnMaximumChanged(pThis, oldMaximum, newMaximum))
+        }
+    }
+    public func OnMaximumChanged(oldMaximum : Swift.Double, newMaximum : Swift.Double) throws -> Void {
+        try self._n_OnMaximumChanged(oldMaximum, newMaximum);
+    }
+    // void OnValueChanged(System.Double, System.Double)
+    public func _n_OnValueChanged(_ oldValue : DOUBLE, _ newValue : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnValueChanged(pThis, oldValue, newValue))
+        }
+    }
+    public func OnValueChanged(oldValue : Swift.Double, newValue : Swift.Double) throws -> Void {
+        try self._n_OnValueChanged(oldValue, newValue);
+    }
+} // IRangeBaseOverrides
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseStatics
+// interface type
+open class IRangeBaseStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4aed5e49, Data2: 0x64ec, Data3 : 0x56f1, Data4 : (0x87, 0x4d, 0xb8, 0xc0, 0xf8, 0x3f, 0x9a, 0xc8)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MinimumProperty()
+    public func _n_get_MinimumProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinimumProperty(pThis, __presult))
+        }
+    }
+    public func get_MinimumProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MinimumProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaximumProperty()
+    public func _n_get_MaximumProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumProperty(pThis, __presult))
+        }
+    }
+    public func get_MaximumProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MaximumProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SmallChangeProperty()
+    public func _n_get_SmallChangeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SmallChangeProperty(pThis, __presult))
+        }
+    }
+    public func get_SmallChangeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SmallChangeProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_LargeChangeProperty()
+    public func _n_get_LargeChangeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LargeChangeProperty(pThis, __presult))
+        }
+    }
+    public func get_LargeChangeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_LargeChangeProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ValueProperty()
+    public func _n_get_ValueProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ValueProperty(pThis, __presult))
+        }
+    }
+    public func get_ValueProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ValueProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var LargeChangeProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_LargeChangeProperty();
+        }
+    }
+    public var MaximumProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MaximumProperty();
+        }
+    }
+    public var MinimumProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MinimumProperty();
+        }
+    }
+    public var SmallChangeProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SmallChangeProperty();
+        }
+    }
+    public var ValueProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ValueProperty();
+        }
+    }
+} // IRangeBaseStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs
+// interface type
+open class IRangeBaseValueChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb0181692, Data2: 0x9578, Data3 : 0x51c7, Data4 : (0x9d, 0x1c, 0xad, 0xfc, 0xf8, 0x94, 0x5a, 0xa9)) }
+// method not needed: get_OldValue
+// method not needed: get_NewValue
+} // IRangeBaseValueChangedEventArgs
 
 
 // type: Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo
@@ -707,20 +979,232 @@ open class RangeBase
         var _inn : Optional<WinRT.IInspectable> = nil
         try self.init(baseInterface: nil, innerInterface: &_inn)
     }
-    // static interface not needed: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseStatics
-    // method not needed: get_Minimum
-    // method not needed: put_Minimum
-    // method not needed: get_Maximum
-    // method not needed: put_Maximum
-    // method not needed: get_SmallChange
-    // method not needed: put_SmallChange
-    // method not needed: get_LargeChange
-    // method not needed: put_LargeChange
-    // method not needed: get_Value
-    // method not needed: put_Value
-    // method not needed: add_ValueChanged
-    // method not needed: remove_ValueChanged
-    // instance interface not needed: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides
+    private struct _IRangeBaseStatics {
+        static var x : IRangeBaseStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"))
+    }
+    public static var RangeBaseStatics : IRangeBaseStatics {
+        _IRangeBaseStatics.x
+    }
+    public static func get_MinimumProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.get_MinimumProperty());
+    }
+    public static func get_MaximumProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.get_MaximumProperty());
+    }
+    public static func get_SmallChangeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.get_SmallChangeProperty());
+    }
+    public static func get_LargeChangeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.get_LargeChangeProperty());
+    }
+    public static func get_ValueProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.get_ValueProperty());
+    }
+    public static var LargeChangeProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.LargeChangeProperty);
+        }
+    }
+    public static var MaximumProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.MaximumProperty);
+        }
+    }
+    public static var MinimumProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.MinimumProperty);
+        }
+    }
+    public static var SmallChangeProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.SmallChangeProperty);
+        }
+    }
+    public static var ValueProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: RangeBaseStatics.ValueProperty);
+        }
+    }
+    public func get_Minimum() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.get_Minimum();
+    }
+    public func put_Minimum(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.put_Minimum(value: value);
+    }
+    public func get_Maximum() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.get_Maximum();
+    }
+    public func put_Maximum(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.put_Maximum(value: value);
+    }
+    public func get_SmallChange() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.get_SmallChange();
+    }
+    public func put_SmallChange(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.put_SmallChange(value: value);
+    }
+    public func get_LargeChange() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.get_LargeChange();
+    }
+    public func put_LargeChange(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.put_LargeChange(value: value);
+    }
+    public func get_Value() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.get_Value();
+    }
+    public func put_Value(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.put_Value(value: value);
+    }
+    public func add_ValueChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.add_ValueChanged(handler: handler!.Interface());
+    }
+    public func remove_ValueChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+        return try _ifc.remove_ValueChanged(token: token);
+    }
+    public var LargeChange : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+            return try _ifc.LargeChange;
+        }
+    }
+    public var Maximum : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+            return try _ifc.Maximum;
+        }
+    }
+    public var Minimum : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+            return try _ifc.Minimum;
+        }
+    }
+    public var SmallChange : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+            return try _ifc.SmallChange;
+        }
+    }
+    public var Value : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
+            return try _ifc.Value;
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs
+// runtime class
+public class RangeBaseValueChangedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs { return _self; }
+    // method not needed: get_OldValue
+    // method not needed: get_NewValue
+}
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler
+// delegate type
+open class IRangeBaseValueChangedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x23f0e209, Data2: 0x9455, Data3 : 0x54cb, Data4 : (0xb8, 0xbc, 0x0b, 0x49, 0x55, 0x3c, 0x7d, 0xcc)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class RangeBaseValueChangedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = RangeBaseValueChangedEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = RangeBaseValueChangedEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs>>) in
+        guard let self = RangeBaseValueChangedEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler
+        public var wrapper: Unmanaged<RangeBaseValueChangedEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<RangeBaseValueChangedEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RangeBaseValueChangedEventHandler>? {
+        return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
 }
 
 // type: Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo

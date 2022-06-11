@@ -5,6 +5,385 @@
 import CWinRT;
 
 extension Microsoft.UI.Xaml.Input {
+// type: Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs
+// runtime class
+public class AccessKeyDisplayDismissedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs")
+        _self = try RoActivateInstance(_classId)
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs
+// runtime class
+public class AccessKeyDisplayRequestedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs")
+        _self = try RoActivateInstance(_classId)
+    }
+    // method not needed: get_PressedKeys
+}
+
+// type: Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs
+// runtime class
+public class AccessKeyInvokedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs")
+        _self = try RoActivateInstance(_classId)
+    }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs
+// runtime class
+public class CharacterReceivedRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs { return _self; }
+    // method not needed: get_Character
+    // method not needed: get_KeyStatus
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Input.ContextRequestedEventArgs
+// runtime class
+public class ContextRequestedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.ContextRequestedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: TryGetPosition
+}
+
+// type: Microsoft.UI.Xaml.Input.DoubleTappedEventHandler
+// delegate type
+open class IDoubleTappedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf7a501b9, Data2: 0xe277, Data3 : 0x5611, Data4 : (0x87, 0xb0, 0x0e, 0x06, 0x07, 0x62, 0x21, 0x83)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class DoubleTappedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = DoubleTappedEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = DoubleTappedEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) in
+        guard let self = DoubleTappedEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler
+        public var wrapper: Unmanaged<DoubleTappedEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<DoubleTappedEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DoubleTappedEventHandler>? {
+        return pUnk?.bindMemory(to: DoubleTappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs
+// runtime class
+public class DoubleTappedRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: GetPosition
+}
+
+// type: Microsoft.UI.Xaml.Input.GettingFocusEventArgs
+// runtime class
+public class GettingFocusEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IGettingFocusEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IGettingFocusEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IGettingFocusEventArgs { return _self; }
+    // method not needed: get_OldFocusedElement
+    // method not needed: get_NewFocusedElement
+    // method not needed: put_NewFocusedElement
+    // method not needed: get_FocusState
+    // method not needed: get_Direction
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_InputDevice
+    // method not needed: get_Cancel
+    // method not needed: put_Cancel
+    // method not needed: get_CorrelationId
+    // method not needed: TryCancel
+    // method not needed: TrySetNewFocusedElement
+}
+
+// type: Microsoft.UI.Xaml.Input.HoldingEventHandler
+// delegate type
+open class IHoldingEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe23c5bd, Data2: 0x4984, Data3 : 0x56b6, Data4 : (0xb9, 0x2b, 0xfc, 0x9d, 0x12, 0x16, 0xb2, 0x4e)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class HoldingEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = HoldingEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = HoldingEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) in
+        guard let self = HoldingEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler
+        public var wrapper: Unmanaged<HoldingEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<HoldingEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<HoldingEventHandler>? {
+        return pUnk?.bindMemory(to: HoldingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs
+// runtime class
+public class HoldingRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_HoldingState
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: GetPosition
+}
+
+// type: Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs
+// interface type
+open class IAccessKeyDisplayDismissedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x125a83d8, Data2: 0x7f86, Data3 : 0x5ea9, Data4 : (0x90, 0x63, 0xb9, 0x40, 0x7e, 0x64, 0x45, 0x87)) }
+} // IAccessKeyDisplayDismissedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs
+// interface type
+open class IAccessKeyDisplayRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc4ed84d8, Data2: 0x2b27, Data3 : 0x59b1, Data4 : (0x9c, 0xf0, 0x7f, 0x91, 0x64, 0xde, 0x58, 0xcb)) }
+// method not needed: get_PressedKeys
+} // IAccessKeyDisplayRequestedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs
+// interface type
+open class IAccessKeyInvokedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd00c11a4, Data2: 0xf9fb, Data3 : 0x5707, Data4 : (0x96, 0x92, 0x98, 0xb8, 0x0b, 0xb8, 0x54, 0x6d)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // IAccessKeyInvokedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs
+// interface type
+open class ICharacterReceivedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe26ca5bb, Data2: 0x34c3, Data3 : 0x5c1e, Data4 : (0x9a, 0x16, 0x00, 0xb8, 0x0b, 0x07, 0xa8, 0x99)) }
+// method not needed: get_Character
+// method not needed: get_KeyStatus
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // ICharacterReceivedRoutedEventArgs
+
+
 // type: Microsoft.UI.Xaml.Input.ICommand
 // interface type
 open class ICommand
@@ -19,4 +398,1687 @@ open class ICommand
 } // ICommand
 
 
+// type: Microsoft.UI.Xaml.Input.IContextRequestedEventArgs
+// interface type
+open class IContextRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbcedcb98, Data2: 0x77b5, Data3 : 0x53c0, Data4 : (0x80, 0x2e, 0xfd, 0x52, 0xf3, 0x80, 0x6e, 0x51)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: TryGetPosition
+} // IContextRequestedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs
+// interface type
+open class IDoubleTappedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x32b9549d, Data2: 0x11d8, Data3 : 0x53a5, Data4 : (0xa9, 0x53, 0x02, 0x40, 0x95, 0x37, 0xa1, 0x1f)) }
+// method not needed: get_PointerDeviceType
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: GetPosition
+} // IDoubleTappedRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IGettingFocusEventArgs
+// interface type
+open class IGettingFocusEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x37fd3af0, Data2: 0xbd3c, Data3 : 0x5bf5, Data4 : (0xa9, 0xcd, 0x71, 0xa1, 0xe8, 0x7a, 0xf9, 0x50)) }
+// method not needed: get_OldFocusedElement
+// method not needed: get_NewFocusedElement
+// method not needed: put_NewFocusedElement
+// method not needed: get_FocusState
+// method not needed: get_Direction
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_InputDevice
+// method not needed: get_Cancel
+// method not needed: put_Cancel
+// method not needed: get_CorrelationId
+// method not needed: TryCancel
+// method not needed: TrySetNewFocusedElement
+} // IGettingFocusEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs
+// interface type
+open class IHoldingRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8272a4b2, Data2: 0x2221, Data3 : 0x551e, Data4 : (0xb0, 0xbb, 0x16, 0xe2, 0x91, 0x38, 0xab, 0x20)) }
+// method not needed: get_PointerDeviceType
+// method not needed: get_HoldingState
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: GetPosition
+} // IHoldingRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs
+// interface type
+open class IKeyRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xee357007, Data2: 0xa2d6, Data3 : 0x5c75, Data4 : (0x94, 0x31, 0x05, 0xfd, 0x66, 0xec, 0x79, 0x15)) }
+// method not needed: get_Key
+// method not needed: get_KeyStatus
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_OriginalKey
+// method not needed: get_DeviceId
+} // IKeyRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IKeyboardAccelerator
+// interface type
+open class IKeyboardAccelerator
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6f8bf1e2, Data2: 0x4e91, Data3 : 0x5cf9, Data4 : (0xa6, 0xbe, 0x47, 0x70, 0xca, 0xf3, 0xd7, 0x70)) }
+// method not needed: get_Key
+// method not needed: put_Key
+// method not needed: get_Modifiers
+// method not needed: put_Modifiers
+// method not needed: get_IsEnabled
+// method not needed: put_IsEnabled
+// method not needed: get_ScopeOwner
+// method not needed: put_ScopeOwner
+// method not needed: add_Invoked
+// method not needed: remove_Invoked
+} // IKeyboardAccelerator
+
+
+// type: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IKeyboardAcceleratorFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xca1d410a, Data2: 0xaf2a, Data3 : 0x51b9, Data4 : (0xa1, 0xde, 0x6c, 0x0a, 0xf9, 0xf3, 0xb5, 0x98)) }
+    // Microsoft.UI.Xaml.Input.KeyboardAccelerator CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator(consuming: __result);
+    }
+} // IKeyboardAcceleratorFactory
+
+
+// type: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs
+// interface type
+open class IKeyboardAcceleratorInvokedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x62c9fdb0, Data2: 0xb574, Data3 : 0x527d, Data4 : (0x97, 0xeb, 0x5c, 0x7f, 0x67, 0x44, 0x41, 0xe0)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_Element
+// method not needed: get_KeyboardAccelerator
+} // IKeyboardAcceleratorInvokedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.ILosingFocusEventArgs
+// interface type
+open class ILosingFocusEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfa0e5ffa, Data2: 0x2b1b, Data3 : 0x52f8, Data4 : (0xbb, 0x66, 0xe3, 0x5f, 0x51, 0xe7, 0x3c, 0xf3)) }
+// method not needed: get_OldFocusedElement
+// method not needed: get_NewFocusedElement
+// method not needed: put_NewFocusedElement
+// method not needed: get_FocusState
+// method not needed: get_Direction
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_InputDevice
+// method not needed: get_Cancel
+// method not needed: put_Cancel
+// method not needed: get_CorrelationId
+// method not needed: TryCancel
+// method not needed: TrySetNewFocusedElement
+} // ILosingFocusEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs
+// interface type
+open class IManipulationCompletedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe3be9e4e, Data2: 0xc5fb, Data3 : 0x5859, Data4 : (0xa8, 0x1d, 0xce, 0x12, 0xfc, 0x3a, 0x2f, 0x4d)) }
+// method not needed: get_Container
+// method not needed: get_Position
+// method not needed: get_IsInertial
+// method not needed: get_Cumulative
+// method not needed: get_Velocities
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_PointerDeviceType
+} // IManipulationCompletedRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs
+// interface type
+open class IManipulationDeltaRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x51369745, Data2: 0x960f, Data3 : 0x54ac, Data4 : (0x93, 0xfa, 0x76, 0x3d, 0x22, 0x91, 0x0d, 0xea)) }
+// method not needed: get_Container
+// method not needed: get_Position
+// method not needed: get_IsInertial
+// method not needed: get_Delta
+// method not needed: get_Cumulative
+// method not needed: get_Velocities
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_PointerDeviceType
+// method not needed: Complete
+} // IManipulationDeltaRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs
+// interface type
+open class IManipulationInertiaStartingRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x17d510be, Data2: 0x5514, Data3 : 0x5952, Data4 : (0x9a, 0xfd, 0x95, 0x9b, 0x60, 0xab, 0x93, 0x94)) }
+// method not needed: get_Container
+// method not needed: get_ExpansionBehavior
+// method not needed: put_ExpansionBehavior
+// method not needed: get_RotationBehavior
+// method not needed: put_RotationBehavior
+// method not needed: get_TranslationBehavior
+// method not needed: put_TranslationBehavior
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_PointerDeviceType
+// method not needed: get_Delta
+// method not needed: get_Cumulative
+// method not needed: get_Velocities
+} // IManipulationInertiaStartingRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs
+// interface type
+open class IManipulationStartedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61857950, Data2: 0x5821, Data3 : 0x5652, Data4 : (0x9f, 0xdf, 0xc6, 0x27, 0x7c, 0x58, 0x86, 0xf5)) }
+// method not needed: get_Container
+// method not needed: get_Position
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_PointerDeviceType
+// method not needed: get_Cumulative
+// method not needed: Complete
+} // IManipulationStartedRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IManipulationStartedRoutedEventArgsFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5681b0de, Data2: 0x3fa7, Data3 : 0x503e, Data4 : (0x9c, 0x46, 0xa8, 0x03, 0x39, 0x76, 0x02, 0x92)) }
+    // Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgsFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs(consuming: __result);
+    }
+} // IManipulationStartedRoutedEventArgsFactory
+
+
+// type: Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs
+// interface type
+open class IManipulationStartingRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x93a99f86, Data2: 0xf5a0, Data3 : 0x5326, Data4 : (0x91, 0xb0, 0x85, 0x1c, 0x89, 0x7a, 0xf7, 0x9f)) }
+// method not needed: get_Mode
+// method not needed: put_Mode
+// method not needed: get_Container
+// method not needed: put_Container
+// method not needed: get_Pivot
+// method not needed: put_Pivot
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // IManipulationStartingRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.INoFocusCandidateFoundEventArgs
+// interface type
+open class INoFocusCandidateFoundEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa2d7153a, Data2: 0xcd2a, Data3 : 0x59cb, Data4 : (0xa5, 0x74, 0xac, 0x82, 0xe3, 0x0b, 0x92, 0x01)) }
+// method not needed: get_Direction
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_InputDevice
+} // INoFocusCandidateFoundEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IPointer
+// interface type
+open class IPointer
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1f9afbf5, Data2: 0x11a3, Data3 : 0x5e68, Data4 : (0xaa, 0x1b, 0x72, 0xfe, 0xbf, 0xa0, 0xab, 0x23)) }
+// method not needed: get_PointerId
+// method not needed: get_PointerDeviceType
+// method not needed: get_IsInContact
+// method not needed: get_IsInRange
+} // IPointer
+
+
+// type: Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs
+// interface type
+open class IPointerRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x66e78a9a, Data2: 0x1bec, Data3 : 0x5f92, Data4 : (0xb1, 0xa1, 0xea, 0x63, 0x34, 0xee, 0x51, 0x1c)) }
+// method not needed: get_Pointer
+// method not needed: get_KeyModifiers
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: get_IsGenerated
+// method not needed: GetCurrentPoint
+// method not needed: GetIntermediatePoints
+} // IPointerRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs
+// interface type
+open class IProcessKeyboardAcceleratorEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9be0d058, Data2: 0x3d26, Data3 : 0x5811, Data4 : (0xb5, 0x0a, 0x3b, 0xb8, 0x0c, 0xa7, 0x66, 0xc9)) }
+// method not needed: get_Key
+// method not needed: get_Modifiers
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // IProcessKeyboardAcceleratorEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs
+// interface type
+open class IRightTappedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3972fafb, Data2: 0x2915, Data3 : 0x5c62, Data4 : (0xbb, 0x6b, 0x54, 0xad, 0x84, 0xff, 0x40, 0x0d)) }
+// method not needed: get_PointerDeviceType
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: GetPosition
+} // IRightTappedRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs
+// interface type
+open class ITappedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x73f74b8c, Data2: 0x3709, Data3 : 0x547e, Data4 : (0x8e, 0x0c, 0x51, 0xc0, 0x3c, 0x89, 0x12, 0x6a)) }
+// method not needed: get_PointerDeviceType
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: GetPosition
+} // ITappedRoutedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Input.KeyEventHandler
+// delegate type
+open class IKeyEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdb68e7cc, Data2: 0x9a2b, Data3 : 0x527d, Data4 : (0x99, 0x89, 0x25, 0x28, 0x4d, 0xac, 0xcc, 0x03)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class KeyEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = KeyEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = KeyEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
+        guard let self = KeyEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler
+        public var wrapper: Unmanaged<KeyEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<KeyEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<KeyEventHandler>? {
+        return pUnk?.bindMemory(to: KeyEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.KeyRoutedEventArgs
+// runtime class
+public class KeyRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs { return _self; }
+    // method not needed: get_Key
+    // method not needed: get_KeyStatus
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_OriginalKey
+    // method not needed: get_DeviceId
+}
+
+// type: Microsoft.UI.Xaml.Input.KeyTipPlacementMode
+// enum type
+public typealias KeyTipPlacementMode = _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode;
+
+// type: Microsoft.UI.Xaml.Input.KeyboardAccelerator
+// runtime class
+open class KeyboardAccelerator
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IKeyboardAcceleratorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.KeyboardAccelerator"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorStatics
+    // method not needed: get_Key
+    // method not needed: put_Key
+    // method not needed: get_Modifiers
+    // method not needed: put_Modifiers
+    // method not needed: get_IsEnabled
+    // method not needed: put_IsEnabled
+    // method not needed: get_ScopeOwner
+    // method not needed: put_ScopeOwner
+    // method not needed: add_Invoked
+    // method not needed: remove_Invoked
+}
+
+// type: Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs
+// runtime class
+public class KeyboardAcceleratorInvokedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs { return _self; }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_Element
+    // method not needed: get_KeyboardAccelerator
+}
+
+// type: Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode
+// enum type
+public typealias KeyboardAcceleratorPlacementMode = _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode;
+
+// type: Microsoft.UI.Xaml.Input.KeyboardNavigationMode
+// enum type
+public typealias KeyboardNavigationMode = _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode;
+
+// type: Microsoft.UI.Xaml.Input.LosingFocusEventArgs
+// runtime class
+public class LosingFocusEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.ILosingFocusEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.ILosingFocusEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ILosingFocusEventArgs { return _self; }
+    // method not needed: get_OldFocusedElement
+    // method not needed: get_NewFocusedElement
+    // method not needed: put_NewFocusedElement
+    // method not needed: get_FocusState
+    // method not needed: get_Direction
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_InputDevice
+    // method not needed: get_Cancel
+    // method not needed: put_Cancel
+    // method not needed: get_CorrelationId
+    // method not needed: TryCancel
+    // method not needed: TrySetNewFocusedElement
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationCompletedEventHandler
+// delegate type
+open class IManipulationCompletedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd51df8db, Data2: 0x71cd, Data3 : 0x5bfd, Data4 : (0x84, 0x26, 0x76, 0x72, 0x18, 0xee, 0x55, 0xec)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class ManipulationCompletedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = ManipulationCompletedEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = ManipulationCompletedEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) in
+        guard let self = ManipulationCompletedEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler
+        public var wrapper: Unmanaged<ManipulationCompletedEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<ManipulationCompletedEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ManipulationCompletedEventHandler>? {
+        return pUnk?.bindMemory(to: ManipulationCompletedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs
+// runtime class
+public class ManipulationCompletedRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Container
+    // method not needed: get_Position
+    // method not needed: get_IsInertial
+    // method not needed: get_Cumulative
+    // method not needed: get_Velocities
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_PointerDeviceType
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationDeltaEventHandler
+// delegate type
+open class IManipulationDeltaEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x83f2d4ce, Data2: 0x105f, Data3 : 0x5392, Data4 : (0xa3, 0x8a, 0xb7, 0x46, 0x7b, 0x7c, 0x2e, 0xa5)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class ManipulationDeltaEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = ManipulationDeltaEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = ManipulationDeltaEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) in
+        guard let self = ManipulationDeltaEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler
+        public var wrapper: Unmanaged<ManipulationDeltaEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<ManipulationDeltaEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ManipulationDeltaEventHandler>? {
+        return pUnk?.bindMemory(to: ManipulationDeltaEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs
+// runtime class
+public class ManipulationDeltaRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Container
+    // method not needed: get_Position
+    // method not needed: get_IsInertial
+    // method not needed: get_Delta
+    // method not needed: get_Cumulative
+    // method not needed: get_Velocities
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_PointerDeviceType
+    // method not needed: Complete
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationInertiaStartingEventHandler
+// delegate type
+open class IManipulationInertiaStartingEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5de296bd, Data2: 0x6f1c, Data3 : 0x5f60, Data4 : (0x91, 0x80, 0x10, 0x70, 0x52, 0x82, 0x57, 0x6c)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class ManipulationInertiaStartingEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = ManipulationInertiaStartingEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = ManipulationInertiaStartingEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) in
+        guard let self = ManipulationInertiaStartingEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler
+        public var wrapper: Unmanaged<ManipulationInertiaStartingEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<ManipulationInertiaStartingEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ManipulationInertiaStartingEventHandler>? {
+        return pUnk?.bindMemory(to: ManipulationInertiaStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs
+// runtime class
+public class ManipulationInertiaStartingRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Container
+    // method not needed: get_ExpansionBehavior
+    // method not needed: put_ExpansionBehavior
+    // method not needed: get_RotationBehavior
+    // method not needed: put_RotationBehavior
+    // method not needed: get_TranslationBehavior
+    // method not needed: put_TranslationBehavior
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_Delta
+    // method not needed: get_Cumulative
+    // method not needed: get_Velocities
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationModes
+// enum type
+public typealias ManipulationModes = _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes;
+
+// type: Microsoft.UI.Xaml.Input.ManipulationStartedEventHandler
+// delegate type
+open class IManipulationStartedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41060669, Data2: 0x304c, Data3 : 0x53ac, Data4 : (0x9d, 0x43, 0xbc, 0x31, 0x12, 0x35, 0xaa, 0xe4)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class ManipulationStartedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = ManipulationStartedEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = ManipulationStartedEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) in
+        guard let self = ManipulationStartedEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler
+        public var wrapper: Unmanaged<ManipulationStartedEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<ManipulationStartedEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ManipulationStartedEventHandler>? {
+        return pUnk?.bindMemory(to: ManipulationStartedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs
+// runtime class
+open class ManipulationStartedRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IManipulationStartedRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // method not needed: get_Container
+    // method not needed: get_Position
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_Cumulative
+    // method not needed: Complete
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationStartingEventHandler
+// delegate type
+open class IManipulationStartingEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x44f528f1, Data2: 0xf0e4, Data3 : 0x505c, Data4 : (0xa0, 0xbb, 0x0c, 0x48, 0x39, 0xb2, 0x9d, 0xf5)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class ManipulationStartingEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = ManipulationStartingEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = ManipulationStartingEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) in
+        guard let self = ManipulationStartingEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler
+        public var wrapper: Unmanaged<ManipulationStartingEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<ManipulationStartingEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ManipulationStartingEventHandler>? {
+        return pUnk?.bindMemory(to: ManipulationStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs
+// runtime class
+public class ManipulationStartingRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Mode
+    // method not needed: put_Mode
+    // method not needed: get_Container
+    // method not needed: put_Container
+    // method not needed: get_Pivot
+    // method not needed: put_Pivot
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs
+// runtime class
+public class NoFocusCandidateFoundEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.INoFocusCandidateFoundEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.INoFocusCandidateFoundEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.INoFocusCandidateFoundEventArgs { return _self; }
+    // method not needed: get_Direction
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_InputDevice
+}
+
+// type: Microsoft.UI.Xaml.Input.Pointer
+// runtime class
+public class Pointer
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IPointer;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IPointer?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IPointer { return _self; }
+    // method not needed: get_PointerId
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_IsInContact
+    // method not needed: get_IsInRange
+}
+
+// type: Microsoft.UI.Xaml.Input.PointerEventHandler
+// delegate type
+open class IPointerEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa48a71e1, Data2: 0x8bb4, Data3 : 0x5597, Data4 : (0x9e, 0x31, 0x90, 0x3a, 0x3f, 0x6a, 0x04, 0xfb)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class PointerEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = PointerEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = PointerEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
+        guard let self = PointerEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler
+        public var wrapper: Unmanaged<PointerEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<PointerEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<PointerEventHandler>? {
+        return pUnk?.bindMemory(to: PointerEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.PointerRoutedEventArgs
+// runtime class
+public class PointerRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs { return _self; }
+    // method not needed: get_Pointer
+    // method not needed: get_KeyModifiers
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: get_IsGenerated
+    // method not needed: GetCurrentPoint
+    // method not needed: GetIntermediatePoints
+}
+
+// type: Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs
+// runtime class
+public class ProcessKeyboardAcceleratorEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs { return _self; }
+    // method not needed: get_Key
+    // method not needed: get_Modifiers
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Input.RightTappedEventHandler
+// delegate type
+open class IRightTappedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5070e32f, Data2: 0x3dc7, Data3 : 0x56cf, Data4 : (0x8f, 0xdd, 0xde, 0x1b, 0x40, 0xd0, 0xb4, 0x72)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class RightTappedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = RightTappedEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = RightTappedEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) in
+        guard let self = RightTappedEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler
+        public var wrapper: Unmanaged<RightTappedEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<RightTappedEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RightTappedEventHandler>? {
+        return pUnk?.bindMemory(to: RightTappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs
+// runtime class
+public class RightTappedRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: GetPosition
+}
+
+// type: Microsoft.UI.Xaml.Input.TappedEventHandler
+// delegate type
+open class ITappedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb60074f3, Data2: 0x125b, Data3 : 0x534e, Data4 : (0x8f, 0x9c, 0x97, 0x69, 0xbd, 0x3f, 0x0f, 0x64)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.TappedRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class TappedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TappedEventHandler.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TappedEventHandler.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) in
+        guard let self = TappedEventHandler.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler
+        public var wrapper: Unmanaged<TappedEventHandler>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TappedEventHandler>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TappedEventHandler>? {
+        return pUnk?.bindMemory(to: TappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Input.TappedRoutedEventArgs
+// runtime class
+public class TappedRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Input.TappedRoutedEventArgs")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_PointerDeviceType
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: GetPosition
+}
+
+// type: Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode
+// enum type
+public typealias XYFocusKeyboardNavigationMode = _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode;
+
+// type: Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy
+// enum type
+public typealias XYFocusNavigationStrategy = _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy;
+
+}
+extension WinRT.Microsoft.UI.Xaml.Input.KeyTipPlacementMode {
+    public static var Auto : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Auto;
+        }
+    }
+    public static var Bottom : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Bottom;
+        }
+    }
+    public static var Top : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Top;
+        }
+    }
+    public static var Left : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Left;
+        }
+    }
+    public static var Right : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Right;
+        }
+    }
+    public static var Center : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Center;
+        }
+    }
+    public static var Hidden : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode_Hidden;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode {
+    public static var Auto : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode_Auto;
+        }
+    }
+    public static var Hidden : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode_Hidden;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode {
+    public static var Local : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode_Local;
+        }
+    }
+    public static var Cycle : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode_Cycle;
+        }
+    }
+    public static var Once : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode_Once;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Input.ManipulationModes {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_None;
+        }
+    }
+    public static var TranslateX : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_TranslateX;
+        }
+    }
+    public static var TranslateY : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_TranslateY;
+        }
+    }
+    public static var TranslateRailsX : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_TranslateRailsX;
+        }
+    }
+    public static var TranslateRailsY : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_TranslateRailsY;
+        }
+    }
+    public static var Rotate : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_Rotate;
+        }
+    }
+    public static var Scale : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_Scale;
+        }
+    }
+    public static var TranslateInertia : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_TranslateInertia;
+        }
+    }
+    public static var RotateInertia : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_RotateInertia;
+        }
+    }
+    public static var ScaleInertia : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_ScaleInertia;
+        }
+    }
+    public static var All : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_All;
+        }
+    }
+    public static var System : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes_System;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode {
+    public static var Auto : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode_Auto;
+        }
+    }
+    public static var Enabled : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode_Enabled;
+        }
+    }
+    public static var Disabled : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode_Disabled;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy {
+    public static var Auto : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy_Auto;
+        }
+    }
+    public static var Projection : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy_Projection;
+        }
+    }
+    public static var NavigationDirectionDistance : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy_NavigationDirectionDistance;
+        }
+    }
+    public static var RectilinearDistance : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy_RectilinearDistance;
+        }
+    }
 }

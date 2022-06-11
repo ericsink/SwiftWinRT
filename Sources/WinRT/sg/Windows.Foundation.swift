@@ -1149,6 +1149,1460 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
     }
 }
 // closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd0b66e28, Data2: 0x3f45, Data3 : 0x5b7a, Data4 : (0xa7, 0x68, 0x18, 0x89, 0x63, 0xbb, 0x76, 0xa4)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.DragStartingEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragStartingEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.IDragStartingEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragStartingEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.DragStartingEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDragStartingEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xac00806a, Data2: 0x8954, Data3 : 0x51f5, Data4 : (0x92, 0x72, 0x30, 0x2f, 0x69, 0xb5, 0x48, 0xe4)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.DropCompletedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDropCompletedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.IDropCompletedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDropCompletedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDropCompletedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4f45a267, Data2: 0x2b57, Data3 : 0x5eb1, Data4 : (0xb3, 0x82, 0xe5, 0x42, 0xd5, 0xa1, 0x9f, 0x7a)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0c81075c, Data2: 0x3bd9, Data3 : 0x5c90, Data4 : (0xbd, 0x8a, 0x2a, 0x89, 0xbc, 0x15, 0x4f, 0x35)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.ContextRequestedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIContextRequestedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIContextRequestedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9eb51482, Data2: 0x569e, Data3 : 0x56c5, Data4 : (0x90, 0xe9, 0x81, 0x78, 0xe2, 0xf6, 0xe5, 0x31)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.RoutedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.IRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1af43211, Data2: 0x0169, Data3 : 0x57e1, Data4 : (0xaa, 0x0e, 0x40, 0x43, 0xec, 0x09, 0xde, 0xdd)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9706b7ea, Data2: 0x14d5, Data3 : 0x5efa, Data4 : (0x84, 0x3b, 0x0d, 0x43, 0x7e, 0x79, 0x2e, 0x65)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8bf3906b, Data2: 0x8dfe, Data3 : 0x5709, Data4 : (0xac, 0x7e, 0x34, 0x0f, 0x67, 0x10, 0x4b, 0xca)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x244bda89, Data2: 0x86c4, Data3 : 0x5026, Data4 : (0xac, 0x7f, 0x97, 0x3c, 0x09, 0x71, 0xee, 0x7a)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0871eeab, Data2: 0x8a3d, Data3 : 0x5e0b, Data4 : (0x87, 0x5c, 0x79, 0x49, 0xf2, 0x09, 0xaa, 0x19)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.GettingFocusEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIGettingFocusEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.IGettingFocusEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIGettingFocusEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IGettingFocusEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3a87aeda, Data2: 0x6ea2, Data3 : 0x511e, Data4 : (0x86, 0xe8, 0xca, 0x79, 0xe0, 0xe3, 0xe4, 0xe7)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.LosingFocusEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CILosingFocusEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.ILosingFocusEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CILosingFocusEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.ILosingFocusEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1c4706d5, Data2: 0x217e, Data3 : 0x5c28, Data4 : (0x91, 0x72, 0x2c, 0x0e, 0xe1, 0x37, 0xb9, 0x86)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CINoFocusCandidateFoundEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.INoFocusCandidateFoundEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CINoFocusCandidateFoundEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.INoFocusCandidateFoundEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x239588e3, Data2: 0x453a, Data3 : 0x5e9a, Data4 : (0xbc, 0x37, 0xa0, 0x88, 0x03, 0xf5, 0x3f, 0x22)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.IBringIntoViewRequestedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.UIElement(plok: WinRT.Microsoft.UI.Xaml.IUIElement(sender)), args: WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IBringIntoViewRequestedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed interface type
+public class IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8b98aea9, Data2: 0x64f0, Data3 : 0x5672, Data4 : (0xb3, 0x0e, 0xdf, 0xd9, 0xc2, 0xe4, 0xf6, 0xfe)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackageOperation>)
+    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackageOperation> get_Completed()
+    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>> = nil;
+        try self._n_get_Completed(&__result);
+        return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(consuming: __result);
+    }
+    // Windows.ApplicationModel.DataTransfer.DataPackageOperation GetResults()
+    public func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> WinRT.Windows.ApplicationModel.DataTransfer.DataPackageOperation {
+        var __result : _q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation = _q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation_None;
+        try self._n_GetResults(&__result);
+        return __result;
+    }
+    public var Completed : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xadd21d46, Data2: 0x17df, Data3 : 0x5a43, Data4 : (0xa6, 0x85, 0x32, 0x62, 0xfc, 0xe8, 0x46, 0x43)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation>, Windows.Foundation.AsyncStatus)
+    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperationVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+        public var wrapper: Unmanaged<AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4e4ec708, Data2: 0xdef4, Data3 : 0x5d93, Data4 : (0x86, 0x90, 0xdf, 0xc5, 0xf9, 0x23, 0x3c, 0x53)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.FrameworkElement, Microsoft.UI.Xaml.DataContextChangedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataContextChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, args : Optional<WinRT.Microsoft.UI.Xaml.IDataContextChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataContextChangedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.FrameworkElement(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement(sender)), args: WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDataContextChangedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x53876073, Data2: 0xbe4f, Data3 : 0x5dac, Data4 : (0x9a, 0xe0, 0x01, 0x5d, 0xb6, 0xe4, 0x0c, 0x74)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.FrameworkElement, System.Object)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, args : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectableVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.FrameworkElement(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement(sender)), args: WinRT.IInspectable(args))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.IInspectable>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x276f9f20, Data2: 0x9e38, Data3 : 0x5aed, Data4 : (0xb5, 0xa8, 0x68, 0xb2, 0x5e, 0xc4, 0x09, 0xc2)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.FrameworkElement, Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, args : Optional<WinRT.Microsoft.UI.Xaml.IEffectiveViewportChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.FrameworkElement(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement(sender)), args: WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IEffectiveViewportChangedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
     :
     WinRT.IInspectable
@@ -1228,6 +2682,172 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
             WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4b2fe512, Data2: 0x35fa, Data3 : 0x5c54, Data4 : (0xb6, 0x87, 0x9e, 0xfb, 0x70, 0x9b, 0x68, 0xcd)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.Control, Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.IControl>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.IFocusEngagedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.Controls.Control(plok: WinRT.Microsoft.UI.Xaml.Controls.IControl(sender)), args: WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.IFocusEngagedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9879511c, Data2: 0xdcfd, Data3 : 0x56a5, Data4 : (0x95, 0x35, 0x5d, 0xa8, 0x60, 0x88, 0x09, 0x2f)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.Control, Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.IControl>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.from($0)
+        _ = instance?.retain()
+        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let instance = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.from($0)
+        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.Controls.Control(plok: WinRT.Microsoft.UI.Xaml.Controls.IControl(sender)), args: WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private struct WithTrailingObjects {
+        public var `super`: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+        public var wrapper: Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>?
+    }
+    private var instance: WithTrailingObjects
+
+    public init() {
+        self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
+        self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>.passUnretained(self)
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+    }
+
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void {
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.super) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(UnsafeMutableRawPointer($0))
         }
     }
 }
@@ -1339,6 +2959,35 @@ extension WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSys
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
             let completion: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation : Future {
+    private final class MyCompletedHandler: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        internal func get() throws -> WinRT.Windows.ApplicationModel.DataTransfer.DataPackageOperation {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1642,6 +3291,10 @@ public typealias Point = _q_CWindows_CFoundation_CPoint;
 // type: Windows.Foundation.Rect
 // struct type
 public typealias Rect = _q_CWindows_CFoundation_CRect;
+
+// type: Windows.Foundation.Size
+// struct type
+public typealias Size = _q_CWindows_CFoundation_CSize;
 
 // type: Windows.Foundation.TimeSpan
 // struct type

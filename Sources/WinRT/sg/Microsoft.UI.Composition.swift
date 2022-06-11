@@ -5,6 +5,23 @@
 import CWinRT;
 
 extension Microsoft.UI.Composition {
+// type: Microsoft.UI.Composition.AnimationPropertyInfo
+// runtime class
+public class AnimationPropertyInfo
+    :
+    Microsoft.UI.Composition.CompositionObject
+{
+    private var _self : WinRT.Microsoft.UI.Composition.IAnimationPropertyInfo;
+    internal init(plok: WinRT.Microsoft.UI.Composition.IAnimationPropertyInfo?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Composition.IAnimationPropertyInfo { return _self; }
+    // method not needed: get_AccessMode
+    // method not needed: put_AccessMode
+    // instance interface not needed: Microsoft.UI.Composition.IAnimationPropertyInfo2
+}
+
 // type: Microsoft.UI.Composition.CompositionBrush
 // runtime class
 open class CompositionBrush
@@ -42,7 +59,10 @@ open class CompositionObject
     // instance interface not needed: Microsoft.UI.Composition.ICompositionObject4
     // instance interface not needed: Microsoft.UI.Composition.ICompositionObject5
     // instance interface not needed: Windows.Foundation.IClosable
-    // instance interface not needed: Microsoft.UI.Composition.IAnimationObject
+    public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();
+        return try _ifc.PopulatePropertyInfo(propertyName: propertyName, propertyInfo: propertyInfo!.Interface());
+    }
 }
 
 // type: Microsoft.UI.Composition.Compositor
@@ -93,6 +113,50 @@ public class Compositor
     // instance interface not needed: Microsoft.UI.Composition.ICompositor8
     // instance interface not needed: Windows.Foundation.IClosable
 }
+
+// type: Microsoft.UI.Composition.IAnimationObject
+// interface type
+open class IAnimationObject
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8f56119d, Data2: 0xb96d, Data3 : 0x58d0, Data4 : (0x99, 0x16, 0xd1, 0xc5, 0xe3, 0x90, 0xf8, 0x90)) }
+    // void PopulatePropertyInfo(System.String, Microsoft.UI.Composition.AnimationPropertyInfo)
+    public func _n_PopulatePropertyInfo(_ propertyName : Optional<HSTRING>, _ propertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CComposition_CIAnimationObject.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfo(pThis, propertyName, propertyInfo))
+        }
+    }
+    public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<WinRT.Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
+        let __hstr_propertyName = try HString(propertyName);
+        return try withExtendedLifetime(__hstr_propertyName) {
+        try self._n_PopulatePropertyInfo(__hstr_propertyName.hRef.hString, RawPointer(propertyInfo));
+        }
+    }
+} // IAnimationObject
+
+
+// type: Microsoft.UI.Composition.IAnimationPropertyInfo
+// interface type
+open class IAnimationPropertyInfo
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3d721a2b, Data2: 0x9ccd, Data3 : 0x57bd, Data4 : (0xb6, 0xc2, 0xce, 0x9e, 0x04, 0xae, 0x36, 0x06)) }
+// method not needed: get_AccessMode
+// method not needed: put_AccessMode
+} // IAnimationPropertyInfo
+
+
+// type: Microsoft.UI.Composition.ICompositionAnimationBase
+// interface type
+open class ICompositionAnimationBase
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa77c0e5a, Data2: 0xf059, Data3 : 0x4e85, Data4 : (0xbc, 0xef, 0xc0, 0x68, 0x69, 0x4c, 0xec, 0x78)) }
+} // ICompositionAnimationBase
+
 
 // type: Microsoft.UI.Composition.ICompositionBrush
 // interface type
@@ -150,5 +214,121 @@ open class ICompositor
 // method not needed: GetCommitBatch
 } // ICompositor
 
+
+// type: Microsoft.UI.Composition.IVisual
+// interface type
+open class IVisual
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0eeab6c, Data2: 0xc897, Data3 : 0x5ac6, Data4 : (0xa1, 0xc9, 0x63, 0xab, 0xd5, 0x05, 0x5b, 0x9b)) }
+// method not needed: get_AnchorPoint
+// method not needed: put_AnchorPoint
+// method not needed: get_BackfaceVisibility
+// method not needed: put_BackfaceVisibility
+// method not needed: get_BorderMode
+// method not needed: put_BorderMode
+// method not needed: get_CenterPoint
+// method not needed: put_CenterPoint
+// method not needed: get_Clip
+// method not needed: put_Clip
+// method not needed: get_CompositeMode
+// method not needed: put_CompositeMode
+// method not needed: get_IsVisible
+// method not needed: put_IsVisible
+// method not needed: get_Offset
+// method not needed: put_Offset
+// method not needed: get_Opacity
+// method not needed: put_Opacity
+// method not needed: get_Orientation
+// method not needed: put_Orientation
+// method not needed: get_Parent
+// method not needed: get_RotationAngle
+// method not needed: put_RotationAngle
+// method not needed: get_RotationAngleInDegrees
+// method not needed: put_RotationAngleInDegrees
+// method not needed: get_RotationAxis
+// method not needed: put_RotationAxis
+// method not needed: get_Scale
+// method not needed: put_Scale
+// method not needed: get_Size
+// method not needed: put_Size
+// method not needed: get_TransformMatrix
+// method not needed: put_TransformMatrix
+} // IVisual
+
+
+// type: Microsoft.UI.Composition.IVisualElement2
+// interface type
+open class IVisualElement2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbc950c8d, Data2: 0x1db0, Data3 : 0x53aa, Data4 : (0x9d, 0xee, 0x34, 0x27, 0x1c, 0xd1, 0x8c, 0xe6)) }
+    // Microsoft.UI.Composition.Visual GetVisualInternal()
+    public func _n_GetVisualInternal(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIVisual>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CComposition_CIVisualElement2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetVisualInternal(pThis, __presult))
+        }
+    }
+    public func GetVisualInternal() throws -> Optional<WinRT.Microsoft.UI.Composition.IVisual> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIVisual>> = nil;
+        try self._n_GetVisualInternal(&__result);
+        return WinRT.Microsoft.UI.Composition.IVisual(consuming: __result);
+    }
+} // IVisualElement2
+
+
+// type: Microsoft.UI.Composition.Visual
+// runtime class
+open class Visual
+    :
+    Microsoft.UI.Composition.CompositionObject
+{
+    private var _self : WinRT.Microsoft.UI.Composition.IVisual;
+    internal init(plok: WinRT.Microsoft.UI.Composition.IVisual?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Composition.IVisual { return _self; }
+    // COMPOSABLE: Microsoft.UI.Composition.IVisualFactory
+// composable interface not needed: Microsoft.UI.Composition.IVisualFactory
+    // method not needed: get_AnchorPoint
+    // method not needed: put_AnchorPoint
+    // method not needed: get_BackfaceVisibility
+    // method not needed: put_BackfaceVisibility
+    // method not needed: get_BorderMode
+    // method not needed: put_BorderMode
+    // method not needed: get_CenterPoint
+    // method not needed: put_CenterPoint
+    // method not needed: get_Clip
+    // method not needed: put_Clip
+    // method not needed: get_CompositeMode
+    // method not needed: put_CompositeMode
+    // method not needed: get_IsVisible
+    // method not needed: put_IsVisible
+    // method not needed: get_Offset
+    // method not needed: put_Offset
+    // method not needed: get_Opacity
+    // method not needed: put_Opacity
+    // method not needed: get_Orientation
+    // method not needed: put_Orientation
+    // method not needed: get_Parent
+    // method not needed: get_RotationAngle
+    // method not needed: put_RotationAngle
+    // method not needed: get_RotationAngleInDegrees
+    // method not needed: put_RotationAngleInDegrees
+    // method not needed: get_RotationAxis
+    // method not needed: put_RotationAxis
+    // method not needed: get_Scale
+    // method not needed: put_Scale
+    // method not needed: get_Size
+    // method not needed: put_Size
+    // method not needed: get_TransformMatrix
+    // method not needed: put_TransformMatrix
+    // instance interface not needed: Microsoft.UI.Composition.IVisual2
+    // instance interface not needed: Microsoft.UI.Composition.IVisual3
+    // instance interface not needed: Microsoft.UI.Composition.IVisual4
+}
 
 }

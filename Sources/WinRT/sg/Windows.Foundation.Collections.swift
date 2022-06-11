@@ -6,6 +6,226 @@ import CWinRT;
 
 extension Windows.Foundation.Collections {
 // closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x030a9884, Data2: 0x05db, Data3 : 0x57af, Data4 : (0xae, 0x3b, 0x4c, 0x77, 0xff, 0xab, 0xfe, 0x57)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: GetView
+// method not needed: IndexOf
+// method not needed: SetAt
+// method not needed: InsertAt
+// method not needed: RemoveAt
+    // void Append(Microsoft.UI.Xaml.Media.Animation.Transition)
+    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.ITransition>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+// method not needed: RemoveAtEnd
+// method not needed: Clear
+// method not needed: GetMany
+// method not needed: ReplaceAll
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6fe2632e, Data2: 0x3c2a, Data3 : 0x5087, Data4 : (0xbd, 0xbc, 0x8b, 0xc5, 0x1d, 0xa7, 0x52, 0x0b)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x81082898, Data2: 0xc342, Data3 : 0x5b9f, Data4 : (0x9f, 0xcc, 0x09, 0x27, 0x88, 0x1f, 0x30, 0xad)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer
+// closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfb6065bb, Data2: 0x83e0, Data3 : 0x57c0, Data4 : (0xae, 0x7f, 0x41, 0x8f, 0xd7, 0x63, 0xb0, 0xce)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: GetView
+// method not needed: IndexOf
+// method not needed: SetAt
+// method not needed: InsertAt
+// method not needed: RemoveAt
+    // void Append(Microsoft.UI.Xaml.Media.XamlLight)
+    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IXamlLight>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+// method not needed: RemoveAtEnd
+// method not needed: Clear
+// method not needed: GetMany
+// method not needed: ReplaceAll
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcf393ba1, Data2: 0x2605, Data3 : 0x543e, Data4 : (0x8b, 0x4e, 0xe8, 0x00, 0xeb, 0x17, 0x94, 0x92)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
+// closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0db091c3, Data2: 0x8538, Data3 : 0x5d25, Data4 : (0x93, 0x7f, 0xdb, 0x6e, 0x00, 0x3e, 0x1f, 0x71)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: GetView
+// method not needed: IndexOf
+// method not needed: SetAt
+// method not needed: InsertAt
+// method not needed: RemoveAt
+    // void Append(Microsoft.UI.Xaml.Input.KeyboardAccelerator)
+    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+// method not needed: RemoveAtEnd
+// method not needed: Clear
+// method not needed: GetMany
+// method not needed: ReplaceAll
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4d4dfa1a, Data2: 0x7153, Data3 : 0x51f3, Data4 : (0x80, 0x36, 0x6b, 0x61, 0xde, 0x68, 0xbc, 0xa8)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
+// closed interface type
+public class IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xae44597e, Data2: 0xd411, Data3 : 0x5b7f, Data4 : (0xbb, 0xec, 0x6a, 0x96, 0xc9, 0x4a, 0x10, 0x7a)) }
+// method not needed: First
+} // IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint
+// closed interface type
+public class IIterator_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x377f6162, Data2: 0x6e4d, Data3 : 0x574e, Data4 : (0xbf, 0x01, 0x77, 0xf4, 0xfd, 0x02, 0x1d, 0x0e)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint
+// closed interface type
+public class IIterable_1__q_CWindows_CFoundation_CPoint
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc192280d, Data2: 0x3a09, Data3 : 0x5423, Data4 : (0x9d, 0xc5, 0x67, 0xb8, 0x3e, 0xbd, 0xe4, 0x1d)) }
+// method not needed: First
+} // IIterable_1__q_CWindows_CFoundation_CPoint
+// closed interface type
+public class IIterator_1__q_CWindows_CFoundation_CPoint
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc602b59e, Data2: 0x0a8e, Data3 : 0x5e99, Data4 : (0xb4, 0x78, 0x2b, 0x56, 0x45, 0x85, 0x27, 0x8d)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__q_CWindows_CFoundation_CPoint
+// closed interface type
+public class IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x838a6966, Data2: 0x6de6, Data3 : 0x5040, Data4 : (0xa1, 0x4f, 0xba, 0x34, 0xd5, 0x42, 0x5a, 0xb4)) }
+// method not needed: First
+} // IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject
+// closed interface type
+public class IIterator_1__q_CMicrosoft_CUI_CXaml_CDependencyObject
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x62e49306, Data2: 0x76d0, Data3 : 0x5cd7, Data4 : (0x97, 0xd5, 0xef, 0x08, 0xc9, 0x34, 0xfe, 0x9a)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__q_CMicrosoft_CUI_CXaml_CDependencyObject
+// closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xef52e000, Data2: 0x0b0f, Data3 : 0x52b5, Data4 : (0xbd, 0xfe, 0x4f, 0x59, 0x35, 0xdc, 0xf1, 0xbc)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: GetView
+// method not needed: IndexOf
+// method not needed: SetAt
+// method not needed: InsertAt
+// method not needed: RemoveAt
+    // void Append(Microsoft.UI.Xaml.TriggerBase)
+    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.ITriggerBase>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+// method not needed: RemoveAtEnd
+// method not needed: Clear
+// method not needed: GetMany
+// method not needed: ReplaceAll
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4b947794, Data2: 0x8e5c, Data3 : 0x5fed, Data4 : (0x87, 0xbe, 0x4d, 0x2b, 0x37, 0x29, 0xbd, 0xd7)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
+// closed interface type
 public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
     :
     WinRT.IInspectable
@@ -82,17 +302,6 @@ public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
 // method not needed: GetMany
 } // IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
 // closed interface type
-public class IVectorView_1_FLOAT
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7bca64fd, Data2: 0x150c, Data3 : 0x5d50, Data4 : (0xb5, 0x6b, 0x9f, 0x4f, 0x47, 0x4c, 0x59, 0x30)) }
-// method not needed: GetAt
-// method not needed: get_Size
-// method not needed: IndexOf
-// method not needed: GetMany
-} // IVectorView_1_FLOAT
-// closed interface type
 public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
     :
     WinRT.IInspectable
@@ -131,43 +340,16 @@ public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
 // method not needed: GetMany
 } // IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
 // closed interface type
-public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
+public class IVectorView_1_FLOAT
     :
     WinRT.IInspectable
 {
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x030a9884, Data2: 0x05db, Data3 : 0x57af, Data4 : (0xae, 0x3b, 0x4c, 0x77, 0xff, 0xab, 0xfe, 0x57)) }
-// method not needed: GetAt
-// method not needed: get_Size
-// method not needed: GetView
-// method not needed: IndexOf
-// method not needed: SetAt
-// method not needed: InsertAt
-// method not needed: RemoveAt
-    // void Append(Microsoft.UI.Xaml.Media.Animation.Transition)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
-        }
-    }
-    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.ITransition>) throws -> Void {
-        try self._n_Append(RawPointer(value));
-    }
-// method not needed: RemoveAtEnd
-// method not needed: Clear
-// method not needed: GetMany
-// method not needed: ReplaceAll
-} // IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
-// closed interface type
-public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6fe2632e, Data2: 0x3c2a, Data3 : 0x5087, Data4 : (0xbd, 0xbc, 0x8b, 0xc5, 0x1d, 0xa7, 0x52, 0x0b)) }
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7bca64fd, Data2: 0x150c, Data3 : 0x5d50, Data4 : (0xb5, 0x6b, 0x9f, 0x4f, 0x47, 0x4c, 0x59, 0x30)) }
 // method not needed: GetAt
 // method not needed: get_Size
 // method not needed: IndexOf
 // method not needed: GetMany
-} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
+} // IVectorView_1_FLOAT
 // closed interface type
 public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
     :

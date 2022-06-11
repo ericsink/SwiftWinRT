@@ -320,65 +320,648 @@ open class Control
         var _inn : Optional<WinRT.IInspectable> = nil
         try self.init(baseInterface: nil, innerInterface: &_inn)
     }
-    // static interface not needed: Microsoft.UI.Xaml.Controls.IControlStatics
-    // method not needed: get_IsFocusEngagementEnabled
-    // method not needed: put_IsFocusEngagementEnabled
-    // method not needed: get_IsFocusEngaged
-    // method not needed: put_IsFocusEngaged
-    // method not needed: get_RequiresPointer
-    // method not needed: put_RequiresPointer
-    // method not needed: get_FontSize
-    // method not needed: put_FontSize
-    // method not needed: get_FontFamily
-    // method not needed: put_FontFamily
-    // method not needed: get_FontWeight
-    // method not needed: put_FontWeight
-    // method not needed: get_FontStyle
-    // method not needed: put_FontStyle
-    // method not needed: get_FontStretch
-    // method not needed: put_FontStretch
-    // method not needed: get_CharacterSpacing
-    // method not needed: put_CharacterSpacing
-    // method not needed: get_Foreground
-    // method not needed: put_Foreground
-    // method not needed: get_IsTextScaleFactorEnabled
-    // method not needed: put_IsTextScaleFactorEnabled
-    // method not needed: get_IsEnabled
-    // method not needed: put_IsEnabled
-    // method not needed: get_TabNavigation
-    // method not needed: put_TabNavigation
-    // method not needed: get_Template
-    // method not needed: put_Template
-    // method not needed: get_Padding
-    // method not needed: put_Padding
-    // method not needed: get_HorizontalContentAlignment
-    // method not needed: put_HorizontalContentAlignment
-    // method not needed: get_VerticalContentAlignment
-    // method not needed: put_VerticalContentAlignment
-    // method not needed: get_Background
-    // method not needed: put_Background
-    // method not needed: get_BackgroundSizing
-    // method not needed: put_BackgroundSizing
-    // method not needed: get_BorderThickness
-    // method not needed: put_BorderThickness
-    // method not needed: get_BorderBrush
-    // method not needed: put_BorderBrush
-    // method not needed: get_DefaultStyleResourceUri
-    // method not needed: put_DefaultStyleResourceUri
-    // method not needed: get_ElementSoundMode
-    // method not needed: put_ElementSoundMode
-    // method not needed: get_CornerRadius
-    // method not needed: put_CornerRadius
-    // method not needed: add_FocusEngaged
-    // method not needed: remove_FocusEngaged
-    // method not needed: add_FocusDisengaged
-    // method not needed: remove_FocusDisengaged
-    // method not needed: add_IsEnabledChanged
-    // method not needed: remove_IsEnabledChanged
-    // method not needed: RemoveFocusEngagement
-    // method not needed: ApplyTemplate
-    // instance interface not needed: Microsoft.UI.Xaml.Controls.IControlProtected
-    // instance interface not needed: Microsoft.UI.Xaml.Controls.IControlOverrides
+    private struct _IControlStatics {
+        static var x : IControlStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Control"))
+    }
+    public static var ControlStatics : IControlStatics {
+        _IControlStatics.x
+    }
+    public static func get_IsFocusEngagementEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_IsFocusEngagementEnabledProperty());
+    }
+    public static func get_IsFocusEngagedProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_IsFocusEngagedProperty());
+    }
+    public static func get_RequiresPointerProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_RequiresPointerProperty());
+    }
+    public static func get_FontSizeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_FontSizeProperty());
+    }
+    public static func get_FontFamilyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_FontFamilyProperty());
+    }
+    public static func get_FontWeightProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_FontWeightProperty());
+    }
+    public static func get_FontStyleProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_FontStyleProperty());
+    }
+    public static func get_FontStretchProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_FontStretchProperty());
+    }
+    public static func get_CharacterSpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_CharacterSpacingProperty());
+    }
+    public static func get_ForegroundProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_ForegroundProperty());
+    }
+    public static func get_IsTextScaleFactorEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_IsTextScaleFactorEnabledProperty());
+    }
+    public static func get_IsEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_IsEnabledProperty());
+    }
+    public static func get_TabNavigationProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_TabNavigationProperty());
+    }
+    public static func get_TemplateProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_TemplateProperty());
+    }
+    public static func get_PaddingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_PaddingProperty());
+    }
+    public static func get_HorizontalContentAlignmentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_HorizontalContentAlignmentProperty());
+    }
+    public static func get_VerticalContentAlignmentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_VerticalContentAlignmentProperty());
+    }
+    public static func get_BackgroundProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_BackgroundProperty());
+    }
+    public static func get_BackgroundSizingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_BackgroundSizingProperty());
+    }
+    public static func get_BorderThicknessProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_BorderThicknessProperty());
+    }
+    public static func get_BorderBrushProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_BorderBrushProperty());
+    }
+    public static func get_DefaultStyleKeyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_DefaultStyleKeyProperty());
+    }
+    public static func get_DefaultStyleResourceUriProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_DefaultStyleResourceUriProperty());
+    }
+    public static func get_ElementSoundModeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_ElementSoundModeProperty());
+    }
+    public static func get_CornerRadiusProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_CornerRadiusProperty());
+    }
+    public static func get_IsTemplateFocusTargetProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_IsTemplateFocusTargetProperty());
+    }
+    public static func GetIsTemplateFocusTarget(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>) throws -> boolean {
+        return try ControlStatics.GetIsTemplateFocusTarget(element: element!.Interface());
+    }
+    public static func SetIsTemplateFocusTarget(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, value : boolean) throws -> Void {
+        return try ControlStatics.SetIsTemplateFocusTarget(element: element!.Interface(), value: value);
+    }
+    public static func get_IsTemplateKeyTipTargetProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.get_IsTemplateKeyTipTargetProperty());
+    }
+    public static func GetIsTemplateKeyTipTarget(element : Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>) throws -> boolean {
+        return try ControlStatics.GetIsTemplateKeyTipTarget(element: element!.Interface());
+    }
+    public static func SetIsTemplateKeyTipTarget(element : Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, value : boolean) throws -> Void {
+        return try ControlStatics.SetIsTemplateKeyTipTarget(element: element!.Interface(), value: value);
+    }
+    public static var BackgroundProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.BackgroundProperty);
+        }
+    }
+    public static var BackgroundSizingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.BackgroundSizingProperty);
+        }
+    }
+    public static var BorderBrushProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.BorderBrushProperty);
+        }
+    }
+    public static var BorderThicknessProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.BorderThicknessProperty);
+        }
+    }
+    public static var CharacterSpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.CharacterSpacingProperty);
+        }
+    }
+    public static var CornerRadiusProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.CornerRadiusProperty);
+        }
+    }
+    public static var DefaultStyleKeyProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.DefaultStyleKeyProperty);
+        }
+    }
+    public static var DefaultStyleResourceUriProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.DefaultStyleResourceUriProperty);
+        }
+    }
+    public static var ElementSoundModeProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.ElementSoundModeProperty);
+        }
+    }
+    public static var FontFamilyProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.FontFamilyProperty);
+        }
+    }
+    public static var FontSizeProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.FontSizeProperty);
+        }
+    }
+    public static var FontStretchProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.FontStretchProperty);
+        }
+    }
+    public static var FontStyleProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.FontStyleProperty);
+        }
+    }
+    public static var FontWeightProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.FontWeightProperty);
+        }
+    }
+    public static var ForegroundProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.ForegroundProperty);
+        }
+    }
+    public static var HorizontalContentAlignmentProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.HorizontalContentAlignmentProperty);
+        }
+    }
+    public static var IsEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.IsEnabledProperty);
+        }
+    }
+    public static var IsFocusEngagedProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.IsFocusEngagedProperty);
+        }
+    }
+    public static var IsFocusEngagementEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.IsFocusEngagementEnabledProperty);
+        }
+    }
+    public static var IsTemplateFocusTargetProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.IsTemplateFocusTargetProperty);
+        }
+    }
+    public static var IsTemplateKeyTipTargetProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.IsTemplateKeyTipTargetProperty);
+        }
+    }
+    public static var IsTextScaleFactorEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.IsTextScaleFactorEnabledProperty);
+        }
+    }
+    public static var PaddingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.PaddingProperty);
+        }
+    }
+    public static var RequiresPointerProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.RequiresPointerProperty);
+        }
+    }
+    public static var TabNavigationProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.TabNavigationProperty);
+        }
+    }
+    public static var TemplateProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.TemplateProperty);
+        }
+    }
+    public static var VerticalContentAlignmentProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ControlStatics.VerticalContentAlignmentProperty);
+        }
+    }
+    public func get_IsFocusEngagementEnabled() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_IsFocusEngagementEnabled();
+    }
+    public func put_IsFocusEngagementEnabled(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_IsFocusEngagementEnabled(value: value);
+    }
+    public func get_IsFocusEngaged() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_IsFocusEngaged();
+    }
+    public func put_IsFocusEngaged(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_IsFocusEngaged(value: value);
+    }
+    public func get_RequiresPointer() throws -> WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_RequiresPointer();
+    }
+    public func put_RequiresPointer(value : WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_RequiresPointer(value: value);
+    }
+    public func get_FontSize() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_FontSize();
+    }
+    public func put_FontSize(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_FontSize(value: value);
+    }
+    public func get_FontFamily() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.FontFamily> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.FontFamily(plok: _ifc.get_FontFamily());
+    }
+    public func put_FontFamily(value : Optional<WinRT.Microsoft.UI.Xaml.Media.FontFamily>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_FontFamily(value: value!.Interface());
+    }
+    public func get_FontWeight() throws -> WinRT.Windows.UI.Text.FontWeight {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_FontWeight();
+    }
+    public func put_FontWeight(value : WinRT.Windows.UI.Text.FontWeight) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_FontWeight(value: value);
+    }
+    public func get_FontStyle() throws -> WinRT.Windows.UI.Text.FontStyle {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_FontStyle();
+    }
+    public func put_FontStyle(value : WinRT.Windows.UI.Text.FontStyle) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_FontStyle(value: value);
+    }
+    public func get_FontStretch() throws -> WinRT.Windows.UI.Text.FontStretch {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_FontStretch();
+    }
+    public func put_FontStretch(value : WinRT.Windows.UI.Text.FontStretch) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_FontStretch(value: value);
+    }
+    public func get_CharacterSpacing() throws -> Swift.Int32 {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_CharacterSpacing();
+    }
+    public func put_CharacterSpacing(value : Swift.Int32) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_CharacterSpacing(value: value);
+    }
+    public func get_Foreground() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_Foreground());
+    }
+    public func put_Foreground(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_Foreground(value: value!.Interface());
+    }
+    public func get_IsTextScaleFactorEnabled() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_IsTextScaleFactorEnabled();
+    }
+    public func put_IsTextScaleFactorEnabled(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_IsTextScaleFactorEnabled(value: value);
+    }
+    public func get_IsEnabled() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_IsEnabled();
+    }
+    public func put_IsEnabled(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_IsEnabled(value: value);
+    }
+    public func get_TabNavigation() throws -> WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_TabNavigation();
+    }
+    public func put_TabNavigation(value : WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_TabNavigation(value: value);
+    }
+    public func get_Template() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.ControlTemplate> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.ControlTemplate(plok: _ifc.get_Template());
+    }
+    public func put_Template(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ControlTemplate>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_Template(value: value!.Interface());
+    }
+    public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_Padding();
+    }
+    public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_Padding(value: value);
+    }
+    public func get_HorizontalContentAlignment() throws -> WinRT.Microsoft.UI.Xaml.HorizontalAlignment {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_HorizontalContentAlignment();
+    }
+    public func put_HorizontalContentAlignment(value : WinRT.Microsoft.UI.Xaml.HorizontalAlignment) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_HorizontalContentAlignment(value: value);
+    }
+    public func get_VerticalContentAlignment() throws -> WinRT.Microsoft.UI.Xaml.VerticalAlignment {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_VerticalContentAlignment();
+    }
+    public func put_VerticalContentAlignment(value : WinRT.Microsoft.UI.Xaml.VerticalAlignment) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_VerticalContentAlignment(value: value);
+    }
+    public func get_Background() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_Background());
+    }
+    public func put_Background(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_Background(value: value!.Interface());
+    }
+    public func get_BackgroundSizing() throws -> WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_BackgroundSizing();
+    }
+    public func put_BackgroundSizing(value : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_BackgroundSizing(value: value);
+    }
+    public func get_BorderThickness() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_BorderThickness();
+    }
+    public func put_BorderThickness(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_BorderThickness(value: value);
+    }
+    public func get_BorderBrush() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_BorderBrush());
+    }
+    public func put_BorderBrush(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_BorderBrush(value: value!.Interface());
+    }
+    public func get_DefaultStyleResourceUri() throws -> Optional<WinRT.Windows.Foundation.Uri> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try WinRT.Windows.Foundation.Uri(plok: _ifc.get_DefaultStyleResourceUri());
+    }
+    public func put_DefaultStyleResourceUri(value : Optional<WinRT.Windows.Foundation.Uri>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_DefaultStyleResourceUri(value: value!.Interface());
+    }
+    public func get_ElementSoundMode() throws -> WinRT.Microsoft.UI.Xaml.ElementSoundMode {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_ElementSoundMode();
+    }
+    public func put_ElementSoundMode(value : WinRT.Microsoft.UI.Xaml.ElementSoundMode) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_ElementSoundMode(value: value);
+    }
+    public func get_CornerRadius() throws -> WinRT.Microsoft.UI.Xaml.CornerRadius {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.get_CornerRadius();
+    }
+    public func put_CornerRadius(value : WinRT.Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.put_CornerRadius(value: value);
+    }
+    public func add_FocusEngaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.add_FocusEngaged(handler: handler);
+    }
+    public func remove_FocusEngaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.remove_FocusEngaged(token: token);
+    }
+    public func add_FocusDisengaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.add_FocusDisengaged(handler: handler);
+    }
+    public func remove_FocusDisengaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.remove_FocusDisengaged(token: token);
+    }
+    public func add_IsEnabledChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.add_IsEnabledChanged(handler: handler!.Interface());
+    }
+    public func remove_IsEnabledChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.remove_IsEnabledChanged(token: token);
+    }
+    public func RemoveFocusEngagement() throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.RemoveFocusEngagement();
+    }
+    public func ApplyTemplate() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+        return try _ifc.ApplyTemplate();
+    }
+    public var Background : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.Background);
+        }
+    }
+    public var BackgroundSizing : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.BackgroundSizing;
+        }
+    }
+    public var BorderBrush : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.BorderBrush);
+        }
+    }
+    public var BorderThickness : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.BorderThickness;
+        }
+    }
+    public var CharacterSpacing : Swift.Int32 {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.CharacterSpacing;
+        }
+    }
+    public var CornerRadius : WinRT.Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.CornerRadius;
+        }
+    }
+    public var DefaultStyleResourceUri : Optional<WinRT.Windows.Foundation.Uri> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try WinRT.Windows.Foundation.Uri(plok: _ifc.DefaultStyleResourceUri);
+        }
+    }
+    public var ElementSoundMode : WinRT.Microsoft.UI.Xaml.ElementSoundMode {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.ElementSoundMode;
+        }
+    }
+    public var FontFamily : Optional<WinRT.Microsoft.UI.Xaml.Media.FontFamily> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.FontFamily(plok: _ifc.FontFamily);
+        }
+    }
+    public var FontSize : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.FontSize;
+        }
+    }
+    public var FontStretch : WinRT.Windows.UI.Text.FontStretch {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.FontStretch;
+        }
+    }
+    public var FontStyle : WinRT.Windows.UI.Text.FontStyle {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.FontStyle;
+        }
+    }
+    public var FontWeight : WinRT.Windows.UI.Text.FontWeight {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.FontWeight;
+        }
+    }
+    public var Foreground : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.Foreground);
+        }
+    }
+    public var HorizontalContentAlignment : WinRT.Microsoft.UI.Xaml.HorizontalAlignment {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.HorizontalContentAlignment;
+        }
+    }
+    public var IsEnabled : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.IsEnabled;
+        }
+    }
+    public var IsFocusEngaged : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.IsFocusEngaged;
+        }
+    }
+    public var IsFocusEngagementEnabled : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.IsFocusEngagementEnabled;
+        }
+    }
+    public var IsTextScaleFactorEnabled : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.IsTextScaleFactorEnabled;
+        }
+    }
+    public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.Padding;
+        }
+    }
+    public var RequiresPointer : WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.RequiresPointer;
+        }
+    }
+    public var TabNavigation : WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.TabNavigation;
+        }
+    }
+    public var Template : Optional<WinRT.Microsoft.UI.Xaml.Controls.ControlTemplate> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Controls.ControlTemplate(plok: _ifc.Template);
+        }
+    }
+    public var VerticalContentAlignment : WinRT.Microsoft.UI.Xaml.VerticalAlignment {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
+            return try _ifc.VerticalContentAlignment;
+        }
+    }
+    public func get_DefaultStyleKey() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
+        return try _ifc.get_DefaultStyleKey();
+    }
+    public func put_DefaultStyleKey(value : Optional<WinRT.IInspectable>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
+        return try _ifc.put_DefaultStyleKey(value: value);
+    }
+    public func GetTemplateChild(childName : Swift.String) throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyObject> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.DependencyObject(plok: _ifc.GetTemplateChild(childName: childName));
+    }
+    public var DefaultStyleKey : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
+            return try _ifc.DefaultStyleKey;
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ControlTemplate
+// runtime class
+public class ControlTemplate
+    :
+    Microsoft.UI.Xaml.FrameworkTemplate
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate { return _self; }
+    public init() throws {
+        let _classId = try HString("Microsoft.UI.Xaml.Controls.ControlTemplate")
+        _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_TargetType
+    // method not needed: put_TargetType
 }
 
 // type: Microsoft.UI.Xaml.Controls.DataTemplateSelector
@@ -403,6 +986,36 @@ open class DataTemplateSelector
     // method not needed: SelectTemplate
     // instance interface not needed: Microsoft.UI.Xaml.Controls.IDataTemplateSelectorOverrides
     // instance interface not needed: Microsoft.UI.Xaml.IElementFactory
+}
+
+// type: Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs
+// runtime class
+public class FocusDisengagedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs { return _self; }
+}
+
+// type: Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs
+// runtime class
+public class FocusEngagedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IFocusEngagedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IFocusEngagedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IFocusEngagedEventArgs { return _self; }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
 }
 
 // type: Microsoft.UI.Xaml.Controls.IButton
@@ -772,62 +1385,686 @@ open class IControl
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x857d6e8a, Data2: 0xd45a, Data3 : 0x5c69, Data4 : (0xa9, 0x9c, 0xbf, 0x6a, 0x5c, 0x54, 0xfb, 0x38)) }
-// method not needed: get_IsFocusEngagementEnabled
-// method not needed: put_IsFocusEngagementEnabled
-// method not needed: get_IsFocusEngaged
-// method not needed: put_IsFocusEngaged
-// method not needed: get_RequiresPointer
-// method not needed: put_RequiresPointer
-// method not needed: get_FontSize
-// method not needed: put_FontSize
-// method not needed: get_FontFamily
-// method not needed: put_FontFamily
-// method not needed: get_FontWeight
-// method not needed: put_FontWeight
-// method not needed: get_FontStyle
-// method not needed: put_FontStyle
-// method not needed: get_FontStretch
-// method not needed: put_FontStretch
-// method not needed: get_CharacterSpacing
-// method not needed: put_CharacterSpacing
-// method not needed: get_Foreground
-// method not needed: put_Foreground
-// method not needed: get_IsTextScaleFactorEnabled
-// method not needed: put_IsTextScaleFactorEnabled
-// method not needed: get_IsEnabled
-// method not needed: put_IsEnabled
-// method not needed: get_TabNavigation
-// method not needed: put_TabNavigation
-// method not needed: get_Template
-// method not needed: put_Template
-// method not needed: get_Padding
-// method not needed: put_Padding
-// method not needed: get_HorizontalContentAlignment
-// method not needed: put_HorizontalContentAlignment
-// method not needed: get_VerticalContentAlignment
-// method not needed: put_VerticalContentAlignment
-// method not needed: get_Background
-// method not needed: put_Background
-// method not needed: get_BackgroundSizing
-// method not needed: put_BackgroundSizing
-// method not needed: get_BorderThickness
-// method not needed: put_BorderThickness
-// method not needed: get_BorderBrush
-// method not needed: put_BorderBrush
-// method not needed: get_DefaultStyleResourceUri
-// method not needed: put_DefaultStyleResourceUri
-// method not needed: get_ElementSoundMode
-// method not needed: put_ElementSoundMode
-// method not needed: get_CornerRadius
-// method not needed: put_CornerRadius
-// method not needed: add_FocusEngaged
-// method not needed: remove_FocusEngaged
-// method not needed: add_FocusDisengaged
-// method not needed: remove_FocusDisengaged
-// method not needed: add_IsEnabledChanged
-// method not needed: remove_IsEnabledChanged
-// method not needed: RemoveFocusEngagement
-// method not needed: ApplyTemplate
+    // [IsSpecialName] bool get_IsFocusEngagementEnabled()
+    public func _n_get_IsFocusEngagementEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsFocusEngagementEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsFocusEngagementEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsFocusEngagementEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsFocusEngagementEnabled(bool)
+    public func _n_put_IsFocusEngagementEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsFocusEngagementEnabled(pThis, value))
+        }
+    }
+    public func put_IsFocusEngagementEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsFocusEngagementEnabled(value);
+    }
+    // [IsSpecialName] bool get_IsFocusEngaged()
+    public func _n_get_IsFocusEngaged(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsFocusEngaged(pThis, __presult))
+        }
+    }
+    public func get_IsFocusEngaged() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsFocusEngaged(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsFocusEngaged(bool)
+    public func _n_put_IsFocusEngaged(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsFocusEngaged(pThis, value))
+        }
+    }
+    public func put_IsFocusEngaged(value : boolean) throws -> Void {
+        try self._n_put_IsFocusEngaged(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.RequiresPointer get_RequiresPointer()
+    public func _n_get_RequiresPointer(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequiresPointer(pThis, __presult))
+        }
+    }
+    public func get_RequiresPointer() throws -> WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer = _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer_Never;
+        try self._n_get_RequiresPointer(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_RequiresPointer(Microsoft.UI.Xaml.Controls.RequiresPointer)
+    public func _n_put_RequiresPointer(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_RequiresPointer(pThis, value))
+        }
+    }
+    public func put_RequiresPointer(value : WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer) throws -> Void {
+        try self._n_put_RequiresPointer(value);
+    }
+    // [IsSpecialName] System.Double get_FontSize()
+    public func _n_get_FontSize(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontSize(pThis, __presult))
+        }
+    }
+    public func get_FontSize() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_FontSize(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_FontSize(System.Double)
+    public func _n_put_FontSize(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontSize(pThis, value))
+        }
+    }
+    public func put_FontSize(value : Swift.Double) throws -> Void {
+        try self._n_put_FontSize(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.FontFamily get_FontFamily()
+    public func _n_get_FontFamily(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontFamily(pThis, __presult))
+        }
+    }
+    public func get_FontFamily() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IFontFamily> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily>> = nil;
+        try self._n_get_FontFamily(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IFontFamily(consuming: __result);
+    }
+    // [IsSpecialName] void put_FontFamily(Microsoft.UI.Xaml.Media.FontFamily)
+    public func _n_put_FontFamily(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontFamily(pThis, value))
+        }
+    }
+    public func put_FontFamily(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IFontFamily>) throws -> Void {
+        try self._n_put_FontFamily(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.UI.Text.FontWeight get_FontWeight()
+    public func _n_get_FontWeight(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontWeight>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontWeight(pThis, __presult))
+        }
+    }
+    public func get_FontWeight() throws -> WinRT.Windows.UI.Text.FontWeight {
+        var __result : _q_CWindows_CUI_CText_CFontWeight = _q_CWindows_CUI_CText_CFontWeight(Weight: 0);
+        try self._n_get_FontWeight(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_FontWeight(Windows.UI.Text.FontWeight)
+    public func _n_put_FontWeight(_ value : _q_CWindows_CUI_CText_CFontWeight) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontWeight(pThis, value))
+        }
+    }
+    public func put_FontWeight(value : WinRT.Windows.UI.Text.FontWeight) throws -> Void {
+        try self._n_put_FontWeight(value);
+    }
+    // [IsSpecialName] Windows.UI.Text.FontStyle get_FontStyle()
+    public func _n_get_FontStyle(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontStyle>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontStyle(pThis, __presult))
+        }
+    }
+    public func get_FontStyle() throws -> WinRT.Windows.UI.Text.FontStyle {
+        var __result : _q_CWindows_CUI_CText_CFontStyle = _q_CWindows_CUI_CText_CFontStyle_Normal;
+        try self._n_get_FontStyle(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_FontStyle(Windows.UI.Text.FontStyle)
+    public func _n_put_FontStyle(_ value : _q_CWindows_CUI_CText_CFontStyle) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontStyle(pThis, value))
+        }
+    }
+    public func put_FontStyle(value : WinRT.Windows.UI.Text.FontStyle) throws -> Void {
+        try self._n_put_FontStyle(value);
+    }
+    // [IsSpecialName] Windows.UI.Text.FontStretch get_FontStretch()
+    public func _n_get_FontStretch(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontStretch>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontStretch(pThis, __presult))
+        }
+    }
+    public func get_FontStretch() throws -> WinRT.Windows.UI.Text.FontStretch {
+        var __result : _q_CWindows_CUI_CText_CFontStretch = _q_CWindows_CUI_CText_CFontStretch_Undefined;
+        try self._n_get_FontStretch(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_FontStretch(Windows.UI.Text.FontStretch)
+    public func _n_put_FontStretch(_ value : _q_CWindows_CUI_CText_CFontStretch) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontStretch(pThis, value))
+        }
+    }
+    public func put_FontStretch(value : WinRT.Windows.UI.Text.FontStretch) throws -> Void {
+        try self._n_put_FontStretch(value);
+    }
+    // [IsSpecialName] System.Int32 get_CharacterSpacing()
+    public func _n_get_CharacterSpacing(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CharacterSpacing(pThis, __presult))
+        }
+    }
+    public func get_CharacterSpacing() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_CharacterSpacing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CharacterSpacing(System.Int32)
+    public func _n_put_CharacterSpacing(_ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CharacterSpacing(pThis, value))
+        }
+    }
+    public func put_CharacterSpacing(value : Swift.Int32) throws -> Void {
+        try self._n_put_CharacterSpacing(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_Foreground()
+    public func _n_get_Foreground(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Foreground(pThis, __presult))
+        }
+    }
+    public func get_Foreground() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_Foreground(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_Foreground(Microsoft.UI.Xaml.Media.Brush)
+    public func _n_put_Foreground(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Foreground(pThis, value))
+        }
+    }
+    public func put_Foreground(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_Foreground(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_IsTextScaleFactorEnabled()
+    public func _n_get_IsTextScaleFactorEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTextScaleFactorEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsTextScaleFactorEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsTextScaleFactorEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsTextScaleFactorEnabled(bool)
+    public func _n_put_IsTextScaleFactorEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsTextScaleFactorEnabled(pThis, value))
+        }
+    }
+    public func put_IsTextScaleFactorEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsTextScaleFactorEnabled(value);
+    }
+    // [IsSpecialName] bool get_IsEnabled()
+    public func _n_get_IsEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsEnabled(bool)
+    public func _n_put_IsEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsEnabled(pThis, value))
+        }
+    }
+    public func put_IsEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsEnabled(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Input.KeyboardNavigationMode get_TabNavigation()
+    public func _n_get_TabNavigation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TabNavigation(pThis, __presult))
+        }
+    }
+    public func get_TabNavigation() throws -> WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode {
+        var __result : _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode = _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode_Local;
+        try self._n_get_TabNavigation(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TabNavigation(Microsoft.UI.Xaml.Input.KeyboardNavigationMode)
+    public func _n_put_TabNavigation(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TabNavigation(pThis, value))
+        }
+    }
+    public func put_TabNavigation(value : WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode) throws -> Void {
+        try self._n_put_TabNavigation(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ControlTemplate get_Template()
+    public func _n_get_Template(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControlTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Template(pThis, __presult))
+        }
+    }
+    public func get_Template() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControlTemplate>> = nil;
+        try self._n_get_Template(&__result);
+        return WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_Template(Microsoft.UI.Xaml.Controls.ControlTemplate)
+    public func _n_put_Template(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControlTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Template(pThis, value))
+        }
+    }
+    public func put_Template(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate>) throws -> Void {
+        try self._n_put_Template(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Padding()
+    public func _n_get_Padding(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Padding(pThis, __presult))
+        }
+    }
+    public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_Padding(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Padding(Microsoft.UI.Xaml.Thickness)
+    public func _n_put_Padding(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Padding(pThis, value))
+        }
+    }
+    public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_Padding(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.HorizontalAlignment get_HorizontalContentAlignment()
+    public func _n_get_HorizontalContentAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CHorizontalAlignment>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalContentAlignment(pThis, __presult))
+        }
+    }
+    public func get_HorizontalContentAlignment() throws -> WinRT.Microsoft.UI.Xaml.HorizontalAlignment {
+        var __result : _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment = _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment_Left;
+        try self._n_get_HorizontalContentAlignment(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_HorizontalContentAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
+    public func _n_put_HorizontalContentAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_HorizontalContentAlignment(pThis, value))
+        }
+    }
+    public func put_HorizontalContentAlignment(value : WinRT.Microsoft.UI.Xaml.HorizontalAlignment) throws -> Void {
+        try self._n_put_HorizontalContentAlignment(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.VerticalAlignment get_VerticalContentAlignment()
+    public func _n_get_VerticalContentAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CVerticalAlignment>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalContentAlignment(pThis, __presult))
+        }
+    }
+    public func get_VerticalContentAlignment() throws -> WinRT.Microsoft.UI.Xaml.VerticalAlignment {
+        var __result : _q_CMicrosoft_CUI_CXaml_CVerticalAlignment = _q_CMicrosoft_CUI_CXaml_CVerticalAlignment_Top;
+        try self._n_get_VerticalContentAlignment(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_VerticalContentAlignment(Microsoft.UI.Xaml.VerticalAlignment)
+    public func _n_put_VerticalContentAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CVerticalAlignment) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_VerticalContentAlignment(pThis, value))
+        }
+    }
+    public func put_VerticalContentAlignment(value : WinRT.Microsoft.UI.Xaml.VerticalAlignment) throws -> Void {
+        try self._n_put_VerticalContentAlignment(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_Background()
+    public func _n_get_Background(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Background(pThis, __presult))
+        }
+    }
+    public func get_Background() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_Background(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_Background(Microsoft.UI.Xaml.Media.Brush)
+    public func _n_put_Background(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Background(pThis, value))
+        }
+    }
+    public func put_Background(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_Background(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.BackgroundSizing get_BackgroundSizing()
+    public func _n_get_BackgroundSizing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizing(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizing() throws -> WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_InnerBorderEdge;
+        try self._n_get_BackgroundSizing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
+    public func _n_put_BackgroundSizing(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BackgroundSizing(pThis, value))
+        }
+    }
+    public func put_BackgroundSizing(value : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        try self._n_put_BackgroundSizing(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_BorderThickness()
+    public func _n_get_BorderThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThickness(pThis, __presult))
+        }
+    }
+    public func get_BorderThickness() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_BorderThickness(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BorderThickness(Microsoft.UI.Xaml.Thickness)
+    public func _n_put_BorderThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderThickness(pThis, value))
+        }
+    }
+    public func put_BorderThickness(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_BorderThickness(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_BorderBrush()
+    public func _n_get_BorderBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrush(pThis, __presult))
+        }
+    }
+    public func get_BorderBrush() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_BorderBrush(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
+    public func _n_put_BorderBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderBrush(pThis, value))
+        }
+    }
+    public func put_BorderBrush(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_BorderBrush(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.Uri get_DefaultStyleResourceUri()
+    public func _n_get_DefaultStyleResourceUri(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DefaultStyleResourceUri(pThis, __presult))
+        }
+    }
+    public func get_DefaultStyleResourceUri() throws -> Optional<WinRT.Windows.Foundation.IUriRuntimeClass> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
+        try self._n_get_DefaultStyleResourceUri(&__result);
+        return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
+    }
+    // [IsSpecialName] void put_DefaultStyleResourceUri(Windows.Foundation.Uri)
+    public func _n_put_DefaultStyleResourceUri(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DefaultStyleResourceUri(pThis, value))
+        }
+    }
+    public func put_DefaultStyleResourceUri(value : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Void {
+        try self._n_put_DefaultStyleResourceUri(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.ElementSoundMode get_ElementSoundMode()
+    public func _n_get_ElementSoundMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementSoundMode>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ElementSoundMode(pThis, __presult))
+        }
+    }
+    public func get_ElementSoundMode() throws -> WinRT.Microsoft.UI.Xaml.ElementSoundMode {
+        var __result : _q_CMicrosoft_CUI_CXaml_CElementSoundMode = _q_CMicrosoft_CUI_CXaml_CElementSoundMode_Default;
+        try self._n_get_ElementSoundMode(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ElementSoundMode(Microsoft.UI.Xaml.ElementSoundMode)
+    public func _n_put_ElementSoundMode(_ value : _q_CMicrosoft_CUI_CXaml_CElementSoundMode) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ElementSoundMode(pThis, value))
+        }
+    }
+    public func put_ElementSoundMode(value : WinRT.Microsoft.UI.Xaml.ElementSoundMode) throws -> Void {
+        try self._n_put_ElementSoundMode(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.CornerRadius get_CornerRadius()
+    public func _n_get_CornerRadius(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CCornerRadius>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadius(pThis, __presult))
+        }
+    }
+    public func get_CornerRadius() throws -> WinRT.Microsoft.UI.Xaml.CornerRadius {
+        var __result : _q_CMicrosoft_CUI_CXaml_CCornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius(TopLeft: 0, TopRight: 0, BottomRight: 0, BottomLeft: 0);
+        try self._n_get_CornerRadius(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
+    public func _n_put_CornerRadius(_ value : _q_CMicrosoft_CUI_CXaml_CCornerRadius) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CornerRadius(pThis, value))
+        }
+    }
+    public func put_CornerRadius(value : WinRT.Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        try self._n_put_CornerRadius(value);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_FocusEngaged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Control,Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>)
+    public func _n_add_FocusEngaged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_FocusEngaged(pThis, handler, __presult))
+        }
+    }
+    public func add_FocusEngaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_FocusEngaged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_FocusEngaged(Windows.Foundation.EventRegistrationToken)
+    public func _n_remove_FocusEngaged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_FocusEngaged(pThis, token))
+        }
+    }
+    public func remove_FocusEngaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_FocusEngaged(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_FocusDisengaged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.Control,Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>)
+    public func _n_add_FocusDisengaged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_FocusDisengaged(pThis, handler, __presult))
+        }
+    }
+    public func add_FocusDisengaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_FocusDisengaged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_FocusDisengaged(Windows.Foundation.EventRegistrationToken)
+    public func _n_remove_FocusDisengaged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_FocusDisengaged(pThis, token))
+        }
+    }
+    public func remove_FocusDisengaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_FocusDisengaged(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_IsEnabledChanged(Microsoft.UI.Xaml.DependencyPropertyChangedEventHandler)
+    public func _n_add_IsEnabledChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_IsEnabledChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_IsEnabledChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_IsEnabledChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_IsEnabledChanged(Windows.Foundation.EventRegistrationToken)
+    public func _n_remove_IsEnabledChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_IsEnabledChanged(pThis, token))
+        }
+    }
+    public func remove_IsEnabledChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_IsEnabledChanged(token);
+    }
+    // void RemoveFocusEngagement()
+    public func _n_RemoveFocusEngagement() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveFocusEngagement(pThis))
+        }
+    }
+    public func RemoveFocusEngagement() throws -> Void {
+        try self._n_RemoveFocusEngagement();
+    }
+    // bool ApplyTemplate()
+    public func _n_ApplyTemplate(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ApplyTemplate(pThis, __presult))
+        }
+    }
+    public func ApplyTemplate() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_ApplyTemplate(&__result);
+        return __result;
+    }
+    public var Background : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_Background();
+        }
+    }
+    public var BackgroundSizing : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+            return try get_BackgroundSizing();
+        }
+    }
+    public var BorderBrush : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_BorderBrush();
+        }
+    }
+    public var BorderThickness : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_BorderThickness();
+        }
+    }
+    public var CharacterSpacing : Swift.Int32 {
+        get throws {
+            return try get_CharacterSpacing();
+        }
+    }
+    public var CornerRadius : WinRT.Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+            return try get_CornerRadius();
+        }
+    }
+    public var DefaultStyleResourceUri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass> {
+        get throws {
+            return try get_DefaultStyleResourceUri();
+        }
+    }
+    public var ElementSoundMode : WinRT.Microsoft.UI.Xaml.ElementSoundMode {
+        get throws {
+            return try get_ElementSoundMode();
+        }
+    }
+    public var FontFamily : Optional<WinRT.Microsoft.UI.Xaml.Media.IFontFamily> {
+        get throws {
+            return try get_FontFamily();
+        }
+    }
+    public var FontSize : Swift.Double {
+        get throws {
+            return try get_FontSize();
+        }
+    }
+    public var FontStretch : WinRT.Windows.UI.Text.FontStretch {
+        get throws {
+            return try get_FontStretch();
+        }
+    }
+    public var FontStyle : WinRT.Windows.UI.Text.FontStyle {
+        get throws {
+            return try get_FontStyle();
+        }
+    }
+    public var FontWeight : WinRT.Windows.UI.Text.FontWeight {
+        get throws {
+            return try get_FontWeight();
+        }
+    }
+    public var Foreground : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_Foreground();
+        }
+    }
+    public var HorizontalContentAlignment : WinRT.Microsoft.UI.Xaml.HorizontalAlignment {
+        get throws {
+            return try get_HorizontalContentAlignment();
+        }
+    }
+    public var IsEnabled : boolean {
+        get throws {
+            return try get_IsEnabled();
+        }
+    }
+    public var IsFocusEngaged : boolean {
+        get throws {
+            return try get_IsFocusEngaged();
+        }
+    }
+    public var IsFocusEngagementEnabled : boolean {
+        get throws {
+            return try get_IsFocusEngagementEnabled();
+        }
+    }
+    public var IsTextScaleFactorEnabled : boolean {
+        get throws {
+            return try get_IsTextScaleFactorEnabled();
+        }
+    }
+    public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_Padding();
+        }
+    }
+    public var RequiresPointer : WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer {
+        get throws {
+            return try get_RequiresPointer();
+        }
+    }
+    public var TabNavigation : WinRT.Microsoft.UI.Xaml.Input.KeyboardNavigationMode {
+        get throws {
+            return try get_TabNavigation();
+        }
+    }
+    public var Template : Optional<WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate> {
+        get throws {
+            return try get_Template();
+        }
+    }
+    public var VerticalContentAlignment : WinRT.Microsoft.UI.Xaml.VerticalAlignment {
+        get throws {
+            return try get_VerticalContentAlignment();
+        }
+    }
 } // IControl
 
 
@@ -853,6 +2090,811 @@ open class IControlFactory
         return WinRT.Microsoft.UI.Xaml.Controls.IControl(consuming: __result);
     }
 } // IControlFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IControlOverrides
+// interface type
+open class IControlOverrides
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5f644395, Data2: 0x2177, Data3 : 0x5161, Data4 : (0x9f, 0x87, 0xc6, 0xc7, 0x49, 0xc7, 0x3a, 0x03)) }
+    // void OnPointerEntered(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerEntered(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerEntered(pThis, e))
+        }
+    }
+    public func OnPointerEntered(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerEntered(RawPointer(e));
+    }
+    // void OnPointerPressed(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerPressed(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerPressed(pThis, e))
+        }
+    }
+    public func OnPointerPressed(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerPressed(RawPointer(e));
+    }
+    // void OnPointerMoved(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerMoved(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerMoved(pThis, e))
+        }
+    }
+    public func OnPointerMoved(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerMoved(RawPointer(e));
+    }
+    // void OnPointerReleased(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerReleased(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerReleased(pThis, e))
+        }
+    }
+    public func OnPointerReleased(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerReleased(RawPointer(e));
+    }
+    // void OnPointerExited(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerExited(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerExited(pThis, e))
+        }
+    }
+    public func OnPointerExited(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerExited(RawPointer(e));
+    }
+    // void OnPointerCaptureLost(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerCaptureLost(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerCaptureLost(pThis, e))
+        }
+    }
+    public func OnPointerCaptureLost(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerCaptureLost(RawPointer(e));
+    }
+    // void OnPointerCanceled(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerCanceled(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerCanceled(pThis, e))
+        }
+    }
+    public func OnPointerCanceled(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerCanceled(RawPointer(e));
+    }
+    // void OnPointerWheelChanged(Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
+    public func _n_OnPointerWheelChanged(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPointerWheelChanged(pThis, e))
+        }
+    }
+    public func OnPointerWheelChanged(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs>) throws -> Void {
+        try self._n_OnPointerWheelChanged(RawPointer(e));
+    }
+    // void OnTapped(Microsoft.UI.Xaml.Input.TappedRoutedEventArgs)
+    public func _n_OnTapped(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnTapped(pThis, e))
+        }
+    }
+    public func OnTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs>) throws -> Void {
+        try self._n_OnTapped(RawPointer(e));
+    }
+    // void OnDoubleTapped(Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs)
+    public func _n_OnDoubleTapped(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnDoubleTapped(pThis, e))
+        }
+    }
+    public func OnDoubleTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs>) throws -> Void {
+        try self._n_OnDoubleTapped(RawPointer(e));
+    }
+    // void OnHolding(Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs)
+    public func _n_OnHolding(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnHolding(pThis, e))
+        }
+    }
+    public func OnHolding(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs>) throws -> Void {
+        try self._n_OnHolding(RawPointer(e));
+    }
+    // void OnRightTapped(Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs)
+    public func _n_OnRightTapped(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnRightTapped(pThis, e))
+        }
+    }
+    public func OnRightTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs>) throws -> Void {
+        try self._n_OnRightTapped(RawPointer(e));
+    }
+    // void OnManipulationStarting(Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)
+    public func _n_OnManipulationStarting(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnManipulationStarting(pThis, e))
+        }
+    }
+    public func OnManipulationStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs>) throws -> Void {
+        try self._n_OnManipulationStarting(RawPointer(e));
+    }
+    // void OnManipulationInertiaStarting(Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs)
+    public func _n_OnManipulationInertiaStarting(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnManipulationInertiaStarting(pThis, e))
+        }
+    }
+    public func OnManipulationInertiaStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+        try self._n_OnManipulationInertiaStarting(RawPointer(e));
+    }
+    // void OnManipulationStarted(Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)
+    public func _n_OnManipulationStarted(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnManipulationStarted(pThis, e))
+        }
+    }
+    public func OnManipulationStarted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs>) throws -> Void {
+        try self._n_OnManipulationStarted(RawPointer(e));
+    }
+    // void OnManipulationDelta(Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)
+    public func _n_OnManipulationDelta(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnManipulationDelta(pThis, e))
+        }
+    }
+    public func OnManipulationDelta(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs>) throws -> Void {
+        try self._n_OnManipulationDelta(RawPointer(e));
+    }
+    // void OnManipulationCompleted(Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)
+    public func _n_OnManipulationCompleted(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnManipulationCompleted(pThis, e))
+        }
+    }
+    public func OnManipulationCompleted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs>) throws -> Void {
+        try self._n_OnManipulationCompleted(RawPointer(e));
+    }
+    // void OnKeyUp(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
+    public func _n_OnKeyUp(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnKeyUp(pThis, e))
+        }
+    }
+    public func OnKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs>) throws -> Void {
+        try self._n_OnKeyUp(RawPointer(e));
+    }
+    // void OnKeyDown(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
+    public func _n_OnKeyDown(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnKeyDown(pThis, e))
+        }
+    }
+    public func OnKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs>) throws -> Void {
+        try self._n_OnKeyDown(RawPointer(e));
+    }
+    // void OnPreviewKeyDown(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
+    public func _n_OnPreviewKeyDown(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPreviewKeyDown(pThis, e))
+        }
+    }
+    public func OnPreviewKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs>) throws -> Void {
+        try self._n_OnPreviewKeyDown(RawPointer(e));
+    }
+    // void OnPreviewKeyUp(Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
+    public func _n_OnPreviewKeyUp(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnPreviewKeyUp(pThis, e))
+        }
+    }
+    public func OnPreviewKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs>) throws -> Void {
+        try self._n_OnPreviewKeyUp(RawPointer(e));
+    }
+    // void OnGotFocus(Microsoft.UI.Xaml.RoutedEventArgs)
+    public func _n_OnGotFocus(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnGotFocus(pThis, e))
+        }
+    }
+    public func OnGotFocus(e : Optional<WinRT.Microsoft.UI.Xaml.IRoutedEventArgs>) throws -> Void {
+        try self._n_OnGotFocus(RawPointer(e));
+    }
+    // void OnLostFocus(Microsoft.UI.Xaml.RoutedEventArgs)
+    public func _n_OnLostFocus(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnLostFocus(pThis, e))
+        }
+    }
+    public func OnLostFocus(e : Optional<WinRT.Microsoft.UI.Xaml.IRoutedEventArgs>) throws -> Void {
+        try self._n_OnLostFocus(RawPointer(e));
+    }
+    // void OnCharacterReceived(Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs)
+    public func _n_OnCharacterReceived(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnCharacterReceived(pThis, e))
+        }
+    }
+    public func OnCharacterReceived(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ICharacterReceivedRoutedEventArgs>) throws -> Void {
+        try self._n_OnCharacterReceived(RawPointer(e));
+    }
+    // void OnDragEnter(Microsoft.UI.Xaml.DragEventArgs)
+    public func _n_OnDragEnter(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnDragEnter(pThis, e))
+        }
+    }
+    public func OnDragEnter(e : Optional<WinRT.Microsoft.UI.Xaml.IDragEventArgs>) throws -> Void {
+        try self._n_OnDragEnter(RawPointer(e));
+    }
+    // void OnDragLeave(Microsoft.UI.Xaml.DragEventArgs)
+    public func _n_OnDragLeave(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnDragLeave(pThis, e))
+        }
+    }
+    public func OnDragLeave(e : Optional<WinRT.Microsoft.UI.Xaml.IDragEventArgs>) throws -> Void {
+        try self._n_OnDragLeave(RawPointer(e));
+    }
+    // void OnDragOver(Microsoft.UI.Xaml.DragEventArgs)
+    public func _n_OnDragOver(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnDragOver(pThis, e))
+        }
+    }
+    public func OnDragOver(e : Optional<WinRT.Microsoft.UI.Xaml.IDragEventArgs>) throws -> Void {
+        try self._n_OnDragOver(RawPointer(e));
+    }
+    // void OnDrop(Microsoft.UI.Xaml.DragEventArgs)
+    public func _n_OnDrop(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnDrop(pThis, e))
+        }
+    }
+    public func OnDrop(e : Optional<WinRT.Microsoft.UI.Xaml.IDragEventArgs>) throws -> Void {
+        try self._n_OnDrop(RawPointer(e));
+    }
+} // IControlOverrides
+
+
+// type: Microsoft.UI.Xaml.Controls.IControlProtected
+// interface type
+open class IControlProtected
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5c750339, Data2: 0x1789, Data3 : 0x5095, Data4 : (0xa2, 0x14, 0xdd, 0x9d, 0x05, 0x64, 0xe5, 0x79)) }
+    // [IsSpecialName] System.Object get_DefaultStyleKey()
+    public func _n_get_DefaultStyleKey(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlProtected.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DefaultStyleKey(pThis, __presult))
+        }
+    }
+    public func get_DefaultStyleKey() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_DefaultStyleKey(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_DefaultStyleKey(System.Object)
+    public func _n_put_DefaultStyleKey(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlProtected.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DefaultStyleKey(pThis, value))
+        }
+    }
+    public func put_DefaultStyleKey(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_DefaultStyleKey(RawPointer(value));
+    }
+    // Microsoft.UI.Xaml.DependencyObject GetTemplateChild(System.String)
+    public func _n_GetTemplateChild(_ childName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlProtected.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetTemplateChild(pThis, childName, __presult))
+        }
+    }
+    public func GetTemplateChild(childName : Swift.String) throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyObject> {
+        let __hstr_childName = try HString(childName);
+        return try withExtendedLifetime(__hstr_childName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>> = nil;
+        try self._n_GetTemplateChild(__hstr_childName.hRef.hString, &__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
+        }
+    }
+    public var DefaultStyleKey : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_DefaultStyleKey();
+        }
+    }
+} // IControlProtected
+
+
+// type: Microsoft.UI.Xaml.Controls.IControlStatics
+// interface type
+open class IControlStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc3ae388d, Data2: 0xaa36, Data3 : 0x5e10, Data4 : (0xac, 0xac, 0x98, 0x41, 0x5f, 0x47, 0xbc, 0xc7)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsFocusEngagementEnabledProperty()
+    public func _n_get_IsFocusEngagementEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsFocusEngagementEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsFocusEngagementEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsFocusEngagementEnabledProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsFocusEngagedProperty()
+    public func _n_get_IsFocusEngagedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsFocusEngagedProperty(pThis, __presult))
+        }
+    }
+    public func get_IsFocusEngagedProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsFocusEngagedProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RequiresPointerProperty()
+    public func _n_get_RequiresPointerProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequiresPointerProperty(pThis, __presult))
+        }
+    }
+    public func get_RequiresPointerProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_RequiresPointerProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FontSizeProperty()
+    public func _n_get_FontSizeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontSizeProperty(pThis, __presult))
+        }
+    }
+    public func get_FontSizeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FontSizeProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FontFamilyProperty()
+    public func _n_get_FontFamilyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontFamilyProperty(pThis, __presult))
+        }
+    }
+    public func get_FontFamilyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FontFamilyProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FontWeightProperty()
+    public func _n_get_FontWeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontWeightProperty(pThis, __presult))
+        }
+    }
+    public func get_FontWeightProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FontWeightProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FontStyleProperty()
+    public func _n_get_FontStyleProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontStyleProperty(pThis, __presult))
+        }
+    }
+    public func get_FontStyleProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FontStyleProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FontStretchProperty()
+    public func _n_get_FontStretchProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontStretchProperty(pThis, __presult))
+        }
+    }
+    public func get_FontStretchProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FontStretchProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CharacterSpacingProperty()
+    public func _n_get_CharacterSpacingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CharacterSpacingProperty(pThis, __presult))
+        }
+    }
+    public func get_CharacterSpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CharacterSpacingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ForegroundProperty()
+    public func _n_get_ForegroundProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ForegroundProperty(pThis, __presult))
+        }
+    }
+    public func get_ForegroundProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ForegroundProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsTextScaleFactorEnabledProperty()
+    public func _n_get_IsTextScaleFactorEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTextScaleFactorEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsTextScaleFactorEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsTextScaleFactorEnabledProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsEnabledProperty()
+    public func _n_get_IsEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsEnabledProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TabNavigationProperty()
+    public func _n_get_TabNavigationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TabNavigationProperty(pThis, __presult))
+        }
+    }
+    public func get_TabNavigationProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TabNavigationProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TemplateProperty()
+    public func _n_get_TemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_TemplateProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TemplateProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PaddingProperty()
+    public func _n_get_PaddingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaddingProperty(pThis, __presult))
+        }
+    }
+    public func get_PaddingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PaddingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HorizontalContentAlignmentProperty()
+    public func _n_get_HorizontalContentAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalContentAlignmentProperty(pThis, __presult))
+        }
+    }
+    public func get_HorizontalContentAlignmentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HorizontalContentAlignmentProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_VerticalContentAlignmentProperty()
+    public func _n_get_VerticalContentAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalContentAlignmentProperty(pThis, __presult))
+        }
+    }
+    public func get_VerticalContentAlignmentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_VerticalContentAlignmentProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundProperty()
+    public func _n_get_BackgroundProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundSizingProperty()
+    public func _n_get_BackgroundSizingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizingProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundSizingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderThicknessProperty()
+    public func _n_get_BorderThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThicknessProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderThicknessProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderThicknessProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderBrushProperty()
+    public func _n_get_BorderBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrushProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderBrushProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderBrushProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DefaultStyleKeyProperty()
+    public func _n_get_DefaultStyleKeyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DefaultStyleKeyProperty(pThis, __presult))
+        }
+    }
+    public func get_DefaultStyleKeyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_DefaultStyleKeyProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DefaultStyleResourceUriProperty()
+    public func _n_get_DefaultStyleResourceUriProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DefaultStyleResourceUriProperty(pThis, __presult))
+        }
+    }
+    public func get_DefaultStyleResourceUriProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_DefaultStyleResourceUriProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ElementSoundModeProperty()
+    public func _n_get_ElementSoundModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ElementSoundModeProperty(pThis, __presult))
+        }
+    }
+    public func get_ElementSoundModeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ElementSoundModeProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CornerRadiusProperty()
+    public func _n_get_CornerRadiusProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadiusProperty(pThis, __presult))
+        }
+    }
+    public func get_CornerRadiusProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CornerRadiusProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsTemplateFocusTargetProperty()
+    public func _n_get_IsTemplateFocusTargetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTemplateFocusTargetProperty(pThis, __presult))
+        }
+    }
+    public func get_IsTemplateFocusTargetProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsTemplateFocusTargetProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // bool GetIsTemplateFocusTarget(Microsoft.UI.Xaml.FrameworkElement)
+    public func _n_GetIsTemplateFocusTarget(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetIsTemplateFocusTarget(pThis, element, __presult))
+        }
+    }
+    public func GetIsTemplateFocusTarget(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_GetIsTemplateFocusTarget(RawPointer(element), &__result);
+        return __result;
+    }
+    // void SetIsTemplateFocusTarget(Microsoft.UI.Xaml.FrameworkElement, bool)
+    public func _n_SetIsTemplateFocusTarget(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetIsTemplateFocusTarget(pThis, element, value))
+        }
+    }
+    public func SetIsTemplateFocusTarget(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, value : boolean) throws -> Void {
+        try self._n_SetIsTemplateFocusTarget(RawPointer(element), value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsTemplateKeyTipTargetProperty()
+    public func _n_get_IsTemplateKeyTipTargetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTemplateKeyTipTargetProperty(pThis, __presult))
+        }
+    }
+    public func get_IsTemplateKeyTipTargetProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsTemplateKeyTipTargetProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // bool GetIsTemplateKeyTipTarget(Microsoft.UI.Xaml.DependencyObject)
+    public func _n_GetIsTemplateKeyTipTarget(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetIsTemplateKeyTipTarget(pThis, element, __presult))
+        }
+    }
+    public func GetIsTemplateKeyTipTarget(element : Optional<WinRT.Microsoft.UI.Xaml.IDependencyObject>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_GetIsTemplateKeyTipTarget(RawPointer(element), &__result);
+        return __result;
+    }
+    // void SetIsTemplateKeyTipTarget(Microsoft.UI.Xaml.DependencyObject, bool)
+    public func _n_SetIsTemplateKeyTipTarget(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetIsTemplateKeyTipTarget(pThis, element, value))
+        }
+    }
+    public func SetIsTemplateKeyTipTarget(element : Optional<WinRT.Microsoft.UI.Xaml.IDependencyObject>, value : boolean) throws -> Void {
+        try self._n_SetIsTemplateKeyTipTarget(RawPointer(element), value);
+    }
+    public var BackgroundProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundProperty();
+        }
+    }
+    public var BackgroundSizingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundSizingProperty();
+        }
+    }
+    public var BorderBrushProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderBrushProperty();
+        }
+    }
+    public var BorderThicknessProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderThicknessProperty();
+        }
+    }
+    public var CharacterSpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CharacterSpacingProperty();
+        }
+    }
+    public var CornerRadiusProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CornerRadiusProperty();
+        }
+    }
+    public var DefaultStyleKeyProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_DefaultStyleKeyProperty();
+        }
+    }
+    public var DefaultStyleResourceUriProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_DefaultStyleResourceUriProperty();
+        }
+    }
+    public var ElementSoundModeProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ElementSoundModeProperty();
+        }
+    }
+    public var FontFamilyProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FontFamilyProperty();
+        }
+    }
+    public var FontSizeProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FontSizeProperty();
+        }
+    }
+    public var FontStretchProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FontStretchProperty();
+        }
+    }
+    public var FontStyleProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FontStyleProperty();
+        }
+    }
+    public var FontWeightProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FontWeightProperty();
+        }
+    }
+    public var ForegroundProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ForegroundProperty();
+        }
+    }
+    public var HorizontalContentAlignmentProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HorizontalContentAlignmentProperty();
+        }
+    }
+    public var IsEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsEnabledProperty();
+        }
+    }
+    public var IsFocusEngagedProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsFocusEngagedProperty();
+        }
+    }
+    public var IsFocusEngagementEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsFocusEngagementEnabledProperty();
+        }
+    }
+    public var IsTemplateFocusTargetProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsTemplateFocusTargetProperty();
+        }
+    }
+    public var IsTemplateKeyTipTargetProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsTemplateKeyTipTargetProperty();
+        }
+    }
+    public var IsTextScaleFactorEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsTextScaleFactorEnabledProperty();
+        }
+    }
+    public var PaddingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PaddingProperty();
+        }
+    }
+    public var RequiresPointerProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_RequiresPointerProperty();
+        }
+    }
+    public var TabNavigationProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TabNavigationProperty();
+        }
+    }
+    public var TemplateProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TemplateProperty();
+        }
+    }
+    public var VerticalContentAlignmentProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_VerticalContentAlignmentProperty();
+        }
+    }
+} // IControlStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IControlTemplate
+// interface type
+open class IControlTemplate
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3a192751, Data2: 0x2106, Data3 : 0x547a, Data4 : (0xac, 0xa0, 0xf1, 0x5a, 0xe8, 0x92, 0x6e, 0xa0)) }
+// method not needed: get_TargetType
+// method not needed: put_TargetType
+} // IControlTemplate
 
 
 // type: Microsoft.UI.Xaml.Controls.IDataTemplateSelector
@@ -889,6 +2931,28 @@ open class IDataTemplateSelectorFactory
         return WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector(consuming: __result);
     }
 } // IDataTemplateSelectorFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs
+// interface type
+open class IFocusDisengagedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0b4b88c, Data2: 0xc195, Data3 : 0x5064, Data4 : (0x84, 0xc7, 0x33, 0xcb, 0x26, 0x2c, 0xb2, 0x40)) }
+} // IFocusDisengagedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IFocusEngagedEventArgs
+// interface type
+open class IFocusEngagedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1e71e8e4, Data2: 0x74b2, Data3 : 0x50a1, Data4 : (0x8f, 0x2b, 0x42, 0xc0, 0x11, 0x8a, 0xb0, 0xea)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // IFocusEngagedEventArgs
 
 
 // type: Microsoft.UI.Xaml.Controls.IInsertionPanel
@@ -3463,6 +5527,10 @@ open class Panel
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.RequiresPointer
+// enum type
+public typealias RequiresPointer = _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer;
+
 // type: Microsoft.UI.Xaml.Controls.Slider
 // runtime class
 open class Slider
@@ -4783,6 +6851,23 @@ extension WinRT.Microsoft.UI.Xaml.Controls.Orientation {
     public static var Horizontal : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CControls_COrientation_Horizontal;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Controls.RequiresPointer {
+    public static var Never : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer_Never;
+        }
+    }
+    public static var WhenEngaged : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer_WhenEngaged;
+        }
+    }
+    public static var WhenFocused : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer_WhenFocused;
         }
     }
 }
