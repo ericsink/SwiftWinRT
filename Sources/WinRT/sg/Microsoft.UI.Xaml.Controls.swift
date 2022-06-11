@@ -9,6 +9,192 @@ extension Microsoft.UI.Xaml.Controls {
 // enum type
 public typealias BackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing;
 
+// type: Microsoft.UI.Xaml.Controls.Button
+// runtime class
+open class Button
+    :
+    Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IButton;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IButton?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IButton { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IButtonFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IButtonFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Button"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    private struct _IButtonStatics {
+        static var x : IButtonStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Button"))
+    }
+    public static var ButtonStatics : IButtonStatics {
+        _IButtonStatics.x
+    }
+    public static func get_FlyoutProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonStatics.get_FlyoutProperty());
+    }
+    public static var FlyoutProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonStatics.FlyoutProperty);
+        }
+    }
+    public func get_Flyout() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IButton = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.get_Flyout());
+    }
+    public func put_Flyout(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IButton = try _self.QueryInterface();
+        return try _ifc.put_Flyout(value: value!.Interface());
+    }
+    public var Flyout : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IButton = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.Flyout);
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ClickMode
+// enum type
+public typealias ClickMode = _q_CMicrosoft_CUI_CXaml_CControls_CClickMode;
+
+// type: Microsoft.UI.Xaml.Controls.ContentControl
+// runtime class
+open class ContentControl
+    :
+    Microsoft.UI.Xaml.Controls.Control
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IContentControl;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IContentControl?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContentControl { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IContentControlFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IContentControlFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.ContentControl"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    private struct _IContentControlStatics {
+        static var x : IContentControlStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.ContentControl"))
+    }
+    public static var ContentControlStatics : IContentControlStatics {
+        _IContentControlStatics.x
+    }
+    public static func get_ContentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.get_ContentProperty());
+    }
+    public static func get_ContentTemplateProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.get_ContentTemplateProperty());
+    }
+    public static func get_ContentTemplateSelectorProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.get_ContentTemplateSelectorProperty());
+    }
+    public static func get_ContentTransitionsProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.get_ContentTransitionsProperty());
+    }
+    public static var ContentProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.ContentProperty);
+        }
+    }
+    public static var ContentTemplateProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.ContentTemplateProperty);
+        }
+    }
+    public static var ContentTemplateSelectorProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.ContentTemplateSelectorProperty);
+        }
+    }
+    public static var ContentTransitionsProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ContentControlStatics.ContentTransitionsProperty);
+        }
+    }
+    public func get_Content() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try _ifc.get_Content();
+    }
+    public func put_Content(value : Optional<WinRT.IInspectable>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try _ifc.put_Content(value: value);
+    }
+    public func get_ContentTemplate() throws -> Optional<WinRT.Microsoft.UI.Xaml.DataTemplate> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.DataTemplate(plok: _ifc.get_ContentTemplate());
+    }
+    public func put_ContentTemplate(value : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try _ifc.put_ContentTemplate(value: value!.Interface());
+    }
+    public func get_ContentTemplateSelector() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector(plok: _ifc.get_ContentTemplateSelector());
+    }
+    public func put_ContentTemplateSelector(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try _ifc.put_ContentTemplateSelector(value: value!.Interface());
+    }
+    public func get_ContentTransitions() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.get_ContentTransitions());
+    }
+    public func put_ContentTransitions(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try _ifc.put_ContentTransitions(value: value!.Interface());
+    }
+    public func get_ContentTemplateRoot() throws -> Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.get_ContentTemplateRoot());
+    }
+    public var Content : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+            return try _ifc.Content;
+        }
+    }
+    public var ContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.DataTemplate(plok: _ifc.ContentTemplate);
+        }
+    }
+    public var ContentTemplateRoot : Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.ContentTemplateRoot);
+        }
+    }
+    public var ContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector(plok: _ifc.ContentTemplateSelector);
+        }
+    }
+    public var ContentTransitions : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.ContentTransitions);
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.ContextMenuEventArgs
 // runtime class
 public class ContextMenuEventArgs
@@ -112,6 +298,459 @@ open class ContextMenuOpeningEventHandler
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.Control
+// runtime class
+open class Control
+    :
+    Microsoft.UI.Xaml.FrameworkElement
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IControl;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IControl?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IControl { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IControlFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IControlFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Control"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Controls.IControlStatics
+    // method not needed: get_IsFocusEngagementEnabled
+    // method not needed: put_IsFocusEngagementEnabled
+    // method not needed: get_IsFocusEngaged
+    // method not needed: put_IsFocusEngaged
+    // method not needed: get_RequiresPointer
+    // method not needed: put_RequiresPointer
+    // method not needed: get_FontSize
+    // method not needed: put_FontSize
+    // method not needed: get_FontFamily
+    // method not needed: put_FontFamily
+    // method not needed: get_FontWeight
+    // method not needed: put_FontWeight
+    // method not needed: get_FontStyle
+    // method not needed: put_FontStyle
+    // method not needed: get_FontStretch
+    // method not needed: put_FontStretch
+    // method not needed: get_CharacterSpacing
+    // method not needed: put_CharacterSpacing
+    // method not needed: get_Foreground
+    // method not needed: put_Foreground
+    // method not needed: get_IsTextScaleFactorEnabled
+    // method not needed: put_IsTextScaleFactorEnabled
+    // method not needed: get_IsEnabled
+    // method not needed: put_IsEnabled
+    // method not needed: get_TabNavigation
+    // method not needed: put_TabNavigation
+    // method not needed: get_Template
+    // method not needed: put_Template
+    // method not needed: get_Padding
+    // method not needed: put_Padding
+    // method not needed: get_HorizontalContentAlignment
+    // method not needed: put_HorizontalContentAlignment
+    // method not needed: get_VerticalContentAlignment
+    // method not needed: put_VerticalContentAlignment
+    // method not needed: get_Background
+    // method not needed: put_Background
+    // method not needed: get_BackgroundSizing
+    // method not needed: put_BackgroundSizing
+    // method not needed: get_BorderThickness
+    // method not needed: put_BorderThickness
+    // method not needed: get_BorderBrush
+    // method not needed: put_BorderBrush
+    // method not needed: get_DefaultStyleResourceUri
+    // method not needed: put_DefaultStyleResourceUri
+    // method not needed: get_ElementSoundMode
+    // method not needed: put_ElementSoundMode
+    // method not needed: get_CornerRadius
+    // method not needed: put_CornerRadius
+    // method not needed: add_FocusEngaged
+    // method not needed: remove_FocusEngaged
+    // method not needed: add_FocusDisengaged
+    // method not needed: remove_FocusDisengaged
+    // method not needed: add_IsEnabledChanged
+    // method not needed: remove_IsEnabledChanged
+    // method not needed: RemoveFocusEngagement
+    // method not needed: ApplyTemplate
+    // instance interface not needed: Microsoft.UI.Xaml.Controls.IControlProtected
+    // instance interface not needed: Microsoft.UI.Xaml.Controls.IControlOverrides
+}
+
+// type: Microsoft.UI.Xaml.Controls.DataTemplateSelector
+// runtime class
+open class DataTemplateSelector
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector?) throws {
+        _self = plok!
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IDataTemplateSelectorFactory
+    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IDataTemplateSelectorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.DataTemplateSelector"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // method not needed: SelectTemplate
+    // method not needed: SelectTemplate
+    // instance interface not needed: Microsoft.UI.Xaml.Controls.IDataTemplateSelectorOverrides
+    // instance interface not needed: Microsoft.UI.Xaml.IElementFactory
+}
+
+// type: Microsoft.UI.Xaml.Controls.IButton
+// interface type
+open class IButton
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x216c183d, Data2: 0xd07a, Data3 : 0x5aa5, Data4 : (0xb8, 0xa4, 0x03, 0x00, 0xa2, 0x68, 0x3e, 0x87)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase get_Flyout()
+    public func _n_get_Flyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIButton.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Flyout(pThis, __presult))
+        }
+    }
+    public func get_Flyout() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>> = nil;
+        try self._n_get_Flyout(&__result);
+        return WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase(consuming: __result);
+    }
+    // [IsSpecialName] void put_Flyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
+    public func _n_put_Flyout(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIButton.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Flyout(pThis, value))
+        }
+    }
+    public func put_Flyout(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase>) throws -> Void {
+        try self._n_put_Flyout(RawPointer(value));
+    }
+    public var Flyout : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase> {
+        get throws {
+            return try get_Flyout();
+        }
+    }
+} // IButton
+
+
+// type: Microsoft.UI.Xaml.Controls.IButtonFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IButtonFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe393422, Data2: 0xd91c, Data3 : 0x57b1, Data4 : (0x9a, 0x9c, 0x2c, 0x7e, 0x3f, 0x41, 0xf7, 0x7c)) }
+    // Microsoft.UI.Xaml.Controls.Button CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIButton>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IButton> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIButton>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IButton(consuming: __result);
+    }
+} // IButtonFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IButtonStatics
+// interface type
+open class IButtonStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x57823d25, Data2: 0xb26a, Data3 : 0x5e0f, Data4 : (0x94, 0xf6, 0xbb, 0xae, 0x70, 0x68, 0x3d, 0xc5)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FlyoutProperty()
+    public func _n_get_FlyoutProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FlyoutProperty(pThis, __presult))
+        }
+    }
+    public func get_FlyoutProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FlyoutProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var FlyoutProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FlyoutProperty();
+        }
+    }
+} // IButtonStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IContentControl
+// interface type
+open class IContentControl
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x07e81761, Data2: 0x11b2, Data3 : 0x52ae, Data4 : (0x8f, 0x8b, 0x4d, 0x53, 0xd2, 0xb5, 0x90, 0x0a)) }
+    // [IsSpecialName] System.Object get_Content()
+    public func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Content(pThis, __presult))
+        }
+    }
+    public func get_Content() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_Content(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_Content(System.Object)
+    public func _n_put_Content(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Content(pThis, value))
+        }
+    }
+    public func put_Content(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_Content(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DataTemplate get_ContentTemplate()
+    public func _n_get_ContentTemplate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTemplate(pThis, __presult))
+        }
+    }
+    public func get_ContentTemplate() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+        try self._n_get_ContentTemplate(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_ContentTemplate(Microsoft.UI.Xaml.DataTemplate)
+    public func _n_put_ContentTemplate(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentTemplate(pThis, value))
+        }
+    }
+    public func put_ContentTemplate(value : Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_put_ContentTemplate(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.DataTemplateSelector get_ContentTemplateSelector()
+    public func _n_get_ContentTemplateSelector(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTemplateSelector(pThis, __presult))
+        }
+    }
+    public func get_ContentTemplateSelector() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>> = nil;
+        try self._n_get_ContentTemplateSelector(&__result);
+        return WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector(consuming: __result);
+    }
+    // [IsSpecialName] void put_ContentTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
+    public func _n_put_ContentTemplateSelector(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentTemplateSelector(pThis, value))
+        }
+    }
+    public func put_ContentTemplateSelector(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector>) throws -> Void {
+        try self._n_put_ContentTemplateSelector(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_ContentTransitions()
+    public func _n_get_ContentTransitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTransitions(pThis, __presult))
+        }
+    }
+    public func get_ContentTransitions() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
+        try self._n_get_ContentTransitions(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_ContentTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
+    public func _n_put_ContentTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentTransitions(pThis, value))
+        }
+    }
+    public func put_ContentTransitions(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_ContentTransitions(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.UIElement get_ContentTemplateRoot()
+    public func _n_get_ContentTemplateRoot(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTemplateRoot(pThis, __presult))
+        }
+    }
+    public func get_ContentTemplateRoot() throws -> Optional<WinRT.Microsoft.UI.Xaml.IUIElement> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>> = nil;
+        try self._n_get_ContentTemplateRoot(&__result);
+        return WinRT.Microsoft.UI.Xaml.IUIElement(consuming: __result);
+    }
+    public var Content : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Content();
+        }
+    }
+    public var ContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate> {
+        get throws {
+            return try get_ContentTemplate();
+        }
+    }
+    public var ContentTemplateRoot : Optional<WinRT.Microsoft.UI.Xaml.IUIElement> {
+        get throws {
+            return try get_ContentTemplateRoot();
+        }
+    }
+    public var ContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector> {
+        get throws {
+            return try get_ContentTemplateSelector();
+        }
+    }
+    public var ContentTransitions : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_ContentTransitions();
+        }
+    }
+} // IContentControl
+
+
+// type: Microsoft.UI.Xaml.Controls.IContentControlFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IContentControlFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3dea958e, Data2: 0x5acd, Data3 : 0x5f80, Data4 : (0x89, 0x38, 0x38, 0x63, 0x4f, 0x51, 0x49, 0x3a)) }
+    // Microsoft.UI.Xaml.Controls.ContentControl CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContentControl>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IContentControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContentControl>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IContentControl(consuming: __result);
+    }
+} // IContentControlFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IContentControlOverrides
+// interface type
+open class IContentControlOverrides
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2504174a, Data2: 0x017e, Data3 : 0x5a2d, Data4 : (0x9c, 0x28, 0xd9, 0x7c, 0x66, 0xae, 0x99, 0x37)) }
+    // void OnContentChanged(System.Object, System.Object)
+    public func _n_OnContentChanged(_ oldContent : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ newContent : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnContentChanged(pThis, oldContent, newContent))
+        }
+    }
+    public func OnContentChanged(oldContent : Optional<WinRT.IInspectable>, newContent : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_OnContentChanged(RawPointer(oldContent), RawPointer(newContent));
+    }
+    // void OnContentTemplateChanged(Microsoft.UI.Xaml.DataTemplate, Microsoft.UI.Xaml.DataTemplate)
+    public func _n_OnContentTemplateChanged(_ oldContentTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>, _ newContentTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnContentTemplateChanged(pThis, oldContentTemplate, newContentTemplate))
+        }
+    }
+    public func OnContentTemplateChanged(oldContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate>, newContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_OnContentTemplateChanged(RawPointer(oldContentTemplate), RawPointer(newContentTemplate));
+    }
+    // void OnContentTemplateSelectorChanged(Microsoft.UI.Xaml.Controls.DataTemplateSelector, Microsoft.UI.Xaml.Controls.DataTemplateSelector)
+    public func _n_OnContentTemplateSelectorChanged(_ oldContentTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>, _ newContentTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnContentTemplateSelectorChanged(pThis, oldContentTemplateSelector, newContentTemplateSelector))
+        }
+    }
+    public func OnContentTemplateSelectorChanged(oldContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector>, newContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector>) throws -> Void {
+        try self._n_OnContentTemplateSelectorChanged(RawPointer(oldContentTemplateSelector), RawPointer(newContentTemplateSelector));
+    }
+} // IContentControlOverrides
+
+
+// type: Microsoft.UI.Xaml.Controls.IContentControlStatics
+// interface type
+open class IContentControlStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf25484f4, Data2: 0x2fed, Data3 : 0x5a0a, Data4 : (0x88, 0x64, 0x7d, 0x6d, 0x4a, 0xc4, 0x3e, 0xf8)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ContentProperty()
+    public func _n_get_ContentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentProperty(pThis, __presult))
+        }
+    }
+    public func get_ContentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ContentProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ContentTemplateProperty()
+    public func _n_get_ContentTemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_ContentTemplateProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ContentTemplateProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ContentTemplateSelectorProperty()
+    public func _n_get_ContentTemplateSelectorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTemplateSelectorProperty(pThis, __presult))
+        }
+    }
+    public func get_ContentTemplateSelectorProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ContentTemplateSelectorProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ContentTransitionsProperty()
+    public func _n_get_ContentTransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTransitionsProperty(pThis, __presult))
+        }
+    }
+    public func get_ContentTransitionsProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ContentTransitionsProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var ContentProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ContentProperty();
+        }
+    }
+    public var ContentTemplateProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ContentTemplateProperty();
+        }
+    }
+    public var ContentTemplateSelectorProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ContentTemplateSelectorProperty();
+        }
+    }
+    public var ContentTransitionsProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ContentTransitionsProperty();
+        }
+    }
+} // IContentControlStatics
+
+
 // type: Microsoft.UI.Xaml.Controls.IContextMenuEventArgs
 // interface type
 open class IContextMenuEventArgs
@@ -124,6 +763,132 @@ open class IContextMenuEventArgs
 // method not needed: get_CursorLeft
 // method not needed: get_CursorTop
 } // IContextMenuEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IControl
+// interface type
+open class IControl
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x857d6e8a, Data2: 0xd45a, Data3 : 0x5c69, Data4 : (0xa9, 0x9c, 0xbf, 0x6a, 0x5c, 0x54, 0xfb, 0x38)) }
+// method not needed: get_IsFocusEngagementEnabled
+// method not needed: put_IsFocusEngagementEnabled
+// method not needed: get_IsFocusEngaged
+// method not needed: put_IsFocusEngaged
+// method not needed: get_RequiresPointer
+// method not needed: put_RequiresPointer
+// method not needed: get_FontSize
+// method not needed: put_FontSize
+// method not needed: get_FontFamily
+// method not needed: put_FontFamily
+// method not needed: get_FontWeight
+// method not needed: put_FontWeight
+// method not needed: get_FontStyle
+// method not needed: put_FontStyle
+// method not needed: get_FontStretch
+// method not needed: put_FontStretch
+// method not needed: get_CharacterSpacing
+// method not needed: put_CharacterSpacing
+// method not needed: get_Foreground
+// method not needed: put_Foreground
+// method not needed: get_IsTextScaleFactorEnabled
+// method not needed: put_IsTextScaleFactorEnabled
+// method not needed: get_IsEnabled
+// method not needed: put_IsEnabled
+// method not needed: get_TabNavigation
+// method not needed: put_TabNavigation
+// method not needed: get_Template
+// method not needed: put_Template
+// method not needed: get_Padding
+// method not needed: put_Padding
+// method not needed: get_HorizontalContentAlignment
+// method not needed: put_HorizontalContentAlignment
+// method not needed: get_VerticalContentAlignment
+// method not needed: put_VerticalContentAlignment
+// method not needed: get_Background
+// method not needed: put_Background
+// method not needed: get_BackgroundSizing
+// method not needed: put_BackgroundSizing
+// method not needed: get_BorderThickness
+// method not needed: put_BorderThickness
+// method not needed: get_BorderBrush
+// method not needed: put_BorderBrush
+// method not needed: get_DefaultStyleResourceUri
+// method not needed: put_DefaultStyleResourceUri
+// method not needed: get_ElementSoundMode
+// method not needed: put_ElementSoundMode
+// method not needed: get_CornerRadius
+// method not needed: put_CornerRadius
+// method not needed: add_FocusEngaged
+// method not needed: remove_FocusEngaged
+// method not needed: add_FocusDisengaged
+// method not needed: remove_FocusDisengaged
+// method not needed: add_IsEnabledChanged
+// method not needed: remove_IsEnabledChanged
+// method not needed: RemoveFocusEngagement
+// method not needed: ApplyTemplate
+} // IControl
+
+
+// type: Microsoft.UI.Xaml.Controls.IControlFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IControlFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x25159233, Data2: 0x9438, Data3 : 0x5534, Data4 : (0xae, 0xb9, 0x00, 0xeb, 0x05, 0x9c, 0xf7, 0x3f)) }
+    // Microsoft.UI.Xaml.Controls.Control CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIControlFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IControl(consuming: __result);
+    }
+} // IControlFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IDataTemplateSelector
+// interface type
+open class IDataTemplateSelector
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x86ca4fa4, Data2: 0x7de0, Data3 : 0x5049, Data4 : (0x82, 0xf5, 0x39, 0xec, 0x78, 0x56, 0x90, 0x28)) }
+// method not needed: SelectTemplate
+// method not needed: SelectTemplateForItem
+} // IDataTemplateSelector
+
+
+// type: Microsoft.UI.Xaml.Controls.IDataTemplateSelectorFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IDataTemplateSelectorFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x43217eda, Data2: 0x6f7f, Data3 : 0x5b80, Data4 : (0xa7, 0x0b, 0x94, 0x45, 0x11, 0xb3, 0x54, 0xab)) }
+    // Microsoft.UI.Xaml.Controls.DataTemplateSelector CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelectorFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector(consuming: __result);
+    }
+} // IDataTemplateSelectorFactory
 
 
 // type: Microsoft.UI.Xaml.Controls.IInsertionPanel
@@ -356,6 +1121,501 @@ open class IPanelStatics
         }
     }
 } // IPanelStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.ISlider
+// interface type
+open class ISlider
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf7418ecf, Data2: 0x7c35, Data3 : 0x5216, Data4 : (0x8b, 0xf1, 0xd8, 0x2d, 0x47, 0xcc, 0xe5, 0xdf)) }
+    // [IsSpecialName] System.Double get_IntermediateValue()
+    public func _n_get_IntermediateValue(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IntermediateValue(pThis, __presult))
+        }
+    }
+    public func get_IntermediateValue() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_IntermediateValue(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IntermediateValue(System.Double)
+    public func _n_put_IntermediateValue(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IntermediateValue(pThis, value))
+        }
+    }
+    public func put_IntermediateValue(value : Swift.Double) throws -> Void {
+        try self._n_put_IntermediateValue(value);
+    }
+    // [IsSpecialName] System.Double get_StepFrequency()
+    public func _n_get_StepFrequency(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_StepFrequency(pThis, __presult))
+        }
+    }
+    public func get_StepFrequency() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_StepFrequency(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_StepFrequency(System.Double)
+    public func _n_put_StepFrequency(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_StepFrequency(pThis, value))
+        }
+    }
+    public func put_StepFrequency(value : Swift.Double) throws -> Void {
+        try self._n_put_StepFrequency(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo get_SnapsTo()
+    public func _n_get_SnapsTo(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SnapsTo(pThis, __presult))
+        }
+    }
+    public func get_SnapsTo() throws -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo_StepValues;
+        try self._n_get_SnapsTo(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SnapsTo(Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo)
+    public func _n_put_SnapsTo(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SnapsTo(pThis, value))
+        }
+    }
+    public func put_SnapsTo(value : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo) throws -> Void {
+        try self._n_put_SnapsTo(value);
+    }
+    // [IsSpecialName] System.Double get_TickFrequency()
+    public func _n_get_TickFrequency(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TickFrequency(pThis, __presult))
+        }
+    }
+    public func get_TickFrequency() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_TickFrequency(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TickFrequency(System.Double)
+    public func _n_put_TickFrequency(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TickFrequency(pThis, value))
+        }
+    }
+    public func put_TickFrequency(value : Swift.Double) throws -> Void {
+        try self._n_put_TickFrequency(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.TickPlacement get_TickPlacement()
+    public func _n_get_TickPlacement(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TickPlacement(pThis, __presult))
+        }
+    }
+    public func get_TickPlacement() throws -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement_None;
+        try self._n_get_TickPlacement(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TickPlacement(Microsoft.UI.Xaml.Controls.Primitives.TickPlacement)
+    public func _n_put_TickPlacement(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TickPlacement(pThis, value))
+        }
+    }
+    public func put_TickPlacement(value : WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement) throws -> Void {
+        try self._n_put_TickPlacement(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Orientation get_Orientation()
+    public func _n_get_Orientation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_COrientation>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orientation(pThis, __presult))
+        }
+    }
+    public func get_Orientation() throws -> WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_COrientation = _q_CMicrosoft_CUI_CXaml_CControls_COrientation_Vertical;
+        try self._n_get_Orientation(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Orientation(Microsoft.UI.Xaml.Controls.Orientation)
+    public func _n_put_Orientation(_ value : _q_CMicrosoft_CUI_CXaml_CControls_COrientation) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Orientation(pThis, value))
+        }
+    }
+    public func put_Orientation(value : WinRT.Microsoft.UI.Xaml.Controls.Orientation) throws -> Void {
+        try self._n_put_Orientation(value);
+    }
+    // [IsSpecialName] bool get_IsDirectionReversed()
+    public func _n_get_IsDirectionReversed(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsDirectionReversed(pThis, __presult))
+        }
+    }
+    public func get_IsDirectionReversed() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsDirectionReversed(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsDirectionReversed(bool)
+    public func _n_put_IsDirectionReversed(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsDirectionReversed(pThis, value))
+        }
+    }
+    public func put_IsDirectionReversed(value : boolean) throws -> Void {
+        try self._n_put_IsDirectionReversed(value);
+    }
+    // [IsSpecialName] bool get_IsThumbToolTipEnabled()
+    public func _n_get_IsThumbToolTipEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsThumbToolTipEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsThumbToolTipEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsThumbToolTipEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsThumbToolTipEnabled(bool)
+    public func _n_put_IsThumbToolTipEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsThumbToolTipEnabled(pThis, value))
+        }
+    }
+    public func put_IsThumbToolTipEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsThumbToolTipEnabled(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Data.IValueConverter get_ThumbToolTipValueConverter()
+    public func _n_get_ThumbToolTipValueConverter(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIValueConverter>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ThumbToolTipValueConverter(pThis, __presult))
+        }
+    }
+    public func get_ThumbToolTipValueConverter() throws -> Optional<WinRT.Microsoft.UI.Xaml.Data.IValueConverter> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIValueConverter>> = nil;
+        try self._n_get_ThumbToolTipValueConverter(&__result);
+        return WinRT.Microsoft.UI.Xaml.Data.IValueConverter(consuming: __result);
+    }
+    // [IsSpecialName] void put_ThumbToolTipValueConverter(Microsoft.UI.Xaml.Data.IValueConverter)
+    public func _n_put_ThumbToolTipValueConverter(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIValueConverter>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ThumbToolTipValueConverter(pThis, value))
+        }
+    }
+    public func put_ThumbToolTipValueConverter(value : Optional<WinRT.Microsoft.UI.Xaml.Data.IValueConverter>) throws -> Void {
+        try self._n_put_ThumbToolTipValueConverter(RawPointer(value));
+    }
+    // [IsSpecialName] System.Object get_Header()
+    public func _n_get_Header(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Header(pThis, __presult))
+        }
+    }
+    public func get_Header() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_Header(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_Header(System.Object)
+    public func _n_put_Header(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Header(pThis, value))
+        }
+    }
+    public func put_Header(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_Header(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DataTemplate get_HeaderTemplate()
+    public func _n_get_HeaderTemplate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTemplate(pThis, __presult))
+        }
+    }
+    public func get_HeaderTemplate() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+        try self._n_get_HeaderTemplate(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
+    public func _n_put_HeaderTemplate(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISlider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_HeaderTemplate(pThis, value))
+        }
+    }
+    public func put_HeaderTemplate(value : Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_put_HeaderTemplate(RawPointer(value));
+    }
+    public var Header : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Header();
+        }
+    }
+    public var HeaderTemplate : Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate> {
+        get throws {
+            return try get_HeaderTemplate();
+        }
+    }
+    public var IntermediateValue : Swift.Double {
+        get throws {
+            return try get_IntermediateValue();
+        }
+    }
+    public var IsDirectionReversed : boolean {
+        get throws {
+            return try get_IsDirectionReversed();
+        }
+    }
+    public var IsThumbToolTipEnabled : boolean {
+        get throws {
+            return try get_IsThumbToolTipEnabled();
+        }
+    }
+    public var Orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        get throws {
+            return try get_Orientation();
+        }
+    }
+    public var SnapsTo : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo {
+        get throws {
+            return try get_SnapsTo();
+        }
+    }
+    public var StepFrequency : Swift.Double {
+        get throws {
+            return try get_StepFrequency();
+        }
+    }
+    public var ThumbToolTipValueConverter : Optional<WinRT.Microsoft.UI.Xaml.Data.IValueConverter> {
+        get throws {
+            return try get_ThumbToolTipValueConverter();
+        }
+    }
+    public var TickFrequency : Swift.Double {
+        get throws {
+            return try get_TickFrequency();
+        }
+    }
+    public var TickPlacement : WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement {
+        get throws {
+            return try get_TickPlacement();
+        }
+    }
+} // ISlider
+
+
+// type: Microsoft.UI.Xaml.Controls.ISliderFactory
+// interface type
+// COMPOSITION INTERFACE
+open class ISliderFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x06604d71, Data2: 0x34ca, Data3 : 0x5f39, Data4 : (0x96, 0x56, 0x29, 0xd8, 0x1d, 0x3c, 0x11, 0x0c)) }
+    // Microsoft.UI.Xaml.Controls.Slider CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISlider>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.ISlider> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISlider>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.ISlider(consuming: __result);
+    }
+} // ISliderFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.ISliderStatics
+// interface type
+open class ISliderStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf0541f7b, Data2: 0x6d81, Data3 : 0x59e2, Data4 : (0x99, 0x7a, 0x2e, 0x65, 0xfb, 0xcc, 0xcd, 0x21)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IntermediateValueProperty()
+    public func _n_get_IntermediateValueProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IntermediateValueProperty(pThis, __presult))
+        }
+    }
+    public func get_IntermediateValueProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IntermediateValueProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_StepFrequencyProperty()
+    public func _n_get_StepFrequencyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_StepFrequencyProperty(pThis, __presult))
+        }
+    }
+    public func get_StepFrequencyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_StepFrequencyProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SnapsToProperty()
+    public func _n_get_SnapsToProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SnapsToProperty(pThis, __presult))
+        }
+    }
+    public func get_SnapsToProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SnapsToProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TickFrequencyProperty()
+    public func _n_get_TickFrequencyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TickFrequencyProperty(pThis, __presult))
+        }
+    }
+    public func get_TickFrequencyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TickFrequencyProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TickPlacementProperty()
+    public func _n_get_TickPlacementProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TickPlacementProperty(pThis, __presult))
+        }
+    }
+    public func get_TickPlacementProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TickPlacementProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_OrientationProperty()
+    public func _n_get_OrientationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_OrientationProperty(pThis, __presult))
+        }
+    }
+    public func get_OrientationProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_OrientationProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsDirectionReversedProperty()
+    public func _n_get_IsDirectionReversedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsDirectionReversedProperty(pThis, __presult))
+        }
+    }
+    public func get_IsDirectionReversedProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsDirectionReversedProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsThumbToolTipEnabledProperty()
+    public func _n_get_IsThumbToolTipEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsThumbToolTipEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsThumbToolTipEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsThumbToolTipEnabledProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ThumbToolTipValueConverterProperty()
+    public func _n_get_ThumbToolTipValueConverterProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ThumbToolTipValueConverterProperty(pThis, __presult))
+        }
+    }
+    public func get_ThumbToolTipValueConverterProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ThumbToolTipValueConverterProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderProperty()
+    public func _n_get_HeaderProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderTemplateProperty()
+    public func _n_get_HeaderTemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderTemplateProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderTemplateProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var HeaderProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderProperty();
+        }
+    }
+    public var HeaderTemplateProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderTemplateProperty();
+        }
+    }
+    public var IntermediateValueProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IntermediateValueProperty();
+        }
+    }
+    public var IsDirectionReversedProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsDirectionReversedProperty();
+        }
+    }
+    public var IsThumbToolTipEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsThumbToolTipEnabledProperty();
+        }
+    }
+    public var OrientationProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_OrientationProperty();
+        }
+    }
+    public var SnapsToProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SnapsToProperty();
+        }
+    }
+    public var StepFrequencyProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_StepFrequencyProperty();
+        }
+    }
+    public var ThumbToolTipValueConverterProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ThumbToolTipValueConverterProperty();
+        }
+    }
+    public var TickFrequencyProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TickFrequencyProperty();
+        }
+    }
+    public var TickPlacementProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TickPlacementProperty();
+        }
+    }
+} // ISliderStatics
 
 
 // type: Microsoft.UI.Xaml.Controls.IStackPanel
@@ -2203,6 +3463,279 @@ open class Panel
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.Slider
+// runtime class
+open class Slider
+    :
+    Microsoft.UI.Xaml.Controls.Primitives.RangeBase
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.ISlider;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.ISlider?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.ISlider { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.ISliderFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : ISliderFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Slider"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    private struct _ISliderStatics {
+        static var x : ISliderStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Slider"))
+    }
+    public static var SliderStatics : ISliderStatics {
+        _ISliderStatics.x
+    }
+    public static func get_IntermediateValueProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_IntermediateValueProperty());
+    }
+    public static func get_StepFrequencyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_StepFrequencyProperty());
+    }
+    public static func get_SnapsToProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_SnapsToProperty());
+    }
+    public static func get_TickFrequencyProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_TickFrequencyProperty());
+    }
+    public static func get_TickPlacementProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_TickPlacementProperty());
+    }
+    public static func get_OrientationProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_OrientationProperty());
+    }
+    public static func get_IsDirectionReversedProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_IsDirectionReversedProperty());
+    }
+    public static func get_IsThumbToolTipEnabledProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_IsThumbToolTipEnabledProperty());
+    }
+    public static func get_ThumbToolTipValueConverterProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_ThumbToolTipValueConverterProperty());
+    }
+    public static func get_HeaderProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_HeaderProperty());
+    }
+    public static func get_HeaderTemplateProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.get_HeaderTemplateProperty());
+    }
+    public static var HeaderProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.HeaderProperty);
+        }
+    }
+    public static var HeaderTemplateProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.HeaderTemplateProperty);
+        }
+    }
+    public static var IntermediateValueProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.IntermediateValueProperty);
+        }
+    }
+    public static var IsDirectionReversedProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.IsDirectionReversedProperty);
+        }
+    }
+    public static var IsThumbToolTipEnabledProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.IsThumbToolTipEnabledProperty);
+        }
+    }
+    public static var OrientationProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.OrientationProperty);
+        }
+    }
+    public static var SnapsToProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.SnapsToProperty);
+        }
+    }
+    public static var StepFrequencyProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.StepFrequencyProperty);
+        }
+    }
+    public static var ThumbToolTipValueConverterProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.ThumbToolTipValueConverterProperty);
+        }
+    }
+    public static var TickFrequencyProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.TickFrequencyProperty);
+        }
+    }
+    public static var TickPlacementProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: SliderStatics.TickPlacementProperty);
+        }
+    }
+    public func get_IntermediateValue() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_IntermediateValue();
+    }
+    public func put_IntermediateValue(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_IntermediateValue(value: value);
+    }
+    public func get_StepFrequency() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_StepFrequency();
+    }
+    public func put_StepFrequency(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_StepFrequency(value: value);
+    }
+    public func get_SnapsTo() throws -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_SnapsTo();
+    }
+    public func put_SnapsTo(value : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_SnapsTo(value: value);
+    }
+    public func get_TickFrequency() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_TickFrequency();
+    }
+    public func put_TickFrequency(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_TickFrequency(value: value);
+    }
+    public func get_TickPlacement() throws -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_TickPlacement();
+    }
+    public func put_TickPlacement(value : WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_TickPlacement(value: value);
+    }
+    public func get_Orientation() throws -> WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_Orientation();
+    }
+    public func put_Orientation(value : WinRT.Microsoft.UI.Xaml.Controls.Orientation) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_Orientation(value: value);
+    }
+    public func get_IsDirectionReversed() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_IsDirectionReversed();
+    }
+    public func put_IsDirectionReversed(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_IsDirectionReversed(value: value);
+    }
+    public func get_IsThumbToolTipEnabled() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_IsThumbToolTipEnabled();
+    }
+    public func put_IsThumbToolTipEnabled(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_IsThumbToolTipEnabled(value: value);
+    }
+    public func get_ThumbToolTipValueConverter() throws -> Optional<WinRT.Microsoft.UI.Xaml.Data.IValueConverter> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_ThumbToolTipValueConverter();
+    }
+    public func put_ThumbToolTipValueConverter(value : Optional<WinRT.Microsoft.UI.Xaml.Data.IValueConverter>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_ThumbToolTipValueConverter(value: value);
+    }
+    public func get_Header() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.get_Header();
+    }
+    public func put_Header(value : Optional<WinRT.IInspectable>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_Header(value: value);
+    }
+    public func get_HeaderTemplate() throws -> Optional<WinRT.Microsoft.UI.Xaml.DataTemplate> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.DataTemplate(plok: _ifc.get_HeaderTemplate());
+    }
+    public func put_HeaderTemplate(value : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+        return try _ifc.put_HeaderTemplate(value: value!.Interface());
+    }
+    public var Header : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.Header;
+        }
+    }
+    public var HeaderTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.DataTemplate(plok: _ifc.HeaderTemplate);
+        }
+    }
+    public var IntermediateValue : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.IntermediateValue;
+        }
+    }
+    public var IsDirectionReversed : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.IsDirectionReversed;
+        }
+    }
+    public var IsThumbToolTipEnabled : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.IsThumbToolTipEnabled;
+        }
+    }
+    public var Orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.Orientation;
+        }
+    }
+    public var SnapsTo : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.SnapsTo;
+        }
+    }
+    public var StepFrequency : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.StepFrequency;
+        }
+    }
+    public var ThumbToolTipValueConverter : Optional<WinRT.Microsoft.UI.Xaml.Data.IValueConverter> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.ThumbToolTipValueConverter;
+        }
+    }
+    public var TickFrequency : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.TickFrequency;
+        }
+    }
+    public var TickPlacement : WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
+            return try _ifc.TickPlacement;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.StackPanel
 // runtime class
 open class StackPanel
@@ -3221,6 +4754,23 @@ extension WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
     public static var OuterBorderEdge : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_OuterBorderEdge;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Controls.ClickMode {
+    public static var Release : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CClickMode_Release;
+        }
+    }
+    public static var Press : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CClickMode_Press;
+        }
+    }
+    public static var Hover : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CClickMode_Hover;
         }
     }
 }

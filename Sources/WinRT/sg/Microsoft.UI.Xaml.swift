@@ -257,6 +257,33 @@ open class BrushTransition
 // struct type
 public typealias CornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius;
 
+// type: Microsoft.UI.Xaml.DataTemplate
+// runtime class
+open class DataTemplate
+    :
+    Microsoft.UI.Xaml.FrameworkTemplate
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.IDataTemplate;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IDataTemplate?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDataTemplate { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.IDataTemplateFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IDataTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DataTemplate"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // static interface not needed: Microsoft.UI.Xaml.IDataTemplateStatics
+    // method not needed: LoadContent
+    // instance interface not needed: Microsoft.UI.Xaml.IElementFactory
+}
+
 // type: Microsoft.UI.Xaml.DebugSettings
 // runtime class
 public class DebugSettings
@@ -423,6 +450,30 @@ open class FrameworkElement
     // method not needed: GetBindingExpression
     // instance interface not needed: Microsoft.UI.Xaml.IFrameworkElementProtected
     // instance interface not needed: Microsoft.UI.Xaml.IFrameworkElementOverrides
+}
+
+// type: Microsoft.UI.Xaml.FrameworkTemplate
+// runtime class
+open class FrameworkTemplate
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.IFrameworkTemplate;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IFrameworkTemplate?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.IFrameworkTemplate { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkTemplateFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IFrameworkTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkTemplate"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
 }
 
 // type: Microsoft.UI.Xaml.IApplication
@@ -825,6 +876,41 @@ open class IBrushTransitionFactory
 } // IBrushTransitionFactory
 
 
+// type: Microsoft.UI.Xaml.IDataTemplate
+// interface type
+open class IDataTemplate
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x08fa70fa, Data2: 0xee75, Data3 : 0x5e92, Data4 : (0xa1, 0x01, 0xf5, 0x2d, 0x0e, 0x1e, 0x9f, 0xab)) }
+// method not needed: LoadContent
+} // IDataTemplate
+
+
+// type: Microsoft.UI.Xaml.IDataTemplateFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IDataTemplateFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd8e8249d, Data2: 0x305b, Data3 : 0x5ca5, Data4 : (0xac, 0xf8, 0x3e, 0x1b, 0xef, 0xfd, 0x02, 0x19)) }
+    // Microsoft.UI.Xaml.DataTemplate CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDataTemplateFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+} // IDataTemplateFactory
+
+
 // type: Microsoft.UI.Xaml.IDebugSettings
 // interface type
 open class IDebugSettings
@@ -1005,6 +1091,40 @@ open class IFrameworkElementFactory
         return WinRT.Microsoft.UI.Xaml.IFrameworkElement(consuming: __result);
     }
 } // IFrameworkElementFactory
+
+
+// type: Microsoft.UI.Xaml.IFrameworkTemplate
+// interface type
+open class IFrameworkTemplate
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0084c7c2, Data2: 0xde48, Data3 : 0x5b0b, Data4 : (0x8a, 0x5a, 0xe4, 0xfb, 0x76, 0xb7, 0xf7, 0xd1)) }
+} // IFrameworkTemplate
+
+
+// type: Microsoft.UI.Xaml.IFrameworkTemplateFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IFrameworkTemplateFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x616dd6db, Data2: 0xb064, Data3 : 0x561d, Data4 : (0xb1, 0x62, 0x46, 0xce, 0xb4, 0x5d, 0xc5, 0x62)) }
+    // Microsoft.UI.Xaml.FrameworkTemplate CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkTemplateFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.IFrameworkTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkTemplate>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.IFrameworkTemplate(consuming: __result);
+    }
+} // IFrameworkTemplateFactory
 
 
 // type: Microsoft.UI.Xaml.ILaunchActivatedEventArgs

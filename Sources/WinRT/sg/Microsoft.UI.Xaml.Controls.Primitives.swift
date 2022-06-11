@@ -5,6 +5,147 @@
 import CWinRT;
 
 extension Microsoft.UI.Xaml.Controls.Primitives {
+// type: Microsoft.UI.Xaml.Controls.Primitives.ButtonBase
+// runtime class
+open class ButtonBase
+    :
+    Microsoft.UI.Xaml.Controls.ContentControl
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IButtonBaseFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IButtonBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    private struct _IButtonBaseStatics {
+        static var x : IButtonBaseStatics =
+            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"))
+    }
+    public static var ButtonBaseStatics : IButtonBaseStatics {
+        _IButtonBaseStatics.x
+    }
+    public static func get_ClickModeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.get_ClickModeProperty());
+    }
+    public static func get_IsPointerOverProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.get_IsPointerOverProperty());
+    }
+    public static func get_IsPressedProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.get_IsPressedProperty());
+    }
+    public static func get_CommandProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.get_CommandProperty());
+    }
+    public static func get_CommandParameterProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.get_CommandParameterProperty());
+    }
+    public static var ClickModeProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.ClickModeProperty);
+        }
+    }
+    public static var CommandParameterProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.CommandParameterProperty);
+        }
+    }
+    public static var CommandProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.CommandProperty);
+        }
+    }
+    public static var IsPointerOverProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.IsPointerOverProperty);
+        }
+    }
+    public static var IsPressedProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ButtonBaseStatics.IsPressedProperty);
+        }
+    }
+    public func get_ClickMode() throws -> WinRT.Microsoft.UI.Xaml.Controls.ClickMode {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.get_ClickMode();
+    }
+    public func put_ClickMode(value : WinRT.Microsoft.UI.Xaml.Controls.ClickMode) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.put_ClickMode(value: value);
+    }
+    public func get_IsPointerOver() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.get_IsPointerOver();
+    }
+    public func get_IsPressed() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.get_IsPressed();
+    }
+    public func get_Command() throws -> Optional<WinRT.Microsoft.UI.Xaml.Input.ICommand> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.get_Command();
+    }
+    public func put_Command(value : Optional<WinRT.Microsoft.UI.Xaml.Input.ICommand>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.put_Command(value: value);
+    }
+    public func get_CommandParameter() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.get_CommandParameter();
+    }
+    public func put_CommandParameter(value : Optional<WinRT.IInspectable>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.put_CommandParameter(value: value);
+    }
+    public func add_Click(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.add_Click(handler: handler!.Interface());
+    }
+    public func remove_Click(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+        return try _ifc.remove_Click(token: token);
+    }
+    public var ClickMode : WinRT.Microsoft.UI.Xaml.Controls.ClickMode {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+            return try _ifc.ClickMode;
+        }
+    }
+    public var Command : Optional<WinRT.Microsoft.UI.Xaml.Input.ICommand> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+            return try _ifc.Command;
+        }
+    }
+    public var CommandParameter : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+            return try _ifc.CommandParameter;
+        }
+    }
+    public var IsPointerOver : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+            return try _ifc.IsPointerOver;
+        }
+    }
+    public var IsPressed : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
+            return try _ifc.IsPressed;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation
 // enum type
 public typealias ComponentResourceLocation = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation;
@@ -70,6 +211,257 @@ open class FlyoutBase
     // method not needed: TryInvokeKeyboardAccelerator
     // instance interface not needed: Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseOverrides
 }
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IButtonBase
+// interface type
+open class IButtonBase
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x65714269, Data2: 0x2473, Data3 : 0x5327, Data4 : (0xa6, 0x52, 0x0e, 0xa6, 0xbc, 0xe7, 0xf4, 0x03)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ClickMode get_ClickMode()
+    public func _n_get_ClickMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CClickMode>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClickMode(pThis, __presult))
+        }
+    }
+    public func get_ClickMode() throws -> WinRT.Microsoft.UI.Xaml.Controls.ClickMode {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CClickMode = _q_CMicrosoft_CUI_CXaml_CControls_CClickMode_Release;
+        try self._n_get_ClickMode(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ClickMode(Microsoft.UI.Xaml.Controls.ClickMode)
+    public func _n_put_ClickMode(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CClickMode) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ClickMode(pThis, value))
+        }
+    }
+    public func put_ClickMode(value : WinRT.Microsoft.UI.Xaml.Controls.ClickMode) throws -> Void {
+        try self._n_put_ClickMode(value);
+    }
+    // [IsSpecialName] bool get_IsPointerOver()
+    public func _n_get_IsPointerOver(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPointerOver(pThis, __presult))
+        }
+    }
+    public func get_IsPointerOver() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsPointerOver(&__result);
+        return __result;
+    }
+    // [IsSpecialName] bool get_IsPressed()
+    public func _n_get_IsPressed(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPressed(pThis, __presult))
+        }
+    }
+    public func get_IsPressed() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsPressed(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Input.ICommand get_Command()
+    public func _n_get_Command(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Command(pThis, __presult))
+        }
+    }
+    public func get_Command() throws -> Optional<WinRT.Microsoft.UI.Xaml.Input.ICommand> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>> = nil;
+        try self._n_get_Command(&__result);
+        return WinRT.Microsoft.UI.Xaml.Input.ICommand(consuming: __result);
+    }
+    // [IsSpecialName] void put_Command(Microsoft.UI.Xaml.Input.ICommand)
+    public func _n_put_Command(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Command(pThis, value))
+        }
+    }
+    public func put_Command(value : Optional<WinRT.Microsoft.UI.Xaml.Input.ICommand>) throws -> Void {
+        try self._n_put_Command(RawPointer(value));
+    }
+    // [IsSpecialName] System.Object get_CommandParameter()
+    public func _n_get_CommandParameter(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommandParameter(pThis, __presult))
+        }
+    }
+    public func get_CommandParameter() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_CommandParameter(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_CommandParameter(System.Object)
+    public func _n_put_CommandParameter(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CommandParameter(pThis, value))
+        }
+    }
+    public func put_CommandParameter(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_CommandParameter(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Click(Microsoft.UI.Xaml.RoutedEventHandler)
+    public func _n_add_Click(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_Click(pThis, handler, __presult))
+        }
+    }
+    public func add_Click(handler : Optional<WinRT.Microsoft.UI.Xaml.IRoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_Click(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_Click(Windows.Foundation.EventRegistrationToken)
+    public func _n_remove_Click(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Click(pThis, token))
+        }
+    }
+    public func remove_Click(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_Click(token);
+    }
+    public var ClickMode : WinRT.Microsoft.UI.Xaml.Controls.ClickMode {
+        get throws {
+            return try get_ClickMode();
+        }
+    }
+    public var Command : Optional<WinRT.Microsoft.UI.Xaml.Input.ICommand> {
+        get throws {
+            return try get_Command();
+        }
+    }
+    public var CommandParameter : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_CommandParameter();
+        }
+    }
+    public var IsPointerOver : boolean {
+        get throws {
+            return try get_IsPointerOver();
+        }
+    }
+    public var IsPressed : boolean {
+        get throws {
+            return try get_IsPressed();
+        }
+    }
+} // IButtonBase
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IButtonBaseFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IButtonBaseFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x21251aa9, Data2: 0x6fd1, Data3 : 0x5e51, Data4 : (0xab, 0x3b, 0xe6, 0xfc, 0xaf, 0x33, 0x95, 0xed)) }
+    // Microsoft.UI.Xaml.Controls.Primitives.ButtonBase CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase(consuming: __result);
+    }
+} // IButtonBaseFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IButtonBaseStatics
+// interface type
+open class IButtonBaseStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdbe812f6, Data2: 0xadf8, Data3 : 0x51d3, Data4 : (0x81, 0x37, 0xa8, 0xfb, 0xf6, 0x44, 0x5b, 0x3c)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ClickModeProperty()
+    public func _n_get_ClickModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClickModeProperty(pThis, __presult))
+        }
+    }
+    public func get_ClickModeProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ClickModeProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsPointerOverProperty()
+    public func _n_get_IsPointerOverProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPointerOverProperty(pThis, __presult))
+        }
+    }
+    public func get_IsPointerOverProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsPointerOverProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsPressedProperty()
+    public func _n_get_IsPressedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPressedProperty(pThis, __presult))
+        }
+    }
+    public func get_IsPressedProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsPressedProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CommandProperty()
+    public func _n_get_CommandProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommandProperty(pThis, __presult))
+        }
+    }
+    public func get_CommandProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CommandProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CommandParameterProperty()
+    public func _n_get_CommandParameterProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommandParameterProperty(pThis, __presult))
+        }
+    }
+    public func get_CommandParameterProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CommandParameterProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var ClickModeProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ClickModeProperty();
+        }
+    }
+    public var CommandParameterProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CommandParameterProperty();
+        }
+    }
+    public var CommandProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CommandProperty();
+        }
+    }
+    public var IsPointerOverProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsPointerOverProperty();
+        }
+    }
+    public var IsPressedProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsPressedProperty();
+        }
+    }
+} // IButtonBaseStatics
+
 
 // type: Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase
 // interface type
@@ -139,6 +531,52 @@ open class IFlyoutBaseFactory
         return WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase(consuming: __result);
     }
 } // IFlyoutBaseFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IRangeBase
+// interface type
+open class IRangeBase
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x540d6d61, Data2: 0x8fac, Data3 : 0x5d5c, Data4 : (0xb5, 0xb0, 0xe1, 0x72, 0xa7, 0xdd, 0xe1, 0x03)) }
+// method not needed: get_Minimum
+// method not needed: put_Minimum
+// method not needed: get_Maximum
+// method not needed: put_Maximum
+// method not needed: get_SmallChange
+// method not needed: put_SmallChange
+// method not needed: get_LargeChange
+// method not needed: put_LargeChange
+// method not needed: get_Value
+// method not needed: put_Value
+// method not needed: add_ValueChanged
+// method not needed: remove_ValueChanged
+} // IRangeBase
+
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IRangeBaseFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41c205e2, Data2: 0x4422, Data3 : 0x5dca, Data4 : (0x9b, 0x49, 0xe3, 0x12, 0x10, 0xea, 0x39, 0x6c)) }
+    // Microsoft.UI.Xaml.Controls.Primitives.RangeBase CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase(consuming: __result);
+    }
+} // IRangeBaseFactory
 
 
 // type: Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo
@@ -247,9 +685,55 @@ open class IScrollSnapPointsInfo
 } // IScrollSnapPointsInfo
 
 
+// type: Microsoft.UI.Xaml.Controls.Primitives.RangeBase
+// runtime class
+open class RangeBase
+    :
+    Microsoft.UI.Xaml.Controls.Control
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseFactory
+    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
+        let _af : IRangeBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public convenience init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        try self.init(baseInterface: nil, innerInterface: &_inn)
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseStatics
+    // method not needed: get_Minimum
+    // method not needed: put_Minimum
+    // method not needed: get_Maximum
+    // method not needed: put_Maximum
+    // method not needed: get_SmallChange
+    // method not needed: put_SmallChange
+    // method not needed: get_LargeChange
+    // method not needed: put_LargeChange
+    // method not needed: get_Value
+    // method not needed: put_Value
+    // method not needed: add_ValueChanged
+    // method not needed: remove_ValueChanged
+    // instance interface not needed: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides
+}
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo
+// enum type
+public typealias SliderSnapsTo = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo;
+
 // type: Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment
 // enum type
 public typealias SnapPointsAlignment = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment;
+
+// type: Microsoft.UI.Xaml.Controls.Primitives.TickPlacement
+// enum type
+public typealias TickPlacement = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement;
 
 }
 extension WinRT.Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation {
@@ -261,6 +745,18 @@ extension WinRT.Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation 
     public static var Nested : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation_Nested;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Controls.Primitives.SliderSnapsTo {
+    public static var StepValues : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo_StepValues;
+        }
+    }
+    public static var Ticks : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSliderSnapsTo_Ticks;
         }
     }
 }
@@ -278,6 +774,33 @@ extension WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment {
     public static var Far : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment_Far;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Controls.Primitives.TickPlacement {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement_None;
+        }
+    }
+    public static var TopLeft : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement_TopLeft;
+        }
+    }
+    public static var BottomRight : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement_BottomRight;
+        }
+    }
+    public static var Outside : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement_Outside;
+        }
+    }
+    public static var Inline : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CTickPlacement_Inline;
         }
     }
 }

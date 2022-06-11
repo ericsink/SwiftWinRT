@@ -20,6 +20,14 @@ extension Microsoft.UI.Xaml.Controls.TextBlock {
     }
 }
 
+#if not
+class MyButtonHandler : Microsoft.UI.Xaml.RoutedEventHandler {
+    open override func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+        print("CLICK");
+    }
+}
+#endif
+
 class MyApp : Microsoft.UI.Xaml.ApplicationOverrides {
     override func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
@@ -37,6 +45,15 @@ class MyApp : Microsoft.UI.Xaml.ApplicationOverrides {
         try stack.Children!.Append(value: TextBlock(text: "Swift Demo", fontSize: 128))
         try stack.Children!.Append(value: TextBlock(text: "WinUI 3", fontSize: 96))
         try stack.Children!.Append(value: TextBlock(text: "Windows App SDK 1.1", fontSize: 96))
+
+#if not
+        let btn = try Microsoft.UI.Xaml.Controls.Button();
+        try btn.add_Click(handler: MyButtonHandler()); // wants to be a closure, not a subclass
+        try btn.put_Content(value: TextBlock(text: "Click", fontSize: 32).Foo());
+        try stack.Children!.Append(value: btn)
+#endif
+
+        try stack.Children!.Append(value: Microsoft.UI.Xaml.Controls.Slider())
 
         try w.put_Content(value: stack);
 
