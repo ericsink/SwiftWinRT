@@ -2335,10 +2335,10 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Triggers(pThis, __presult))
         }
     }
-    public func get_Triggers() throws -> Optional<WinRT.IInspectable> {
+    public func get_Triggers() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>> = nil;
         try self._n_get_Triggers(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ResourceDictionary get_Resources()
     public func _n_get_Resources(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
@@ -3226,7 +3226,7 @@ open class IFrameworkElement
             return try get_Tag();
         }
     }
-    public var Triggers : Optional<WinRT.IInspectable> {
+    public var Triggers : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
         get throws {
             return try get_Triggers();
         }
@@ -4238,10 +4238,10 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transitions(pThis, __presult))
         }
     }
-    public func get_Transitions() throws -> Optional<WinRT.IInspectable> {
+    public func get_Transitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_get_Transitions(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_Transitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     public func _n_put_Transitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
@@ -4249,7 +4249,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Transitions(pThis, value))
         }
     }
-    public func put_Transitions(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_Transitions(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
         try self._n_put_Transitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.CacheMode get_CacheMode()
@@ -6501,7 +6501,7 @@ open class IUIElement
             return try get_TransformMatrix();
         }
     }
-    public var Transitions : Optional<WinRT.IInspectable> {
+    public var Transitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         get throws {
             return try get_Transitions();
         }
@@ -8846,11 +8846,11 @@ open class TriggerBase
 // runtime class
 public class TriggerCollection
 {
-    private var _self : WinRT.IInspectable;
-    internal init(plok: WinRT.IInspectable?) throws {
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase?) throws {
         _self = plok!
     }
-    internal func Interface() -> WinRT.IInspectable { return _self; }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase { return _self; }
     // method not needed: GetAt
     // method not needed: get_Size
     // method not needed: GetView

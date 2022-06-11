@@ -1176,10 +1176,10 @@ open class IContentControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTransitions(pThis, __presult))
         }
     }
-    public func get_ContentTransitions() throws -> Optional<WinRT.IInspectable> {
+    public func get_ContentTransitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_get_ContentTransitions(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_ContentTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     public func _n_put_ContentTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
@@ -1187,7 +1187,7 @@ open class IContentControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentTransitions(pThis, value))
         }
     }
-    public func put_ContentTransitions(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_ContentTransitions(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
         try self._n_put_ContentTransitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.UIElement get_ContentTemplateRoot()
@@ -1221,7 +1221,7 @@ open class IContentControl
             return try get_ContentTemplateSelector();
         }
     }
-    public var ContentTransitions : Optional<WinRT.IInspectable> {
+    public var ContentTransitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         get throws {
             return try get_ContentTransitions();
         }
@@ -3001,10 +3001,10 @@ open class IPanel
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Children(pThis, __presult))
         }
     }
-    public func get_Children() throws -> Optional<WinRT.IInspectable> {
+    public func get_Children() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement>> = nil;
         try self._n_get_Children(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_Background()
     public func _n_get_Background(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
@@ -3043,10 +3043,10 @@ open class IPanel
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildrenTransitions(pThis, __presult))
         }
     }
-    public func get_ChildrenTransitions() throws -> Optional<WinRT.IInspectable> {
+    public func get_ChildrenTransitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_get_ChildrenTransitions(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_ChildrenTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     public func _n_put_ChildrenTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
@@ -3054,7 +3054,7 @@ open class IPanel
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ChildrenTransitions(pThis, value))
         }
     }
-    public func put_ChildrenTransitions(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_ChildrenTransitions(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
         try self._n_put_ChildrenTransitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.BrushTransition get_BackgroundTransition()
@@ -3087,12 +3087,12 @@ open class IPanel
             return try get_BackgroundTransition();
         }
     }
-    public var Children : Optional<WinRT.IInspectable> {
+    public var Children : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
         get throws {
             return try get_Children();
         }
     }
-    public var ChildrenTransitions : Optional<WinRT.IInspectable> {
+    public var ChildrenTransitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         get throws {
             return try get_ChildrenTransitions();
         }
@@ -4290,10 +4290,10 @@ open class ITextBlock
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Inlines(pThis, __presult))
         }
     }
-    public func get_Inlines() throws -> Optional<WinRT.IInspectable> {
+    public func get_Inlines() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline>> = nil;
         try self._n_get_Inlines(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Padding()
     public func _n_get_Padding(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
@@ -4816,7 +4816,7 @@ open class ITextBlock
             return try get_HorizontalTextAlignment();
         }
     }
-    public var Inlines : Optional<WinRT.IInspectable> {
+    public var Inlines : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
         get throws {
             return try get_Inlines();
         }
@@ -6785,11 +6785,11 @@ public class TextBlock
 // runtime class
 public class UIElementCollection
 {
-    private var _self : WinRT.IInspectable;
-    internal init(plok: WinRT.IInspectable?) throws {
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement?) throws {
         _self = plok!
     }
-    internal func Interface() -> WinRT.IInspectable { return _self; }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement { return _self; }
     public func Move(oldIndex : Swift.UInt32, newIndex : Swift.UInt32) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IUIElementCollection = try _self.QueryInterface();
         return try _ifc.Move(oldIndex: oldIndex, newIndex: newIndex);

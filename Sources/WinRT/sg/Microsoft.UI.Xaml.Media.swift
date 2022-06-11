@@ -410,11 +410,11 @@ public class GradientStop
 // runtime class
 public class GradientStopCollection
 {
-    private var _self : WinRT.IInspectable;
-    internal init(plok: WinRT.IInspectable?) throws {
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop?) throws {
         _self = plok!
     }
-    internal func Interface() -> WinRT.IInspectable { return _self; }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Media.GradientStopCollection")
         _self = try RoActivateInstance(_classId)
@@ -822,10 +822,10 @@ open class IGradientBrush
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GradientStops(pThis, __presult))
         }
     }
-    public func get_GradientStops() throws -> Optional<WinRT.IInspectable> {
+    public func get_GradientStops() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>> = nil;
         try self._n_get_GradientStops(&__result);
-        return WinRT.IInspectable(consuming: __result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
     }
     // [IsSpecialName] void put_GradientStops(Microsoft.UI.Xaml.Media.GradientStopCollection)
     public func _n_put_GradientStops(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>) throws {
@@ -833,7 +833,7 @@ open class IGradientBrush
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_GradientStops(pThis, value))
         }
     }
-    public func put_GradientStops(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_GradientStops(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>) throws -> Void {
         try self._n_put_GradientStops(RawPointer(value));
     }
     public var ColorInterpolationMode : WinRT.Microsoft.UI.Xaml.Media.ColorInterpolationMode {
@@ -841,7 +841,7 @@ open class IGradientBrush
             return try get_ColorInterpolationMode();
         }
     }
-    public var GradientStops : Optional<WinRT.IInspectable> {
+    public var GradientStops : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
         get throws {
             return try get_GradientStops();
         }
@@ -1133,7 +1133,7 @@ open class ILinearGradientBrushFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithGradientStopCollectionAndAngle(pThis, gradientStopCollection, angle, __presult))
         }
     }
-    public func CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection : Optional<WinRT.IInspectable>, angle : Swift.Double) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush> {
+    public func CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>, angle : Swift.Double) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush> {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush>> = nil;
         try self._n_CreateInstanceWithGradientStopCollectionAndAngle(RawPointer(gradientStopCollection), angle, &__result);
         return WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush(consuming: __result);

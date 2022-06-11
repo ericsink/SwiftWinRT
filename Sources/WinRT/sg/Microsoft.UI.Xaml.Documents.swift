@@ -182,11 +182,11 @@ open class Inline
 // runtime class
 public class InlineCollection
 {
-    private var _self : WinRT.IInspectable;
-    internal init(plok: WinRT.IInspectable?) throws {
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline?) throws {
         _self = plok!
     }
-    internal func Interface() -> WinRT.IInspectable { return _self; }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline { return _self; }
     // method not needed: GetAt
     // method not needed: get_Size
     // method not needed: GetView

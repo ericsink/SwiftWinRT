@@ -35,11 +35,11 @@ open class Transition
 // runtime class
 public class TransitionCollection
 {
-    private var _self : WinRT.IInspectable;
-    internal init(plok: WinRT.IInspectable?) throws {
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition?) throws {
         _self = plok!
     }
-    internal func Interface() -> WinRT.IInspectable { return _self; }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Media.Animation.TransitionCollection")
         _self = try RoActivateInstance(_classId)
