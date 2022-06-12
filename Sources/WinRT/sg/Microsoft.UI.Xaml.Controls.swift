@@ -281,7 +281,9 @@ open class ContextMenuOpeningEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<ContextMenuOpeningEventHandler>.passUnretained(self)
     }
@@ -290,6 +292,9 @@ open class ContextMenuOpeningEventHandler
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

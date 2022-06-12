@@ -115,7 +115,9 @@ open class AsyncOperationCompletedHandler_1_boolean
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1_boolean>.passUnretained(self)
     }
@@ -124,6 +126,9 @@ open class AsyncOperationCompletedHandler_1_boolean
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -266,7 +271,9 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, WinRT.Windows.Web.Http.HttpProgress) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, WinRT.Windows.Web.Http.HttpProgress) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
@@ -275,6 +282,9 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : WinRT.Windows.Web.Http.HttpProgress) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, progressInfo)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -357,7 +367,9 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>.passUnretained(self)
     }
@@ -366,6 +378,9 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -508,7 +523,9 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, Swift.UInt64) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, Swift.UInt64) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationProgressHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
@@ -517,6 +534,9 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, progressInfo)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -591,7 +611,9 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>.passUnretained(self)
     }
@@ -600,6 +622,9 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -674,7 +699,9 @@ open class EventHandler_1_IInspectable
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<EventHandler_1_IInspectable>.passUnretained(self)
     }
@@ -683,6 +710,9 @@ open class EventHandler_1_IInspectable
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IEventHandler_1_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -800,7 +830,9 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPowe
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>.passUnretained(self)
     }
@@ -809,6 +841,9 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPowe
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -883,7 +918,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActiv
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>.passUnretained(self)
     }
@@ -892,6 +929,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActiv
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -966,7 +1006,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEvent
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>.passUnretained(self)
     }
@@ -975,6 +1017,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEvent
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1049,7 +1094,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeC
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>.passUnretained(self)
     }
@@ -1058,6 +1105,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeC
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1132,7 +1182,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>.passUnretained(self)
     }
@@ -1141,6 +1193,9 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1215,7 +1270,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>.passUnretained(self)
     }
@@ -1224,6 +1281,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1298,7 +1358,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>.passUnretained(self)
     }
@@ -1307,6 +1369,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1381,7 +1446,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>.passUnretained(self)
     }
@@ -1390,6 +1457,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1464,7 +1534,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>.passUnretained(self)
     }
@@ -1473,6 +1545,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1547,7 +1622,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>.passUnretained(self)
     }
@@ -1556,6 +1633,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1630,7 +1710,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>.passUnretained(self)
     }
@@ -1639,6 +1721,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1713,7 +1798,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>.passUnretained(self)
     }
@@ -1722,6 +1809,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1796,7 +1886,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>.passUnretained(self)
     }
@@ -1805,6 +1897,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1879,7 +1974,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>.passUnretained(self)
     }
@@ -1888,6 +1985,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1962,7 +2062,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>.passUnretained(self)
     }
@@ -1971,6 +2073,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2045,7 +2150,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>.passUnretained(self)
     }
@@ -2054,6 +2161,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2128,7 +2238,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>.passUnretained(self)
     }
@@ -2137,6 +2249,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2211,7 +2326,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>.passUnretained(self)
     }
@@ -2220,6 +2337,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, args : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2337,7 +2457,9 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>.passUnretained(self)
     }
@@ -2346,6 +2468,9 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2420,7 +2545,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>.passUnretained(self)
     }
@@ -2429,6 +2556,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2503,7 +2633,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspec
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>.passUnretained(self)
     }
@@ -2512,6 +2644,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspec
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2586,7 +2721,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>.passUnretained(self)
     }
@@ -2595,6 +2732,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2669,7 +2809,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.TextBlock>, Optional<WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.TextBlock>, Optional<WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>.passUnretained(self)
     }
@@ -2678,6 +2820,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.TextBlock>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2752,7 +2897,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>.passUnretained(self)
     }
@@ -2761,6 +2908,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2835,7 +2985,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>.passUnretained(self)
     }
@@ -2844,6 +2996,9 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, args : Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -3066,7 +3221,9 @@ open class AsyncActionCompletedHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncAction>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncAction>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<AsyncActionCompletedHandler>.passUnretained(self)
     }
@@ -3075,6 +3232,9 @@ open class AsyncActionCompletedHandler
     }
 
     open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncAction>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
     }
     internal func Interface() -> WinRT.Windows.Foundation.IAsyncActionCompletedHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

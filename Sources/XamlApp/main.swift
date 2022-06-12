@@ -38,17 +38,19 @@ class MyApp : Microsoft.UI.Xaml.ApplicationOverrides {
         try stack.Children!.Append(value: TextBlock(text: "WinUI 3", fontSize: 96))
         try stack.Children!.Append(value: TextBlock(text: "Windows App SDK 1.1", fontSize: 96))
 
+        let slider = try Microsoft.UI.Xaml.Controls.Slider()
+        try stack.Children!.Append(value: slider)
+
         let btn = try Microsoft.UI.Xaml.Controls.Button();
         let cb = Microsoft.UI.Xaml.RoutedEventHandler
         {
             (sender, e) in
-            print("CLICK");
+            let x = try slider.get_Value()
+            try slider.put_Value(value: x + 5)
         }
         _ = try btn.add_Click(handler: cb);
         try btn.put_Content(value: TextBlock(text: "Click", fontSize: 32));
         try stack.Children!.Append(value: btn)
-
-        try stack.Children!.Append(value: Microsoft.UI.Xaml.Controls.Slider())
 
         try w.put_Content(value: stack);
 

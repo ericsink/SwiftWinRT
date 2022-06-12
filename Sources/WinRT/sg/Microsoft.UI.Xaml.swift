@@ -203,7 +203,9 @@ open class ApplicationInitializationCallback
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<ApplicationInitializationCallback>.passUnretained(self)
     }
@@ -212,6 +214,9 @@ open class ApplicationInitializationCallback
     }
 
     open func Invoke(p : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void {
+        if let cb = _cb {
+            try cb(p)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallback {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -551,7 +556,9 @@ open class DependencyPropertyChangedCallback
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<DependencyPropertyChangedCallback>.passUnretained(self)
     }
@@ -560,6 +567,9 @@ open class DependencyPropertyChangedCallback
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, dp)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedCallback {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -653,7 +663,9 @@ open class DependencyPropertyChangedEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<DependencyPropertyChangedEventHandler>.passUnretained(self)
     }
@@ -662,6 +674,9 @@ open class DependencyPropertyChangedEventHandler
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -764,7 +779,9 @@ open class DragEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<DragEventHandler>.passUnretained(self)
     }
@@ -773,6 +790,9 @@ open class DragEventHandler
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDragEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -8659,7 +8679,7 @@ open class RoutedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self._cb(WinRT.Object(plok: WinRT.IInspectable(sender)), WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -8675,9 +8695,8 @@ open class RoutedEventHandler
     }
     private var instance: WithTrailingObjects
 
-    private var _cb : (_ sender: Optional<WinRT.Object>, _ e: Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void
-
-    public init(cb: @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil) {
         _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<RoutedEventHandler>.passUnretained(self)
@@ -8686,6 +8705,11 @@ open class RoutedEventHandler
         return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
+    }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
             WinRT.Microsoft.UI.Xaml.IRoutedEventHandler(UnsafeMutableRawPointer($0))
@@ -8803,7 +8827,9 @@ open class SizeChangedEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<SizeChangedEventHandler>.passUnretained(self)
     }
@@ -8812,6 +8838,9 @@ open class SizeChangedEventHandler
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.ISizeChangedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -10996,7 +11025,9 @@ open class UnhandledExceptionEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<UnhandledExceptionEventHandler>.passUnretained(self)
     }
@@ -11005,6 +11036,9 @@ open class UnhandledExceptionEventHandler
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

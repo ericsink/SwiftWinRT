@@ -1190,7 +1190,9 @@ open class RangeBaseValueChangedEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<RangeBaseValueChangedEventHandler>.passUnretained(self)
     }
@@ -1199,6 +1201,9 @@ open class RangeBaseValueChangedEventHandler
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
