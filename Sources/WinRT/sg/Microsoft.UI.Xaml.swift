@@ -198,19 +198,19 @@ open class ApplicationInitializationCallback
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback
-        public var wrapper: Unmanaged<ApplicationInitializationCallback>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback
+        public var self_ref: Unmanaged<ApplicationInitializationCallback>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<ApplicationInitializationCallback>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<ApplicationInitializationCallback>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationInitializationCallback>? {
-        return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(p : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void {
@@ -219,7 +219,7 @@ open class ApplicationInitializationCallback
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallback {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallback(UnsafeMutableRawPointer($0))
         }
     }
@@ -551,19 +551,19 @@ open class DependencyPropertyChangedCallback
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback
-        public var wrapper: Unmanaged<DependencyPropertyChangedCallback>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback
+        public var self_ref: Unmanaged<DependencyPropertyChangedCallback>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<DependencyPropertyChangedCallback>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<DependencyPropertyChangedCallback>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DependencyPropertyChangedCallback>? {
-        return pUnk?.bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void {
@@ -572,7 +572,7 @@ open class DependencyPropertyChangedCallback
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedCallback {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedCallback(UnsafeMutableRawPointer($0))
         }
     }
@@ -658,19 +658,19 @@ open class DependencyPropertyChangedEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler
-        public var wrapper: Unmanaged<DependencyPropertyChangedEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler
+        public var self_ref: Unmanaged<DependencyPropertyChangedEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<DependencyPropertyChangedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<DependencyPropertyChangedEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DependencyPropertyChangedEventHandler>? {
-        return pUnk?.bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
@@ -679,7 +679,7 @@ open class DependencyPropertyChangedEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler(UnsafeMutableRawPointer($0))
         }
     }
@@ -774,19 +774,19 @@ open class DragEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler
-        public var wrapper: Unmanaged<DragEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler
+        public var self_ref: Unmanaged<DragEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<DragEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<DragEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DragEventHandler>? {
-        return pUnk?.bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
@@ -795,7 +795,7 @@ open class DragEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDragEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.IDragEventHandler(UnsafeMutableRawPointer($0))
         }
     }
@@ -8690,19 +8690,19 @@ open class RoutedEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler
-        public var wrapper: Unmanaged<RoutedEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler
+        public var self_ref: Unmanaged<RoutedEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<RoutedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<RoutedEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RoutedEventHandler>? {
-        return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
@@ -8711,7 +8711,7 @@ open class RoutedEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.IRoutedEventHandler(UnsafeMutableRawPointer($0))
         }
     }
@@ -8822,19 +8822,19 @@ open class SizeChangedEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler
-        public var wrapper: Unmanaged<SizeChangedEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler
+        public var self_ref: Unmanaged<SizeChangedEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<SizeChangedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<SizeChangedEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<SizeChangedEventHandler>? {
-        return pUnk?.bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
@@ -8843,7 +8843,7 @@ open class SizeChangedEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.ISizeChangedEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.ISizeChangedEventHandler(UnsafeMutableRawPointer($0))
         }
     }
@@ -11020,19 +11020,19 @@ open class UnhandledExceptionEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler
-        public var wrapper: Unmanaged<UnhandledExceptionEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler
+        public var self_ref: Unmanaged<UnhandledExceptionEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<UnhandledExceptionEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<UnhandledExceptionEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<UnhandledExceptionEventHandler>? {
-        return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
@@ -11041,7 +11041,7 @@ open class UnhandledExceptionEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventHandler(UnsafeMutableRawPointer($0))
         }
     }

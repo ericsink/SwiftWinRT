@@ -276,19 +276,19 @@ open class ContextMenuOpeningEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler
-        public var wrapper: Unmanaged<ContextMenuOpeningEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler
+        public var self_ref: Unmanaged<ContextMenuOpeningEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<ContextMenuOpeningEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<ContextMenuOpeningEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ContextMenuOpeningEventHandler>? {
-        return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
@@ -297,7 +297,7 @@ open class ContextMenuOpeningEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler(UnsafeMutableRawPointer($0))
         }
     }

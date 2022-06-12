@@ -1185,19 +1185,19 @@ open class RangeBaseValueChangedEventHandler
     }
     )
     private struct WithTrailingObjects {
-        public var `super`: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler
-        public var wrapper: Unmanaged<RangeBaseValueChangedEventHandler>?
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler
+        public var self_ref: Unmanaged<RangeBaseValueChangedEventHandler>?
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
-        self.instance.wrapper = Unmanaged<RangeBaseValueChangedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
+        self.instance.self_ref = Unmanaged<RangeBaseValueChangedEventHandler>.passUnretained(self)
     }
     private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RangeBaseValueChangedEventHandler>? {
-        return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
+        return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {
@@ -1206,7 +1206,7 @@ open class RangeBaseValueChangedEventHandler
         }
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler {
-        return withUnsafeMutablePointer(to: &self.instance.super) {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler(UnsafeMutableRawPointer($0))
         }
     }
