@@ -8659,7 +8659,7 @@ open class RoutedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(e)))
+            let _ret : Void = try self._cb(WinRT.Object(plok: WinRT.IInspectable(sender)), WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -8675,7 +8675,10 @@ open class RoutedEventHandler
     }
     private var instance: WithTrailingObjects
 
-    public init() {
+    private var _cb : (_ sender: Optional<WinRT.Object>, _ e: Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void
+
+    public init(cb: @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) {
+        _cb = cb
         self.instance = WithTrailingObjects(super: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), wrapper: nil)
         self.instance.wrapper = Unmanaged<RoutedEventHandler>.passUnretained(self)
     }
@@ -8683,8 +8686,6 @@ open class RoutedEventHandler
         return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
-    }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
             WinRT.Microsoft.UI.Xaml.IRoutedEventHandler(UnsafeMutableRawPointer($0))
