@@ -59,15 +59,19 @@ open class IXmlDocumentIO
 // type: Windows.Data.Xml.Dom.XmlDocument
 // runtime class
 public class XmlDocument
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Data.Xml.Dom.IXmlDocument;
     internal init(plok: WinRT.Windows.Data.Xml.Dom.IXmlDocument?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Data.Xml.Dom.IXmlDocument { return _self; }
     public init() throws {
         let _classId = try HString("Windows.Data.Xml.Dom.XmlDocument")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Windows.Data.Xml.Dom.IXmlDocumentStatics
     // method not needed: get_Doctype

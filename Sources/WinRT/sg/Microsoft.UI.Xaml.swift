@@ -8,16 +8,20 @@ extension Microsoft.UI.Xaml {
 // type: Microsoft.UI.Xaml.Application
 // runtime class
 open class Application
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IApplication;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IApplication?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplication { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IApplicationFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IApplicationFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Application"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -36,11 +40,11 @@ open class Application
     public static func Start(callback : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallback>) throws -> Void {
         return try ApplicationStatics.Start(callback: callback!.Interface());
     }
-    public static func LoadComponent(component : Optional<WinRT.IInspectable>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>) throws -> Void {
-        return try ApplicationStatics.LoadComponent(component: component, resourceLocator: resourceLocator!.Interface());
+    public static func LoadComponent(component : Optional<WinRT.Object>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>) throws -> Void {
+        return try ApplicationStatics.LoadComponent(component: component!.GetInterface(), resourceLocator: resourceLocator!.Interface());
     }
-    public static func LoadComponentWithResourceLocation(component : Optional<WinRT.IInspectable>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>, componentResourceLocation : WinRT.Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation) throws -> Void {
-        return try ApplicationStatics.LoadComponentWithResourceLocation(component: component, resourceLocator: resourceLocator!.Interface(), componentResourceLocation: componentResourceLocation);
+    public static func LoadComponentWithResourceLocation(component : Optional<WinRT.Object>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>, componentResourceLocation : WinRT.Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation) throws -> Void {
+        return try ApplicationStatics.LoadComponentWithResourceLocation(component: component!.GetInterface(), resourceLocator: resourceLocator!.Interface(), componentResourceLocation: componentResourceLocation);
     }
     public static var Current : Optional<WinRT.Microsoft.UI.Xaml.Application> {
         get throws {
@@ -219,10 +223,13 @@ open class ApplicationInitializationCallback
 // type: Microsoft.UI.Xaml.ApplicationInitializationCallbackParams
 // runtime class
 public class ApplicationInitializationCallbackParams
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplicationInitializationCallbackParams { return _self; }
 }
@@ -234,15 +241,19 @@ public typealias ApplicationTheme = _q_CMicrosoft_CUI_CXaml_CApplicationTheme;
 // type: Microsoft.UI.Xaml.BringIntoViewOptions
 // runtime class
 public class BringIntoViewOptions
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IBringIntoViewOptions;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IBringIntoViewOptions?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IBringIntoViewOptions { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.BringIntoViewOptions")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_AnimationDesired
     // method not needed: put_AnimationDesired
@@ -289,16 +300,20 @@ public class BringIntoViewRequestedEventArgs
 // type: Microsoft.UI.Xaml.BrushTransition
 // runtime class
 open class BrushTransition
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IBrushTransition;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IBrushTransition?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IBrushTransition { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IBrushTransitionFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IBrushTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.BrushTransition"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -315,10 +330,13 @@ public typealias CornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius;
 // type: Microsoft.UI.Xaml.DataContextChangedEventArgs
 // runtime class
 public class DataContextChangedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDataContextChangedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IDataContextChangedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDataContextChangedEventArgs { return _self; }
     // method not needed: get_NewValue
@@ -356,10 +374,13 @@ open class DataTemplate
 // type: Microsoft.UI.Xaml.DebugSettings
 // runtime class
 public class DebugSettings
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDebugSettings;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IDebugSettings?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDebugSettings { return _self; }
     // method not needed: get_EnableFrameRateCounter
@@ -377,16 +398,20 @@ public class DebugSettings
 // type: Microsoft.UI.Xaml.DependencyObject
 // runtime class
 open class DependencyObject
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDependencyObject;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyObject?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyObject { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IDependencyObjectFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IDependencyObjectFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DependencyObject"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -396,9 +421,9 @@ open class DependencyObject
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
         return try _ifc.GetValue(dp: dp!.Interface());
     }
-    public func SetValue(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>, value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func SetValue(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>, value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
-        return try _ifc.SetValue(dp: dp!.Interface(), value: value);
+        return try _ifc.SetValue(dp: dp!.Interface(), value: value!.GetInterface());
     }
     public func ClearValue(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
@@ -445,10 +470,13 @@ open class DependencyObject
 // type: Microsoft.UI.Xaml.DependencyProperty
 // runtime class
 public class DependencyProperty
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDependencyProperty;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyProperty?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyProperty { return _self; }
     // static interface not needed: Microsoft.UI.Xaml.IDependencyPropertyStatics
@@ -543,10 +571,13 @@ open class DependencyPropertyChangedCallback
 // type: Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs
 // runtime class
 public class DependencyPropertyChangedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventArgs { return _self; }
     // method not needed: get_Property
@@ -606,7 +637,7 @@ open class DependencyPropertyChangedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -630,7 +661,7 @@ open class DependencyPropertyChangedEventHandler
         return pUnk?.bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -717,7 +748,7 @@ open class DragEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.DragEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDragEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.DragEventArgs(plok: WinRT.Microsoft.UI.Xaml.IDragEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -741,7 +772,7 @@ open class DragEventHandler
         return pUnk?.bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDragEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -790,10 +821,13 @@ public class DropCompletedEventArgs
 // type: Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs
 // runtime class
 public class EffectiveViewportChangedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IEffectiveViewportChangedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IEffectiveViewportChangedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IEffectiveViewportChangedEventArgs { return _self; }
     // method not needed: get_EffectiveViewport
@@ -1082,9 +1116,9 @@ open class FrameworkElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.get_Tag();
     }
-    public func put_Tag(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_Tag(value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.put_Tag(value: value);
+        return try _ifc.put_Tag(value: value!.GetInterface());
     }
     public func get_Language() throws -> Swift.String {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1190,9 +1224,9 @@ open class FrameworkElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.get_DataContext();
     }
-    public func put_DataContext(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_DataContext(value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.put_DataContext(value: value);
+        return try _ifc.put_DataContext(value: value!.GetInterface());
     }
     public func get_AllowFocusOnInteraction() throws -> boolean {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -8483,10 +8517,13 @@ open class IXamlRoot
 // type: Microsoft.UI.Xaml.LaunchActivatedEventArgs
 // runtime class
 public class LaunchActivatedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs { return _self; }
     // method not needed: get_Arguments
@@ -8534,10 +8571,13 @@ open class ResourceDictionary
 // type: Microsoft.UI.Xaml.RoutedEvent
 // runtime class
 public class RoutedEvent
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IRoutedEvent;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IRoutedEvent?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEvent { return _self; }
 }
@@ -8545,16 +8585,20 @@ public class RoutedEvent
 // type: Microsoft.UI.Xaml.RoutedEventArgs
 // runtime class
 open class RoutedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IRoutedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventArgs { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IRoutedEventArgsFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.RoutedEventArgs"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -8615,7 +8659,7 @@ open class RoutedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.RoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -8639,7 +8683,7 @@ open class RoutedEventHandler
         return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -8651,16 +8695,20 @@ open class RoutedEventHandler
 // type: Microsoft.UI.Xaml.ScalarTransition
 // runtime class
 open class ScalarTransition
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IScalarTransition;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IScalarTransition?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IScalarTransition { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IScalarTransitionFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IScalarTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ScalarTransition"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -8738,7 +8786,7 @@ open class SizeChangedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.ISizeChangedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.ISizeChangedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -8762,7 +8810,7 @@ open class SizeChangedEventHandler
         return pUnk?.bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.ISizeChangedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -8845,10 +8893,13 @@ open class TriggerBase
 // type: Microsoft.UI.Xaml.TriggerCollection
 // runtime class
 public class TriggerCollection
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase;
     internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase { return _self; }
     // method not needed: GetAt
@@ -10372,13 +10423,13 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.ReleasePointerCaptures();
     }
-    public func AddHandler(routedEvent : Optional<WinRT.Microsoft.UI.Xaml.RoutedEvent>, handler : Optional<WinRT.IInspectable>, handledEventsToo : boolean) throws -> Void {
+    public func AddHandler(routedEvent : Optional<WinRT.Microsoft.UI.Xaml.RoutedEvent>, handler : Optional<WinRT.Object>, handledEventsToo : boolean) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.AddHandler(routedEvent: routedEvent!.Interface(), handler: handler, handledEventsToo: handledEventsToo);
+        return try _ifc.AddHandler(routedEvent: routedEvent!.Interface(), handler: handler!.GetInterface(), handledEventsToo: handledEventsToo);
     }
-    public func RemoveHandler(routedEvent : Optional<WinRT.Microsoft.UI.Xaml.RoutedEvent>, handler : Optional<WinRT.IInspectable>) throws -> Void {
+    public func RemoveHandler(routedEvent : Optional<WinRT.Microsoft.UI.Xaml.RoutedEvent>, handler : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.RemoveHandler(routedEvent: routedEvent!.Interface(), handler: handler);
+        return try _ifc.RemoveHandler(routedEvent: routedEvent!.Interface(), handler: handler!.GetInterface());
     }
     public func TransformToVisual(visual : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.GeneralTransform> {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10861,10 +10912,13 @@ open class UIElement
 // type: Microsoft.UI.Xaml.UnhandledExceptionEventArgs
 // runtime class
 public class UnhandledExceptionEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs { return _self; }
     // method not needed: get_Exception
@@ -10925,7 +10979,7 @@ open class UnhandledExceptionEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs(plok: WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs(plok: WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -10949,7 +11003,7 @@ open class UnhandledExceptionEventHandler
         return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUnhandledExceptionEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -10961,16 +11015,20 @@ open class UnhandledExceptionEventHandler
 // type: Microsoft.UI.Xaml.Vector3Transition
 // runtime class
 open class Vector3Transition
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IVector3Transition;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IVector3Transition?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IVector3Transition { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IVector3TransitionFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IVector3TransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Vector3Transition"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -10993,16 +11051,20 @@ public typealias Visibility = _q_CMicrosoft_CUI_CXaml_CVisibility;
 // type: Microsoft.UI.Xaml.Window
 // runtime class
 open class Window
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindow;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IWindow?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindow { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IWindowFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IWindowFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Window"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -11174,10 +11236,13 @@ open class Window
 // type: Microsoft.UI.Xaml.WindowActivatedEventArgs
 // runtime class
 public class WindowActivatedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs { return _self; }
     // method not needed: get_Handled
@@ -11188,10 +11253,13 @@ public class WindowActivatedEventArgs
 // type: Microsoft.UI.Xaml.WindowEventArgs
 // runtime class
 public class WindowEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowEventArgs { return _self; }
     // method not needed: get_Handled
@@ -11201,10 +11269,13 @@ public class WindowEventArgs
 // type: Microsoft.UI.Xaml.WindowSizeChangedEventArgs
 // runtime class
 public class WindowSizeChangedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs { return _self; }
     // method not needed: get_Handled
@@ -11215,10 +11286,13 @@ public class WindowSizeChangedEventArgs
 // type: Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs
 // runtime class
 public class WindowVisibilityChangedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs { return _self; }
     // method not needed: get_Handled
@@ -11229,10 +11303,13 @@ public class WindowVisibilityChangedEventArgs
 // type: Microsoft.UI.Xaml.XamlRoot
 // runtime class
 public class XamlRoot
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IXamlRoot;
     internal init(plok: WinRT.Microsoft.UI.Xaml.IXamlRoot?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IXamlRoot { return _self; }
     // method not needed: get_Content

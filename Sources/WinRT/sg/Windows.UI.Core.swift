@@ -8,10 +8,13 @@ extension Windows.UI.Core {
 // type: Windows.UI.Core.CoreDispatcher
 // runtime class
 public class CoreDispatcher
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.UI.Core.ICoreDispatcher;
     internal init(plok: WinRT.Windows.UI.Core.ICoreDispatcher?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.UI.Core.ICoreDispatcher { return _self; }
     // method not needed: get_HasThreadAccess
@@ -26,10 +29,13 @@ public class CoreDispatcher
 // type: Windows.UI.Core.CoreWindow
 // runtime class
 public class CoreWindow
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.UI.Core.ICoreWindow;
     internal init(plok: WinRT.Windows.UI.Core.ICoreWindow?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.UI.Core.ICoreWindow { return _self; }
     // static interface not needed: Windows.UI.Core.ICoreWindowStatic

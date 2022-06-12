@@ -34,15 +34,19 @@ open class Transition
 // type: Microsoft.UI.Xaml.Media.Animation.TransitionCollection
 // runtime class
 public class TransitionCollection
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition;
     internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Media.Animation.TransitionCollection")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: GetAt
     // method not needed: get_Size

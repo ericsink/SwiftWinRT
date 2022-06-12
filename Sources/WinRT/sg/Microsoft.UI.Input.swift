@@ -36,10 +36,13 @@ open class IPointerPoint
 // type: Microsoft.UI.Input.InputCursor
 // runtime class
 open class InputCursor
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Input.IInputCursor;
     internal init(plok: WinRT.Microsoft.UI.Input.IInputCursor?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Input.IInputCursor { return _self; }
     // COMPOSABLE: Microsoft.UI.Input.IInputCursorFactory
@@ -51,10 +54,13 @@ open class InputCursor
 // type: Microsoft.UI.Input.PointerPoint
 // runtime class
 public class PointerPoint
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Input.IPointerPoint;
     internal init(plok: WinRT.Microsoft.UI.Input.IPointerPoint?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Input.IPointerPoint { return _self; }
     // method not needed: get_FrameId

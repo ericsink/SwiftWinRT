@@ -101,10 +101,13 @@ public class SystemIdentification
 // type: Windows.System.Profile.SystemIdentificationInfo
 // runtime class
 public class SystemIdentificationInfo
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.System.Profile.ISystemIdentificationInfo;
     internal init(plok: WinRT.Windows.System.Profile.ISystemIdentificationInfo?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.System.Profile.ISystemIdentificationInfo { return _self; }
     public func get_Id() throws -> Optional<WinRT.Windows.Storage.Streams.IBuffer> {

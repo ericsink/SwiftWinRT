@@ -131,9 +131,9 @@ open class ContentControl
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
         return try _ifc.get_Content();
     }
-    public func put_Content(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_Content(value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
-        return try _ifc.put_Content(value: value);
+        return try _ifc.put_Content(value: value!.GetInterface());
     }
     public func get_ContentTemplate() throws -> Optional<WinRT.Microsoft.UI.Xaml.DataTemplate> {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IContentControl = try _self.QueryInterface();
@@ -265,7 +265,7 @@ open class ContextMenuOpeningEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.IContextMenuEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.IContextMenuEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -289,7 +289,7 @@ open class ContextMenuOpeningEventHandler
         return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -927,9 +927,9 @@ open class Control
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
         return try _ifc.get_DefaultStyleKey();
     }
-    public func put_DefaultStyleKey(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_DefaultStyleKey(value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
-        return try _ifc.put_DefaultStyleKey(value: value);
+        return try _ifc.put_DefaultStyleKey(value: value!.GetInterface());
     }
     public func GetTemplateChild(childName : Swift.String) throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyObject> {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControlProtected = try _self.QueryInterface();
@@ -967,16 +967,20 @@ public class ControlTemplate
 // type: Microsoft.UI.Xaml.Controls.DataTemplateSelector
 // runtime class
 open class DataTemplateSelector
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IDataTemplateSelector { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IDataTemplateSelectorFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IDataTemplateSelectorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.DataTemplateSelector"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -5398,10 +5402,13 @@ open class IUIElementCollection
 // type: Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs
 // runtime class
 public class IsTextTrimmedChangedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs { return _self; }
 }
@@ -5724,9 +5731,9 @@ open class Slider
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
         return try _ifc.get_Header();
     }
-    public func put_Header(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_Header(value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
-        return try _ifc.put_Header(value: value);
+        return try _ifc.put_Header(value: value!.GetInterface());
     }
     public func get_HeaderTemplate() throws -> Optional<WinRT.Microsoft.UI.Xaml.DataTemplate> {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ISlider = try _self.QueryInterface();
@@ -6039,7 +6046,8 @@ open class StackPanel
     }
     public func GetRegularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment, offset : inout Swift.Float) throws -> Swift.Float {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.GetRegularSnapPoints(orientation: orientation, alignment: alignment, offset: &offset);
+            var _tmp_out_offset: Swift.Float = 0;
+        return try _ifc.GetRegularSnapPoints(orientation: orientation, alignment: alignment, offset: &_tmp_out_offset);
     }
     public var AreHorizontalSnapPointsRegular : boolean {
         get throws {
@@ -6055,7 +6063,9 @@ open class StackPanel
     }
     public func GetInsertionIndexes(position : WinRT.Windows.Foundation.Point, first : inout Swift.Int32, second : inout Swift.Int32) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IInsertionPanel = try _self.QueryInterface();
-        return try _ifc.GetInsertionIndexes(position: position, first: &first, second: &second);
+            var _tmp_out_first: Swift.Int32 = 0;
+            var _tmp_out_second: Swift.Int32 = 0;
+        return try _ifc.GetInsertionIndexes(position: position, first: &_tmp_out_first, second: &_tmp_out_second);
     }
 }
 
@@ -6784,10 +6794,13 @@ public class TextBlock
 // type: Microsoft.UI.Xaml.Controls.UIElementCollection
 // runtime class
 public class UIElementCollection
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement;
     internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement { return _self; }
     public func Move(oldIndex : Swift.UInt32, newIndex : Swift.UInt32) throws -> Void {

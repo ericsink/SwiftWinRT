@@ -181,10 +181,13 @@ open class Inline
 // type: Microsoft.UI.Xaml.Documents.InlineCollection
 // runtime class
 public class InlineCollection
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
     internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline { return _self; }
     // method not needed: GetAt
@@ -276,16 +279,20 @@ open class TextElement
 // type: Microsoft.UI.Xaml.Documents.TextHighlighter
 // runtime class
 open class TextHighlighter
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.ITextHighlighterFactory
     public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : ITextHighlighterFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.TextHighlighter"));
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -302,10 +309,13 @@ open class TextHighlighter
 // type: Microsoft.UI.Xaml.Documents.TextPointer
 // runtime class
 public class TextPointer
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Documents.ITextPointer;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Documents.ITextPointer?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.ITextPointer { return _self; }
     // method not needed: get_Parent

@@ -8,30 +8,38 @@ extension Microsoft.UI.Xaml.Input {
 // type: Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs
 // runtime class
 public class AccessKeyDisplayDismissedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
 }
 
 // type: Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs
 // runtime class
 public class AccessKeyDisplayRequestedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_PressedKeys
 }
@@ -39,15 +47,19 @@ public class AccessKeyDisplayRequestedEventArgs
 // type: Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs
 // runtime class
 public class AccessKeyInvokedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Handled
     // method not needed: put_Handled
@@ -145,7 +157,7 @@ open class DoubleTappedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -169,7 +181,7 @@ open class DoubleTappedEventHandler
         return pUnk?.bindMemory(to: DoubleTappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -280,7 +292,7 @@ open class HoldingEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -304,7 +316,7 @@ open class HoldingEventHandler
         return pUnk?.bindMemory(to: HoldingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -819,7 +831,7 @@ open class KeyEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -843,7 +855,7 @@ open class KeyEventHandler
         return pUnk?.bindMemory(to: KeyEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -914,10 +926,13 @@ open class KeyboardAccelerator
 // type: Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs
 // runtime class
 public class KeyboardAcceleratorInvokedEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs { return _self; }
     // method not needed: get_Handled
@@ -1013,7 +1028,7 @@ open class ManipulationCompletedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1037,7 +1052,7 @@ open class ManipulationCompletedEventHandler
         return pUnk?.bindMemory(to: ManipulationCompletedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1125,7 +1140,7 @@ open class ManipulationDeltaEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1149,7 +1164,7 @@ open class ManipulationDeltaEventHandler
         return pUnk?.bindMemory(to: ManipulationDeltaEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1239,7 +1254,7 @@ open class ManipulationInertiaStartingEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1263,7 +1278,7 @@ open class ManipulationInertiaStartingEventHandler
         return pUnk?.bindMemory(to: ManipulationInertiaStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1360,7 +1375,7 @@ open class ManipulationStartedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1384,7 +1399,7 @@ open class ManipulationStartedEventHandler
         return pUnk?.bindMemory(to: ManipulationStartedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1476,7 +1491,7 @@ open class ManipulationStartingEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1500,7 +1515,7 @@ open class ManipulationStartingEventHandler
         return pUnk?.bindMemory(to: ManipulationStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1557,10 +1572,13 @@ public class NoFocusCandidateFoundEventArgs
 // type: Microsoft.UI.Xaml.Input.Pointer
 // runtime class
 public class Pointer
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Input.IPointer;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IPointer?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IPointer { return _self; }
     // method not needed: get_PointerId
@@ -1621,7 +1639,7 @@ open class PointerEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IPointerRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1645,7 +1663,7 @@ open class PointerEventHandler
         return pUnk?.bindMemory(to: PointerEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1678,10 +1696,13 @@ public class PointerRoutedEventArgs
 // type: Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs
 // runtime class
 public class ProcessKeyboardAcceleratorEventArgs
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs { return _self; }
     // method not needed: get_Key
@@ -1742,7 +1763,7 @@ open class RightTappedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1766,7 +1787,7 @@ open class RightTappedEventHandler
         return pUnk?.bindMemory(to: RightTappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1850,7 +1871,7 @@ open class TappedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1874,7 +1895,7 @@ open class TappedEventHandler
         return pUnk?.bindMemory(to: TappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

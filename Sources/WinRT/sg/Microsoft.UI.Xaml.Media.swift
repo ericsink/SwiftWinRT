@@ -145,16 +145,20 @@ public typealias ElementCompositeMode = _q_CMicrosoft_CUI_CXaml_CMedia_CElementC
 // type: Microsoft.UI.Xaml.Media.FontFamily
 // runtime class
 open class FontFamily
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Media.IFontFamily;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IFontFamily?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IFontFamily { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IFontFamilyFactory
     public init(familyName : Swift.String, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
         let _af : IFontFamilyFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.FontFamily"));
         _self = try _af.CreateInstanceWithName(familyName: familyName, baseInterface: baseInterface, innerInterface: &innerInterface)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public convenience init(familyName : Swift.String) throws {
         var _inn : Optional<WinRT.IInspectable> = nil
@@ -409,15 +413,19 @@ public class GradientStop
 // type: Microsoft.UI.Xaml.Media.GradientStopCollection
 // runtime class
 public class GradientStopCollection
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
     internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Media.GradientStopCollection")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: GetAt
     // method not needed: get_Size

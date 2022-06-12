@@ -1,15 +1,12 @@
 
-#if not
 open class Object
 {
     private var _self : WinRT.IInspectable;
     internal init(plok: WinRT.IInspectable?) throws {
         _self = plok!
     }
-    internal func Interface<Interface: IUnknown>() throws -> Interface {
-        return try _self.QueryInterface()
+    internal final func GetInterface() throws -> WinRT.IInspectable {
+        return _self
     }
 }
-#endif
-
 

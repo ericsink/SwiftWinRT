@@ -51,10 +51,13 @@ open class BindingExpression
 // type: Microsoft.UI.Xaml.Data.BindingExpressionBase
 // runtime class
 open class BindingExpressionBase
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Data.IBindingExpressionBase;
     internal init(plok: WinRT.Microsoft.UI.Xaml.Data.IBindingExpressionBase?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Data.IBindingExpressionBase { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Data.IBindingExpressionBaseFactory

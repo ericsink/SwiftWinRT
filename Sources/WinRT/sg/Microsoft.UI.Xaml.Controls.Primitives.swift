@@ -102,9 +102,9 @@ open class ButtonBase
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
         return try _ifc.get_CommandParameter();
     }
-    public func put_CommandParameter(value : Optional<WinRT.IInspectable>) throws -> Void {
+    public func put_CommandParameter(value : Optional<WinRT.Object>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-        return try _ifc.put_CommandParameter(value: value);
+        return try _ifc.put_CommandParameter(value: value!.GetInterface());
     }
     public func add_Click(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
@@ -1174,7 +1174,7 @@ open class RangeBaseValueChangedEventHandler
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), e: WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs(e)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventArgs(e)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1198,7 +1198,7 @@ open class RangeBaseValueChangedEventHandler
         return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler {
         return withUnsafeMutablePointer(to: &self.instance.super) {

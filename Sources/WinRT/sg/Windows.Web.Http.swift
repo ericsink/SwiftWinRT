@@ -8,19 +8,24 @@ extension Windows.Web.Http {
 // type: Windows.Web.Http.HttpClient
 // runtime class
 public class HttpClient
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Web.Http.IHttpClient;
     internal init(plok: WinRT.Windows.Web.Http.IHttpClient?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpClient { return _self; }
     public init() throws {
         let _classId = try HString("Windows.Web.Http.HttpClient")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
         let _af : IHttpClientFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
         _self = try _af.Create(filter: filter)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: DeleteAsync
     public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
@@ -61,19 +66,24 @@ public typealias HttpProgressStage = _q_CWindows_CWeb_CHttp_CHttpProgressStage;
 // type: Windows.Web.Http.HttpResponseMessage
 // runtime class
 public class HttpResponseMessage
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Web.Http.IHttpResponseMessage;
     internal init(plok: WinRT.Windows.Web.Http.IHttpResponseMessage?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpResponseMessage { return _self; }
     public init() throws {
         let _classId = try HString("Windows.Web.Http.HttpResponseMessage")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
         let _af : IHttpResponseMessageFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
         _self = try _af.Create(statusCode: statusCode)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public func get_Content() throws -> Optional<WinRT.Windows.Web.Http.IHttpContent> {
         let _ifc : WinRT.Windows.Web.Http.IHttpResponseMessage = try _self.QueryInterface();

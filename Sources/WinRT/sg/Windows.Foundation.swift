@@ -658,7 +658,7 @@ open class EventHandler_1_IInspectable
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.IInspectable(args))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Object(plok: WinRT.IInspectable(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -682,7 +682,7 @@ open class EventHandler_1_IInspectable
         return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.IEventHandler_1_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -867,7 +867,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActiv
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs(args)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowActivatedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -891,7 +891,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActiv
         return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -950,7 +950,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEvent
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowEventArgs(args)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Microsoft.UI.Xaml.WindowEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -974,7 +974,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEvent
         return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1033,7 +1033,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeC
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs(args)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowSizeChangedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1057,7 +1057,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeC
         return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -1116,7 +1116,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.IInspectable(sender), args: WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs(args)))
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IWindowVisibilityChangedEventArgs(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -1140,7 +1140,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
         return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -2487,7 +2487,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspec
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.FrameworkElement(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement(sender)), args: WinRT.IInspectable(args))
+            let _ret : Void = try self.Invoke(sender: WinRT.Microsoft.UI.Xaml.FrameworkElement(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement(sender)), args: WinRT.Object(plok: WinRT.IInspectable(args)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -2511,7 +2511,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspec
         return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.wrapper
     }
 
-    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.IInspectable>) throws -> Void {
+    open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Object>) throws -> Void {
     }
     internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable {
         return withUnsafeMutablePointer(to: &self.instance.super) {
@@ -3303,19 +3303,24 @@ public typealias TimeSpan = _q_CWindows_CFoundation_CTimeSpan;
 // type: Windows.Foundation.Uri
 // runtime class
 public class Uri
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.Foundation.IUriRuntimeClass;
     internal init(plok: WinRT.Windows.Foundation.IUriRuntimeClass?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.Foundation.IUriRuntimeClass { return _self; }
     public init(uri : Swift.String) throws {
         let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
         _self = try _af.CreateUri(uri: uri)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public init(baseUri : Swift.String, relativeUri : Swift.String) throws {
         let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
         _self = try _af.CreateWithRelativeUri(baseUri: baseUri, relativeUri: relativeUri)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Windows.Foundation.IUriEscapeStatics
     // method not needed: get_AbsoluteUri

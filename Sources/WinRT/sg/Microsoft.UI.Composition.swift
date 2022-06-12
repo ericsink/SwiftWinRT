@@ -41,10 +41,13 @@ open class CompositionBrush
 // type: Microsoft.UI.Composition.CompositionObject
 // runtime class
 open class CompositionObject
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Composition.ICompositionObject;
     internal init(plok: WinRT.Microsoft.UI.Composition.ICompositionObject?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Composition.ICompositionObject { return _self; }
     // COMPOSABLE: Microsoft.UI.Composition.ICompositionObjectFactory
@@ -68,15 +71,19 @@ open class CompositionObject
 // type: Microsoft.UI.Composition.Compositor
 // runtime class
 public class Compositor
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Composition.ICompositor;
     internal init(plok: WinRT.Microsoft.UI.Composition.ICompositor?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Composition.ICompositor { return _self; }
     public init() throws {
         let _classId = try HString("Microsoft.UI.Composition.Compositor")
         _self = try RoActivateInstance(_classId)
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Composition.ICompositorStatics
     // method not needed: CreateColorKeyFrameAnimation

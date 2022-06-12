@@ -8,10 +8,13 @@ extension Microsoft.UI {
 // type: Microsoft.UI.Colors
 // runtime class
 public class Colors
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.IColors;
     internal init(plok: WinRT.Microsoft.UI.IColors?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.IColors { return _self; }
     private struct _IColorsStatics {

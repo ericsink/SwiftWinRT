@@ -8,10 +8,13 @@ extension Microsoft.UI.Dispatching {
 // type: Microsoft.UI.Dispatching.DispatcherQueue
 // runtime class
 public class DispatcherQueue
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Dispatching.IDispatcherQueue;
     internal init(plok: WinRT.Microsoft.UI.Dispatching.IDispatcherQueue?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Dispatching.IDispatcherQueue { return _self; }
     // static interface not needed: Microsoft.UI.Dispatching.IDispatcherQueueStatics

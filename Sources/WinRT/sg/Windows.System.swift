@@ -8,10 +8,13 @@ extension Windows.System {
 // type: Windows.System.DispatcherQueueController
 // runtime class
 public class DispatcherQueueController
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.System.IDispatcherQueueController;
     internal init(plok: WinRT.Windows.System.IDispatcherQueueController?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.System.IDispatcherQueueController { return _self; }
     private struct _IDispatcherQueueControllerStatics {
@@ -111,10 +114,13 @@ open class IUser
 // type: Windows.System.User
 // runtime class
 public class User
+    :
+    WinRT.Object
 {
     private var _self : WinRT.Windows.System.IUser;
     internal init(plok: WinRT.Windows.System.IUser?) throws {
         _self = plok!
+        try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Windows.System.IUser { return _self; }
     // static interface not needed: Windows.System.IUserStatics
