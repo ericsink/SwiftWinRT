@@ -30,7 +30,8 @@ STDAPI MddBootstrapInitialize2(
     );
 
 // the following file contains stuff that is automatically generated from winmd
-#include <W.h>
+#include <WinRT.h>
+//#include <Win32.h>
 
 #pragma comment(lib, "runtimeobject")
 
