@@ -450,21 +450,6 @@ open class IPowerManagerStatics2
 // static class
 public class PowerManager
 {
-    private struct _IPowerManagerStatics2 {
-        static var x : IPowerManagerStatics2 =
-            try! RoGetActivationFactory(HString("Microsoft.Windows.System.Power.PowerManager"))
-    }
-    public static var PowerManagerStatics2 : IPowerManagerStatics2 {
-        _IPowerManagerStatics2.x
-    }
-    public static func get_EffectivePowerMode2() throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
-        return try PowerManagerStatics2.get_EffectivePowerMode2();
-    }
-    public static var EffectivePowerMode2 : WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
-        get throws {
-        return try PowerManagerStatics2.EffectivePowerMode2;
-        }
-    }
     private struct _IPowerManagerStatics {
         static var x : IPowerManagerStatics =
             try! RoGetActivationFactory(HString("Microsoft.Windows.System.Power.PowerManager"))
@@ -616,6 +601,21 @@ public class PowerManager
     public static var UserPresenceStatus : WinRT.Microsoft.Windows.System.Power.UserPresenceStatus {
         get throws {
         return try PowerManagerStatics.UserPresenceStatus;
+        }
+    }
+    private struct _IPowerManagerStatics2 {
+        static var x : IPowerManagerStatics2 =
+            try! RoGetActivationFactory(HString("Microsoft.Windows.System.Power.PowerManager"))
+    }
+    public static var PowerManagerStatics2 : IPowerManagerStatics2 {
+        _IPowerManagerStatics2.x
+    }
+    public static func get_EffectivePowerMode2() throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
+        return try PowerManagerStatics2.get_EffectivePowerMode2();
+    }
+    public static var EffectivePowerMode2 : WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
+        get throws {
+        return try PowerManagerStatics2.EffectivePowerMode2;
         }
     }
 }

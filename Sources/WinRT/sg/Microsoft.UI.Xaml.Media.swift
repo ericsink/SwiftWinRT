@@ -193,6 +193,9 @@ open class Brush
         }
     }
     private var _cb_PopulatePropertyInfoOverride : Optional<(Swift.String, Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void> = nil
+    public func Set_PopulatePropertyInfoOverride(closure : @escaping (Swift.String, Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void) {
+        _cb_PopulatePropertyInfoOverride = closure
+    }
     open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         if let cb = _cb_PopulatePropertyInfoOverride {
             return try cb(propertyName, animationPropertyInfo)

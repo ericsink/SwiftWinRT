@@ -314,6 +314,9 @@ open class ContentControl
         }
     }
     private var _cb_OnContentChanged : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void> = nil
+    public func Set_OnContentChanged(closure : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) {
+        _cb_OnContentChanged = closure
+    }
     open func OnContentChanged(oldContent : Optional<WinRT.Object>, newContent : Optional<WinRT.Object>) throws -> Void {
         if let cb = _cb_OnContentChanged {
             return try cb(oldContent, newContent)
@@ -321,6 +324,9 @@ open class ContentControl
         }
     }
     private var _cb_OnContentTemplateChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void> = nil
+    public func Set_OnContentTemplateChanged(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void) {
+        _cb_OnContentTemplateChanged = closure
+    }
     open func OnContentTemplateChanged(oldContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, newContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
         if let cb = _cb_OnContentTemplateChanged {
             return try cb(oldContentTemplate, newContentTemplate)
@@ -328,6 +334,9 @@ open class ContentControl
         }
     }
     private var _cb_OnContentTemplateSelectorChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void> = nil
+    public func Set_OnContentTemplateSelectorChanged(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void) {
+        _cb_OnContentTemplateSelectorChanged = closure
+    }
     open func OnContentTemplateSelectorChanged(oldContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, newContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void {
         if let cb = _cb_OnContentTemplateSelectorChanged {
             return try cb(oldContentTemplateSelector, newContentTemplateSelector)
@@ -1588,6 +1597,9 @@ open class Control
         }
     }
     private var _cb_OnPointerEntered : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerEntered(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerEntered = closure
+    }
     open func OnPointerEntered(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerEntered {
             return try cb(e)
@@ -1595,6 +1607,9 @@ open class Control
         }
     }
     private var _cb_OnPointerPressed : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerPressed(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerPressed = closure
+    }
     open func OnPointerPressed(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerPressed {
             return try cb(e)
@@ -1602,6 +1617,9 @@ open class Control
         }
     }
     private var _cb_OnPointerMoved : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerMoved(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerMoved = closure
+    }
     open func OnPointerMoved(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerMoved {
             return try cb(e)
@@ -1609,6 +1627,9 @@ open class Control
         }
     }
     private var _cb_OnPointerReleased : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerReleased(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerReleased = closure
+    }
     open func OnPointerReleased(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerReleased {
             return try cb(e)
@@ -1616,6 +1637,9 @@ open class Control
         }
     }
     private var _cb_OnPointerExited : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerExited(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerExited = closure
+    }
     open func OnPointerExited(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerExited {
             return try cb(e)
@@ -1623,6 +1647,9 @@ open class Control
         }
     }
     private var _cb_OnPointerCaptureLost : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerCaptureLost(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerCaptureLost = closure
+    }
     open func OnPointerCaptureLost(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerCaptureLost {
             return try cb(e)
@@ -1630,6 +1657,9 @@ open class Control
         }
     }
     private var _cb_OnPointerCanceled : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerCanceled(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerCanceled = closure
+    }
     open func OnPointerCanceled(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerCanceled {
             return try cb(e)
@@ -1637,6 +1667,9 @@ open class Control
         }
     }
     private var _cb_OnPointerWheelChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPointerWheelChanged(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
+        _cb_OnPointerWheelChanged = closure
+    }
     open func OnPointerWheelChanged(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPointerWheelChanged {
             return try cb(e)
@@ -1644,6 +1677,9 @@ open class Control
         }
     }
     private var _cb_OnTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnTapped(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void) {
+        _cb_OnTapped = closure
+    }
     open func OnTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnTapped {
             return try cb(e)
@@ -1651,6 +1687,9 @@ open class Control
         }
     }
     private var _cb_OnDoubleTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnDoubleTapped(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void) {
+        _cb_OnDoubleTapped = closure
+    }
     open func OnDoubleTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnDoubleTapped {
             return try cb(e)
@@ -1658,6 +1697,9 @@ open class Control
         }
     }
     private var _cb_OnHolding : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnHolding(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void) {
+        _cb_OnHolding = closure
+    }
     open func OnHolding(e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnHolding {
             return try cb(e)
@@ -1665,6 +1707,9 @@ open class Control
         }
     }
     private var _cb_OnRightTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnRightTapped(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void) {
+        _cb_OnRightTapped = closure
+    }
     open func OnRightTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnRightTapped {
             return try cb(e)
@@ -1672,6 +1717,9 @@ open class Control
         }
     }
     private var _cb_OnManipulationStarting : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnManipulationStarting(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void) {
+        _cb_OnManipulationStarting = closure
+    }
     open func OnManipulationStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnManipulationStarting {
             return try cb(e)
@@ -1679,6 +1727,9 @@ open class Control
         }
     }
     private var _cb_OnManipulationInertiaStarting : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnManipulationInertiaStarting(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void) {
+        _cb_OnManipulationInertiaStarting = closure
+    }
     open func OnManipulationInertiaStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnManipulationInertiaStarting {
             return try cb(e)
@@ -1686,6 +1737,9 @@ open class Control
         }
     }
     private var _cb_OnManipulationStarted : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnManipulationStarted(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void) {
+        _cb_OnManipulationStarted = closure
+    }
     open func OnManipulationStarted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnManipulationStarted {
             return try cb(e)
@@ -1693,6 +1747,9 @@ open class Control
         }
     }
     private var _cb_OnManipulationDelta : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnManipulationDelta(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void) {
+        _cb_OnManipulationDelta = closure
+    }
     open func OnManipulationDelta(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnManipulationDelta {
             return try cb(e)
@@ -1700,6 +1757,9 @@ open class Control
         }
     }
     private var _cb_OnManipulationCompleted : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnManipulationCompleted(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void) {
+        _cb_OnManipulationCompleted = closure
+    }
     open func OnManipulationCompleted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnManipulationCompleted {
             return try cb(e)
@@ -1707,6 +1767,9 @@ open class Control
         }
     }
     private var _cb_OnKeyUp : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnKeyUp(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
+        _cb_OnKeyUp = closure
+    }
     open func OnKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnKeyUp {
             return try cb(e)
@@ -1714,6 +1777,9 @@ open class Control
         }
     }
     private var _cb_OnKeyDown : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnKeyDown(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
+        _cb_OnKeyDown = closure
+    }
     open func OnKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnKeyDown {
             return try cb(e)
@@ -1721,6 +1787,9 @@ open class Control
         }
     }
     private var _cb_OnPreviewKeyDown : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPreviewKeyDown(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
+        _cb_OnPreviewKeyDown = closure
+    }
     open func OnPreviewKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPreviewKeyDown {
             return try cb(e)
@@ -1728,6 +1797,9 @@ open class Control
         }
     }
     private var _cb_OnPreviewKeyUp : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnPreviewKeyUp(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
+        _cb_OnPreviewKeyUp = closure
+    }
     open func OnPreviewKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnPreviewKeyUp {
             return try cb(e)
@@ -1735,6 +1807,9 @@ open class Control
         }
     }
     private var _cb_OnGotFocus : Optional<(Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnGotFocus(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) {
+        _cb_OnGotFocus = closure
+    }
     open func OnGotFocus(e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnGotFocus {
             return try cb(e)
@@ -1742,6 +1817,9 @@ open class Control
         }
     }
     private var _cb_OnLostFocus : Optional<(Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnLostFocus(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) {
+        _cb_OnLostFocus = closure
+    }
     open func OnLostFocus(e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnLostFocus {
             return try cb(e)
@@ -1749,6 +1827,9 @@ open class Control
         }
     }
     private var _cb_OnCharacterReceived : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void> = nil
+    public func Set_OnCharacterReceived(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void) {
+        _cb_OnCharacterReceived = closure
+    }
     open func OnCharacterReceived(e : Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
         if let cb = _cb_OnCharacterReceived {
             return try cb(e)
@@ -1756,6 +1837,9 @@ open class Control
         }
     }
     private var _cb_OnDragEnter : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
+    public func Set_OnDragEnter(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
+        _cb_OnDragEnter = closure
+    }
     open func OnDragEnter(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
         if let cb = _cb_OnDragEnter {
             return try cb(e)
@@ -1763,6 +1847,9 @@ open class Control
         }
     }
     private var _cb_OnDragLeave : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
+    public func Set_OnDragLeave(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
+        _cb_OnDragLeave = closure
+    }
     open func OnDragLeave(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
         if let cb = _cb_OnDragLeave {
             return try cb(e)
@@ -1770,6 +1857,9 @@ open class Control
         }
     }
     private var _cb_OnDragOver : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
+    public func Set_OnDragOver(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
+        _cb_OnDragOver = closure
+    }
     open func OnDragOver(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
         if let cb = _cb_OnDragOver {
             return try cb(e)
@@ -1777,6 +1867,9 @@ open class Control
         }
     }
     private var _cb_OnDrop : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
+    public func Set_OnDrop(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
+        _cb_OnDrop = closure
+    }
     open func OnDrop(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
         if let cb = _cb_OnDrop {
             return try cb(e)

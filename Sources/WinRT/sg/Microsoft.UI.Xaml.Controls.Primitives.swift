@@ -1223,6 +1223,9 @@ open class RangeBase
         }
     }
     private var _cb_OnMinimumChanged : Optional<(Swift.Double, Swift.Double) throws -> Void> = nil
+    public func Set_OnMinimumChanged(closure : @escaping (Swift.Double, Swift.Double) throws -> Void) {
+        _cb_OnMinimumChanged = closure
+    }
     open func OnMinimumChanged(oldMinimum : Swift.Double, newMinimum : Swift.Double) throws -> Void {
         if let cb = _cb_OnMinimumChanged {
             return try cb(oldMinimum, newMinimum)
@@ -1230,6 +1233,9 @@ open class RangeBase
         }
     }
     private var _cb_OnMaximumChanged : Optional<(Swift.Double, Swift.Double) throws -> Void> = nil
+    public func Set_OnMaximumChanged(closure : @escaping (Swift.Double, Swift.Double) throws -> Void) {
+        _cb_OnMaximumChanged = closure
+    }
     open func OnMaximumChanged(oldMaximum : Swift.Double, newMaximum : Swift.Double) throws -> Void {
         if let cb = _cb_OnMaximumChanged {
             return try cb(oldMaximum, newMaximum)
@@ -1237,6 +1243,9 @@ open class RangeBase
         }
     }
     private var _cb_OnValueChanged : Optional<(Swift.Double, Swift.Double) throws -> Void> = nil
+    public func Set_OnValueChanged(closure : @escaping (Swift.Double, Swift.Double) throws -> Void) {
+        _cb_OnValueChanged = closure
+    }
     open func OnValueChanged(oldValue : Swift.Double, newValue : Swift.Double) throws -> Void {
         if let cb = _cb_OnValueChanged {
             return try cb(oldValue, newValue)

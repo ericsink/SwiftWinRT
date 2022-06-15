@@ -222,6 +222,9 @@ open class Application
         }
     }
     private var _cb_OnLaunched : Optional<(Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void> = nil
+    public func Set_OnLaunched(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void) {
+        _cb_OnLaunched = closure
+    }
     open func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
         if let cb = _cb_OnLaunched {
             return try cb(args)
@@ -1852,6 +1855,9 @@ open class FrameworkElement
         return try _ifc.InvalidateViewport();
     }
     private var _cb_MeasureOverride : Optional<(WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size> = nil
+    public func Set_MeasureOverride(closure : @escaping (WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size) {
+        _cb_MeasureOverride = closure
+    }
     open func MeasureOverride(availableSize : WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size {
         if let cb = _cb_MeasureOverride {
             return try cb(availableSize)
@@ -1860,6 +1866,9 @@ open class FrameworkElement
         }
     }
     private var _cb_ArrangeOverride : Optional<(WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size> = nil
+    public func Set_ArrangeOverride(closure : @escaping (WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size) {
+        _cb_ArrangeOverride = closure
+    }
     open func ArrangeOverride(finalSize : WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size {
         if let cb = _cb_ArrangeOverride {
             return try cb(finalSize)
@@ -1868,6 +1877,9 @@ open class FrameworkElement
         }
     }
     private var _cb_OnApplyTemplate : Optional<() throws -> Void> = nil
+    public func Set_OnApplyTemplate(closure : @escaping () throws -> Void) {
+        _cb_OnApplyTemplate = closure
+    }
     open func OnApplyTemplate() throws -> Void {
         if let cb = _cb_OnApplyTemplate {
             return try cb()
@@ -1875,6 +1887,9 @@ open class FrameworkElement
         }
     }
     private var _cb_GoToElementStateCore : Optional<(Swift.String, boolean) throws -> boolean> = nil
+    public func Set_GoToElementStateCore(closure : @escaping (Swift.String, boolean) throws -> boolean) {
+        _cb_GoToElementStateCore = closure
+    }
     open func GoToElementStateCore(stateName : Swift.String, useTransitions : boolean) throws -> boolean {
         if let cb = _cb_GoToElementStateCore {
             return try cb(stateName, useTransitions)
@@ -11297,6 +11312,9 @@ open class UIElement
         }
     }
     private var _cb_OnCreateAutomationPeer : Optional<() throws -> Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer>> = nil
+    public func Set_OnCreateAutomationPeer(closure : @escaping () throws -> Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer>) {
+        _cb_OnCreateAutomationPeer = closure
+    }
     open func OnCreateAutomationPeer() throws -> Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> {
         if let cb = _cb_OnCreateAutomationPeer {
             return try cb()
@@ -11305,6 +11323,9 @@ open class UIElement
         }
     }
     private var _cb_OnDisconnectVisualChildren : Optional<() throws -> Void> = nil
+    public func Set_OnDisconnectVisualChildren(closure : @escaping () throws -> Void) {
+        _cb_OnDisconnectVisualChildren = closure
+    }
     open func OnDisconnectVisualChildren() throws -> Void {
         if let cb = _cb_OnDisconnectVisualChildren {
             return try cb()
@@ -11312,6 +11333,9 @@ open class UIElement
         }
     }
     private var _cb_FindSubElementsForTouchTargeting : Optional<(WinRT.Windows.Foundation.Point, WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>> = nil
+    public func Set_FindSubElementsForTouchTargeting(closure : @escaping (WinRT.Windows.Foundation.Point, WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>) {
+        _cb_FindSubElementsForTouchTargeting = closure
+    }
     open func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
         if let cb = _cb_FindSubElementsForTouchTargeting {
             return try cb(point, boundingRect)
@@ -11320,6 +11344,9 @@ open class UIElement
         }
     }
     private var _cb_GetChildrenInTabFocusOrder : Optional<() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>> = nil
+    public func Set_GetChildrenInTabFocusOrder(closure : @escaping () throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>) {
+        _cb_GetChildrenInTabFocusOrder = closure
+    }
     open func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
         if let cb = _cb_GetChildrenInTabFocusOrder {
             return try cb()
@@ -11328,6 +11355,9 @@ open class UIElement
         }
     }
     private var _cb_OnKeyboardAcceleratorInvoked : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void> = nil
+    public func Set_OnKeyboardAcceleratorInvoked(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void) {
+        _cb_OnKeyboardAcceleratorInvoked = closure
+    }
     open func OnKeyboardAcceleratorInvoked(args : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void {
         if let cb = _cb_OnKeyboardAcceleratorInvoked {
             return try cb(args)
@@ -11335,6 +11365,9 @@ open class UIElement
         }
     }
     private var _cb_OnProcessKeyboardAccelerators : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void> = nil
+    public func Set_OnProcessKeyboardAccelerators(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void) {
+        _cb_OnProcessKeyboardAccelerators = closure
+    }
     open func OnProcessKeyboardAccelerators(args : Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
         if let cb = _cb_OnProcessKeyboardAccelerators {
             return try cb(args)
@@ -11342,6 +11375,9 @@ open class UIElement
         }
     }
     private var _cb_OnBringIntoViewRequested : Optional<(Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void> = nil
+    public func Set_OnBringIntoViewRequested(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void) {
+        _cb_OnBringIntoViewRequested = closure
+    }
     open func OnBringIntoViewRequested(e : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
         if let cb = _cb_OnBringIntoViewRequested {
             return try cb(e)
@@ -11349,6 +11385,9 @@ open class UIElement
         }
     }
     private var _cb_PopulatePropertyInfoOverride : Optional<(Swift.String, Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void> = nil
+    public func Set_PopulatePropertyInfoOverride(closure : @escaping (Swift.String, Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void) {
+        _cb_PopulatePropertyInfoOverride = closure
+    }
     open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         if let cb = _cb_PopulatePropertyInfoOverride {
             return try cb(propertyName, animationPropertyInfo)
