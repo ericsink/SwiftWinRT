@@ -167,14 +167,12 @@ open class Inline
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.IInline { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.IInlineFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IInlineFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.Inline"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IInlineFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.Inline"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
 }
 
@@ -289,14 +287,12 @@ open class TextHighlighter
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.ITextHighlighterFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : ITextHighlighterFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.TextHighlighter"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : ITextHighlighterFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.TextHighlighter"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.Documents.ITextHighlighterStatics
     // method not needed: get_Ranges

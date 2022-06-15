@@ -18,14 +18,12 @@ open class ButtonBase
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IButtonBaseFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IButtonBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IButtonBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     private struct _IButtonBaseStatics {
         static var x : IButtonBaseStatics =
@@ -163,14 +161,12 @@ open class FlyoutBase
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IFlyoutBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IFlyoutBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseStatics
     // method not needed: get_Placement
@@ -964,20 +960,155 @@ open class RangeBase
     Microsoft.UI.Xaml.Controls.Control
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase;
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides
+        public var self_ref: Unmanaged<RangeBase>?
+        public var early: ULONG
+    }
+    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
+    private var _inner: Optional<WinRT.IInspectable> = nil
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RangeBase>? {
+        return pUnk?.bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase?) throws {
         _self = plok!
+        self.instance = nil
         try super.init(plok: _self.QueryInterface())
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = Unmanaged<RangeBase>.passUnretained(self)
+        self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase { return _self; }
-    // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IRangeBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverridesVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, IInspectable.IID, WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            _ = p.retain()
+            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early + 1;
+            return pinstance.pointee.early;
+        }
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early - 1;
+            return pinstance.pointee.early;
+        }
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        pLen.pointee = 1
+        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
+        mem.pointee = WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides.IID
+        ppItems.pointee = mem
+        return S_OK;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        do {
+            pstr.pointee = try HString("Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides").hRef.hString
+            return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        presult.pointee = TrustLevel.FullTrust;
+        return S_OK;
+    },
+    OnMinimumChanged: {
+        (pThis, _ oldMinimum : DOUBLE, _ newMinimum : DOUBLE) in
+        guard let self = RangeBase.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnMinimumChanged(oldMinimum: oldMinimum, newMinimum: newMinimum)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnMaximumChanged: {
+        (pThis, _ oldMaximum : DOUBLE, _ newMaximum : DOUBLE) in
+        guard let self = RangeBase.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnMaximumChanged(oldMaximum: oldMaximum, newMaximum: newMaximum)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnValueChanged: {
+        (pThis, _ oldValue : DOUBLE, _ newValue : DOUBLE) in
+        guard let self = RangeBase.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnValueChanged(oldValue: oldValue, newValue: newValue)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
-    public convenience init() throws {
+    )
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseFactory
+    public override init() throws {
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        self.instance = instance
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = nil
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IRangeBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        _inner = _inn;
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.self_ref = Unmanaged<RangeBase>.passUnretained(self)
+         for _ in 1...(instance.pointee.early) {
+             _ = instance.pointee.self_ref!.retain()
+         }
     }
     private struct _IRangeBaseStatics {
         static var x : IRangeBaseStatics =
@@ -1103,6 +1234,12 @@ open class RangeBase
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
             return try _ifc.Value;
         }
+    }
+    open func OnMinimumChanged(oldMinimum : Swift.Double, newMinimum : Swift.Double) throws -> Void {
+    }
+    open func OnMaximumChanged(oldMaximum : Swift.Double, newMaximum : Swift.Double) throws -> Void {
+    }
+    open func OnValueChanged(oldValue : Swift.Double, newValue : Swift.Double) throws -> Void {
     }
 }
 

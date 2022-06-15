@@ -18,14 +18,12 @@ open class AutomationPeer
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Automation.Peers.IAutomationPeer { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IAutomationPeerFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Automation.Peers.AutomationPeer"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IAutomationPeerFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Automation.Peers.AutomationPeer"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerStatics
     // method not needed: get_EventsSource

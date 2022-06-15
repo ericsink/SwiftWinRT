@@ -52,14 +52,12 @@ open class Transform3D
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.Media3D.ITransform3D { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Media.Media3D.ITransform3DFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : ITransform3DFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Media3D.Transform3D"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : ITransform3DFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Media3D.Transform3D"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
 }
 

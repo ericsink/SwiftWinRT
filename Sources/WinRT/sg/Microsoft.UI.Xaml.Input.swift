@@ -95,7 +95,7 @@ public class ContextRequestedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.ContextRequestedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -207,7 +207,7 @@ public class DoubleTappedRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -347,7 +347,7 @@ public class HoldingRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -916,14 +916,12 @@ open class KeyboardAccelerator
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IKeyboardAcceleratorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.KeyboardAccelerator"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IKeyboardAcceleratorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.KeyboardAccelerator"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorStatics
     // method not needed: get_Key
@@ -1093,7 +1091,7 @@ public class ManipulationCompletedRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -1210,7 +1208,7 @@ public class ManipulationDeltaRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -1329,7 +1327,7 @@ public class ManipulationInertiaStartingRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -1456,14 +1454,12 @@ open class ManipulationStartedRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgs { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IManipulationStartedRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IManipulationStartedRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Container
     // method not needed: get_Position
@@ -1576,7 +1572,7 @@ public class ManipulationStartingRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -1858,7 +1854,7 @@ public class RightTappedRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -1971,7 +1967,7 @@ public class TappedRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Input.TappedRoutedEventArgs")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())

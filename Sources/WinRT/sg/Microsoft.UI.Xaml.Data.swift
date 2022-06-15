@@ -18,14 +18,12 @@ open class BindingBase
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Data.IBindingBase { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.Data.IBindingBaseFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IBindingBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Data.BindingBase"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IBindingBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Data.BindingBase"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
 }
 

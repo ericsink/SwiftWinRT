@@ -20,7 +20,7 @@ extension Microsoft.UI.Xaml.Controls.TextBlock {
     }
 }
 
-class MyApp : Microsoft.UI.Xaml.ApplicationOverrides {
+class MyApp : Microsoft.UI.Xaml.Application {
     override func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
         let w = try Microsoft.UI.Xaml.Window();

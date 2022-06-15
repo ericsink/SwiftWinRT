@@ -12,20 +12,125 @@ open class Application
     WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IApplication;
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
+        public var self_ref: Unmanaged<Application>?
+        public var early: ULONG
+    }
+    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
+    private var _inner: Optional<WinRT.IInspectable> = nil
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<Application>? {
+        return pUnk?.bindMemory(to: Application.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    }
     internal init(plok: WinRT.Microsoft.UI.Xaml.IApplication?) throws {
         _self = plok!
+        self.instance = nil
         try super.init(plok: _self.QueryInterface())
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = Unmanaged<Application>.passUnretained(self)
+        self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplication { return _self; }
-    // COMPOSABLE: Microsoft.UI.Xaml.IApplicationFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IApplicationFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Application"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, IInspectable.IID, WinRT.Microsoft.UI.Xaml.IApplicationOverrides.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            _ = p.retain()
+            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early + 1;
+            return pinstance.pointee.early;
+        }
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early - 1;
+            return pinstance.pointee.early;
+        }
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        pLen.pointee = 1
+        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
+        mem.pointee = WinRT.Microsoft.UI.Xaml.IApplicationOverrides.IID
+        ppItems.pointee = mem
+        return S_OK;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        do {
+            pstr.pointee = try HString("Microsoft.UI.Xaml.IApplicationOverrides").hRef.hString
+            return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        presult.pointee = TrustLevel.FullTrust;
+        return S_OK;
+    },
+    OnLaunched: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) in
+        guard let self = Application.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnLaunched(args: WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs(plok: WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
-    public convenience init() throws {
+    )
+    // COMPOSABLE: Microsoft.UI.Xaml.IApplicationFactory
+    public init() throws {
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        self.instance = instance
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = nil
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IApplicationFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Application"));
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        _inner = _inn;
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.self_ref = Unmanaged<Application>.passUnretained(self)
+         for _ in 1...(instance.pointee.early) {
+             _ = instance.pointee.self_ref!.retain()
+         }
     }
     private struct _IApplicationStatics {
         static var x : IApplicationStatics =
@@ -128,6 +233,8 @@ open class Application
         let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
             return try WinRT.Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
+    }
+    open func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
     }
 }
 
@@ -315,14 +422,12 @@ open class BrushTransition
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IBrushTransition { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IBrushTransitionFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IBrushTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.BrushTransition"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IBrushTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.BrushTransition"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Duration
     // method not needed: put_Duration
@@ -362,14 +467,12 @@ open class DataTemplate
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDataTemplate { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IDataTemplateFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IDataTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DataTemplate"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IDataTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DataTemplate"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.IDataTemplateStatics
     // method not needed: LoadContent
@@ -413,14 +516,12 @@ open class DependencyObject
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDependencyObject { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IDependencyObjectFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IDependencyObjectFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DependencyObject"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IDependencyObjectFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DependencyObject"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     public func GetValue(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Optional<WinRT.IInspectable> {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
@@ -887,20 +988,173 @@ open class FrameworkElement
     Microsoft.UI.Xaml.UIElement
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IFrameworkElement;
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides
+        public var self_ref: Unmanaged<FrameworkElement>?
+        public var early: ULONG
+    }
+    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
+    private var _inner: Optional<WinRT.IInspectable> = nil
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<FrameworkElement>? {
+        return pUnk?.bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    }
     internal init(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement?) throws {
         _self = plok!
+        self.instance = nil
         try super.init(plok: _self.QueryInterface())
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = Unmanaged<FrameworkElement>.passUnretained(self)
+        self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IFrameworkElement { return _self; }
-    // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkElementFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IFrameworkElementFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkElement"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverridesVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, IInspectable.IID, WinRT.Microsoft.UI.Xaml.IFrameworkElementOverrides.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            _ = p.retain()
+            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early + 1;
+            return pinstance.pointee.early;
+        }
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early - 1;
+            return pinstance.pointee.early;
+        }
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        pLen.pointee = 1
+        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
+        mem.pointee = WinRT.Microsoft.UI.Xaml.IFrameworkElementOverrides.IID
+        ppItems.pointee = mem
+        return S_OK;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        do {
+            pstr.pointee = try HString("Microsoft.UI.Xaml.IFrameworkElementOverrides").hRef.hString
+            return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        presult.pointee = TrustLevel.FullTrust;
+        return S_OK;
+    },
+    MeasureOverride: {
+        (pThis, _ availableSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) in
+        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : WinRT.Windows.Foundation.Size = try self.MeasureOverride(availableSize: availableSize)
+            __presult!.pointee = _ret;
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    ArrangeOverride: {
+        (pThis, _ finalSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) in
+        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : WinRT.Windows.Foundation.Size = try self.ArrangeOverride(finalSize: finalSize)
+            __presult!.pointee = _ret;
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnApplyTemplate: {
+        (pThis) in
+        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnApplyTemplate()
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GoToElementStateCore: {
+        (pThis, _ stateName : Optional<HSTRING>, _ useTransitions : boolean, _ __presult: UnsafeMutablePointer<boolean>?) in
+        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : boolean = try self.GoToElementStateCore(stateName: Swift.String(from: stateName), useTransitions: useTransitions)
+            __presult!.pointee = _ret;
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     }
-    public convenience init() throws {
+    )
+    // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkElementFactory
+    public init() throws {
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        self.instance = instance
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = nil
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IFrameworkElementFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkElement"));
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        _inner = _inn;
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.self_ref = Unmanaged<FrameworkElement>.passUnretained(self)
+         for _ in 1...(instance.pointee.early) {
+             _ = instance.pointee.self_ref!.retain()
+         }
     }
     private struct _IFrameworkElementStatics {
         static var x : IFrameworkElementStatics =
@@ -1606,6 +1860,17 @@ open class FrameworkElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElementProtected = try _self.QueryInterface();
         return try _ifc.InvalidateViewport();
     }
+    open func MeasureOverride(availableSize : WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size {
+        return _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+    }
+    open func ArrangeOverride(finalSize : WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size {
+        return _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+    }
+    open func OnApplyTemplate() throws -> Void {
+    }
+    open func GoToElementStateCore(stateName : Swift.String, useTransitions : boolean) throws -> boolean {
+        return 0;
+    }
 }
 
 // type: Microsoft.UI.Xaml.FrameworkTemplate
@@ -1621,14 +1886,12 @@ open class FrameworkTemplate
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IFrameworkTemplate { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkTemplateFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IFrameworkTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkTemplate"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IFrameworkTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkTemplate"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
 }
 
@@ -1843,109 +2106,6 @@ open class IApplicationOverrides
     }
 } // IApplicationOverrides
 
-// impl interface type
-open class ApplicationOverrides
-{
-    private static var vtable: _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, IInspectable.IID, WinRT.Microsoft.UI.Xaml.IApplicationOverrides.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        default:
-            ppvObject.pointee = nil
-            return E_NOINTERFACE
-        }
-    },
-    AddRef: {
-        let instance = ApplicationOverrides.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let instance = ApplicationOverrides.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
-        return __res;
-    },
-    GetIids: {
-        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
-            return E_INVALIDARG
-        }
-        pLen.pointee = 1
-        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
-        mem.pointee = WinRT.Microsoft.UI.Xaml.IApplicationOverrides.IID
-        ppItems.pointee = mem
-        return S_OK;
-    },
-    GetRuntimeClassName: {
-        guard let pThis = $0, let pstr = $1 else {
-            return E_INVALIDARG
-        }
-        do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.IApplicationOverrides").hRef.hString
-            return S_OK;
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetTrustLevel: {
-        guard let pThis = $0, let presult = $1 else {
-            return E_INVALIDARG
-        }
-        presult.pointee = TrustLevel.FullTrust;
-        return S_OK;
-    },
-    OnLaunched: {
-        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) in
-        guard let self = ApplicationOverrides.from(pThis)?.takeUnretainedValue() else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnLaunched(args: WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs(plok: WinRT.Microsoft.UI.Xaml.ILaunchActivatedEventArgs(args)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
-    private struct WithTrailingObjects {
-        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
-        public var self_ref: Unmanaged<ApplicationOverrides>?
-    }
-    private var instance: WithTrailingObjects
-    private var _app: Optional<Microsoft.UI.Xaml.Application>
-    private var _inner: Optional<WinRT.IInspectable>
-
-    public init() throws {
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), self_ref: nil)
-        self._app = nil
-        self._inner = nil
-        self.instance.self_ref = Unmanaged<ApplicationOverrides>.passUnretained(self)
-        self._app = try Microsoft.UI.Xaml.Application(baseInterface: self.PrivateInterface(), innerInterface: &self._inner)
-    }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationOverrides>? {
-        return pUnk?.bindMemory(to: ApplicationOverrides.WithTrailingObjects.self, capacity: 1).pointee.self_ref
-    }
-
-    private func PrivateInterface() -> IInspectable {
-        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
-            IInspectable(UnsafeMutableRawPointer($0))
-        }
-    }
-    open func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
-    }
-}
 
 // type: Microsoft.UI.Xaml.IApplicationStatics
 // interface type
@@ -8571,14 +8731,12 @@ open class ResourceDictionary
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IResourceDictionary { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IResourceDictionaryFactory
-    public override init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IResourceDictionaryFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ResourceDictionary"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IResourceDictionaryFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ResourceDictionary"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Source
     // method not needed: put_Source
@@ -8615,14 +8773,12 @@ open class RoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IRoutedEventArgs { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IRoutedEventArgsFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.RoutedEventArgs"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.RoutedEventArgs"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_OriginalSource
 }
@@ -8730,14 +8886,12 @@ open class ScalarTransition
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IScalarTransition { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IScalarTransitionFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IScalarTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ScalarTransition"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IScalarTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ScalarTransition"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Duration
     // method not needed: put_Duration
@@ -8861,7 +9015,7 @@ public class Style
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IStyle { return _self; }
-    public init() throws {
+    public override init() throws {
         let _classId = try HString("Microsoft.UI.Xaml.Style")
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
@@ -8957,11 +9111,217 @@ open class UIElement
     Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IUIElement;
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides
+        public var self_ref: Unmanaged<UIElement>?
+        public var early: ULONG
+    }
+    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
+    private var _inner: Optional<WinRT.IInspectable> = nil
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<UIElement>? {
+        return pUnk?.bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    }
     internal init(plok: WinRT.Microsoft.UI.Xaml.IUIElement?) throws {
         _self = plok!
+        self.instance = nil
         try super.init(plok: _self.QueryInterface())
+        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides(lpVtbl: &Self.vtable)
+        instance.pointee.self_ref = Unmanaged<UIElement>.passUnretained(self)
+        self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUIElement { return _self; }
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CIUIElementOverridesVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, IInspectable.IID, WinRT.Microsoft.UI.Xaml.IUIElementOverrides.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            _ = p.retain()
+            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early + 1;
+            return pinstance.pointee.early;
+        }
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1)
+        if let p = pinstance.pointee.self_ref {
+            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
+            return __res;
+        } else {
+            pinstance.pointee.early = pinstance.pointee.early - 1;
+            return pinstance.pointee.early;
+        }
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        pLen.pointee = 1
+        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
+        mem.pointee = WinRT.Microsoft.UI.Xaml.IUIElementOverrides.IID
+        ppItems.pointee = mem
+        return S_OK;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        do {
+            pstr.pointee = try HString("Microsoft.UI.Xaml.IUIElementOverrides").hRef.hString
+            return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        presult.pointee = TrustLevel.FullTrust;
+        return S_OK;
+    },
+    OnCreateAutomationPeer: {
+        (pThis, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> = try self.OnCreateAutomationPeer()
+            __presult!.pointee = nil;
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnDisconnectVisualChildren: {
+        (pThis) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnDisconnectVisualChildren()
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    FindSubElementsForTouchTargeting: {
+        (pThis, _ point : _q_CWindows_CFoundation_CPoint, _ boundingRect : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>>>?) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> = try self.FindSubElementsForTouchTargeting(point: point, boundingRect: boundingRect)
+            __presult!.pointee = RawPointer(_ret);
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetChildrenInTabFocusOrder: {
+        (pThis, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>>>?) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> = try self.GetChildrenInTabFocusOrder()
+            __presult!.pointee = RawPointer(_ret);
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnKeyboardAcceleratorInvoked: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs>>) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnKeyboardAcceleratorInvoked(args: WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnProcessKeyboardAccelerators: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnProcessKeyboardAccelerators(args: WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs(plok: WinRT.Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    OnBringIntoViewRequested: {
+        (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnBringIntoViewRequested(e: WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IBringIntoViewRequestedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    PopulatePropertyInfoOverride: {
+        (pThis, _ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) in
+        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.PopulatePropertyInfoOverride(propertyName: Swift.String(from: propertyName), animationPropertyInfo: WinRT.Microsoft.UI.Composition.AnimationPropertyInfo(plok: WinRT.Microsoft.UI.Composition.IAnimationPropertyInfo(animationPropertyInfo)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
     // COMPOSABLE: Microsoft.UI.Xaml.IUIElementFactory
 // composable interface not needed: Microsoft.UI.Xaml.IUIElementFactory
     private struct _IUIElementStatics {
@@ -10928,6 +11288,25 @@ open class UIElement
             return try WinRT.Microsoft.UI.Input.InputCursor(plok: _ifc.ProtectedCursor);
         }
     }
+    open func OnCreateAutomationPeer() throws -> Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> {
+        return nil;
+    }
+    open func OnDisconnectVisualChildren() throws -> Void {
+    }
+    open func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
+        return nil;
+    }
+    open func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
+        return nil;
+    }
+    open func OnKeyboardAcceleratorInvoked(args : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void {
+    }
+    open func OnProcessKeyboardAccelerators(args : Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
+    }
+    open func OnBringIntoViewRequested(e : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
+    }
+    open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
+    }
     public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();
         return try _ifc.PopulatePropertyInfo(propertyName: propertyName, propertyInfo: propertyInfo!.Interface());
@@ -11060,14 +11439,12 @@ open class Vector3Transition
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IVector3Transition { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IVector3TransitionFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IVector3TransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Vector3Transition"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IVector3TransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Vector3Transition"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Duration
     // method not needed: put_Duration
@@ -11096,14 +11473,12 @@ open class Window
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IWindow { return _self; }
     // COMPOSABLE: Microsoft.UI.Xaml.IWindowFactory
-    public init(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws {
-        let _af : IWindowFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Window"));
-        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &innerInterface)!;
-        try super.init(plok: _self.QueryInterface())
-    }
-    public convenience init() throws {
+    public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        try self.init(baseInterface: nil, innerInterface: &_inn)
+        let _af : IWindowFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Window"));
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
     }
     private struct _IWindowStatics {
         static var x : IWindowStatics =
