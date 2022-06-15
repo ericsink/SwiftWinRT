@@ -58,20 +58,17 @@ class MyApp : Microsoft.UI.Xaml.Application {
     }
 }
 
-class MyInit : Microsoft.UI.Xaml.ApplicationInitializationCallback
-{
-    override func Invoke(p : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws {
-        _ = try MyApp();
-    }
-}
-
 @main
 class App {
     public static func main() async throws {
         try RoInitialize()
         try WindowsAppSdkBootstrapInitialize()
 
-        let cb = MyInit()
+        let cb = Microsoft.UI.Xaml.ApplicationInitializationCallback
+        {
+            _ in
+            _ = try MyApp();
+        }
         try Microsoft.UI.Xaml.Application.Start(callback: cb);
     }
 }
