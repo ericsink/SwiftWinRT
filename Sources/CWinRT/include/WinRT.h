@@ -320,6 +320,12 @@ typedef enum _q_CWindows_CFoundation_CAsyncStatus
     _q_CWindows_CFoundation_CAsyncStatus_Error = 3,
     _q_CWindows_CFoundation_CAsyncStatus_Started = 0,
 } _q_CWindows_CFoundation_CAsyncStatus;
+typedef enum _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding
+{
+    _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding_Utf8 = 0,
+    _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding_Utf16LE = 1,
+    _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding_Utf16BE = 2,
+} _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding;
 typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
 {
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_None = 0,
@@ -5161,17 +5167,17 @@ typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsV
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* This, TrustLevel* trustLevel);
-    void* unneeded_Compare;
-    void* unneeded_GenerateRandom;
-    void* unneeded_GenerateRandomNumber;
-    void* unneeded_CreateFromByteArray;
-    void* unneeded_CopyToByteArray;
-    void* unneeded_DecodeFromHexString;
+    HRESULT (STDMETHODCALLTYPE* Compare)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* object1, _q_CWindows_CStorage_CStreams_CIBuffer* object2, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GenerateRandom)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, UINT32 length, _q_CWindows_CStorage_CStreams_CIBuffer** __pret);
+    HRESULT (STDMETHODCALLTYPE* GenerateRandomNumber)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromByteArray)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, UINT32 valueLength, UINT8* value, _q_CWindows_CStorage_CStreams_CIBuffer** __pret);
+    HRESULT (STDMETHODCALLTYPE* CopyToByteArray)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, UINT32* valueLength, UINT8** value);
+    HRESULT (STDMETHODCALLTYPE* DecodeFromHexString)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, HSTRING value, _q_CWindows_CStorage_CStreams_CIBuffer** __pret);
     HRESULT (STDMETHODCALLTYPE* EncodeToHexString)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, HSTRING* __pret);
-    void* unneeded_DecodeFromBase64String;
+    HRESULT (STDMETHODCALLTYPE* DecodeFromBase64String)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, HSTRING value, _q_CWindows_CStorage_CStreams_CIBuffer** __pret);
     HRESULT (STDMETHODCALLTYPE* EncodeToBase64String)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, HSTRING* __pret);
-    void* unneeded_ConvertStringToBinary;
-    void* unneeded_ConvertBinaryToString;
+    HRESULT (STDMETHODCALLTYPE* ConvertStringToBinary)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, HSTRING value, _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding encoding, _q_CWindows_CStorage_CStreams_CIBuffer** __pret);
+    HRESULT (STDMETHODCALLTYPE* ConvertBinaryToString)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* pThis, _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding encoding, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, HSTRING* __pret);
 } _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsVtbl;
 struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics
 {
