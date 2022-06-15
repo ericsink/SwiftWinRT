@@ -12,23 +12,24 @@ open class Brush
     Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Media.IBrush;
+    private class Container {
+        public var self_ref: Brush? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides
-        public var self_ref: Unmanaged<Brush>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<Brush>? {
-        return pUnk?.bindMemory(to: Brush.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Brush? {
+        return pUnk?.bindMemory(to: Brush.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IBrush?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<Brush>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IBrush { return _self; }
@@ -49,24 +50,14 @@ open class Brush
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Brush.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Brush.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -101,7 +92,7 @@ open class Brush
     },
     PopulatePropertyInfoOverride: {
         (pThis, _ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) in
-        guard let self = Brush.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Brush.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -119,18 +110,14 @@ open class Brush
     public override init() throws {
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = nil
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Brush"));
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.self_ref = Unmanaged<Brush>.passUnretained(self)
-         for _ in 1...(instance.pointee.early) {
-             _ = instance.pointee.self_ref!.retain()
-         }
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IBrushStatics {
         static var x : IBrushStatics =

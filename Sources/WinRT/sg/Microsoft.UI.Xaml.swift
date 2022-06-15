@@ -12,23 +12,24 @@ open class Application
     WinRT.Object
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IApplication;
+    private class Container {
+        public var self_ref: Application? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
-        public var self_ref: Unmanaged<Application>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<Application>? {
-        return pUnk?.bindMemory(to: Application.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Application? {
+        return pUnk?.bindMemory(to: Application.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.IApplication?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<Application>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IApplication { return _self; }
@@ -49,24 +50,14 @@ open class Application
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -101,7 +92,7 @@ open class Application
     },
     OnLaunched: {
         (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) in
-        guard let self = Application.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Application.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -119,18 +110,14 @@ open class Application
     public init() throws {
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = nil
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IApplicationFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Application"));
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.self_ref = Unmanaged<Application>.passUnretained(self)
-         for _ in 1...(instance.pointee.early) {
-             _ = instance.pointee.self_ref!.retain()
-         }
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IApplicationStatics {
         static var x : IApplicationStatics =
@@ -278,19 +265,19 @@ open class ApplicationInitializationCallback
         }
     },
     AddRef: {
-        let instance = ApplicationInitializationCallback.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = ApplicationInitializationCallback.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ p : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams>>) in
-        guard let self = ApplicationInitializationCallback.from(pThis)?.takeUnretainedValue() else {
+        guard let self = ApplicationInitializationCallback.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -304,20 +291,23 @@ open class ApplicationInitializationCallback
         }
     }
     )
+    private class Container {
+        public var self_ref: ApplicationInitializationCallback? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback
-        public var self_ref: Unmanaged<ApplicationInitializationCallback>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<ApplicationInitializationCallback>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ApplicationInitializationCallback>? {
-        return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ApplicationInitializationCallback? {
+        return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(p : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void {
@@ -625,19 +615,19 @@ open class DependencyPropertyChangedCallback
         }
     },
     AddRef: {
-        let instance = DependencyPropertyChangedCallback.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = DependencyPropertyChangedCallback.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>) in
-        guard let self = DependencyPropertyChangedCallback.from(pThis)?.takeUnretainedValue() else {
+        guard let self = DependencyPropertyChangedCallback.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -651,20 +641,23 @@ open class DependencyPropertyChangedCallback
         }
     }
     )
+    private class Container {
+        public var self_ref: DependencyPropertyChangedCallback? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback
-        public var self_ref: Unmanaged<DependencyPropertyChangedCallback>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<DependencyPropertyChangedCallback>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DependencyPropertyChangedCallback>? {
-        return pUnk?.bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> DependencyPropertyChangedCallback? {
+        return pUnk?.bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void {
@@ -732,19 +725,19 @@ open class DependencyPropertyChangedEventHandler
         }
     },
     AddRef: {
-        let instance = DependencyPropertyChangedEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = DependencyPropertyChangedEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs>>) in
-        guard let self = DependencyPropertyChangedEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = DependencyPropertyChangedEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -758,20 +751,23 @@ open class DependencyPropertyChangedEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: DependencyPropertyChangedEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler
-        public var self_ref: Unmanaged<DependencyPropertyChangedEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<DependencyPropertyChangedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DependencyPropertyChangedEventHandler>? {
-        return pUnk?.bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> DependencyPropertyChangedEventHandler? {
+        return pUnk?.bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
@@ -848,19 +844,19 @@ open class DragEventHandler
         }
     },
     AddRef: {
-        let instance = DragEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = DragEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = DragEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = DragEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -874,20 +870,23 @@ open class DragEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: DragEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler
-        public var self_ref: Unmanaged<DragEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<DragEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<DragEventHandler>? {
-        return pUnk?.bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> DragEventHandler? {
+        return pUnk?.bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
@@ -988,23 +987,24 @@ open class FrameworkElement
     Microsoft.UI.Xaml.UIElement
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IFrameworkElement;
+    private class Container {
+        public var self_ref: FrameworkElement? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides
-        public var self_ref: Unmanaged<FrameworkElement>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<FrameworkElement>? {
-        return pUnk?.bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> FrameworkElement? {
+        return pUnk?.bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.IFrameworkElement?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<FrameworkElement>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IFrameworkElement { return _self; }
@@ -1025,24 +1025,14 @@ open class FrameworkElement
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: FrameworkElement.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -1077,7 +1067,7 @@ open class FrameworkElement
     },
     MeasureOverride: {
         (pThis, _ availableSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) in
-        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = FrameworkElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1093,7 +1083,7 @@ open class FrameworkElement
     },
     ArrangeOverride: {
         (pThis, _ finalSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) in
-        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = FrameworkElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1109,7 +1099,7 @@ open class FrameworkElement
     },
     OnApplyTemplate: {
         (pThis) in
-        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = FrameworkElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1124,7 +1114,7 @@ open class FrameworkElement
     },
     GoToElementStateCore: {
         (pThis, _ stateName : Optional<HSTRING>, _ useTransitions : boolean, _ __presult: UnsafeMutablePointer<boolean>?) in
-        guard let self = FrameworkElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = FrameworkElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1143,18 +1133,14 @@ open class FrameworkElement
     public init() throws {
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = nil
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IFrameworkElementFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkElement"));
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.self_ref = Unmanaged<FrameworkElement>.passUnretained(self)
-         for _ in 1...(instance.pointee.early) {
-             _ = instance.pointee.self_ref!.retain()
-         }
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IFrameworkElementStatics {
         static var x : IFrameworkElementStatics =
@@ -8819,19 +8805,19 @@ open class RoutedEventHandler
         }
     },
     AddRef: {
-        let instance = RoutedEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = RoutedEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
-        guard let self = RoutedEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = RoutedEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -8845,20 +8831,23 @@ open class RoutedEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: RoutedEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler
-        public var self_ref: Unmanaged<RoutedEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<RoutedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RoutedEventHandler>? {
-        return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> RoutedEventHandler? {
+        return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
@@ -8949,19 +8938,19 @@ open class SizeChangedEventHandler
         }
     },
     AddRef: {
-        let instance = SizeChangedEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = SizeChangedEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CISizeChangedEventArgs>>) in
-        guard let self = SizeChangedEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = SizeChangedEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -8975,20 +8964,23 @@ open class SizeChangedEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: SizeChangedEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler
-        public var self_ref: Unmanaged<SizeChangedEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<SizeChangedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<SizeChangedEventHandler>? {
-        return pUnk?.bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> SizeChangedEventHandler? {
+        return pUnk?.bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
@@ -9111,23 +9103,24 @@ open class UIElement
     Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : WinRT.Microsoft.UI.Xaml.IUIElement;
+    private class Container {
+        public var self_ref: UIElement? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides
-        public var self_ref: Unmanaged<UIElement>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<UIElement>? {
-        return pUnk?.bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> UIElement? {
+        return pUnk?.bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.IUIElement?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<UIElement>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IUIElement { return _self; }
@@ -9148,24 +9141,14 @@ open class UIElement
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UIElement.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -9200,7 +9183,7 @@ open class UIElement
     },
     OnCreateAutomationPeer: {
         (pThis, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9216,7 +9199,7 @@ open class UIElement
     },
     OnDisconnectVisualChildren: {
         (pThis) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9231,7 +9214,7 @@ open class UIElement
     },
     FindSubElementsForTouchTargeting: {
         (pThis, _ point : _q_CWindows_CFoundation_CPoint, _ boundingRect : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>>>?) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9247,7 +9230,7 @@ open class UIElement
     },
     GetChildrenInTabFocusOrder: {
         (pThis, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>>>?) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9263,7 +9246,7 @@ open class UIElement
     },
     OnKeyboardAcceleratorInvoked: {
         (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs>>) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9278,7 +9261,7 @@ open class UIElement
     },
     OnProcessKeyboardAccelerators: {
         (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9293,7 +9276,7 @@ open class UIElement
     },
     OnBringIntoViewRequested: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9308,7 +9291,7 @@ open class UIElement
     },
     PopulatePropertyInfoOverride: {
         (pThis, _ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) in
-        guard let self = UIElement.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UIElement.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -11372,19 +11355,19 @@ open class UnhandledExceptionEventHandler
         }
     },
     AddRef: {
-        let instance = UnhandledExceptionEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = UnhandledExceptionEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs>>) in
-        guard let self = UnhandledExceptionEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = UnhandledExceptionEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -11398,20 +11381,23 @@ open class UnhandledExceptionEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: UnhandledExceptionEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler
-        public var self_ref: Unmanaged<UnhandledExceptionEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<UnhandledExceptionEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<UnhandledExceptionEventHandler>? {
-        return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> UnhandledExceptionEventHandler? {
+        return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {

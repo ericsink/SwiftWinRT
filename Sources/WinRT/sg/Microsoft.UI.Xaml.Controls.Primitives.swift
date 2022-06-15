@@ -960,23 +960,24 @@ open class RangeBase
     Microsoft.UI.Xaml.Controls.Control
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase;
+    private class Container {
+        public var self_ref: RangeBase? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides
-        public var self_ref: Unmanaged<RangeBase>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RangeBase>? {
-        return pUnk?.bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> RangeBase? {
+        return pUnk?.bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<RangeBase>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase { return _self; }
@@ -997,24 +998,14 @@ open class RangeBase
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBase.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -1049,7 +1040,7 @@ open class RangeBase
     },
     OnMinimumChanged: {
         (pThis, _ oldMinimum : DOUBLE, _ newMinimum : DOUBLE) in
-        guard let self = RangeBase.from(pThis)?.takeUnretainedValue() else {
+        guard let self = RangeBase.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1064,7 +1055,7 @@ open class RangeBase
     },
     OnMaximumChanged: {
         (pThis, _ oldMaximum : DOUBLE, _ newMaximum : DOUBLE) in
-        guard let self = RangeBase.from(pThis)?.takeUnretainedValue() else {
+        guard let self = RangeBase.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1079,7 +1070,7 @@ open class RangeBase
     },
     OnValueChanged: {
         (pThis, _ oldValue : DOUBLE, _ newValue : DOUBLE) in
-        guard let self = RangeBase.from(pThis)?.takeUnretainedValue() else {
+        guard let self = RangeBase.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1097,18 +1088,14 @@ open class RangeBase
     public override init() throws {
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = nil
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IRangeBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.self_ref = Unmanaged<RangeBase>.passUnretained(self)
-         for _ in 1...(instance.pointee.early) {
-             _ = instance.pointee.self_ref!.retain()
-         }
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IRangeBaseStatics {
         static var x : IRangeBaseStatics =
@@ -1295,19 +1282,19 @@ open class RangeBaseValueChangedEventHandler
         }
     },
     AddRef: {
-        let instance = RangeBaseValueChangedEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = RangeBaseValueChangedEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs>>) in
-        guard let self = RangeBaseValueChangedEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = RangeBaseValueChangedEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1321,20 +1308,23 @@ open class RangeBaseValueChangedEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: RangeBaseValueChangedEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler
-        public var self_ref: Unmanaged<RangeBaseValueChangedEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<RangeBaseValueChangedEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<RangeBaseValueChangedEventHandler>? {
-        return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> RangeBaseValueChangedEventHandler? {
+        return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {

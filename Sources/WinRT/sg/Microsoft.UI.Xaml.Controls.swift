@@ -71,23 +71,24 @@ open class ContentControl
     Microsoft.UI.Xaml.Controls.Control
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.IContentControl;
+    private class Container {
+        public var self_ref: ContentControl? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides
-        public var self_ref: Unmanaged<ContentControl>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ContentControl>? {
-        return pUnk?.bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ContentControl? {
+        return pUnk?.bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IContentControl?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<ContentControl>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContentControl { return _self; }
@@ -108,24 +109,14 @@ open class ContentControl
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -160,7 +151,7 @@ open class ContentControl
     },
     OnContentChanged: {
         (pThis, _ oldContent : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ newContent : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = ContentControl.from(pThis)?.takeUnretainedValue() else {
+        guard let self = ContentControl.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -175,7 +166,7 @@ open class ContentControl
     },
     OnContentTemplateChanged: {
         (pThis, _ oldContentTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>, _ newContentTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) in
-        guard let self = ContentControl.from(pThis)?.takeUnretainedValue() else {
+        guard let self = ContentControl.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -190,7 +181,7 @@ open class ContentControl
     },
     OnContentTemplateSelectorChanged: {
         (pThis, _ oldContentTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>, _ newContentTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>) in
-        guard let self = ContentControl.from(pThis)?.takeUnretainedValue() else {
+        guard let self = ContentControl.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -208,18 +199,14 @@ open class ContentControl
     public override init() throws {
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = nil
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IContentControlFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.ContentControl"));
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.self_ref = Unmanaged<ContentControl>.passUnretained(self)
-         for _ in 1...(instance.pointee.early) {
-             _ = instance.pointee.self_ref!.retain()
-         }
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IContentControlStatics {
         static var x : IContentControlStatics =
@@ -388,19 +375,19 @@ open class ContextMenuOpeningEventHandler
         }
     },
     AddRef: {
-        let instance = ContextMenuOpeningEventHandler.from($0)
-        _ = instance?.retain()
-        let __res = ULONG(_getRetainCount(instance!.takeUnretainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let instance = ContextMenuOpeningEventHandler.from($0)
-        let __res = ULONG(_getRetainCount(instance!.takeRetainedValue()))
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs>>) in
-        guard let self = ContextMenuOpeningEventHandler.from(pThis)?.takeUnretainedValue() else {
+        guard let self = ContextMenuOpeningEventHandler.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -414,20 +401,23 @@ open class ContextMenuOpeningEventHandler
         }
     }
     )
+    private class Container {
+        public var self_ref: ContextMenuOpeningEventHandler? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler
-        public var self_ref: Unmanaged<ContextMenuOpeningEventHandler>?
+        public var container: Unmanaged<Container>
     }
     private var instance: WithTrailingObjects
 
     private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void>
     public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void> = nil) {
         _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), self_ref: nil)
-        self.instance.self_ref = Unmanaged<ContextMenuOpeningEventHandler>.passUnretained(self)
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<ContextMenuOpeningEventHandler>? {
-        return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ContextMenuOpeningEventHandler? {
+        return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
@@ -449,23 +439,24 @@ open class Control
     Microsoft.UI.Xaml.FrameworkElement
 {
     private var _self : WinRT.Microsoft.UI.Xaml.Controls.IControl;
+    private class Container {
+        public var self_ref: Control? = nil
+    }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides
-        public var self_ref: Unmanaged<Control>?
-        public var early: ULONG
+        public var container: Unmanaged<Container>
     }
     private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Unmanaged<Control>? {
-        return pUnk?.bindMemory(to: Control.WithTrailingObjects.self, capacity: 1).pointee.self_ref
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Control? {
+        return pUnk?.bindMemory(to: Control.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IControl?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = Unmanaged<Control>.passUnretained(self)
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IControl { return _self; }
@@ -486,24 +477,14 @@ open class Control
     },
     AddRef: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Control.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            _ = p.retain()
-            let __res = ULONG(_getRetainCount(p.takeUnretainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early + 1;
-            return pinstance.pointee.early;
-        }
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
     },
     Release: {
         let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Control.WithTrailingObjects.self, capacity: 1)
-        if let p = pinstance.pointee.self_ref {
-            let __res = ULONG(_getRetainCount(p.takeRetainedValue()))
-            return __res;
-        } else {
-            pinstance.pointee.early = pinstance.pointee.early - 1;
-            return pinstance.pointee.early;
-        }
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
     },
     GetIids: {
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
@@ -538,7 +519,7 @@ open class Control
     },
     OnPointerEntered: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -553,7 +534,7 @@ open class Control
     },
     OnPointerPressed: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -568,7 +549,7 @@ open class Control
     },
     OnPointerMoved: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -583,7 +564,7 @@ open class Control
     },
     OnPointerReleased: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -598,7 +579,7 @@ open class Control
     },
     OnPointerExited: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -613,7 +594,7 @@ open class Control
     },
     OnPointerCaptureLost: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -628,7 +609,7 @@ open class Control
     },
     OnPointerCanceled: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -643,7 +624,7 @@ open class Control
     },
     OnPointerWheelChanged: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -658,7 +639,7 @@ open class Control
     },
     OnTapped: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -673,7 +654,7 @@ open class Control
     },
     OnDoubleTapped: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -688,7 +669,7 @@ open class Control
     },
     OnHolding: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -703,7 +684,7 @@ open class Control
     },
     OnRightTapped: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -718,7 +699,7 @@ open class Control
     },
     OnManipulationStarting: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -733,7 +714,7 @@ open class Control
     },
     OnManipulationInertiaStarting: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -748,7 +729,7 @@ open class Control
     },
     OnManipulationStarted: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -763,7 +744,7 @@ open class Control
     },
     OnManipulationDelta: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -778,7 +759,7 @@ open class Control
     },
     OnManipulationCompleted: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -793,7 +774,7 @@ open class Control
     },
     OnKeyUp: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -808,7 +789,7 @@ open class Control
     },
     OnKeyDown: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -823,7 +804,7 @@ open class Control
     },
     OnPreviewKeyDown: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -838,7 +819,7 @@ open class Control
     },
     OnPreviewKeyUp: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -853,7 +834,7 @@ open class Control
     },
     OnGotFocus: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -868,7 +849,7 @@ open class Control
     },
     OnLostFocus: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -883,7 +864,7 @@ open class Control
     },
     OnCharacterReceived: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -898,7 +879,7 @@ open class Control
     },
     OnDragEnter: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -913,7 +894,7 @@ open class Control
     },
     OnDragLeave: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -928,7 +909,7 @@ open class Control
     },
     OnDragOver: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -943,7 +924,7 @@ open class Control
     },
     OnDrop: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis)?.takeUnretainedValue() else {
+        guard let self = Control.from(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -961,18 +942,14 @@ open class Control
     public override init() throws {
         let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee.interface_struct = _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable)
-        instance.pointee.self_ref = nil
+        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IControlFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Control"));
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.self_ref = Unmanaged<Control>.passUnretained(self)
-         for _ in 1...(instance.pointee.early) {
-             _ = instance.pointee.self_ref!.retain()
-         }
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IControlStatics {
         static var x : IControlStatics =
