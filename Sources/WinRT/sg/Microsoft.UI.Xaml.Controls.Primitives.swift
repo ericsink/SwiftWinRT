@@ -1222,11 +1222,26 @@ open class RangeBase
             return try _ifc.Value;
         }
     }
+    private var _cb_OnMinimumChanged : Optional<(Swift.Double, Swift.Double) throws -> Void> = nil
     open func OnMinimumChanged(oldMinimum : Swift.Double, newMinimum : Swift.Double) throws -> Void {
+        if let cb = _cb_OnMinimumChanged {
+            return try cb(oldMinimum, newMinimum)
+        } else {
+        }
     }
+    private var _cb_OnMaximumChanged : Optional<(Swift.Double, Swift.Double) throws -> Void> = nil
     open func OnMaximumChanged(oldMaximum : Swift.Double, newMaximum : Swift.Double) throws -> Void {
+        if let cb = _cb_OnMaximumChanged {
+            return try cb(oldMaximum, newMaximum)
+        } else {
+        }
     }
+    private var _cb_OnValueChanged : Optional<(Swift.Double, Swift.Double) throws -> Void> = nil
     open func OnValueChanged(oldValue : Swift.Double, newValue : Swift.Double) throws -> Void {
+        if let cb = _cb_OnValueChanged {
+            return try cb(oldValue, newValue)
+        } else {
+        }
     }
 }
 

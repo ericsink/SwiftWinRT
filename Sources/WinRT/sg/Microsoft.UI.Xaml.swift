@@ -221,7 +221,12 @@ open class Application
             return try WinRT.Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
     }
+    private var _cb_OnLaunched : Optional<(Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void> = nil
     open func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
+        if let cb = _cb_OnLaunched {
+            return try cb(args)
+        } else {
+        }
     }
 }
 
@@ -1846,16 +1851,36 @@ open class FrameworkElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElementProtected = try _self.QueryInterface();
         return try _ifc.InvalidateViewport();
     }
+    private var _cb_MeasureOverride : Optional<(WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size> = nil
     open func MeasureOverride(availableSize : WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size {
+        if let cb = _cb_MeasureOverride {
+            return try cb(availableSize)
+        } else {
         return _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+        }
     }
+    private var _cb_ArrangeOverride : Optional<(WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size> = nil
     open func ArrangeOverride(finalSize : WinRT.Windows.Foundation.Size) throws -> WinRT.Windows.Foundation.Size {
+        if let cb = _cb_ArrangeOverride {
+            return try cb(finalSize)
+        } else {
         return _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+        }
     }
+    private var _cb_OnApplyTemplate : Optional<() throws -> Void> = nil
     open func OnApplyTemplate() throws -> Void {
+        if let cb = _cb_OnApplyTemplate {
+            return try cb()
+        } else {
+        }
     }
+    private var _cb_GoToElementStateCore : Optional<(Swift.String, boolean) throws -> boolean> = nil
     open func GoToElementStateCore(stateName : Swift.String, useTransitions : boolean) throws -> boolean {
+        if let cb = _cb_GoToElementStateCore {
+            return try cb(stateName, useTransitions)
+        } else {
         return 0;
+        }
     }
 }
 
@@ -11271,24 +11296,64 @@ open class UIElement
             return try WinRT.Microsoft.UI.Input.InputCursor(plok: _ifc.ProtectedCursor);
         }
     }
+    private var _cb_OnCreateAutomationPeer : Optional<() throws -> Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer>> = nil
     open func OnCreateAutomationPeer() throws -> Optional<WinRT.Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> {
+        if let cb = _cb_OnCreateAutomationPeer {
+            return try cb()
+        } else {
         return nil;
+        }
     }
+    private var _cb_OnDisconnectVisualChildren : Optional<() throws -> Void> = nil
     open func OnDisconnectVisualChildren() throws -> Void {
+        if let cb = _cb_OnDisconnectVisualChildren {
+            return try cb()
+        } else {
+        }
     }
+    private var _cb_FindSubElementsForTouchTargeting : Optional<(WinRT.Windows.Foundation.Point, WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>> = nil
     open func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
+        if let cb = _cb_FindSubElementsForTouchTargeting {
+            return try cb(point, boundingRect)
+        } else {
         return nil;
+        }
     }
+    private var _cb_GetChildrenInTabFocusOrder : Optional<() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>> = nil
     open func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
+        if let cb = _cb_GetChildrenInTabFocusOrder {
+            return try cb()
+        } else {
         return nil;
+        }
     }
+    private var _cb_OnKeyboardAcceleratorInvoked : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void> = nil
     open func OnKeyboardAcceleratorInvoked(args : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void {
+        if let cb = _cb_OnKeyboardAcceleratorInvoked {
+            return try cb(args)
+        } else {
+        }
     }
+    private var _cb_OnProcessKeyboardAccelerators : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void> = nil
     open func OnProcessKeyboardAccelerators(args : Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
+        if let cb = _cb_OnProcessKeyboardAccelerators {
+            return try cb(args)
+        } else {
+        }
     }
+    private var _cb_OnBringIntoViewRequested : Optional<(Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void> = nil
     open func OnBringIntoViewRequested(e : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
+        if let cb = _cb_OnBringIntoViewRequested {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_PopulatePropertyInfoOverride : Optional<(Swift.String, Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void> = nil
     open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
+        if let cb = _cb_PopulatePropertyInfoOverride {
+            return try cb(propertyName, animationPropertyInfo)
+        } else {
+        }
     }
     public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();

@@ -192,7 +192,12 @@ open class Brush
             return try WinRT.Microsoft.UI.Xaml.Media.Transform(plok: _ifc.Transform);
         }
     }
+    private var _cb_PopulatePropertyInfoOverride : Optional<(Swift.String, Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void> = nil
     open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
+        if let cb = _cb_PopulatePropertyInfoOverride {
+            return try cb(propertyName, animationPropertyInfo)
+        } else {
+        }
     }
     public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();

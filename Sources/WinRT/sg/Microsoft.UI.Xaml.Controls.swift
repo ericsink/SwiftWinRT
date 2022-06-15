@@ -313,11 +313,26 @@ open class ContentControl
             return try WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.ContentTransitions);
         }
     }
+    private var _cb_OnContentChanged : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void> = nil
     open func OnContentChanged(oldContent : Optional<WinRT.Object>, newContent : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb_OnContentChanged {
+            return try cb(oldContent, newContent)
+        } else {
+        }
     }
+    private var _cb_OnContentTemplateChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void> = nil
     open func OnContentTemplateChanged(oldContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, newContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        if let cb = _cb_OnContentTemplateChanged {
+            return try cb(oldContentTemplate, newContentTemplate)
+        } else {
+        }
     }
+    private var _cb_OnContentTemplateSelectorChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void> = nil
     open func OnContentTemplateSelectorChanged(oldContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, newContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void {
+        if let cb = _cb_OnContentTemplateSelectorChanged {
+            return try cb(oldContentTemplateSelector, newContentTemplateSelector)
+        } else {
+        }
     }
 }
 
@@ -1572,61 +1587,201 @@ open class Control
             return try _ifc.DefaultStyleKey;
         }
     }
+    private var _cb_OnPointerEntered : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerEntered(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerEntered {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerPressed : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerPressed(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerPressed {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerMoved : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerMoved(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerMoved {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerReleased : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerReleased(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerReleased {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerExited : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerExited(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerExited {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerCaptureLost : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerCaptureLost(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerCaptureLost {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerCanceled : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerCanceled(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerCanceled {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPointerWheelChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
     open func OnPointerWheelChanged(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPointerWheelChanged {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void> = nil
     open func OnTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnTapped {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnDoubleTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void> = nil
     open func OnDoubleTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnDoubleTapped {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnHolding : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void> = nil
     open func OnHolding(e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnHolding {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnRightTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void> = nil
     open func OnRightTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnRightTapped {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnManipulationStarting : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void> = nil
     open func OnManipulationStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnManipulationStarting {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnManipulationInertiaStarting : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void> = nil
     open func OnManipulationInertiaStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnManipulationInertiaStarting {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnManipulationStarted : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void> = nil
     open func OnManipulationStarted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnManipulationStarted {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnManipulationDelta : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void> = nil
     open func OnManipulationDelta(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnManipulationDelta {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnManipulationCompleted : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void> = nil
     open func OnManipulationCompleted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnManipulationCompleted {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnKeyUp : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
     open func OnKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnKeyUp {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnKeyDown : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
     open func OnKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnKeyDown {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPreviewKeyDown : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
     open func OnPreviewKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPreviewKeyDown {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnPreviewKeyUp : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
     open func OnPreviewKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnPreviewKeyUp {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnGotFocus : Optional<(Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil
     open func OnGotFocus(e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnGotFocus {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnLostFocus : Optional<(Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil
     open func OnLostFocus(e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnLostFocus {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnCharacterReceived : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void> = nil
     open func OnCharacterReceived(e : Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
+        if let cb = _cb_OnCharacterReceived {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnDragEnter : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
     open func OnDragEnter(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+        if let cb = _cb_OnDragEnter {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnDragLeave : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
     open func OnDragLeave(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+        if let cb = _cb_OnDragLeave {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnDragOver : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
     open func OnDragOver(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+        if let cb = _cb_OnDragOver {
+            return try cb(e)
+        } else {
+        }
     }
+    private var _cb_OnDrop : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
     open func OnDrop(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+        if let cb = _cb_OnDrop {
+            return try cb(e)
+        } else {
+        }
     }
 }
 
