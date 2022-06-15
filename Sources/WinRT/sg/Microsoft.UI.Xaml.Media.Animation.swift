@@ -48,21 +48,61 @@ public class TransitionCollection
         _self = try RoActivateInstance(_classId)
         try super.init(plok: _self.QueryInterface())
     }
-    // method not needed: GetAt
-    // method not needed: get_Size
-    // method not needed: GetView
-    // method not needed: IndexOf
-    // method not needed: SetAt
-    // method not needed: InsertAt
-    // method not needed: RemoveAt
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.Transition> {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Animation.Transition(plok: _ifc.GetAt(index: index));
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.GetView();
+    }
+    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.Transition>, index : inout Swift.UInt32) throws -> boolean {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+            var _tmp_out_index: Swift.UInt32 = 0;
+        return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.Transition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.SetAt(index: index, value: value!.Interface());
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.Transition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.InsertAt(index: index, value: value!.Interface());
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.RemoveAt(index: index);
+    }
     public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.Transition>) throws -> Void {
         let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
         return try _ifc.Append(value: value!.Interface());
     }
-    // method not needed: RemoveAtEnd
-    // method not needed: Clear
-    // method not needed: GetMany
-    // method not needed: ReplaceAll
+    public func RemoveAtEnd() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.RemoveAtEnd();
+    }
+    public func Clear() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.Clear();
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws -> Swift.UInt32 {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+        return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition = try _self.QueryInterface();
+            return try _ifc.Size;
+        }
+    }
     // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.Media.Animation.Transition, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
 }
 
