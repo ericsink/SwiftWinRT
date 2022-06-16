@@ -10919,7 +10919,7 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.StartBringIntoView();
     }
-    public func StartBringIntoViewWithOptions(options : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewOptions>) throws -> Void {
+    public func StartBringIntoView(options : Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewOptions>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.StartBringIntoViewWithOptions(options: options!.Interface());
     }

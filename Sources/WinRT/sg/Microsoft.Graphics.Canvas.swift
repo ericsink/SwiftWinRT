@@ -189,7 +189,7 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.Clear(color: color);
     }
-    public func ClearHdr(color : WinRT.Windows.Foundation.Numerics.Vector4) throws -> Void {
+    public func Clear(color : WinRT.Windows.Foundation.Numerics.Vector4) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.ClearHdr(color: color);
     }
@@ -197,583 +197,583 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.Flush();
     }
-    public func DrawImageAtOrigin(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOrigin(image: image);
     }
-    public func DrawImageAtOffset(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOffset(image: image, offset: offset);
     }
-    public func DrawImageAtCoords(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtCoords(image: image, x: x, y: y);
     }
-    public func DrawImageToRect(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, destinationRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
+    public func DrawImage(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, destinationRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageToRect(bitmap: bitmap!.Interface(), destinationRectangle: destinationRectangle);
     }
-    public func DrawImageAtOffsetWithSourceRect(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOffsetWithSourceRect(image: image, offset: offset, sourceRectangle: sourceRectangle);
     }
-    public func DrawImageAtCoordsWithSourceRect(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtCoordsWithSourceRect(image: image, x: x, y: y, sourceRectangle: sourceRectangle);
     }
-    public func DrawImageToRectWithSourceRect(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageToRectWithSourceRect(image: image, destinationRectangle: destinationRectangle, sourceRectangle: sourceRectangle);
     }
-    public func DrawImageAtOffsetWithSourceRectAndOpacity(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOffsetWithSourceRectAndOpacity(image: image, offset: offset, sourceRectangle: sourceRectangle, opacity: opacity);
     }
-    public func DrawImageAtCoordsWithSourceRectAndOpacity(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtCoordsWithSourceRectAndOpacity(image: image, x: x, y: y, sourceRectangle: sourceRectangle, opacity: opacity);
     }
-    public func DrawImageToRectWithSourceRectAndOpacity(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageToRectWithSourceRectAndOpacity(image: image, destinationRectangle: destinationRectangle, sourceRectangle: sourceRectangle, opacity: opacity);
     }
-    public func DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolation(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolation(image: image, offset: offset, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation);
     }
-    public func DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolation(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolation(image: image, x: x, y: y, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation);
     }
-    public func DrawImageToRectWithSourceRectAndOpacityAndInterpolation(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageToRectWithSourceRectAndOpacityAndInterpolation(image: image, destinationRectangle: destinationRectangle, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation);
     }
-    public func DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndComposite(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, composite : WinRT.Microsoft.Graphics.Canvas.CanvasComposite) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, composite : WinRT.Microsoft.Graphics.Canvas.CanvasComposite) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndComposite(image: image, offset: offset, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation, composite: composite);
     }
-    public func DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndComposite(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, composite : WinRT.Microsoft.Graphics.Canvas.CanvasComposite) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, composite : WinRT.Microsoft.Graphics.Canvas.CanvasComposite) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndComposite(image: image, x: x, y: y, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation, composite: composite);
     }
-    public func DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndComposite(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, composite : WinRT.Microsoft.Graphics.Canvas.CanvasComposite) throws -> Void {
+    public func DrawImage(image : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasImage>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, composite : WinRT.Microsoft.Graphics.Canvas.CanvasComposite) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndComposite(image: image, destinationRectangle: destinationRectangle, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation, composite: composite);
     }
-    public func DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndPerspective(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, perspective : WinRT.Windows.Foundation.Numerics.Matrix4x4) throws -> Void {
+    public func DrawImage(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, offset : WinRT.Windows.Foundation.Numerics.Vector2, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, perspective : WinRT.Windows.Foundation.Numerics.Matrix4x4) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndPerspective(bitmap: bitmap!.Interface(), offset: offset, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation, perspective: perspective);
     }
-    public func DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndPerspective(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, perspective : WinRT.Windows.Foundation.Numerics.Matrix4x4) throws -> Void {
+    public func DrawImage(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, x : Swift.Float, y : Swift.Float, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, perspective : WinRT.Windows.Foundation.Numerics.Matrix4x4) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndPerspective(bitmap: bitmap!.Interface(), x: x, y: y, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation, perspective: perspective);
     }
-    public func DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndPerspective(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, perspective : WinRT.Windows.Foundation.Numerics.Matrix4x4) throws -> Void {
+    public func DrawImage(bitmap : Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap>, destinationRectangle : WinRT.Windows.Foundation.Rect, sourceRectangle : WinRT.Windows.Foundation.Rect, opacity : Swift.Float, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, perspective : WinRT.Windows.Foundation.Numerics.Matrix4x4) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndPerspective(bitmap: bitmap!.Interface(), destinationRectangle: destinationRectangle, sourceRectangle: sourceRectangle, opacity: opacity, interpolation: interpolation, perspective: perspective);
     }
-    public func DrawLineWithBrush(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawLine(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineWithBrush(point0: point0, point1: point1, brush: brush);
     }
-    public func DrawLineAtCoordsWithBrush(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawLine(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineAtCoordsWithBrush(x0: x0, y0: y0, x1: x1, y1: y1, brush: brush);
     }
-    public func DrawLineWithColor(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawLine(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineWithColor(point0: point0, point1: point1, color: color);
     }
-    public func DrawLineAtCoordsWithColor(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawLine(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineAtCoordsWithColor(x0: x0, y0: y0, x1: x1, y1: y1, color: color);
     }
-    public func DrawLineWithBrushAndStrokeWidth(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawLine(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineWithBrushAndStrokeWidth(point0: point0, point1: point1, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawLineAtCoordsWithBrushAndStrokeWidth(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawLine(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineAtCoordsWithBrushAndStrokeWidth(x0: x0, y0: y0, x1: x1, y1: y1, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawLineWithColorAndStrokeWidth(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawLine(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineWithColorAndStrokeWidth(point0: point0, point1: point1, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawLineAtCoordsWithColorAndStrokeWidth(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawLine(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineAtCoordsWithColorAndStrokeWidth(x0: x0, y0: y0, x1: x1, y1: y1, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawLineWithBrushAndStrokeWidthAndStrokeStyle(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawLine(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineWithBrushAndStrokeWidthAndStrokeStyle(point0: point0, point1: point1, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawLineAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawLine(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x0: x0, y0: y0, x1: x1, y1: y1, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawLineWithColorAndStrokeWidthAndStrokeStyle(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawLine(point0 : WinRT.Windows.Foundation.Numerics.Vector2, point1 : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineWithColorAndStrokeWidthAndStrokeStyle(point0: point0, point1: point1, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawLineAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawLine(x0 : Swift.Float, y0 : Swift.Float, x1 : Swift.Float, y1 : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawLineAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x0: x0, y0: y0, x1: x1, y1: y1, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRectangleWithBrush(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawRectangle(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleWithBrush(rect: rect, brush: brush);
     }
-    public func DrawRectangleAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleAtCoordsWithBrush(x: x, y: y, w: w, h: h, brush: brush);
     }
-    public func DrawRectangleWithColor(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawRectangle(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleWithColor(rect: rect, color: color);
     }
-    public func DrawRectangleAtCoordsWithColor(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleAtCoordsWithColor(x: x, y: y, w: w, h: h, color: color);
     }
-    public func DrawRectangleWithBrushAndStrokeWidth(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRectangle(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleWithBrushAndStrokeWidth(rect: rect, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawRectangleAtCoordsWithBrushAndStrokeWidth(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleAtCoordsWithBrushAndStrokeWidth(x: x, y: y, w: w, h: h, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawRectangleWithColorAndStrokeWidth(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRectangle(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleWithColorAndStrokeWidth(rect: rect, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawRectangleAtCoordsWithColorAndStrokeWidth(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleAtCoordsWithColorAndStrokeWidth(x: x, y: y, w: w, h: h, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawRectangleWithBrushAndStrokeWidthAndStrokeStyle(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRectangle(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleWithBrushAndStrokeWidthAndStrokeStyle(rect: rect, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x: x, y: y, w: w, h: h, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRectangleWithColorAndStrokeWidthAndStrokeStyle(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRectangle(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleWithColorAndStrokeWidthAndStrokeStyle(rect: rect, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x: x, y: y, w: w, h: h, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func FillRectangleWithBrush(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillRectangle(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRectangleWithBrush(rect: rect, brush: brush);
     }
-    public func FillRectangleAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRectangleAtCoordsWithBrush(x: x, y: y, w: w, h: h, brush: brush);
     }
-    public func FillRectangleWithColor(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillRectangle(rect : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRectangleWithColor(rect: rect, color: color);
     }
-    public func FillRectangleAtCoordsWithColor(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRectangleAtCoordsWithColor(x: x, y: y, w: w, h: h, color: color);
     }
-    public func FillRectangleWithBrushAndOpacityBrush(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillRectangle(rect : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRectangleWithBrushAndOpacityBrush(rect: rect, brush: brush, opacityBrush: opacityBrush);
     }
-    public func FillRectangleAtCoordsWithBrushAndOpacityBrush(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRectangleAtCoordsWithBrushAndOpacityBrush(x: x, y: y, w: w, h: h, brush: brush, opacityBrush: opacityBrush);
     }
-    public func DrawRoundedRectangleWithBrush(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleWithBrush(rect: rect, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func DrawRoundedRectangleAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleAtCoordsWithBrush(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func DrawRoundedRectangleWithColor(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleWithColor(rect: rect, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func DrawRoundedRectangleAtCoordsWithColor(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleAtCoordsWithColor(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func DrawRoundedRectangleWithBrushAndStrokeWidth(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleWithBrushAndStrokeWidth(rect: rect, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidth(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidth(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawRoundedRectangleWithColorAndStrokeWidth(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleWithColorAndStrokeWidth(rect: rect, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawRoundedRectangleAtCoordsWithColorAndStrokeWidth(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleAtCoordsWithColorAndStrokeWidth(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawRoundedRectangleWithBrushAndStrokeWidthAndStrokeStyle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleWithBrushAndStrokeWidthAndStrokeStyle(rect: rect, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRoundedRectangleWithColorAndStrokeWidthAndStrokeStyle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleWithColorAndStrokeWidthAndStrokeStyle(rect: rect, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawRoundedRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawRoundedRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func FillRoundedRectangleWithBrush(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRoundedRectangleWithBrush(rect: rect, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func FillRoundedRectangleAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRoundedRectangleAtCoordsWithBrush(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func FillRoundedRectangleWithColor(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillRoundedRectangle(rect : WinRT.Windows.Foundation.Rect, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRoundedRectangleWithColor(rect: rect, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func FillRoundedRectangleAtCoordsWithColor(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillRoundedRectangle(x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillRoundedRectangleAtCoordsWithColor(x: x, y: y, w: w, h: h, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func DrawEllipseWithBrush(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseWithBrush(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func DrawEllipseAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseAtCoordsWithBrush(x: x, y: y, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func DrawEllipseWithColor(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseWithColor(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func DrawEllipseAtCoordsWithColor(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseAtCoordsWithColor(x: x, y: y, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func DrawEllipseWithBrushAndStrokeWidth(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseWithBrushAndStrokeWidth(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawEllipseAtCoordsWithBrushAndStrokeWidth(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseAtCoordsWithBrushAndStrokeWidth(x: x, y: y, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawEllipseWithColorAndStrokeWidth(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseWithColorAndStrokeWidth(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawEllipseAtCoordsWithColorAndStrokeWidth(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseAtCoordsWithColorAndStrokeWidth(x: x, y: y, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawEllipseWithBrushAndStrokeWidthAndStrokeStyle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseWithBrushAndStrokeWidthAndStrokeStyle(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawEllipseAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x: x, y: y, radiusX: radiusX, radiusY: radiusY, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawEllipseWithColorAndStrokeWidthAndStrokeStyle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseWithColorAndStrokeWidthAndStrokeStyle(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawEllipseAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawEllipseAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x: x, y: y, radiusX: radiusX, radiusY: radiusY, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func FillEllipseWithBrush(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillEllipseWithBrush(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func FillEllipseAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillEllipseAtCoordsWithBrush(x: x, y: y, radiusX: radiusX, radiusY: radiusY, brush: brush);
     }
-    public func FillEllipseWithColor(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillEllipse(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillEllipseWithColor(centerPoint: centerPoint, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func FillEllipseAtCoordsWithColor(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillEllipse(x : Swift.Float, y : Swift.Float, radiusX : Swift.Float, radiusY : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillEllipseAtCoordsWithColor(x: x, y: y, radiusX: radiusX, radiusY: radiusY, color: color);
     }
-    public func DrawCircleWithBrush(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleWithBrush(centerPoint: centerPoint, radius: radius, brush: brush);
     }
-    public func DrawCircleAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleAtCoordsWithBrush(x: x, y: y, radius: radius, brush: brush);
     }
-    public func DrawCircleWithColor(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleWithColor(centerPoint: centerPoint, radius: radius, color: color);
     }
-    public func DrawCircleAtCoordsWithColor(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleAtCoordsWithColor(x: x, y: y, radius: radius, color: color);
     }
-    public func DrawCircleWithBrushAndStrokeWidth(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleWithBrushAndStrokeWidth(centerPoint: centerPoint, radius: radius, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawCircleAtCoordsWithBrushAndStrokeWidth(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleAtCoordsWithBrushAndStrokeWidth(x: x, y: y, radius: radius, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawCircleWithColorAndStrokeWidth(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleWithColorAndStrokeWidth(centerPoint: centerPoint, radius: radius, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawCircleAtCoordsWithColorAndStrokeWidth(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleAtCoordsWithColorAndStrokeWidth(x: x, y: y, radius: radius, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawCircleWithBrushAndStrokeWidthAndStrokeStyle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleWithBrushAndStrokeWidthAndStrokeStyle(centerPoint: centerPoint, radius: radius, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawCircleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x: x, y: y, radius: radius, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawCircleWithColorAndStrokeWidthAndStrokeStyle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleWithColorAndStrokeWidthAndStrokeStyle(centerPoint: centerPoint, radius: radius, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawCircleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCircleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x: x, y: y, radius: radius, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func FillCircleWithBrush(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillCircleWithBrush(centerPoint: centerPoint, radius: radius, brush: brush);
     }
-    public func FillCircleAtCoordsWithBrush(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillCircleAtCoordsWithBrush(x: x, y: y, radius: radius, brush: brush);
     }
-    public func FillCircleWithColor(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillCircle(centerPoint : WinRT.Windows.Foundation.Numerics.Vector2, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillCircleWithColor(centerPoint: centerPoint, radius: radius, color: color);
     }
-    public func FillCircleAtCoordsWithColor(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillCircle(x : Swift.Float, y : Swift.Float, radius : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillCircleAtCoordsWithColor(x: x, y: y, radius: radius, color: color);
     }
-    public func DrawTextAtPointWithColor(text : Swift.String, point : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawText(text : Swift.String, point : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtPointWithColor(text: text, point: point, color: color);
     }
-    public func DrawTextAtPointCoordsWithColor(text : Swift.String, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawText(text : Swift.String, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtPointCoordsWithColor(text: text, x: x, y: y, color: color);
     }
-    public func DrawTextAtPointWithBrushAndFormat(text : Swift.String, point : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, point : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtPointWithBrushAndFormat(text: text, point: point, brush: brush, format: format!.Interface());
     }
-    public func DrawTextAtRectWithBrushAndFormat(text : Swift.String, rectangle : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, rectangle : WinRT.Windows.Foundation.Rect, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtRectWithBrushAndFormat(text: text, rectangle: rectangle, brush: brush, format: format!.Interface());
     }
-    public func DrawTextAtPointCoordsWithBrushAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtPointCoordsWithBrushAndFormat(text: text, x: x, y: y, brush: brush, format: format!.Interface());
     }
-    public func DrawTextAtRectCoordsWithBrushAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtRectCoordsWithBrushAndFormat(text: text, x: x, y: y, w: w, h: h, brush: brush, format: format!.Interface());
     }
-    public func DrawTextAtPointWithColorAndFormat(text : Swift.String, point : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, point : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtPointWithColorAndFormat(text: text, point: point, color: color, format: format!.Interface());
     }
-    public func DrawTextAtRectWithColorAndFormat(text : Swift.String, rectangle : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, rectangle : WinRT.Windows.Foundation.Rect, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtRectWithColorAndFormat(text: text, rectangle: rectangle, color: color, format: format!.Interface());
     }
-    public func DrawTextAtPointCoordsWithColorAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtPointCoordsWithColorAndFormat(text: text, x: x, y: y, color: color, format: format!.Interface());
     }
-    public func DrawTextAtRectCoordsWithColorAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
+    public func DrawText(text : Swift.String, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : WinRT.Windows.UI.Color, format : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextFormat>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextAtRectCoordsWithColorAndFormat(text: text, x: x, y: y, w: w, h: h, color: color, format: format!.Interface());
     }
-    public func DrawGeometryWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryWithBrush(geometry: geometry!.Interface(), offset: offset, brush: brush);
     }
-    public func DrawGeometryWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryWithColor(geometry: geometry!.Interface(), offset: offset, color: color);
     }
-    public func DrawGeometryAtCoordsWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtCoordsWithBrush(geometry: geometry!.Interface(), x: x, y: y, brush: brush);
     }
-    public func DrawGeometryAtCoordsWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtCoordsWithColor(geometry: geometry!.Interface(), x: x, y: y, color: color);
     }
-    public func DrawGeometryAtOriginWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtOriginWithBrush(geometry: geometry!.Interface(), brush: brush);
     }
-    public func DrawGeometryAtOriginWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtOriginWithColor(geometry: geometry!.Interface(), color: color);
     }
-    public func DrawGeometryWithBrushAndStrokeWidth(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryWithBrushAndStrokeWidth(geometry: geometry!.Interface(), offset: offset, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawGeometryWithColorAndStrokeWidth(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryWithColorAndStrokeWidth(geometry: geometry!.Interface(), offset: offset, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawGeometryAtCoordsWithBrushAndStrokeWidth(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtCoordsWithBrushAndStrokeWidth(geometry: geometry!.Interface(), x: x, y: y, brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawGeometryAtCoordsWithColorAndStrokeWidth(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtCoordsWithColorAndStrokeWidth(geometry: geometry!.Interface(), x: x, y: y, color: color, strokeWidth: strokeWidth);
     }
-    public func DrawGeometryAtOriginWithBrushAndStrokeWidth(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtOriginWithBrushAndStrokeWidth(geometry: geometry!.Interface(), brush: brush, strokeWidth: strokeWidth);
     }
-    public func DrawGeometryAtOriginWithColorAndStrokeWidth(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtOriginWithColorAndStrokeWidth(geometry: geometry!.Interface(), color: color, strokeWidth: strokeWidth);
     }
-    public func DrawGeometryWithBrushAndStrokeWidthAndStrokeStyle(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryWithBrushAndStrokeWidthAndStrokeStyle(geometry: geometry!.Interface(), offset: offset, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawGeometryWithColorAndStrokeWidthAndStrokeStyle(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryWithColorAndStrokeWidthAndStrokeStyle(geometry: geometry!.Interface(), offset: offset, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawGeometryAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(geometry: geometry!.Interface(), x: x, y: y, brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawGeometryAtCoordsWithColorAndStrokeWidthAndStrokeStyle(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtCoordsWithColorAndStrokeWidthAndStrokeStyle(geometry: geometry!.Interface(), x: x, y: y, color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawGeometryAtOriginWithBrushAndStrokeWidthAndStrokeStyle(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtOriginWithBrushAndStrokeWidthAndStrokeStyle(geometry: geometry!.Interface(), brush: brush, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func DrawGeometryAtOriginWithColorAndStrokeWidthAndStrokeStyle(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
+    public func DrawGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color, strokeWidth : Swift.Float, strokeStyle : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGeometryAtOriginWithColorAndStrokeWidthAndStrokeStyle(geometry: geometry!.Interface(), color: color, strokeWidth: strokeWidth, strokeStyle: strokeStyle!.Interface());
     }
-    public func FillGeometryWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryWithBrush(geometry: geometry!.Interface(), offset: offset, brush: brush);
     }
-    public func FillGeometryWithBrushAndOpacityBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryWithBrushAndOpacityBrush(geometry: geometry!.Interface(), offset: offset, brush: brush, opacityBrush: opacityBrush);
     }
-    public func FillGeometryWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryWithColor(geometry: geometry!.Interface(), offset: offset, color: color);
     }
-    public func FillGeometryAtCoordsWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryAtCoordsWithBrush(geometry: geometry!.Interface(), x: x, y: y, brush: brush);
     }
-    public func FillGeometryAtCoordsWithBrushAndOpacityBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryAtCoordsWithBrushAndOpacityBrush(geometry: geometry!.Interface(), x: x, y: y, brush: brush, opacityBrush: opacityBrush);
     }
-    public func FillGeometryAtCoordsWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryAtCoordsWithColor(geometry: geometry!.Interface(), x: x, y: y, color: color);
     }
-    public func FillGeometryAtOriginWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryAtOriginWithBrush(geometry: geometry!.Interface(), brush: brush);
     }
-    public func FillGeometryAtOriginWithBrushAndOpacityBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryAtOriginWithBrushAndOpacityBrush(geometry: geometry!.Interface(), brush: brush, opacityBrush: opacityBrush);
     }
-    public func FillGeometryAtOriginWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func FillGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.FillGeometryAtOriginWithColor(geometry: geometry!.Interface(), color: color);
     }
-    public func DrawCachedGeometryWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawCachedGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCachedGeometryWithBrush(geometry: geometry!.Interface(), offset: offset, brush: brush);
     }
-    public func DrawCachedGeometryWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawCachedGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, offset : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCachedGeometryWithColor(geometry: geometry!.Interface(), offset: offset, color: color);
     }
-    public func DrawCachedGeometryAtCoordsWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawCachedGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCachedGeometryAtCoordsWithBrush(geometry: geometry!.Interface(), x: x, y: y, brush: brush);
     }
-    public func DrawCachedGeometryAtCoordsWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawCachedGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCachedGeometryAtCoordsWithColor(geometry: geometry!.Interface(), x: x, y: y, color: color);
     }
-    public func DrawCachedGeometryAtOriginWithBrush(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawCachedGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCachedGeometryAtOriginWithBrush(geometry: geometry!.Interface(), brush: brush);
     }
-    public func DrawCachedGeometryAtOriginWithColor(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawCachedGeometry(geometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry>, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawCachedGeometryAtOriginWithColor(geometry: geometry!.Interface(), color: color);
     }
-    public func DrawTextLayoutWithBrush(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, point : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawTextLayout(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, point : WinRT.Windows.Foundation.Numerics.Vector2, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextLayoutWithBrush(textLayout: textLayout!.Interface(), point: point, brush: brush);
     }
-    public func DrawTextLayoutAtCoordsWithBrush(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
+    public func DrawTextLayout(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, x : Swift.Float, y : Swift.Float, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextLayoutAtCoordsWithBrush(textLayout: textLayout!.Interface(), x: x, y: y, brush: brush);
     }
-    public func DrawTextLayoutWithColor(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, point : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawTextLayout(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, point : WinRT.Windows.Foundation.Numerics.Vector2, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextLayoutWithColor(textLayout: textLayout!.Interface(), point: point, color: color);
     }
-    public func DrawTextLayoutAtCoordsWithColor(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
+    public func DrawTextLayout(textLayout : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextLayout>, x : Swift.Float, y : Swift.Float, color : WinRT.Windows.UI.Color) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawTextLayoutAtCoordsWithColor(textLayout: textLayout!.Interface(), x: x, y: y, color: color);
     }
-    public func DrawGradientMeshAtOrigin(gradientMesh : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh>) throws -> Void {
+    public func DrawGradientMesh(gradientMesh : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGradientMeshAtOrigin(gradientMesh: gradientMesh!.Interface());
     }
@@ -781,19 +781,19 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGradientMesh(gradientMesh: gradientMesh!.Interface(), point: point);
     }
-    public func DrawGradientMeshAtCoords(gradientMesh : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh>, x : Swift.Float, y : Swift.Float) throws -> Void {
+    public func DrawGradientMesh(gradientMesh : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh>, x : Swift.Float, y : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGradientMeshAtCoords(gradientMesh: gradientMesh!.Interface(), x: x, y: y);
     }
-    public func DrawSvgAtOrigin(svgDocument : Optional<WinRT.Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument>, viewportSize : WinRT.Windows.Foundation.Size) throws -> Void {
+    public func DrawSvg(svgDocument : Optional<WinRT.Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument>, viewportSize : WinRT.Windows.Foundation.Size) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawSvgAtOrigin(svgDocument: svgDocument!.Interface(), viewportSize: viewportSize);
     }
-    public func DrawSvgAtPoint(svgDocument : Optional<WinRT.Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument>, viewportSize : WinRT.Windows.Foundation.Size, point : WinRT.Windows.Foundation.Numerics.Vector2) throws -> Void {
+    public func DrawSvg(svgDocument : Optional<WinRT.Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument>, viewportSize : WinRT.Windows.Foundation.Size, point : WinRT.Windows.Foundation.Numerics.Vector2) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawSvgAtPoint(svgDocument: svgDocument!.Interface(), viewportSize: viewportSize, point: point);
     }
-    public func DrawSvgAtCoords(svgDocument : Optional<WinRT.Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument>, viewportSize : WinRT.Windows.Foundation.Size, x : Swift.Float, y : Swift.Float) throws -> Void {
+    public func DrawSvg(svgDocument : Optional<WinRT.Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument>, viewportSize : WinRT.Windows.Foundation.Size, x : Swift.Float, y : Swift.Float) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawSvgAtCoords(svgDocument: svgDocument!.Interface(), viewportSize: viewportSize, x: x, y: y);
     }
@@ -861,39 +861,39 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.put_EffectTileSize(value: value);
     }
-    public func CreateLayerWithOpacity(opacity : Swift.Float) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacity : Swift.Float) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacity(opacity: opacity));
     }
-    public func CreateLayerWithOpacityBrush(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityBrush(opacityBrush: opacityBrush));
     }
-    public func CreateLayerWithOpacityAndClipRectangle(opacity : Swift.Float, clipRectangle : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacity : Swift.Float, clipRectangle : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityAndClipRectangle(opacity: opacity, clipRectangle: clipRectangle));
     }
-    public func CreateLayerWithOpacityBrushAndClipRectangle(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipRectangle : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipRectangle : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityBrushAndClipRectangle(opacityBrush: opacityBrush, clipRectangle: clipRectangle));
     }
-    public func CreateLayerWithOpacityAndClipGeometry(opacity : Swift.Float, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacity : Swift.Float, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityAndClipGeometry(opacity: opacity, clipGeometry: clipGeometry!.Interface()));
     }
-    public func CreateLayerWithOpacityBrushAndClipGeometry(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityBrushAndClipGeometry(opacityBrush: opacityBrush, clipGeometry: clipGeometry!.Interface()));
     }
-    public func CreateLayerWithOpacityAndClipGeometryAndTransform(opacity : Swift.Float, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, geometryTransform : WinRT.Windows.Foundation.Numerics.Matrix3x2) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacity : Swift.Float, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, geometryTransform : WinRT.Windows.Foundation.Numerics.Matrix3x2) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityAndClipGeometryAndTransform(opacity: opacity, clipGeometry: clipGeometry!.Interface(), geometryTransform: geometryTransform));
     }
-    public func CreateLayerWithOpacityBrushAndClipGeometryAndTransform(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, geometryTransform : WinRT.Windows.Foundation.Numerics.Matrix3x2) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, geometryTransform : WinRT.Windows.Foundation.Numerics.Matrix3x2) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithOpacityBrushAndClipGeometryAndTransform(opacityBrush: opacityBrush, clipGeometry: clipGeometry!.Interface(), geometryTransform: geometryTransform));
     }
-    public func CreateLayerWithAllOptions(opacity : Swift.Float, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipRectangle : WinRT.Windows.Foundation.Rect, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, geometryTransform : WinRT.Windows.Foundation.Numerics.Matrix3x2, options : WinRT.Microsoft.Graphics.Canvas.CanvasLayerOptions) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
+    public func CreateLayer(opacity : Swift.Float, opacityBrush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, clipRectangle : WinRT.Windows.Foundation.Rect, clipGeometry : Optional<WinRT.Microsoft.Graphics.Canvas.Geometry.CanvasGeometry>, geometryTransform : WinRT.Windows.Foundation.Numerics.Matrix3x2, options : WinRT.Microsoft.Graphics.Canvas.CanvasLayerOptions) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasActiveLayer(plok: _ifc.CreateLayerWithAllOptions(opacity: opacity, opacityBrush: opacityBrush, clipRectangle: clipRectangle, clipGeometry: clipGeometry!.Interface(), geometryTransform: geometryTransform, options: options));
     }
@@ -901,11 +901,11 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGlyphRun(point: point, fontFace: fontFace!.Interface(), fontSize: fontSize, glyphsLength: glyphsLength, glyphs: glyphs, isSideways: isSideways, bidiLevel: bidiLevel, brush: brush);
     }
-    public func DrawGlyphRunWithMeasuringMode(point : WinRT.Windows.Foundation.Numerics.Vector2, fontFace : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasFontFace>, fontSize : Swift.Float, glyphsLength : UINT32, glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, isSideways : boolean, bidiLevel : Swift.UInt32, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, measuringMode : WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode) throws -> Void {
+    public func DrawGlyphRun(point : WinRT.Windows.Foundation.Numerics.Vector2, fontFace : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasFontFace>, fontSize : Swift.Float, glyphsLength : UINT32, glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, isSideways : boolean, bidiLevel : Swift.UInt32, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, measuringMode : WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGlyphRunWithMeasuringMode(point: point, fontFace: fontFace!.Interface(), fontSize: fontSize, glyphsLength: glyphsLength, glyphs: glyphs, isSideways: isSideways, bidiLevel: bidiLevel, brush: brush, measuringMode: measuringMode);
     }
-    public func DrawGlyphRunWithMeasuringModeAndDescription(point : WinRT.Windows.Foundation.Numerics.Vector2, fontFace : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasFontFace>, fontSize : Swift.Float, glyphsLength : UINT32, glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, isSideways : boolean, bidiLevel : Swift.UInt32, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, measuringMode : WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode, localeName : Swift.String, textString : Swift.String, clusterMapIndicesLength : UINT32, clusterMapIndices : Optional<UnsafeMutablePointer<INT32>>, textPosition : Swift.UInt32) throws -> Void {
+    public func DrawGlyphRun(point : WinRT.Windows.Foundation.Numerics.Vector2, fontFace : Optional<WinRT.Microsoft.Graphics.Canvas.Text.CanvasFontFace>, fontSize : Swift.Float, glyphsLength : UINT32, glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, isSideways : boolean, bidiLevel : Swift.UInt32, brush : Optional<WinRT.Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, measuringMode : WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode, localeName : Swift.String, textString : Swift.String, clusterMapIndicesLength : UINT32, clusterMapIndices : Optional<UnsafeMutablePointer<INT32>>, textPosition : Swift.UInt32) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.DrawGlyphRunWithMeasuringModeAndDescription(point: point, fontFace: fontFace!.Interface(), fontSize: fontSize, glyphsLength: glyphsLength, glyphs: glyphs, isSideways: isSideways, bidiLevel: bidiLevel, brush: brush, measuringMode: measuringMode, localeName: localeName, textString: textString, clusterMapIndicesLength: clusterMapIndicesLength, clusterMapIndices: clusterMapIndices, textPosition: textPosition);
     }
@@ -913,15 +913,15 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch(plok: _ifc.CreateSpriteBatch());
     }
-    public func CreateSpriteBatchWithSortMode(sortMode : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteSortMode) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch> {
+    public func CreateSpriteBatch(sortMode : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteSortMode) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch(plok: _ifc.CreateSpriteBatchWithSortMode(sortMode: sortMode));
     }
-    public func CreateSpriteBatchWithSortModeAndInterpolation(sortMode : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteSortMode, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch> {
+    public func CreateSpriteBatch(sortMode : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteSortMode, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch(plok: _ifc.CreateSpriteBatchWithSortModeAndInterpolation(sortMode: sortMode, interpolation: interpolation));
     }
-    public func CreateSpriteBatchWithSortModeAndInterpolationAndOptions(sortMode : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteSortMode, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, options : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteOptions) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch> {
+    public func CreateSpriteBatch(sortMode : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteSortMode, interpolation : WinRT.Microsoft.Graphics.Canvas.CanvasImageInterpolation, options : WinRT.Microsoft.Graphics.Canvas.CanvasSpriteOptions) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try WinRT.Microsoft.Graphics.Canvas.CanvasSpriteBatch(plok: _ifc.CreateSpriteBatchWithSortModeAndInterpolationAndOptions(sortMode: sortMode, interpolation: interpolation, options: options));
     }
