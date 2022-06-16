@@ -48,7 +48,10 @@ open class InputCursor
     // COMPOSABLE: Microsoft.UI.Input.IInputCursorFactory
 // composable interface not needed: Microsoft.UI.Input.IInputCursorFactory
     // static interface not needed: Microsoft.UI.Input.IInputCursorStatics
-    // instance interface not needed: Windows.Foundation.IClosable
+    public func Close() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
 }
 
 // type: Microsoft.UI.Input.PointerPoint

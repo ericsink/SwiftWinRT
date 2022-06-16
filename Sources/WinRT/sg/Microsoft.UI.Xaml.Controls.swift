@@ -1402,17 +1402,17 @@ open class Control
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
         return try _ifc.put_CornerRadius(value: value);
     }
-    public func add_FocusEngaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_FocusEngaged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusEngaged(handler: handler);
+        return try _ifc.add_FocusEngaged(handler: handler!.Interface());
     }
     public func remove_FocusEngaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
         return try _ifc.remove_FocusEngaged(token: token);
     }
-    public func add_FocusDisengaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_FocusDisengaged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusDisengaged(handler: handler);
+        return try _ifc.add_FocusDisengaged(handler: handler!.Interface());
     }
     public func remove_FocusDisengaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -6331,6 +6331,91 @@ open class IUIElementCollection
 } // IUIElementCollection
 
 
+// type: Microsoft.UI.Xaml.Controls.IUserControl
+// interface type
+open class IUserControl
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xab8a0a51, Data2: 0x44cf, Data3 : 0x5337, Data4 : (0xad, 0x77, 0x8e, 0xda, 0x17, 0x95, 0xe9, 0xf6)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.UIElement get_Content()
+    public func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIUserControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Content(pThis, __presult))
+        }
+    }
+    public func get_Content() throws -> Optional<WinRT.Microsoft.UI.Xaml.IUIElement> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>> = nil;
+        try self._n_get_Content(&__result);
+        return WinRT.Microsoft.UI.Xaml.IUIElement(consuming: __result);
+    }
+    // [IsSpecialName] void put_Content(Microsoft.UI.Xaml.UIElement)
+    public func _n_put_Content(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIUserControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Content(pThis, value))
+        }
+    }
+    public func put_Content(value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
+        try self._n_put_Content(RawPointer(value));
+    }
+    public var Content : Optional<WinRT.Microsoft.UI.Xaml.IUIElement> {
+        get throws {
+            return try get_Content();
+        }
+    }
+} // IUserControl
+
+
+// type: Microsoft.UI.Xaml.Controls.IUserControlFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IUserControlFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61ac9074, Data2: 0xaab3, Data3 : 0x50b8, Data4 : (0x8b, 0x18, 0xd4, 0xd2, 0x57, 0x3a, 0x52, 0x35)) }
+    // Microsoft.UI.Xaml.Controls.UserControl CreateInstance(System.Object, ref System.Object)
+    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIUserControl>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIUserControlFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IUserControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIUserControl>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IUserControl(consuming: __result);
+    }
+} // IUserControlFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IUserControlStatics
+// interface type
+open class IUserControlStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x575e8fa1, Data2: 0x2e2d, Data3 : 0x5857, Data4 : (0x9a, 0x93, 0x6b, 0x11, 0xe5, 0x43, 0x16, 0xba)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ContentProperty()
+    public func _n_get_ContentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIUserControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentProperty(pThis, __presult))
+        }
+    }
+    public func get_ContentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ContentProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var ContentProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ContentProperty();
+        }
+    }
+} // IUserControlStatics
+
+
 // type: Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs
 // runtime class
 public class IsTextTrimmedChangedEventArgs
@@ -6950,17 +7035,17 @@ open class StackPanel
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
         return try _ifc.get_AreVerticalSnapPointsRegular();
     }
-    public func add_HorizontalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_HorizontalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.EventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_HorizontalSnapPointsChanged(handler: handler);
+        return try _ifc.add_HorizontalSnapPointsChanged(handler: handler!.Interface());
     }
     public func remove_HorizontalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
         return try _ifc.remove_HorizontalSnapPointsChanged(token: token);
     }
-    public func add_VerticalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_VerticalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.EventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_VerticalSnapPointsChanged(handler: handler);
+        return try _ifc.add_VerticalSnapPointsChanged(handler: handler!.Interface());
     }
     public func remove_VerticalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
@@ -7486,9 +7571,9 @@ public class TextBlock
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.remove_ContextMenuOpening(token: token);
     }
-    public func add_IsTextTrimmedChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_IsTextTrimmedChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_IsTextTrimmedChanged(handler: handler);
+        return try _ifc.add_IsTextTrimmedChanged(handler: handler!.Interface());
     }
     public func remove_IsTextTrimmedChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
@@ -7788,6 +7873,57 @@ public class UIElementCollection
         }
     }
     // method not needed: First
+}
+
+// type: Microsoft.UI.Xaml.Controls.UserControl
+// runtime class
+open class UserControl
+    :
+    Microsoft.UI.Xaml.Controls.Control
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IUserControl;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IUserControl?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IUserControl { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IUserControlFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IUserControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.UserControl");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IUserControlStatics {
+        static var x : IUserControlStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.UserControl")
+    }
+    public static var UserControlStatics : IUserControlStatics {
+        _IUserControlStatics.x
+    }
+    public static func get_ContentProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: UserControlStatics.get_ContentProperty());
+    }
+    public static var ContentProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: UserControlStatics.ContentProperty);
+        }
+    }
+    public func get_Content() throws -> Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IUserControl = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.get_Content());
+    }
+    public func put_Content(value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IUserControl = try _self.QueryInterface();
+        return try _ifc.put_Content(value: value!.Interface());
+    }
+    public var Content : Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IUserControl = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.Content);
+        }
+    }
 }
 
 }

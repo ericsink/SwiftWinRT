@@ -61,7 +61,10 @@ open class CompositionObject
     // instance interface not needed: Microsoft.UI.Composition.ICompositionObject3
     // instance interface not needed: Microsoft.UI.Composition.ICompositionObject4
     // instance interface not needed: Microsoft.UI.Composition.ICompositionObject5
-    // instance interface not needed: Windows.Foundation.IClosable
+    public func Close() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
     public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<WinRT.Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();
         return try _ifc.PopulatePropertyInfo(propertyName: propertyName, propertyInfo: propertyInfo!.Interface());
@@ -117,7 +120,10 @@ public class Compositor
     // instance interface not needed: Microsoft.UI.Composition.ICompositorWithRadialGradient
     // instance interface not needed: Microsoft.UI.Composition.ICompositorWithVisualSurface
     // instance interface not needed: Microsoft.UI.Composition.ICompositor8
-    // instance interface not needed: Windows.Foundation.IClosable
+    public func Close() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
 }
 
 // type: Microsoft.UI.Composition.IAnimationObject

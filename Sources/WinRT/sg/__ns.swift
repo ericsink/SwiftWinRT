@@ -2,6 +2,14 @@
 // if you modify it by hand, your changes will probably be lost.
 
 public struct Microsoft { }
+extension Microsoft { public struct Graphics { } }
+extension Microsoft.Graphics { public struct Canvas { } }
+extension Microsoft.Graphics.Canvas { public struct Brushes { } }
+extension Microsoft.Graphics.Canvas { public struct Geometry { } }
+extension Microsoft.Graphics.Canvas { public struct Svg { } }
+extension Microsoft.Graphics.Canvas { public struct Text { } }
+extension Microsoft.Graphics.Canvas { public struct UI { } }
+extension Microsoft.Graphics.Canvas.UI { public struct Xaml { } }
 extension Microsoft { public struct UI { } }
 extension Microsoft.UI { public struct Composition { } }
 extension Microsoft.UI { public struct Dispatching { } }
@@ -29,6 +37,8 @@ extension Windows.Data.Xml { public struct Dom { } }
 extension Windows { public struct Foundation { } }
 extension Windows.Foundation { public struct Collections { } }
 extension Windows.Foundation { public struct Numerics { } }
+extension Windows { public struct Graphics { } }
+extension Windows.Graphics { public struct Imaging { } }
 extension Windows { public struct Security { } }
 extension Windows.Security { public struct Cryptography { } }
 extension Windows { public struct Storage { } }

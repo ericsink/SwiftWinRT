@@ -11,6 +11,7 @@ let SwiftWinRT = Package(
     .executable(name: "Power", targets: ["Power"]),
     .executable(name: "HttpClient", targets: ["HttpClient"]),
     .executable(name: "XamlApp", targets: ["XamlApp"]),
+    .executable(name: "Canvas", targets: ["Canvas"]),
     .library(name: "SwiftWinRT", targets: ["WinRT"]),
   ],
   targets: [
@@ -33,6 +34,17 @@ let SwiftWinRT = Package(
             ]
             ),
     .target(name: "XamlApp", dependencies: ["WinRT"],
+            swiftSettings: [
+              .unsafeFlags(["-parse-as-library"]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+            ]
+            ),
+    .target(name: "Canvas", dependencies: ["WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],

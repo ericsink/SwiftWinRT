@@ -50,7 +50,10 @@ public class HttpClient
     // method not needed: SendRequestAsync
     // method not needed: get_DefaultRequestHeaders
     // instance interface not needed: Windows.Web.Http.IHttpClient2
-    // instance interface not needed: Windows.Foundation.IClosable
+    public func Close() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
     // instance interface not needed: Windows.Foundation.IStringable
 }
 
@@ -110,7 +113,10 @@ public class HttpResponseMessage
             return try _ifc.Content;
         }
     }
-    // instance interface not needed: Windows.Foundation.IClosable
+    public func Close() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
     // instance interface not needed: Windows.Foundation.IStringable
 }
 
