@@ -1,6 +1,14 @@
 
 import WinRT
 
+// TODO this delegate overload extension method should be generated
+extension Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl {
+    public func add_Draw(closure : @escaping (Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        // TODO the presence of this mangled name here is obviously dreadful
+        return try self.add_Draw(value: Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: closure))
+    }
+}
+
 class MyApp : Microsoft.UI.Xaml.Application {
     override func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
@@ -8,10 +16,9 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try w.put_Title(value: "Hello from Swift");
 
         let canvas = try Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl()
-        // TODO the presence of this mangled name here is obviously dreadful
         let textFormat = try Microsoft.Graphics.Canvas.Text.CanvasTextFormat()
         try textFormat.put_FontSize(value: 32)
-        let draw = Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
+        _ = try canvas.add_Draw
         {
             (sender, args: Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs?) in
 
@@ -21,8 +28,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
             try args!.DrawingSession!.FillRoundedRectangle(x: 300, y: 300, w: 80, h: 40, radiusX: 10, radiusY: 10, color: Microsoft.UI.Colors.Blue);
             try args!.DrawingSession!.FillRectangle(x: 400, y: 50, w: 80, h: 200, color: Microsoft.UI.Colors.DarkGreen);
         }
-        _ = try canvas.put_ClearColor(value: Microsoft.UI.Colors.LightBlue);
-        _ = try canvas.add_Draw(value: draw);
+        try canvas.put_ClearColor(value: Microsoft.UI.Colors.LightBlue);
 
         try w.put_Content(value: canvas);
 
