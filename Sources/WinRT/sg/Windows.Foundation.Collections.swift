@@ -1266,4 +1266,15 @@ public class IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement
 // method not needed: MoveNext
 // method not needed: GetMany
 } // IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement
+// closed interface type
+public class IVectorView_1_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2f13c006, Data2: 0xa03a, Data3 : 0x5f69, Data4 : (0xb0, 0x90, 0x75, 0xa4, 0x3e, 0x33, 0x42, 0x3e)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1_HSTRING
 }
