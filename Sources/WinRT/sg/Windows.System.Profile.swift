@@ -85,7 +85,7 @@ public class SystemIdentification
 {
     private struct _ISystemIdentificationStatics {
         static var x : ISystemIdentificationStatics =
-            try! RoGetActivationFactory(HString("Windows.System.Profile.SystemIdentification"))
+            try! RoGetActivationFactory("Windows.System.Profile.SystemIdentification")
     }
     public static var SystemIdentificationStatics : ISystemIdentificationStatics {
         _ISystemIdentificationStatics.x

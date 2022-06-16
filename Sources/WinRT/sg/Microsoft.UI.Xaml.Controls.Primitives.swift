@@ -20,14 +20,14 @@ open class ButtonBase
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IButtonBaseFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IButtonBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"));
+        let _af : IButtonBaseFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IButtonBaseStatics {
         static var x : IButtonBaseStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Primitives.ButtonBase")
     }
     public static var ButtonBaseStatics : IButtonBaseStatics {
         _IButtonBaseStatics.x
@@ -163,7 +163,7 @@ open class FlyoutBase
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBaseFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IFlyoutBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase"));
+        let _af : IFlyoutBaseFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -1090,7 +1090,7 @@ open class RangeBase
         self.instance = instance
         instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IRangeBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"));
+        let _af : IRangeBaseFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Primitives.RangeBase");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
@@ -1099,7 +1099,7 @@ open class RangeBase
     }
     private struct _IRangeBaseStatics {
         static var x : IRangeBaseStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Primitives.RangeBase"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Primitives.RangeBase")
     }
     public static var RangeBaseStatics : IRangeBaseStatics {
         _IRangeBaseStatics.x

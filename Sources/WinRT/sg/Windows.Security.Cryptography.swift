@@ -15,7 +15,7 @@ public class CryptographicBuffer
 {
     private struct _ICryptographicBufferStatics {
         static var x : ICryptographicBufferStatics =
-            try! RoGetActivationFactory(HString("Windows.Security.Cryptography.CryptographicBuffer"))
+            try! RoGetActivationFactory("Windows.Security.Cryptography.CryptographicBuffer")
     }
     public static var CryptographicBufferStatics : ICryptographicBufferStatics {
         _ICryptographicBufferStatics.x

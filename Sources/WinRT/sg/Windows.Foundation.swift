@@ -3569,12 +3569,12 @@ public class Uri
     }
     internal func Interface() -> WinRT.Windows.Foundation.IUriRuntimeClass { return _self; }
     public init(uri : Swift.String) throws {
-        let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
+        let _af : IUriRuntimeClassFactory = try RoGetActivationFactory("Windows.Foundation.Uri");
         _self = try _af.CreateUri(uri: uri)!;
         try super.init(plok: _self.QueryInterface())
     }
     public init(baseUri : Swift.String, relativeUri : Swift.String) throws {
-        let _af : IUriRuntimeClassFactory = try RoGetActivationFactory(HString("Windows.Foundation.Uri"));
+        let _af : IUriRuntimeClassFactory = try RoGetActivationFactory("Windows.Foundation.Uri");
         _self = try _af.CreateWithRelativeUri(baseUri: baseUri, relativeUri: relativeUri)!;
         try super.init(plok: _self.QueryInterface())
     }

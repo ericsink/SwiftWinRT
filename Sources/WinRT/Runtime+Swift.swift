@@ -26,3 +26,63 @@ public func RoActivateInstance<Instance: IInspectable>(_ activatableClassId: HSt
   try CHECKED(RoActivateInstance(activatableClassId.hRef.hString, &instance))
   return Instance(consuming: UnsafeMutableRawPointer(instance)?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
 }
+
+// ----------------------------------------------------------------
+// TODO stuff below is a temporary experimental hack
+// to get win2d working
+
+public func LoadGetActivationFactory(dll: String) throws -> PFNGETACTIVATIONFACTORY {
+    let hMod = dll.withCString(encodedAs: UTF16.self) {
+        return LoadLibraryW($0)
+    }
+    if hMod == nil {
+        let dw = GetLastError()
+        let hr = HRESULT_FROM_WIN32(dw)
+        throw Error(hr: hr)
+    }
+    let proc = "DllGetActivationFactory".withCString(encodedAs: UTF8.self) {
+        return GetProcAddress(hMod, $0)
+    }
+    if proc == nil {
+        let dw = GetLastError()
+        let hr = HRESULT_FROM_WIN32(dw)
+        throw Error(hr: hr)
+    }
+    return unsafeBitCast(proc, to: PFNGETACTIVATIONFACTORY.self);
+}
+
+public func RoGetActivationFactory<Factory: IInspectable>(_ activatableClassId: String) throws -> Factory {
+    // TODO if this function is going to do extra things,
+    // it should have a different name
+    if activatableClassId.starts(with: "Microsoft.Graphics.Canvas.") {
+        print("TODO CANVAS RoGetActivationFactory")
+        throw Error(hr: E_INVALIDARG)
+    } else {
+        return try RoGetActivationFactory(HString(activatableClassId))
+    }
+}
+
+public func RoActivateInstance<Instance: IInspectable>(_ activatableClassId: String) throws -> Instance {
+    // TODO if this function is going to do extra things,
+    // it should have a different name
+    if activatableClassId.starts(with: "Microsoft.Graphics.Canvas.") {
+        let hstr = try HString(activatableClassId).hRef.hString!
+        var p_factory : Optional<UnsafeMutablePointer<IActivationFactory>> = nil
+        try CHECKED(gaf_canvas!(hstr, &p_factory))
+        var instance: UnsafeMutablePointer<CWinRT.IInspectable>?
+        try CHECKED(p_factory!.pointee.lpVtbl.pointee.ActivateInstance(p_factory, &instance))
+        return Instance(consuming: UnsafeMutableRawPointer(instance)?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
+    } else {
+        return try RoActivateInstance(HString(activatableClassId))
+    }
+}
+
+// TODO what *should* happen is the app should call here
+// to register a namespace prefix plus a dll
+
+fileprivate var gaf_canvas : Optional<PFNGETACTIVATIONFACTORY> = nil
+
+public func prepare_win2d() throws {
+    gaf_canvas = try LoadGetActivationFactory(dll: "Microsoft.Graphics.Canvas.dll")
+}
+

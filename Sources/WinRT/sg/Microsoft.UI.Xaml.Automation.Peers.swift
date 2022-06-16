@@ -20,7 +20,7 @@ open class AutomationPeer
     // COMPOSABLE: Microsoft.UI.Xaml.Automation.Peers.IAutomationPeerFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IAutomationPeerFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Automation.Peers.AutomationPeer"));
+        let _af : IAutomationPeerFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Automation.Peers.AutomationPeer");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())

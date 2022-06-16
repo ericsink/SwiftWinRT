@@ -19,7 +19,7 @@ public class Colors
     internal func Interface() -> WinRT.Microsoft.UI.IColors { return _self; }
     private struct _IColorsStatics {
         static var x : IColorsStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Colors"))
+            try! RoGetActivationFactory("Microsoft.UI.Colors")
     }
     public static var ColorsStatics : IColorsStatics {
         _IColorsStatics.x

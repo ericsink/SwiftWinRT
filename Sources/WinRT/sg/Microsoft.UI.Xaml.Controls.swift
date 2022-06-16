@@ -24,14 +24,14 @@ open class Button
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IButtonFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IButtonFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Button"));
+        let _af : IButtonFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Button");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IButtonStatics {
         static var x : IButtonStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Button"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Button")
     }
     public static var ButtonStatics : IButtonStatics {
         _IButtonStatics.x
@@ -201,7 +201,7 @@ open class ContentControl
         self.instance = instance
         instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IContentControlFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.ContentControl"));
+        let _af : IContentControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ContentControl");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
@@ -210,7 +210,7 @@ open class ContentControl
     }
     private struct _IContentControlStatics {
         static var x : IContentControlStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.ContentControl"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ContentControl")
     }
     public static var ContentControlStatics : IContentControlStatics {
         _IContentControlStatics.x
@@ -968,7 +968,7 @@ open class Control
         self.instance = instance
         instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IControlFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Control"));
+        let _af : IControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Control");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
@@ -977,7 +977,7 @@ open class Control
     }
     private struct _IControlStatics {
         static var x : IControlStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Control"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Control")
     }
     public static var ControlStatics : IControlStatics {
         _IControlStatics.x
@@ -1891,8 +1891,7 @@ public class ControlTemplate
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IControlTemplate { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Controls.ControlTemplate")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ControlTemplate")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_TargetType
@@ -1914,7 +1913,7 @@ open class DataTemplateSelector
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IDataTemplateSelectorFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IDataTemplateSelectorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.DataTemplateSelector"));
+        let _af : IDataTemplateSelectorFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.DataTemplateSelector");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -6365,14 +6364,14 @@ open class Panel
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IPanelFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IPanelFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Panel"));
+        let _af : IPanelFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Panel");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IPanelStatics {
         static var x : IPanelStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Panel"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Panel")
     }
     public static var PanelStatics : IPanelStatics {
         _IPanelStatics.x
@@ -6484,14 +6483,14 @@ open class Slider
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.ISliderFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : ISliderFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Slider"));
+        let _af : ISliderFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Slider");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _ISliderStatics {
         static var x : ISliderStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.Slider"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Slider")
     }
     public static var SliderStatics : ISliderStatics {
         _ISliderStatics.x
@@ -6755,14 +6754,14 @@ open class StackPanel
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IStackPanelFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IStackPanelFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.StackPanel"));
+        let _af : IStackPanelFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.StackPanel");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IStackPanelStatics {
         static var x : IStackPanelStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.StackPanel"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.StackPanel")
     }
     public static var StackPanelStatics : IStackPanelStatics {
         _IStackPanelStatics.x
@@ -7009,13 +7008,12 @@ public class TextBlock
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.ITextBlock { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Controls.TextBlock")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.TextBlock")
         try super.init(plok: _self.QueryInterface())
     }
     private struct _ITextBlockStatics {
         static var x : ITextBlockStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Controls.TextBlock"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TextBlock")
     }
     public static var TextBlockStatics : ITextBlockStatics {
         _ITextBlockStatics.x

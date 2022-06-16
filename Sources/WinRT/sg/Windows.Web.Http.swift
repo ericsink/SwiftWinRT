@@ -18,12 +18,11 @@ public class HttpClient
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpClient { return _self; }
     public init() throws {
-        let _classId = try HString("Windows.Web.Http.HttpClient")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Windows.Web.Http.HttpClient")
         try super.init(plok: _self.QueryInterface())
     }
     public init(filter : Optional<WinRT.Windows.Web.Http.Filters.IHttpFilter>) throws {
-        let _af : IHttpClientFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpClient"));
+        let _af : IHttpClientFactory = try RoGetActivationFactory("Windows.Web.Http.HttpClient");
         _self = try _af.Create(filter: filter)!;
         try super.init(plok: _self.QueryInterface())
     }
@@ -76,12 +75,11 @@ public class HttpResponseMessage
     }
     internal func Interface() -> WinRT.Windows.Web.Http.IHttpResponseMessage { return _self; }
     public init() throws {
-        let _classId = try HString("Windows.Web.Http.HttpResponseMessage")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Windows.Web.Http.HttpResponseMessage")
         try super.init(plok: _self.QueryInterface())
     }
     public init(statusCode : WinRT.Windows.Web.Http.HttpStatusCode) throws {
-        let _af : IHttpResponseMessageFactory = try RoGetActivationFactory(HString("Windows.Web.Http.HttpResponseMessage"));
+        let _af : IHttpResponseMessageFactory = try RoGetActivationFactory("Windows.Web.Http.HttpResponseMessage");
         _self = try _af.Create(statusCode: statusCode)!;
         try super.init(plok: _self.QueryInterface())
     }

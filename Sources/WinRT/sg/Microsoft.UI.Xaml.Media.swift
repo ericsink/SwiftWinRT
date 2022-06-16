@@ -112,7 +112,7 @@ open class Brush
         self.instance = instance
         instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Brush"));
+        let _af : IBrushFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Brush");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
@@ -121,7 +121,7 @@ open class Brush
     }
     private struct _IBrushStatics {
         static var x : IBrushStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Brush"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.Brush")
     }
     public static var BrushStatics : IBrushStatics {
         _IBrushStatics.x
@@ -227,7 +227,7 @@ open class CacheMode
     // COMPOSABLE: Microsoft.UI.Xaml.Media.ICacheModeFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : ICacheModeFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.CacheMode"));
+        let _af : ICacheModeFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.CacheMode");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -257,7 +257,7 @@ open class FontFamily
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IFontFamilyFactory
     public init(familyName : Swift.String) throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IFontFamilyFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.FontFamily"));
+        let _af : IFontFamilyFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.FontFamily");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstanceWithName(familyName: familyName, baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -281,7 +281,7 @@ open class GeneralTransform
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IGeneralTransformFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IGeneralTransformFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.GeneralTransform"));
+        let _af : IGeneralTransformFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.GeneralTransform");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -328,14 +328,14 @@ open class GradientBrush
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IGradientBrushFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IGradientBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.GradientBrush"));
+        let _af : IGradientBrushFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.GradientBrush");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IGradientBrushStatics {
         static var x : IGradientBrushStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.GradientBrush"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.GradientBrush")
     }
     public static var GradientBrushStatics : IGradientBrushStatics {
         _IGradientBrushStatics.x
@@ -447,13 +447,12 @@ public class GradientStop
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IGradientStop { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Media.GradientStop")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.GradientStop")
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IGradientStopStatics {
         static var x : IGradientStopStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.GradientStop"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.GradientStop")
     }
     public static var GradientStopStatics : IGradientStopStatics {
         _IGradientStopStatics.x
@@ -517,8 +516,7 @@ public class GradientStopCollection
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Media.GradientStopCollection")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.GradientStopCollection")
         try super.init(plok: _self.QueryInterface())
     }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop> {
@@ -1521,18 +1519,17 @@ public class LinearGradientBrush
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush { return _self; }
     public init(gradientStopCollection : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStopCollection>, angle : Swift.Double) throws {
-        let _af : ILinearGradientBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.LinearGradientBrush"));
+        let _af : ILinearGradientBrushFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.LinearGradientBrush");
         _self = try _af.CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection: gradientStopCollection!.Interface(), angle: angle)!;
         try super.init(plok: _self.QueryInterface())
     }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Media.LinearGradientBrush")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.LinearGradientBrush")
         try super.init(plok: _self.QueryInterface())
     }
     private struct _ILinearGradientBrushStatics {
         static var x : ILinearGradientBrushStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.LinearGradientBrush"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.LinearGradientBrush")
     }
     public static var LinearGradientBrushStatics : ILinearGradientBrushStatics {
         _ILinearGradientBrushStatics.x
@@ -1598,7 +1595,7 @@ open class Projection
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IProjectionFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IProjectionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Projection"));
+        let _af : IProjectionFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Projection");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -1618,8 +1615,7 @@ public class RectangleGeometry
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IRectangleGeometry { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Media.RectangleGeometry")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.RectangleGeometry")
         try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Xaml.Media.IRectangleGeometryStatics
@@ -1656,18 +1652,17 @@ public class SolidColorBrush
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.ISolidColorBrush { return _self; }
     public init(color : WinRT.Windows.UI.Color) throws {
-        let _af : ISolidColorBrushFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.SolidColorBrush"));
+        let _af : ISolidColorBrushFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.SolidColorBrush");
         _self = try _af.CreateInstanceWithColor(color: color)!;
         try super.init(plok: _self.QueryInterface())
     }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Media.SolidColorBrush")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.SolidColorBrush")
         try super.init(plok: _self.QueryInterface())
     }
     private struct _ISolidColorBrushStatics {
         static var x : ISolidColorBrushStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.SolidColorBrush"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.SolidColorBrush")
     }
     public static var SolidColorBrushStatics : ISolidColorBrushStatics {
         _ISolidColorBrushStatics.x
@@ -1727,7 +1722,7 @@ open class XamlLight
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IXamlLightFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IXamlLightFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.XamlLight"));
+        let _af : IXamlLightFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.XamlLight");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())

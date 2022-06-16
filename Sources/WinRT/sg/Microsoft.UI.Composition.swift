@@ -81,8 +81,7 @@ public class Compositor
     }
     internal func Interface() -> WinRT.Microsoft.UI.Composition.ICompositor { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Composition.Compositor")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Composition.Compositor")
         try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Microsoft.UI.Composition.ICompositorStatics

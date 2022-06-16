@@ -109,7 +109,7 @@ public class ToastNotification
     }
     internal func Interface() -> WinRT.Windows.UI.Notifications.IToastNotification { return _self; }
     public init(content : Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument>) throws {
-        let _af : IToastNotificationFactory = try RoGetActivationFactory(HString("Windows.UI.Notifications.ToastNotification"));
+        let _af : IToastNotificationFactory = try RoGetActivationFactory("Windows.UI.Notifications.ToastNotification");
         _self = try _af.CreateToastNotification(content: content!.Interface())!;
         try super.init(plok: _self.QueryInterface())
     }
@@ -136,7 +136,7 @@ public class ToastNotificationManager
     // static interface not needed: Windows.UI.Notifications.IToastNotificationManagerStatics2
     private struct _IToastNotificationManagerStatics {
         static var x : IToastNotificationManagerStatics =
-            try! RoGetActivationFactory(HString("Windows.UI.Notifications.ToastNotificationManager"))
+            try! RoGetActivationFactory("Windows.UI.Notifications.ToastNotificationManager")
     }
     public static var ToastNotificationManagerStatics : IToastNotificationManagerStatics {
         _IToastNotificationManagerStatics.x

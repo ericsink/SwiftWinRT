@@ -69,8 +69,7 @@ public class XmlDocument
     }
     internal func Interface() -> WinRT.Windows.Data.Xml.Dom.IXmlDocument { return _self; }
     public init() throws {
-        let _classId = try HString("Windows.Data.Xml.Dom.XmlDocument")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Windows.Data.Xml.Dom.XmlDocument")
         try super.init(plok: _self.QueryInterface())
     }
     // static interface not needed: Windows.Data.Xml.Dom.IXmlDocumentStatics

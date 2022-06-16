@@ -19,7 +19,7 @@ public class DispatcherQueueController
     internal func Interface() -> WinRT.Windows.System.IDispatcherQueueController { return _self; }
     private struct _IDispatcherQueueControllerStatics {
         static var x : IDispatcherQueueControllerStatics =
-            try! RoGetActivationFactory(HString("Windows.System.DispatcherQueueController"))
+            try! RoGetActivationFactory("Windows.System.DispatcherQueueController")
     }
     public static var DispatcherQueueControllerStatics : IDispatcherQueueControllerStatics {
         _IDispatcherQueueControllerStatics.x

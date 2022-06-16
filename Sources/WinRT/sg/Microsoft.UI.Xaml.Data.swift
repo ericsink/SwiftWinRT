@@ -20,7 +20,7 @@ open class BindingBase
     // COMPOSABLE: Microsoft.UI.Xaml.Data.IBindingBaseFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IBindingBaseFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Data.BindingBase"));
+        let _af : IBindingBaseFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Data.BindingBase");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())

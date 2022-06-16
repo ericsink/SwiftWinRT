@@ -169,7 +169,7 @@ open class Inline
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.IInlineFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IInlineFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.Inline"));
+        let _af : IInlineFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Documents.Inline");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -329,7 +329,7 @@ open class TextHighlighter
     // COMPOSABLE: Microsoft.UI.Xaml.Documents.ITextHighlighterFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : ITextHighlighterFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Documents.TextHighlighter"));
+        let _af : ITextHighlighterFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Documents.TextHighlighter");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())

@@ -18,8 +18,7 @@ public class AccessKeyDisplayDismissedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayDismissedEventArgs { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
 }
@@ -37,8 +36,7 @@ public class AccessKeyDisplayRequestedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyDisplayRequestedEventArgs { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_PressedKeys
@@ -57,8 +55,7 @@ public class AccessKeyInvokedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IAccessKeyInvokedEventArgs { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Handled
@@ -96,8 +93,7 @@ public class ContextRequestedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IContextRequestedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.ContextRequestedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.ContextRequestedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Handled
@@ -211,8 +207,7 @@ public class DoubleTappedRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_PointerDeviceType
@@ -354,8 +349,7 @@ public class HoldingRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IHoldingRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_PointerDeviceType
@@ -927,7 +921,7 @@ open class KeyboardAccelerator
     // COMPOSABLE: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IKeyboardAcceleratorFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.KeyboardAccelerator"));
+        let _af : IKeyboardAcceleratorFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Input.KeyboardAccelerator");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -1104,8 +1098,7 @@ public class ManipulationCompletedRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Container
@@ -1224,8 +1217,7 @@ public class ManipulationDeltaRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Container
@@ -1346,8 +1338,7 @@ public class ManipulationInertiaStartingRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Container
@@ -1477,7 +1468,7 @@ open class ManipulationStartedRoutedEventArgs
     // COMPOSABLE: Microsoft.UI.Xaml.Input.IManipulationStartedRoutedEventArgsFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IManipulationStartedRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs"));
+        let _af : IManipulationStartedRoutedEventArgsFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -1597,8 +1588,7 @@ public class ManipulationStartingRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_Mode
@@ -1885,8 +1875,7 @@ public class RightTappedRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IRightTappedRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_PointerDeviceType
@@ -2001,8 +1990,7 @@ public class TappedRoutedEventArgs
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ITappedRoutedEventArgs { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Input.TappedRoutedEventArgs")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.TappedRoutedEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_PointerDeviceType

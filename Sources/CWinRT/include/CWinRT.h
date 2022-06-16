@@ -8,6 +8,7 @@
 #include <minwindef.h>
 #include <winnt.h>
 #include <combaseapi.h>
+#include <libloaderapi.h>
 
 #include <roapi.h>
 #include <winstring.h>

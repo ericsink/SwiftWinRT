@@ -54,7 +54,7 @@ open class Transform3D
     // COMPOSABLE: Microsoft.UI.Xaml.Media.Media3D.ITransform3DFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : ITransform3DFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Media.Media3D.Transform3D"));
+        let _af : ITransform3DFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Media3D.Transform3D");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())

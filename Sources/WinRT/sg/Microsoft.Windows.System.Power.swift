@@ -452,7 +452,7 @@ public class PowerManager
 {
     private struct _IPowerManagerStatics {
         static var x : IPowerManagerStatics =
-            try! RoGetActivationFactory(HString("Microsoft.Windows.System.Power.PowerManager"))
+            try! RoGetActivationFactory("Microsoft.Windows.System.Power.PowerManager")
     }
     public static var PowerManagerStatics : IPowerManagerStatics {
         _IPowerManagerStatics.x
@@ -605,7 +605,7 @@ public class PowerManager
     }
     private struct _IPowerManagerStatics2 {
         static var x : IPowerManagerStatics2 =
-            try! RoGetActivationFactory(HString("Microsoft.Windows.System.Power.PowerManager"))
+            try! RoGetActivationFactory("Microsoft.Windows.System.Power.PowerManager")
     }
     public static var PowerManagerStatics2 : IPowerManagerStatics2 {
         _IPowerManagerStatics2.x

@@ -52,17 +52,6 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try btn.put_Content(value: TextBlock(text: "Click", fontSize: 32));
         try stack.Children!.Append(value: btn)
 
-#if not
-        let canvas = try Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl()
-        let draw = Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
-        {
-            (sender, args: Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs?) in
-            try args!.DrawingSession!.DrawTextAtPointCoordsWithColor(text: "Hello, World!", x: 100, y: 100, color: Microsoft.UI.Colors.Black);
-        }
-        _ = try canvas.add_Draw(value: draw.Interface());
-        try stack.Children!.Append(value: canvas)
-#endif
-
         try w.put_Content(value: stack);
 
         try w.Activate();

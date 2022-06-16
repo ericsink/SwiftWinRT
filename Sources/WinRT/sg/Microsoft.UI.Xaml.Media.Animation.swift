@@ -44,8 +44,7 @@ public class TransitionCollection
     }
     internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Media.Animation.TransitionCollection")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.Animation.TransitionCollection")
         try super.init(plok: _self.QueryInterface())
     }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Animation.Transition> {

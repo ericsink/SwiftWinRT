@@ -112,7 +112,7 @@ open class Application
         self.instance = instance
         instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IApplicationFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Application"));
+        let _af : IApplicationFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Application");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
@@ -121,7 +121,7 @@ open class Application
     }
     private struct _IApplicationStatics {
         static var x : IApplicationStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Application"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Application")
     }
     public static var ApplicationStatics : IApplicationStatics {
         _IApplicationStatics.x
@@ -361,8 +361,7 @@ public class BringIntoViewOptions
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IBringIntoViewOptions { return _self; }
     public init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.BringIntoViewOptions")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.BringIntoViewOptions")
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: get_AnimationDesired
@@ -422,7 +421,7 @@ open class BrushTransition
     // COMPOSABLE: Microsoft.UI.Xaml.IBrushTransitionFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IBrushTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.BrushTransition"));
+        let _af : IBrushTransitionFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.BrushTransition");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -467,7 +466,7 @@ open class DataTemplate
     // COMPOSABLE: Microsoft.UI.Xaml.IDataTemplateFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IDataTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DataTemplate"));
+        let _af : IDataTemplateFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.DataTemplate");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -516,7 +515,7 @@ open class DependencyObject
     // COMPOSABLE: Microsoft.UI.Xaml.IDependencyObjectFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IDependencyObjectFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.DependencyObject"));
+        let _af : IDependencyObjectFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.DependencyObject");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -1143,7 +1142,7 @@ open class FrameworkElement
         self.instance = instance
         instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IFrameworkElementFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkElement"));
+        let _af : IFrameworkElementFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.FrameworkElement");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
@@ -1152,7 +1151,7 @@ open class FrameworkElement
     }
     private struct _IFrameworkElementStatics {
         static var x : IFrameworkElementStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkElement"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.FrameworkElement")
     }
     public static var FrameworkElementStatics : IFrameworkElementStatics {
         _IFrameworkElementStatics.x
@@ -1914,7 +1913,7 @@ open class FrameworkTemplate
     // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkTemplateFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IFrameworkTemplateFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.FrameworkTemplate"));
+        let _af : IFrameworkTemplateFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.FrameworkTemplate");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -8759,7 +8758,7 @@ open class ResourceDictionary
     // COMPOSABLE: Microsoft.UI.Xaml.IResourceDictionaryFactory
     public override init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IResourceDictionaryFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ResourceDictionary"));
+        let _af : IResourceDictionaryFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.ResourceDictionary");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -8801,7 +8800,7 @@ open class RoutedEventArgs
     // COMPOSABLE: Microsoft.UI.Xaml.IRoutedEventArgsFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IRoutedEventArgsFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.RoutedEventArgs"));
+        let _af : IRoutedEventArgsFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.RoutedEventArgs");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -8917,7 +8916,7 @@ open class ScalarTransition
     // COMPOSABLE: Microsoft.UI.Xaml.IScalarTransitionFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IScalarTransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.ScalarTransition"));
+        let _af : IScalarTransitionFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.ScalarTransition");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -9048,12 +9047,11 @@ public class Style
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.IStyle { return _self; }
     public override init() throws {
-        let _classId = try HString("Microsoft.UI.Xaml.Style")
-        _self = try RoActivateInstance(_classId)
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Style")
         try super.init(plok: _self.QueryInterface())
     }
     public init(targetType : WinRT.Windows.UI.Xaml.Interop.TypeName) throws {
-        let _af : IStyleFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Style"));
+        let _af : IStyleFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Style");
         _self = try _af.CreateInstance(targetType: targetType)!;
         try super.init(plok: _self.QueryInterface())
     }
@@ -9389,7 +9387,7 @@ open class UIElement
 // composable interface not needed: Microsoft.UI.Xaml.IUIElementFactory
     private struct _IUIElementStatics {
         static var x : IUIElementStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.UIElement"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.UIElement")
     }
     public static var UIElementStatics : IUIElementStatics {
         _IUIElementStatics.x
@@ -11571,7 +11569,7 @@ open class Vector3Transition
     // COMPOSABLE: Microsoft.UI.Xaml.IVector3TransitionFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IVector3TransitionFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Vector3Transition"));
+        let _af : IVector3TransitionFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Vector3Transition");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
@@ -11605,14 +11603,14 @@ open class Window
     // COMPOSABLE: Microsoft.UI.Xaml.IWindowFactory
     public init() throws {
         var _inn : Optional<WinRT.IInspectable> = nil
-        let _af : IWindowFactory = try RoGetActivationFactory(HString("Microsoft.UI.Xaml.Window"));
+        let _af : IWindowFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Window");
         let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
     private struct _IWindowStatics {
         static var x : IWindowStatics =
-            try! RoGetActivationFactory(HString("Microsoft.UI.Xaml.Window"))
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Window")
     }
     public static var WindowStatics : IWindowStatics {
         _IWindowStatics.x
