@@ -685,6 +685,435 @@ public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
 // method not needed: GetMany
 } // IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
 // closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xea4a1af0, Data2: 0x4286, Data3 : 0x5f11, Data4 : (0x81, 0x42, 0x6b, 0x01, 0x69, 0xf4, 0xe9, 0xde)) }
+    // Microsoft.UI.Xaml.UIElement GetAt(System.UInt32)
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
+        }
+    }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.IUIElement> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>> = nil;
+        try self._n_GetAt(index, &__result);
+        return WinRT.Microsoft.UI.Xaml.IUIElement(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt32 get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> GetView()
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
+        }
+    }
+    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>> = nil;
+        try self._n_GetView(&__result);
+        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
+    }
+    // bool IndexOf(Microsoft.UI.Xaml.UIElement, ref System.UInt32)
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
+        }
+    }
+    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, index : inout Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+            var _tmp_out_index: UINT32 = 0;
+        try self._n_IndexOf(RawPointer(value), &_tmp_out_index, &__result);
+            index = _tmp_out_index;
+        return __result;
+    }
+    // void SetAt(System.UInt32, Microsoft.UI.Xaml.UIElement)
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
+        }
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
+        try self._n_SetAt(index, RawPointer(value));
+    }
+    // void InsertAt(System.UInt32, Microsoft.UI.Xaml.UIElement)
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
+        }
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
+        try self._n_InsertAt(index, RawPointer(value));
+    }
+    // void RemoveAt(System.UInt32)
+    private func _n_RemoveAt(_ index : UINT32) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        try self._n_RemoveAt(index);
+    }
+    // void Append(Microsoft.UI.Xaml.UIElement)
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+    // void RemoveAtEnd()
+    private func _n_RemoveAtEnd() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+    public func RemoveAtEnd() throws -> Void {
+        try self._n_RemoveAtEnd();
+    }
+    // void Clear()
+    private func _n_Clear() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+    public func Clear() throws -> Void {
+        try self._n_Clear();
+    }
+    // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.UIElement[])
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
+        }
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_GetMany(startIndex, itemsLength, items, &__result);
+        return __result;
+    }
+    // void ReplaceAll(Microsoft.UI.Xaml.UIElement[])
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
+        }
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws -> Void {
+        try self._n_ReplaceAll(itemsLength, items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+            return try get_Size();
+        }
+    }
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4fdea5ee, Data2: 0xc725, Data3 : 0x5026, Data4 : (0xba, 0x83, 0x24, 0xe5, 0x77, 0x13, 0x57, 0xc6)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
+// closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5ddd9577, Data2: 0x3f94, Data3 : 0x567f, Data4 : (0xbe, 0xef, 0x54, 0x05, 0x68, 0x52, 0x22, 0x89)) }
+    // Microsoft.UI.Xaml.Controls.RowDefinition GetAt(System.UInt32)
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
+        }
+    }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>> = nil;
+        try self._n_GetAt(index, &__result);
+        return WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt32 get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.RowDefinition> GetView()
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
+        }
+    }
+    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition>> = nil;
+        try self._n_GetView(&__result);
+        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition(consuming: __result);
+    }
+    // bool IndexOf(Microsoft.UI.Xaml.Controls.RowDefinition, ref System.UInt32)
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
+        }
+    }
+    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition>, index : inout Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+            var _tmp_out_index: UINT32 = 0;
+        try self._n_IndexOf(RawPointer(value), &_tmp_out_index, &__result);
+            index = _tmp_out_index;
+        return __result;
+    }
+    // void SetAt(System.UInt32, Microsoft.UI.Xaml.Controls.RowDefinition)
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
+        }
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition>) throws -> Void {
+        try self._n_SetAt(index, RawPointer(value));
+    }
+    // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Controls.RowDefinition)
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
+        }
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition>) throws -> Void {
+        try self._n_InsertAt(index, RawPointer(value));
+    }
+    // void RemoveAt(System.UInt32)
+    private func _n_RemoveAt(_ index : UINT32) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        try self._n_RemoveAt(index);
+    }
+    // void Append(Microsoft.UI.Xaml.Controls.RowDefinition)
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+    // void RemoveAtEnd()
+    private func _n_RemoveAtEnd() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+    public func RemoveAtEnd() throws -> Void {
+        try self._n_RemoveAtEnd();
+    }
+    // void Clear()
+    private func _n_Clear() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+    public func Clear() throws -> Void {
+        try self._n_Clear();
+    }
+    // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Controls.RowDefinition[])
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
+        }
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_GetMany(startIndex, itemsLength, items, &__result);
+        return __result;
+    }
+    // void ReplaceAll(Microsoft.UI.Xaml.Controls.RowDefinition[])
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
+        }
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws -> Void {
+        try self._n_ReplaceAll(itemsLength, items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+            return try get_Size();
+        }
+    }
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xeaa65d85, Data2: 0x3fa0, Data3 : 0x5bc2, Data4 : (0xb1, 0xbe, 0x7b, 0xc7, 0x22, 0x25, 0x3e, 0xae)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
+// closed interface type
+public class IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x749bc47c, Data2: 0x1743, Data3 : 0x5c21, Data4 : (0x9c, 0xed, 0xc8, 0xa1, 0x13, 0x4c, 0x7b, 0xa7)) }
+    // Microsoft.UI.Xaml.Controls.ColumnDefinition GetAt(System.UInt32)
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
+        }
+    }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>> = nil;
+        try self._n_GetAt(index, &__result);
+        return WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt32 get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Controls.ColumnDefinition> GetView()
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
+        }
+    }
+    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>> = nil;
+        try self._n_GetView(&__result);
+        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition(consuming: __result);
+    }
+    // bool IndexOf(Microsoft.UI.Xaml.Controls.ColumnDefinition, ref System.UInt32)
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
+        }
+    }
+    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition>, index : inout Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+            var _tmp_out_index: UINT32 = 0;
+        try self._n_IndexOf(RawPointer(value), &_tmp_out_index, &__result);
+            index = _tmp_out_index;
+        return __result;
+    }
+    // void SetAt(System.UInt32, Microsoft.UI.Xaml.Controls.ColumnDefinition)
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
+        }
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition>) throws -> Void {
+        try self._n_SetAt(index, RawPointer(value));
+    }
+    // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Controls.ColumnDefinition)
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
+        }
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition>) throws -> Void {
+        try self._n_InsertAt(index, RawPointer(value));
+    }
+    // void RemoveAt(System.UInt32)
+    private func _n_RemoveAt(_ index : UINT32) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        try self._n_RemoveAt(index);
+    }
+    // void Append(Microsoft.UI.Xaml.Controls.ColumnDefinition)
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+    // void RemoveAtEnd()
+    private func _n_RemoveAtEnd() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+    public func RemoveAtEnd() throws -> Void {
+        try self._n_RemoveAtEnd();
+    }
+    // void Clear()
+    private func _n_Clear() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+    public func Clear() throws -> Void {
+        try self._n_Clear();
+    }
+    // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Controls.ColumnDefinition[])
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
+        }
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_GetMany(startIndex, itemsLength, items, &__result);
+        return __result;
+    }
+    // void ReplaceAll(Microsoft.UI.Xaml.Controls.ColumnDefinition[])
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
+        }
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws -> Void {
+        try self._n_ReplaceAll(itemsLength, items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+            return try get_Size();
+        }
+    }
+} // IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
+// closed interface type
+public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcdfba81a, Data2: 0x54fa, Data3 : 0x557d, Data4 : (0xa7, 0x12, 0x21, 0x64, 0x0f, 0x16, 0xc5, 0x34)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
+// closed interface type
 public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
     :
     WinRT.IInspectable
@@ -970,149 +1399,6 @@ public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
 // method not needed: IndexOf
 // method not needed: GetMany
 } // IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
-// closed interface type
-public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xea4a1af0, Data2: 0x4286, Data3 : 0x5f11, Data4 : (0x81, 0x42, 0x6b, 0x01, 0x69, 0xf4, 0xe9, 0xde)) }
-    // Microsoft.UI.Xaml.UIElement GetAt(System.UInt32)
-    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
-        }
-    }
-    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.IUIElement> {
-        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>> = nil;
-        try self._n_GetAt(index, &__result);
-        return WinRT.Microsoft.UI.Xaml.IUIElement(consuming: __result);
-    }
-    // [IsSpecialName] System.UInt32 get_Size()
-    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
-        }
-    }
-    public func get_Size() throws -> Swift.UInt32 {
-        var __result : UINT32 = 0;
-        try self._n_get_Size(&__result);
-        return __result;
-    }
-    // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> GetView()
-    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>>>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
-        }
-    }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
-        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>> = nil;
-        try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
-    }
-    // bool IndexOf(Microsoft.UI.Xaml.UIElement, ref System.UInt32)
-    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
-        }
-    }
-    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>, index : inout Swift.UInt32) throws -> boolean {
-        var __result : boolean = 0;
-            var _tmp_out_index: UINT32 = 0;
-        try self._n_IndexOf(RawPointer(value), &_tmp_out_index, &__result);
-            index = _tmp_out_index;
-        return __result;
-    }
-    // void SetAt(System.UInt32, Microsoft.UI.Xaml.UIElement)
-    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
-        }
-    }
-    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
-        try self._n_SetAt(index, RawPointer(value));
-    }
-    // void InsertAt(System.UInt32, Microsoft.UI.Xaml.UIElement)
-    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
-        }
-    }
-    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
-        try self._n_InsertAt(index, RawPointer(value));
-    }
-    // void RemoveAt(System.UInt32)
-    private func _n_RemoveAt(_ index : UINT32) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
-        }
-    }
-    public func RemoveAt(index : Swift.UInt32) throws -> Void {
-        try self._n_RemoveAt(index);
-    }
-    // void Append(Microsoft.UI.Xaml.UIElement)
-    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
-        }
-    }
-    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.IUIElement>) throws -> Void {
-        try self._n_Append(RawPointer(value));
-    }
-    // void RemoveAtEnd()
-    private func _n_RemoveAtEnd() throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
-        }
-    }
-    public func RemoveAtEnd() throws -> Void {
-        try self._n_RemoveAtEnd();
-    }
-    // void Clear()
-    private func _n_Clear() throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
-        }
-    }
-    public func Clear() throws -> Void {
-        try self._n_Clear();
-    }
-    // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.UIElement[])
-    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
-        }
-    }
-    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws -> Swift.UInt32 {
-        var __result : UINT32 = 0;
-        try self._n_GetMany(startIndex, itemsLength, items, &__result);
-        return __result;
-    }
-    // void ReplaceAll(Microsoft.UI.Xaml.UIElement[])
-    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
-        }
-    }
-    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws -> Void {
-        try self._n_ReplaceAll(itemsLength, items);
-    }
-    public var Size : Swift.UInt32 {
-        get throws {
-            return try get_Size();
-        }
-    }
-} // IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
-// closed interface type
-public class IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4fdea5ee, Data2: 0xc725, Data3 : 0x5026, Data4 : (0xba, 0x83, 0x24, 0xe5, 0x77, 0x13, 0x57, 0xc6)) }
-// method not needed: GetAt
-// method not needed: get_Size
-// method not needed: IndexOf
-// method not needed: GetMany
-} // IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
 // closed interface type
 public class IVectorView_1_FLOAT
     :

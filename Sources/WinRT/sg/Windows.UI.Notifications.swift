@@ -1180,7 +1180,7 @@ public class ToastNotificationManager
     public static func CreateToastNotifier() throws -> Optional<WinRT.Windows.UI.Notifications.ToastNotifier> {
         return try WinRT.Windows.UI.Notifications.ToastNotifier(plok: ToastNotificationManagerStatics.CreateToastNotifier());
     }
-    public static func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.ToastNotifier> {
+    public static func CreateToastNotifier(applicationId : Swift.String) throws -> Optional<WinRT.Windows.UI.Notifications.ToastNotifier> {
         return try WinRT.Windows.UI.Notifications.ToastNotifier(plok: ToastNotificationManagerStatics.CreateToastNotifierWithId(applicationId: applicationId));
     }
     public static func GetTemplateContent(type : WinRT.Windows.UI.Notifications.ToastTemplateType) throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {

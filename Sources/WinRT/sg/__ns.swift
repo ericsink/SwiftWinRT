@@ -24,6 +24,7 @@ extension Microsoft.UI.Xaml { public struct Documents { } }
 extension Microsoft.UI.Xaml { public struct Input { } }
 extension Microsoft.UI.Xaml { public struct Media { } }
 extension Microsoft.UI.Xaml.Media { public struct Animation { } }
+extension Microsoft.UI.Xaml.Media { public struct Imaging { } }
 extension Microsoft.UI.Xaml.Media { public struct Media3D { } }
 extension Microsoft { public struct Windows { } }
 extension Microsoft.Windows { public struct System { } }
@@ -38,6 +39,8 @@ extension Windows { public struct Foundation { } }
 extension Windows.Foundation { public struct Collections { } }
 extension Windows.Foundation { public struct Numerics { } }
 extension Windows { public struct Graphics { } }
+extension Windows.Graphics { public struct DirectX { } }
+extension Windows.Graphics.DirectX { public struct Direct3D11 { } }
 extension Windows.Graphics { public struct Imaging { } }
 extension Windows { public struct Security { } }
 extension Windows.Security { public struct Cryptography { } }

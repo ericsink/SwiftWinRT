@@ -8,6 +8,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueCha
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDragEventHandler _q_CMicrosoft_CUI_CXaml_CIDragEventHandler;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler;
@@ -19,16 +20,33 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler;
 typedef struct _q_CWindows_CFoundation_CIAsyncActionCompletedHandler _q_CWindows_CFoundation_CIAsyncActionCompletedHandler;
 // enums
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode_Premultiplied = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode_Straight = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode_Ignore = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing_Antialiased = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing_Aliased = 1,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_Auto = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_Bmp = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_Png = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_Jpeg = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_Tiff = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_Gif = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat_JpegXR = 6,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend_SourceOver = 0,
@@ -358,6 +376,18 @@ typedef enum _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy
     _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy_BlockLineHeight = 1,
     _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy_BaselineToBaseline = 2,
 } _q_CMicrosoft_CUI_CXaml_CLineStackingStrategy;
+typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Left = 0,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Center = 1,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Right = 2,
+} _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX;
+typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Top = 0,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Center = 1,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Bottom = 2,
+} _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY;
 typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode
 {
     _q_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode_Absolute = 0,
@@ -380,6 +410,23 @@ typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod
     _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod_Reflect = 1,
     _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod_Repeat = 2,
 } _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod;
+typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CBitmapCreateOptions
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CBitmapCreateOptions_None = 0,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CBitmapCreateOptions_IgnoreImageCache = 8,
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CBitmapCreateOptions;
+typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CDecodePixelType
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CDecodePixelType_Physical = 0,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CDecodePixelType_Logical = 1,
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CDecodePixelType;
+typedef enum _q_CMicrosoft_CUI_CXaml_CMedia_CStretch
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_None = 0,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_Fill = 1,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_Uniform = 2,
+    _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_UniformToFill = 3,
+} _q_CMicrosoft_CUI_CXaml_CMedia_CStretch;
 typedef enum _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment
 {
     _q_CMicrosoft_CUI_CXaml_COpticalMarginAlignment_None = 0,
@@ -516,6 +563,148 @@ typedef enum _q_CWindows_CFoundation_CAsyncStatus
     _q_CWindows_CFoundation_CAsyncStatus_Error = 3,
     _q_CWindows_CFoundation_CAsyncStatus_Started = 0,
 } _q_CWindows_CFoundation_CAsyncStatus;
+typedef enum _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat
+{
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Unknown = 0,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32A32Typeless = 1,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32A32Float = 2,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32A32UInt = 3,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32A32Int = 4,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32Typeless = 5,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32Float = 6,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32UInt = 7,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32B32Int = 8,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16B16A16Typeless = 9,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16B16A16Float = 10,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16B16A16UIntNormalized = 11,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16B16A16UInt = 12,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16B16A16IntNormalized = 13,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16B16A16Int = 14,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32Typeless = 15,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32Float = 16,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32UInt = 17,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G32Int = 18,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32G8X24Typeless = 19,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_D32FloatS8X24UInt = 20,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32FloatX8X24Typeless = 21,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_X32TypelessG8X24UInt = 22,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R10G10B10A2Typeless = 23,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R10G10B10A2UIntNormalized = 24,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R10G10B10A2UInt = 25,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R11G11B10Float = 26,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8A8Typeless = 27,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8A8UIntNormalized = 28,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8A8UIntNormalizedSrgb = 29,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8A8UInt = 30,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8A8IntNormalized = 31,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8A8Int = 32,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16Typeless = 33,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16Float = 34,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16UIntNormalized = 35,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16UInt = 36,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16IntNormalized = 37,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16G16Int = 38,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32Typeless = 39,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_D32Float = 40,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32Float = 41,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32UInt = 42,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R32Int = 43,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R24G8Typeless = 44,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_D24UIntNormalizedS8UInt = 45,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R24UIntNormalizedX8Typeless = 46,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_X24TypelessG8UInt = 47,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8Typeless = 48,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8UIntNormalized = 49,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8UInt = 50,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8IntNormalized = 51,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8Int = 52,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16Typeless = 53,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16Float = 54,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_D16UIntNormalized = 55,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16UIntNormalized = 56,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16UInt = 57,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16IntNormalized = 58,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R16Int = 59,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8Typeless = 60,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8UIntNormalized = 61,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8UInt = 62,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8IntNormalized = 63,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8Int = 64,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_A8UIntNormalized = 65,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R1UIntNormalized = 66,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R9G9B9E5SharedExponent = 67,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R8G8B8G8UIntNormalized = 68,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_G8R8G8B8UIntNormalized = 69,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC1Typeless = 70,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC1UIntNormalized = 71,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC1UIntNormalizedSrgb = 72,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC2Typeless = 73,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC2UIntNormalized = 74,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC2UIntNormalizedSrgb = 75,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC3Typeless = 76,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC3UIntNormalized = 77,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC3UIntNormalizedSrgb = 78,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC4Typeless = 79,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC4UIntNormalized = 80,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC4IntNormalized = 81,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC5Typeless = 82,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC5UIntNormalized = 83,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC5IntNormalized = 84,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B5G6R5UIntNormalized = 85,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B5G5R5A1UIntNormalized = 86,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B8G8R8A8UIntNormalized = 87,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B8G8R8X8UIntNormalized = 88,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_R10G10B10XRBiasA2UIntNormalized = 89,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B8G8R8A8Typeless = 90,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B8G8R8A8UIntNormalizedSrgb = 91,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B8G8R8X8Typeless = 92,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B8G8R8X8UIntNormalizedSrgb = 93,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC6HTypeless = 94,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC6H16UnsignedFloat = 95,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC6H16Float = 96,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC7Typeless = 97,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC7UIntNormalized = 98,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_BC7UIntNormalizedSrgb = 99,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Ayuv = 100,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Y410 = 101,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Y416 = 102,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_NV12 = 103,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_P010 = 104,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_P016 = 105,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Opaque420 = 106,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Yuy2 = 107,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Y210 = 108,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Y216 = 109,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_NV11 = 110,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_AI44 = 111,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_IA44 = 112,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_P8 = 113,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_A8P8 = 114,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_B4G4R4A4UIntNormalized = 115,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_P208 = 130,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_V208 = 131,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_V408 = 132,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_SamplerFeedbackMinMipOpaque = 189,
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_SamplerFeedbackMipRegionUsedOpaque = 190,
+} _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat;
+typedef enum _q_CWindows_CGraphics_CImaging_CBitmapAlphaMode
+{
+    _q_CWindows_CGraphics_CImaging_CBitmapAlphaMode_Premultiplied = 0,
+    _q_CWindows_CGraphics_CImaging_CBitmapAlphaMode_Straight = 1,
+    _q_CWindows_CGraphics_CImaging_CBitmapAlphaMode_Ignore = 2,
+} _q_CWindows_CGraphics_CImaging_CBitmapAlphaMode;
+typedef enum _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat
+{
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Unknown = 0,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Rgba16 = 12,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Rgba8 = 30,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Gray16 = 57,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Gray8 = 62,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Bgra8 = 87,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Nv12 = 103,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_P010 = 104,
+    _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat_Yuy2 = 107,
+} _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat;
 typedef enum _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding
 {
     _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding_Utf8 = 0,
@@ -529,6 +718,181 @@ typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Uefi = 2,
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Registry = 3,
 } _q_CWindows_CSystem_CProfile_CSystemIdentificationSource;
+typedef enum _q_CWindows_CSystem_CVirtualKey
+{
+    _q_CWindows_CSystem_CVirtualKey_None = 0,
+    _q_CWindows_CSystem_CVirtualKey_LeftButton = 1,
+    _q_CWindows_CSystem_CVirtualKey_RightButton = 2,
+    _q_CWindows_CSystem_CVirtualKey_Cancel = 3,
+    _q_CWindows_CSystem_CVirtualKey_MiddleButton = 4,
+    _q_CWindows_CSystem_CVirtualKey_XButton1 = 5,
+    _q_CWindows_CSystem_CVirtualKey_XButton2 = 6,
+    _q_CWindows_CSystem_CVirtualKey_Back = 8,
+    _q_CWindows_CSystem_CVirtualKey_Tab = 9,
+    _q_CWindows_CSystem_CVirtualKey_Clear = 12,
+    _q_CWindows_CSystem_CVirtualKey_Enter = 13,
+    _q_CWindows_CSystem_CVirtualKey_Shift = 16,
+    _q_CWindows_CSystem_CVirtualKey_Control = 17,
+    _q_CWindows_CSystem_CVirtualKey_Menu = 18,
+    _q_CWindows_CSystem_CVirtualKey_Pause = 19,
+    _q_CWindows_CSystem_CVirtualKey_CapitalLock = 20,
+    _q_CWindows_CSystem_CVirtualKey_Kana = 21,
+    _q_CWindows_CSystem_CVirtualKey_Hangul = 21,
+    _q_CWindows_CSystem_CVirtualKey_ImeOn = 22,
+    _q_CWindows_CSystem_CVirtualKey_Junja = 23,
+    _q_CWindows_CSystem_CVirtualKey_Final = 24,
+    _q_CWindows_CSystem_CVirtualKey_Hanja = 25,
+    _q_CWindows_CSystem_CVirtualKey_Kanji = 25,
+    _q_CWindows_CSystem_CVirtualKey_ImeOff = 26,
+    _q_CWindows_CSystem_CVirtualKey_Escape = 27,
+    _q_CWindows_CSystem_CVirtualKey_Convert = 28,
+    _q_CWindows_CSystem_CVirtualKey_NonConvert = 29,
+    _q_CWindows_CSystem_CVirtualKey_Accept = 30,
+    _q_CWindows_CSystem_CVirtualKey_ModeChange = 31,
+    _q_CWindows_CSystem_CVirtualKey_Space = 32,
+    _q_CWindows_CSystem_CVirtualKey_PageUp = 33,
+    _q_CWindows_CSystem_CVirtualKey_PageDown = 34,
+    _q_CWindows_CSystem_CVirtualKey_End = 35,
+    _q_CWindows_CSystem_CVirtualKey_Home = 36,
+    _q_CWindows_CSystem_CVirtualKey_Left = 37,
+    _q_CWindows_CSystem_CVirtualKey_Up = 38,
+    _q_CWindows_CSystem_CVirtualKey_Right = 39,
+    _q_CWindows_CSystem_CVirtualKey_Down = 40,
+    _q_CWindows_CSystem_CVirtualKey_Select = 41,
+    _q_CWindows_CSystem_CVirtualKey_Print = 42,
+    _q_CWindows_CSystem_CVirtualKey_Execute = 43,
+    _q_CWindows_CSystem_CVirtualKey_Snapshot = 44,
+    _q_CWindows_CSystem_CVirtualKey_Insert = 45,
+    _q_CWindows_CSystem_CVirtualKey_Delete = 46,
+    _q_CWindows_CSystem_CVirtualKey_Help = 47,
+    _q_CWindows_CSystem_CVirtualKey_Number0 = 48,
+    _q_CWindows_CSystem_CVirtualKey_Number1 = 49,
+    _q_CWindows_CSystem_CVirtualKey_Number2 = 50,
+    _q_CWindows_CSystem_CVirtualKey_Number3 = 51,
+    _q_CWindows_CSystem_CVirtualKey_Number4 = 52,
+    _q_CWindows_CSystem_CVirtualKey_Number5 = 53,
+    _q_CWindows_CSystem_CVirtualKey_Number6 = 54,
+    _q_CWindows_CSystem_CVirtualKey_Number7 = 55,
+    _q_CWindows_CSystem_CVirtualKey_Number8 = 56,
+    _q_CWindows_CSystem_CVirtualKey_Number9 = 57,
+    _q_CWindows_CSystem_CVirtualKey_A = 65,
+    _q_CWindows_CSystem_CVirtualKey_B = 66,
+    _q_CWindows_CSystem_CVirtualKey_C = 67,
+    _q_CWindows_CSystem_CVirtualKey_D = 68,
+    _q_CWindows_CSystem_CVirtualKey_E = 69,
+    _q_CWindows_CSystem_CVirtualKey_F = 70,
+    _q_CWindows_CSystem_CVirtualKey_G = 71,
+    _q_CWindows_CSystem_CVirtualKey_H = 72,
+    _q_CWindows_CSystem_CVirtualKey_I = 73,
+    _q_CWindows_CSystem_CVirtualKey_J = 74,
+    _q_CWindows_CSystem_CVirtualKey_K = 75,
+    _q_CWindows_CSystem_CVirtualKey_L = 76,
+    _q_CWindows_CSystem_CVirtualKey_M = 77,
+    _q_CWindows_CSystem_CVirtualKey_N = 78,
+    _q_CWindows_CSystem_CVirtualKey_O = 79,
+    _q_CWindows_CSystem_CVirtualKey_P = 80,
+    _q_CWindows_CSystem_CVirtualKey_Q = 81,
+    _q_CWindows_CSystem_CVirtualKey_R = 82,
+    _q_CWindows_CSystem_CVirtualKey_S = 83,
+    _q_CWindows_CSystem_CVirtualKey_T = 84,
+    _q_CWindows_CSystem_CVirtualKey_U = 85,
+    _q_CWindows_CSystem_CVirtualKey_V = 86,
+    _q_CWindows_CSystem_CVirtualKey_W = 87,
+    _q_CWindows_CSystem_CVirtualKey_X = 88,
+    _q_CWindows_CSystem_CVirtualKey_Y = 89,
+    _q_CWindows_CSystem_CVirtualKey_Z = 90,
+    _q_CWindows_CSystem_CVirtualKey_LeftWindows = 91,
+    _q_CWindows_CSystem_CVirtualKey_RightWindows = 92,
+    _q_CWindows_CSystem_CVirtualKey_Application = 93,
+    _q_CWindows_CSystem_CVirtualKey_Sleep = 95,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad0 = 96,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad1 = 97,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad2 = 98,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad3 = 99,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad4 = 100,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad5 = 101,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad6 = 102,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad7 = 103,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad8 = 104,
+    _q_CWindows_CSystem_CVirtualKey_NumberPad9 = 105,
+    _q_CWindows_CSystem_CVirtualKey_Multiply = 106,
+    _q_CWindows_CSystem_CVirtualKey_Add = 107,
+    _q_CWindows_CSystem_CVirtualKey_Separator = 108,
+    _q_CWindows_CSystem_CVirtualKey_Subtract = 109,
+    _q_CWindows_CSystem_CVirtualKey_Decimal = 110,
+    _q_CWindows_CSystem_CVirtualKey_Divide = 111,
+    _q_CWindows_CSystem_CVirtualKey_F1 = 112,
+    _q_CWindows_CSystem_CVirtualKey_F2 = 113,
+    _q_CWindows_CSystem_CVirtualKey_F3 = 114,
+    _q_CWindows_CSystem_CVirtualKey_F4 = 115,
+    _q_CWindows_CSystem_CVirtualKey_F5 = 116,
+    _q_CWindows_CSystem_CVirtualKey_F6 = 117,
+    _q_CWindows_CSystem_CVirtualKey_F7 = 118,
+    _q_CWindows_CSystem_CVirtualKey_F8 = 119,
+    _q_CWindows_CSystem_CVirtualKey_F9 = 120,
+    _q_CWindows_CSystem_CVirtualKey_F10 = 121,
+    _q_CWindows_CSystem_CVirtualKey_F11 = 122,
+    _q_CWindows_CSystem_CVirtualKey_F12 = 123,
+    _q_CWindows_CSystem_CVirtualKey_F13 = 124,
+    _q_CWindows_CSystem_CVirtualKey_F14 = 125,
+    _q_CWindows_CSystem_CVirtualKey_F15 = 126,
+    _q_CWindows_CSystem_CVirtualKey_F16 = 127,
+    _q_CWindows_CSystem_CVirtualKey_F17 = 128,
+    _q_CWindows_CSystem_CVirtualKey_F18 = 129,
+    _q_CWindows_CSystem_CVirtualKey_F19 = 130,
+    _q_CWindows_CSystem_CVirtualKey_F20 = 131,
+    _q_CWindows_CSystem_CVirtualKey_F21 = 132,
+    _q_CWindows_CSystem_CVirtualKey_F22 = 133,
+    _q_CWindows_CSystem_CVirtualKey_F23 = 134,
+    _q_CWindows_CSystem_CVirtualKey_F24 = 135,
+    _q_CWindows_CSystem_CVirtualKey_NavigationView = 136,
+    _q_CWindows_CSystem_CVirtualKey_NavigationMenu = 137,
+    _q_CWindows_CSystem_CVirtualKey_NavigationUp = 138,
+    _q_CWindows_CSystem_CVirtualKey_NavigationDown = 139,
+    _q_CWindows_CSystem_CVirtualKey_NavigationLeft = 140,
+    _q_CWindows_CSystem_CVirtualKey_NavigationRight = 141,
+    _q_CWindows_CSystem_CVirtualKey_NavigationAccept = 142,
+    _q_CWindows_CSystem_CVirtualKey_NavigationCancel = 143,
+    _q_CWindows_CSystem_CVirtualKey_NumberKeyLock = 144,
+    _q_CWindows_CSystem_CVirtualKey_Scroll = 145,
+    _q_CWindows_CSystem_CVirtualKey_LeftShift = 160,
+    _q_CWindows_CSystem_CVirtualKey_RightShift = 161,
+    _q_CWindows_CSystem_CVirtualKey_LeftControl = 162,
+    _q_CWindows_CSystem_CVirtualKey_RightControl = 163,
+    _q_CWindows_CSystem_CVirtualKey_LeftMenu = 164,
+    _q_CWindows_CSystem_CVirtualKey_RightMenu = 165,
+    _q_CWindows_CSystem_CVirtualKey_GoBack = 166,
+    _q_CWindows_CSystem_CVirtualKey_GoForward = 167,
+    _q_CWindows_CSystem_CVirtualKey_Refresh = 168,
+    _q_CWindows_CSystem_CVirtualKey_Stop = 169,
+    _q_CWindows_CSystem_CVirtualKey_Search = 170,
+    _q_CWindows_CSystem_CVirtualKey_Favorites = 171,
+    _q_CWindows_CSystem_CVirtualKey_GoHome = 172,
+    _q_CWindows_CSystem_CVirtualKey_GamepadA = 195,
+    _q_CWindows_CSystem_CVirtualKey_GamepadB = 196,
+    _q_CWindows_CSystem_CVirtualKey_GamepadX = 197,
+    _q_CWindows_CSystem_CVirtualKey_GamepadY = 198,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightShoulder = 199,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftShoulder = 200,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftTrigger = 201,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightTrigger = 202,
+    _q_CWindows_CSystem_CVirtualKey_GamepadDPadUp = 203,
+    _q_CWindows_CSystem_CVirtualKey_GamepadDPadDown = 204,
+    _q_CWindows_CSystem_CVirtualKey_GamepadDPadLeft = 205,
+    _q_CWindows_CSystem_CVirtualKey_GamepadDPadRight = 206,
+    _q_CWindows_CSystem_CVirtualKey_GamepadMenu = 207,
+    _q_CWindows_CSystem_CVirtualKey_GamepadView = 208,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftThumbstickButton = 209,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightThumbstickButton = 210,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftThumbstickUp = 211,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftThumbstickDown = 212,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftThumbstickRight = 213,
+    _q_CWindows_CSystem_CVirtualKey_GamepadLeftThumbstickLeft = 214,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightThumbstickUp = 215,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightThumbstickDown = 216,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightThumbstickRight = 217,
+    _q_CWindows_CSystem_CVirtualKey_GamepadRightThumbstickLeft = 218,
+} _q_CWindows_CSystem_CVirtualKey;
 typedef enum _q_CWindows_CUI_CNotifications_CNotificationMirroring
 {
     _q_CWindows_CUI_CNotifications_CNotificationMirroring_Allowed = 0,
@@ -686,8 +1050,11 @@ typedef struct _q_CWindows_CFoundation_CPoint _q_CWindows_CFoundation_CPoint;
 typedef struct _q_CWindows_CFoundation_CRect _q_CWindows_CFoundation_CRect;
 typedef struct _q_CWindows_CFoundation_CSize _q_CWindows_CFoundation_CSize;
 typedef struct _q_CWindows_CFoundation_CTimeSpan _q_CWindows_CFoundation_CTimeSpan;
+typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DMultisampleDescription _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DMultisampleDescription;
+typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DSurfaceDescription _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DSurfaceDescription;
 typedef struct _q_CWindows_CGraphics_CImaging_CBitmapSize _q_CWindows_CGraphics_CImaging_CBitmapSize;
 typedef struct _q_CWindows_CUI_CColor _q_CWindows_CUI_CColor;
+typedef struct _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus;
 typedef struct _q_CWindows_CUI_CText_CFontWeight _q_CWindows_CUI_CText_CFontWeight;
 typedef struct _q_CWindows_CUI_CXaml_CInterop_CTypeName _q_CWindows_CUI_CXaml_CInterop_CTypeName;
 typedef struct _q_CWindows_CWeb_CHttp_CHttpProgress _q_CWindows_CWeb_CHttp_CHttpProgress;
@@ -700,6 +1067,7 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshFac
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer _q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactory _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactory;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession;
@@ -740,6 +1108,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactor
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButton _q_CMicrosoft_CUI_CXaml_CControls_CIButton;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides;
@@ -755,11 +1124,15 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector _q_CMicr
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelectorFactory _q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelectorFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIGrid _q_CMicrosoft_CUI_CXaml_CControls_CIGrid;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIInsertionPanel _q_CMicrosoft_CUI_CXaml_CControls_CIInsertionPanel;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanel _q_CMicrosoft_CUI_CXaml_CControls_CIPanel;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanelFactory _q_CMicrosoft_CUI_CXaml_CControls_CIPanelFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISlider _q_CMicrosoft_CUI_CXaml_CControls_CISlider;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISliderFactory _q_CMicrosoft_CUI_CXaml_CControls_CISliderFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics;
@@ -811,10 +1184,13 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyObject _q_CMicrosoft_CUI_CXam
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyProperty _q_CMicrosoft_CUI_CXaml_CIDependencyProperty;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDragEventArgs _q_CMicrosoft_CUI_CXaml_CIDragEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDragStartingEventArgs _q_CMicrosoft_CUI_CXaml_CIDragStartingEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDropCompletedEventArgs _q_CMicrosoft_CUI_CXaml_CIDropCompletedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs _q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElement _q_CMicrosoft_CUI_CXaml_CIFrameworkElement;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides;
@@ -892,9 +1268,19 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushFactory _q_CMicroso
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushStatics _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushFactory _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIProjection _q_CMicrosoft_CUI_CXaml_CMedia_CIProjection;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionFactory _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry _q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry;
@@ -902,6 +1288,9 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIShadow _q_CMicrosoft_CUI_CXaml_C
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStatics _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITransform _q_CMicrosoft_CUI_CXaml_CMedia_CITransform;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLightFactory _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLightFactory;
@@ -939,10 +1328,14 @@ typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassFactory _q_CWindows_CFou
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri;
 typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass;
 typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory;
+typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface;
+typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmap _q_CWindows_CGraphics_CImaging_CISoftwareBitmap;
+typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory;
 typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics;
 typedef struct _q_CWindows_CStorage_CIStorageFile _q_CWindows_CStorage_CIStorageFile;
 typedef struct _q_CWindows_CStorage_CStreams_CIBuffer _q_CWindows_CStorage_CStreams_CIBuffer;
 typedef struct _q_CWindows_CStorage_CStreams_CIOutputStream _q_CWindows_CStorage_CStreams_CIOutputStream;
+typedef struct _q_CWindows_CStorage_CStreams_CIRandomAccessStream _q_CWindows_CStorage_CStreams_CIRandomAccessStream;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueue _q_CWindows_CSystem_CIDispatcherQueue;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueController _q_CWindows_CSystem_CIDispatcherQueueController;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueControllerStatics _q_CWindows_CSystem_CIDispatcherQueueControllerStatics;
@@ -1040,13 +1433,17 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs;
-typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement;
-typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
@@ -1057,6 +1454,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_C
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs;
 typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING _cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs;
@@ -1188,6 +1587,18 @@ struct _q_CWindows_CFoundation_CTimeSpan
 {
     INT64 Duration;
 };
+struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DMultisampleDescription
+{
+    INT32 Count;
+    INT32 Quality;
+};
+struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DSurfaceDescription
+{
+    INT32 Width;
+    INT32 Height;
+    _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat Format;
+    _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DMultisampleDescription MultisampleDescription;
+};
 struct _q_CWindows_CGraphics_CImaging_CBitmapSize
 {
     UINT32 Width;
@@ -1199,6 +1610,15 @@ struct _q_CWindows_CUI_CColor
     UINT8 R;
     UINT8 G;
     UINT8 B;
+};
+struct _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus
+{
+    UINT32 RepeatCount;
+    UINT32 ScanCode;
+    boolean IsExtendedKey;
+    boolean IsMenuKeyDown;
+    boolean WasKeyDown;
+    boolean IsKeyReleased;
 };
 struct _q_CWindows_CUI_CText_CFontWeight
 {
@@ -1284,6 +1704,17 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIDragEventHandlerVtbl
 struct _q_CMicrosoft_CUI_CXaml_CIDragEventHandler
 {
     _q_CMicrosoft_CUI_CXaml_CIDragEventHandlerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandlerVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandlerVtbl
 {
@@ -1405,6 +1836,17 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandlerVtbl
 struct _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler
 {
     _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandlerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandlerVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandlerVtbl
 {
@@ -1612,35 +2054,70 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* This, TrustLevel* trustLevel);
-    void* unneeded_get_SizeInPixels;
-    void* unneeded_get_Size;
-    void* unneeded_get_Bounds;
-    void* unneeded_get_Format;
-    void* unneeded_get_AlphaMode;
-    void* unneeded_SaveToFileAsync;
-    void* unneeded_SaveToFileWithBitmapFileFormatAsync;
-    void* unneeded_SaveToFileWithBitmapFileFormatAndQualityAsync;
-    void* unneeded_SaveToStreamAsync;
-    void* unneeded_SaveToStreamWithQualityAsync;
-    void* unneeded_GetPixelBytes;
-    void* unneeded_GetPixelBytesWithSubrectangle;
-    void* unneeded_GetPixelBytesWithBuffer;
-    void* unneeded_GetPixelBytesWithBufferAndSubrectangle;
-    void* unneeded_GetPixelColors;
-    void* unneeded_GetPixelColorsWithSubrectangle;
-    void* unneeded_SetPixelBytes;
-    void* unneeded_SetPixelBytesWithSubrectangle;
-    void* unneeded_SetPixelBytesWithBuffer;
-    void* unneeded_SetPixelBytesWithBufferAndSubrectangle;
-    void* unneeded_SetPixelColors;
-    void* unneeded_SetPixelColorsWithSubrectangle;
-    void* unneeded_CopyPixelsFromBitmap;
-    void* unneeded_CopyPixelsFromBitmapWithDestPoint;
-    void* unneeded_CopyPixelsFromBitmapWithDestPointAndSourceRect;
+    HRESULT (STDMETHODCALLTYPE* get_SizeInPixels)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CGraphics_CImaging_CBitmapSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Bounds)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Format)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveToFileAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, HSTRING fileName, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveToFileWithBitmapFileFormatAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, HSTRING fileName, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveToFileWithBitmapFileFormatAndQualityAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, HSTRING fileName, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, FLOAT quality, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveToStreamAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveToStreamWithQualityAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, FLOAT quality, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPixelBytes)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, UINT32* __pretLength, UINT8** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPixelBytesWithSubrectangle)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, INT32 left, INT32 top, INT32 width, INT32 height, UINT32* __pretLength, UINT8** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPixelBytesWithBuffer)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer);
+    HRESULT (STDMETHODCALLTYPE* GetPixelBytesWithBufferAndSubrectangle)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, INT32 left, INT32 top, INT32 width, INT32 height);
+    HRESULT (STDMETHODCALLTYPE* GetPixelColors)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, UINT32* __pretLength, _q_CWindows_CUI_CColor** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPixelColorsWithSubrectangle)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, INT32 left, INT32 top, INT32 width, INT32 height, UINT32* __pretLength, _q_CWindows_CUI_CColor** __pret);
+    HRESULT (STDMETHODCALLTYPE* SetPixelBytes)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, UINT32 valueElementsLength, UINT8* valueElements);
+    HRESULT (STDMETHODCALLTYPE* SetPixelBytesWithSubrectangle)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, UINT32 valueElementsLength, UINT8* valueElements, INT32 left, INT32 top, INT32 width, INT32 height);
+    HRESULT (STDMETHODCALLTYPE* SetPixelBytesWithBuffer)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer);
+    HRESULT (STDMETHODCALLTYPE* SetPixelBytesWithBufferAndSubrectangle)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, INT32 left, INT32 top, INT32 width, INT32 height);
+    HRESULT (STDMETHODCALLTYPE* SetPixelColors)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, UINT32 valueElementsLength, _q_CWindows_CUI_CColor* valueElements);
+    HRESULT (STDMETHODCALLTYPE* SetPixelColorsWithSubrectangle)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, UINT32 valueElementsLength, _q_CWindows_CUI_CColor* valueElements, INT32 left, INT32 top, INT32 width, INT32 height);
+    HRESULT (STDMETHODCALLTYPE* CopyPixelsFromBitmap)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* otherBitmap);
+    HRESULT (STDMETHODCALLTYPE* CopyPixelsFromBitmapWithDestPoint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* otherBitmap, INT32 destX, INT32 destY);
+    HRESULT (STDMETHODCALLTYPE* CopyPixelsFromBitmapWithDestPointAndSourceRect)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* otherBitmap, INT32 destX, INT32 destY, INT32 sourceRectLeft, INT32 sourceRectTop, INT32 sourceRectWidth, INT32 sourceRectHeight);
 } _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap
 {
     _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateFromDirect3D11Surface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* surface, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromDirect3D11SurfaceWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* surface, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromDirect3D11SurfaceWithDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* surface, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytes)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 bytesLength, UINT8* bytes, INT32 widthInPixels, INT32 heightInPixels, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytesWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 bytesLength, UINT8* bytes, INT32 widthInPixels, INT32 heightInPixels, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytesWithDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 bytesLength, UINT8* bytes, INT32 widthInPixels, INT32 heightInPixels, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytesWithBuffer)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, INT32 widthInPixels, INT32 heightInPixels, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytesWithBufferAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, INT32 widthInPixels, INT32 heightInPixels, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytesWithBufferAndDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, INT32 widthInPixels, INT32 heightInPixels, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromColors)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 colorsLength, _q_CWindows_CUI_CColor* colors, INT32 widthInPixels, INT32 heightInPixels, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromColorsWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 colorsLength, _q_CWindows_CUI_CColor* colors, INT32 widthInPixels, INT32 heightInPixels, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromColorsWithDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 colorsLength, _q_CWindows_CUI_CColor* colors, INT32 widthInPixels, INT32 heightInPixels, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromSoftwareBitmap)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CGraphics_CImaging_CISoftwareBitmap* sourceBitmap, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromHstring)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING fileName, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromHstringWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING fileName, FLOAT dpi, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromHstringWithDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING fileName, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromUri)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromUriWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, FLOAT dpi, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromUriWithDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromStream)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromStreamWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, FLOAT dpi, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromStreamWithDpiAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceVtbl
 {
@@ -1888,8 +2365,8 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* This, TrustLevel* trustLevel);
-    void* unneeded_GetBounds;
-    void* unneeded_GetBoundsWithTransform;
+    HRESULT (STDMETHODCALLTYPE* GetBounds)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBoundsWithTransform)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CRect* __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage
 {
@@ -2310,9 +2787,9 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventA
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Reason;
-    void* unneeded_TrackAsyncAction;
-    void* unneeded_GetTrackedAction;
+    HRESULT (STDMETHODCALLTYPE* get_Reason)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason* __pret);
+    HRESULT (STDMETHODCALLTYPE* TrackAsyncAction)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* pThis, _q_CWindows_CFoundation_CIAsyncAction* action);
+    HRESULT (STDMETHODCALLTYPE* GetTrackedAction)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* pThis, _q_CWindows_CFoundation_CIAsyncAction** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgsVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs
 {
@@ -2904,6 +3381,26 @@ struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStaticsVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, TrustLevel* trustLevel);
+    void* unneeded_get_Width;
+    void* unneeded_put_Width;
+    void* unneeded_get_MaxWidth;
+    void* unneeded_put_MaxWidth;
+    void* unneeded_get_MinWidth;
+    void* unneeded_put_MinWidth;
+    void* unneeded_get_ActualWidth;
+} _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIContentControl* This, REFIID riid, void** ppvObject);
@@ -3246,6 +3743,81 @@ struct _q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgsVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RowDefinitions)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ColumnDefinitions)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BackgroundSizing)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BackgroundSizing)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderBrush)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderBrush)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderThickness)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CThickness* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderThickness)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CThickness value);
+    HRESULT (STDMETHODCALLTYPE* get_CornerRadius)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CCornerRadius* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CornerRadius)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CCornerRadius value);
+    HRESULT (STDMETHODCALLTYPE* get_Padding)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CThickness* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Padding)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, _q_CMicrosoft_CUI_CXaml_CThickness value);
+    HRESULT (STDMETHODCALLTYPE* get_RowSpacing)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RowSpacing)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_ColumnSpacing)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColumnSpacing)(_q_CMicrosoft_CUI_CXaml_CControls_CIGrid* pThis, DOUBLE value);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIGridVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIGrid
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIGridVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CControls_CIGrid** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BackgroundSizingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BorderBrushProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BorderThicknessProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CornerRadiusProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PaddingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_RowSpacingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ColumnSpacingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_RowProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetRow)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetRow)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_ColumnProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetColumn)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetColumn)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_RowSpanProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetRowSpan)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetRowSpan)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_ColumnSpanProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetColumnSpan)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetColumnSpan)(_q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIFrameworkElement* element, INT32 value);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIGridStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIGridStaticsVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIInsertionPanelVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIInsertionPanel* This, REFIID riid, void** ppvObject);
@@ -3323,6 +3895,26 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStaticsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, TrustLevel* trustLevel);
+    void* unneeded_get_Height;
+    void* unneeded_put_Height;
+    void* unneeded_get_MaxHeight;
+    void* unneeded_put_MaxHeight;
+    void* unneeded_get_MinHeight;
+    void* unneeded_put_MinHeight;
+    void* unneeded_get_ActualHeight;
+} _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISliderVtbl
 {
@@ -4376,6 +4968,40 @@ struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs
 {
     _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgsVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Interval)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis, _q_CWindows_CFoundation_CTimeSpan* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Interval)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis, _q_CWindows_CFoundation_CTimeSpan value);
+    HRESULT (STDMETHODCALLTYPE* get_IsEnabled)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_Tick)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis, _cg_CWindows_CFoundation_IEventHandler_1_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Tick)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* Start)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis);
+    HRESULT (STDMETHODCALLTYPE* Stop)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer* pThis);
+} _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer
+{
+    _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer** __pret);
+} _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactoryVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDragEventArgsVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIDragEventArgs* This, REFIID riid, void** ppvObject);
@@ -4452,6 +5078,20 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs
 {
     _q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_ErrorMessage;
+} _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CIFrameworkElementVtbl
 {
@@ -4882,12 +5522,12 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgsVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_Key;
-    void* unneeded_get_KeyStatus;
-    void* unneeded_get_Handled;
-    void* unneeded_put_Handled;
-    void* unneeded_get_OriginalKey;
-    void* unneeded_get_DeviceId;
+    HRESULT (STDMETHODCALLTYPE* get_Key)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* pThis, _q_CWindows_CSystem_CVirtualKey* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_KeyStatus)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* pThis, _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Handled)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Handled)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_OriginalKey)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* pThis, _q_CWindows_CSystem_CVirtualKey* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DeviceId)(_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs* pThis, HSTRING* __pret);
 } _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgsVtbl;
 struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs
 {
@@ -5201,7 +5841,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_OriginalSource;
+    HRESULT (STDMETHODCALLTYPE* get_OriginalSource)(_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs* pThis, IInspectable** __pret);
 } _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsVtbl;
 struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs
 {
@@ -6135,6 +6775,52 @@ struct _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics
 {
     _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStaticsVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ImageSource)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ImageSource)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* value);
+    HRESULT (STDMETHODCALLTYPE* add_ImageFailed)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* pThis, _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ImageFailed)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_ImageOpened)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* pThis, _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ImageOpened)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ImageSourceProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSourceVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CIImageSourceVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush* This, REFIID riid, void** ppvObject);
@@ -6180,6 +6866,137 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStaticsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics
 {
     _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CreateOptions)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CBitmapCreateOptions* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CreateOptions)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CBitmapCreateOptions value);
+    HRESULT (STDMETHODCALLTYPE* get_UriSource)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_UriSource)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* value);
+    HRESULT (STDMETHODCALLTYPE* get_DecodePixelWidth)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DecodePixelWidth)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_DecodePixelHeight)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DecodePixelHeight)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_DecodePixelType)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CDecodePixelType* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DecodePixelType)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CDecodePixelType value);
+    HRESULT (STDMETHODCALLTYPE* get_IsAnimatedBitmap)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsPlaying)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AutoPlay)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AutoPlay)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* add_DownloadProgress)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_DownloadProgress)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_ImageOpened)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ImageOpened)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_ImageFailed)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ImageFailed)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* Play)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis);
+    HRESULT (STDMETHODCALLTYPE* Stop)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage* pThis);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithUriSource)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* uriSource, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImage** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CreateOptionsProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_UriSourceProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DecodePixelWidthProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DecodePixelHeightProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DecodePixelTypeProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsAnimatedBitmapProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsPlayingProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AutoPlayProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapImageStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_PixelWidth)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PixelHeight)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetSource)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* pThis, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* streamSource);
+    HRESULT (STDMETHODCALLTYPE* SetSourceAsync)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource* pThis, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* streamSource, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_PixelWidthProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PixelHeightProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Progress;
+    void* unneeded_put_Progress;
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionVtbl
 {
@@ -6278,6 +7095,55 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStaticsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStatics
 {
     _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_AlignmentX)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlignmentX)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX value);
+    HRESULT (STDMETHODCALLTYPE* get_AlignmentY)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlignmentY)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY value);
+    HRESULT (STDMETHODCALLTYPE* get_Stretch)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CStretch* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Stretch)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CStretch value);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_AlignmentXProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlignmentYProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_StretchProperty)(_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CITransformVtbl
 {
@@ -6931,6 +7797,62 @@ struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory
 {
     _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurfaceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Description)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* pThis, _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DSurfaceDescription* __pret);
+} _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurfaceVtbl;
+struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface
+{
+    _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurfaceVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmap* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmap* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmap* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmap* This, TrustLevel* trustLevel);
+    void* unneeded_get_BitmapPixelFormat;
+    void* unneeded_get_BitmapAlphaMode;
+    void* unneeded_get_PixelWidth;
+    void* unneeded_get_PixelHeight;
+    void* unneeded_get_IsReadOnly;
+    void* unneeded_put_DpiX;
+    void* unneeded_get_DpiX;
+    void* unneeded_put_DpiY;
+    void* unneeded_get_DpiY;
+    void* unneeded_LockBuffer;
+    void* unneeded_CopyTo;
+    void* unneeded_CopyFromBuffer;
+    void* unneeded_CopyToBuffer;
+    void* unneeded_GetReadOnlyView;
+} _q_CWindows_CGraphics_CImaging_CISoftwareBitmapVtbl;
+struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmap
+{
+    _q_CWindows_CGraphics_CImaging_CISoftwareBitmapVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* pThis, _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat format, INT32 width, INT32 height, _q_CWindows_CGraphics_CImaging_CISoftwareBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithAlpha)(_q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory* pThis, _q_CWindows_CGraphics_CImaging_CBitmapPixelFormat format, INT32 width, INT32 height, _q_CWindows_CGraphics_CImaging_CBitmapAlphaMode alpha, _q_CWindows_CGraphics_CImaging_CISoftwareBitmap** __pret);
+} _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactoryVtbl;
+struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory
+{
+    _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactoryVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics* This, REFIID riid, void** ppvObject);
@@ -7010,6 +7932,28 @@ typedef struct _q_CWindows_CStorage_CStreams_CIOutputStreamVtbl
 struct _q_CWindows_CStorage_CStreams_CIOutputStream
 {
     _q_CWindows_CStorage_CStreams_CIOutputStreamVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CStorage_CStreams_CIRandomAccessStreamVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CStorage_CStreams_CIRandomAccessStream* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CStorage_CStreams_CIRandomAccessStream* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CStorage_CStreams_CIRandomAccessStream* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CStorage_CStreams_CIRandomAccessStream* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CStorage_CStreams_CIRandomAccessStream* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CStorage_CStreams_CIRandomAccessStream* This, TrustLevel* trustLevel);
+    void* unneeded_get_Size;
+    void* unneeded_put_Size;
+    void* unneeded_GetInputStreamAt;
+    void* unneeded_GetOutputStreamAt;
+    void* unneeded_get_Position;
+    void* unneeded_Seek;
+    void* unneeded_CloneStream;
+    void* unneeded_get_CanRead;
+    void* unneeded_get_CanWrite;
+} _q_CWindows_CStorage_CStreams_CIRandomAccessStreamVtbl;
+struct _q_CWindows_CStorage_CStreams_CIRandomAccessStream
+{
+    _q_CWindows_CStorage_CStreams_CIRandomAccessStreamVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueVtbl
 {
@@ -8497,6 +9441,132 @@ struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFr
 {
     _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgsVtbl* lpVtbl;
 };
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CIUIElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetView)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value, UINT32* index, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis);
+    HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement* items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement* items);
+} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetView)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition** __pret);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* value, UINT32* index, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis);
+    HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* items);
+} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetView)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition** __pret);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* value, UINT32* index, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis);
+    HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* items);
+} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl* lpVtbl;
+};
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, REFIID riid, void** ppvObject);
@@ -8591,48 +9661,6 @@ typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_C
 struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
 {
     _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgsVtbl* lpVtbl;
-};
-typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, TrustLevel* trustLevel);
-    HRESULT (STDMETHODCALLTYPE* GetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CIUIElement** __pret);
-    HRESULT (STDMETHODCALLTYPE* get_Size)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* GetView)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement** __pret);
-    HRESULT (STDMETHODCALLTYPE* IndexOf)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value, UINT32* index, boolean* __pret);
-    HRESULT (STDMETHODCALLTYPE* SetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
-    HRESULT (STDMETHODCALLTYPE* InsertAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 index);
-    HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
-    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis);
-    HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement* items);
-} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl;
-struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
-{
-    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl* lpVtbl;
-};
-typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement* This, TrustLevel* trustLevel);
-    void* unneeded_GetAt;
-    void* unneeded_get_Size;
-    void* unneeded_IndexOf;
-    void* unneeded_GetMany;
-} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl;
-struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement
-{
-    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl* lpVtbl;
 };
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOATVtbl
 {
@@ -8790,6 +9818,33 @@ typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCa
 struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision
 {
     _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap** __pret);
+} _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
+{
+    _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
+} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
+{
+    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl* lpVtbl;
 };
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRINGVtbl
 {

@@ -26,6 +26,10 @@ public class CoreDispatcher
     // instance interface not needed: Windows.UI.Core.ICoreDispatcher2
 }
 
+// type: Windows.UI.Core.CorePhysicalKeyStatus
+// struct type
+public typealias CorePhysicalKeyStatus = _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus;
+
 // type: Windows.UI.Core.CoreWindow
 // runtime class
 public class CoreWindow

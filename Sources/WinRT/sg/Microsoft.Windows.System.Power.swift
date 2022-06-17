@@ -529,6 +529,15 @@ public class PowerManager
     public static func get_EffectivePowerMode() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
         return try PowerManagerStatics.get_EffectivePowerMode();
     }
+    public static func get_EffectivePowerMode() async throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.get_EffectivePowerMode()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
     public static func add_EffectivePowerModeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         return try PowerManagerStatics.add_EffectivePowerModeChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
     }

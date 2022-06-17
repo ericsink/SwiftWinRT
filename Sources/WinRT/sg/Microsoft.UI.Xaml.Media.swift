@@ -5,6 +5,14 @@
 import CWinRT;
 
 extension Microsoft.UI.Xaml.Media {
+// type: Microsoft.UI.Xaml.Media.AlignmentX
+// enum type
+public typealias AlignmentX = _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX;
+
+// type: Microsoft.UI.Xaml.Media.AlignmentY
+// enum type
+public typealias AlignmentY = _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY;
+
 // type: Microsoft.UI.Xaml.Media.Brush
 // runtime class
 open class Brush
@@ -1199,6 +1207,117 @@ open class IGradientStopStatics
 } // IGradientStopStatics
 
 
+// type: Microsoft.UI.Xaml.Media.IImageBrush
+// interface type
+open class IImageBrush
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xedcd91a3, Data2: 0xa868, Data3 : 0x5ba6, Data4 : (0x94, 0x89, 0x5b, 0x12, 0xb4, 0xc2, 0x9d, 0x85)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.ImageSource get_ImageSource()
+    private func _n_get_ImageSource(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ImageSource(pThis, __presult))
+        }
+    }
+    public func get_ImageSource() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IImageSource> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource>> = nil;
+        try self._n_get_ImageSource(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IImageSource(consuming: __result);
+    }
+    // [IsSpecialName] void put_ImageSource(Microsoft.UI.Xaml.Media.ImageSource)
+    private func _n_put_ImageSource(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIImageSource>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ImageSource(pThis, value))
+        }
+    }
+    public func put_ImageSource(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IImageSource>) throws -> Void {
+        try self._n_put_ImageSource(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ImageFailed(Microsoft.UI.Xaml.ExceptionRoutedEventHandler)
+    private func _n_add_ImageFailed(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ImageFailed(pThis, handler, __presult))
+        }
+    }
+    public func add_ImageFailed(handler : Optional<WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ImageFailed(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ImageFailed(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ImageFailed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ImageFailed(pThis, token))
+        }
+    }
+    public func remove_ImageFailed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ImageFailed(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ImageOpened(Microsoft.UI.Xaml.RoutedEventHandler)
+    private func _n_add_ImageOpened(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ImageOpened(pThis, handler, __presult))
+        }
+    }
+    public func add_ImageOpened(handler : Optional<WinRT.Microsoft.UI.Xaml.IRoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ImageOpened(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ImageOpened(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ImageOpened(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ImageOpened(pThis, token))
+        }
+    }
+    public func remove_ImageOpened(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ImageOpened(token);
+    }
+    public var ImageSource : Optional<WinRT.Microsoft.UI.Xaml.Media.IImageSource> {
+        get throws {
+            return try get_ImageSource();
+        }
+    }
+} // IImageBrush
+
+
+// type: Microsoft.UI.Xaml.Media.IImageBrushStatics
+// interface type
+open class IImageBrushStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xce8082dc, Data2: 0xa505, Data3 : 0x5b4f, Data4 : (0x88, 0x61, 0x79, 0x63, 0x0f, 0x52, 0xc1, 0x89)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ImageSourceProperty()
+    private func _n_get_ImageSourceProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIImageBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ImageSourceProperty(pThis, __presult))
+        }
+    }
+    public func get_ImageSourceProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ImageSourceProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var ImageSourceProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ImageSourceProperty();
+        }
+    }
+} // IImageBrushStatics
+
+
+// type: Microsoft.UI.Xaml.Media.IImageSource
+// interface type
+open class IImageSource
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6c2038f6, Data2: 0xd6d5, Data3 : 0x55e9, Data4 : (0x9b, 0x9e, 0x08, 0x2f, 0x12, 0xdb, 0xff, 0x60)) }
+} // IImageSource
+
+
 // type: Microsoft.UI.Xaml.Media.ILinearGradientBrush
 // interface type
 open class ILinearGradientBrush
@@ -1462,6 +1581,173 @@ open class ISolidColorBrushStatics
 } // ISolidColorBrushStatics
 
 
+// type: Microsoft.UI.Xaml.Media.ITileBrush
+// interface type
+open class ITileBrush
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xee46060d, Data2: 0xcabc, Data3 : 0x505d, Data4 : (0x88, 0x3c, 0x75, 0xd2, 0xe0, 0xe4, 0x58, 0x75)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.AlignmentX get_AlignmentX()
+    private func _n_get_AlignmentX(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentX(pThis, __presult))
+        }
+    }
+    public func get_AlignmentX() throws -> WinRT.Microsoft.UI.Xaml.Media.AlignmentX {
+        var __result : _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX = _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Left;
+        try self._n_get_AlignmentX(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AlignmentX(Microsoft.UI.Xaml.Media.AlignmentX)
+    private func _n_put_AlignmentX(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AlignmentX(pThis, value))
+        }
+    }
+    public func put_AlignmentX(value : WinRT.Microsoft.UI.Xaml.Media.AlignmentX) throws -> Void {
+        try self._n_put_AlignmentX(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.AlignmentY get_AlignmentY()
+    private func _n_get_AlignmentY(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentY(pThis, __presult))
+        }
+    }
+    public func get_AlignmentY() throws -> WinRT.Microsoft.UI.Xaml.Media.AlignmentY {
+        var __result : _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY = _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Top;
+        try self._n_get_AlignmentY(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AlignmentY(Microsoft.UI.Xaml.Media.AlignmentY)
+    private func _n_put_AlignmentY(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AlignmentY(pThis, value))
+        }
+    }
+    public func put_AlignmentY(value : WinRT.Microsoft.UI.Xaml.Media.AlignmentY) throws -> Void {
+        try self._n_put_AlignmentY(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Stretch get_Stretch()
+    private func _n_get_Stretch(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CStretch>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Stretch(pThis, __presult))
+        }
+    }
+    public func get_Stretch() throws -> WinRT.Microsoft.UI.Xaml.Media.Stretch {
+        var __result : _q_CMicrosoft_CUI_CXaml_CMedia_CStretch = _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_None;
+        try self._n_get_Stretch(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Stretch(Microsoft.UI.Xaml.Media.Stretch)
+    private func _n_put_Stretch(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CStretch) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Stretch(pThis, value))
+        }
+    }
+    public func put_Stretch(value : WinRT.Microsoft.UI.Xaml.Media.Stretch) throws -> Void {
+        try self._n_put_Stretch(value);
+    }
+    public var AlignmentX : WinRT.Microsoft.UI.Xaml.Media.AlignmentX {
+        get throws {
+            return try get_AlignmentX();
+        }
+    }
+    public var AlignmentY : WinRT.Microsoft.UI.Xaml.Media.AlignmentY {
+        get throws {
+            return try get_AlignmentY();
+        }
+    }
+    public var Stretch : WinRT.Microsoft.UI.Xaml.Media.Stretch {
+        get throws {
+            return try get_Stretch();
+        }
+    }
+} // ITileBrush
+
+
+// type: Microsoft.UI.Xaml.Media.ITileBrushFactory
+// interface type
+// COMPOSITION INTERFACE
+open class ITileBrushFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8542e5e6, Data2: 0x5177, Data3 : 0x506f, Data4 : (0x8a, 0x3b, 0xaa, 0x7d, 0xa6, 0x51, 0xf0, 0x99)) }
+    // Microsoft.UI.Xaml.Media.TileBrush CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ITileBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITileBrush>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Media.ITileBrush(consuming: __result);
+    }
+} // ITileBrushFactory
+
+
+// type: Microsoft.UI.Xaml.Media.ITileBrushStatics
+// interface type
+open class ITileBrushStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf402197b, Data2: 0x9047, Data3 : 0x5f8a, Data4 : (0x90, 0xbc, 0x6f, 0x5d, 0x8c, 0x74, 0x8a, 0x5f)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AlignmentXProperty()
+    private func _n_get_AlignmentXProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentXProperty(pThis, __presult))
+        }
+    }
+    public func get_AlignmentXProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_AlignmentXProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AlignmentYProperty()
+    private func _n_get_AlignmentYProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlignmentYProperty(pThis, __presult))
+        }
+    }
+    public func get_AlignmentYProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_AlignmentYProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_StretchProperty()
+    private func _n_get_StretchProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CITileBrushStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_StretchProperty(pThis, __presult))
+        }
+    }
+    public func get_StretchProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_StretchProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var AlignmentXProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_AlignmentXProperty();
+        }
+    }
+    public var AlignmentYProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_AlignmentYProperty();
+        }
+    }
+    public var StretchProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_StretchProperty();
+        }
+    }
+} // ITileBrushStatics
+
+
 // type: Microsoft.UI.Xaml.Media.ITransform
 // interface type
 open class ITransform
@@ -1505,6 +1791,85 @@ open class IXamlLightFactory
     }
 } // IXamlLightFactory
 
+
+// type: Microsoft.UI.Xaml.Media.ImageBrush
+// runtime class
+public class ImageBrush
+    :
+    Microsoft.UI.Xaml.Media.TileBrush
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.IImageBrush;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IImageBrush?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IImageBrush { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.ImageBrush")
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IImageBrushStatics {
+        static var x : IImageBrushStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.ImageBrush")
+    }
+    public static var ImageBrushStatics : IImageBrushStatics {
+        _IImageBrushStatics.x
+    }
+    public static func get_ImageSourceProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ImageBrushStatics.get_ImageSourceProperty());
+    }
+    public static var ImageSourceProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: ImageBrushStatics.ImageSourceProperty);
+        }
+    }
+    public func get_ImageSource() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ImageSource> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.ImageSource(plok: _ifc.get_ImageSource());
+    }
+    public func put_ImageSource(value : Optional<WinRT.Microsoft.UI.Xaml.Media.ImageSource>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+        return try _ifc.put_ImageSource(value: value!.Interface());
+    }
+    public func add_ImageFailed(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+        return try _ifc.add_ImageFailed(handler: WinRT.Microsoft.UI.Xaml.ExceptionRoutedEventHandler(cb: handler).Interface());
+    }
+    public func remove_ImageFailed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+        return try _ifc.remove_ImageFailed(token: token);
+    }
+    public func add_ImageOpened(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+        return try _ifc.add_ImageOpened(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+    }
+    public func remove_ImageOpened(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+        return try _ifc.remove_ImageOpened(token: token);
+    }
+    public var ImageSource : Optional<WinRT.Microsoft.UI.Xaml.Media.ImageSource> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.ImageSource(plok: _ifc.ImageSource);
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Media.ImageSource
+// runtime class
+open class ImageSource
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.IImageSource;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.IImageSource?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.IImageSource { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Media.IImageSourceFactory
+// composable interface not needed: Microsoft.UI.Xaml.Media.IImageSourceFactory
+}
 
 // type: Microsoft.UI.Xaml.Media.LinearGradientBrush
 // runtime class
@@ -1691,6 +2056,105 @@ public class SolidColorBrush
     }
 }
 
+// type: Microsoft.UI.Xaml.Media.Stretch
+// enum type
+public typealias Stretch = _q_CMicrosoft_CUI_CXaml_CMedia_CStretch;
+
+// type: Microsoft.UI.Xaml.Media.TileBrush
+// runtime class
+open class TileBrush
+    :
+    Microsoft.UI.Xaml.Media.Brush
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.ITileBrush;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.ITileBrush?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.ITileBrush { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Media.ITileBrushFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : ITileBrushFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.TileBrush");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _ITileBrushStatics {
+        static var x : ITileBrushStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Media.TileBrush")
+    }
+    public static var TileBrushStatics : ITileBrushStatics {
+        _ITileBrushStatics.x
+    }
+    public static func get_AlignmentXProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: TileBrushStatics.get_AlignmentXProperty());
+    }
+    public static func get_AlignmentYProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: TileBrushStatics.get_AlignmentYProperty());
+    }
+    public static func get_StretchProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: TileBrushStatics.get_StretchProperty());
+    }
+    public static var AlignmentXProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: TileBrushStatics.AlignmentXProperty);
+        }
+    }
+    public static var AlignmentYProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: TileBrushStatics.AlignmentYProperty);
+        }
+    }
+    public static var StretchProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: TileBrushStatics.StretchProperty);
+        }
+    }
+    public func get_AlignmentX() throws -> WinRT.Microsoft.UI.Xaml.Media.AlignmentX {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+        return try _ifc.get_AlignmentX();
+    }
+    public func put_AlignmentX(value : WinRT.Microsoft.UI.Xaml.Media.AlignmentX) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+        return try _ifc.put_AlignmentX(value: value);
+    }
+    public func get_AlignmentY() throws -> WinRT.Microsoft.UI.Xaml.Media.AlignmentY {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+        return try _ifc.get_AlignmentY();
+    }
+    public func put_AlignmentY(value : WinRT.Microsoft.UI.Xaml.Media.AlignmentY) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+        return try _ifc.put_AlignmentY(value: value);
+    }
+    public func get_Stretch() throws -> WinRT.Microsoft.UI.Xaml.Media.Stretch {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+        return try _ifc.get_Stretch();
+    }
+    public func put_Stretch(value : WinRT.Microsoft.UI.Xaml.Media.Stretch) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+        return try _ifc.put_Stretch(value: value);
+    }
+    public var AlignmentX : WinRT.Microsoft.UI.Xaml.Media.AlignmentX {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+            return try _ifc.AlignmentX;
+        }
+    }
+    public var AlignmentY : WinRT.Microsoft.UI.Xaml.Media.AlignmentY {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+            return try _ifc.AlignmentY;
+        }
+    }
+    public var Stretch : WinRT.Microsoft.UI.Xaml.Media.Stretch {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
+            return try _ifc.Stretch;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Media.Transform
 // runtime class
 open class Transform
@@ -1732,6 +2196,40 @@ open class XamlLight
     // instance interface not needed: Microsoft.UI.Xaml.Media.IXamlLightOverrides
 }
 
+}
+extension WinRT.Microsoft.UI.Xaml.Media.AlignmentX {
+    public static var Left : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Left;
+        }
+    }
+    public static var Center : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Center;
+        }
+    }
+    public static var Right : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentX_Right;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Media.AlignmentY {
+    public static var Top : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Top;
+        }
+    }
+    public static var Center : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Center;
+        }
+    }
+    public static var Bottom : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CAlignmentY_Bottom;
+        }
+    }
 }
 extension WinRT.Microsoft.UI.Xaml.Media.BrushMappingMode {
     public static var Absolute : Self {
@@ -1788,6 +2286,28 @@ extension WinRT.Microsoft.UI.Xaml.Media.GradientSpreadMethod {
     public static var Repeat : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod_Repeat;
+        }
+    }
+}
+extension WinRT.Microsoft.UI.Xaml.Media.Stretch {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_None;
+        }
+    }
+    public static var Fill : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_Fill;
+        }
+    }
+    public static var Uniform : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_Uniform;
+        }
+    }
+    public static var UniformToFill : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CMedia_CStretch_UniformToFill;
         }
     }
 }

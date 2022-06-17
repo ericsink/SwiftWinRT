@@ -31,10 +31,10 @@ public class HttpClient
         let _ifc : WinRT.Windows.Web.Http.IHttpClient = try _self.QueryInterface();
         return try _ifc.GetAsync(uri: uri!.Interface());
     }
-    public func Get(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
+    public func Get(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Web.Http.HttpResponseMessage> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
-                return try continuation.resume(returning: self.GetAsync(uri: uri)!.get())
+                return try continuation.resume(returning: WinRT.Windows.Web.Http.HttpResponseMessage(plok: self.GetAsync(uri: uri)!.get()))
             } catch let error {
                 return continuation.resume(throwing: error)
             }

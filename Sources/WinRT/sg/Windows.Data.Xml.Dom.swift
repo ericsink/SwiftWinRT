@@ -1756,14 +1756,50 @@ public class XmlDocument
     public static func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromUriAsync(uri: uri!.Interface());
     }
-    public static func LoadFromUriWithSettingsAsync(uri : Optional<WinRT.Windows.Foundation.Uri>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public static func LoadFromUri(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: WinRT.Windows.Data.Xml.Dom.XmlDocument(plok: Self.LoadFromUriAsync(uri: uri)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.Uri>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromUriWithSettingsAsync(uri: uri!.Interface(), loadSettings: loadSettings!.Interface());
+    }
+    public static func LoadFromUri(uri : Optional<WinRT.Windows.Foundation.Uri>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: WinRT.Windows.Data.Xml.Dom.XmlDocument(plok: Self.LoadFromUriAsync(uri: uri, loadSettings: loadSettings)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
     }
     public static func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromFileAsync(file: file);
     }
-    public static func LoadFromFileWithSettingsAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public static func LoadFromFile(file : Optional<WinRT.Windows.Storage.IStorageFile>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: WinRT.Windows.Data.Xml.Dom.XmlDocument(plok: Self.LoadFromFileAsync(file: file)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromFileWithSettingsAsync(file: file, loadSettings: loadSettings!.Interface());
+    }
+    public static func LoadFromFile(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: WinRT.Windows.Data.Xml.Dom.XmlDocument(plok: Self.LoadFromFileAsync(file: file, loadSettings: loadSettings)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
     }
     public func get_Doctype() throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocumentType> {
         let _ifc : WinRT.Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();

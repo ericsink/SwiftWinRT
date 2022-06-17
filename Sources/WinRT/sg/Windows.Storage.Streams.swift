@@ -49,4 +49,23 @@ open class IOutputStream
 } // IOutputStream
 
 
+// type: Windows.Storage.Streams.IRandomAccessStream
+// interface type
+open class IRandomAccessStream
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe1, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
+// method not needed: get_Size
+// method not needed: put_Size
+// method not needed: GetInputStreamAt
+// method not needed: GetOutputStreamAt
+// method not needed: get_Position
+// method not needed: Seek
+// method not needed: CloneStream
+// method not needed: get_CanRead
+// method not needed: get_CanWrite
+} // IRandomAccessStream
+
+
 }

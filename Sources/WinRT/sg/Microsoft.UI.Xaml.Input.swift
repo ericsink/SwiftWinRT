@@ -492,12 +492,95 @@ open class IKeyRoutedEventArgs
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xee357007, Data2: 0xa2d6, Data3 : 0x5c75, Data4 : (0x94, 0x31, 0x05, 0xfd, 0x66, 0xec, 0x79, 0x15)) }
-// method not needed: get_Key
-// method not needed: get_KeyStatus
-// method not needed: get_Handled
-// method not needed: put_Handled
-// method not needed: get_OriginalKey
-// method not needed: get_DeviceId
+    // [IsSpecialName] Windows.System.VirtualKey get_Key()
+    private func _n_get_Key(_ __presult: UnsafeMutablePointer<_q_CWindows_CSystem_CVirtualKey>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Key(pThis, __presult))
+        }
+    }
+    public func get_Key() throws -> WinRT.Windows.System.VirtualKey {
+        var __result : _q_CWindows_CSystem_CVirtualKey = _q_CWindows_CSystem_CVirtualKey_None;
+        try self._n_get_Key(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.UI.Core.CorePhysicalKeyStatus get_KeyStatus()
+    private func _n_get_KeyStatus(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CCore_CCorePhysicalKeyStatus>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyStatus(pThis, __presult))
+        }
+    }
+    public func get_KeyStatus() throws -> WinRT.Windows.UI.Core.CorePhysicalKeyStatus {
+        var __result : _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus = _q_CWindows_CUI_CCore_CCorePhysicalKeyStatus(RepeatCount: 0, ScanCode: 0, IsExtendedKey: 0, IsMenuKeyDown: 0, WasKeyDown: 0, IsKeyReleased: 0);
+        try self._n_get_KeyStatus(&__result);
+        return __result;
+    }
+    // [IsSpecialName] bool get_Handled()
+    private func _n_get_Handled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Handled(pThis, __presult))
+        }
+    }
+    public func get_Handled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_Handled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Handled(bool)
+    private func _n_put_Handled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Handled(pThis, value))
+        }
+    }
+    public func put_Handled(value : boolean) throws -> Void {
+        try self._n_put_Handled(value);
+    }
+    // [IsSpecialName] Windows.System.VirtualKey get_OriginalKey()
+    private func _n_get_OriginalKey(_ __presult: UnsafeMutablePointer<_q_CWindows_CSystem_CVirtualKey>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_OriginalKey(pThis, __presult))
+        }
+    }
+    public func get_OriginalKey() throws -> WinRT.Windows.System.VirtualKey {
+        var __result : _q_CWindows_CSystem_CVirtualKey = _q_CWindows_CSystem_CVirtualKey_None;
+        try self._n_get_OriginalKey(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.String get_DeviceId()
+    private func _n_get_DeviceId(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeviceId(pThis, __presult))
+        }
+    }
+    public func get_DeviceId() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DeviceId(&__result);
+        return Swift.String(from: __result);
+    }
+    public var DeviceId : Swift.String {
+        get throws {
+            return try get_DeviceId();
+        }
+    }
+    public var Handled : boolean {
+        get throws {
+            return try get_Handled();
+        }
+    }
+    public var Key : WinRT.Windows.System.VirtualKey {
+        get throws {
+            return try get_Key();
+        }
+    }
+    public var KeyStatus : WinRT.Windows.UI.Core.CorePhysicalKeyStatus {
+        get throws {
+            return try get_KeyStatus();
+        }
+    }
+    public var OriginalKey : WinRT.Windows.System.VirtualKey {
+        get throws {
+            return try get_OriginalKey();
+        }
+    }
 } // IKeyRoutedEventArgs
 
 
@@ -894,12 +977,60 @@ public class KeyRoutedEventArgs
         try super.init(plok: _self.QueryInterface())
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs { return _self; }
-    // method not needed: get_Key
-    // method not needed: get_KeyStatus
-    // method not needed: get_Handled
-    // method not needed: put_Handled
-    // method not needed: get_OriginalKey
-    // method not needed: get_DeviceId
+    public func get_Key() throws -> WinRT.Windows.System.VirtualKey {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_Key();
+    }
+    public func get_KeyStatus() throws -> WinRT.Windows.UI.Core.CorePhysicalKeyStatus {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_KeyStatus();
+    }
+    public func get_Handled() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_Handled();
+    }
+    public func put_Handled(value : boolean) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.put_Handled(value: value);
+    }
+    public func get_OriginalKey() throws -> WinRT.Windows.System.VirtualKey {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_OriginalKey();
+    }
+    public func get_DeviceId() throws -> Swift.String {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_DeviceId();
+    }
+    public var DeviceId : Swift.String {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+            return try _ifc.DeviceId;
+        }
+    }
+    public var Handled : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+            return try _ifc.Handled;
+        }
+    }
+    public var Key : WinRT.Windows.System.VirtualKey {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+            return try _ifc.Key;
+        }
+    }
+    public var KeyStatus : WinRT.Windows.UI.Core.CorePhysicalKeyStatus {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+            return try _ifc.KeyStatus;
+        }
+    }
+    public var OriginalKey : WinRT.Windows.System.VirtualKey {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
+            return try _ifc.OriginalKey;
+        }
+    }
 }
 
 // type: Microsoft.UI.Xaml.Input.KeyTipPlacementMode

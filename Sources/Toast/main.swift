@@ -25,7 +25,7 @@ class WinRTDemo {
 """#
     try doc.LoadXml(xml: s)
     let toast = try Windows.UI.Notifications.ToastNotification(content: doc)
-    let notifier = try Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifierWithId(applicationId: "VisualStudio.3ca2c57a")!
+    let notifier = try Windows.UI.Notifications.ToastNotificationManager.CreateToastNotifier(applicationId: "VisualStudio.3ca2c57a")!
     try notifier.Show(notification: toast);
     Sleep(1)
   }

@@ -14,5 +14,8 @@ open class Object
     internal final func GetInterface() throws -> WinRT.IInspectable {
         return _self
     }
+  public func QueryInterface<Interface: IUnknown>() throws -> Interface {
+    return try _self.QueryInterface()
+  }
 }
 

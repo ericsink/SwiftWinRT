@@ -64,6 +64,102 @@ open class Button
 // enum type
 public typealias ClickMode = _q_CMicrosoft_CUI_CXaml_CControls_CClickMode;
 
+// type: Microsoft.UI.Xaml.Controls.ColumnDefinition
+// runtime class
+public class ColumnDefinition
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IColumnDefinition { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ColumnDefinition")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Controls.IColumnDefinitionStatics
+    // method not needed: get_Width
+    // method not needed: put_Width
+    // method not needed: get_MaxWidth
+    // method not needed: put_MaxWidth
+    // method not needed: get_MinWidth
+    // method not needed: put_MinWidth
+    // method not needed: get_ActualWidth
+}
+
+// type: Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection
+// runtime class
+public class ColumnDefinitionCollection
+    :
+    WinRT.Object
+{
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition { return _self; }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition> {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition(plok: _ifc.GetAt(index: index));
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.GetView();
+    }
+    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>, index : inout Swift.UInt32) throws -> boolean {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+            var _tmp_out_index: Swift.UInt32 = 0;
+        return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.SetAt(index: index, value: value!.Interface());
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.InsertAt(index: index, value: value!.Interface());
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.RemoveAt(index: index);
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.Append(value: value!.Interface());
+    }
+    public func RemoveAtEnd() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.RemoveAtEnd();
+    }
+    public func Clear() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.Clear();
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws -> Swift.UInt32 {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+            return try _ifc.Size;
+        }
+    }
+    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.Controls.ColumnDefinition, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+}
+
 // type: Microsoft.UI.Xaml.Controls.ContentControl
 // runtime class
 open class ContentControl
@@ -1954,6 +2050,265 @@ public class FocusEngagedEventArgs
     // method not needed: put_Handled
 }
 
+// type: Microsoft.UI.Xaml.Controls.Grid
+// runtime class
+open class Grid
+    :
+    Microsoft.UI.Xaml.Controls.Panel
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IGrid;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IGrid?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IGrid { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IGridFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IGridFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Grid");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IGridStatics {
+        static var x : IGridStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Grid")
+    }
+    public static var GridStatics : IGridStatics {
+        _IGridStatics.x
+    }
+    public static func get_BackgroundSizingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_BackgroundSizingProperty());
+    }
+    public static func get_BorderBrushProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_BorderBrushProperty());
+    }
+    public static func get_BorderThicknessProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_BorderThicknessProperty());
+    }
+    public static func get_CornerRadiusProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_CornerRadiusProperty());
+    }
+    public static func get_PaddingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_PaddingProperty());
+    }
+    public static func get_RowSpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_RowSpacingProperty());
+    }
+    public static func get_ColumnSpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_ColumnSpacingProperty());
+    }
+    public static func get_RowProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_RowProperty());
+    }
+    public static func GetRow(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>) throws -> Swift.Int32 {
+        return try GridStatics.GetRow(element: element!.Interface());
+    }
+    public static func SetRow(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, value : Swift.Int32) throws -> Void {
+        return try GridStatics.SetRow(element: element!.Interface(), value: value);
+    }
+    public static func get_ColumnProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_ColumnProperty());
+    }
+    public static func GetColumn(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>) throws -> Swift.Int32 {
+        return try GridStatics.GetColumn(element: element!.Interface());
+    }
+    public static func SetColumn(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, value : Swift.Int32) throws -> Void {
+        return try GridStatics.SetColumn(element: element!.Interface(), value: value);
+    }
+    public static func get_RowSpanProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_RowSpanProperty());
+    }
+    public static func GetRowSpan(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>) throws -> Swift.Int32 {
+        return try GridStatics.GetRowSpan(element: element!.Interface());
+    }
+    public static func SetRowSpan(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, value : Swift.Int32) throws -> Void {
+        return try GridStatics.SetRowSpan(element: element!.Interface(), value: value);
+    }
+    public static func get_ColumnSpanProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.get_ColumnSpanProperty());
+    }
+    public static func GetColumnSpan(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>) throws -> Swift.Int32 {
+        return try GridStatics.GetColumnSpan(element: element!.Interface());
+    }
+    public static func SetColumnSpan(element : Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, value : Swift.Int32) throws -> Void {
+        return try GridStatics.SetColumnSpan(element: element!.Interface(), value: value);
+    }
+    public static var BackgroundSizingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.BackgroundSizingProperty);
+        }
+    }
+    public static var BorderBrushProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.BorderBrushProperty);
+        }
+    }
+    public static var BorderThicknessProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.BorderThicknessProperty);
+        }
+    }
+    public static var ColumnProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.ColumnProperty);
+        }
+    }
+    public static var ColumnSpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.ColumnSpacingProperty);
+        }
+    }
+    public static var ColumnSpanProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.ColumnSpanProperty);
+        }
+    }
+    public static var CornerRadiusProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.CornerRadiusProperty);
+        }
+    }
+    public static var PaddingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.PaddingProperty);
+        }
+    }
+    public static var RowProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.RowProperty);
+        }
+    }
+    public static var RowSpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.RowSpacingProperty);
+        }
+    }
+    public static var RowSpanProperty : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try WinRT.Microsoft.UI.Xaml.DependencyProperty(plok: GridStatics.RowSpanProperty);
+        }
+    }
+    public func get_RowDefinitions() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinitionCollection> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.RowDefinitionCollection(plok: _ifc.get_RowDefinitions());
+    }
+    public func get_ColumnDefinitions() throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection(plok: _ifc.get_ColumnDefinitions());
+    }
+    public func get_BackgroundSizing() throws -> WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.get_BackgroundSizing();
+    }
+    public func put_BackgroundSizing(value : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_BackgroundSizing(value: value);
+    }
+    public func get_BorderBrush() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_BorderBrush());
+    }
+    public func put_BorderBrush(value : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_BorderBrush(value: value!.Interface());
+    }
+    public func get_BorderThickness() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.get_BorderThickness();
+    }
+    public func put_BorderThickness(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_BorderThickness(value: value);
+    }
+    public func get_CornerRadius() throws -> WinRT.Microsoft.UI.Xaml.CornerRadius {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.get_CornerRadius();
+    }
+    public func put_CornerRadius(value : WinRT.Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_CornerRadius(value: value);
+    }
+    public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.get_Padding();
+    }
+    public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_Padding(value: value);
+    }
+    public func get_RowSpacing() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.get_RowSpacing();
+    }
+    public func put_RowSpacing(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_RowSpacing(value: value);
+    }
+    public func get_ColumnSpacing() throws -> Swift.Double {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.get_ColumnSpacing();
+    }
+    public func put_ColumnSpacing(value : Swift.Double) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+        return try _ifc.put_ColumnSpacing(value: value);
+    }
+    public var BackgroundSizing : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try _ifc.BackgroundSizing;
+        }
+    }
+    public var BorderBrush : Optional<WinRT.Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Media.Brush(plok: _ifc.BorderBrush);
+        }
+    }
+    public var BorderThickness : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try _ifc.BorderThickness;
+        }
+    }
+    public var ColumnDefinitions : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection(plok: _ifc.ColumnDefinitions);
+        }
+    }
+    public var ColumnSpacing : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try _ifc.ColumnSpacing;
+        }
+    }
+    public var CornerRadius : WinRT.Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try _ifc.CornerRadius;
+        }
+    }
+    public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try _ifc.Padding;
+        }
+    }
+    public var RowDefinitions : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinitionCollection> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try WinRT.Microsoft.UI.Xaml.Controls.RowDefinitionCollection(plok: _ifc.RowDefinitions);
+        }
+    }
+    public var RowSpacing : Swift.Double {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IGrid = try _self.QueryInterface();
+            return try _ifc.RowSpacing;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.IButton
 // interface type
 open class IButton
@@ -2037,6 +2392,23 @@ open class IButtonStatics
         }
     }
 } // IButtonStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IColumnDefinition
+// interface type
+open class IColumnDefinition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x454cea14, Data2: 0x87ec, Data3 : 0x5890, Data4 : (0xbb, 0x62, 0xf1, 0xd8, 0x2a, 0x94, 0x75, 0x8e)) }
+// method not needed: get_Width
+// method not needed: put_Width
+// method not needed: get_MaxWidth
+// method not needed: put_MaxWidth
+// method not needed: get_MinWidth
+// method not needed: put_MinWidth
+// method not needed: get_ActualWidth
+} // IColumnDefinition
 
 
 // type: Microsoft.UI.Xaml.Controls.IContentControl
@@ -3891,6 +4263,513 @@ open class IFocusEngagedEventArgs
 } // IFocusEngagedEventArgs
 
 
+// type: Microsoft.UI.Xaml.Controls.IGrid
+// interface type
+open class IGrid
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc4496219, Data2: 0x9014, Data3 : 0x58a1, Data4 : (0xb4, 0xad, 0xc5, 0x04, 0x49, 0x13, 0xa5, 0xbb)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.RowDefinitionCollection get_RowDefinitions()
+    private func _n_get_RowDefinitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowDefinitions(pThis, __presult))
+        }
+    }
+    public func get_RowDefinitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition>> = nil;
+        try self._n_get_RowDefinitions(&__result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection get_ColumnDefinitions()
+    private func _n_get_ColumnDefinitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnDefinitions(pThis, __presult))
+        }
+    }
+    public func get_ColumnDefinitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>> = nil;
+        try self._n_get_ColumnDefinitions(&__result);
+        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.BackgroundSizing get_BackgroundSizing()
+    private func _n_get_BackgroundSizing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizing(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizing() throws -> WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_InnerBorderEdge;
+        try self._n_get_BackgroundSizing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
+    private func _n_put_BackgroundSizing(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BackgroundSizing(pThis, value))
+        }
+    }
+    public func put_BackgroundSizing(value : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        try self._n_put_BackgroundSizing(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_BorderBrush()
+    private func _n_get_BorderBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrush(pThis, __presult))
+        }
+    }
+    public func get_BorderBrush() throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_BorderBrush(&__result);
+        return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
+    private func _n_put_BorderBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderBrush(pThis, value))
+        }
+    }
+    public func put_BorderBrush(value : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_BorderBrush(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_BorderThickness()
+    private func _n_get_BorderThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThickness(pThis, __presult))
+        }
+    }
+    public func get_BorderThickness() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_BorderThickness(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BorderThickness(Microsoft.UI.Xaml.Thickness)
+    private func _n_put_BorderThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderThickness(pThis, value))
+        }
+    }
+    public func put_BorderThickness(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_BorderThickness(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.CornerRadius get_CornerRadius()
+    private func _n_get_CornerRadius(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CCornerRadius>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadius(pThis, __presult))
+        }
+    }
+    public func get_CornerRadius() throws -> WinRT.Microsoft.UI.Xaml.CornerRadius {
+        var __result : _q_CMicrosoft_CUI_CXaml_CCornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius(TopLeft: 0, TopRight: 0, BottomRight: 0, BottomLeft: 0);
+        try self._n_get_CornerRadius(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
+    private func _n_put_CornerRadius(_ value : _q_CMicrosoft_CUI_CXaml_CCornerRadius) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CornerRadius(pThis, value))
+        }
+    }
+    public func put_CornerRadius(value : WinRT.Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        try self._n_put_CornerRadius(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Padding()
+    private func _n_get_Padding(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Padding(pThis, __presult))
+        }
+    }
+    public func get_Padding() throws -> WinRT.Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_Padding(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Padding(Microsoft.UI.Xaml.Thickness)
+    private func _n_put_Padding(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Padding(pThis, value))
+        }
+    }
+    public func put_Padding(value : WinRT.Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_Padding(value);
+    }
+    // [IsSpecialName] System.Double get_RowSpacing()
+    private func _n_get_RowSpacing(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowSpacing(pThis, __presult))
+        }
+    }
+    public func get_RowSpacing() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_RowSpacing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_RowSpacing(System.Double)
+    private func _n_put_RowSpacing(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_RowSpacing(pThis, value))
+        }
+    }
+    public func put_RowSpacing(value : Swift.Double) throws -> Void {
+        try self._n_put_RowSpacing(value);
+    }
+    // [IsSpecialName] System.Double get_ColumnSpacing()
+    private func _n_get_ColumnSpacing(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnSpacing(pThis, __presult))
+        }
+    }
+    public func get_ColumnSpacing() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_ColumnSpacing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ColumnSpacing(System.Double)
+    private func _n_put_ColumnSpacing(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGrid.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ColumnSpacing(pThis, value))
+        }
+    }
+    public func put_ColumnSpacing(value : Swift.Double) throws -> Void {
+        try self._n_put_ColumnSpacing(value);
+    }
+    public var BackgroundSizing : WinRT.Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+            return try get_BackgroundSizing();
+        }
+    }
+    public var BorderBrush : Optional<WinRT.Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_BorderBrush();
+        }
+    }
+    public var BorderThickness : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_BorderThickness();
+        }
+    }
+    public var ColumnDefinitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+        get throws {
+            return try get_ColumnDefinitions();
+        }
+    }
+    public var ColumnSpacing : Swift.Double {
+        get throws {
+            return try get_ColumnSpacing();
+        }
+    }
+    public var CornerRadius : WinRT.Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+            return try get_CornerRadius();
+        }
+    }
+    public var Padding : WinRT.Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_Padding();
+        }
+    }
+    public var RowDefinitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+        get throws {
+            return try get_RowDefinitions();
+        }
+    }
+    public var RowSpacing : Swift.Double {
+        get throws {
+            return try get_RowSpacing();
+        }
+    }
+} // IGrid
+
+
+// type: Microsoft.UI.Xaml.Controls.IGridFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IGridFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb16bf561, Data2: 0xfc6c, Data3 : 0x57c6, Data4 : (0x8e, 0xbc, 0x0b, 0x06, 0xce, 0x45, 0x13, 0xaa)) }
+    // Microsoft.UI.Xaml.Controls.Grid CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGrid>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.IGrid> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGrid>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.Controls.IGrid(consuming: __result);
+    }
+} // IGridFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IGridStatics
+// interface type
+open class IGridStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xef9cf81d, Data2: 0xa431, Data3 : 0x50f4, Data4 : (0xab, 0xf5, 0x30, 0x23, 0xfe, 0x44, 0x77, 0x04)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundSizingProperty()
+    private func _n_get_BackgroundSizingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizingProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundSizingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderBrushProperty()
+    private func _n_get_BorderBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrushProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderBrushProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderBrushProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderThicknessProperty()
+    private func _n_get_BorderThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThicknessProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderThicknessProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderThicknessProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CornerRadiusProperty()
+    private func _n_get_CornerRadiusProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadiusProperty(pThis, __presult))
+        }
+    }
+    public func get_CornerRadiusProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CornerRadiusProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PaddingProperty()
+    private func _n_get_PaddingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaddingProperty(pThis, __presult))
+        }
+    }
+    public func get_PaddingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PaddingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RowSpacingProperty()
+    private func _n_get_RowSpacingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowSpacingProperty(pThis, __presult))
+        }
+    }
+    public func get_RowSpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_RowSpacingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColumnSpacingProperty()
+    private func _n_get_ColumnSpacingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnSpacingProperty(pThis, __presult))
+        }
+    }
+    public func get_ColumnSpacingProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ColumnSpacingProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RowProperty()
+    private func _n_get_RowProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowProperty(pThis, __presult))
+        }
+    }
+    public func get_RowProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_RowProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // System.Int32 GetRow(Microsoft.UI.Xaml.FrameworkElement)
+    private func _n_GetRow(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetRow(pThis, element, __presult))
+        }
+    }
+    public func GetRow(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>) throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_GetRow(RawPointer(element), &__result);
+        return __result;
+    }
+    // void SetRow(Microsoft.UI.Xaml.FrameworkElement, System.Int32)
+    private func _n_SetRow(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetRow(pThis, element, value))
+        }
+    }
+    public func SetRow(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, value : Swift.Int32) throws -> Void {
+        try self._n_SetRow(RawPointer(element), value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColumnProperty()
+    private func _n_get_ColumnProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnProperty(pThis, __presult))
+        }
+    }
+    public func get_ColumnProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ColumnProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // System.Int32 GetColumn(Microsoft.UI.Xaml.FrameworkElement)
+    private func _n_GetColumn(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetColumn(pThis, element, __presult))
+        }
+    }
+    public func GetColumn(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>) throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_GetColumn(RawPointer(element), &__result);
+        return __result;
+    }
+    // void SetColumn(Microsoft.UI.Xaml.FrameworkElement, System.Int32)
+    private func _n_SetColumn(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetColumn(pThis, element, value))
+        }
+    }
+    public func SetColumn(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, value : Swift.Int32) throws -> Void {
+        try self._n_SetColumn(RawPointer(element), value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RowSpanProperty()
+    private func _n_get_RowSpanProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowSpanProperty(pThis, __presult))
+        }
+    }
+    public func get_RowSpanProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_RowSpanProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // System.Int32 GetRowSpan(Microsoft.UI.Xaml.FrameworkElement)
+    private func _n_GetRowSpan(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetRowSpan(pThis, element, __presult))
+        }
+    }
+    public func GetRowSpan(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>) throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_GetRowSpan(RawPointer(element), &__result);
+        return __result;
+    }
+    // void SetRowSpan(Microsoft.UI.Xaml.FrameworkElement, System.Int32)
+    private func _n_SetRowSpan(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetRowSpan(pThis, element, value))
+        }
+    }
+    public func SetRowSpan(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, value : Swift.Int32) throws -> Void {
+        try self._n_SetRowSpan(RawPointer(element), value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColumnSpanProperty()
+    private func _n_get_ColumnSpanProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnSpanProperty(pThis, __presult))
+        }
+    }
+    public func get_ColumnSpanProperty() throws -> Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ColumnSpanProperty(&__result);
+        return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // System.Int32 GetColumnSpan(Microsoft.UI.Xaml.FrameworkElement)
+    private func _n_GetColumnSpan(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetColumnSpan(pThis, element, __presult))
+        }
+    }
+    public func GetColumnSpan(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>) throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_GetColumnSpan(RawPointer(element), &__result);
+        return __result;
+    }
+    // void SetColumnSpan(Microsoft.UI.Xaml.FrameworkElement, System.Int32)
+    private func _n_SetColumnSpan(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGridStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetColumnSpan(pThis, element, value))
+        }
+    }
+    public func SetColumnSpan(element : Optional<WinRT.Microsoft.UI.Xaml.IFrameworkElement>, value : Swift.Int32) throws -> Void {
+        try self._n_SetColumnSpan(RawPointer(element), value);
+    }
+    public var BackgroundSizingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundSizingProperty();
+        }
+    }
+    public var BorderBrushProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderBrushProperty();
+        }
+    }
+    public var BorderThicknessProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderThicknessProperty();
+        }
+    }
+    public var ColumnProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ColumnProperty();
+        }
+    }
+    public var ColumnSpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ColumnSpacingProperty();
+        }
+    }
+    public var ColumnSpanProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ColumnSpanProperty();
+        }
+    }
+    public var CornerRadiusProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CornerRadiusProperty();
+        }
+    }
+    public var PaddingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PaddingProperty();
+        }
+    }
+    public var RowProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_RowProperty();
+        }
+    }
+    public var RowSpacingProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_RowSpacingProperty();
+        }
+    }
+    public var RowSpanProperty : Optional<WinRT.Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_RowSpanProperty();
+        }
+    }
+} // IGridStatics
+
+
 // type: Microsoft.UI.Xaml.Controls.IInsertionPanel
 // interface type
 open class IInsertionPanel
@@ -4121,6 +5000,23 @@ open class IPanelStatics
         }
     }
 } // IPanelStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IRowDefinition
+// interface type
+open class IRowDefinition
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe870f2f, Data2: 0x89ef, Data3 : 0x5dac, Data4 : (0x9f, 0x33, 0x96, 0x8d, 0x0d, 0xc5, 0x77, 0xc3)) }
+// method not needed: get_Height
+// method not needed: put_Height
+// method not needed: get_MaxHeight
+// method not needed: put_MaxHeight
+// method not needed: get_MinHeight
+// method not needed: put_MinHeight
+// method not needed: get_ActualHeight
+} // IRowDefinition
 
 
 // type: Microsoft.UI.Xaml.Controls.ISlider
@@ -6552,6 +7448,102 @@ open class Panel
 // type: Microsoft.UI.Xaml.Controls.RequiresPointer
 // enum type
 public typealias RequiresPointer = _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer;
+
+// type: Microsoft.UI.Xaml.Controls.RowDefinition
+// runtime class
+public class RowDefinition
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IRowDefinition { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.RowDefinition")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Controls.IRowDefinitionStatics
+    // method not needed: get_Height
+    // method not needed: put_Height
+    // method not needed: get_MaxHeight
+    // method not needed: put_MaxHeight
+    // method not needed: get_MinHeight
+    // method not needed: put_MinHeight
+    // method not needed: get_ActualHeight
+}
+
+// type: Microsoft.UI.Xaml.Controls.RowDefinitionCollection
+// runtime class
+public class RowDefinitionCollection
+    :
+    WinRT.Object
+{
+    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition;
+    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition { return _self; }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition> {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try WinRT.Microsoft.UI.Xaml.Controls.RowDefinition(plok: _ifc.GetAt(index: index));
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.GetView();
+    }
+    public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>, index : inout Swift.UInt32) throws -> boolean {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+            var _tmp_out_index: Swift.UInt32 = 0;
+        return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.SetAt(index: index, value: value!.Interface());
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.InsertAt(index: index, value: value!.Interface());
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.RemoveAt(index: index);
+    }
+    public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.Append(value: value!.Interface());
+    }
+    public func RemoveAtEnd() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.RemoveAtEnd();
+    }
+    public func Clear() throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.Clear();
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws -> Swift.UInt32 {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws -> Void {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+            return try _ifc.Size;
+        }
+    }
+    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.Controls.RowDefinition, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+}
 
 // type: Microsoft.UI.Xaml.Controls.Slider
 // runtime class

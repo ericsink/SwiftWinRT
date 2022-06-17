@@ -135,7 +135,7 @@ open class Application
     public static func LoadComponent(component : Optional<WinRT.Object>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>) throws -> Void {
         return try ApplicationStatics.LoadComponent(component: component!.GetInterface(), resourceLocator: resourceLocator!.Interface());
     }
-    public static func LoadComponentWithResourceLocation(component : Optional<WinRT.Object>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>, componentResourceLocation : WinRT.Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation) throws -> Void {
+    public static func LoadComponent(component : Optional<WinRT.Object>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>, componentResourceLocation : WinRT.Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation) throws -> Void {
         return try ApplicationStatics.LoadComponentWithResourceLocation(component: component!.GetInterface(), resourceLocator: resourceLocator!.Interface(), componentResourceLocation: componentResourceLocation);
     }
     public static var Current : Optional<WinRT.Microsoft.UI.Xaml.Application> {
@@ -789,6 +789,68 @@ open class DependencyPropertyChangedEventHandler
     }
 }
 
+// type: Microsoft.UI.Xaml.DispatcherTimer
+// runtime class
+open class DispatcherTimer
+    :
+    WinRT.Object
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.IDispatcherTimer;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IDispatcherTimer?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.IDispatcherTimer { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.IDispatcherTimerFactory
+    public init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IDispatcherTimerFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.DispatcherTimer");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func get_Interval() throws -> WinRT.Windows.Foundation.TimeSpan {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.get_Interval();
+    }
+    public func put_Interval(value : WinRT.Windows.Foundation.TimeSpan) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.put_Interval(value: value);
+    }
+    public func get_IsEnabled() throws -> boolean {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.get_IsEnabled();
+    }
+    public func add_Tick(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.add_Tick(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+    }
+    public func remove_Tick(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.remove_Tick(token: token);
+    }
+    public func Start() throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.Start();
+    }
+    public func Stop() throws -> Void {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+        return try _ifc.Stop();
+    }
+    public var Interval : WinRT.Windows.Foundation.TimeSpan {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+            return try _ifc.Interval;
+        }
+    }
+    public var IsEnabled : boolean {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
+            return try _ifc.IsEnabled;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.DragEventArgs
 // runtime class
 public class DragEventArgs
@@ -974,6 +1036,116 @@ public typealias ElementSoundMode = _q_CMicrosoft_CUI_CXaml_CElementSoundMode;
 // type: Microsoft.UI.Xaml.ElementTheme
 // enum type
 public typealias ElementTheme = _q_CMicrosoft_CUI_CXaml_CElementTheme;
+
+// type: Microsoft.UI.Xaml.ExceptionRoutedEventArgs
+// runtime class
+open class ExceptionRoutedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventArgs;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventArgs { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.IExceptionRoutedEventArgsFactory
+// composable interface not needed: Microsoft.UI.Xaml.IExceptionRoutedEventArgsFactory
+    // method not needed: get_ErrorMessage
+}
+
+// type: Microsoft.UI.Xaml.ExceptionRoutedEventHandler
+// delegate type
+open class IExceptionRoutedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x45fbb85d, Data2: 0x54f9, Data3 : 0x5a2a, Data4 : (0x8a, 0x38, 0x00, 0xa3, 0xb7, 0x76, 0x1f, 0x96)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.ExceptionRoutedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class ExceptionRoutedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs>>) in
+        guard let self = ExceptionRoutedEventHandler.from(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: WinRT.Microsoft.UI.Xaml.ExceptionRoutedEventArgs(plok: WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: ExceptionRoutedEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ExceptionRoutedEventHandler? {
+        return pUnk?.bindMemory(to: ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, e)
+        }
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            WinRT.Microsoft.UI.Xaml.IExceptionRoutedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
 
 // type: Microsoft.UI.Xaml.FlowDirection
 // enum type
@@ -2496,6 +2668,119 @@ open class IDependencyPropertyChangedEventArgs
 } // IDependencyPropertyChangedEventArgs
 
 
+// type: Microsoft.UI.Xaml.IDispatcherTimer
+// interface type
+open class IDispatcherTimer
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x58a4abf1, Data2: 0xa4a3, Data3 : 0x53dd, Data4 : (0xae, 0x21, 0x08, 0xf4, 0x32, 0x31, 0xe8, 0x17)) }
+    // [IsSpecialName] Windows.Foundation.TimeSpan get_Interval()
+    private func _n_get_Interval(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CTimeSpan>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Interval(pThis, __presult))
+        }
+    }
+    public func get_Interval() throws -> WinRT.Windows.Foundation.TimeSpan {
+        var __result : _q_CWindows_CFoundation_CTimeSpan = _q_CWindows_CFoundation_CTimeSpan(Duration: 0);
+        try self._n_get_Interval(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Interval(Windows.Foundation.TimeSpan)
+    private func _n_put_Interval(_ value : _q_CWindows_CFoundation_CTimeSpan) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Interval(pThis, value))
+        }
+    }
+    public func put_Interval(value : WinRT.Windows.Foundation.TimeSpan) throws -> Void {
+        try self._n_put_Interval(value);
+    }
+    // [IsSpecialName] bool get_IsEnabled()
+    private func _n_get_IsEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Tick(Windows.Foundation.EventHandler<System.Object>)
+    private func _n_add_Tick(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_Tick(pThis, handler, __presult))
+        }
+    }
+    public func add_Tick(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_Tick(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_Tick(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_Tick(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Tick(pThis, token))
+        }
+    }
+    public func remove_Tick(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_Tick(token);
+    }
+    // void Start()
+    private func _n_Start() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Start(pThis))
+        }
+    }
+    public func Start() throws -> Void {
+        try self._n_Start();
+    }
+    // void Stop()
+    private func _n_Stop() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Stop(pThis))
+        }
+    }
+    public func Stop() throws -> Void {
+        try self._n_Stop();
+    }
+    public var Interval : WinRT.Windows.Foundation.TimeSpan {
+        get throws {
+            return try get_Interval();
+        }
+    }
+    public var IsEnabled : boolean {
+        get throws {
+            return try get_IsEnabled();
+        }
+    }
+} // IDispatcherTimer
+
+
+// type: Microsoft.UI.Xaml.IDispatcherTimerFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IDispatcherTimerFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1bcb3166, Data2: 0x22e4, Data3 : 0x50bf, Data4 : (0xa5, 0xa2, 0xb7, 0x8c, 0xa4, 0x37, 0x7b, 0xd0)) }
+    // Microsoft.UI.Xaml.DispatcherTimer CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDispatcherTimerFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<WinRT.Microsoft.UI.Xaml.IDispatcherTimer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDispatcherTimer>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return WinRT.Microsoft.UI.Xaml.IDispatcherTimer(consuming: __result);
+    }
+} // IDispatcherTimerFactory
+
+
 // type: Microsoft.UI.Xaml.IDragEventArgs
 // interface type
 open class IDragEventArgs
@@ -2559,6 +2844,17 @@ open class IEffectiveViewportChangedEventArgs
 // method not needed: get_BringIntoViewDistanceX
 // method not needed: get_BringIntoViewDistanceY
 } // IEffectiveViewportChangedEventArgs
+
+
+// type: Microsoft.UI.Xaml.IExceptionRoutedEventArgs
+// interface type
+open class IExceptionRoutedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe8bcb6d2, Data2: 0xd3f5, Data3 : 0x5393, Data4 : (0xa8, 0x4f, 0xdf, 0xcd, 0x44, 0xa2, 0xdf, 0x34)) }
+// method not needed: get_ErrorMessage
+} // IExceptionRoutedEventArgs
 
 
 // type: Microsoft.UI.Xaml.IFrameworkElement
@@ -4117,7 +4413,22 @@ open class IRoutedEventArgs
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0908c407, Data2: 0x1c7d, Data3 : 0x5de3, Data4 : (0x9c, 0x50, 0xd9, 0x71, 0xc6, 0x2e, 0xc8, 0xec)) }
-// method not needed: get_OriginalSource
+    // [IsSpecialName] System.Object get_OriginalSource()
+    private func _n_get_OriginalSource(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_OriginalSource(pThis, __presult))
+        }
+    }
+    public func get_OriginalSource() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_OriginalSource(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    public var OriginalSource : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_OriginalSource();
+        }
+    }
 } // IRoutedEventArgs
 
 
@@ -8805,7 +9116,16 @@ open class RoutedEventArgs
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         try super.init(plok: _self.QueryInterface())
     }
-    // method not needed: get_OriginalSource
+    public func get_OriginalSource() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IRoutedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_OriginalSource();
+    }
+    public var OriginalSource : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : WinRT.Microsoft.UI.Xaml.IRoutedEventArgs = try _self.QueryInterface();
+            return try _ifc.OriginalSource;
+        }
+    }
 }
 
 // type: Microsoft.UI.Xaml.RoutedEventHandler

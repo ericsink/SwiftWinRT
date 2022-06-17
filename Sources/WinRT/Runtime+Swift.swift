@@ -55,8 +55,12 @@ public func RoGetActivationFactory<Factory: IInspectable>(_ activatableClassId: 
     // TODO if this function is going to do extra things,
     // it should have a different name
     if activatableClassId.starts(with: "Microsoft.Graphics.Canvas.") {
-        print("TODO CANVAS RoGetActivationFactory")
-        throw Error(hr: E_INVALIDARG)
+        let hstr = try HString(activatableClassId).hRef.hString!
+        var p_factory : Optional<UnsafeMutablePointer<IActivationFactory>> = nil
+        try CHECKED(gaf_canvas!(hstr, &p_factory))
+        let factory = UnsafeMutableRawPointer(p_factory)
+        let q = Factory(consuming: factory?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
+        return q
     } else {
         return try RoGetActivationFactory(HString(activatableClassId))
     }

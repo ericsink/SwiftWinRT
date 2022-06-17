@@ -123,7 +123,7 @@ public class CanvasTextFormat
     public static func GetSystemFontFamilies() throws -> UINT32 {
         return try CanvasTextFormatStatics.GetSystemFontFamilies();
     }
-    public static func GetSystemFontFamiliesFromLocaleList(localeList : Optional<WinRT.Windows.Foundation.Collections.IVectorView_1_HSTRING>) throws -> UINT32 {
+    public static func GetSystemFontFamilies(localeList : Optional<WinRT.Windows.Foundation.Collections.IVectorView_1_HSTRING>) throws -> UINT32 {
         return try CanvasTextFormatStatics.GetSystemFontFamiliesFromLocaleList(localeList: localeList);
     }
     public func get_Direction() throws -> WinRT.Microsoft.Graphics.Canvas.Text.CanvasTextDirection {

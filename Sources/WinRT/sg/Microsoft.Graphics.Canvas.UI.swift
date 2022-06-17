@@ -22,9 +22,33 @@ public class CanvasCreateResourcesEventArgs
         _self = try _af.Create(createResourcesReason: createResourcesReason)!;
         try super.init(plok: _self.QueryInterface())
     }
-    // method not needed: get_Reason
-    // method not needed: TrackAsyncAction
-    // method not needed: GetTrackedAction
+    public func get_Reason() throws -> WinRT.Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason {
+        let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.ICanvasCreateResourcesEventArgs = try _self.QueryInterface();
+        return try _ifc.get_Reason();
+    }
+    public func TrackAsyncAction(action : Optional<WinRT.Windows.Foundation.IAsyncAction>) throws -> Void {
+        let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.ICanvasCreateResourcesEventArgs = try _self.QueryInterface();
+        return try _ifc.TrackAsyncAction(action: action);
+    }
+    public func GetTrackedAction() throws -> Optional<WinRT.Windows.Foundation.IAsyncAction> {
+        let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.ICanvasCreateResourcesEventArgs = try _self.QueryInterface();
+        return try _ifc.GetTrackedAction();
+    }
+    public func GetTrackedAction() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetTrackedAction()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var Reason : WinRT.Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason {
+        get throws {
+        let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.ICanvasCreateResourcesEventArgs = try _self.QueryInterface();
+            return try _ifc.Reason;
+        }
+    }
 }
 
 // type: Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason
@@ -38,9 +62,51 @@ open class ICanvasCreateResourcesEventArgs
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xedc52108, Data2: 0xf6ba, Data3 : 0x4a09, Data4 : (0x9f, 0xa3, 0x10, 0xc9, 0x7a, 0x24, 0xe4, 0x9a)) }
-// method not needed: get_Reason
-// method not needed: TrackAsyncAction
-// method not needed: GetTrackedAction
+    // [IsSpecialName] Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason get_Reason()
+    private func _n_get_Reason(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Reason(pThis, __presult))
+        }
+    }
+    public func get_Reason() throws -> WinRT.Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason {
+        var __result : _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason = _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason_FirstTime;
+        try self._n_get_Reason(&__result);
+        return __result;
+    }
+    // void TrackAsyncAction(Windows.Foundation.IAsyncAction)
+    private func _n_TrackAsyncAction(_ action : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.TrackAsyncAction(pThis, action))
+        }
+    }
+    public func TrackAsyncAction(action : Optional<WinRT.Windows.Foundation.IAsyncAction>) throws -> Void {
+        try self._n_TrackAsyncAction(RawPointer(action));
+    }
+    // Windows.Foundation.IAsyncAction GetTrackedAction()
+    private func _n_GetTrackedAction(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetTrackedAction(pThis, __presult))
+        }
+    }
+    public func GetTrackedAction() throws -> Optional<WinRT.Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_GetTrackedAction(&__result);
+        return WinRT.Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func GetTrackedAction() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetTrackedAction()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var Reason : WinRT.Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason {
+        get throws {
+            return try get_Reason();
+        }
+    }
 } // ICanvasCreateResourcesEventArgs
 
 
