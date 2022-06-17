@@ -129,8 +129,8 @@ open class Application
     public static func get_Current() throws -> Optional<WinRT.Microsoft.UI.Xaml.Application> {
         return try WinRT.Microsoft.UI.Xaml.Application(plok: ApplicationStatics.get_Current());
     }
-    public static func Start(callback : Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallback>) throws -> Void {
-        return try ApplicationStatics.Start(callback: callback!.Interface());
+    public static func Start(callback : @escaping (Optional<WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void) throws -> Void {
+        return try ApplicationStatics.Start(callback: WinRT.Microsoft.UI.Xaml.ApplicationInitializationCallback(cb: callback).Interface());
     }
     public static func LoadComponent(component : Optional<WinRT.Object>, resourceLocator : Optional<WinRT.Windows.Foundation.Uri>) throws -> Void {
         return try ApplicationStatics.LoadComponent(component: component!.GetInterface(), resourceLocator: resourceLocator!.Interface());
@@ -179,9 +179,9 @@ open class Application
         let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try _ifc.put_HighContrastAdjustment(value: value);
     }
-    public func add_UnhandledException(handler : Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_UnhandledException(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-        return try _ifc.add_UnhandledException(handler: handler!.Interface());
+        return try _ifc.add_UnhandledException(handler: WinRT.Microsoft.UI.Xaml.UnhandledExceptionEventHandler(cb: handler).Interface());
     }
     public func remove_UnhandledException(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
@@ -540,9 +540,9 @@ open class DependencyObject
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
         return try _ifc.GetAnimationBaseValue(dp: dp!.Interface());
     }
-    public func RegisterPropertyChangedCallback(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>, callback : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedCallback>) throws -> Swift.Int64 {
+    public func RegisterPropertyChangedCallback(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>, callback : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DependencyObject>, Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>) throws -> Void) throws -> Swift.Int64 {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
-        return try _ifc.RegisterPropertyChangedCallback(dp: dp!.Interface(), callback: callback!.Interface());
+        return try _ifc.RegisterPropertyChangedCallback(dp: dp!.Interface(), callback: WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedCallback(cb: callback).Interface());
     }
     public func UnregisterPropertyChangedCallback(dp : Optional<WinRT.Microsoft.UI.Xaml.DependencyProperty>, token : Swift.Int64) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
@@ -1587,65 +1587,65 @@ open class FrameworkElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.get_ActualTheme();
     }
-    public func add_Loaded(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Loaded(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Loaded(handler: handler!.Interface());
+        return try _ifc.add_Loaded(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_Loaded(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_Loaded(token: token);
     }
-    public func add_Unloaded(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Unloaded(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Unloaded(handler: handler!.Interface());
+        return try _ifc.add_Unloaded(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_Unloaded(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_Unloaded(token: token);
     }
-    public func add_DataContextChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DataContextChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_DataContextChanged(handler: handler!.Interface());
+        return try _ifc.add_DataContextChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(cb: handler).Interface());
     }
     public func remove_DataContextChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_DataContextChanged(token: token);
     }
-    public func add_SizeChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_SizeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_SizeChanged(handler: handler!.Interface());
+        return try _ifc.add_SizeChanged(handler: WinRT.Microsoft.UI.Xaml.SizeChangedEventHandler(cb: handler).Interface());
     }
     public func remove_SizeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_SizeChanged(token: token);
     }
-    public func add_LayoutUpdated(handler : Optional<WinRT.Windows.Foundation.EventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_LayoutUpdated(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_LayoutUpdated(handler: handler!.Interface());
+        return try _ifc.add_LayoutUpdated(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_LayoutUpdated(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_LayoutUpdated(token: token);
     }
-    public func add_Loading(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Loading(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Loading(handler: handler!.Interface());
+        return try _ifc.add_Loading(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
     }
     public func remove_Loading(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_Loading(token: token);
     }
-    public func add_ActualThemeChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ActualThemeChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_ActualThemeChanged(handler: handler!.Interface());
+        return try _ifc.add_ActualThemeChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
     }
     public func remove_ActualThemeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.remove_ActualThemeChanged(token: token);
     }
-    public func add_EffectiveViewportChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_EffectiveViewportChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_EffectiveViewportChanged(handler: handler!.Interface());
+        return try _ifc.add_EffectiveViewportChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(cb: handler).Interface());
     }
     public func remove_EffectiveViewportChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -10534,321 +10534,321 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.put_TabIndex(value: value);
     }
-    public func add_KeyUp(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_KeyUp(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_KeyUp(handler: handler!.Interface());
+        return try _ifc.add_KeyUp(handler: WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
     }
     public func remove_KeyUp(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_KeyUp(token: token);
     }
-    public func add_KeyDown(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_KeyDown(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_KeyDown(handler: handler!.Interface());
+        return try _ifc.add_KeyDown(handler: WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
     }
     public func remove_KeyDown(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_KeyDown(token: token);
     }
-    public func add_GotFocus(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_GotFocus(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_GotFocus(handler: handler!.Interface());
+        return try _ifc.add_GotFocus(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_GotFocus(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_GotFocus(token: token);
     }
-    public func add_LostFocus(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_LostFocus(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_LostFocus(handler: handler!.Interface());
+        return try _ifc.add_LostFocus(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_LostFocus(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_LostFocus(token: token);
     }
-    public func add_DragStarting(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DragStarting(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragStarting(handler: handler!.Interface());
+        return try _ifc.add_DragStarting(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(cb: handler).Interface());
     }
     public func remove_DragStarting(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_DragStarting(token: token);
     }
-    public func add_DropCompleted(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DropCompleted(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DropCompleted(handler: handler!.Interface());
+        return try _ifc.add_DropCompleted(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(cb: handler).Interface());
     }
     public func remove_DropCompleted(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_DropCompleted(token: token);
     }
-    public func add_CharacterReceived(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_CharacterReceived(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_CharacterReceived(handler: handler!.Interface());
+        return try _ifc.add_CharacterReceived(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(cb: handler).Interface());
     }
     public func remove_CharacterReceived(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_CharacterReceived(token: token);
     }
-    public func add_DragEnter(handler : Optional<WinRT.Microsoft.UI.Xaml.DragEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DragEnter(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragEnter(handler: handler!.Interface());
+        return try _ifc.add_DragEnter(handler: WinRT.Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
     }
     public func remove_DragEnter(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_DragEnter(token: token);
     }
-    public func add_DragLeave(handler : Optional<WinRT.Microsoft.UI.Xaml.DragEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DragLeave(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragLeave(handler: handler!.Interface());
+        return try _ifc.add_DragLeave(handler: WinRT.Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
     }
     public func remove_DragLeave(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_DragLeave(token: token);
     }
-    public func add_DragOver(handler : Optional<WinRT.Microsoft.UI.Xaml.DragEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DragOver(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragOver(handler: handler!.Interface());
+        return try _ifc.add_DragOver(handler: WinRT.Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
     }
     public func remove_DragOver(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_DragOver(token: token);
     }
-    public func add_Drop(handler : Optional<WinRT.Microsoft.UI.Xaml.DragEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Drop(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_Drop(handler: handler!.Interface());
+        return try _ifc.add_Drop(handler: WinRT.Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
     }
     public func remove_Drop(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_Drop(token: token);
     }
-    public func add_PointerPressed(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerPressed(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerPressed(handler: handler!.Interface());
+        return try _ifc.add_PointerPressed(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerPressed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerPressed(token: token);
     }
-    public func add_PointerMoved(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerMoved(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerMoved(handler: handler!.Interface());
+        return try _ifc.add_PointerMoved(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerMoved(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerMoved(token: token);
     }
-    public func add_PointerReleased(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerReleased(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerReleased(handler: handler!.Interface());
+        return try _ifc.add_PointerReleased(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerReleased(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerReleased(token: token);
     }
-    public func add_PointerEntered(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerEntered(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerEntered(handler: handler!.Interface());
+        return try _ifc.add_PointerEntered(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerEntered(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerEntered(token: token);
     }
-    public func add_PointerExited(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerExited(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerExited(handler: handler!.Interface());
+        return try _ifc.add_PointerExited(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerExited(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerExited(token: token);
     }
-    public func add_PointerCaptureLost(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerCaptureLost(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerCaptureLost(handler: handler!.Interface());
+        return try _ifc.add_PointerCaptureLost(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerCaptureLost(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerCaptureLost(token: token);
     }
-    public func add_PointerCanceled(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerCanceled(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerCanceled(handler: handler!.Interface());
+        return try _ifc.add_PointerCanceled(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerCanceled(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerCanceled(token: token);
     }
-    public func add_PointerWheelChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PointerWheelChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerWheelChanged(handler: handler!.Interface());
+        return try _ifc.add_PointerWheelChanged(handler: WinRT.Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerWheelChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PointerWheelChanged(token: token);
     }
-    public func add_Tapped(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Tapped(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_Tapped(handler: handler!.Interface());
+        return try _ifc.add_Tapped(handler: WinRT.Microsoft.UI.Xaml.Input.TappedEventHandler(cb: handler).Interface());
     }
     public func remove_Tapped(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_Tapped(token: token);
     }
-    public func add_DoubleTapped(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DoubleTapped(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DoubleTapped(handler: handler!.Interface());
+        return try _ifc.add_DoubleTapped(handler: WinRT.Microsoft.UI.Xaml.Input.DoubleTappedEventHandler(cb: handler).Interface());
     }
     public func remove_DoubleTapped(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_DoubleTapped(token: token);
     }
-    public func add_Holding(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Holding(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_Holding(handler: handler!.Interface());
+        return try _ifc.add_Holding(handler: WinRT.Microsoft.UI.Xaml.Input.HoldingEventHandler(cb: handler).Interface());
     }
     public func remove_Holding(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_Holding(token: token);
     }
-    public func add_ContextRequested(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ContextRequested(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ContextRequested(handler: handler!.Interface());
+        return try _ifc.add_ContextRequested(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_ContextRequested(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ContextRequested(token: token);
     }
-    public func add_ContextCanceled(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ContextCanceled(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ContextCanceled(handler: handler!.Interface());
+        return try _ifc.add_ContextCanceled(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(cb: handler).Interface());
     }
     public func remove_ContextCanceled(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ContextCanceled(token: token);
     }
-    public func add_RightTapped(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_RightTapped(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_RightTapped(handler: handler!.Interface());
+        return try _ifc.add_RightTapped(handler: WinRT.Microsoft.UI.Xaml.Input.RightTappedEventHandler(cb: handler).Interface());
     }
     public func remove_RightTapped(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_RightTapped(token: token);
     }
-    public func add_ManipulationStarting(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ManipulationStarting(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationStarting(handler: handler!.Interface());
+        return try _ifc.add_ManipulationStarting(handler: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationStarting(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ManipulationStarting(token: token);
     }
-    public func add_ManipulationInertiaStarting(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ManipulationInertiaStarting(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationInertiaStarting(handler: handler!.Interface());
+        return try _ifc.add_ManipulationInertiaStarting(handler: WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationInertiaStarting(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ManipulationInertiaStarting(token: token);
     }
-    public func add_ManipulationStarted(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ManipulationStarted(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationStarted(handler: handler!.Interface());
+        return try _ifc.add_ManipulationStarted(handler: WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationStarted(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ManipulationStarted(token: token);
     }
-    public func add_ManipulationDelta(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ManipulationDelta(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationDelta(handler: handler!.Interface());
+        return try _ifc.add_ManipulationDelta(handler: WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationDelta(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ManipulationDelta(token: token);
     }
-    public func add_ManipulationCompleted(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ManipulationCompleted(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationCompleted(handler: handler!.Interface());
+        return try _ifc.add_ManipulationCompleted(handler: WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationCompleted(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ManipulationCompleted(token: token);
     }
-    public func add_AccessKeyDisplayRequested(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_AccessKeyDisplayRequested(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyDisplayRequested(handler: handler!.Interface());
+        return try _ifc.add_AccessKeyDisplayRequested(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyDisplayRequested(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_AccessKeyDisplayRequested(token: token);
     }
-    public func add_AccessKeyDisplayDismissed(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_AccessKeyDisplayDismissed(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyDisplayDismissed(handler: handler!.Interface());
+        return try _ifc.add_AccessKeyDisplayDismissed(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyDisplayDismissed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_AccessKeyDisplayDismissed(token: token);
     }
-    public func add_AccessKeyInvoked(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_AccessKeyInvoked(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyInvoked(handler: handler!.Interface());
+        return try _ifc.add_AccessKeyInvoked(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyInvoked(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_AccessKeyInvoked(token: token);
     }
-    public func add_ProcessKeyboardAccelerators(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ProcessKeyboardAccelerators(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ProcessKeyboardAccelerators(handler: handler!.Interface());
+        return try _ifc.add_ProcessKeyboardAccelerators(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(cb: handler).Interface());
     }
     public func remove_ProcessKeyboardAccelerators(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_ProcessKeyboardAccelerators(token: token);
     }
-    public func add_GettingFocus(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_GettingFocus(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_GettingFocus(handler: handler!.Interface());
+        return try _ifc.add_GettingFocus(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(cb: handler).Interface());
     }
     public func remove_GettingFocus(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_GettingFocus(token: token);
     }
-    public func add_LosingFocus(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_LosingFocus(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_LosingFocus(handler: handler!.Interface());
+        return try _ifc.add_LosingFocus(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(cb: handler).Interface());
     }
     public func remove_LosingFocus(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_LosingFocus(token: token);
     }
-    public func add_NoFocusCandidateFound(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_NoFocusCandidateFound(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_NoFocusCandidateFound(handler: handler!.Interface());
+        return try _ifc.add_NoFocusCandidateFound(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(cb: handler).Interface());
     }
     public func remove_NoFocusCandidateFound(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_NoFocusCandidateFound(token: token);
     }
-    public func add_PreviewKeyDown(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PreviewKeyDown(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PreviewKeyDown(handler: handler!.Interface());
+        return try _ifc.add_PreviewKeyDown(handler: WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
     }
     public func remove_PreviewKeyDown(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PreviewKeyDown(token: token);
     }
-    public func add_PreviewKeyUp(handler : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PreviewKeyUp(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PreviewKeyUp(handler: handler!.Interface());
+        return try _ifc.add_PreviewKeyUp(handler: WinRT.Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
     }
     public func remove_PreviewKeyUp(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.remove_PreviewKeyUp(token: token);
     }
-    public func add_BringIntoViewRequested(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_BringIntoViewRequested(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_BringIntoViewRequested(handler: handler!.Interface());
+        return try _ifc.add_BringIntoViewRequested(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_BringIntoViewRequested(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11671,33 +11671,33 @@ open class Window
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.put_ExtendsContentIntoTitleBar(value: value);
     }
-    public func add_Activated(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Activated(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_Activated(handler: handler!.Interface());
+        return try _ifc.add_Activated(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(cb: handler).Interface());
     }
     public func remove_Activated(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_Activated(token: token);
     }
-    public func add_Closed(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Closed(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_Closed(handler: handler!.Interface());
+        return try _ifc.add_Closed(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(cb: handler).Interface());
     }
     public func remove_Closed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_Closed(token: token);
     }
-    public func add_SizeChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_SizeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_SizeChanged(handler: handler!.Interface());
+        return try _ifc.add_SizeChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(cb: handler).Interface());
     }
     public func remove_SizeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.remove_SizeChanged(token: token);
     }
-    public func add_VisibilityChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_VisibilityChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_VisibilityChanged(handler: handler!.Interface());
+        return try _ifc.add_VisibilityChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(cb: handler).Interface());
     }
     public func remove_VisibilityChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();

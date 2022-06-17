@@ -969,25 +969,25 @@ public class ToastNotification
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
         return try _ifc.get_ExpirationTime();
     }
-    public func add_Dismissed(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Dismissed(handler : @escaping (Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-        return try _ifc.add_Dismissed(handler: handler!.Interface());
+        return try _ifc.add_Dismissed(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(cb: handler).Interface());
     }
     public func remove_Dismissed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
         return try _ifc.remove_Dismissed(token: token);
     }
-    public func add_Activated(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Activated(handler : @escaping (Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-        return try _ifc.add_Activated(handler: handler!.Interface());
+        return try _ifc.add_Activated(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(cb: handler).Interface());
     }
     public func remove_Activated(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
         return try _ifc.remove_Activated(token: token);
     }
-    public func add_Failed(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Failed(handler : @escaping (Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-        return try _ifc.add_Failed(handler: handler!.Interface());
+        return try _ifc.add_Failed(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(cb: handler).Interface());
     }
     public func remove_Failed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
@@ -1274,9 +1274,9 @@ public class ToastNotifier
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotifier2 = try _self.QueryInterface();
         return try _ifc.UpdateWithTag(data: data!.Interface(), tag: tag);
     }
-    public func add_ScheduledToastNotificationShowing(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ScheduledToastNotificationShowing(handler : @escaping (Optional<WinRT.Windows.UI.Notifications.ToastNotifier>, Optional<WinRT.Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotifier3 = try _self.QueryInterface();
-        return try _ifc.add_ScheduledToastNotificationShowing(handler: handler!.Interface());
+        return try _ifc.add_ScheduledToastNotificationShowing(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(cb: handler).Interface());
     }
     public func remove_ScheduledToastNotificationShowing(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Windows.UI.Notifications.IToastNotifier3 = try _self.QueryInterface();

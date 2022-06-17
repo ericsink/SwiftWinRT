@@ -104,9 +104,9 @@ open class ButtonBase
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
         return try _ifc.put_CommandParameter(value: value!.GetInterface());
     }
-    public func add_Click(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Click(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-        return try _ifc.add_Click(handler: handler!.Interface());
+        return try _ifc.add_Click(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_Click(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
@@ -1184,9 +1184,9 @@ open class RangeBase
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
         return try _ifc.put_Value(value: value);
     }
-    public func add_ValueChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ValueChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-        return try _ifc.add_ValueChanged(handler: handler!.Interface());
+        return try _ifc.add_ValueChanged(handler: WinRT.Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler(cb: handler).Interface());
     }
     public func remove_ValueChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();

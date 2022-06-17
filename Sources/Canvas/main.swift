@@ -1,14 +1,6 @@
 
 import WinRT
 
-// TODO this delegate overload extension method should be generated
-extension Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl {
-    public func add_Draw(closure : @escaping (Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        // TODO the presence of this mangled name here is obviously dreadful
-        return try self.add_Draw(value: Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: closure))
-    }
-}
-
 class MyApp : Microsoft.UI.Xaml.Application {
     override func OnLaunched(args : Optional<WinRT.Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
@@ -43,12 +35,11 @@ class App {
         try RoInitialize()
         try WindowsAppSdkBootstrapInitialize()
 
-        let cb = Microsoft.UI.Xaml.ApplicationInitializationCallback
+        try Microsoft.UI.Xaml.Application.Start
         {
             _ in
             _ = try MyApp();
         }
-        try Microsoft.UI.Xaml.Application.Start(callback: cb);
     }
 }
 

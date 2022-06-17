@@ -21,9 +21,9 @@ public class CanvasControl
         _self = try RoActivateInstance("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl")
         try super.init(plok: _self.QueryInterface())
     }
-    public func add_CreateResources(value : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_CreateResources(value : @escaping (Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<WinRT.Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-        return try _ifc.add_CreateResources(value: value!.Interface());
+        return try _ifc.add_CreateResources(value: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
     }
     public func remove_CreateResources(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
@@ -33,9 +33,9 @@ public class CanvasControl
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
         return try _ifc.get_ReadyToDraw();
     }
-    public func add_Draw(value : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Draw(value : @escaping (Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-        return try _ifc.add_Draw(value: value!.Interface());
+        return try _ifc.add_Draw(value: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: value).Interface());
     }
     public func remove_Draw(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();

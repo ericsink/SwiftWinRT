@@ -42,13 +42,12 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try stack.Children!.Append(value: slider)
 
         let btn = try Microsoft.UI.Xaml.Controls.Button();
-        let cb = Microsoft.UI.Xaml.RoutedEventHandler
+        _ = try btn.add_Click
         {
             (sender, e) in
             let x = try slider.get_Value()
             try slider.put_Value(value: x + 5)
         }
-        _ = try btn.add_Click(handler: cb);
         try btn.put_Content(value: TextBlock(text: "Click", fontSize: 32));
         try stack.Children!.Append(value: btn)
 
@@ -64,12 +63,11 @@ class App {
         try RoInitialize()
         try WindowsAppSdkBootstrapInitialize()
 
-        let cb = Microsoft.UI.Xaml.ApplicationInitializationCallback
+        try Microsoft.UI.Xaml.Application.Start
         {
             _ in
             _ = try MyApp();
         }
-        try Microsoft.UI.Xaml.Application.Start(callback: cb);
     }
 }
 

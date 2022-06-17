@@ -1402,25 +1402,25 @@ open class Control
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
         return try _ifc.put_CornerRadius(value: value);
     }
-    public func add_FocusEngaged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_FocusEngaged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusEngaged(handler: handler!.Interface());
+        return try _ifc.add_FocusEngaged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(cb: handler).Interface());
     }
     public func remove_FocusEngaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
         return try _ifc.remove_FocusEngaged(token: token);
     }
-    public func add_FocusDisengaged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_FocusDisengaged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusDisengaged(handler: handler!.Interface());
+        return try _ifc.add_FocusDisengaged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(cb: handler).Interface());
     }
     public func remove_FocusDisengaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
         return try _ifc.remove_FocusDisengaged(token: token);
     }
-    public func add_IsEnabledChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_IsEnabledChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_IsEnabledChanged(handler: handler!.Interface());
+        return try _ifc.add_IsEnabledChanged(handler: WinRT.Microsoft.UI.Xaml.DependencyPropertyChangedEventHandler(cb: handler).Interface());
     }
     public func remove_IsEnabledChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -7035,17 +7035,17 @@ open class StackPanel
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
         return try _ifc.get_AreVerticalSnapPointsRegular();
     }
-    public func add_HorizontalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.EventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_HorizontalSnapPointsChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_HorizontalSnapPointsChanged(handler: handler!.Interface());
+        return try _ifc.add_HorizontalSnapPointsChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_HorizontalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
         return try _ifc.remove_HorizontalSnapPointsChanged(token: token);
     }
-    public func add_VerticalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.EventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_VerticalSnapPointsChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_VerticalSnapPointsChanged(handler: handler!.Interface());
+        return try _ifc.add_VerticalSnapPointsChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_VerticalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
@@ -7555,25 +7555,25 @@ public class TextBlock
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_SelectionFlyout(value: value!.Interface());
     }
-    public func add_SelectionChanged(handler : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_SelectionChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_SelectionChanged(handler: handler!.Interface());
+        return try _ifc.add_SelectionChanged(handler: WinRT.Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_SelectionChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.remove_SelectionChanged(token: token);
     }
-    public func add_ContextMenuOpening(handler : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ContextMenuOpening(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_ContextMenuOpening(handler: handler!.Interface());
+        return try _ifc.add_ContextMenuOpening(handler: WinRT.Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler(cb: handler).Interface());
     }
     public func remove_ContextMenuOpening(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.remove_ContextMenuOpening(token: token);
     }
-    public func add_IsTextTrimmedChanged(handler : Optional<WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_IsTextTrimmedChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.TextBlock>, Optional<WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_IsTextTrimmedChanged(handler: handler!.Interface());
+        return try _ifc.add_IsTextTrimmedChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(cb: handler).Interface());
     }
     public func remove_IsTextTrimmedChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
