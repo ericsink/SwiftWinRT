@@ -6,6 +6,512 @@ import CWinRT;
 
 extension Windows.Foundation {
 // closed interface type
+public class IReference_1__q_CWindows_CFoundation_CDateTime
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5541d8a7, Data2: 0x497c, Data3 : 0x5aa4, Data4 : (0x86, 0xfc, 0x77, 0x13, 0xad, 0xbf, 0x2a, 0x2c)) }
+// method not needed: get_Value
+} // IReference_1__q_CWindows_CFoundation_CDateTime
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61c2402f, Data2: 0x0ed0, Data3 : 0x5a18, Data4 : (0xab, 0x69, 0x59, 0xf4, 0xaa, 0x99, 0xa3, 0x68)) }
+    // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotification, Windows.UI.Notifications.ToastDismissedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.IToastNotification>, args : Optional<WinRT.Windows.UI.Notifications.IToastDismissedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.from(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Windows.UI.Notifications.ToastNotification(plok: WinRT.Windows.UI.Notifications.IToastNotification(sender)), args: WinRT.Windows.UI.Notifications.ToastDismissedEventArgs(plok: WinRT.Windows.UI.Notifications.IToastDismissedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.ToastNotification>, args : Optional<WinRT.Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xab54de2d, Data2: 0x97d9, Data3 : 0x5528, Data4 : (0xb6, 0xad, 0x10, 0x5a, 0xfe, 0x15, 0x65, 0x30)) }
+    // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotification, System.Object)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.IToastNotification>, args : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+// impl delegate type
+open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectableVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
+        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.from(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Windows.UI.Notifications.ToastNotification(plok: WinRT.Windows.UI.Notifications.IToastNotification(sender)), args: WinRT.Object(plok: WinRT.IInspectable(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Object>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Object>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.ToastNotification>, args : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x95e3e803, Data2: 0xc969, Data3 : 0x5e3a, Data4 : (0x97, 0x53, 0xea, 0x2a, 0xd2, 0x2a, 0x9a, 0x33)) }
+    // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotification, Windows.UI.Notifications.ToastFailedEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.IToastNotification>, args : Optional<WinRT.Windows.UI.Notifications.IToastFailedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.from(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Windows.UI.Notifications.ToastNotification(plok: WinRT.Windows.UI.Notifications.IToastNotification(sender)), args: WinRT.Windows.UI.Notifications.ToastFailedEventArgs(plok: WinRT.Windows.UI.Notifications.IToastFailedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.ToastNotification>, args : Optional<WinRT.Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb1bb0cab, Data2: 0xf8b9, Data3 : 0x5909, Data4 : (0xa8, 0x72, 0xef, 0x29, 0xe0, 0x5a, 0x8c, 0x7a)) }
+    // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotifier, Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs)
+    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.IToastNotifier>, args : Optional<WinRT.Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+// impl delegate type
+open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs>>) in
+        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.from(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Windows.UI.Notifications.ToastNotifier(plok: WinRT.Windows.UI.Notifications.IToastNotifier(sender)), args: WinRT.Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs(plok: WinRT.Windows.UI.Notifications.IScheduledToastNotificationShowingEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotifier>, Optional<WinRT.Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.UI.Notifications.ToastNotifier>, Optional<WinRT.Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Windows.UI.Notifications.ToastNotifier>, args : Optional<WinRT.Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void {
+        if let cb = _cb {
+            try cb(sender, args)
+        }
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            WinRT.Windows.Foundation.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed interface type
+public class IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf858e239, Data2: 0x1896, Data3 : 0x5982, Data4 : (0x84, 0x95, 0x14, 0x31, 0x68, 0x47, 0x8e, 0xb8)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Data.Xml.Dom.XmlDocument>)
+    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Data.Xml.Dom.XmlDocument> get_Completed()
+    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>> = nil;
+        try self._n_get_Completed(&__result);
+        return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
+    }
+    // Windows.Data.Xml.Dom.XmlDocument GetResults()
+    public func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>> = nil;
+        try self._n_GetResults(&__result);
+        return WinRT.Windows.Data.Xml.Dom.IXmlDocument(consuming: __result);
+    }
+    public var Completed : Optional<WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5eef7817, Data2: 0x93dd, Data3 : 0x5c0b, Data4 : (0x9e, 0x5a, 0xeb, 0x49, 0x04, 0x08, 0xf3, 0xa9)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument>, Windows.Foundation.AsyncStatus)
+    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.from(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, WinRT.Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, asyncStatus : WinRT.Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            try cb(asyncInfo, asyncStatus)
+        }
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// closed interface type
 public class IAsyncOperation_1_boolean
     :
     WinRT.IInspectable
@@ -3290,6 +3796,35 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
     }
 }
 }
+extension WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument : Future {
+    private final class MyCompletedHandler: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        internal func get() throws -> Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument> {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: Windows.Foundation.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
 extension WinRT.Windows.Foundation.IAsyncOperation_1_boolean : Future {
     private final class MyCompletedHandler: Windows.Foundation.AsyncOperationCompletedHandler_1_boolean {
         private var hEvent: HANDLE
@@ -3533,6 +4068,10 @@ open class AsyncActionCompletedHandler
 // enum type
 public typealias AsyncStatus = _q_CWindows_CFoundation_CAsyncStatus;
 
+// type: Windows.Foundation.DateTime
+// struct type
+public typealias DateTime = _q_CWindows_CFoundation_CDateTime;
+
 // type: Windows.Foundation.EventRegistrationToken
 // struct type
 public typealias EventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken;
@@ -3680,6 +4219,65 @@ open class IClosable
 } // IClosable
 
 
+// type: Windows.Foundation.IStringable
+// interface type
+open class IStringable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x96369f54, Data2: 0x8eb6, Data3 : 0x48f0, Data4 : (0xab, 0xce, 0xc1, 0xb2, 0x11, 0xe6, 0x27, 0xc3)) }
+    // System.String ToString()
+    public func _n_ToString(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIStringable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ToString(pThis, __presult))
+        }
+    }
+    public func ToString() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_ToString(&__result);
+        return Swift.String(from: __result);
+    }
+} // IStringable
+
+
+// type: Windows.Foundation.IUriEscapeStatics
+// interface type
+open class IUriEscapeStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc1d432ba, Data2: 0xc824, Data3 : 0x4452, Data4 : (0xa7, 0xfd, 0x51, 0x2b, 0xc3, 0xbb, 0xe9, 0xa1)) }
+    // System.String UnescapeComponent(System.String)
+    public func _n_UnescapeComponent(_ toUnescape : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriEscapeStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.UnescapeComponent(pThis, toUnescape, __presult))
+        }
+    }
+    public func UnescapeComponent(toUnescape : Swift.String) throws -> Swift.String {
+        let __hstr_toUnescape = try HString(toUnescape);
+        return try withExtendedLifetime(__hstr_toUnescape) {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_UnescapeComponent(__hstr_toUnescape.hRef.hString, &__result);
+        return Swift.String(from: __result);
+        }
+    }
+    // System.String EscapeComponent(System.String)
+    public func _n_EscapeComponent(_ toEscape : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriEscapeStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.EscapeComponent(pThis, toEscape, __presult))
+        }
+    }
+    public func EscapeComponent(toEscape : Swift.String) throws -> Swift.String {
+        let __hstr_toEscape = try HString(toEscape);
+        return try withExtendedLifetime(__hstr_toEscape) {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_EscapeComponent(__hstr_toEscape.hRef.hString, &__result);
+        return Swift.String(from: __result);
+        }
+    }
+} // IUriEscapeStatics
+
+
 // type: Windows.Foundation.IUriRuntimeClass
 // interface type
 open class IUriRuntimeClass
@@ -3687,23 +4285,271 @@ open class IUriRuntimeClass
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9e365e57, Data2: 0x48b2, Data3 : 0x4160, Data4 : (0x95, 0x6f, 0xc7, 0x38, 0x51, 0x20, 0xbb, 0xfc)) }
-// method not needed: get_AbsoluteUri
-// method not needed: get_DisplayUri
-// method not needed: get_Domain
-// method not needed: get_Extension
-// method not needed: get_Fragment
-// method not needed: get_Host
-// method not needed: get_Password
-// method not needed: get_Path
-// method not needed: get_Query
-// method not needed: get_QueryParsed
-// method not needed: get_RawUri
-// method not needed: get_SchemeName
-// method not needed: get_UserName
-// method not needed: get_Port
-// method not needed: get_Suspicious
-// method not needed: Equals
-// method not needed: CombineUri
+    // [IsSpecialName] System.String get_AbsoluteUri()
+    public func _n_get_AbsoluteUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AbsoluteUri(pThis, __presult))
+        }
+    }
+    public func get_AbsoluteUri() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_AbsoluteUri(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_DisplayUri()
+    public func _n_get_DisplayUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayUri(pThis, __presult))
+        }
+    }
+    public func get_DisplayUri() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayUri(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Domain()
+    public func _n_get_Domain(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Domain(pThis, __presult))
+        }
+    }
+    public func get_Domain() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Domain(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Extension()
+    public func _n_get_Extension(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Extension(pThis, __presult))
+        }
+    }
+    public func get_Extension() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Extension(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Fragment()
+    public func _n_get_Fragment(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Fragment(pThis, __presult))
+        }
+    }
+    public func get_Fragment() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Fragment(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Host()
+    public func _n_get_Host(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Host(pThis, __presult))
+        }
+    }
+    public func get_Host() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Host(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Password()
+    public func _n_get_Password(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Password(pThis, __presult))
+        }
+    }
+    public func get_Password() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Password(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Path()
+    public func _n_get_Path(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, __presult))
+        }
+    }
+    public func get_Path() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Path(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Query()
+    public func _n_get_Query(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Query(pThis, __presult))
+        }
+    }
+    public func get_Query() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Query(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.WwwFormUrlDecoder get_QueryParsed()
+    public func _n_get_QueryParsed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_QueryParsed(pThis, __presult))
+        }
+    }
+    public func get_QueryParsed() throws -> Optional<WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>> = nil;
+        try self._n_get_QueryParsed(&__result);
+        return WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass(consuming: __result);
+    }
+    // [IsSpecialName] System.String get_RawUri()
+    public func _n_get_RawUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RawUri(pThis, __presult))
+        }
+    }
+    public func get_RawUri() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_RawUri(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SchemeName()
+    public func _n_get_SchemeName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SchemeName(pThis, __presult))
+        }
+    }
+    public func get_SchemeName() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SchemeName(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_UserName()
+    public func _n_get_UserName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UserName(pThis, __presult))
+        }
+    }
+    public func get_UserName() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_UserName(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.Int32 get_Port()
+    public func _n_get_Port(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Port(pThis, __presult))
+        }
+    }
+    public func get_Port() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_Port(&__result);
+        return __result;
+    }
+    // [IsSpecialName] bool get_Suspicious()
+    public func _n_get_Suspicious(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Suspicious(pThis, __presult))
+        }
+    }
+    public func get_Suspicious() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_Suspicious(&__result);
+        return __result;
+    }
+    // bool Equals(Windows.Foundation.Uri)
+    public func _n_Equals(_ pUri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Equals(pThis, pUri, __presult))
+        }
+    }
+    public func Equals(pUri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_Equals(RawPointer(pUri), &__result);
+        return __result;
+    }
+    // Windows.Foundation.Uri CombineUri(System.String)
+    public func _n_CombineUri(_ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CombineUri(pThis, relativeUri, __presult))
+        }
+    }
+    public func CombineUri(relativeUri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IUriRuntimeClass> {
+        let __hstr_relativeUri = try HString(relativeUri);
+        return try withExtendedLifetime(__hstr_relativeUri) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
+        try self._n_CombineUri(__hstr_relativeUri.hRef.hString, &__result);
+        return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
+        }
+    }
+    public var AbsoluteUri : Swift.String {
+        get throws {
+            return try get_AbsoluteUri();
+        }
+    }
+    public var DisplayUri : Swift.String {
+        get throws {
+            return try get_DisplayUri();
+        }
+    }
+    public var Domain : Swift.String {
+        get throws {
+            return try get_Domain();
+        }
+    }
+    public var Extension : Swift.String {
+        get throws {
+            return try get_Extension();
+        }
+    }
+    public var Fragment : Swift.String {
+        get throws {
+            return try get_Fragment();
+        }
+    }
+    public var Host : Swift.String {
+        get throws {
+            return try get_Host();
+        }
+    }
+    public var Password : Swift.String {
+        get throws {
+            return try get_Password();
+        }
+    }
+    public var Path : Swift.String {
+        get throws {
+            return try get_Path();
+        }
+    }
+    public var Port : Swift.Int32 {
+        get throws {
+            return try get_Port();
+        }
+    }
+    public var Query : Swift.String {
+        get throws {
+            return try get_Query();
+        }
+    }
+    public var QueryParsed : Optional<WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass> {
+        get throws {
+            return try get_QueryParsed();
+        }
+    }
+    public var RawUri : Swift.String {
+        get throws {
+            return try get_RawUri();
+        }
+    }
+    public var SchemeName : Swift.String {
+        get throws {
+            return try get_SchemeName();
+        }
+    }
+    public var Suspicious : boolean {
+        get throws {
+            return try get_Suspicious();
+        }
+    }
+    public var UserName : Swift.String {
+        get throws {
+            return try get_UserName();
+        }
+    }
 } // IUriRuntimeClass
 
 
@@ -3749,6 +4595,84 @@ open class IUriRuntimeClassFactory
 } // IUriRuntimeClassFactory
 
 
+// type: Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
+// interface type
+open class IUriRuntimeClassWithAbsoluteCanonicalUri
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x758d9661, Data2: 0x221c, Data3 : 0x480f, Data4 : (0xa3, 0x39, 0x50, 0x65, 0x66, 0x73, 0xf4, 0x6f)) }
+    // [IsSpecialName] System.String get_AbsoluteCanonicalUri()
+    public func _n_get_AbsoluteCanonicalUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AbsoluteCanonicalUri(pThis, __presult))
+        }
+    }
+    public func get_AbsoluteCanonicalUri() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_AbsoluteCanonicalUri(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_DisplayIri()
+    public func _n_get_DisplayIri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayIri(pThis, __presult))
+        }
+    }
+    public func get_DisplayIri() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayIri(&__result);
+        return Swift.String(from: __result);
+    }
+    public var AbsoluteCanonicalUri : Swift.String {
+        get throws {
+            return try get_AbsoluteCanonicalUri();
+        }
+    }
+    public var DisplayIri : Swift.String {
+        get throws {
+            return try get_DisplayIri();
+        }
+    }
+} // IUriRuntimeClassWithAbsoluteCanonicalUri
+
+
+// type: Windows.Foundation.IWwwFormUrlDecoderRuntimeClass
+// interface type
+open class IWwwFormUrlDecoderRuntimeClass
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd45a0451, Data2: 0xf225, Data3 : 0x4542, Data4 : (0x92, 0x96, 0x0e, 0x1d, 0xf5, 0xd2, 0x54, 0xdf)) }
+// method not needed: GetFirstValueByName
+} // IWwwFormUrlDecoderRuntimeClass
+
+
+// type: Windows.Foundation.IWwwFormUrlDecoderRuntimeClassFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IWwwFormUrlDecoderRuntimeClassFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5b8c6b3d, Data2: 0x24ae, Data3 : 0x41b5, Data4 : (0xa1, 0xbf, 0xf0, 0xc3, 0xd5, 0x44, 0x84, 0x5b)) }
+    // Windows.Foundation.WwwFormUrlDecoder CreateWwwFormUrlDecoder(System.String)
+    public func _n_CreateWwwFormUrlDecoder(_ query : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWwwFormUrlDecoder(pThis, query, __presult))
+        }
+    }
+    public func CreateWwwFormUrlDecoder(query : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass> {
+        let __hstr_query = try HString(query);
+        return try withExtendedLifetime(__hstr_query) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>> = nil;
+        try self._n_CreateWwwFormUrlDecoder(__hstr_query.hRef.hString, &__result);
+        return WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass(consuming: __result);
+        }
+    }
+} // IWwwFormUrlDecoderRuntimeClassFactory
+
+
 // type: Windows.Foundation.Point
 // struct type
 public typealias Point = _q_CWindows_CFoundation_CPoint;
@@ -3787,26 +4711,223 @@ public class Uri
         _self = try _af.CreateWithRelativeUri(baseUri: baseUri, relativeUri: relativeUri)!;
         try super.init(plok: _self.QueryInterface())
     }
-    // static interface not needed: Windows.Foundation.IUriEscapeStatics
-    // method not needed: get_AbsoluteUri
-    // method not needed: get_DisplayUri
-    // method not needed: get_Domain
-    // method not needed: get_Extension
-    // method not needed: get_Fragment
-    // method not needed: get_Host
-    // method not needed: get_Password
-    // method not needed: get_Path
-    // method not needed: get_Query
-    // method not needed: get_QueryParsed
-    // method not needed: get_RawUri
-    // method not needed: get_SchemeName
-    // method not needed: get_UserName
-    // method not needed: get_Port
-    // method not needed: get_Suspicious
-    // method not needed: Equals
-    // method not needed: CombineUri
-    // instance interface not needed: Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri
-    // instance interface not needed: Windows.Foundation.IStringable
+    private struct _IUriEscapeStatics {
+        static var x : IUriEscapeStatics =
+            try! RoGetActivationFactory("Windows.Foundation.Uri")
+    }
+    public static var UriEscapeStatics : IUriEscapeStatics {
+        _IUriEscapeStatics.x
+    }
+    public static func UnescapeComponent(toUnescape : Swift.String) throws -> Swift.String {
+        return try UriEscapeStatics.UnescapeComponent(toUnescape: toUnescape);
+    }
+    public static func EscapeComponent(toEscape : Swift.String) throws -> Swift.String {
+        return try UriEscapeStatics.EscapeComponent(toEscape: toEscape);
+    }
+    public func get_AbsoluteUri() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_AbsoluteUri();
+    }
+    public func get_DisplayUri() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_DisplayUri();
+    }
+    public func get_Domain() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Domain();
+    }
+    public func get_Extension() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Extension();
+    }
+    public func get_Fragment() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Fragment();
+    }
+    public func get_Host() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Host();
+    }
+    public func get_Password() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Password();
+    }
+    public func get_Path() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Path();
+    }
+    public func get_Query() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Query();
+    }
+    public func get_QueryParsed() throws -> Optional<WinRT.Windows.Foundation.WwwFormUrlDecoder> {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try WinRT.Windows.Foundation.WwwFormUrlDecoder(plok: _ifc.get_QueryParsed());
+    }
+    public func get_RawUri() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_RawUri();
+    }
+    public func get_SchemeName() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_SchemeName();
+    }
+    public func get_UserName() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_UserName();
+    }
+    public func get_Port() throws -> Swift.Int32 {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Port();
+    }
+    public func get_Suspicious() throws -> boolean {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.get_Suspicious();
+    }
+    public func Equals(pUri : Optional<WinRT.Windows.Foundation.Uri>) throws -> boolean {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try _ifc.Equals(pUri: pUri!.Interface());
+    }
+    public func CombineUri(relativeUri : Swift.String) throws -> Optional<WinRT.Windows.Foundation.Uri> {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+        return try WinRT.Windows.Foundation.Uri(plok: _ifc.CombineUri(relativeUri: relativeUri));
+    }
+    public var AbsoluteUri : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.AbsoluteUri;
+        }
+    }
+    public var DisplayUri : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.DisplayUri;
+        }
+    }
+    public var Domain : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Domain;
+        }
+    }
+    public var Extension : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Extension;
+        }
+    }
+    public var Fragment : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Fragment;
+        }
+    }
+    public var Host : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Host;
+        }
+    }
+    public var Password : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Password;
+        }
+    }
+    public var Path : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Path;
+        }
+    }
+    public var Port : Swift.Int32 {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Port;
+        }
+    }
+    public var Query : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Query;
+        }
+    }
+    public var QueryParsed : Optional<WinRT.Windows.Foundation.WwwFormUrlDecoder> {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try WinRT.Windows.Foundation.WwwFormUrlDecoder(plok: _ifc.QueryParsed);
+        }
+    }
+    public var RawUri : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.RawUri;
+        }
+    }
+    public var SchemeName : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.SchemeName;
+        }
+    }
+    public var Suspicious : boolean {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.Suspicious;
+        }
+    }
+    public var UserName : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
+            return try _ifc.UserName;
+        }
+    }
+    public func get_AbsoluteCanonicalUri() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
+        return try _ifc.get_AbsoluteCanonicalUri();
+    }
+    public func get_DisplayIri() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
+        return try _ifc.get_DisplayIri();
+    }
+    public var AbsoluteCanonicalUri : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
+            return try _ifc.AbsoluteCanonicalUri;
+        }
+    }
+    public var DisplayIri : Swift.String {
+        get throws {
+        let _ifc : WinRT.Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
+            return try _ifc.DisplayIri;
+        }
+    }
+    public func ToString() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IStringable = try _self.QueryInterface();
+        return try _ifc.ToString();
+    }
+}
+
+// type: Windows.Foundation.WwwFormUrlDecoder
+// runtime class
+public class WwwFormUrlDecoder
+    :
+    WinRT.Object
+{
+    private var _self : WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass;
+    internal init(plok: WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass { return _self; }
+    public init(query : Swift.String) throws {
+        let _af : IWwwFormUrlDecoderRuntimeClassFactory = try RoGetActivationFactory("Windows.Foundation.WwwFormUrlDecoder");
+        _self = try _af.CreateWwwFormUrlDecoder(query: query)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: GetFirstValueByName
+    // instance interface not needed: Windows.Foundation.Collections.IVectorView`1[[Windows.Foundation.IWwwFormUrlDecoderEntry, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Windows.Foundation.IWwwFormUrlDecoderEntry, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
 }
 
 }

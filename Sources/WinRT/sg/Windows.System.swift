@@ -5,6 +5,29 @@
 import CWinRT;
 
 extension Windows.System {
+// type: Windows.System.DispatcherQueue
+// runtime class
+public class DispatcherQueue
+    :
+    WinRT.Object
+{
+    private var _self : WinRT.Windows.System.IDispatcherQueue;
+    internal init(plok: WinRT.Windows.System.IDispatcherQueue?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    internal func Interface() -> WinRT.Windows.System.IDispatcherQueue { return _self; }
+    // static interface not needed: Windows.System.IDispatcherQueueStatics
+    // method not needed: CreateTimer
+    // method not needed: TryEnqueue
+    // method not needed: TryEnqueue
+    // method not needed: add_ShutdownStarting
+    // method not needed: remove_ShutdownStarting
+    // method not needed: add_ShutdownCompleted
+    // method not needed: remove_ShutdownCompleted
+    // instance interface not needed: Windows.System.IDispatcherQueue2
+}
+
 // type: Windows.System.DispatcherQueueController
 // runtime class
 public class DispatcherQueueController
@@ -27,7 +50,10 @@ public class DispatcherQueueController
     public static func CreateOnDedicatedThread() throws -> Optional<WinRT.Windows.System.DispatcherQueueController> {
         return try WinRT.Windows.System.DispatcherQueueController(plok: DispatcherQueueControllerStatics.CreateOnDedicatedThread());
     }
-    // method not needed: get_DispatcherQueue
+    public func get_DispatcherQueue() throws -> Optional<WinRT.Windows.System.DispatcherQueue> {
+        let _ifc : WinRT.Windows.System.IDispatcherQueueController = try _self.QueryInterface();
+        return try WinRT.Windows.System.DispatcherQueue(plok: _ifc.get_DispatcherQueue());
+    }
     public func ShutdownQueueAsync() throws -> Optional<WinRT.Windows.Foundation.IAsyncAction> {
         let _ifc : WinRT.Windows.System.IDispatcherQueueController = try _self.QueryInterface();
         return try _ifc.ShutdownQueueAsync();
@@ -41,7 +67,30 @@ public class DispatcherQueueController
             }
         }
     }
+    public var DispatcherQueue : Optional<WinRT.Windows.System.DispatcherQueue> {
+        get throws {
+        let _ifc : WinRT.Windows.System.IDispatcherQueueController = try _self.QueryInterface();
+            return try WinRT.Windows.System.DispatcherQueue(plok: _ifc.DispatcherQueue);
+        }
+    }
 }
+
+// type: Windows.System.IDispatcherQueue
+// interface type
+open class IDispatcherQueue
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x603e88e4, Data2: 0xa338, Data3 : 0x4ffe, Data4 : (0xa4, 0x57, 0xa5, 0xcf, 0xb9, 0xce, 0xb8, 0x99)) }
+// method not needed: CreateTimer
+// method not needed: TryEnqueue
+// method not needed: TryEnqueueWithPriority
+// method not needed: add_ShutdownStarting
+// method not needed: remove_ShutdownStarting
+// method not needed: add_ShutdownCompleted
+// method not needed: remove_ShutdownCompleted
+} // IDispatcherQueue
+
 
 // type: Windows.System.IDispatcherQueueController
 // interface type
@@ -50,7 +99,17 @@ open class IDispatcherQueueController
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x22f34e66, Data2: 0x50db, Data3 : 0x4e36, Data4 : (0xa9, 0x8d, 0x61, 0xc0, 0x1b, 0x38, 0x4d, 0x20)) }
-// method not needed: get_DispatcherQueue
+    // [IsSpecialName] Windows.System.DispatcherQueue get_DispatcherQueue()
+    public func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueue>>>?) throws {
+        return try perform(as: _q_CWindows_CSystem_CIDispatcherQueueController.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DispatcherQueue(pThis, __presult))
+        }
+    }
+    public func get_DispatcherQueue() throws -> Optional<WinRT.Windows.System.IDispatcherQueue> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueue>> = nil;
+        try self._n_get_DispatcherQueue(&__result);
+        return WinRT.Windows.System.IDispatcherQueue(consuming: __result);
+    }
     // Windows.Foundation.IAsyncAction ShutdownQueueAsync()
     public func _n_ShutdownQueueAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CIDispatcherQueueController.self) { pThis in
@@ -69,6 +128,11 @@ open class IDispatcherQueueController
             } catch let error {
                 return continuation.resume(throwing: error)
             }
+        }
+    }
+    public var DispatcherQueue : Optional<WinRT.Windows.System.IDispatcherQueue> {
+        get throws {
+            return try get_DispatcherQueue();
         }
     }
 } // IDispatcherQueueController

@@ -493,6 +493,22 @@ typedef enum _q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
     _q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation_Move = 2,
     _q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation_Link = 4,
 } _q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation;
+typedef enum _q_CWindows_CData_CXml_CDom_CNodeType
+{
+    _q_CWindows_CData_CXml_CDom_CNodeType_Invalid = 0,
+    _q_CWindows_CData_CXml_CDom_CNodeType_ElementNode = 1,
+    _q_CWindows_CData_CXml_CDom_CNodeType_AttributeNode = 2,
+    _q_CWindows_CData_CXml_CDom_CNodeType_TextNode = 3,
+    _q_CWindows_CData_CXml_CDom_CNodeType_DataSectionNode = 4,
+    _q_CWindows_CData_CXml_CDom_CNodeType_EntityReferenceNode = 5,
+    _q_CWindows_CData_CXml_CDom_CNodeType_EntityNode = 6,
+    _q_CWindows_CData_CXml_CDom_CNodeType_ProcessingInstructionNode = 7,
+    _q_CWindows_CData_CXml_CDom_CNodeType_CommentNode = 8,
+    _q_CWindows_CData_CXml_CDom_CNodeType_DocumentNode = 9,
+    _q_CWindows_CData_CXml_CDom_CNodeType_DocumentTypeNode = 10,
+    _q_CWindows_CData_CXml_CDom_CNodeType_DocumentFragmentNode = 11,
+    _q_CWindows_CData_CXml_CDom_CNodeType_NotationNode = 12,
+} _q_CWindows_CData_CXml_CDom_CNodeType;
 typedef enum _q_CWindows_CFoundation_CAsyncStatus
 {
     _q_CWindows_CFoundation_CAsyncStatus_Canceled = 2,
@@ -513,6 +529,41 @@ typedef enum _q_CWindows_CSystem_CProfile_CSystemIdentificationSource
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Uefi = 2,
     _q_CWindows_CSystem_CProfile_CSystemIdentificationSource_Registry = 3,
 } _q_CWindows_CSystem_CProfile_CSystemIdentificationSource;
+typedef enum _q_CWindows_CUI_CNotifications_CNotificationMirroring
+{
+    _q_CWindows_CUI_CNotifications_CNotificationMirroring_Allowed = 0,
+    _q_CWindows_CUI_CNotifications_CNotificationMirroring_Disabled = 1,
+} _q_CWindows_CUI_CNotifications_CNotificationMirroring;
+typedef enum _q_CWindows_CUI_CNotifications_CNotificationSetting
+{
+    _q_CWindows_CUI_CNotifications_CNotificationSetting_Enabled = 0,
+    _q_CWindows_CUI_CNotifications_CNotificationSetting_DisabledForApplication = 1,
+    _q_CWindows_CUI_CNotifications_CNotificationSetting_DisabledForUser = 2,
+    _q_CWindows_CUI_CNotifications_CNotificationSetting_DisabledByGroupPolicy = 3,
+    _q_CWindows_CUI_CNotifications_CNotificationSetting_DisabledByManifest = 4,
+} _q_CWindows_CUI_CNotifications_CNotificationSetting;
+typedef enum _q_CWindows_CUI_CNotifications_CNotificationUpdateResult
+{
+    _q_CWindows_CUI_CNotifications_CNotificationUpdateResult_Succeeded = 0,
+    _q_CWindows_CUI_CNotifications_CNotificationUpdateResult_Failed = 1,
+    _q_CWindows_CUI_CNotifications_CNotificationUpdateResult_NotificationNotFound = 2,
+} _q_CWindows_CUI_CNotifications_CNotificationUpdateResult;
+typedef enum _q_CWindows_CUI_CNotifications_CToastNotificationPriority
+{
+    _q_CWindows_CUI_CNotifications_CToastNotificationPriority_Default = 0,
+    _q_CWindows_CUI_CNotifications_CToastNotificationPriority_High = 1,
+} _q_CWindows_CUI_CNotifications_CToastNotificationPriority;
+typedef enum _q_CWindows_CUI_CNotifications_CToastTemplateType
+{
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastImageAndText01 = 0,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastImageAndText02 = 1,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastImageAndText03 = 2,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastImageAndText04 = 3,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastText01 = 4,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastText02 = 5,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastText03 = 6,
+    _q_CWindows_CUI_CNotifications_CToastTemplateType_ToastText04 = 7,
+} _q_CWindows_CUI_CNotifications_CToastTemplateType;
 typedef enum _q_CWindows_CUI_CText_CFontStretch
 {
     _q_CWindows_CUI_CText_CFontStretch_Undefined = 0,
@@ -623,6 +674,7 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatc
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph;
 typedef struct _q_CMicrosoft_CUI_CXaml_CCornerRadius _q_CMicrosoft_CUI_CXaml_CCornerRadius;
 typedef struct _q_CMicrosoft_CUI_CXaml_CThickness _q_CMicrosoft_CUI_CXaml_CThickness;
+typedef struct _q_CWindows_CFoundation_CDateTime _q_CWindows_CFoundation_CDateTime;
 typedef struct _q_CWindows_CFoundation_CEventRegistrationToken _q_CWindows_CFoundation_CEventRegistrationToken;
 typedef struct _q_CWindows_CFoundation_CHResult _q_CWindows_CFoundation_CHResult;
 typedef struct _q_CWindows_CFoundation_CNumerics_CMatrix3x2 _q_CWindows_CFoundation_CNumerics_CMatrix3x2;
@@ -857,16 +909,41 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D _q_CMicroso
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory _q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory;
 typedef struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics;
 typedef struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2 _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlAttribute _q_CWindows_CData_CXml_CDom_CIXmlAttribute;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlCDataSection _q_CWindows_CData_CXml_CDom_CIXmlCDataSection;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlComment _q_CWindows_CData_CXml_CDom_CIXmlComment;
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocument _q_CWindows_CData_CXml_CDom_CIXmlDocument;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment;
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2 _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentType _q_CWindows_CData_CXml_CDom_CIXmlDocumentType;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDomImplementation _q_CWindows_CData_CXml_CDom_CIXmlDomImplementation;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlElement _q_CWindows_CData_CXml_CDom_CIXmlElement;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlEntityReference _q_CWindows_CData_CXml_CDom_CIXmlEntityReference;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNode _q_CWindows_CData_CXml_CDom_CIXmlNode;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeList _q_CWindows_CData_CXml_CDom_CIXmlNodeList;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction;
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlText _q_CWindows_CData_CXml_CDom_CIXmlText;
 typedef struct _q_CWindows_CFoundation_CIAsyncAction _q_CWindows_CFoundation_CIAsyncAction;
 typedef struct _q_CWindows_CFoundation_CIAsyncInfo _q_CWindows_CFoundation_CIAsyncInfo;
 typedef struct _q_CWindows_CFoundation_CIClosable _q_CWindows_CFoundation_CIClosable;
+typedef struct _q_CWindows_CFoundation_CIStringable _q_CWindows_CFoundation_CIStringable;
+typedef struct _q_CWindows_CFoundation_CIUriEscapeStatics _q_CWindows_CFoundation_CIUriEscapeStatics;
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClass _q_CWindows_CFoundation_CIUriRuntimeClass;
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassFactory _q_CWindows_CFoundation_CIUriRuntimeClassFactory;
+typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri;
+typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass;
+typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory;
 typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics;
+typedef struct _q_CWindows_CStorage_CIStorageFile _q_CWindows_CStorage_CIStorageFile;
 typedef struct _q_CWindows_CStorage_CStreams_CIBuffer _q_CWindows_CStorage_CStreams_CIBuffer;
 typedef struct _q_CWindows_CStorage_CStreams_CIOutputStream _q_CWindows_CStorage_CStreams_CIOutputStream;
+typedef struct _q_CWindows_CSystem_CIDispatcherQueue _q_CWindows_CSystem_CIDispatcherQueue;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueController _q_CWindows_CSystem_CIDispatcherQueueController;
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueControllerStatics _q_CWindows_CSystem_CIDispatcherQueueControllerStatics;
 typedef struct _q_CWindows_CSystem_CIUser _q_CWindows_CSystem_CIUser;
@@ -874,10 +951,28 @@ typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo _q_CWindo
 typedef struct _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics;
 typedef struct _q_CWindows_CUI_CCore_CICoreDispatcher _q_CWindows_CUI_CCore_CICoreDispatcher;
 typedef struct _q_CWindows_CUI_CCore_CICoreWindow _q_CWindows_CUI_CCore_CICoreWindow;
+typedef struct _q_CWindows_CUI_CNotifications_CINotificationData _q_CWindows_CUI_CNotifications_CINotificationData;
+typedef struct _q_CWindows_CUI_CNotifications_CINotificationDataFactory _q_CWindows_CUI_CNotifications_CINotificationDataFactory;
+typedef struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotification _q_CWindows_CUI_CNotifications_CIScheduledToastNotification;
+typedef struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory;
+typedef struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastFailedEventArgs _q_CWindows_CUI_CNotifications_CIToastFailedEventArgs;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification _q_CWindows_CUI_CNotifications_CIToastNotification;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification2 _q_CWindows_CUI_CNotifications_CIToastNotification2;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification3 _q_CWindows_CUI_CNotifications_CIToastNotification3;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification4 _q_CWindows_CUI_CNotifications_CIToastNotification4;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification6 _q_CWindows_CUI_CNotifications_CIToastNotification6;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationFactory _q_CWindows_CUI_CNotifications_CIToastNotificationFactory;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationHistory _q_CWindows_CUI_CNotifications_CIToastNotificationHistory;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2 _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4 _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5 _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5;
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifier _q_CWindows_CUI_CNotifications_CIToastNotifier;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifier2 _q_CWindows_CUI_CNotifications_CIToastNotifier2;
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifier3 _q_CWindows_CUI_CNotifications_CIToastNotifier3;
 typedef struct _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter;
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpClient _q_CWindows_CWeb_CHttp_CIHttpClient;
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpClientFactory _q_CWindows_CWeb_CHttp_CIHttpClientFactory;
@@ -885,6 +980,17 @@ typedef struct _q_CWindows_CWeb_CHttp_CIHttpContent _q_CWindows_CWeb_CHttp_CIHtt
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpResponseMessage _q_CWindows_CWeb_CHttp_CIHttpResponseMessage;
 typedef struct _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory;
 // forward decls for parameterized interfaces
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs;
+typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING;
+typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1_boolean _cg_CWindows_CFoundation_IAsyncOperation_1_boolean;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress;
@@ -1014,6 +1120,10 @@ struct _q_CMicrosoft_CUI_CXaml_CThickness
     DOUBLE Top;
     DOUBLE Right;
     DOUBLE Bottom;
+};
+struct _q_CWindows_CFoundation_CDateTime
+{
+    INT64 UniversalTime;
 };
 struct _q_CWindows_CFoundation_CEventRegistrationToken
 {
@@ -6295,6 +6405,49 @@ struct _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2
 {
     _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2Vtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlAttributeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlAttribute* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlAttribute* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlAttribute* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlAttribute* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlAttribute* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlAttribute* This, TrustLevel* trustLevel);
+    void* unneeded_get_Name;
+    void* unneeded_get_Specified;
+    void* unneeded_get_Value;
+    void* unneeded_put_Value;
+} _q_CWindows_CData_CXml_CDom_CIXmlAttributeVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlAttribute
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlAttributeVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlCDataSectionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlCDataSection* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlCDataSection* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlCDataSection* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlCDataSection* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlCDataSection* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlCDataSection* This, TrustLevel* trustLevel);
+} _q_CWindows_CData_CXml_CDom_CIXmlCDataSectionVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlCDataSection
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlCDataSectionVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlCommentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlComment* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlComment* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlComment* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlComment* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlComment* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlComment* This, TrustLevel* trustLevel);
+} _q_CWindows_CData_CXml_CDom_CIXmlCommentVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlComment
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlCommentVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* This, REFIID riid, void** ppvObject);
@@ -6303,27 +6456,40 @@ typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* This, TrustLevel* trustLevel);
-    void* unneeded_get_Doctype;
-    void* unneeded_get_Implementation;
-    void* unneeded_get_DocumentElement;
-    void* unneeded_CreateElement;
-    void* unneeded_CreateDocumentFragment;
-    void* unneeded_CreateTextNode;
-    void* unneeded_CreateComment;
-    void* unneeded_CreateProcessingInstruction;
-    void* unneeded_CreateAttribute;
-    void* unneeded_CreateEntityReference;
-    void* unneeded_GetElementsByTagName;
-    void* unneeded_CreateCDataSection;
-    void* unneeded_get_DocumentUri;
-    void* unneeded_CreateAttributeNS;
-    void* unneeded_CreateElementNS;
-    void* unneeded_GetElementById;
-    void* unneeded_ImportNode;
+    HRESULT (STDMETHODCALLTYPE* get_Doctype)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocumentType** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Implementation)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDomImplementation** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DocumentElement)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, _q_CWindows_CData_CXml_CDom_CIXmlElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateElement)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING tagName, _q_CWindows_CData_CXml_CDom_CIXmlElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDocumentFragment)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateTextNode)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING data, _q_CWindows_CData_CXml_CDom_CIXmlText** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateComment)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING data, _q_CWindows_CData_CXml_CDom_CIXmlComment** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateProcessingInstruction)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING target, HSTRING data, _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateAttribute)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING name, _q_CWindows_CData_CXml_CDom_CIXmlAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateEntityReference)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING name, _q_CWindows_CData_CXml_CDom_CIXmlEntityReference** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetElementsByTagName)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING tagName, _q_CWindows_CData_CXml_CDom_CIXmlNodeList** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateCDataSection)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING data, _q_CWindows_CData_CXml_CDom_CIXmlCDataSection** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DocumentUri)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateAttributeNS)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, IInspectable* namespaceUri, HSTRING qualifiedName, _q_CWindows_CData_CXml_CDom_CIXmlAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateElementNS)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, IInspectable* namespaceUri, HSTRING qualifiedName, _q_CWindows_CData_CXml_CDom_CIXmlElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetElementById)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, HSTRING elementId, _q_CWindows_CData_CXml_CDom_CIXmlElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* ImportNode)(_q_CWindows_CData_CXml_CDom_CIXmlDocument* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode* node, boolean deep, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
 } _q_CWindows_CData_CXml_CDom_CIXmlDocumentVtbl;
 struct _q_CWindows_CData_CXml_CDom_CIXmlDocument
 {
     _q_CWindows_CData_CXml_CDom_CIXmlDocumentVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragmentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment* This, TrustLevel* trustLevel);
+} _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragmentVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlDocumentFragmentVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIOVtbl
 {
@@ -6334,12 +6500,271 @@ typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIOVtbl
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO* This, TrustLevel* trustLevel);
     HRESULT (STDMETHODCALLTYPE* LoadXml)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO* pThis, HSTRING xml);
-    void* unneeded_LoadXmlWithSettings;
-    void* unneeded_SaveToFileAsync;
+    HRESULT (STDMETHODCALLTYPE* LoadXmlWithSettings)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO* pThis, HSTRING xml, _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* loadSettings);
+    HRESULT (STDMETHODCALLTYPE* SaveToFileAsync)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO* pThis, _q_CWindows_CStorage_CIStorageFile* file, _q_CWindows_CFoundation_CIAsyncAction** __pret);
 } _q_CWindows_CData_CXml_CDom_CIXmlDocumentIOVtbl;
 struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO
 {
     _q_CWindows_CData_CXml_CDom_CIXmlDocumentIOVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* LoadXmlFromBuffer)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer);
+    HRESULT (STDMETHODCALLTYPE* LoadXmlFromBufferWithSettings)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2* pThis, _q_CWindows_CStorage_CStreams_CIBuffer* buffer, _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* loadSettings);
+} _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2Vtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* LoadFromUriAsync)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadFromUriWithSettingsAsync)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* loadSettings, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadFromFileAsync)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* pThis, _q_CWindows_CStorage_CIStorageFile* file, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadFromFileWithSettingsAsync)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics* pThis, _q_CWindows_CStorage_CIStorageFile* file, _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* loadSettings, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument** __pret);
+} _q_CWindows_CData_CXml_CDom_CIXmlDocumentStaticsVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlDocumentStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentTypeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentType* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentType* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentType* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentType* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentType* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDocumentType* This, TrustLevel* trustLevel);
+    void* unneeded_get_Name;
+    void* unneeded_get_Entities;
+    void* unneeded_get_Notations;
+} _q_CWindows_CData_CXml_CDom_CIXmlDocumentTypeVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlDocumentType
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlDocumentTypeVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlDomImplementationVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation* This, TrustLevel* trustLevel);
+    void* unneeded_HasFeature;
+} _q_CWindows_CData_CXml_CDom_CIXmlDomImplementationVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlDomImplementation
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlDomImplementationVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlElement* This, TrustLevel* trustLevel);
+    void* unneeded_get_TagName;
+    void* unneeded_GetAttribute;
+    void* unneeded_SetAttribute;
+    void* unneeded_RemoveAttribute;
+    void* unneeded_GetAttributeNode;
+    void* unneeded_SetAttributeNode;
+    void* unneeded_RemoveAttributeNode;
+    void* unneeded_GetElementsByTagName;
+    void* unneeded_SetAttributeNS;
+    void* unneeded_GetAttributeNS;
+    void* unneeded_RemoveAttributeNS;
+    void* unneeded_SetAttributeNodeNS;
+    void* unneeded_GetAttributeNodeNS;
+} _q_CWindows_CData_CXml_CDom_CIXmlElementVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlElement
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlElementVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlEntityReferenceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlEntityReference* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlEntityReference* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlEntityReference* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlEntityReference* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlEntityReference* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlEntityReference* This, TrustLevel* trustLevel);
+} _q_CWindows_CData_CXml_CDom_CIXmlEntityReferenceVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlEntityReference
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlEntityReferenceVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlLoadSettingsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings* This, TrustLevel* trustLevel);
+    void* unneeded_get_MaxElementDepth;
+    void* unneeded_put_MaxElementDepth;
+    void* unneeded_get_ProhibitDtd;
+    void* unneeded_put_ProhibitDtd;
+    void* unneeded_get_ResolveExternals;
+    void* unneeded_put_ResolveExternals;
+    void* unneeded_get_ValidateOnParse;
+    void* unneeded_put_ValidateOnParse;
+    void* unneeded_get_ElementContentWhiteSpace;
+    void* unneeded_put_ElementContentWhiteSpace;
+} _q_CWindows_CData_CXml_CDom_CIXmlLoadSettingsVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlLoadSettingsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap* This, TrustLevel* trustLevel);
+    void* unneeded_get_Length;
+    void* unneeded_Item;
+    void* unneeded_GetNamedItem;
+    void* unneeded_SetNamedItem;
+    void* unneeded_RemoveNamedItem;
+    void* unneeded_GetNamedItemNS;
+    void* unneeded_RemoveNamedItemNS;
+    void* unneeded_SetNamedItemNS;
+} _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMapVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMapVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlNode* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlNode* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlNode* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlNode* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlNode* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlNode* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_NodeValue)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_NodeValue)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* get_NodeType)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CNodeType* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_NodeName)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ParentNode)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ChildNodes)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNodeList** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FirstChild)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LastChild)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PreviousSibling)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_NextSibling)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Attributes)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap** __pret);
+    HRESULT (STDMETHODCALLTYPE* HasChildNodes)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_OwnerDocument)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* InsertBefore)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode* newChild, _q_CWindows_CData_CXml_CDom_CIXmlNode* referenceChild, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceChild)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode* newChild, _q_CWindows_CData_CXml_CDom_CIXmlNode* referenceChild, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* RemoveChild)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode* childNode, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* AppendChild)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, _q_CWindows_CData_CXml_CDom_CIXmlNode* newChild, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* CloneNode)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, boolean deep, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_NamespaceUri)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LocalName)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Prefix)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* Normalize)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis);
+    HRESULT (STDMETHODCALLTYPE* put_Prefix)(_q_CWindows_CData_CXml_CDom_CIXmlNode* pThis, IInspectable* value);
+} _q_CWindows_CData_CXml_CDom_CIXmlNodeVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlNode
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlNodeVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeListVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlNodeList* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlNodeList* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlNodeList* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlNodeList* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlNodeList* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlNodeList* This, TrustLevel* trustLevel);
+    void* unneeded_get_Length;
+    void* unneeded_Item;
+} _q_CWindows_CData_CXml_CDom_CIXmlNodeListVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlNodeList
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlNodeListVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeSelectorVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SelectSingleNode)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* pThis, HSTRING xpath, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* SelectNodes)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* pThis, HSTRING xpath, _q_CWindows_CData_CXml_CDom_CIXmlNodeList** __pret);
+    HRESULT (STDMETHODCALLTYPE* SelectSingleNodeNS)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* pThis, HSTRING xpath, IInspectable* namespaces, _q_CWindows_CData_CXml_CDom_CIXmlNode** __pret);
+    HRESULT (STDMETHODCALLTYPE* SelectNodesNS)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSelector* pThis, HSTRING xpath, IInspectable* namespaces, _q_CWindows_CData_CXml_CDom_CIXmlNodeList** __pret);
+} _q_CWindows_CData_CXml_CDom_CIXmlNodeSelectorVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlNodeSelectorVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetXml)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_InnerText)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InnerText)(_q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer* pThis, HSTRING value);
+} _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializerVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializerVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstructionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction* This, TrustLevel* trustLevel);
+    void* unneeded_get_Target;
+    void* unneeded_get_Data;
+    void* unneeded_put_Data;
+} _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstructionVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstructionVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CData_CXml_CDom_CIXmlTextVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CData_CXml_CDom_CIXmlText* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CData_CXml_CDom_CIXmlText* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CData_CXml_CDom_CIXmlText* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CData_CXml_CDom_CIXmlText* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CData_CXml_CDom_CIXmlText* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CData_CXml_CDom_CIXmlText* This, TrustLevel* trustLevel);
+    void* unneeded_SplitText;
+} _q_CWindows_CData_CXml_CDom_CIXmlTextVtbl;
+struct _q_CWindows_CData_CXml_CDom_CIXmlText
+{
+    _q_CWindows_CData_CXml_CDom_CIXmlTextVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CFoundation_CIAsyncActionVtbl
 {
@@ -6389,6 +6814,35 @@ struct _q_CWindows_CFoundation_CIClosable
 {
     _q_CWindows_CFoundation_CIClosableVtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CFoundation_CIStringableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIStringable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIStringable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIStringable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIStringable* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIStringable* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIStringable* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* ToString)(_q_CWindows_CFoundation_CIStringable* pThis, HSTRING* __pret);
+} _q_CWindows_CFoundation_CIStringableVtbl;
+struct _q_CWindows_CFoundation_CIStringable
+{
+    _q_CWindows_CFoundation_CIStringableVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CFoundation_CIUriEscapeStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIUriEscapeStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIUriEscapeStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIUriEscapeStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIUriEscapeStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIUriEscapeStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIUriEscapeStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* UnescapeComponent)(_q_CWindows_CFoundation_CIUriEscapeStatics* pThis, HSTRING toUnescape, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* EscapeComponent)(_q_CWindows_CFoundation_CIUriEscapeStatics* pThis, HSTRING toEscape, HSTRING* __pret);
+} _q_CWindows_CFoundation_CIUriEscapeStaticsVtbl;
+struct _q_CWindows_CFoundation_CIUriEscapeStatics
+{
+    _q_CWindows_CFoundation_CIUriEscapeStaticsVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, REFIID riid, void** ppvObject);
@@ -6397,23 +6851,23 @@ typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIUriRuntimeClass* This, TrustLevel* trustLevel);
-    void* unneeded_get_AbsoluteUri;
-    void* unneeded_get_DisplayUri;
-    void* unneeded_get_Domain;
-    void* unneeded_get_Extension;
-    void* unneeded_get_Fragment;
-    void* unneeded_get_Host;
-    void* unneeded_get_Password;
-    void* unneeded_get_Path;
-    void* unneeded_get_Query;
-    void* unneeded_get_QueryParsed;
-    void* unneeded_get_RawUri;
-    void* unneeded_get_SchemeName;
-    void* unneeded_get_UserName;
-    void* unneeded_get_Port;
-    void* unneeded_get_Suspicious;
-    void* unneeded_Equals;
-    void* unneeded_CombineUri;
+    HRESULT (STDMETHODCALLTYPE* get_AbsoluteUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DisplayUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Domain)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Extension)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Fragment)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Host)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Password)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Path)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Query)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_QueryParsed)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_RawUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SchemeName)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_UserName)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Port)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Suspicious)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* Equals)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* pUri, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* CombineUri)(_q_CWindows_CFoundation_CIUriRuntimeClass* pThis, HSTRING relativeUri, _q_CWindows_CFoundation_CIUriRuntimeClass** __pret);
 } _q_CWindows_CFoundation_CIUriRuntimeClassVtbl;
 struct _q_CWindows_CFoundation_CIUriRuntimeClass
 {
@@ -6433,6 +6887,49 @@ typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassFactoryVtbl
 struct _q_CWindows_CFoundation_CIUriRuntimeClassFactory
 {
     _q_CWindows_CFoundation_CIUriRuntimeClassFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUriVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_AbsoluteCanonicalUri)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DisplayIri)(_q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri* pThis, HSTRING* __pret);
+} _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUriVtbl;
+struct _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri
+{
+    _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUriVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass* This, TrustLevel* trustLevel);
+    void* unneeded_GetFirstValueByName;
+} _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassVtbl;
+struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass
+{
+    _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateWwwFormUrlDecoder)(_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory* pThis, HSTRING query, _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass** __pret);
+} _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl;
+struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory
+{
+    _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactoryVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsVtbl
 {
@@ -6457,6 +6954,31 @@ typedef struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsV
 struct _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics
 {
     _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CStorage_CIStorageFileVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CStorage_CIStorageFile* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CStorage_CIStorageFile* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CStorage_CIStorageFile* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CStorage_CIStorageFile* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CStorage_CIStorageFile* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CStorage_CIStorageFile* This, TrustLevel* trustLevel);
+    void* unneeded_get_FileType;
+    void* unneeded_get_ContentType;
+    void* unneeded_OpenAsync;
+    void* unneeded_OpenTransactedWriteAsync;
+    void* unneeded_CopyOverloadDefaultNameAndOptions;
+    void* unneeded_CopyOverloadDefaultOptions;
+    void* unneeded_CopyOverload;
+    void* unneeded_CopyAndReplaceAsync;
+    void* unneeded_MoveOverloadDefaultNameAndOptions;
+    void* unneeded_MoveOverloadDefaultOptions;
+    void* unneeded_MoveOverload;
+    void* unneeded_MoveAndReplaceAsync;
+} _q_CWindows_CStorage_CIStorageFileVtbl;
+struct _q_CWindows_CStorage_CIStorageFile
+{
+    _q_CWindows_CStorage_CIStorageFileVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CStorage_CStreams_CIBufferVtbl
 {
@@ -6489,6 +7011,26 @@ struct _q_CWindows_CStorage_CStreams_CIOutputStream
 {
     _q_CWindows_CStorage_CStreams_CIOutputStreamVtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CSystem_CIDispatcherQueueVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CSystem_CIDispatcherQueue* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CSystem_CIDispatcherQueue* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CSystem_CIDispatcherQueue* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CSystem_CIDispatcherQueue* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CSystem_CIDispatcherQueue* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CSystem_CIDispatcherQueue* This, TrustLevel* trustLevel);
+    void* unneeded_CreateTimer;
+    void* unneeded_TryEnqueue;
+    void* unneeded_TryEnqueueWithPriority;
+    void* unneeded_add_ShutdownStarting;
+    void* unneeded_remove_ShutdownStarting;
+    void* unneeded_add_ShutdownCompleted;
+    void* unneeded_remove_ShutdownCompleted;
+} _q_CWindows_CSystem_CIDispatcherQueueVtbl;
+struct _q_CWindows_CSystem_CIDispatcherQueue
+{
+    _q_CWindows_CSystem_CIDispatcherQueueVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CSystem_CIDispatcherQueueControllerVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CSystem_CIDispatcherQueueController* This, REFIID riid, void** ppvObject);
@@ -6497,7 +7039,7 @@ typedef struct _q_CWindows_CSystem_CIDispatcherQueueControllerVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CSystem_CIDispatcherQueueController* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CSystem_CIDispatcherQueueController* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CSystem_CIDispatcherQueueController* This, TrustLevel* trustLevel);
-    void* unneeded_get_DispatcherQueue;
+    HRESULT (STDMETHODCALLTYPE* get_DispatcherQueue)(_q_CWindows_CSystem_CIDispatcherQueueController* pThis, _q_CWindows_CSystem_CIDispatcherQueue** __pret);
     HRESULT (STDMETHODCALLTYPE* ShutdownQueueAsync)(_q_CWindows_CSystem_CIDispatcherQueueController* pThis, _q_CWindows_CFoundation_CIAsyncAction** __pret);
 } _q_CWindows_CSystem_CIDispatcherQueueControllerVtbl;
 struct _q_CWindows_CSystem_CIDispatcherQueueController
@@ -6649,6 +7191,116 @@ struct _q_CWindows_CUI_CCore_CICoreWindow
 {
     _q_CWindows_CUI_CCore_CICoreWindowVtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CUI_CNotifications_CINotificationDataVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CINotificationData* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CINotificationData* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CINotificationData* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CINotificationData* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CINotificationData* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CINotificationData* This, TrustLevel* trustLevel);
+    void* unneeded_get_Values;
+    void* unneeded_get_SequenceNumber;
+    void* unneeded_put_SequenceNumber;
+} _q_CWindows_CUI_CNotifications_CINotificationDataVtbl;
+struct _q_CWindows_CUI_CNotifications_CINotificationData
+{
+    _q_CWindows_CUI_CNotifications_CINotificationDataVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CINotificationDataFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateNotificationDataWithValuesAndSequenceNumber)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* pThis, _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* initialValues, UINT32 sequenceNumber, _q_CWindows_CUI_CNotifications_CINotificationData** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateNotificationDataWithValues)(_q_CWindows_CUI_CNotifications_CINotificationDataFactory* pThis, _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* initialValues, _q_CWindows_CUI_CNotifications_CINotificationData** __pret);
+} _q_CWindows_CUI_CNotifications_CINotificationDataFactoryVtbl;
+struct _q_CWindows_CUI_CNotifications_CINotificationDataFactory
+{
+    _q_CWindows_CUI_CNotifications_CINotificationDataFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotification* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotification* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotification* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotification* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotification* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotification* This, TrustLevel* trustLevel);
+    void* unneeded_get_Content;
+    void* unneeded_get_DeliveryTime;
+    void* unneeded_get_SnoozeInterval;
+    void* unneeded_get_MaximumSnoozeCount;
+    void* unneeded_put_Id;
+    void* unneeded_get_Id;
+} _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationVtbl;
+struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotification
+{
+    _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateScheduledToastNotification)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocument* content, _q_CWindows_CFoundation_CDateTime deliveryTime, _q_CWindows_CUI_CNotifications_CIScheduledToastNotification** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateScheduledToastNotificationRecurring)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocument* content, _q_CWindows_CFoundation_CDateTime deliveryTime, _q_CWindows_CFoundation_CTimeSpan snoozeInterval, UINT32 maximumSnoozeCount, _q_CWindows_CUI_CNotifications_CIScheduledToastNotification** __pret);
+} _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactoryVtbl;
+struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory
+{
+    _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Cancel;
+    void* unneeded_put_Cancel;
+    void* unneeded_get_ScheduledToastNotification;
+    void* unneeded_GetDeferral;
+} _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgsVtbl;
+struct _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs
+{
+    _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Reason;
+} _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgsVtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs
+{
+    _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastFailedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_ErrorCode;
+} _q_CWindows_CUI_CNotifications_CIToastFailedEventArgsVtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastFailedEventArgs
+{
+    _q_CWindows_CUI_CNotifications_CIToastFailedEventArgsVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotification* This, REFIID riid, void** ppvObject);
@@ -6657,19 +7309,87 @@ typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotification* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotification* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotification* This, TrustLevel* trustLevel);
-    void* unneeded_get_Content;
-    void* unneeded_put_ExpirationTime;
-    void* unneeded_get_ExpirationTime;
-    void* unneeded_add_Dismissed;
-    void* unneeded_remove_Dismissed;
-    void* unneeded_add_Activated;
-    void* unneeded_remove_Activated;
-    void* unneeded_add_Failed;
-    void* unneeded_remove_Failed;
+    HRESULT (STDMETHODCALLTYPE* get_Content)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExpirationTime)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* value);
+    HRESULT (STDMETHODCALLTYPE* get_ExpirationTime)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime** __pret);
+    HRESULT (STDMETHODCALLTYPE* add_Dismissed)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Dismissed)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Activated)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Activated)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Failed)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Failed)(_q_CWindows_CUI_CNotifications_CIToastNotification* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
 } _q_CWindows_CUI_CNotifications_CIToastNotificationVtbl;
 struct _q_CWindows_CUI_CNotifications_CIToastNotification
 {
     _q_CWindows_CUI_CNotifications_CIToastNotificationVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification2Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotification2* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotification2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotification2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotification2* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotification2* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotification2* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Tag)(_q_CWindows_CUI_CNotifications_CIToastNotification2* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_Tag)(_q_CWindows_CUI_CNotifications_CIToastNotification2* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Group)(_q_CWindows_CUI_CNotifications_CIToastNotification2* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_Group)(_q_CWindows_CUI_CNotifications_CIToastNotification2* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SuppressPopup)(_q_CWindows_CUI_CNotifications_CIToastNotification2* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_SuppressPopup)(_q_CWindows_CUI_CNotifications_CIToastNotification2* pThis, boolean* __pret);
+} _q_CWindows_CUI_CNotifications_CIToastNotification2Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotification2
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotification2Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification3Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotification3* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotification3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotification3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotification3* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotification3* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotification3* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_NotificationMirroring)(_q_CWindows_CUI_CNotifications_CIToastNotification3* pThis, _q_CWindows_CUI_CNotifications_CNotificationMirroring* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_NotificationMirroring)(_q_CWindows_CUI_CNotifications_CIToastNotification3* pThis, _q_CWindows_CUI_CNotifications_CNotificationMirroring value);
+    HRESULT (STDMETHODCALLTYPE* get_RemoteId)(_q_CWindows_CUI_CNotifications_CIToastNotification3* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RemoteId)(_q_CWindows_CUI_CNotifications_CIToastNotification3* pThis, HSTRING value);
+} _q_CWindows_CUI_CNotifications_CIToastNotification3Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotification3
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotification3Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification4Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotification4* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotification4* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotification4* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotification4* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotification4* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotification4* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Data)(_q_CWindows_CUI_CNotifications_CIToastNotification4* pThis, _q_CWindows_CUI_CNotifications_CINotificationData** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Data)(_q_CWindows_CUI_CNotifications_CIToastNotification4* pThis, _q_CWindows_CUI_CNotifications_CINotificationData* value);
+    HRESULT (STDMETHODCALLTYPE* get_Priority)(_q_CWindows_CUI_CNotifications_CIToastNotification4* pThis, _q_CWindows_CUI_CNotifications_CToastNotificationPriority* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Priority)(_q_CWindows_CUI_CNotifications_CIToastNotification4* pThis, _q_CWindows_CUI_CNotifications_CToastNotificationPriority value);
+} _q_CWindows_CUI_CNotifications_CIToastNotification4Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotification4
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotification4Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotification6Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotification6* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotification6* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotification6* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotification6* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotification6* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotification6* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ExpiresOnReboot)(_q_CWindows_CUI_CNotifications_CIToastNotification6* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExpiresOnReboot)(_q_CWindows_CUI_CNotifications_CIToastNotification6* pThis, boolean value);
+} _q_CWindows_CUI_CNotifications_CIToastNotification6Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotification6
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotification6Vtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationFactoryVtbl
 {
@@ -6685,6 +7405,43 @@ struct _q_CWindows_CUI_CNotifications_CIToastNotificationFactory
 {
     _q_CWindows_CUI_CNotifications_CIToastNotificationFactoryVtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationHistoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotificationHistory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotificationHistory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotificationHistory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotificationHistory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotificationHistory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotificationHistory* This, TrustLevel* trustLevel);
+    void* unneeded_RemoveGroup;
+    void* unneeded_RemoveGroupWithId;
+    void* unneeded_RemoveGroupedTagWithId;
+    void* unneeded_RemoveGroupedTag;
+    void* unneeded_Remove;
+    void* unneeded_Clear;
+    void* unneeded_ClearWithId;
+} _q_CWindows_CUI_CNotifications_CIToastNotificationHistoryVtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotificationHistory
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotificationHistoryVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUserVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser* This, TrustLevel* trustLevel);
+    void* unneeded_CreateToastNotifier;
+    void* unneeded_CreateToastNotifierWithId;
+    void* unneeded_get_History;
+    void* unneeded_get_User;
+} _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUserVtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUserVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStaticsVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* This, REFIID riid, void** ppvObject);
@@ -6693,13 +7450,56 @@ typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStaticsV
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* This, TrustLevel* trustLevel);
-    void* unneeded_CreateToastNotifier;
+    HRESULT (STDMETHODCALLTYPE* CreateToastNotifier)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* pThis, _q_CWindows_CUI_CNotifications_CIToastNotifier** __pret);
     HRESULT (STDMETHODCALLTYPE* CreateToastNotifierWithId)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* pThis, HSTRING applicationId, _q_CWindows_CUI_CNotifications_CIToastNotifier** __pret);
-    void* unneeded_GetTemplateContent;
+    HRESULT (STDMETHODCALLTYPE* GetTemplateContent)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics* pThis, _q_CWindows_CUI_CNotifications_CToastTemplateType type, _q_CWindows_CData_CXml_CDom_CIXmlDocument** __pret);
 } _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStaticsVtbl;
 struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics
 {
     _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_History)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2* pThis, _q_CWindows_CUI_CNotifications_CIToastNotificationHistory** __pret);
+} _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetForUser)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* pThis, _q_CWindows_CSystem_CIUser* user, _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser** __pret);
+    HRESULT (STDMETHODCALLTYPE* ConfigureNotificationMirroring)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4* pThis, _q_CWindows_CUI_CNotifications_CNotificationMirroring value);
+} _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetDefault)(_q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5* pThis, _q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser** __pret);
+} _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5Vtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifierVtbl
 {
@@ -6710,15 +7510,45 @@ typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifierVtbl
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotifier* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotifier* This, TrustLevel* trustLevel);
     HRESULT (STDMETHODCALLTYPE* Show)(_q_CWindows_CUI_CNotifications_CIToastNotifier* pThis, _q_CWindows_CUI_CNotifications_CIToastNotification* notification);
-    void* unneeded_Hide;
-    void* unneeded_get_Setting;
-    void* unneeded_AddToSchedule;
-    void* unneeded_RemoveFromSchedule;
-    void* unneeded_GetScheduledToastNotifications;
+    HRESULT (STDMETHODCALLTYPE* Hide)(_q_CWindows_CUI_CNotifications_CIToastNotifier* pThis, _q_CWindows_CUI_CNotifications_CIToastNotification* notification);
+    HRESULT (STDMETHODCALLTYPE* get_Setting)(_q_CWindows_CUI_CNotifications_CIToastNotifier* pThis, _q_CWindows_CUI_CNotifications_CNotificationSetting* __pret);
+    HRESULT (STDMETHODCALLTYPE* AddToSchedule)(_q_CWindows_CUI_CNotifications_CIToastNotifier* pThis, _q_CWindows_CUI_CNotifications_CIScheduledToastNotification* scheduledToast);
+    HRESULT (STDMETHODCALLTYPE* RemoveFromSchedule)(_q_CWindows_CUI_CNotifications_CIToastNotifier* pThis, _q_CWindows_CUI_CNotifications_CIScheduledToastNotification* scheduledToast);
+    HRESULT (STDMETHODCALLTYPE* GetScheduledToastNotifications)(_q_CWindows_CUI_CNotifications_CIToastNotifier* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification** __pret);
 } _q_CWindows_CUI_CNotifications_CIToastNotifierVtbl;
 struct _q_CWindows_CUI_CNotifications_CIToastNotifier
 {
     _q_CWindows_CUI_CNotifications_CIToastNotifierVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifier2Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* UpdateWithTagAndGroup)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* pThis, _q_CWindows_CUI_CNotifications_CINotificationData* data, HSTRING tag, HSTRING group, _q_CWindows_CUI_CNotifications_CNotificationUpdateResult* __pret);
+    HRESULT (STDMETHODCALLTYPE* UpdateWithTag)(_q_CWindows_CUI_CNotifications_CIToastNotifier2* pThis, _q_CWindows_CUI_CNotifications_CINotificationData* data, HSTRING tag, _q_CWindows_CUI_CNotifications_CNotificationUpdateResult* __pret);
+} _q_CWindows_CUI_CNotifications_CIToastNotifier2Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotifier2
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotifier2Vtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CUI_CNotifications_CIToastNotifier3Vtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* add_ScheduledToastNotificationShowing)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ScheduledToastNotificationShowing)(_q_CWindows_CUI_CNotifications_CIToastNotifier3* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+} _q_CWindows_CUI_CNotifications_CIToastNotifier3Vtbl;
+struct _q_CWindows_CUI_CNotifications_CIToastNotifier3
+{
+    _q_CWindows_CUI_CNotifications_CIToastNotifier3Vtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilterVtbl
 {
@@ -6835,6 +7665,154 @@ struct _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory
     _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactoryVtbl* lpVtbl;
 };
 // definitions for parameterized interfaces
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTimeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime* This, TrustLevel* trustLevel);
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTimeVtbl;
+struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime
+{
+    _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTimeVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs* pThis, _q_CWindows_CUI_CNotifications_CIToastNotification* sender, _q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable* pThis, _q_CWindows_CUI_CNotifications_CIToastNotification* sender, IInspectable* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectableVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs* pThis, _q_CWindows_CUI_CNotifications_CIToastNotification* sender, _q_CWindows_CUI_CNotifications_CIToastFailedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, TrustLevel* trustLevel);
+    void* unneeded_First;
+} _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+{
+    _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, TrustLevel* trustLevel);
+    void* unneeded_get_Current;
+    void* unneeded_get_HasCurrent;
+    void* unneeded_MoveNext;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+{
+    _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRINGVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotificationVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotificationVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotificationVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs* pThis, _q_CWindows_CUI_CNotifications_CIToastNotifier* sender, _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* pThis, _q_CWindows_CData_CXml_CDom_CIXmlDocument** __pret);
+} _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+{
+    _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
+} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+{
+    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl* lpVtbl;
+};
 typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1_booleanVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1_boolean* This, REFIID riid, void** ppvObject);

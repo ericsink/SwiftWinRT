@@ -6,6 +6,45 @@ import CWinRT;
 
 extension Windows.Foundation.Collections {
 // closed interface type
+public class IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe9bdaaf0, Data2: 0xcbf6, Data3 : 0x5c72, Data4 : (0xbe, 0x90, 0x29, 0xcb, 0xf3, 0xa1, 0x31, 0x9b)) }
+// method not needed: First
+} // IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+// closed interface type
+public class IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x05eb86f1, Data2: 0x7140, Data3 : 0x5517, Data4 : (0xb8, 0x8d, 0xcb, 0xae, 0xbe, 0x57, 0xe6, 0xb1)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+// closed interface type
+public class IKeyValuePair_2_HSTRING_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x60310303, Data2: 0x49c5, Data3 : 0x52e6, Data4 : (0xab, 0xc6, 0xa9, 0xb3, 0x6e, 0xcc, 0xc7, 0x16)) }
+// method not needed: get_Key
+// method not needed: get_Value
+} // IKeyValuePair_2_HSTRING_HSTRING
+// closed interface type
+public class IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xba0aff1f, Data2: 0x6a8a, Data3 : 0x5a7e, Data4 : (0xa9, 0xf7, 0x50, 0x5b, 0x62, 0x66, 0xa4, 0x36)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification
+// closed interface type
 public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
     :
     WinRT.IInspectable

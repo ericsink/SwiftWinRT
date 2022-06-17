@@ -54,7 +54,10 @@ public class HttpClient
         let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
         return try _ifc.Close();
     }
-    // instance interface not needed: Windows.Foundation.IStringable
+    public func ToString() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IStringable = try _self.QueryInterface();
+        return try _ifc.ToString();
+    }
 }
 
 // type: Windows.Web.Http.HttpProgress
@@ -117,7 +120,10 @@ public class HttpResponseMessage
         let _ifc : WinRT.Windows.Foundation.IClosable = try _self.QueryInterface();
         return try _ifc.Close();
     }
-    // instance interface not needed: Windows.Foundation.IStringable
+    public func ToString() throws -> Swift.String {
+        let _ifc : WinRT.Windows.Foundation.IStringable = try _self.QueryInterface();
+        return try _ifc.ToString();
+    }
 }
 
 // type: Windows.Web.Http.HttpStatusCode
