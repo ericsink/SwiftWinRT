@@ -65,7 +65,7 @@ open class ICryptographicBufferStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x320b7e22, Data2: 0x3cb0, Data3 : 0x4cdf, Data4 : (0x86, 0x63, 0x1d, 0x28, 0x91, 0x00, 0x65, 0xeb)) }
     // bool Compare(Windows.Storage.Streams.IBuffer, Windows.Storage.Streams.IBuffer)
-    public func _n_Compare(_ object1 : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ object2 : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_Compare(_ object1 : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ object2 : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Compare(pThis, object1, object2, __presult))
         }
@@ -76,7 +76,7 @@ open class ICryptographicBufferStatics
         return __result;
     }
     // Windows.Storage.Streams.IBuffer GenerateRandom(System.UInt32)
-    public func _n_GenerateRandom(_ length : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+    private func _n_GenerateRandom(_ length : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GenerateRandom(pThis, length, __presult))
         }
@@ -87,7 +87,7 @@ open class ICryptographicBufferStatics
         return WinRT.Windows.Storage.Streams.IBuffer(consuming: __result);
     }
     // System.UInt32 GenerateRandomNumber()
-    public func _n_GenerateRandomNumber(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GenerateRandomNumber(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GenerateRandomNumber(pThis, __presult))
         }
@@ -98,7 +98,7 @@ open class ICryptographicBufferStatics
         return __result;
     }
     // Windows.Storage.Streams.IBuffer CreateFromByteArray(System.Byte[])
-    public func _n_CreateFromByteArray(_ valueLength : UINT32, _ value : Optional<UnsafeMutablePointer<UINT8>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+    private func _n_CreateFromByteArray(_ valueLength : UINT32, _ value : Optional<UnsafeMutablePointer<UINT8>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromByteArray(pThis, valueLength, value, __presult))
         }
@@ -109,7 +109,7 @@ open class ICryptographicBufferStatics
         return WinRT.Windows.Storage.Streams.IBuffer(consuming: __result);
     }
     // void CopyToByteArray(Windows.Storage.Streams.IBuffer, ref System.Byte[])
-    public func _n_CopyToByteArray(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ valueLength : UnsafeMutablePointer<UINT32>, _ value : UnsafeMutablePointer<Optional<UnsafeMutablePointer<UINT8>>>) throws {
+    private func _n_CopyToByteArray(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ valueLength : UnsafeMutablePointer<UINT32>, _ value : UnsafeMutablePointer<Optional<UnsafeMutablePointer<UINT8>>>) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CopyToByteArray(pThis, buffer, valueLength, value))
         }
@@ -121,7 +121,7 @@ open class ICryptographicBufferStatics
             value = _tmp_out_value;
     }
     // Windows.Storage.Streams.IBuffer DecodeFromHexString(System.String)
-    public func _n_DecodeFromHexString(_ value : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+    private func _n_DecodeFromHexString(_ value : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DecodeFromHexString(pThis, value, __presult))
         }
@@ -135,7 +135,7 @@ open class ICryptographicBufferStatics
         }
     }
     // System.String EncodeToHexString(Windows.Storage.Streams.IBuffer)
-    public func _n_EncodeToHexString(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_EncodeToHexString(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.EncodeToHexString(pThis, buffer, __presult))
         }
@@ -146,7 +146,7 @@ open class ICryptographicBufferStatics
         return Swift.String(from: __result);
     }
     // Windows.Storage.Streams.IBuffer DecodeFromBase64String(System.String)
-    public func _n_DecodeFromBase64String(_ value : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+    private func _n_DecodeFromBase64String(_ value : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DecodeFromBase64String(pThis, value, __presult))
         }
@@ -160,7 +160,7 @@ open class ICryptographicBufferStatics
         }
     }
     // System.String EncodeToBase64String(Windows.Storage.Streams.IBuffer)
-    public func _n_EncodeToBase64String(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_EncodeToBase64String(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.EncodeToBase64String(pThis, buffer, __presult))
         }
@@ -171,7 +171,7 @@ open class ICryptographicBufferStatics
         return Swift.String(from: __result);
     }
     // Windows.Storage.Streams.IBuffer ConvertStringToBinary(System.String, Windows.Security.Cryptography.BinaryStringEncoding)
-    public func _n_ConvertStringToBinary(_ value : Optional<HSTRING>, _ encoding : _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+    private func _n_ConvertStringToBinary(_ value : Optional<HSTRING>, _ encoding : _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertStringToBinary(pThis, value, encoding, __presult))
         }
@@ -185,7 +185,7 @@ open class ICryptographicBufferStatics
         }
     }
     // System.String ConvertBinaryToString(Windows.Security.Cryptography.BinaryStringEncoding, Windows.Storage.Streams.IBuffer)
-    public func _n_ConvertBinaryToString(_ encoding : _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding, _ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_ConvertBinaryToString(_ encoding : _q_CWindows_CSecurity_CCryptography_CBinaryStringEncoding, _ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CSecurity_CCryptography_CICryptographicBufferStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertBinaryToString(pThis, encoding, buffer, __presult))
         }

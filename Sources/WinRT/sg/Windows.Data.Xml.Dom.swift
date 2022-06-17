@@ -47,7 +47,7 @@ open class IXmlDocument
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf7f3a506, Data2: 0x1e87, Data3 : 0x42d6, Data4 : (0xbc, 0xfb, 0xb8, 0xc8, 0x09, 0xfa, 0x54, 0x94)) }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlDocumentType get_Doctype()
-    public func _n_get_Doctype(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocumentType>>>?) throws {
+    private func _n_get_Doctype(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocumentType>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Doctype(pThis, __presult))
         }
@@ -58,7 +58,7 @@ open class IXmlDocument
         return WinRT.Windows.Data.Xml.Dom.IXmlDocumentType(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlDomImplementation get_Implementation()
-    public func _n_get_Implementation(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation>>>?) throws {
+    private func _n_get_Implementation(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDomImplementation>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Implementation(pThis, __presult))
         }
@@ -69,7 +69,7 @@ open class IXmlDocument
         return WinRT.Windows.Data.Xml.Dom.IXmlDomImplementation(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlElement get_DocumentElement()
-    public func _n_get_DocumentElement(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
+    private func _n_get_DocumentElement(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DocumentElement(pThis, __presult))
         }
@@ -80,7 +80,7 @@ open class IXmlDocument
         return WinRT.Windows.Data.Xml.Dom.IXmlElement(consuming: __result);
     }
     // Windows.Data.Xml.Dom.XmlElement CreateElement(System.String)
-    public func _n_CreateElement(_ tagName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
+    private func _n_CreateElement(_ tagName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateElement(pThis, tagName, __presult))
         }
@@ -94,7 +94,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlDocumentFragment CreateDocumentFragment()
-    public func _n_CreateDocumentFragment(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment>>>?) throws {
+    private func _n_CreateDocumentFragment(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocumentFragment>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateDocumentFragment(pThis, __presult))
         }
@@ -105,7 +105,7 @@ open class IXmlDocument
         return WinRT.Windows.Data.Xml.Dom.IXmlDocumentFragment(consuming: __result);
     }
     // Windows.Data.Xml.Dom.XmlText CreateTextNode(System.String)
-    public func _n_CreateTextNode(_ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlText>>>?) throws {
+    private func _n_CreateTextNode(_ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlText>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateTextNode(pThis, data, __presult))
         }
@@ -119,7 +119,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlComment CreateComment(System.String)
-    public func _n_CreateComment(_ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlComment>>>?) throws {
+    private func _n_CreateComment(_ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlComment>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateComment(pThis, data, __presult))
         }
@@ -133,7 +133,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlProcessingInstruction CreateProcessingInstruction(System.String, System.String)
-    public func _n_CreateProcessingInstruction(_ target : Optional<HSTRING>, _ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction>>>?) throws {
+    private func _n_CreateProcessingInstruction(_ target : Optional<HSTRING>, _ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateProcessingInstruction(pThis, target, data, __presult))
         }
@@ -150,7 +150,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlAttribute CreateAttribute(System.String)
-    public func _n_CreateAttribute(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+    private func _n_CreateAttribute(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateAttribute(pThis, name, __presult))
         }
@@ -164,7 +164,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlEntityReference CreateEntityReference(System.String)
-    public func _n_CreateEntityReference(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlEntityReference>>>?) throws {
+    private func _n_CreateEntityReference(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlEntityReference>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEntityReference(pThis, name, __presult))
         }
@@ -178,7 +178,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlNodeList GetElementsByTagName(System.String)
-    public func _n_GetElementsByTagName(_ tagName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
+    private func _n_GetElementsByTagName(_ tagName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetElementsByTagName(pThis, tagName, __presult))
         }
@@ -192,7 +192,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlCDataSection CreateCDataSection(System.String)
-    public func _n_CreateCDataSection(_ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlCDataSection>>>?) throws {
+    private func _n_CreateCDataSection(_ data : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlCDataSection>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateCDataSection(pThis, data, __presult))
         }
@@ -206,7 +206,7 @@ open class IXmlDocument
         }
     }
     // [IsSpecialName] System.String get_DocumentUri()
-    public func _n_get_DocumentUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_DocumentUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DocumentUri(pThis, __presult))
         }
@@ -217,7 +217,7 @@ open class IXmlDocument
         return Swift.String(from: __result);
     }
     // Windows.Data.Xml.Dom.XmlAttribute CreateAttributeNS(System.Object, System.String)
-    public func _n_CreateAttributeNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ qualifiedName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+    private func _n_CreateAttributeNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ qualifiedName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateAttributeNS(pThis, namespaceUri, qualifiedName, __presult))
         }
@@ -231,7 +231,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlElement CreateElementNS(System.Object, System.String)
-    public func _n_CreateElementNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ qualifiedName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
+    private func _n_CreateElementNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ qualifiedName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateElementNS(pThis, namespaceUri, qualifiedName, __presult))
         }
@@ -245,7 +245,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.XmlElement GetElementById(System.String)
-    public func _n_GetElementById(_ elementId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
+    private func _n_GetElementById(_ elementId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetElementById(pThis, elementId, __presult))
         }
@@ -259,7 +259,7 @@ open class IXmlDocument
         }
     }
     // Windows.Data.Xml.Dom.IXmlNode ImportNode(Windows.Data.Xml.Dom.IXmlNode, bool)
-    public func _n_ImportNode(_ node : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ deep : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_ImportNode(_ node : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ deep : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ImportNode(pThis, node, deep, __presult))
         }
@@ -310,7 +310,7 @@ open class IXmlDocumentIO
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6cd0e74e, Data2: 0xee65, Data3 : 0x4489, Data4 : (0x9e, 0xbf, 0xca, 0x43, 0xe8, 0x7b, 0xa6, 0x37)) }
     // void LoadXml(System.String)
-    public func _n_LoadXml(_ xml : Optional<HSTRING>) throws {
+    private func _n_LoadXml(_ xml : Optional<HSTRING>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXml(pThis, xml))
         }
@@ -322,7 +322,7 @@ open class IXmlDocumentIO
         }
     }
     // void LoadXml(System.String, Windows.Data.Xml.Dom.XmlLoadSettings)
-    public func _n_LoadXmlWithSettings(_ xml : Optional<HSTRING>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>) throws {
+    private func _n_LoadXmlWithSettings(_ xml : Optional<HSTRING>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXmlWithSettings(pThis, xml, loadSettings))
         }
@@ -334,7 +334,7 @@ open class IXmlDocumentIO
         }
     }
     // Windows.Foundation.IAsyncAction SaveToFileAsync(Windows.Storage.IStorageFile)
-    public func _n_SaveToFileAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+    private func _n_SaveToFileAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SaveToFileAsync(pThis, file, __presult))
         }
@@ -364,7 +364,7 @@ open class IXmlDocumentIO2
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5d034661, Data2: 0x7bd8, Data3 : 0x4ad5, Data4 : (0x9e, 0xbf, 0x81, 0xe6, 0x34, 0x72, 0x63, 0xb1)) }
     // void LoadXmlFromBuffer(Windows.Storage.Streams.IBuffer)
-    public func _n_LoadXmlFromBuffer(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>) throws {
+    private func _n_LoadXmlFromBuffer(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXmlFromBuffer(pThis, buffer))
         }
@@ -373,7 +373,7 @@ open class IXmlDocumentIO2
         try self._n_LoadXmlFromBuffer(RawPointer(buffer));
     }
     // void LoadXmlFromBuffer(Windows.Storage.Streams.IBuffer, Windows.Data.Xml.Dom.XmlLoadSettings)
-    public func _n_LoadXmlFromBufferWithSettings(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>) throws {
+    private func _n_LoadXmlFromBufferWithSettings(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentIO2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXmlFromBufferWithSettings(pThis, buffer, loadSettings))
         }
@@ -392,7 +392,7 @@ open class IXmlDocumentStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5543d254, Data2: 0xd757, Data3 : 0x4b79, Data4 : (0x95, 0x39, 0x23, 0x2b, 0x18, 0xf5, 0x0b, 0xf1)) }
     // Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> LoadFromUriAsync(Windows.Foundation.Uri)
-    public func _n_LoadFromUriAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
+    private func _n_LoadFromUriAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromUriAsync(pThis, uri, __presult))
         }
@@ -412,7 +412,7 @@ open class IXmlDocumentStatics
         }
     }
     // Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> LoadFromUriAsync(Windows.Foundation.Uri, Windows.Data.Xml.Dom.XmlLoadSettings)
-    public func _n_LoadFromUriWithSettingsAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
+    private func _n_LoadFromUriWithSettingsAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromUriWithSettingsAsync(pThis, uri, loadSettings, __presult))
         }
@@ -432,7 +432,7 @@ open class IXmlDocumentStatics
         }
     }
     // Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> LoadFromFileAsync(Windows.Storage.IStorageFile)
-    public func _n_LoadFromFileAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
+    private func _n_LoadFromFileAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromFileAsync(pThis, file, __presult))
         }
@@ -452,7 +452,7 @@ open class IXmlDocumentStatics
         }
     }
     // Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument> LoadFromFileAsync(Windows.Storage.IStorageFile, Windows.Data.Xml.Dom.XmlLoadSettings)
-    public func _n_LoadFromFileWithSettingsAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
+    private func _n_LoadFromFileWithSettingsAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ loadSettings : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlLoadSettings>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromFileWithSettingsAsync(pThis, file, loadSettings, __presult))
         }
@@ -577,7 +577,7 @@ open class IXmlNode
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1c741d59, Data2: 0x2122, Data3 : 0x47d5, Data4 : (0xa8, 0x56, 0x83, 0xf3, 0xd4, 0x21, 0x48, 0x75)) }
     // [IsSpecialName] System.Object get_NodeValue()
-    public func _n_get_NodeValue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_NodeValue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NodeValue(pThis, __presult))
         }
@@ -588,7 +588,7 @@ open class IXmlNode
         return WinRT.IInspectable(consuming: __result);
     }
     // [IsSpecialName] void put_NodeValue(System.Object)
-    public func _n_put_NodeValue(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_put_NodeValue(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_NodeValue(pThis, value))
         }
@@ -597,7 +597,7 @@ open class IXmlNode
         try self._n_put_NodeValue(RawPointer(value));
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.NodeType get_NodeType()
-    public func _n_get_NodeType(_ __presult: UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CNodeType>?) throws {
+    private func _n_get_NodeType(_ __presult: UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CNodeType>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NodeType(pThis, __presult))
         }
@@ -608,7 +608,7 @@ open class IXmlNode
         return __result;
     }
     // [IsSpecialName] System.String get_NodeName()
-    public func _n_get_NodeName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_NodeName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NodeName(pThis, __presult))
         }
@@ -619,7 +619,7 @@ open class IXmlNode
         return Swift.String(from: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.IXmlNode get_ParentNode()
-    public func _n_get_ParentNode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_get_ParentNode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ParentNode(pThis, __presult))
         }
@@ -630,7 +630,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlNodeList get_ChildNodes()
-    public func _n_get_ChildNodes(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
+    private func _n_get_ChildNodes(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildNodes(pThis, __presult))
         }
@@ -641,7 +641,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNodeList(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.IXmlNode get_FirstChild()
-    public func _n_get_FirstChild(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_get_FirstChild(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FirstChild(pThis, __presult))
         }
@@ -652,7 +652,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.IXmlNode get_LastChild()
-    public func _n_get_LastChild(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_get_LastChild(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LastChild(pThis, __presult))
         }
@@ -663,7 +663,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.IXmlNode get_PreviousSibling()
-    public func _n_get_PreviousSibling(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_get_PreviousSibling(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreviousSibling(pThis, __presult))
         }
@@ -674,7 +674,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.IXmlNode get_NextSibling()
-    public func _n_get_NextSibling(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_get_NextSibling(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NextSibling(pThis, __presult))
         }
@@ -685,7 +685,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlNamedNodeMap get_Attributes()
-    public func _n_get_Attributes(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap>>>?) throws {
+    private func _n_get_Attributes(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Attributes(pThis, __presult))
         }
@@ -696,7 +696,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNamedNodeMap(consuming: __result);
     }
     // bool HasChildNodes()
-    public func _n_HasChildNodes(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_HasChildNodes(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.HasChildNodes(pThis, __presult))
         }
@@ -707,7 +707,7 @@ open class IXmlNode
         return __result;
     }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlDocument get_OwnerDocument()
-    public func _n_get_OwnerDocument(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
+    private func _n_get_OwnerDocument(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OwnerDocument(pThis, __presult))
         }
@@ -718,7 +718,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlDocument(consuming: __result);
     }
     // Windows.Data.Xml.Dom.IXmlNode InsertBefore(Windows.Data.Xml.Dom.IXmlNode, Windows.Data.Xml.Dom.IXmlNode)
-    public func _n_InsertBefore(_ newChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ referenceChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_InsertBefore(_ newChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ referenceChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertBefore(pThis, newChild, referenceChild, __presult))
         }
@@ -729,7 +729,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // Windows.Data.Xml.Dom.IXmlNode ReplaceChild(Windows.Data.Xml.Dom.IXmlNode, Windows.Data.Xml.Dom.IXmlNode)
-    public func _n_ReplaceChild(_ newChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ referenceChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_ReplaceChild(_ newChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ referenceChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceChild(pThis, newChild, referenceChild, __presult))
         }
@@ -740,7 +740,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // Windows.Data.Xml.Dom.IXmlNode RemoveChild(Windows.Data.Xml.Dom.IXmlNode)
-    public func _n_RemoveChild(_ childNode : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_RemoveChild(_ childNode : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveChild(pThis, childNode, __presult))
         }
@@ -751,7 +751,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // Windows.Data.Xml.Dom.IXmlNode AppendChild(Windows.Data.Xml.Dom.IXmlNode)
-    public func _n_AppendChild(_ newChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_AppendChild(_ newChild : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendChild(pThis, newChild, __presult))
         }
@@ -762,7 +762,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // Windows.Data.Xml.Dom.IXmlNode CloneNode(bool)
-    public func _n_CloneNode(_ deep : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_CloneNode(_ deep : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CloneNode(pThis, deep, __presult))
         }
@@ -773,7 +773,7 @@ open class IXmlNode
         return WinRT.Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
     }
     // [IsSpecialName] System.Object get_NamespaceUri()
-    public func _n_get_NamespaceUri(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_NamespaceUri(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NamespaceUri(pThis, __presult))
         }
@@ -784,7 +784,7 @@ open class IXmlNode
         return WinRT.IInspectable(consuming: __result);
     }
     // [IsSpecialName] System.Object get_LocalName()
-    public func _n_get_LocalName(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_LocalName(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalName(pThis, __presult))
         }
@@ -795,7 +795,7 @@ open class IXmlNode
         return WinRT.IInspectable(consuming: __result);
     }
     // [IsSpecialName] System.Object get_Prefix()
-    public func _n_get_Prefix(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_Prefix(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Prefix(pThis, __presult))
         }
@@ -806,7 +806,7 @@ open class IXmlNode
         return WinRT.IInspectable(consuming: __result);
     }
     // void Normalize()
-    public func _n_Normalize() throws {
+    private func _n_Normalize() throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Normalize(pThis))
         }
@@ -815,7 +815,7 @@ open class IXmlNode
         try self._n_Normalize();
     }
     // [IsSpecialName] void put_Prefix(System.Object)
-    public func _n_put_Prefix(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_put_Prefix(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Prefix(pThis, value))
         }
@@ -916,7 +916,7 @@ open class IXmlNodeSelector
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x63dbba8b, Data2: 0xd0db, Data3 : 0x4fe1, Data4 : (0xb7, 0x45, 0xf9, 0x43, 0x3a, 0xfd, 0xc2, 0x5b)) }
     // Windows.Data.Xml.Dom.IXmlNode SelectSingleNode(System.String)
-    public func _n_SelectSingleNode(_ xpath : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_SelectSingleNode(_ xpath : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectSingleNode(pThis, xpath, __presult))
         }
@@ -930,7 +930,7 @@ open class IXmlNodeSelector
         }
     }
     // Windows.Data.Xml.Dom.XmlNodeList SelectNodes(System.String)
-    public func _n_SelectNodes(_ xpath : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
+    private func _n_SelectNodes(_ xpath : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectNodes(pThis, xpath, __presult))
         }
@@ -944,7 +944,7 @@ open class IXmlNodeSelector
         }
     }
     // Windows.Data.Xml.Dom.IXmlNode SelectSingleNodeNS(System.String, System.Object)
-    public func _n_SelectSingleNodeNS(_ xpath : Optional<HSTRING>, _ namespaces : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+    private func _n_SelectSingleNodeNS(_ xpath : Optional<HSTRING>, _ namespaces : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectSingleNodeNS(pThis, xpath, namespaces, __presult))
         }
@@ -958,7 +958,7 @@ open class IXmlNodeSelector
         }
     }
     // Windows.Data.Xml.Dom.XmlNodeList SelectNodesNS(System.String, System.Object)
-    public func _n_SelectNodesNS(_ xpath : Optional<HSTRING>, _ namespaces : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
+    private func _n_SelectNodesNS(_ xpath : Optional<HSTRING>, _ namespaces : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSelector.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectNodesNS(pThis, xpath, namespaces, __presult))
         }
@@ -982,7 +982,7 @@ open class IXmlNodeSerializer
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5cc5b382, Data2: 0xe6dd, Data3 : 0x4991, Data4 : (0xab, 0xef, 0x06, 0xd8, 0xd2, 0xe7, 0xbd, 0x0c)) }
     // System.String GetXml()
-    public func _n_GetXml(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_GetXml(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetXml(pThis, __presult))
         }
@@ -993,7 +993,7 @@ open class IXmlNodeSerializer
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_InnerText()
-    public func _n_get_InnerText(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_InnerText(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_InnerText(pThis, __presult))
         }
@@ -1004,7 +1004,7 @@ open class IXmlNodeSerializer
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_InnerText(System.String)
-    public func _n_put_InnerText(_ value : Optional<HSTRING>) throws {
+    private func _n_put_InnerText(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeSerializer.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_InnerText(pThis, value))
         }

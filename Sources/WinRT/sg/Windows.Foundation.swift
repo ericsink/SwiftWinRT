@@ -20,7 +20,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotificat
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61c2402f, Data2: 0x0ed0, Data3 : 0x5a18, Data4 : (0xab, 0x69, 0x59, 0xf4, 0xaa, 0x99, 0xa3, 0x68)) }
     // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotification, Windows.UI.Notifications.ToastDismissedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -111,7 +111,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotificat
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xab54de2d, Data2: 0x97d9, Data3 : 0x5528, Data4 : (0xb6, 0xad, 0x10, 0x5a, 0xfe, 0x15, 0x65, 0x30)) }
     // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotification, System.Object)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -202,7 +202,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotificat
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x95e3e803, Data2: 0xc969, Data3 : 0x5e3a, Data4 : (0x97, 0x53, 0xea, 0x2a, 0xd2, 0x2a, 0x9a, 0x33)) }
     // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotification, Windows.UI.Notifications.ToastFailedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -293,7 +293,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier_
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb1bb0cab, Data2: 0xf8b9, Data3 : 0x5909, Data4 : (0xa8, 0x72, 0xef, 0x29, 0xe0, 0x5a, 0x8c, 0x7a)) }
     // [IsSpecialName] void Invoke(Windows.UI.Notifications.ToastNotifier, Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -384,7 +384,7 @@ public class IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf858e239, Data2: 0x1896, Data3 : 0x5982, Data4 : (0x84, 0x95, 0x14, 0x31, 0x68, 0x47, 0x8e, 0xb8)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Data.Xml.Dom.XmlDocument>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -393,7 +393,7 @@ public class IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Data.Xml.Dom.XmlDocument> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -404,7 +404,7 @@ public class IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument
         return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
     }
     // Windows.Data.Xml.Dom.XmlDocument GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
@@ -427,7 +427,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlD
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5eef7817, Data2: 0x93dd, Data3 : 0x5c0b, Data4 : (0x9e, 0x5a, 0xeb, 0x49, 0x04, 0x08, 0xf3, 0xa9)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Data.Xml.Dom.XmlDocument>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -518,7 +518,7 @@ public class IAsyncOperation_1_boolean
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcdb5efb3, Data2: 0x5788, Data3 : 0x509d, Data4 : (0x9b, 0xe1, 0x71, 0xcc, 0xb8, 0xa3, 0x36, 0x2a)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<bool>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -527,7 +527,7 @@ public class IAsyncOperation_1_boolean
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<bool> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -538,7 +538,7 @@ public class IAsyncOperation_1_boolean
         return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1_boolean(consuming: __result);
     }
     // bool GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1_boolean.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
@@ -561,7 +561,7 @@ public class IAsyncOperationCompletedHandler_1_boolean
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc1d3d1a2, Data2: 0xae17, Data3 : 0x5a5f, Data4 : (0xb5, 0xa2, 0xbd, 0xcc, 0x88, 0x44, 0x88, 0x9a)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<bool>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -652,7 +652,7 @@ public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseM
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5d144364, Data2: 0x77d7, Data3 : 0x5eca, Data4 : (0x8b, 0x09, 0x93, 0x6a, 0x69, 0x44, 0x66, 0x52)) }
     // [IsSpecialName] void put_Progress(Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>)
-    public func _n_put_Progress(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>) throws {
+    private func _n_put_Progress(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Progress(pThis, handler))
         }
@@ -661,7 +661,7 @@ public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         try self._n_put_Progress(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationProgressHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> get_Progress()
-    public func _n_get_Progress(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
+    private func _n_get_Progress(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Progress(pThis, __presult))
         }
@@ -672,7 +672,7 @@ public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         return WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(consuming: __result);
     }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -681,7 +681,7 @@ public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationWithProgressCompletedHandler<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -692,7 +692,7 @@ public class IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         return WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(consuming: __result);
     }
     // Windows.Web.Http.HttpResponseMessage GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
@@ -720,7 +720,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRespon
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x68e4606a, Data2: 0x76ec, Data3 : 0x5816, Data4 : (0xb2, 0xfe, 0xa0, 0x4e, 0xcd, 0xe4, 0x12, 0x6a)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>, Windows.Web.Http.HttpProgress)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, progressInfo))
         }
@@ -819,7 +819,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbeadb572, Data2: 0xf9a3, Data3 : 0x5e93, Data4 : (0xb6, 0xca, 0xe3, 0x11, 0xb6, 0x59, 0x33, 0xfc)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -910,7 +910,7 @@ public class IAsyncOperationWithProgress_2_HSTRING_UINT64
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc8bbcb29, Data2: 0x6b64, Data3 : 0x5ce2, Data4 : (0xa8, 0x31, 0x03, 0x8f, 0x6e, 0x02, 0x19, 0x9e)) }
     // [IsSpecialName] void put_Progress(Windows.Foundation.AsyncOperationProgressHandler<System.String,System.UInt64>)
-    public func _n_put_Progress(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64>>) throws {
+    private func _n_put_Progress(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Progress(pThis, handler))
         }
@@ -919,7 +919,7 @@ public class IAsyncOperationWithProgress_2_HSTRING_UINT64
         try self._n_put_Progress(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationProgressHandler<System.String,System.UInt64> get_Progress()
-    public func _n_get_Progress(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64>>>?) throws {
+    private func _n_get_Progress(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Progress(pThis, __presult))
         }
@@ -930,7 +930,7 @@ public class IAsyncOperationWithProgress_2_HSTRING_UINT64
         return WinRT.Windows.Foundation.IAsyncOperationProgressHandler_2_HSTRING_UINT64(consuming: __result);
     }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,System.UInt64>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -939,7 +939,7 @@ public class IAsyncOperationWithProgress_2_HSTRING_UINT64
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationWithProgressCompletedHandler<System.String,System.UInt64> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -950,7 +950,7 @@ public class IAsyncOperationWithProgress_2_HSTRING_UINT64
         return WinRT.Windows.Foundation.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(consuming: __result);
     }
     // System.String GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
@@ -978,7 +978,7 @@ public class IAsyncOperationProgressHandler_2_HSTRING_UINT64
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x14da7de7, Data2: 0x40df, Data3 : 0x5d4c, Data4 : (0x82, 0x3f, 0xcf, 0x31, 0x06, 0x25, 0xad, 0x39)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64>, System.UInt64)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, progressInfo))
         }
@@ -1069,7 +1069,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbd75eebe, Data2: 0xe7b5, Data3 : 0x5af6, Data4 : (0x84, 0x15, 0xa4, 0xb9, 0xc9, 0x04, 0x52, 0x02)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -1160,7 +1160,7 @@ public class IEventHandler_1_IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc50898f6, Data2: 0xc536, Data3 : 0x5f47, Data4 : (0x85, 0x83, 0x8b, 0x2c, 0x24, 0x38, 0xa1, 0x3b)) }
     // [IsSpecialName] void Invoke(System.Object, System.Object)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1251,7 +1251,7 @@ public class IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectiveP
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc4dc524f, Data2: 0x9095, Data3 : 0x56f2, Data4 : (0x9a, 0xcf, 0xe1, 0x0f, 0xfa, 0x60, 0x0f, 0xcb)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.System.Power.EffectivePowerMode>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -1260,7 +1260,7 @@ public class IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectiveP
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Microsoft.Windows.System.Power.EffectivePowerMode> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -1271,7 +1271,7 @@ public class IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectiveP
         return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(consuming: __result);
     }
     // Microsoft.Windows.System.Power.EffectivePowerMode GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>?) throws {
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
@@ -1294,7 +1294,7 @@ public class IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CP
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x897713ea, Data2: 0x1f95, Data3 : 0x5c1b, Data4 : (0xa2, 0x4b, 0x93, 0x41, 0xaa, 0xbc, 0x74, 0x3a)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Microsoft.Windows.System.Power.EffectivePowerMode>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -1385,7 +1385,7 @@ public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowAc
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe5299329, Data2: 0x636a, Data3 : 0x5c20, Data4 : (0xa3, 0x8a, 0x12, 0xdf, 0x43, 0xf6, 0xd0, 0x38)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowActivatedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowActivatedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1476,7 +1476,7 @@ public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEv
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2a954d28, Data2: 0x7f8b, Data3 : 0x5479, Data4 : (0x8c, 0xe9, 0x90, 0x04, 0x24, 0xa0, 0x40, 0x9f)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1567,7 +1567,7 @@ public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSi
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5ac3fe68, Data2: 0x1312, Data3 : 0x5598, Data4 : (0xb0, 0x97, 0x5c, 0x78, 0x9f, 0xe7, 0x2f, 0xba)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowSizeChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1658,7 +1658,7 @@ public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVi
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc5011004, Data2: 0xf9a8, Data3 : 0x521d, Data4 : (0x9b, 0x1d, 0xd7, 0xcd, 0x18, 0x48, 0x89, 0xf8)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1749,7 +1749,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd0b66e28, Data2: 0x3f45, Data3 : 0x5b7a, Data4 : (0xa7, 0x68, 0x18, 0x89, 0x63, 0xbb, 0x76, 0xa4)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.DragStartingEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragStartingEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragStartingEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1840,7 +1840,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xac00806a, Data2: 0x8954, Data3 : 0x51f5, Data4 : (0x92, 0x72, 0x30, 0x2f, 0x69, 0xb5, 0x48, 0xe4)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.DropCompletedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDropCompletedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDropCompletedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -1931,7 +1931,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4f45a267, Data2: 0x2b57, Data3 : 0x5eb1, Data4 : (0xb3, 0x82, 0xe5, 0x42, 0xd5, 0xa1, 0x9f, 0x7a)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2022,7 +2022,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0c81075c, Data2: 0x3bd9, Data3 : 0x5c90, Data4 : (0xbd, 0x8a, 0x2a, 0x89, 0xbc, 0x15, 0x4f, 0x35)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.ContextRequestedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIContextRequestedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIContextRequestedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2113,7 +2113,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9eb51482, Data2: 0x569e, Data3 : 0x56c5, Data4 : (0x90, 0xe9, 0x81, 0x78, 0xe2, 0xf6, 0xe5, 0x31)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.RoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2204,7 +2204,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1af43211, Data2: 0x0169, Data3 : 0x57e1, Data4 : (0xaa, 0x0e, 0x40, 0x43, 0xec, 0x09, 0xde, 0xdd)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayRequestedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2295,7 +2295,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9706b7ea, Data2: 0x14d5, Data3 : 0x5efa, Data4 : (0x84, 0x3b, 0x0d, 0x43, 0x7e, 0x79, 0x2e, 0x65)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyDisplayDismissedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2386,7 +2386,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8bf3906b, Data2: 0x8dfe, Data3 : 0x5709, Data4 : (0xac, 0x7e, 0x34, 0x0f, 0x67, 0x10, 0x4b, 0xca)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIAccessKeyInvokedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2477,7 +2477,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x244bda89, Data2: 0x86c4, Data3 : 0x5026, Data4 : (0xac, 0x7f, 0x97, 0x3c, 0x09, 0x71, 0xee, 0x7a)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2568,7 +2568,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0871eeab, Data2: 0x8a3d, Data3 : 0x5e0b, Data4 : (0x87, 0x5c, 0x79, 0x49, 0xf2, 0x09, 0xaa, 0x19)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.GettingFocusEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIGettingFocusEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIGettingFocusEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2659,7 +2659,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3a87aeda, Data2: 0x6ea2, Data3 : 0x511e, Data4 : (0x86, 0xe8, 0xca, 0x79, 0xe0, 0xe3, 0xe4, 0xe7)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.LosingFocusEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CILosingFocusEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CILosingFocusEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2750,7 +2750,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1c4706d5, Data2: 0x217e, Data3 : 0x5c28, Data4 : (0x91, 0x72, 0x2c, 0x0e, 0xe1, 0x37, 0xb9, 0x86)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CINoFocusCandidateFoundEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CINoFocusCandidateFoundEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2841,7 +2841,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicroso
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x239588e3, Data2: 0x453a, Data3 : 0x5e9a, Data4 : (0xbc, 0x37, 0xa0, 0x88, 0x03, 0xf5, 0x3f, 0x22)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.UIElement, Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -2932,7 +2932,7 @@ public class IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CData
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8b98aea9, Data2: 0x64f0, Data3 : 0x5672, Data4 : (0xb3, 0x0e, 0xdf, 0xd9, 0xc2, 0xe4, 0xf6, 0xfe)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackageOperation>)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -2941,7 +2941,7 @@ public class IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CData
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.ApplicationModel.DataTransfer.DataPackageOperation> get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -2952,7 +2952,7 @@ public class IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CData
         return WinRT.Windows.Foundation.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(consuming: __result);
     }
     // Windows.ApplicationModel.DataTransfer.DataPackageOperation GetResults()
-    public func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>?) throws {
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
         }
@@ -2975,7 +2975,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDa
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xadd21d46, Data2: 0x17df, Data3 : 0x5a43, Data4 : (0xa6, 0x85, 0x32, 0x62, 0xfc, 0xe8, 0x46, 0x43)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation>, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -3066,7 +3066,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_C
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4e4ec708, Data2: 0xdef4, Data3 : 0x5d93, Data4 : (0x86, 0x90, 0xdf, 0xc5, 0xf9, 0x23, 0x3c, 0x53)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.FrameworkElement, Microsoft.UI.Xaml.DataContextChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataContextChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataContextChangedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3157,7 +3157,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IIns
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x53876073, Data2: 0xbe4f, Data3 : 0x5dac, Data4 : (0x9a, 0xe0, 0x01, 0x5d, 0xb6, 0xe4, 0x0c, 0x74)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.FrameworkElement, System.Object)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3248,7 +3248,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_C
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x276f9f20, Data2: 0x9e38, Data3 : 0x5aed, Data4 : (0xb5, 0xa8, 0x68, 0xb2, 0x5e, 0xc4, 0x09, 0xc2)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.FrameworkElement, Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIEffectiveViewportChangedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3339,7 +3339,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x376bf900, Data2: 0xba70, Data3 : 0x54b5, Data4 : (0xab, 0xaf, 0x0d, 0xaf, 0x51, 0xf9, 0x9e, 0x60)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.TextBlock, Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3430,7 +3430,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4b2fe512, Data2: 0x35fa, Data3 : 0x5c54, Data4 : (0xb6, 0x87, 0x9e, 0xfb, 0x70, 0x9b, 0x68, 0xcd)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.Control, Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3521,7 +3521,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9879511c, Data2: 0xdcfd, Data3 : 0x56a5, Data4 : (0x95, 0x35, 0x5d, 0xa8, 0x60, 0x88, 0x09, 0x2f)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.Control, Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3620,7 +3620,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCan
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xffcd91a9, Data2: 0xb0f6, Data3 : 0x5e59, Data4 : (0xb8, 0x15, 0x05, 0x81, 0x12, 0x92, 0x40, 0xe6)) }
     // [IsSpecialName] void Invoke(Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl, Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3711,7 +3711,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCan
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6b0b7674, Data2: 0xc32a, Data3 : 0x59f5, Data4 : (0xba, 0x42, 0x79, 0xcd, 0x2f, 0xd7, 0xf0, 0x23)) }
     // [IsSpecialName] void Invoke(Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl, Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
         }
@@ -3979,7 +3979,7 @@ open class IAsyncActionCompletedHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa4ed5c81, Data2: 0x76c9, Data3 : 0x40bd, Data4 : (0x8b, 0xe6, 0xb1, 0xd9, 0x0f, 0xb2, 0x0a, 0xe7)) }
     // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncAction, Windows.Foundation.AsyncStatus)
-    public func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
         }
@@ -4088,7 +4088,7 @@ open class IAsyncAction
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5a648006, Data2: 0x843a, Data3 : 0x4da9, Data4 : (0x86, 0x5b, 0x9d, 0x26, 0xe5, 0xdf, 0xad, 0x7b)) }
     // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncActionCompletedHandler)
-    public func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>) throws {
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
         }
@@ -4097,7 +4097,7 @@ open class IAsyncAction
         try self._n_put_Completed(RawPointer(handler));
     }
     // [IsSpecialName] Windows.Foundation.AsyncActionCompletedHandler get_Completed()
-    public func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>>?) throws {
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncActionCompletedHandler>>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
         }
@@ -4108,7 +4108,7 @@ open class IAsyncAction
         return WinRT.Windows.Foundation.IAsyncActionCompletedHandler(consuming: __result);
     }
     // void GetResults()
-    public func _n_GetResults() throws {
+    private func _n_GetResults() throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncAction.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis))
         }
@@ -4132,7 +4132,7 @@ open class IAsyncInfo
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x00000036, Data2: 0x0000, Data3 : 0x0000, Data4 : (0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x46)) }
     // [IsSpecialName] System.UInt32 get_Id()
-    public func _n_get_Id(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Id(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Id(pThis, __presult))
         }
@@ -4143,7 +4143,7 @@ open class IAsyncInfo
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.AsyncStatus get_Status()
-    public func _n_get_Status(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CAsyncStatus>?) throws {
+    private func _n_get_Status(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CAsyncStatus>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Status(pThis, __presult))
         }
@@ -4154,7 +4154,7 @@ open class IAsyncInfo
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.HResult get_ErrorCode()
-    public func _n_get_ErrorCode(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CHResult>?) throws {
+    private func _n_get_ErrorCode(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CHResult>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ErrorCode(pThis, __presult))
         }
@@ -4165,7 +4165,7 @@ open class IAsyncInfo
         return __result;
     }
     // void Cancel()
-    public func _n_Cancel() throws {
+    private func _n_Cancel() throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Cancel(pThis))
         }
@@ -4174,7 +4174,7 @@ open class IAsyncInfo
         try self._n_Cancel();
     }
     // void Close()
-    public func _n_Close() throws {
+    private func _n_Close() throws {
         return try perform(as: _q_CWindows_CFoundation_CIAsyncInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Close(pThis))
         }
@@ -4208,7 +4208,7 @@ open class IClosable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x30d5a829, Data2: 0x7fa4, Data3 : 0x4026, Data4 : (0x83, 0xbb, 0xd7, 0x5b, 0xae, 0x4e, 0xa9, 0x9e)) }
     // void Close()
-    public func _n_Close() throws {
+    private func _n_Close() throws {
         return try perform(as: _q_CWindows_CFoundation_CIClosable.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Close(pThis))
         }
@@ -4227,7 +4227,7 @@ open class IStringable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x96369f54, Data2: 0x8eb6, Data3 : 0x48f0, Data4 : (0xab, 0xce, 0xc1, 0xb2, 0x11, 0xe6, 0x27, 0xc3)) }
     // System.String ToString()
-    public func _n_ToString(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_ToString(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIStringable.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ToString(pThis, __presult))
         }
@@ -4248,7 +4248,7 @@ open class IUriEscapeStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc1d432ba, Data2: 0xc824, Data3 : 0x4452, Data4 : (0xa7, 0xfd, 0x51, 0x2b, 0xc3, 0xbb, 0xe9, 0xa1)) }
     // System.String UnescapeComponent(System.String)
-    public func _n_UnescapeComponent(_ toUnescape : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_UnescapeComponent(_ toUnescape : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriEscapeStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.UnescapeComponent(pThis, toUnescape, __presult))
         }
@@ -4262,7 +4262,7 @@ open class IUriEscapeStatics
         }
     }
     // System.String EscapeComponent(System.String)
-    public func _n_EscapeComponent(_ toEscape : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_EscapeComponent(_ toEscape : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriEscapeStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.EscapeComponent(pThis, toEscape, __presult))
         }
@@ -4286,7 +4286,7 @@ open class IUriRuntimeClass
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9e365e57, Data2: 0x48b2, Data3 : 0x4160, Data4 : (0x95, 0x6f, 0xc7, 0x38, 0x51, 0x20, 0xbb, 0xfc)) }
     // [IsSpecialName] System.String get_AbsoluteUri()
-    public func _n_get_AbsoluteUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_AbsoluteUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AbsoluteUri(pThis, __presult))
         }
@@ -4297,7 +4297,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_DisplayUri()
-    public func _n_get_DisplayUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_DisplayUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayUri(pThis, __presult))
         }
@@ -4308,7 +4308,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Domain()
-    public func _n_get_Domain(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Domain(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Domain(pThis, __presult))
         }
@@ -4319,7 +4319,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Extension()
-    public func _n_get_Extension(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Extension(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Extension(pThis, __presult))
         }
@@ -4330,7 +4330,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Fragment()
-    public func _n_get_Fragment(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Fragment(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Fragment(pThis, __presult))
         }
@@ -4341,7 +4341,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Host()
-    public func _n_get_Host(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Host(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Host(pThis, __presult))
         }
@@ -4352,7 +4352,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Password()
-    public func _n_get_Password(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Password(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Password(pThis, __presult))
         }
@@ -4363,7 +4363,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Path()
-    public func _n_get_Path(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Path(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, __presult))
         }
@@ -4374,7 +4374,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_Query()
-    public func _n_get_Query(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Query(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Query(pThis, __presult))
         }
@@ -4385,7 +4385,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] Windows.Foundation.WwwFormUrlDecoder get_QueryParsed()
-    public func _n_get_QueryParsed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
+    private func _n_get_QueryParsed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_QueryParsed(pThis, __presult))
         }
@@ -4396,7 +4396,7 @@ open class IUriRuntimeClass
         return WinRT.Windows.Foundation.IWwwFormUrlDecoderRuntimeClass(consuming: __result);
     }
     // [IsSpecialName] System.String get_RawUri()
-    public func _n_get_RawUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_RawUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RawUri(pThis, __presult))
         }
@@ -4407,7 +4407,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_SchemeName()
-    public func _n_get_SchemeName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_SchemeName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SchemeName(pThis, __presult))
         }
@@ -4418,7 +4418,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_UserName()
-    public func _n_get_UserName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_UserName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UserName(pThis, __presult))
         }
@@ -4429,7 +4429,7 @@ open class IUriRuntimeClass
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.Int32 get_Port()
-    public func _n_get_Port(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+    private func _n_get_Port(_ __presult: UnsafeMutablePointer<INT32>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Port(pThis, __presult))
         }
@@ -4440,7 +4440,7 @@ open class IUriRuntimeClass
         return __result;
     }
     // [IsSpecialName] bool get_Suspicious()
-    public func _n_get_Suspicious(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_Suspicious(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Suspicious(pThis, __presult))
         }
@@ -4451,7 +4451,7 @@ open class IUriRuntimeClass
         return __result;
     }
     // bool Equals(Windows.Foundation.Uri)
-    public func _n_Equals(_ pUri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_Equals(_ pUri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Equals(pThis, pUri, __presult))
         }
@@ -4462,7 +4462,7 @@ open class IUriRuntimeClass
         return __result;
     }
     // Windows.Foundation.Uri CombineUri(System.String)
-    public func _n_CombineUri(_ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+    private func _n_CombineUri(_ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClass.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CombineUri(pThis, relativeUri, __presult))
         }
@@ -4562,7 +4562,7 @@ open class IUriRuntimeClassFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x44a9796f, Data2: 0x723e, Data3 : 0x4fdf, Data4 : (0xa2, 0x18, 0x03, 0x3e, 0x75, 0xb0, 0xc0, 0x84)) }
     // Windows.Foundation.Uri CreateUri(System.String)
-    public func _n_CreateUri(_ uri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+    private func _n_CreateUri(_ uri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateUri(pThis, uri, __presult))
         }
@@ -4576,7 +4576,7 @@ open class IUriRuntimeClassFactory
         }
     }
     // Windows.Foundation.Uri CreateWithRelativeUri(System.String, System.String)
-    public func _n_CreateWithRelativeUri(_ baseUri : Optional<HSTRING>, _ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+    private func _n_CreateWithRelativeUri(_ baseUri : Optional<HSTRING>, _ relativeUri : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithRelativeUri(pThis, baseUri, relativeUri, __presult))
         }
@@ -4603,7 +4603,7 @@ open class IUriRuntimeClassWithAbsoluteCanonicalUri
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x758d9661, Data2: 0x221c, Data3 : 0x480f, Data4 : (0xa3, 0x39, 0x50, 0x65, 0x66, 0x73, 0xf4, 0x6f)) }
     // [IsSpecialName] System.String get_AbsoluteCanonicalUri()
-    public func _n_get_AbsoluteCanonicalUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_AbsoluteCanonicalUri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AbsoluteCanonicalUri(pThis, __presult))
         }
@@ -4614,7 +4614,7 @@ open class IUriRuntimeClassWithAbsoluteCanonicalUri
         return Swift.String(from: __result);
     }
     // [IsSpecialName] System.String get_DisplayIri()
-    public func _n_get_DisplayIri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_DisplayIri(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIUriRuntimeClassWithAbsoluteCanonicalUri.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayIri(pThis, __presult))
         }
@@ -4657,7 +4657,7 @@ open class IWwwFormUrlDecoderRuntimeClassFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5b8c6b3d, Data2: 0x24ae, Data3 : 0x41b5, Data4 : (0xa1, 0xbf, 0xf0, 0xc3, 0xd5, 0x44, 0x84, 0x5b)) }
     // Windows.Foundation.WwwFormUrlDecoder CreateWwwFormUrlDecoder(System.String)
-    public func _n_CreateWwwFormUrlDecoder(_ query : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
+    private func _n_CreateWwwFormUrlDecoder(_ query : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>>>?) throws {
         return try perform(as: _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWwwFormUrlDecoder(pThis, query, __presult))
         }

@@ -245,7 +245,7 @@ open class IApplicationInitializationCallback
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd8eef1c9, Data2: 0x1234, Data3 : 0x56f1, Data4 : (0x99, 0x63, 0x45, 0xdd, 0x9c, 0x80, 0xa6, 0x61)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.ApplicationInitializationCallbackParams)
-    public func _n_Invoke(_ p : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams>>) throws {
+    private func _n_Invoke(_ p : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, p))
         }
@@ -594,7 +594,7 @@ open class IDependencyPropertyChangedCallback
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf055bb21, Data2: 0x219b, Data3 : 0x5b0c, Data4 : (0x80, 0x5d, 0xbc, 0xae, 0xda, 0xe1, 0x54, 0x58)) }
     // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.DependencyObject, Microsoft.UI.Xaml.DependencyProperty)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, dp))
         }
@@ -704,7 +704,7 @@ open class IDependencyPropertyChangedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4be8dc75, Data2: 0x373d, Data3 : 0x5f4e, Data4 : (0xa0, 0xb4, 0x54, 0xb9, 0xee, 0xaf, 0xb4, 0xa9)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -823,7 +823,7 @@ open class IDragEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x277afc83, Data2: 0xcb67, Data3 : 0x56c8, Data4 : (0xb6, 0x01, 0x1b, 0x9c, 0x0f, 0x1c, 0x3d, 0x32)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.DragEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1932,7 +1932,7 @@ open class IApplication
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x06a8f4e7, Data2: 0x1146, Data3 : 0x55af, Data4 : (0x82, 0x0d, 0xeb, 0xd5, 0x56, 0x43, 0xb0, 0x21)) }
     // [IsSpecialName] Microsoft.UI.Xaml.ResourceDictionary get_Resources()
-    public func _n_get_Resources(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
+    private func _n_get_Resources(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Resources(pThis, __presult))
         }
@@ -1943,7 +1943,7 @@ open class IApplication
         return WinRT.Microsoft.UI.Xaml.IResourceDictionary(consuming: __result);
     }
     // [IsSpecialName] void put_Resources(Microsoft.UI.Xaml.ResourceDictionary)
-    public func _n_put_Resources(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>) throws {
+    private func _n_put_Resources(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Resources(pThis, value))
         }
@@ -1952,7 +1952,7 @@ open class IApplication
         try self._n_put_Resources(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DebugSettings get_DebugSettings()
-    public func _n_get_DebugSettings(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDebugSettings>>>?) throws {
+    private func _n_get_DebugSettings(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDebugSettings>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DebugSettings(pThis, __presult))
         }
@@ -1963,7 +1963,7 @@ open class IApplication
         return WinRT.Microsoft.UI.Xaml.IDebugSettings(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ApplicationTheme get_RequestedTheme()
-    public func _n_get_RequestedTheme(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CApplicationTheme>?) throws {
+    private func _n_get_RequestedTheme(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CApplicationTheme>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequestedTheme(pThis, __presult))
         }
@@ -1974,7 +1974,7 @@ open class IApplication
         return __result;
     }
     // [IsSpecialName] void put_RequestedTheme(Microsoft.UI.Xaml.ApplicationTheme)
-    public func _n_put_RequestedTheme(_ value : _q_CMicrosoft_CUI_CXaml_CApplicationTheme) throws {
+    private func _n_put_RequestedTheme(_ value : _q_CMicrosoft_CUI_CXaml_CApplicationTheme) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RequestedTheme(pThis, value))
         }
@@ -1983,7 +1983,7 @@ open class IApplication
         try self._n_put_RequestedTheme(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.FocusVisualKind get_FocusVisualKind()
-    public func _n_get_FocusVisualKind(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CFocusVisualKind>?) throws {
+    private func _n_get_FocusVisualKind(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CFocusVisualKind>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualKind(pThis, __presult))
         }
@@ -1994,7 +1994,7 @@ open class IApplication
         return __result;
     }
     // [IsSpecialName] void put_FocusVisualKind(Microsoft.UI.Xaml.FocusVisualKind)
-    public func _n_put_FocusVisualKind(_ value : _q_CMicrosoft_CUI_CXaml_CFocusVisualKind) throws {
+    private func _n_put_FocusVisualKind(_ value : _q_CMicrosoft_CUI_CXaml_CFocusVisualKind) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FocusVisualKind(pThis, value))
         }
@@ -2003,7 +2003,7 @@ open class IApplication
         try self._n_put_FocusVisualKind(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ApplicationHighContrastAdjustment get_HighContrastAdjustment()
-    public func _n_get_HighContrastAdjustment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment>?) throws {
+    private func _n_get_HighContrastAdjustment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HighContrastAdjustment(pThis, __presult))
         }
@@ -2014,7 +2014,7 @@ open class IApplication
         return __result;
     }
     // [IsSpecialName] void put_HighContrastAdjustment(Microsoft.UI.Xaml.ApplicationHighContrastAdjustment)
-    public func _n_put_HighContrastAdjustment(_ value : _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment) throws {
+    private func _n_put_HighContrastAdjustment(_ value : _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_HighContrastAdjustment(pThis, value))
         }
@@ -2023,7 +2023,7 @@ open class IApplication
         try self._n_put_HighContrastAdjustment(value);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_UnhandledException(Microsoft.UI.Xaml.UnhandledExceptionEventHandler)
-    public func _n_add_UnhandledException(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_UnhandledException(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_UnhandledException(pThis, handler, __presult))
         }
@@ -2034,7 +2034,7 @@ open class IApplication
         return __result;
     }
     // [IsSpecialName] void remove_UnhandledException(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_UnhandledException(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_UnhandledException(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_UnhandledException(pThis, token))
         }
@@ -2043,7 +2043,7 @@ open class IApplication
         try self._n_remove_UnhandledException(token);
     }
     // void Exit()
-    public func _n_Exit() throws {
+    private func _n_Exit() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplication.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Exit(pThis))
         }
@@ -2088,7 +2088,7 @@ open class IApplicationFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9fd96657, Data2: 0x5294, Data3 : 0x5a65, Data4 : (0xa1, 0xdb, 0x4f, 0xea, 0x14, 0x35, 0x97, 0xda)) }
     // Microsoft.UI.Xaml.Application CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplication>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplication>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -2121,7 +2121,7 @@ open class IApplicationOverrides
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa33e81ef, Data2: 0xc665, Data3 : 0x503b, Data4 : (0x88, 0x27, 0xd2, 0x7e, 0xf1, 0x72, 0x0a, 0x06)) }
     // void OnLaunched(Microsoft.UI.Xaml.LaunchActivatedEventArgs)
-    public func _n_OnLaunched(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) throws {
+    private func _n_OnLaunched(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnLaunched(pThis, args))
         }
@@ -2140,7 +2140,7 @@ open class IApplicationStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4e0d09f5, Data2: 0x4358, Data3 : 0x512c, Data4 : (0xa9, 0x87, 0x50, 0x3b, 0x52, 0x84, 0x8e, 0x95)) }
     // [IsSpecialName] Microsoft.UI.Xaml.Application get_Current()
-    public func _n_get_Current(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplication>>>?) throws {
+    private func _n_get_Current(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplication>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, __presult))
         }
@@ -2151,7 +2151,7 @@ open class IApplicationStatics
         return WinRT.Microsoft.UI.Xaml.IApplication(consuming: __result);
     }
     // void Start(Microsoft.UI.Xaml.ApplicationInitializationCallback)
-    public func _n_Start(_ callback : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback>>) throws {
+    private func _n_Start(_ callback : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Start(pThis, callback))
         }
@@ -2160,7 +2160,7 @@ open class IApplicationStatics
         try self._n_Start(RawPointer(callback));
     }
     // void LoadComponent(System.Object, Windows.Foundation.Uri)
-    public func _n_LoadComponent(_ component : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ resourceLocator : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
+    private func _n_LoadComponent(_ component : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ resourceLocator : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadComponent(pThis, component, resourceLocator))
         }
@@ -2169,7 +2169,7 @@ open class IApplicationStatics
         try self._n_LoadComponent(RawPointer(component), RawPointer(resourceLocator));
     }
     // void LoadComponent(System.Object, Windows.Foundation.Uri, Microsoft.UI.Xaml.Controls.Primitives.ComponentResourceLocation)
-    public func _n_LoadComponentWithResourceLocation(_ component : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ resourceLocator : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ componentResourceLocation : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation) throws {
+    private func _n_LoadComponentWithResourceLocation(_ component : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ resourceLocator : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ componentResourceLocation : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CComponentResourceLocation) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIApplicationStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadComponentWithResourceLocation(pThis, component, resourceLocator, componentResourceLocation))
         }
@@ -2252,7 +2252,7 @@ open class IBrushTransitionFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x13735998, Data2: 0xc3b6, Data3 : 0x5c24, Data4 : (0xb4, 0x0a, 0x7b, 0x16, 0x6a, 0x6f, 0xfc, 0x2c)) }
     // Microsoft.UI.Xaml.BrushTransition CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIBrushTransitionFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -2300,7 +2300,7 @@ open class IDataTemplateFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd8e8249d, Data2: 0x305b, Data3 : 0x5ca5, Data4 : (0xac, 0xf8, 0x3e, 0x1b, 0xef, 0xfd, 0x02, 0x19)) }
     // Microsoft.UI.Xaml.DataTemplate CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDataTemplateFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -2343,7 +2343,7 @@ open class IDependencyObject
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe7beaee7, Data2: 0x160e, Data3 : 0x50f7, Data4 : (0x87, 0x89, 0xd6, 0x34, 0x63, 0xf9, 0x79, 0xfa)) }
     // System.Object GetValue(Microsoft.UI.Xaml.DependencyProperty)
-    public func _n_GetValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_GetValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetValue(pThis, dp, __presult))
         }
@@ -2354,7 +2354,7 @@ open class IDependencyObject
         return WinRT.IInspectable(consuming: __result);
     }
     // void SetValue(Microsoft.UI.Xaml.DependencyProperty, System.Object)
-    public func _n_SetValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_SetValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetValue(pThis, dp, value))
         }
@@ -2363,7 +2363,7 @@ open class IDependencyObject
         try self._n_SetValue(RawPointer(dp), RawPointer(value));
     }
     // void ClearValue(Microsoft.UI.Xaml.DependencyProperty)
-    public func _n_ClearValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>) throws {
+    private func _n_ClearValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ClearValue(pThis, dp))
         }
@@ -2372,7 +2372,7 @@ open class IDependencyObject
         try self._n_ClearValue(RawPointer(dp));
     }
     // System.Object ReadLocalValue(Microsoft.UI.Xaml.DependencyProperty)
-    public func _n_ReadLocalValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_ReadLocalValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadLocalValue(pThis, dp, __presult))
         }
@@ -2383,7 +2383,7 @@ open class IDependencyObject
         return WinRT.IInspectable(consuming: __result);
     }
     // System.Object GetAnimationBaseValue(Microsoft.UI.Xaml.DependencyProperty)
-    public func _n_GetAnimationBaseValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_GetAnimationBaseValue(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAnimationBaseValue(pThis, dp, __presult))
         }
@@ -2394,7 +2394,7 @@ open class IDependencyObject
         return WinRT.IInspectable(consuming: __result);
     }
     // System.Int64 RegisterPropertyChangedCallback(Microsoft.UI.Xaml.DependencyProperty, Microsoft.UI.Xaml.DependencyPropertyChangedCallback)
-    public func _n_RegisterPropertyChangedCallback(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ callback : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback>>, _ __presult: UnsafeMutablePointer<INT64>?) throws {
+    private func _n_RegisterPropertyChangedCallback(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ callback : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback>>, _ __presult: UnsafeMutablePointer<INT64>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RegisterPropertyChangedCallback(pThis, dp, callback, __presult))
         }
@@ -2405,7 +2405,7 @@ open class IDependencyObject
         return __result;
     }
     // void UnregisterPropertyChangedCallback(Microsoft.UI.Xaml.DependencyProperty, System.Int64)
-    public func _n_UnregisterPropertyChangedCallback(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ token : INT64) throws {
+    private func _n_UnregisterPropertyChangedCallback(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ token : INT64) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.UnregisterPropertyChangedCallback(pThis, dp, token))
         }
@@ -2414,7 +2414,7 @@ open class IDependencyObject
         try self._n_UnregisterPropertyChangedCallback(RawPointer(dp), token);
     }
     // [IsSpecialName] Windows.UI.Core.CoreDispatcher get_Dispatcher()
-    public func _n_get_Dispatcher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreDispatcher>>>?) throws {
+    private func _n_get_Dispatcher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreDispatcher>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Dispatcher(pThis, __presult))
         }
@@ -2425,7 +2425,7 @@ open class IDependencyObject
         return WinRT.Windows.UI.Core.ICoreDispatcher(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Dispatching.DispatcherQueue get_DispatcherQueue()
-    public func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue>>>?) throws {
+    private func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DispatcherQueue(pThis, __presult))
         }
@@ -2457,7 +2457,7 @@ open class IDependencyObjectFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x936b614c, Data2: 0x475f, Data3 : 0x5d7d, Data4 : (0xb3, 0xf7, 0xbf, 0x1f, 0xbe, 0xa2, 0x81, 0x26)) }
     // Microsoft.UI.Xaml.DependencyObject CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIDependencyObjectFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -2569,7 +2569,7 @@ open class IFrameworkElement
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe08f13d, Data2: 0xdc6a, Data3 : 0x5495, Data4 : (0xad, 0x44, 0xc2, 0xd8, 0xd2, 0x18, 0x63, 0xb0)) }
     // [IsSpecialName] Microsoft.UI.Xaml.TriggerCollection get_Triggers()
-    public func _n_get_Triggers(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>>>?) throws {
+    private func _n_get_Triggers(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Triggers(pThis, __presult))
         }
@@ -2580,7 +2580,7 @@ open class IFrameworkElement
         return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ResourceDictionary get_Resources()
-    public func _n_get_Resources(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
+    private func _n_get_Resources(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Resources(pThis, __presult))
         }
@@ -2591,7 +2591,7 @@ open class IFrameworkElement
         return WinRT.Microsoft.UI.Xaml.IResourceDictionary(consuming: __result);
     }
     // [IsSpecialName] void put_Resources(Microsoft.UI.Xaml.ResourceDictionary)
-    public func _n_put_Resources(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>) throws {
+    private func _n_put_Resources(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Resources(pThis, value))
         }
@@ -2600,7 +2600,7 @@ open class IFrameworkElement
         try self._n_put_Resources(RawPointer(value));
     }
     // [IsSpecialName] System.Object get_Tag()
-    public func _n_get_Tag(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_Tag(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Tag(pThis, __presult))
         }
@@ -2611,7 +2611,7 @@ open class IFrameworkElement
         return WinRT.IInspectable(consuming: __result);
     }
     // [IsSpecialName] void put_Tag(System.Object)
-    public func _n_put_Tag(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_put_Tag(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Tag(pThis, value))
         }
@@ -2620,7 +2620,7 @@ open class IFrameworkElement
         try self._n_put_Tag(RawPointer(value));
     }
     // [IsSpecialName] System.String get_Language()
-    public func _n_get_Language(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Language(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Language(pThis, __presult))
         }
@@ -2631,7 +2631,7 @@ open class IFrameworkElement
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_Language(System.String)
-    public func _n_put_Language(_ value : Optional<HSTRING>) throws {
+    private func _n_put_Language(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Language(pThis, value))
         }
@@ -2643,7 +2643,7 @@ open class IFrameworkElement
         }
     }
     // [IsSpecialName] System.Double get_ActualWidth()
-    public func _n_get_ActualWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_ActualWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualWidth(pThis, __presult))
         }
@@ -2654,7 +2654,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] System.Double get_ActualHeight()
-    public func _n_get_ActualHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_ActualHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualHeight(pThis, __presult))
         }
@@ -2665,7 +2665,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] System.Double get_Width()
-    public func _n_get_Width(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Width(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Width(pThis, __presult))
         }
@@ -2676,7 +2676,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_Width(System.Double)
-    public func _n_put_Width(_ value : DOUBLE) throws {
+    private func _n_put_Width(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Width(pThis, value))
         }
@@ -2685,7 +2685,7 @@ open class IFrameworkElement
         try self._n_put_Width(value);
     }
     // [IsSpecialName] System.Double get_Height()
-    public func _n_get_Height(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Height(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Height(pThis, __presult))
         }
@@ -2696,7 +2696,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_Height(System.Double)
-    public func _n_put_Height(_ value : DOUBLE) throws {
+    private func _n_put_Height(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Height(pThis, value))
         }
@@ -2705,7 +2705,7 @@ open class IFrameworkElement
         try self._n_put_Height(value);
     }
     // [IsSpecialName] System.Double get_MinWidth()
-    public func _n_get_MinWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_MinWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinWidth(pThis, __presult))
         }
@@ -2716,7 +2716,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_MinWidth(System.Double)
-    public func _n_put_MinWidth(_ value : DOUBLE) throws {
+    private func _n_put_MinWidth(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MinWidth(pThis, value))
         }
@@ -2725,7 +2725,7 @@ open class IFrameworkElement
         try self._n_put_MinWidth(value);
     }
     // [IsSpecialName] System.Double get_MaxWidth()
-    public func _n_get_MaxWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_MaxWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxWidth(pThis, __presult))
         }
@@ -2736,7 +2736,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_MaxWidth(System.Double)
-    public func _n_put_MaxWidth(_ value : DOUBLE) throws {
+    private func _n_put_MaxWidth(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxWidth(pThis, value))
         }
@@ -2745,7 +2745,7 @@ open class IFrameworkElement
         try self._n_put_MaxWidth(value);
     }
     // [IsSpecialName] System.Double get_MinHeight()
-    public func _n_get_MinHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_MinHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinHeight(pThis, __presult))
         }
@@ -2756,7 +2756,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_MinHeight(System.Double)
-    public func _n_put_MinHeight(_ value : DOUBLE) throws {
+    private func _n_put_MinHeight(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MinHeight(pThis, value))
         }
@@ -2765,7 +2765,7 @@ open class IFrameworkElement
         try self._n_put_MinHeight(value);
     }
     // [IsSpecialName] System.Double get_MaxHeight()
-    public func _n_get_MaxHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_MaxHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxHeight(pThis, __presult))
         }
@@ -2776,7 +2776,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_MaxHeight(System.Double)
-    public func _n_put_MaxHeight(_ value : DOUBLE) throws {
+    private func _n_put_MaxHeight(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxHeight(pThis, value))
         }
@@ -2785,7 +2785,7 @@ open class IFrameworkElement
         try self._n_put_MaxHeight(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.HorizontalAlignment get_HorizontalAlignment()
-    public func _n_get_HorizontalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CHorizontalAlignment>?) throws {
+    private func _n_get_HorizontalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CHorizontalAlignment>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalAlignment(pThis, __presult))
         }
@@ -2796,7 +2796,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_HorizontalAlignment(Microsoft.UI.Xaml.HorizontalAlignment)
-    public func _n_put_HorizontalAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment) throws {
+    private func _n_put_HorizontalAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_HorizontalAlignment(pThis, value))
         }
@@ -2805,7 +2805,7 @@ open class IFrameworkElement
         try self._n_put_HorizontalAlignment(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.VerticalAlignment get_VerticalAlignment()
-    public func _n_get_VerticalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CVerticalAlignment>?) throws {
+    private func _n_get_VerticalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CVerticalAlignment>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalAlignment(pThis, __presult))
         }
@@ -2816,7 +2816,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_VerticalAlignment(Microsoft.UI.Xaml.VerticalAlignment)
-    public func _n_put_VerticalAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CVerticalAlignment) throws {
+    private func _n_put_VerticalAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CVerticalAlignment) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_VerticalAlignment(pThis, value))
         }
@@ -2825,7 +2825,7 @@ open class IFrameworkElement
         try self._n_put_VerticalAlignment(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Margin()
-    public func _n_get_Margin(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+    private func _n_get_Margin(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Margin(pThis, __presult))
         }
@@ -2836,7 +2836,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_Margin(Microsoft.UI.Xaml.Thickness)
-    public func _n_put_Margin(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+    private func _n_put_Margin(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Margin(pThis, value))
         }
@@ -2845,7 +2845,7 @@ open class IFrameworkElement
         try self._n_put_Margin(value);
     }
     // [IsSpecialName] System.String get_Name()
-    public func _n_get_Name(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Name(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Name(pThis, __presult))
         }
@@ -2856,7 +2856,7 @@ open class IFrameworkElement
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_Name(System.String)
-    public func _n_put_Name(_ value : Optional<HSTRING>) throws {
+    private func _n_put_Name(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Name(pThis, value))
         }
@@ -2868,7 +2868,7 @@ open class IFrameworkElement
         }
     }
     // [IsSpecialName] Windows.Foundation.Uri get_BaseUri()
-    public func _n_get_BaseUri(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+    private func _n_get_BaseUri(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BaseUri(pThis, __presult))
         }
@@ -2879,7 +2879,7 @@ open class IFrameworkElement
         return WinRT.Windows.Foundation.IUriRuntimeClass(consuming: __result);
     }
     // [IsSpecialName] System.Object get_DataContext()
-    public func _n_get_DataContext(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_DataContext(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DataContext(pThis, __presult))
         }
@@ -2890,7 +2890,7 @@ open class IFrameworkElement
         return WinRT.IInspectable(consuming: __result);
     }
     // [IsSpecialName] void put_DataContext(System.Object)
-    public func _n_put_DataContext(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_put_DataContext(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DataContext(pThis, value))
         }
@@ -2899,7 +2899,7 @@ open class IFrameworkElement
         try self._n_put_DataContext(RawPointer(value));
     }
     // [IsSpecialName] bool get_AllowFocusOnInteraction()
-    public func _n_get_AllowFocusOnInteraction(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_AllowFocusOnInteraction(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowFocusOnInteraction(pThis, __presult))
         }
@@ -2910,7 +2910,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_AllowFocusOnInteraction(bool)
-    public func _n_put_AllowFocusOnInteraction(_ value : boolean) throws {
+    private func _n_put_AllowFocusOnInteraction(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowFocusOnInteraction(pThis, value))
         }
@@ -2919,7 +2919,7 @@ open class IFrameworkElement
         try self._n_put_AllowFocusOnInteraction(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_FocusVisualMargin()
-    public func _n_get_FocusVisualMargin(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+    private func _n_get_FocusVisualMargin(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualMargin(pThis, __presult))
         }
@@ -2930,7 +2930,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_FocusVisualMargin(Microsoft.UI.Xaml.Thickness)
-    public func _n_put_FocusVisualMargin(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+    private func _n_put_FocusVisualMargin(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FocusVisualMargin(pThis, value))
         }
@@ -2939,7 +2939,7 @@ open class IFrameworkElement
         try self._n_put_FocusVisualMargin(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_FocusVisualSecondaryThickness()
-    public func _n_get_FocusVisualSecondaryThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+    private func _n_get_FocusVisualSecondaryThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualSecondaryThickness(pThis, __presult))
         }
@@ -2950,7 +2950,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_FocusVisualSecondaryThickness(Microsoft.UI.Xaml.Thickness)
-    public func _n_put_FocusVisualSecondaryThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+    private func _n_put_FocusVisualSecondaryThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FocusVisualSecondaryThickness(pThis, value))
         }
@@ -2959,7 +2959,7 @@ open class IFrameworkElement
         try self._n_put_FocusVisualSecondaryThickness(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_FocusVisualPrimaryThickness()
-    public func _n_get_FocusVisualPrimaryThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+    private func _n_get_FocusVisualPrimaryThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualPrimaryThickness(pThis, __presult))
         }
@@ -2970,7 +2970,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_FocusVisualPrimaryThickness(Microsoft.UI.Xaml.Thickness)
-    public func _n_put_FocusVisualPrimaryThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+    private func _n_put_FocusVisualPrimaryThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FocusVisualPrimaryThickness(pThis, value))
         }
@@ -2979,7 +2979,7 @@ open class IFrameworkElement
         try self._n_put_FocusVisualPrimaryThickness(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_FocusVisualSecondaryBrush()
-    public func _n_get_FocusVisualSecondaryBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+    private func _n_get_FocusVisualSecondaryBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualSecondaryBrush(pThis, __presult))
         }
@@ -2990,7 +2990,7 @@ open class IFrameworkElement
         return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
     }
     // [IsSpecialName] void put_FocusVisualSecondaryBrush(Microsoft.UI.Xaml.Media.Brush)
-    public func _n_put_FocusVisualSecondaryBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+    private func _n_put_FocusVisualSecondaryBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FocusVisualSecondaryBrush(pThis, value))
         }
@@ -2999,7 +2999,7 @@ open class IFrameworkElement
         try self._n_put_FocusVisualSecondaryBrush(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_FocusVisualPrimaryBrush()
-    public func _n_get_FocusVisualPrimaryBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+    private func _n_get_FocusVisualPrimaryBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualPrimaryBrush(pThis, __presult))
         }
@@ -3010,7 +3010,7 @@ open class IFrameworkElement
         return WinRT.Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
     }
     // [IsSpecialName] void put_FocusVisualPrimaryBrush(Microsoft.UI.Xaml.Media.Brush)
-    public func _n_put_FocusVisualPrimaryBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+    private func _n_put_FocusVisualPrimaryBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FocusVisualPrimaryBrush(pThis, value))
         }
@@ -3019,7 +3019,7 @@ open class IFrameworkElement
         try self._n_put_FocusVisualPrimaryBrush(RawPointer(value));
     }
     // [IsSpecialName] bool get_AllowFocusWhenDisabled()
-    public func _n_get_AllowFocusWhenDisabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_AllowFocusWhenDisabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowFocusWhenDisabled(pThis, __presult))
         }
@@ -3030,7 +3030,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_AllowFocusWhenDisabled(bool)
-    public func _n_put_AllowFocusWhenDisabled(_ value : boolean) throws {
+    private func _n_put_AllowFocusWhenDisabled(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowFocusWhenDisabled(pThis, value))
         }
@@ -3039,7 +3039,7 @@ open class IFrameworkElement
         try self._n_put_AllowFocusWhenDisabled(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Style get_Style()
-    public func _n_get_Style(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>>?) throws {
+    private func _n_get_Style(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Style(pThis, __presult))
         }
@@ -3050,7 +3050,7 @@ open class IFrameworkElement
         return WinRT.Microsoft.UI.Xaml.IStyle(consuming: __result);
     }
     // [IsSpecialName] void put_Style(Microsoft.UI.Xaml.Style)
-    public func _n_put_Style(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>) throws {
+    private func _n_put_Style(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Style(pThis, value))
         }
@@ -3059,7 +3059,7 @@ open class IFrameworkElement
         try self._n_put_Style(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_Parent()
-    public func _n_get_Parent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_Parent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Parent(pThis, __presult))
         }
@@ -3070,7 +3070,7 @@ open class IFrameworkElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.FlowDirection get_FlowDirection()
-    public func _n_get_FlowDirection(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CFlowDirection>?) throws {
+    private func _n_get_FlowDirection(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CFlowDirection>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FlowDirection(pThis, __presult))
         }
@@ -3081,7 +3081,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_FlowDirection(Microsoft.UI.Xaml.FlowDirection)
-    public func _n_put_FlowDirection(_ value : _q_CMicrosoft_CUI_CXaml_CFlowDirection) throws {
+    private func _n_put_FlowDirection(_ value : _q_CMicrosoft_CUI_CXaml_CFlowDirection) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FlowDirection(pThis, value))
         }
@@ -3090,7 +3090,7 @@ open class IFrameworkElement
         try self._n_put_FlowDirection(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ElementTheme get_RequestedTheme()
-    public func _n_get_RequestedTheme(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementTheme>?) throws {
+    private func _n_get_RequestedTheme(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementTheme>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequestedTheme(pThis, __presult))
         }
@@ -3101,7 +3101,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void put_RequestedTheme(Microsoft.UI.Xaml.ElementTheme)
-    public func _n_put_RequestedTheme(_ value : _q_CMicrosoft_CUI_CXaml_CElementTheme) throws {
+    private func _n_put_RequestedTheme(_ value : _q_CMicrosoft_CUI_CXaml_CElementTheme) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RequestedTheme(pThis, value))
         }
@@ -3110,7 +3110,7 @@ open class IFrameworkElement
         try self._n_put_RequestedTheme(value);
     }
     // [IsSpecialName] bool get_IsLoaded()
-    public func _n_get_IsLoaded(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsLoaded(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsLoaded(pThis, __presult))
         }
@@ -3121,7 +3121,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ElementTheme get_ActualTheme()
-    public func _n_get_ActualTheme(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementTheme>?) throws {
+    private func _n_get_ActualTheme(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementTheme>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualTheme(pThis, __presult))
         }
@@ -3132,7 +3132,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Loaded(Microsoft.UI.Xaml.RoutedEventHandler)
-    public func _n_add_Loaded(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Loaded(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Loaded(pThis, handler, __presult))
         }
@@ -3143,7 +3143,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_Loaded(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Loaded(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Loaded(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Loaded(pThis, token))
         }
@@ -3152,7 +3152,7 @@ open class IFrameworkElement
         try self._n_remove_Loaded(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Unloaded(Microsoft.UI.Xaml.RoutedEventHandler)
-    public func _n_add_Unloaded(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Unloaded(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Unloaded(pThis, handler, __presult))
         }
@@ -3163,7 +3163,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_Unloaded(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Unloaded(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Unloaded(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Unloaded(pThis, token))
         }
@@ -3172,7 +3172,7 @@ open class IFrameworkElement
         try self._n_remove_Unloaded(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DataContextChanged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.FrameworkElement,Microsoft.UI.Xaml.DataContextChangedEventArgs>)
-    public func _n_add_DataContextChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DataContextChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DataContextChanged(pThis, handler, __presult))
         }
@@ -3183,7 +3183,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_DataContextChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DataContextChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DataContextChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DataContextChanged(pThis, token))
         }
@@ -3192,7 +3192,7 @@ open class IFrameworkElement
         try self._n_remove_DataContextChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_SizeChanged(Microsoft.UI.Xaml.SizeChangedEventHandler)
-    public func _n_add_SizeChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_SizeChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SizeChanged(pThis, handler, __presult))
         }
@@ -3203,7 +3203,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_SizeChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_SizeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_SizeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_SizeChanged(pThis, token))
         }
@@ -3212,7 +3212,7 @@ open class IFrameworkElement
         try self._n_remove_SizeChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_LayoutUpdated(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_LayoutUpdated(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_LayoutUpdated(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_LayoutUpdated(pThis, handler, __presult))
         }
@@ -3223,7 +3223,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_LayoutUpdated(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_LayoutUpdated(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_LayoutUpdated(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_LayoutUpdated(pThis, token))
         }
@@ -3232,7 +3232,7 @@ open class IFrameworkElement
         try self._n_remove_LayoutUpdated(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Loading(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.FrameworkElement,System.Object>)
-    public func _n_add_Loading(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Loading(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Loading(pThis, handler, __presult))
         }
@@ -3243,7 +3243,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_Loading(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Loading(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Loading(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Loading(pThis, token))
         }
@@ -3252,7 +3252,7 @@ open class IFrameworkElement
         try self._n_remove_Loading(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ActualThemeChanged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.FrameworkElement,System.Object>)
-    public func _n_add_ActualThemeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ActualThemeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ActualThemeChanged(pThis, handler, __presult))
         }
@@ -3263,7 +3263,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_ActualThemeChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ActualThemeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ActualThemeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ActualThemeChanged(pThis, token))
         }
@@ -3272,7 +3272,7 @@ open class IFrameworkElement
         try self._n_remove_ActualThemeChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_EffectiveViewportChanged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.FrameworkElement,Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>)
-    public func _n_add_EffectiveViewportChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_EffectiveViewportChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_EffectiveViewportChanged(pThis, handler, __presult))
         }
@@ -3283,7 +3283,7 @@ open class IFrameworkElement
         return __result;
     }
     // [IsSpecialName] void remove_EffectiveViewportChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_EffectiveViewportChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_EffectiveViewportChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_EffectiveViewportChanged(pThis, token))
         }
@@ -3292,7 +3292,7 @@ open class IFrameworkElement
         try self._n_remove_EffectiveViewportChanged(token);
     }
     // System.Object FindName(System.String)
-    public func _n_FindName(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_FindName(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindName(pThis, name, __presult))
         }
@@ -3306,7 +3306,7 @@ open class IFrameworkElement
         }
     }
     // void SetBinding(Microsoft.UI.Xaml.DependencyProperty, Microsoft.UI.Xaml.Data.BindingBase)
-    public func _n_SetBinding(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ binding : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIBindingBase>>) throws {
+    private func _n_SetBinding(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ binding : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIBindingBase>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetBinding(pThis, dp, binding))
         }
@@ -3315,7 +3315,7 @@ open class IFrameworkElement
         try self._n_SetBinding(RawPointer(dp), RawPointer(binding));
     }
     // Microsoft.UI.Xaml.Data.BindingExpression GetBindingExpression(Microsoft.UI.Xaml.DependencyProperty)
-    public func _n_GetBindingExpression(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIBindingExpression>>>?) throws {
+    private func _n_GetBindingExpression(_ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIBindingExpression>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetBindingExpression(pThis, dp, __presult))
         }
@@ -3492,7 +3492,7 @@ open class IFrameworkElementFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbd3f2272, Data2: 0x3efa, Data3 : 0x5f92, Data4 : (0xb7, 0x59, 0x90, 0xb1, 0xcc, 0x3e, 0x78, 0x4c)) }
     // Microsoft.UI.Xaml.FrameworkElement CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkElement>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -3515,7 +3515,7 @@ open class IFrameworkElementOverrides
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xffc6fd98, Data2: 0xf38c, Data3 : 0x5904, Data4 : (0x9c, 0xe4, 0x97, 0xa3, 0x42, 0x7c, 0xf4, 0xba)) }
     // Windows.Foundation.Size MeasureOverride(Windows.Foundation.Size)
-    public func _n_MeasureOverride(_ availableSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+    private func _n_MeasureOverride(_ availableSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.MeasureOverride(pThis, availableSize, __presult))
         }
@@ -3526,7 +3526,7 @@ open class IFrameworkElementOverrides
         return __result;
     }
     // Windows.Foundation.Size ArrangeOverride(Windows.Foundation.Size)
-    public func _n_ArrangeOverride(_ finalSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+    private func _n_ArrangeOverride(_ finalSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ArrangeOverride(pThis, finalSize, __presult))
         }
@@ -3537,7 +3537,7 @@ open class IFrameworkElementOverrides
         return __result;
     }
     // void OnApplyTemplate()
-    public func _n_OnApplyTemplate() throws {
+    private func _n_OnApplyTemplate() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnApplyTemplate(pThis))
         }
@@ -3546,7 +3546,7 @@ open class IFrameworkElementOverrides
         try self._n_OnApplyTemplate();
     }
     // bool GoToElementStateCore(System.String, bool)
-    public func _n_GoToElementStateCore(_ stateName : Optional<HSTRING>, _ useTransitions : boolean, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_GoToElementStateCore(_ stateName : Optional<HSTRING>, _ useTransitions : boolean, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GoToElementStateCore(pThis, stateName, useTransitions, __presult))
         }
@@ -3570,7 +3570,7 @@ open class IFrameworkElementProtected
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe59a3db0, Data2: 0x91e5, Data3 : 0x5903, Data4 : (0x9c, 0xaf, 0xd1, 0xbb, 0x9f, 0x45, 0x8b, 0xf2)) }
     // void InvalidateViewport()
-    public func _n_InvalidateViewport() throws {
+    private func _n_InvalidateViewport() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementProtected.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InvalidateViewport(pThis))
         }
@@ -3589,7 +3589,7 @@ open class IFrameworkElementStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x894e2704, Data2: 0x14e7, Data3 : 0x569a, Data4 : (0xb2, 0x1e, 0xaf, 0xc7, 0xdf, 0x71, 0x45, 0xa1)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TagProperty()
-    public func _n_get_TagProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_TagProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TagProperty(pThis, __presult))
         }
@@ -3600,7 +3600,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_LanguageProperty()
-    public func _n_get_LanguageProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_LanguageProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LanguageProperty(pThis, __presult))
         }
@@ -3611,7 +3611,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ActualWidthProperty()
-    public func _n_get_ActualWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ActualWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualWidthProperty(pThis, __presult))
         }
@@ -3622,7 +3622,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ActualHeightProperty()
-    public func _n_get_ActualHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ActualHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualHeightProperty(pThis, __presult))
         }
@@ -3633,7 +3633,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_WidthProperty()
-    public func _n_get_WidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_WidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_WidthProperty(pThis, __presult))
         }
@@ -3644,7 +3644,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeightProperty()
-    public func _n_get_HeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_HeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeightProperty(pThis, __presult))
         }
@@ -3655,7 +3655,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MinWidthProperty()
-    public func _n_get_MinWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MinWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinWidthProperty(pThis, __presult))
         }
@@ -3666,7 +3666,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaxWidthProperty()
-    public func _n_get_MaxWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MaxWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxWidthProperty(pThis, __presult))
         }
@@ -3677,7 +3677,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MinHeightProperty()
-    public func _n_get_MinHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MinHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinHeightProperty(pThis, __presult))
         }
@@ -3688,7 +3688,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaxHeightProperty()
-    public func _n_get_MaxHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MaxHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxHeightProperty(pThis, __presult))
         }
@@ -3699,7 +3699,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HorizontalAlignmentProperty()
-    public func _n_get_HorizontalAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_HorizontalAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalAlignmentProperty(pThis, __presult))
         }
@@ -3710,7 +3710,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_VerticalAlignmentProperty()
-    public func _n_get_VerticalAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_VerticalAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalAlignmentProperty(pThis, __presult))
         }
@@ -3721,7 +3721,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MarginProperty()
-    public func _n_get_MarginProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MarginProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MarginProperty(pThis, __presult))
         }
@@ -3732,7 +3732,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_NameProperty()
-    public func _n_get_NameProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_NameProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NameProperty(pThis, __presult))
         }
@@ -3743,7 +3743,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DataContextProperty()
-    public func _n_get_DataContextProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_DataContextProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DataContextProperty(pThis, __presult))
         }
@@ -3754,7 +3754,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AllowFocusOnInteractionProperty()
-    public func _n_get_AllowFocusOnInteractionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_AllowFocusOnInteractionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowFocusOnInteractionProperty(pThis, __presult))
         }
@@ -3765,7 +3765,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FocusVisualMarginProperty()
-    public func _n_get_FocusVisualMarginProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FocusVisualMarginProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualMarginProperty(pThis, __presult))
         }
@@ -3776,7 +3776,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FocusVisualSecondaryThicknessProperty()
-    public func _n_get_FocusVisualSecondaryThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FocusVisualSecondaryThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualSecondaryThicknessProperty(pThis, __presult))
         }
@@ -3787,7 +3787,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FocusVisualPrimaryThicknessProperty()
-    public func _n_get_FocusVisualPrimaryThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FocusVisualPrimaryThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualPrimaryThicknessProperty(pThis, __presult))
         }
@@ -3798,7 +3798,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FocusVisualSecondaryBrushProperty()
-    public func _n_get_FocusVisualSecondaryBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FocusVisualSecondaryBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualSecondaryBrushProperty(pThis, __presult))
         }
@@ -3809,7 +3809,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FocusVisualPrimaryBrushProperty()
-    public func _n_get_FocusVisualPrimaryBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FocusVisualPrimaryBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusVisualPrimaryBrushProperty(pThis, __presult))
         }
@@ -3820,7 +3820,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AllowFocusWhenDisabledProperty()
-    public func _n_get_AllowFocusWhenDisabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_AllowFocusWhenDisabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowFocusWhenDisabledProperty(pThis, __presult))
         }
@@ -3831,7 +3831,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_StyleProperty()
-    public func _n_get_StyleProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_StyleProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_StyleProperty(pThis, __presult))
         }
@@ -3842,7 +3842,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FlowDirectionProperty()
-    public func _n_get_FlowDirectionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FlowDirectionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FlowDirectionProperty(pThis, __presult))
         }
@@ -3853,7 +3853,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RequestedThemeProperty()
-    public func _n_get_RequestedThemeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_RequestedThemeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequestedThemeProperty(pThis, __presult))
         }
@@ -3864,7 +3864,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ActualThemeProperty()
-    public func _n_get_ActualThemeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ActualThemeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualThemeProperty(pThis, __presult))
         }
@@ -3875,7 +3875,7 @@ open class IFrameworkElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // void DeferTree(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_DeferTree(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_DeferTree(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DeferTree(pThis, element))
         }
@@ -4035,7 +4035,7 @@ open class IFrameworkTemplateFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x616dd6db, Data2: 0xb064, Data3 : 0x561d, Data4 : (0xb1, 0x62, 0x46, 0xce, 0xb4, 0x5d, 0xc5, 0x62)) }
     // Microsoft.UI.Xaml.FrameworkTemplate CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkTemplate>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIFrameworkTemplate>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIFrameworkTemplateFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -4085,7 +4085,7 @@ open class IResourceDictionaryFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xea22a48f, Data2: 0xab71, Data3 : 0x56f6, Data4 : (0xa3, 0x92, 0xd8, 0x23, 0x10, 0xc8, 0xaa, 0x7b)) }
     // Microsoft.UI.Xaml.ResourceDictionary CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIResourceDictionaryFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -4130,7 +4130,7 @@ open class IRoutedEventArgsFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x914b02c7, Data2: 0x076b, Data3 : 0x5b89, Data4 : (0x98, 0xe7, 0x6c, 0x37, 0x33, 0x79, 0xe9, 0xaf)) }
     // Microsoft.UI.Xaml.RoutedEventArgs CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIRoutedEventArgsFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -4166,7 +4166,7 @@ open class IScalarTransitionFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa1650cf8, Data2: 0xa15b, Data3 : 0x54fc, Data4 : (0xb5, 0x95, 0xc5, 0x24, 0x91, 0x31, 0x8f, 0x58)) }
     // Microsoft.UI.Xaml.ScalarTransition CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIScalarTransitionFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -4219,7 +4219,7 @@ open class IStyleFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc2d924a2, Data2: 0x3862, Data3 : 0x517c, Data4 : (0xb0, 0x83, 0x9a, 0x91, 0x20, 0xd7, 0x30, 0x2d)) }
     // Microsoft.UI.Xaml.Style CreateInstance(Windows.UI.Xaml.Interop.TypeName)
-    public func _n_CreateInstance(_ targetType : _q_CWindows_CUI_CXaml_CInterop_CTypeName, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>>?) throws {
+    private func _n_CreateInstance(_ targetType : _q_CWindows_CUI_CXaml_CInterop_CTypeName, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIStyleFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, targetType, __presult))
         }
@@ -4250,7 +4250,7 @@ open class IUIElement
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc3c01020, Data2: 0x320c, Data3 : 0x5cf6, Data4 : (0x9d, 0x24, 0xd3, 0x96, 0xbb, 0xfa, 0x4d, 0x8b)) }
     // [IsSpecialName] Windows.Foundation.Size get_DesiredSize()
-    public func _n_get_DesiredSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+    private func _n_get_DesiredSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DesiredSize(pThis, __presult))
         }
@@ -4261,7 +4261,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] bool get_AllowDrop()
-    public func _n_get_AllowDrop(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_AllowDrop(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowDrop(pThis, __presult))
         }
@@ -4272,7 +4272,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_AllowDrop(bool)
-    public func _n_put_AllowDrop(_ value : boolean) throws {
+    private func _n_put_AllowDrop(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowDrop(pThis, value))
         }
@@ -4281,7 +4281,7 @@ open class IUIElement
         try self._n_put_AllowDrop(value);
     }
     // [IsSpecialName] System.Double get_Opacity()
-    public func _n_get_Opacity(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Opacity(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Opacity(pThis, __presult))
         }
@@ -4292,7 +4292,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_Opacity(System.Double)
-    public func _n_put_Opacity(_ value : DOUBLE) throws {
+    private func _n_put_Opacity(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Opacity(pThis, value))
         }
@@ -4301,7 +4301,7 @@ open class IUIElement
         try self._n_put_Opacity(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.RectangleGeometry get_Clip()
-    public func _n_get_Clip(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry>>>?) throws {
+    private func _n_get_Clip(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Clip(pThis, __presult))
         }
@@ -4312,7 +4312,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.IRectangleGeometry(consuming: __result);
     }
     // [IsSpecialName] void put_Clip(Microsoft.UI.Xaml.Media.RectangleGeometry)
-    public func _n_put_Clip(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry>>) throws {
+    private func _n_put_Clip(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Clip(pThis, value))
         }
@@ -4321,7 +4321,7 @@ open class IUIElement
         try self._n_put_Clip(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Transform get_RenderTransform()
-    public func _n_get_RenderTransform(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>>?) throws {
+    private func _n_get_RenderTransform(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RenderTransform(pThis, __presult))
         }
@@ -4332,7 +4332,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.ITransform(consuming: __result);
     }
     // [IsSpecialName] void put_RenderTransform(Microsoft.UI.Xaml.Media.Transform)
-    public func _n_put_RenderTransform(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>) throws {
+    private func _n_put_RenderTransform(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RenderTransform(pThis, value))
         }
@@ -4341,7 +4341,7 @@ open class IUIElement
         try self._n_put_RenderTransform(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Projection get_Projection()
-    public func _n_get_Projection(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection>>>?) throws {
+    private func _n_get_Projection(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Projection(pThis, __presult))
         }
@@ -4352,7 +4352,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.IProjection(consuming: __result);
     }
     // [IsSpecialName] void put_Projection(Microsoft.UI.Xaml.Media.Projection)
-    public func _n_put_Projection(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection>>) throws {
+    private func _n_put_Projection(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Projection(pThis, value))
         }
@@ -4361,7 +4361,7 @@ open class IUIElement
         try self._n_put_Projection(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Media3D.Transform3D get_Transform3D()
-    public func _n_get_Transform3D(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D>>>?) throws {
+    private func _n_get_Transform3D(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transform3D(pThis, __presult))
         }
@@ -4372,7 +4372,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.Media3D.ITransform3D(consuming: __result);
     }
     // [IsSpecialName] void put_Transform3D(Microsoft.UI.Xaml.Media.Media3D.Transform3D)
-    public func _n_put_Transform3D(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D>>) throws {
+    private func _n_put_Transform3D(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Transform3D(pThis, value))
         }
@@ -4381,7 +4381,7 @@ open class IUIElement
         try self._n_put_Transform3D(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.Point get_RenderTransformOrigin()
-    public func _n_get_RenderTransformOrigin(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
+    private func _n_get_RenderTransformOrigin(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RenderTransformOrigin(pThis, __presult))
         }
@@ -4392,7 +4392,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_RenderTransformOrigin(Windows.Foundation.Point)
-    public func _n_put_RenderTransformOrigin(_ value : _q_CWindows_CFoundation_CPoint) throws {
+    private func _n_put_RenderTransformOrigin(_ value : _q_CWindows_CFoundation_CPoint) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RenderTransformOrigin(pThis, value))
         }
@@ -4401,7 +4401,7 @@ open class IUIElement
         try self._n_put_RenderTransformOrigin(value);
     }
     // [IsSpecialName] bool get_IsHitTestVisible()
-    public func _n_get_IsHitTestVisible(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsHitTestVisible(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsHitTestVisible(pThis, __presult))
         }
@@ -4412,7 +4412,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsHitTestVisible(bool)
-    public func _n_put_IsHitTestVisible(_ value : boolean) throws {
+    private func _n_put_IsHitTestVisible(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsHitTestVisible(pThis, value))
         }
@@ -4421,7 +4421,7 @@ open class IUIElement
         try self._n_put_IsHitTestVisible(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Visibility get_Visibility()
-    public func _n_get_Visibility(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CVisibility>?) throws {
+    private func _n_get_Visibility(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CVisibility>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Visibility(pThis, __presult))
         }
@@ -4432,7 +4432,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_Visibility(Microsoft.UI.Xaml.Visibility)
-    public func _n_put_Visibility(_ value : _q_CMicrosoft_CUI_CXaml_CVisibility) throws {
+    private func _n_put_Visibility(_ value : _q_CMicrosoft_CUI_CXaml_CVisibility) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Visibility(pThis, value))
         }
@@ -4441,7 +4441,7 @@ open class IUIElement
         try self._n_put_Visibility(value);
     }
     // [IsSpecialName] Windows.Foundation.Size get_RenderSize()
-    public func _n_get_RenderSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+    private func _n_get_RenderSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RenderSize(pThis, __presult))
         }
@@ -4452,7 +4452,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] bool get_UseLayoutRounding()
-    public func _n_get_UseLayoutRounding(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_UseLayoutRounding(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UseLayoutRounding(pThis, __presult))
         }
@@ -4463,7 +4463,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_UseLayoutRounding(bool)
-    public func _n_put_UseLayoutRounding(_ value : boolean) throws {
+    private func _n_put_UseLayoutRounding(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_UseLayoutRounding(pThis, value))
         }
@@ -4472,7 +4472,7 @@ open class IUIElement
         try self._n_put_UseLayoutRounding(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_Transitions()
-    public func _n_get_Transitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+    private func _n_get_Transitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transitions(pThis, __presult))
         }
@@ -4483,7 +4483,7 @@ open class IUIElement
         return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_Transitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
-    public func _n_put_Transitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+    private func _n_put_Transitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Transitions(pThis, value))
         }
@@ -4492,7 +4492,7 @@ open class IUIElement
         try self._n_put_Transitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.CacheMode get_CacheMode()
-    public func _n_get_CacheMode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CICacheMode>>>?) throws {
+    private func _n_get_CacheMode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CICacheMode>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CacheMode(pThis, __presult))
         }
@@ -4503,7 +4503,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.ICacheMode(consuming: __result);
     }
     // [IsSpecialName] void put_CacheMode(Microsoft.UI.Xaml.Media.CacheMode)
-    public func _n_put_CacheMode(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CICacheMode>>) throws {
+    private func _n_put_CacheMode(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CICacheMode>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CacheMode(pThis, value))
         }
@@ -4512,7 +4512,7 @@ open class IUIElement
         try self._n_put_CacheMode(RawPointer(value));
     }
     // [IsSpecialName] bool get_IsTapEnabled()
-    public func _n_get_IsTapEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsTapEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTapEnabled(pThis, __presult))
         }
@@ -4523,7 +4523,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsTapEnabled(bool)
-    public func _n_put_IsTapEnabled(_ value : boolean) throws {
+    private func _n_put_IsTapEnabled(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsTapEnabled(pThis, value))
         }
@@ -4532,7 +4532,7 @@ open class IUIElement
         try self._n_put_IsTapEnabled(value);
     }
     // [IsSpecialName] bool get_IsDoubleTapEnabled()
-    public func _n_get_IsDoubleTapEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsDoubleTapEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsDoubleTapEnabled(pThis, __presult))
         }
@@ -4543,7 +4543,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsDoubleTapEnabled(bool)
-    public func _n_put_IsDoubleTapEnabled(_ value : boolean) throws {
+    private func _n_put_IsDoubleTapEnabled(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsDoubleTapEnabled(pThis, value))
         }
@@ -4552,7 +4552,7 @@ open class IUIElement
         try self._n_put_IsDoubleTapEnabled(value);
     }
     // [IsSpecialName] bool get_CanDrag()
-    public func _n_get_CanDrag(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_CanDrag(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanDrag(pThis, __presult))
         }
@@ -4563,7 +4563,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_CanDrag(bool)
-    public func _n_put_CanDrag(_ value : boolean) throws {
+    private func _n_put_CanDrag(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CanDrag(pThis, value))
         }
@@ -4572,7 +4572,7 @@ open class IUIElement
         try self._n_put_CanDrag(value);
     }
     // [IsSpecialName] bool get_IsRightTapEnabled()
-    public func _n_get_IsRightTapEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsRightTapEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsRightTapEnabled(pThis, __presult))
         }
@@ -4583,7 +4583,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsRightTapEnabled(bool)
-    public func _n_put_IsRightTapEnabled(_ value : boolean) throws {
+    private func _n_put_IsRightTapEnabled(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsRightTapEnabled(pThis, value))
         }
@@ -4592,7 +4592,7 @@ open class IUIElement
         try self._n_put_IsRightTapEnabled(value);
     }
     // [IsSpecialName] bool get_IsHoldingEnabled()
-    public func _n_get_IsHoldingEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsHoldingEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsHoldingEnabled(pThis, __presult))
         }
@@ -4603,7 +4603,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsHoldingEnabled(bool)
-    public func _n_put_IsHoldingEnabled(_ value : boolean) throws {
+    private func _n_put_IsHoldingEnabled(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsHoldingEnabled(pThis, value))
         }
@@ -4612,7 +4612,7 @@ open class IUIElement
         try self._n_put_IsHoldingEnabled(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.ManipulationModes get_ManipulationMode()
-    public func _n_get_ManipulationMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes>?) throws {
+    private func _n_get_ManipulationMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationMode(pThis, __presult))
         }
@@ -4623,7 +4623,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_ManipulationMode(Microsoft.UI.Xaml.Input.ManipulationModes)
-    public func _n_put_ManipulationMode(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes) throws {
+    private func _n_put_ManipulationMode(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CManipulationModes) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ManipulationMode(pThis, value))
         }
@@ -4632,7 +4632,7 @@ open class IUIElement
         try self._n_put_ManipulationMode(value);
     }
     // [IsSpecialName] Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Input.Pointer> get_PointerCaptures()
-    public func _n_get_PointerCaptures(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer>>>?) throws {
+    private func _n_get_PointerCaptures(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerCaptures(pThis, __presult))
         }
@@ -4643,7 +4643,7 @@ open class IUIElement
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase get_ContextFlyout()
-    public func _n_get_ContextFlyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
+    private func _n_get_ContextFlyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContextFlyout(pThis, __presult))
         }
@@ -4654,7 +4654,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase(consuming: __result);
     }
     // [IsSpecialName] void put_ContextFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
-    public func _n_put_ContextFlyout(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>) throws {
+    private func _n_put_ContextFlyout(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContextFlyout(pThis, value))
         }
@@ -4663,7 +4663,7 @@ open class IUIElement
         try self._n_put_ContextFlyout(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.ElementCompositeMode get_CompositeMode()
-    public func _n_get_CompositeMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CElementCompositeMode>?) throws {
+    private func _n_get_CompositeMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CElementCompositeMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CompositeMode(pThis, __presult))
         }
@@ -4674,7 +4674,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_CompositeMode(Microsoft.UI.Xaml.Media.ElementCompositeMode)
-    public func _n_put_CompositeMode(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CElementCompositeMode) throws {
+    private func _n_put_CompositeMode(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CElementCompositeMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CompositeMode(pThis, value))
         }
@@ -4683,7 +4683,7 @@ open class IUIElement
         try self._n_put_CompositeMode(value);
     }
     // [IsSpecialName] Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Media.XamlLight> get_Lights()
-    public func _n_get_Lights(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight>>>?) throws {
+    private func _n_get_Lights(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Lights(pThis, __presult))
         }
@@ -4694,7 +4694,7 @@ open class IUIElement
         return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight(consuming: __result);
     }
     // [IsSpecialName] bool get_CanBeScrollAnchor()
-    public func _n_get_CanBeScrollAnchor(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_CanBeScrollAnchor(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanBeScrollAnchor(pThis, __presult))
         }
@@ -4705,7 +4705,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_CanBeScrollAnchor(bool)
-    public func _n_put_CanBeScrollAnchor(_ value : boolean) throws {
+    private func _n_put_CanBeScrollAnchor(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CanBeScrollAnchor(pThis, value))
         }
@@ -4714,7 +4714,7 @@ open class IUIElement
         try self._n_put_CanBeScrollAnchor(value);
     }
     // [IsSpecialName] bool get_ExitDisplayModeOnAccessKeyInvoked()
-    public func _n_get_ExitDisplayModeOnAccessKeyInvoked(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_ExitDisplayModeOnAccessKeyInvoked(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExitDisplayModeOnAccessKeyInvoked(pThis, __presult))
         }
@@ -4725,7 +4725,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_ExitDisplayModeOnAccessKeyInvoked(bool)
-    public func _n_put_ExitDisplayModeOnAccessKeyInvoked(_ value : boolean) throws {
+    private func _n_put_ExitDisplayModeOnAccessKeyInvoked(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ExitDisplayModeOnAccessKeyInvoked(pThis, value))
         }
@@ -4734,7 +4734,7 @@ open class IUIElement
         try self._n_put_ExitDisplayModeOnAccessKeyInvoked(value);
     }
     // [IsSpecialName] bool get_IsAccessKeyScope()
-    public func _n_get_IsAccessKeyScope(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsAccessKeyScope(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsAccessKeyScope(pThis, __presult))
         }
@@ -4745,7 +4745,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsAccessKeyScope(bool)
-    public func _n_put_IsAccessKeyScope(_ value : boolean) throws {
+    private func _n_put_IsAccessKeyScope(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsAccessKeyScope(pThis, value))
         }
@@ -4754,7 +4754,7 @@ open class IUIElement
         try self._n_put_IsAccessKeyScope(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_AccessKeyScopeOwner()
-    public func _n_get_AccessKeyScopeOwner(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_AccessKeyScopeOwner(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AccessKeyScopeOwner(pThis, __presult))
         }
@@ -4765,7 +4765,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_AccessKeyScopeOwner(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_AccessKeyScopeOwner(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_AccessKeyScopeOwner(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AccessKeyScopeOwner(pThis, value))
         }
@@ -4774,7 +4774,7 @@ open class IUIElement
         try self._n_put_AccessKeyScopeOwner(RawPointer(value));
     }
     // [IsSpecialName] System.String get_AccessKey()
-    public func _n_get_AccessKey(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_AccessKey(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AccessKey(pThis, __presult))
         }
@@ -4785,7 +4785,7 @@ open class IUIElement
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_AccessKey(System.String)
-    public func _n_put_AccessKey(_ value : Optional<HSTRING>) throws {
+    private func _n_put_AccessKey(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AccessKey(pThis, value))
         }
@@ -4797,7 +4797,7 @@ open class IUIElement
         }
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.KeyTipPlacementMode get_KeyTipPlacementMode()
-    public func _n_get_KeyTipPlacementMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode>?) throws {
+    private func _n_get_KeyTipPlacementMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipPlacementMode(pThis, __presult))
         }
@@ -4808,7 +4808,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_KeyTipPlacementMode(Microsoft.UI.Xaml.Input.KeyTipPlacementMode)
-    public func _n_put_KeyTipPlacementMode(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode) throws {
+    private func _n_put_KeyTipPlacementMode(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyTipPlacementMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_KeyTipPlacementMode(pThis, value))
         }
@@ -4817,7 +4817,7 @@ open class IUIElement
         try self._n_put_KeyTipPlacementMode(value);
     }
     // [IsSpecialName] System.Double get_KeyTipHorizontalOffset()
-    public func _n_get_KeyTipHorizontalOffset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_KeyTipHorizontalOffset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipHorizontalOffset(pThis, __presult))
         }
@@ -4828,7 +4828,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_KeyTipHorizontalOffset(System.Double)
-    public func _n_put_KeyTipHorizontalOffset(_ value : DOUBLE) throws {
+    private func _n_put_KeyTipHorizontalOffset(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_KeyTipHorizontalOffset(pThis, value))
         }
@@ -4837,7 +4837,7 @@ open class IUIElement
         try self._n_put_KeyTipHorizontalOffset(value);
     }
     // [IsSpecialName] System.Double get_KeyTipVerticalOffset()
-    public func _n_get_KeyTipVerticalOffset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_KeyTipVerticalOffset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipVerticalOffset(pThis, __presult))
         }
@@ -4848,7 +4848,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_KeyTipVerticalOffset(System.Double)
-    public func _n_put_KeyTipVerticalOffset(_ value : DOUBLE) throws {
+    private func _n_put_KeyTipVerticalOffset(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_KeyTipVerticalOffset(pThis, value))
         }
@@ -4857,7 +4857,7 @@ open class IUIElement
         try self._n_put_KeyTipVerticalOffset(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_KeyTipTarget()
-    public func _n_get_KeyTipTarget(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_KeyTipTarget(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipTarget(pThis, __presult))
         }
@@ -4868,7 +4868,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_KeyTipTarget(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_KeyTipTarget(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_KeyTipTarget(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_KeyTipTarget(pThis, value))
         }
@@ -4877,7 +4877,7 @@ open class IUIElement
         try self._n_put_KeyTipTarget(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode get_XYFocusKeyboardNavigation()
-    public func _n_get_XYFocusKeyboardNavigation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode>?) throws {
+    private func _n_get_XYFocusKeyboardNavigation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusKeyboardNavigation(pThis, __presult))
         }
@@ -4888,7 +4888,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_XYFocusKeyboardNavigation(Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode)
-    public func _n_put_XYFocusKeyboardNavigation(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode) throws {
+    private func _n_put_XYFocusKeyboardNavigation(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusKeyboardNavigationMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusKeyboardNavigation(pThis, value))
         }
@@ -4897,7 +4897,7 @@ open class IUIElement
         try self._n_put_XYFocusKeyboardNavigation(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy get_XYFocusUpNavigationStrategy()
-    public func _n_get_XYFocusUpNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
+    private func _n_get_XYFocusUpNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusUpNavigationStrategy(pThis, __presult))
         }
@@ -4908,7 +4908,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_XYFocusUpNavigationStrategy(Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)
-    public func _n_put_XYFocusUpNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
+    private func _n_put_XYFocusUpNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusUpNavigationStrategy(pThis, value))
         }
@@ -4917,7 +4917,7 @@ open class IUIElement
         try self._n_put_XYFocusUpNavigationStrategy(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy get_XYFocusDownNavigationStrategy()
-    public func _n_get_XYFocusDownNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
+    private func _n_get_XYFocusDownNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusDownNavigationStrategy(pThis, __presult))
         }
@@ -4928,7 +4928,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_XYFocusDownNavigationStrategy(Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)
-    public func _n_put_XYFocusDownNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
+    private func _n_put_XYFocusDownNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusDownNavigationStrategy(pThis, value))
         }
@@ -4937,7 +4937,7 @@ open class IUIElement
         try self._n_put_XYFocusDownNavigationStrategy(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy get_XYFocusLeftNavigationStrategy()
-    public func _n_get_XYFocusLeftNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
+    private func _n_get_XYFocusLeftNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusLeftNavigationStrategy(pThis, __presult))
         }
@@ -4948,7 +4948,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_XYFocusLeftNavigationStrategy(Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)
-    public func _n_put_XYFocusLeftNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
+    private func _n_put_XYFocusLeftNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusLeftNavigationStrategy(pThis, value))
         }
@@ -4957,7 +4957,7 @@ open class IUIElement
         try self._n_put_XYFocusLeftNavigationStrategy(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy get_XYFocusRightNavigationStrategy()
-    public func _n_get_XYFocusRightNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
+    private func _n_get_XYFocusRightNavigationStrategy(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusRightNavigationStrategy(pThis, __presult))
         }
@@ -4968,7 +4968,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_XYFocusRightNavigationStrategy(Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy)
-    public func _n_put_XYFocusRightNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
+    private func _n_put_XYFocusRightNavigationStrategy(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CXYFocusNavigationStrategy) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusRightNavigationStrategy(pThis, value))
         }
@@ -4977,7 +4977,7 @@ open class IUIElement
         try self._n_put_XYFocusRightNavigationStrategy(value);
     }
     // [IsSpecialName] Windows.Foundation.Collections.IVector<Microsoft.UI.Xaml.Input.KeyboardAccelerator> get_KeyboardAccelerators()
-    public func _n_get_KeyboardAccelerators(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator>>>?) throws {
+    private func _n_get_KeyboardAccelerators(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyboardAccelerators(pThis, __presult))
         }
@@ -4988,7 +4988,7 @@ open class IUIElement
         return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_KeyboardAcceleratorPlacementTarget()
-    public func _n_get_KeyboardAcceleratorPlacementTarget(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_KeyboardAcceleratorPlacementTarget(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyboardAcceleratorPlacementTarget(pThis, __presult))
         }
@@ -4999,7 +4999,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_KeyboardAcceleratorPlacementTarget(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_KeyboardAcceleratorPlacementTarget(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_KeyboardAcceleratorPlacementTarget(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_KeyboardAcceleratorPlacementTarget(pThis, value))
         }
@@ -5008,7 +5008,7 @@ open class IUIElement
         try self._n_put_KeyboardAcceleratorPlacementTarget(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode get_KeyboardAcceleratorPlacementMode()
-    public func _n_get_KeyboardAcceleratorPlacementMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode>?) throws {
+    private func _n_get_KeyboardAcceleratorPlacementMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyboardAcceleratorPlacementMode(pThis, __presult))
         }
@@ -5019,7 +5019,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_KeyboardAcceleratorPlacementMode(Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode)
-    public func _n_put_KeyboardAcceleratorPlacementMode(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode) throws {
+    private func _n_put_KeyboardAcceleratorPlacementMode(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorPlacementMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_KeyboardAcceleratorPlacementMode(pThis, value))
         }
@@ -5028,7 +5028,7 @@ open class IUIElement
         try self._n_put_KeyboardAcceleratorPlacementMode(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ElementHighContrastAdjustment get_HighContrastAdjustment()
-    public func _n_get_HighContrastAdjustment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementHighContrastAdjustment>?) throws {
+    private func _n_get_HighContrastAdjustment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CElementHighContrastAdjustment>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HighContrastAdjustment(pThis, __presult))
         }
@@ -5039,7 +5039,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_HighContrastAdjustment(Microsoft.UI.Xaml.ElementHighContrastAdjustment)
-    public func _n_put_HighContrastAdjustment(_ value : _q_CMicrosoft_CUI_CXaml_CElementHighContrastAdjustment) throws {
+    private func _n_put_HighContrastAdjustment(_ value : _q_CMicrosoft_CUI_CXaml_CElementHighContrastAdjustment) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_HighContrastAdjustment(pThis, value))
         }
@@ -5048,7 +5048,7 @@ open class IUIElement
         try self._n_put_HighContrastAdjustment(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.KeyboardNavigationMode get_TabFocusNavigation()
-    public func _n_get_TabFocusNavigation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode>?) throws {
+    private func _n_get_TabFocusNavigation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TabFocusNavigation(pThis, __presult))
         }
@@ -5059,7 +5059,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_TabFocusNavigation(Microsoft.UI.Xaml.Input.KeyboardNavigationMode)
-    public func _n_put_TabFocusNavigation(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode) throws {
+    private func _n_put_TabFocusNavigation(_ value : _q_CMicrosoft_CUI_CXaml_CInput_CKeyboardNavigationMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TabFocusNavigation(pThis, value))
         }
@@ -5068,7 +5068,7 @@ open class IUIElement
         try self._n_put_TabFocusNavigation(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ScalarTransition get_OpacityTransition()
-    public func _n_get_OpacityTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>>?) throws {
+    private func _n_get_OpacityTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OpacityTransition(pThis, __presult))
         }
@@ -5079,7 +5079,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IScalarTransition(consuming: __result);
     }
     // [IsSpecialName] void put_OpacityTransition(Microsoft.UI.Xaml.ScalarTransition)
-    public func _n_put_OpacityTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>) throws {
+    private func _n_put_OpacityTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_OpacityTransition(pThis, value))
         }
@@ -5088,7 +5088,7 @@ open class IUIElement
         try self._n_put_OpacityTransition(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Vector3 get_Translation()
-    public func _n_get_Translation(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
+    private func _n_get_Translation(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Translation(pThis, __presult))
         }
@@ -5099,7 +5099,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_Translation(Windows.Foundation.Numerics.Vector3)
-    public func _n_put_Translation(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
+    private func _n_put_Translation(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Translation(pThis, value))
         }
@@ -5108,7 +5108,7 @@ open class IUIElement
         try self._n_put_Translation(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Vector3Transition get_TranslationTransition()
-    public func _n_get_TranslationTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>>?) throws {
+    private func _n_get_TranslationTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TranslationTransition(pThis, __presult))
         }
@@ -5119,7 +5119,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IVector3Transition(consuming: __result);
     }
     // [IsSpecialName] void put_TranslationTransition(Microsoft.UI.Xaml.Vector3Transition)
-    public func _n_put_TranslationTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>) throws {
+    private func _n_put_TranslationTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TranslationTransition(pThis, value))
         }
@@ -5128,7 +5128,7 @@ open class IUIElement
         try self._n_put_TranslationTransition(RawPointer(value));
     }
     // [IsSpecialName] System.Single get_Rotation()
-    public func _n_get_Rotation(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_Rotation(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Rotation(pThis, __presult))
         }
@@ -5139,7 +5139,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_Rotation(System.Single)
-    public func _n_put_Rotation(_ value : FLOAT) throws {
+    private func _n_put_Rotation(_ value : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Rotation(pThis, value))
         }
@@ -5148,7 +5148,7 @@ open class IUIElement
         try self._n_put_Rotation(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ScalarTransition get_RotationTransition()
-    public func _n_get_RotationTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>>?) throws {
+    private func _n_get_RotationTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RotationTransition(pThis, __presult))
         }
@@ -5159,7 +5159,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IScalarTransition(consuming: __result);
     }
     // [IsSpecialName] void put_RotationTransition(Microsoft.UI.Xaml.ScalarTransition)
-    public func _n_put_RotationTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>) throws {
+    private func _n_put_RotationTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIScalarTransition>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RotationTransition(pThis, value))
         }
@@ -5168,7 +5168,7 @@ open class IUIElement
         try self._n_put_RotationTransition(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Vector3 get_Scale()
-    public func _n_get_Scale(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
+    private func _n_get_Scale(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Scale(pThis, __presult))
         }
@@ -5179,7 +5179,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_Scale(Windows.Foundation.Numerics.Vector3)
-    public func _n_put_Scale(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
+    private func _n_put_Scale(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Scale(pThis, value))
         }
@@ -5188,7 +5188,7 @@ open class IUIElement
         try self._n_put_Scale(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Vector3Transition get_ScaleTransition()
-    public func _n_get_ScaleTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>>?) throws {
+    private func _n_get_ScaleTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ScaleTransition(pThis, __presult))
         }
@@ -5199,7 +5199,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IVector3Transition(consuming: __result);
     }
     // [IsSpecialName] void put_ScaleTransition(Microsoft.UI.Xaml.Vector3Transition)
-    public func _n_put_ScaleTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>) throws {
+    private func _n_put_ScaleTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ScaleTransition(pThis, value))
         }
@@ -5208,7 +5208,7 @@ open class IUIElement
         try self._n_put_ScaleTransition(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Matrix4x4 get_TransformMatrix()
-    public func _n_get_TransformMatrix(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CMatrix4x4>?) throws {
+    private func _n_get_TransformMatrix(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CMatrix4x4>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TransformMatrix(pThis, __presult))
         }
@@ -5219,7 +5219,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_TransformMatrix(Windows.Foundation.Numerics.Matrix4x4)
-    public func _n_put_TransformMatrix(_ value : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
+    private func _n_put_TransformMatrix(_ value : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TransformMatrix(pThis, value))
         }
@@ -5228,7 +5228,7 @@ open class IUIElement
         try self._n_put_TransformMatrix(value);
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Vector3 get_CenterPoint()
-    public func _n_get_CenterPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
+    private func _n_get_CenterPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CenterPoint(pThis, __presult))
         }
@@ -5239,7 +5239,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_CenterPoint(Windows.Foundation.Numerics.Vector3)
-    public func _n_put_CenterPoint(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
+    private func _n_put_CenterPoint(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CenterPoint(pThis, value))
         }
@@ -5248,7 +5248,7 @@ open class IUIElement
         try self._n_put_CenterPoint(value);
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Vector3 get_RotationAxis()
-    public func _n_get_RotationAxis(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
+    private func _n_get_RotationAxis(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RotationAxis(pThis, __presult))
         }
@@ -5259,7 +5259,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_RotationAxis(Windows.Foundation.Numerics.Vector3)
-    public func _n_put_RotationAxis(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
+    private func _n_put_RotationAxis(_ value : _q_CWindows_CFoundation_CNumerics_CVector3) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RotationAxis(pThis, value))
         }
@@ -5268,7 +5268,7 @@ open class IUIElement
         try self._n_put_RotationAxis(value);
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Vector3 get_ActualOffset()
-    public func _n_get_ActualOffset(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
+    private func _n_get_ActualOffset(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector3>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualOffset(pThis, __presult))
         }
@@ -5279,7 +5279,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Vector2 get_ActualSize()
-    public func _n_get_ActualSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector2>?) throws {
+    private func _n_get_ActualSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CVector2>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualSize(pThis, __presult))
         }
@@ -5290,7 +5290,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] Microsoft.UI.Xaml.XamlRoot get_XamlRoot()
-    public func _n_get_XamlRoot(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIXamlRoot>>>?) throws {
+    private func _n_get_XamlRoot(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIXamlRoot>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XamlRoot(pThis, __presult))
         }
@@ -5301,7 +5301,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IXamlRoot(consuming: __result);
     }
     // [IsSpecialName] void put_XamlRoot(Microsoft.UI.Xaml.XamlRoot)
-    public func _n_put_XamlRoot(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIXamlRoot>>) throws {
+    private func _n_put_XamlRoot(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIXamlRoot>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XamlRoot(pThis, value))
         }
@@ -5310,7 +5310,7 @@ open class IUIElement
         try self._n_put_XamlRoot(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Shadow get_Shadow()
-    public func _n_get_Shadow(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIShadow>>>?) throws {
+    private func _n_get_Shadow(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIShadow>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Shadow(pThis, __presult))
         }
@@ -5321,7 +5321,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.IShadow(consuming: __result);
     }
     // [IsSpecialName] void put_Shadow(Microsoft.UI.Xaml.Media.Shadow)
-    public func _n_put_Shadow(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIShadow>>) throws {
+    private func _n_put_Shadow(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIShadow>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Shadow(pThis, value))
         }
@@ -5330,7 +5330,7 @@ open class IUIElement
         try self._n_put_Shadow(RawPointer(value));
     }
     // [IsSpecialName] System.Double get_RasterizationScale()
-    public func _n_get_RasterizationScale(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_RasterizationScale(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RasterizationScale(pThis, __presult))
         }
@@ -5341,7 +5341,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_RasterizationScale(System.Double)
-    public func _n_put_RasterizationScale(_ value : DOUBLE) throws {
+    private func _n_put_RasterizationScale(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RasterizationScale(pThis, value))
         }
@@ -5350,7 +5350,7 @@ open class IUIElement
         try self._n_put_RasterizationScale(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.FocusState get_FocusState()
-    public func _n_get_FocusState(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CFocusState>?) throws {
+    private func _n_get_FocusState(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CFocusState>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusState(pThis, __presult))
         }
@@ -5361,7 +5361,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] bool get_UseSystemFocusVisuals()
-    public func _n_get_UseSystemFocusVisuals(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_UseSystemFocusVisuals(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UseSystemFocusVisuals(pThis, __presult))
         }
@@ -5372,7 +5372,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_UseSystemFocusVisuals(bool)
-    public func _n_put_UseSystemFocusVisuals(_ value : boolean) throws {
+    private func _n_put_UseSystemFocusVisuals(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_UseSystemFocusVisuals(pThis, value))
         }
@@ -5381,7 +5381,7 @@ open class IUIElement
         try self._n_put_UseSystemFocusVisuals(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_XYFocusLeft()
-    public func _n_get_XYFocusLeft(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_XYFocusLeft(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusLeft(pThis, __presult))
         }
@@ -5392,7 +5392,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_XYFocusLeft(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_XYFocusLeft(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_XYFocusLeft(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusLeft(pThis, value))
         }
@@ -5401,7 +5401,7 @@ open class IUIElement
         try self._n_put_XYFocusLeft(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_XYFocusRight()
-    public func _n_get_XYFocusRight(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_XYFocusRight(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusRight(pThis, __presult))
         }
@@ -5412,7 +5412,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_XYFocusRight(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_XYFocusRight(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_XYFocusRight(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusRight(pThis, value))
         }
@@ -5421,7 +5421,7 @@ open class IUIElement
         try self._n_put_XYFocusRight(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_XYFocusUp()
-    public func _n_get_XYFocusUp(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_XYFocusUp(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusUp(pThis, __presult))
         }
@@ -5432,7 +5432,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_XYFocusUp(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_XYFocusUp(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_XYFocusUp(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusUp(pThis, value))
         }
@@ -5441,7 +5441,7 @@ open class IUIElement
         try self._n_put_XYFocusUp(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_XYFocusDown()
-    public func _n_get_XYFocusDown(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+    private func _n_get_XYFocusDown(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusDown(pThis, __presult))
         }
@@ -5452,7 +5452,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
     }
     // [IsSpecialName] void put_XYFocusDown(Microsoft.UI.Xaml.DependencyObject)
-    public func _n_put_XYFocusDown(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
+    private func _n_put_XYFocusDown(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_XYFocusDown(pThis, value))
         }
@@ -5461,7 +5461,7 @@ open class IUIElement
         try self._n_put_XYFocusDown(RawPointer(value));
     }
     // [IsSpecialName] bool get_IsTabStop()
-    public func _n_get_IsTabStop(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsTabStop(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTabStop(pThis, __presult))
         }
@@ -5472,7 +5472,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_IsTabStop(bool)
-    public func _n_put_IsTabStop(_ value : boolean) throws {
+    private func _n_put_IsTabStop(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsTabStop(pThis, value))
         }
@@ -5481,7 +5481,7 @@ open class IUIElement
         try self._n_put_IsTabStop(value);
     }
     // [IsSpecialName] System.Int32 get_TabIndex()
-    public func _n_get_TabIndex(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+    private func _n_get_TabIndex(_ __presult: UnsafeMutablePointer<INT32>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TabIndex(pThis, __presult))
         }
@@ -5492,7 +5492,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void put_TabIndex(System.Int32)
-    public func _n_put_TabIndex(_ value : INT32) throws {
+    private func _n_put_TabIndex(_ value : INT32) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TabIndex(pThis, value))
         }
@@ -5501,7 +5501,7 @@ open class IUIElement
         try self._n_put_TabIndex(value);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_KeyUp(Microsoft.UI.Xaml.Input.KeyEventHandler)
-    public func _n_add_KeyUp(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_KeyUp(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_KeyUp(pThis, handler, __presult))
         }
@@ -5512,7 +5512,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_KeyUp(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_KeyUp(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_KeyUp(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_KeyUp(pThis, token))
         }
@@ -5521,7 +5521,7 @@ open class IUIElement
         try self._n_remove_KeyUp(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_KeyDown(Microsoft.UI.Xaml.Input.KeyEventHandler)
-    public func _n_add_KeyDown(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_KeyDown(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_KeyDown(pThis, handler, __presult))
         }
@@ -5532,7 +5532,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_KeyDown(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_KeyDown(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_KeyDown(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_KeyDown(pThis, token))
         }
@@ -5541,7 +5541,7 @@ open class IUIElement
         try self._n_remove_KeyDown(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_GotFocus(Microsoft.UI.Xaml.RoutedEventHandler)
-    public func _n_add_GotFocus(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_GotFocus(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_GotFocus(pThis, handler, __presult))
         }
@@ -5552,7 +5552,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_GotFocus(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_GotFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_GotFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_GotFocus(pThis, token))
         }
@@ -5561,7 +5561,7 @@ open class IUIElement
         try self._n_remove_GotFocus(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_LostFocus(Microsoft.UI.Xaml.RoutedEventHandler)
-    public func _n_add_LostFocus(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_LostFocus(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_LostFocus(pThis, handler, __presult))
         }
@@ -5572,7 +5572,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_LostFocus(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_LostFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_LostFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_LostFocus(pThis, token))
         }
@@ -5581,7 +5581,7 @@ open class IUIElement
         try self._n_remove_LostFocus(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DragStarting(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.DragStartingEventArgs>)
-    public func _n_add_DragStarting(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DragStarting(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragStarting(pThis, handler, __presult))
         }
@@ -5592,7 +5592,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_DragStarting(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DragStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DragStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DragStarting(pThis, token))
         }
@@ -5601,7 +5601,7 @@ open class IUIElement
         try self._n_remove_DragStarting(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DropCompleted(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.DropCompletedEventArgs>)
-    public func _n_add_DropCompleted(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DropCompleted(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DropCompleted(pThis, handler, __presult))
         }
@@ -5612,7 +5612,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_DropCompleted(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DropCompleted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DropCompleted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DropCompleted(pThis, token))
         }
@@ -5621,7 +5621,7 @@ open class IUIElement
         try self._n_remove_DropCompleted(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_CharacterReceived(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>)
-    public func _n_add_CharacterReceived(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_CharacterReceived(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_CharacterReceived(pThis, handler, __presult))
         }
@@ -5632,7 +5632,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_CharacterReceived(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_CharacterReceived(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_CharacterReceived(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_CharacterReceived(pThis, token))
         }
@@ -5641,7 +5641,7 @@ open class IUIElement
         try self._n_remove_CharacterReceived(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DragEnter(Microsoft.UI.Xaml.DragEventHandler)
-    public func _n_add_DragEnter(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DragEnter(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragEnter(pThis, handler, __presult))
         }
@@ -5652,7 +5652,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_DragEnter(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DragEnter(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DragEnter(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DragEnter(pThis, token))
         }
@@ -5661,7 +5661,7 @@ open class IUIElement
         try self._n_remove_DragEnter(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DragLeave(Microsoft.UI.Xaml.DragEventHandler)
-    public func _n_add_DragLeave(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DragLeave(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragLeave(pThis, handler, __presult))
         }
@@ -5672,7 +5672,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_DragLeave(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DragLeave(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DragLeave(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DragLeave(pThis, token))
         }
@@ -5681,7 +5681,7 @@ open class IUIElement
         try self._n_remove_DragLeave(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DragOver(Microsoft.UI.Xaml.DragEventHandler)
-    public func _n_add_DragOver(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DragOver(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragOver(pThis, handler, __presult))
         }
@@ -5692,7 +5692,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_DragOver(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DragOver(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DragOver(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DragOver(pThis, token))
         }
@@ -5701,7 +5701,7 @@ open class IUIElement
         try self._n_remove_DragOver(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Drop(Microsoft.UI.Xaml.DragEventHandler)
-    public func _n_add_Drop(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Drop(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Drop(pThis, handler, __presult))
         }
@@ -5712,7 +5712,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_Drop(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Drop(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Drop(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Drop(pThis, token))
         }
@@ -5721,7 +5721,7 @@ open class IUIElement
         try self._n_remove_Drop(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerPressed(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerPressed(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerPressed(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerPressed(pThis, handler, __presult))
         }
@@ -5732,7 +5732,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerPressed(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerPressed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerPressed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerPressed(pThis, token))
         }
@@ -5741,7 +5741,7 @@ open class IUIElement
         try self._n_remove_PointerPressed(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerMoved(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerMoved(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerMoved(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerMoved(pThis, handler, __presult))
         }
@@ -5752,7 +5752,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerMoved(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerMoved(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerMoved(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerMoved(pThis, token))
         }
@@ -5761,7 +5761,7 @@ open class IUIElement
         try self._n_remove_PointerMoved(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerReleased(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerReleased(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerReleased(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerReleased(pThis, handler, __presult))
         }
@@ -5772,7 +5772,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerReleased(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerReleased(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerReleased(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerReleased(pThis, token))
         }
@@ -5781,7 +5781,7 @@ open class IUIElement
         try self._n_remove_PointerReleased(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerEntered(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerEntered(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerEntered(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerEntered(pThis, handler, __presult))
         }
@@ -5792,7 +5792,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerEntered(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerEntered(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerEntered(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerEntered(pThis, token))
         }
@@ -5801,7 +5801,7 @@ open class IUIElement
         try self._n_remove_PointerEntered(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerExited(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerExited(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerExited(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerExited(pThis, handler, __presult))
         }
@@ -5812,7 +5812,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerExited(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerExited(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerExited(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerExited(pThis, token))
         }
@@ -5821,7 +5821,7 @@ open class IUIElement
         try self._n_remove_PointerExited(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerCaptureLost(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerCaptureLost(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerCaptureLost(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerCaptureLost(pThis, handler, __presult))
         }
@@ -5832,7 +5832,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerCaptureLost(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerCaptureLost(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerCaptureLost(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerCaptureLost(pThis, token))
         }
@@ -5841,7 +5841,7 @@ open class IUIElement
         try self._n_remove_PointerCaptureLost(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerCanceled(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerCanceled(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerCanceled(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerCanceled(pThis, handler, __presult))
         }
@@ -5852,7 +5852,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerCanceled(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerCanceled(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerCanceled(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerCanceled(pThis, token))
         }
@@ -5861,7 +5861,7 @@ open class IUIElement
         try self._n_remove_PointerCanceled(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PointerWheelChanged(Microsoft.UI.Xaml.Input.PointerEventHandler)
-    public func _n_add_PointerWheelChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PointerWheelChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PointerWheelChanged(pThis, handler, __presult))
         }
@@ -5872,7 +5872,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PointerWheelChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PointerWheelChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PointerWheelChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PointerWheelChanged(pThis, token))
         }
@@ -5881,7 +5881,7 @@ open class IUIElement
         try self._n_remove_PointerWheelChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Tapped(Microsoft.UI.Xaml.Input.TappedEventHandler)
-    public func _n_add_Tapped(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Tapped(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Tapped(pThis, handler, __presult))
         }
@@ -5892,7 +5892,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_Tapped(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Tapped(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Tapped(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Tapped(pThis, token))
         }
@@ -5901,7 +5901,7 @@ open class IUIElement
         try self._n_remove_Tapped(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DoubleTapped(Microsoft.UI.Xaml.Input.DoubleTappedEventHandler)
-    public func _n_add_DoubleTapped(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DoubleTapped(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DoubleTapped(pThis, handler, __presult))
         }
@@ -5912,7 +5912,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_DoubleTapped(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DoubleTapped(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DoubleTapped(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DoubleTapped(pThis, token))
         }
@@ -5921,7 +5921,7 @@ open class IUIElement
         try self._n_remove_DoubleTapped(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Holding(Microsoft.UI.Xaml.Input.HoldingEventHandler)
-    public func _n_add_Holding(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Holding(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Holding(pThis, handler, __presult))
         }
@@ -5932,7 +5932,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_Holding(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Holding(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Holding(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Holding(pThis, token))
         }
@@ -5941,7 +5941,7 @@ open class IUIElement
         try self._n_remove_Holding(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ContextRequested(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>)
-    public func _n_add_ContextRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ContextRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ContextRequested(pThis, handler, __presult))
         }
@@ -5952,7 +5952,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ContextRequested(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ContextRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ContextRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ContextRequested(pThis, token))
         }
@@ -5961,7 +5961,7 @@ open class IUIElement
         try self._n_remove_ContextRequested(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ContextCanceled(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.RoutedEventArgs>)
-    public func _n_add_ContextCanceled(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ContextCanceled(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ContextCanceled(pThis, handler, __presult))
         }
@@ -5972,7 +5972,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ContextCanceled(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ContextCanceled(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ContextCanceled(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ContextCanceled(pThis, token))
         }
@@ -5981,7 +5981,7 @@ open class IUIElement
         try self._n_remove_ContextCanceled(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_RightTapped(Microsoft.UI.Xaml.Input.RightTappedEventHandler)
-    public func _n_add_RightTapped(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_RightTapped(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_RightTapped(pThis, handler, __presult))
         }
@@ -5992,7 +5992,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_RightTapped(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_RightTapped(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_RightTapped(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_RightTapped(pThis, token))
         }
@@ -6001,7 +6001,7 @@ open class IUIElement
         try self._n_remove_RightTapped(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ManipulationStarting(Microsoft.UI.Xaml.Input.ManipulationStartingEventHandler)
-    public func _n_add_ManipulationStarting(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ManipulationStarting(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ManipulationStarting(pThis, handler, __presult))
         }
@@ -6012,7 +6012,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ManipulationStarting(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ManipulationStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ManipulationStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ManipulationStarting(pThis, token))
         }
@@ -6021,7 +6021,7 @@ open class IUIElement
         try self._n_remove_ManipulationStarting(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ManipulationInertiaStarting(Microsoft.UI.Xaml.Input.ManipulationInertiaStartingEventHandler)
-    public func _n_add_ManipulationInertiaStarting(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ManipulationInertiaStarting(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ManipulationInertiaStarting(pThis, handler, __presult))
         }
@@ -6032,7 +6032,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ManipulationInertiaStarting(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ManipulationInertiaStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ManipulationInertiaStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ManipulationInertiaStarting(pThis, token))
         }
@@ -6041,7 +6041,7 @@ open class IUIElement
         try self._n_remove_ManipulationInertiaStarting(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ManipulationStarted(Microsoft.UI.Xaml.Input.ManipulationStartedEventHandler)
-    public func _n_add_ManipulationStarted(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ManipulationStarted(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ManipulationStarted(pThis, handler, __presult))
         }
@@ -6052,7 +6052,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ManipulationStarted(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ManipulationStarted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ManipulationStarted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ManipulationStarted(pThis, token))
         }
@@ -6061,7 +6061,7 @@ open class IUIElement
         try self._n_remove_ManipulationStarted(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ManipulationDelta(Microsoft.UI.Xaml.Input.ManipulationDeltaEventHandler)
-    public func _n_add_ManipulationDelta(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ManipulationDelta(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ManipulationDelta(pThis, handler, __presult))
         }
@@ -6072,7 +6072,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ManipulationDelta(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ManipulationDelta(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ManipulationDelta(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ManipulationDelta(pThis, token))
         }
@@ -6081,7 +6081,7 @@ open class IUIElement
         try self._n_remove_ManipulationDelta(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ManipulationCompleted(Microsoft.UI.Xaml.Input.ManipulationCompletedEventHandler)
-    public func _n_add_ManipulationCompleted(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ManipulationCompleted(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ManipulationCompleted(pThis, handler, __presult))
         }
@@ -6092,7 +6092,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ManipulationCompleted(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ManipulationCompleted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ManipulationCompleted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ManipulationCompleted(pThis, token))
         }
@@ -6101,7 +6101,7 @@ open class IUIElement
         try self._n_remove_ManipulationCompleted(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_AccessKeyDisplayRequested(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>)
-    public func _n_add_AccessKeyDisplayRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_AccessKeyDisplayRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_AccessKeyDisplayRequested(pThis, handler, __presult))
         }
@@ -6112,7 +6112,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_AccessKeyDisplayRequested(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_AccessKeyDisplayRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_AccessKeyDisplayRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_AccessKeyDisplayRequested(pThis, token))
         }
@@ -6121,7 +6121,7 @@ open class IUIElement
         try self._n_remove_AccessKeyDisplayRequested(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_AccessKeyDisplayDismissed(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>)
-    public func _n_add_AccessKeyDisplayDismissed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_AccessKeyDisplayDismissed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_AccessKeyDisplayDismissed(pThis, handler, __presult))
         }
@@ -6132,7 +6132,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_AccessKeyDisplayDismissed(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_AccessKeyDisplayDismissed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_AccessKeyDisplayDismissed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_AccessKeyDisplayDismissed(pThis, token))
         }
@@ -6141,7 +6141,7 @@ open class IUIElement
         try self._n_remove_AccessKeyDisplayDismissed(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_AccessKeyInvoked(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>)
-    public func _n_add_AccessKeyInvoked(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_AccessKeyInvoked(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_AccessKeyInvoked(pThis, handler, __presult))
         }
@@ -6152,7 +6152,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_AccessKeyInvoked(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_AccessKeyInvoked(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_AccessKeyInvoked(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_AccessKeyInvoked(pThis, token))
         }
@@ -6161,7 +6161,7 @@ open class IUIElement
         try self._n_remove_AccessKeyInvoked(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ProcessKeyboardAccelerators(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>)
-    public func _n_add_ProcessKeyboardAccelerators(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ProcessKeyboardAccelerators(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ProcessKeyboardAccelerators(pThis, handler, __presult))
         }
@@ -6172,7 +6172,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_ProcessKeyboardAccelerators(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ProcessKeyboardAccelerators(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ProcessKeyboardAccelerators(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ProcessKeyboardAccelerators(pThis, token))
         }
@@ -6181,7 +6181,7 @@ open class IUIElement
         try self._n_remove_ProcessKeyboardAccelerators(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_GettingFocus(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.GettingFocusEventArgs>)
-    public func _n_add_GettingFocus(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_GettingFocus(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_GettingFocus(pThis, handler, __presult))
         }
@@ -6192,7 +6192,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_GettingFocus(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_GettingFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_GettingFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_GettingFocus(pThis, token))
         }
@@ -6201,7 +6201,7 @@ open class IUIElement
         try self._n_remove_GettingFocus(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_LosingFocus(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.LosingFocusEventArgs>)
-    public func _n_add_LosingFocus(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_LosingFocus(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_LosingFocus(pThis, handler, __presult))
         }
@@ -6212,7 +6212,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_LosingFocus(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_LosingFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_LosingFocus(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_LosingFocus(pThis, token))
         }
@@ -6221,7 +6221,7 @@ open class IUIElement
         try self._n_remove_LosingFocus(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_NoFocusCandidateFound(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>)
-    public func _n_add_NoFocusCandidateFound(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_NoFocusCandidateFound(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_NoFocusCandidateFound(pThis, handler, __presult))
         }
@@ -6232,7 +6232,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_NoFocusCandidateFound(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_NoFocusCandidateFound(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_NoFocusCandidateFound(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_NoFocusCandidateFound(pThis, token))
         }
@@ -6241,7 +6241,7 @@ open class IUIElement
         try self._n_remove_NoFocusCandidateFound(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PreviewKeyDown(Microsoft.UI.Xaml.Input.KeyEventHandler)
-    public func _n_add_PreviewKeyDown(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PreviewKeyDown(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PreviewKeyDown(pThis, handler, __presult))
         }
@@ -6252,7 +6252,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PreviewKeyDown(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PreviewKeyDown(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PreviewKeyDown(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PreviewKeyDown(pThis, token))
         }
@@ -6261,7 +6261,7 @@ open class IUIElement
         try self._n_remove_PreviewKeyDown(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PreviewKeyUp(Microsoft.UI.Xaml.Input.KeyEventHandler)
-    public func _n_add_PreviewKeyUp(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PreviewKeyUp(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PreviewKeyUp(pThis, handler, __presult))
         }
@@ -6272,7 +6272,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_PreviewKeyUp(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PreviewKeyUp(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PreviewKeyUp(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PreviewKeyUp(pThis, token))
         }
@@ -6281,7 +6281,7 @@ open class IUIElement
         try self._n_remove_PreviewKeyUp(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_BringIntoViewRequested(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.UIElement,Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>)
-    public func _n_add_BringIntoViewRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_BringIntoViewRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_BringIntoViewRequested(pThis, handler, __presult))
         }
@@ -6292,7 +6292,7 @@ open class IUIElement
         return __result;
     }
     // [IsSpecialName] void remove_BringIntoViewRequested(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_BringIntoViewRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_BringIntoViewRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_BringIntoViewRequested(pThis, token))
         }
@@ -6301,7 +6301,7 @@ open class IUIElement
         try self._n_remove_BringIntoViewRequested(token);
     }
     // void Measure(Windows.Foundation.Size)
-    public func _n_Measure(_ availableSize : _q_CWindows_CFoundation_CSize) throws {
+    private func _n_Measure(_ availableSize : _q_CWindows_CFoundation_CSize) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Measure(pThis, availableSize))
         }
@@ -6310,7 +6310,7 @@ open class IUIElement
         try self._n_Measure(availableSize);
     }
     // void Arrange(Windows.Foundation.Rect)
-    public func _n_Arrange(_ finalRect : _q_CWindows_CFoundation_CRect) throws {
+    private func _n_Arrange(_ finalRect : _q_CWindows_CFoundation_CRect) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Arrange(pThis, finalRect))
         }
@@ -6319,7 +6319,7 @@ open class IUIElement
         try self._n_Arrange(finalRect);
     }
     // bool CapturePointer(Microsoft.UI.Xaml.Input.Pointer)
-    public func _n_CapturePointer(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointer>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_CapturePointer(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointer>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CapturePointer(pThis, value, __presult))
         }
@@ -6330,7 +6330,7 @@ open class IUIElement
         return __result;
     }
     // void ReleasePointerCapture(Microsoft.UI.Xaml.Input.Pointer)
-    public func _n_ReleasePointerCapture(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointer>>) throws {
+    private func _n_ReleasePointerCapture(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointer>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReleasePointerCapture(pThis, value))
         }
@@ -6339,7 +6339,7 @@ open class IUIElement
         try self._n_ReleasePointerCapture(RawPointer(value));
     }
     // void ReleasePointerCaptures()
-    public func _n_ReleasePointerCaptures() throws {
+    private func _n_ReleasePointerCaptures() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReleasePointerCaptures(pThis))
         }
@@ -6348,7 +6348,7 @@ open class IUIElement
         try self._n_ReleasePointerCaptures();
     }
     // void AddHandler(Microsoft.UI.Xaml.RoutedEvent, System.Object, bool)
-    public func _n_AddHandler(_ routedEvent : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>, _ handler : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ handledEventsToo : boolean) throws {
+    private func _n_AddHandler(_ routedEvent : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>, _ handler : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ handledEventsToo : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddHandler(pThis, routedEvent, handler, handledEventsToo))
         }
@@ -6357,7 +6357,7 @@ open class IUIElement
         try self._n_AddHandler(RawPointer(routedEvent), RawPointer(handler), handledEventsToo);
     }
     // void RemoveHandler(Microsoft.UI.Xaml.RoutedEvent, System.Object)
-    public func _n_RemoveHandler(_ routedEvent : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>, _ handler : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_RemoveHandler(_ routedEvent : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>, _ handler : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveHandler(pThis, routedEvent, handler))
         }
@@ -6366,7 +6366,7 @@ open class IUIElement
         try self._n_RemoveHandler(RawPointer(routedEvent), RawPointer(handler));
     }
     // Microsoft.UI.Xaml.Media.GeneralTransform TransformToVisual(Microsoft.UI.Xaml.UIElement)
-    public func _n_TransformToVisual(_ visual : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGeneralTransform>>>?) throws {
+    private func _n_TransformToVisual(_ visual : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGeneralTransform>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransformToVisual(pThis, visual, __presult))
         }
@@ -6377,7 +6377,7 @@ open class IUIElement
         return WinRT.Microsoft.UI.Xaml.Media.IGeneralTransform(consuming: __result);
     }
     // void InvalidateMeasure()
-    public func _n_InvalidateMeasure() throws {
+    private func _n_InvalidateMeasure() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InvalidateMeasure(pThis))
         }
@@ -6386,7 +6386,7 @@ open class IUIElement
         try self._n_InvalidateMeasure();
     }
     // void InvalidateArrange()
-    public func _n_InvalidateArrange() throws {
+    private func _n_InvalidateArrange() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InvalidateArrange(pThis))
         }
@@ -6395,7 +6395,7 @@ open class IUIElement
         try self._n_InvalidateArrange();
     }
     // void UpdateLayout()
-    public func _n_UpdateLayout() throws {
+    private func _n_UpdateLayout() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateLayout(pThis))
         }
@@ -6404,7 +6404,7 @@ open class IUIElement
         try self._n_UpdateLayout();
     }
     // bool CancelDirectManipulations()
-    public func _n_CancelDirectManipulations(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_CancelDirectManipulations(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CancelDirectManipulations(pThis, __presult))
         }
@@ -6415,7 +6415,7 @@ open class IUIElement
         return __result;
     }
     // Windows.Foundation.IAsyncOperation<Windows.ApplicationModel.DataTransfer.DataPackageOperation> StartDragAsync(Microsoft.UI.Input.PointerPoint)
-    public func _n_StartDragAsync(_ pointerPoint : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIPointerPoint>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>>?) throws {
+    private func _n_StartDragAsync(_ pointerPoint : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIPointerPoint>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.StartDragAsync(pThis, pointerPoint, __presult))
         }
@@ -6435,7 +6435,7 @@ open class IUIElement
         }
     }
     // void StartBringIntoView()
-    public func _n_StartBringIntoView() throws {
+    private func _n_StartBringIntoView() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.StartBringIntoView(pThis))
         }
@@ -6444,7 +6444,7 @@ open class IUIElement
         try self._n_StartBringIntoView();
     }
     // void StartBringIntoView(Microsoft.UI.Xaml.BringIntoViewOptions)
-    public func _n_StartBringIntoViewWithOptions(_ options : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewOptions>>) throws {
+    private func _n_StartBringIntoViewWithOptions(_ options : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewOptions>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.StartBringIntoViewWithOptions(pThis, options))
         }
@@ -6453,7 +6453,7 @@ open class IUIElement
         try self._n_StartBringIntoViewWithOptions(RawPointer(options));
     }
     // void TryInvokeKeyboardAccelerator(Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs)
-    public func _n_TryInvokeKeyboardAccelerator(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
+    private func _n_TryInvokeKeyboardAccelerator(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryInvokeKeyboardAccelerator(pThis, args))
         }
@@ -6462,7 +6462,7 @@ open class IUIElement
         try self._n_TryInvokeKeyboardAccelerator(RawPointer(args));
     }
     // bool Focus(Microsoft.UI.Xaml.FocusState)
-    public func _n_Focus(_ value : _q_CMicrosoft_CUI_CXaml_CFocusState, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_Focus(_ value : _q_CMicrosoft_CUI_CXaml_CFocusState, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Focus(pThis, value, __presult))
         }
@@ -6473,7 +6473,7 @@ open class IUIElement
         return __result;
     }
     // void StartAnimation(Microsoft.UI.Composition.ICompositionAnimationBase)
-    public func _n_StartAnimation(_ animation : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CICompositionAnimationBase>>) throws {
+    private func _n_StartAnimation(_ animation : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CICompositionAnimationBase>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.StartAnimation(pThis, animation))
         }
@@ -6482,7 +6482,7 @@ open class IUIElement
         try self._n_StartAnimation(RawPointer(animation));
     }
     // void StopAnimation(Microsoft.UI.Composition.ICompositionAnimationBase)
-    public func _n_StopAnimation(_ animation : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CICompositionAnimationBase>>) throws {
+    private func _n_StopAnimation(_ animation : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CICompositionAnimationBase>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.StopAnimation(pThis, animation))
         }
@@ -6831,7 +6831,7 @@ open class IUIElementOverrides
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9034f41e, Data2: 0xab7b, Data3 : 0x59e7, Data4 : (0x81, 0x68, 0x50, 0xde, 0x6b, 0x68, 0x9d, 0xde)) }
     // Microsoft.UI.Xaml.Automation.Peers.AutomationPeer OnCreateAutomationPeer()
-    public func _n_OnCreateAutomationPeer(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) throws {
+    private func _n_OnCreateAutomationPeer(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnCreateAutomationPeer(pThis, __presult))
         }
@@ -6842,7 +6842,7 @@ open class IUIElementOverrides
         return WinRT.Microsoft.UI.Xaml.Automation.Peers.IAutomationPeer(consuming: __result);
     }
     // void OnDisconnectVisualChildren()
-    public func _n_OnDisconnectVisualChildren() throws {
+    private func _n_OnDisconnectVisualChildren() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnDisconnectVisualChildren(pThis))
         }
@@ -6851,7 +6851,7 @@ open class IUIElementOverrides
         try self._n_OnDisconnectVisualChildren();
     }
     // Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IIterable<Windows.Foundation.Point>> FindSubElementsForTouchTargeting(Windows.Foundation.Point, Windows.Foundation.Rect)
-    public func _n_FindSubElementsForTouchTargeting(_ point : _q_CWindows_CFoundation_CPoint, _ boundingRect : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>>>?) throws {
+    private func _n_FindSubElementsForTouchTargeting(_ point : _q_CWindows_CFoundation_CPoint, _ boundingRect : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindSubElementsForTouchTargeting(pThis, point, boundingRect, __presult))
         }
@@ -6862,7 +6862,7 @@ open class IUIElementOverrides
         return WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint(consuming: __result);
     }
     // Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.DependencyObject> GetChildrenInTabFocusOrder()
-    public func _n_GetChildrenInTabFocusOrder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>>>?) throws {
+    private func _n_GetChildrenInTabFocusOrder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetChildrenInTabFocusOrder(pThis, __presult))
         }
@@ -6873,7 +6873,7 @@ open class IUIElementOverrides
         return WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject(consuming: __result);
     }
     // void OnKeyboardAcceleratorInvoked(Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs)
-    public func _n_OnKeyboardAcceleratorInvoked(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs>>) throws {
+    private func _n_OnKeyboardAcceleratorInvoked(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnKeyboardAcceleratorInvoked(pThis, args))
         }
@@ -6882,7 +6882,7 @@ open class IUIElementOverrides
         try self._n_OnKeyboardAcceleratorInvoked(RawPointer(args));
     }
     // void OnProcessKeyboardAccelerators(Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs)
-    public func _n_OnProcessKeyboardAccelerators(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
+    private func _n_OnProcessKeyboardAccelerators(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnProcessKeyboardAccelerators(pThis, args))
         }
@@ -6891,7 +6891,7 @@ open class IUIElementOverrides
         try self._n_OnProcessKeyboardAccelerators(RawPointer(args));
     }
     // void OnBringIntoViewRequested(Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs)
-    public func _n_OnBringIntoViewRequested(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) throws {
+    private func _n_OnBringIntoViewRequested(_ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnBringIntoViewRequested(pThis, e))
         }
@@ -6900,7 +6900,7 @@ open class IUIElementOverrides
         try self._n_OnBringIntoViewRequested(RawPointer(e));
     }
     // void PopulatePropertyInfoOverride(System.String, Microsoft.UI.Composition.AnimationPropertyInfo)
-    public func _n_PopulatePropertyInfoOverride(_ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
+    private func _n_PopulatePropertyInfoOverride(_ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfoOverride(pThis, propertyName, animationPropertyInfo))
         }
@@ -6922,7 +6922,7 @@ open class IUIElementProtected
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8f69b9e9, Data2: 0x1f00, Data3 : 0x5834, Data4 : (0x9b, 0xf1, 0xa9, 0x25, 0x7b, 0xed, 0x39, 0xf0)) }
     // [IsSpecialName] Microsoft.UI.Input.InputCursor get_ProtectedCursor()
-    public func _n_get_ProtectedCursor(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIInputCursor>>>?) throws {
+    private func _n_get_ProtectedCursor(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIInputCursor>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementProtected.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProtectedCursor(pThis, __presult))
         }
@@ -6933,7 +6933,7 @@ open class IUIElementProtected
         return WinRT.Microsoft.UI.Input.IInputCursor(consuming: __result);
     }
     // [IsSpecialName] void put_ProtectedCursor(Microsoft.UI.Input.InputCursor)
-    public func _n_put_ProtectedCursor(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIInputCursor>>) throws {
+    private func _n_put_ProtectedCursor(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIInputCursor>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementProtected.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProtectedCursor(pThis, value))
         }
@@ -6957,7 +6957,7 @@ open class IUIElementStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd2921d87, Data2: 0x3584, Data3 : 0x5e22, Data4 : (0x8a, 0x3a, 0xc2, 0xc7, 0x8d, 0xab, 0x4f, 0x6e)) }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_KeyDownEvent()
-    public func _n_get_KeyDownEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_KeyDownEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyDownEvent(pThis, __presult))
         }
@@ -6968,7 +6968,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_KeyUpEvent()
-    public func _n_get_KeyUpEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_KeyUpEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyUpEvent(pThis, __presult))
         }
@@ -6979,7 +6979,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerEnteredEvent()
-    public func _n_get_PointerEnteredEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerEnteredEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerEnteredEvent(pThis, __presult))
         }
@@ -6990,7 +6990,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerPressedEvent()
-    public func _n_get_PointerPressedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerPressedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerPressedEvent(pThis, __presult))
         }
@@ -7001,7 +7001,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerMovedEvent()
-    public func _n_get_PointerMovedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerMovedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerMovedEvent(pThis, __presult))
         }
@@ -7012,7 +7012,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerReleasedEvent()
-    public func _n_get_PointerReleasedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerReleasedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerReleasedEvent(pThis, __presult))
         }
@@ -7023,7 +7023,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerExitedEvent()
-    public func _n_get_PointerExitedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerExitedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerExitedEvent(pThis, __presult))
         }
@@ -7034,7 +7034,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerCaptureLostEvent()
-    public func _n_get_PointerCaptureLostEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerCaptureLostEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerCaptureLostEvent(pThis, __presult))
         }
@@ -7045,7 +7045,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerCanceledEvent()
-    public func _n_get_PointerCanceledEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerCanceledEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerCanceledEvent(pThis, __presult))
         }
@@ -7056,7 +7056,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PointerWheelChangedEvent()
-    public func _n_get_PointerWheelChangedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PointerWheelChangedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerWheelChangedEvent(pThis, __presult))
         }
@@ -7067,7 +7067,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_TappedEvent()
-    public func _n_get_TappedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_TappedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TappedEvent(pThis, __presult))
         }
@@ -7078,7 +7078,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_DoubleTappedEvent()
-    public func _n_get_DoubleTappedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_DoubleTappedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DoubleTappedEvent(pThis, __presult))
         }
@@ -7089,7 +7089,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_HoldingEvent()
-    public func _n_get_HoldingEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_HoldingEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HoldingEvent(pThis, __presult))
         }
@@ -7100,7 +7100,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_RightTappedEvent()
-    public func _n_get_RightTappedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_RightTappedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RightTappedEvent(pThis, __presult))
         }
@@ -7111,7 +7111,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_ManipulationStartingEvent()
-    public func _n_get_ManipulationStartingEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_ManipulationStartingEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationStartingEvent(pThis, __presult))
         }
@@ -7122,7 +7122,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_ManipulationInertiaStartingEvent()
-    public func _n_get_ManipulationInertiaStartingEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_ManipulationInertiaStartingEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationInertiaStartingEvent(pThis, __presult))
         }
@@ -7133,7 +7133,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_ManipulationStartedEvent()
-    public func _n_get_ManipulationStartedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_ManipulationStartedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationStartedEvent(pThis, __presult))
         }
@@ -7144,7 +7144,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_ManipulationDeltaEvent()
-    public func _n_get_ManipulationDeltaEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_ManipulationDeltaEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationDeltaEvent(pThis, __presult))
         }
@@ -7155,7 +7155,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_ManipulationCompletedEvent()
-    public func _n_get_ManipulationCompletedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_ManipulationCompletedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationCompletedEvent(pThis, __presult))
         }
@@ -7166,7 +7166,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_DragEnterEvent()
-    public func _n_get_DragEnterEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_DragEnterEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DragEnterEvent(pThis, __presult))
         }
@@ -7177,7 +7177,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_DragLeaveEvent()
-    public func _n_get_DragLeaveEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_DragLeaveEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DragLeaveEvent(pThis, __presult))
         }
@@ -7188,7 +7188,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_DragOverEvent()
-    public func _n_get_DragOverEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_DragOverEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DragOverEvent(pThis, __presult))
         }
@@ -7199,7 +7199,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_DropEvent()
-    public func _n_get_DropEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_DropEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DropEvent(pThis, __presult))
         }
@@ -7210,7 +7210,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_GettingFocusEvent()
-    public func _n_get_GettingFocusEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_GettingFocusEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GettingFocusEvent(pThis, __presult))
         }
@@ -7221,7 +7221,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_LosingFocusEvent()
-    public func _n_get_LosingFocusEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_LosingFocusEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LosingFocusEvent(pThis, __presult))
         }
@@ -7232,7 +7232,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_NoFocusCandidateFoundEvent()
-    public func _n_get_NoFocusCandidateFoundEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_NoFocusCandidateFoundEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NoFocusCandidateFoundEvent(pThis, __presult))
         }
@@ -7243,7 +7243,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PreviewKeyDownEvent()
-    public func _n_get_PreviewKeyDownEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PreviewKeyDownEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreviewKeyDownEvent(pThis, __presult))
         }
@@ -7254,7 +7254,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_CharacterReceivedEvent()
-    public func _n_get_CharacterReceivedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_CharacterReceivedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CharacterReceivedEvent(pThis, __presult))
         }
@@ -7265,7 +7265,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_PreviewKeyUpEvent()
-    public func _n_get_PreviewKeyUpEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_PreviewKeyUpEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreviewKeyUpEvent(pThis, __presult))
         }
@@ -7276,7 +7276,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_BringIntoViewRequestedEvent()
-    public func _n_get_BringIntoViewRequestedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_BringIntoViewRequestedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BringIntoViewRequestedEvent(pThis, __presult))
         }
@@ -7287,7 +7287,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.RoutedEvent get_ContextRequestedEvent()
-    public func _n_get_ContextRequestedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
+    private func _n_get_ContextRequestedEvent(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEvent>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContextRequestedEvent(pThis, __presult))
         }
@@ -7298,7 +7298,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IRoutedEvent(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AllowDropProperty()
-    public func _n_get_AllowDropProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_AllowDropProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowDropProperty(pThis, __presult))
         }
@@ -7309,7 +7309,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_OpacityProperty()
-    public func _n_get_OpacityProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_OpacityProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OpacityProperty(pThis, __presult))
         }
@@ -7320,7 +7320,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ClipProperty()
-    public func _n_get_ClipProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ClipProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClipProperty(pThis, __presult))
         }
@@ -7331,7 +7331,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RenderTransformProperty()
-    public func _n_get_RenderTransformProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_RenderTransformProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RenderTransformProperty(pThis, __presult))
         }
@@ -7342,7 +7342,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ProjectionProperty()
-    public func _n_get_ProjectionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ProjectionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProjectionProperty(pThis, __presult))
         }
@@ -7353,7 +7353,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_Transform3DProperty()
-    public func _n_get_Transform3DProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_Transform3DProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transform3DProperty(pThis, __presult))
         }
@@ -7364,7 +7364,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RenderTransformOriginProperty()
-    public func _n_get_RenderTransformOriginProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_RenderTransformOriginProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RenderTransformOriginProperty(pThis, __presult))
         }
@@ -7375,7 +7375,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsHitTestVisibleProperty()
-    public func _n_get_IsHitTestVisibleProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsHitTestVisibleProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsHitTestVisibleProperty(pThis, __presult))
         }
@@ -7386,7 +7386,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_VisibilityProperty()
-    public func _n_get_VisibilityProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_VisibilityProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_VisibilityProperty(pThis, __presult))
         }
@@ -7397,7 +7397,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_UseLayoutRoundingProperty()
-    public func _n_get_UseLayoutRoundingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_UseLayoutRoundingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UseLayoutRoundingProperty(pThis, __presult))
         }
@@ -7408,7 +7408,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TransitionsProperty()
-    public func _n_get_TransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_TransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TransitionsProperty(pThis, __presult))
         }
@@ -7419,7 +7419,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CacheModeProperty()
-    public func _n_get_CacheModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_CacheModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CacheModeProperty(pThis, __presult))
         }
@@ -7430,7 +7430,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsTapEnabledProperty()
-    public func _n_get_IsTapEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsTapEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTapEnabledProperty(pThis, __presult))
         }
@@ -7441,7 +7441,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsDoubleTapEnabledProperty()
-    public func _n_get_IsDoubleTapEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsDoubleTapEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsDoubleTapEnabledProperty(pThis, __presult))
         }
@@ -7452,7 +7452,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanDragProperty()
-    public func _n_get_CanDragProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_CanDragProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanDragProperty(pThis, __presult))
         }
@@ -7463,7 +7463,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsRightTapEnabledProperty()
-    public func _n_get_IsRightTapEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsRightTapEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsRightTapEnabledProperty(pThis, __presult))
         }
@@ -7474,7 +7474,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsHoldingEnabledProperty()
-    public func _n_get_IsHoldingEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsHoldingEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsHoldingEnabledProperty(pThis, __presult))
         }
@@ -7485,7 +7485,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ManipulationModeProperty()
-    public func _n_get_ManipulationModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ManipulationModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ManipulationModeProperty(pThis, __presult))
         }
@@ -7496,7 +7496,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PointerCapturesProperty()
-    public func _n_get_PointerCapturesProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_PointerCapturesProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerCapturesProperty(pThis, __presult))
         }
@@ -7507,7 +7507,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ContextFlyoutProperty()
-    public func _n_get_ContextFlyoutProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ContextFlyoutProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContextFlyoutProperty(pThis, __presult))
         }
@@ -7518,7 +7518,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CompositeModeProperty()
-    public func _n_get_CompositeModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_CompositeModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CompositeModeProperty(pThis, __presult))
         }
@@ -7529,7 +7529,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_LightsProperty()
-    public func _n_get_LightsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_LightsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightsProperty(pThis, __presult))
         }
@@ -7540,7 +7540,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanBeScrollAnchorProperty()
-    public func _n_get_CanBeScrollAnchorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_CanBeScrollAnchorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanBeScrollAnchorProperty(pThis, __presult))
         }
@@ -7551,7 +7551,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ExitDisplayModeOnAccessKeyInvokedProperty()
-    public func _n_get_ExitDisplayModeOnAccessKeyInvokedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ExitDisplayModeOnAccessKeyInvokedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExitDisplayModeOnAccessKeyInvokedProperty(pThis, __presult))
         }
@@ -7562,7 +7562,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsAccessKeyScopeProperty()
-    public func _n_get_IsAccessKeyScopeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsAccessKeyScopeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsAccessKeyScopeProperty(pThis, __presult))
         }
@@ -7573,7 +7573,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AccessKeyScopeOwnerProperty()
-    public func _n_get_AccessKeyScopeOwnerProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_AccessKeyScopeOwnerProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AccessKeyScopeOwnerProperty(pThis, __presult))
         }
@@ -7584,7 +7584,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AccessKeyProperty()
-    public func _n_get_AccessKeyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_AccessKeyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AccessKeyProperty(pThis, __presult))
         }
@@ -7595,7 +7595,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_KeyTipPlacementModeProperty()
-    public func _n_get_KeyTipPlacementModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_KeyTipPlacementModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipPlacementModeProperty(pThis, __presult))
         }
@@ -7606,7 +7606,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_KeyTipHorizontalOffsetProperty()
-    public func _n_get_KeyTipHorizontalOffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_KeyTipHorizontalOffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipHorizontalOffsetProperty(pThis, __presult))
         }
@@ -7617,7 +7617,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_KeyTipVerticalOffsetProperty()
-    public func _n_get_KeyTipVerticalOffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_KeyTipVerticalOffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipVerticalOffsetProperty(pThis, __presult))
         }
@@ -7628,7 +7628,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_KeyTipTargetProperty()
-    public func _n_get_KeyTipTargetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_KeyTipTargetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyTipTargetProperty(pThis, __presult))
         }
@@ -7639,7 +7639,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusKeyboardNavigationProperty()
-    public func _n_get_XYFocusKeyboardNavigationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusKeyboardNavigationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusKeyboardNavigationProperty(pThis, __presult))
         }
@@ -7650,7 +7650,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusUpNavigationStrategyProperty()
-    public func _n_get_XYFocusUpNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusUpNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusUpNavigationStrategyProperty(pThis, __presult))
         }
@@ -7661,7 +7661,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusDownNavigationStrategyProperty()
-    public func _n_get_XYFocusDownNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusDownNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusDownNavigationStrategyProperty(pThis, __presult))
         }
@@ -7672,7 +7672,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusLeftNavigationStrategyProperty()
-    public func _n_get_XYFocusLeftNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusLeftNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusLeftNavigationStrategyProperty(pThis, __presult))
         }
@@ -7683,7 +7683,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusRightNavigationStrategyProperty()
-    public func _n_get_XYFocusRightNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusRightNavigationStrategyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusRightNavigationStrategyProperty(pThis, __presult))
         }
@@ -7694,7 +7694,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_KeyboardAcceleratorPlacementTargetProperty()
-    public func _n_get_KeyboardAcceleratorPlacementTargetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_KeyboardAcceleratorPlacementTargetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyboardAcceleratorPlacementTargetProperty(pThis, __presult))
         }
@@ -7705,7 +7705,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_KeyboardAcceleratorPlacementModeProperty()
-    public func _n_get_KeyboardAcceleratorPlacementModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_KeyboardAcceleratorPlacementModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyboardAcceleratorPlacementModeProperty(pThis, __presult))
         }
@@ -7716,7 +7716,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HighContrastAdjustmentProperty()
-    public func _n_get_HighContrastAdjustmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_HighContrastAdjustmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HighContrastAdjustmentProperty(pThis, __presult))
         }
@@ -7727,7 +7727,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TabFocusNavigationProperty()
-    public func _n_get_TabFocusNavigationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_TabFocusNavigationProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TabFocusNavigationProperty(pThis, __presult))
         }
@@ -7738,7 +7738,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ShadowProperty()
-    public func _n_get_ShadowProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ShadowProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ShadowProperty(pThis, __presult))
         }
@@ -7749,7 +7749,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FocusStateProperty()
-    public func _n_get_FocusStateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_FocusStateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FocusStateProperty(pThis, __presult))
         }
@@ -7760,7 +7760,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_UseSystemFocusVisualsProperty()
-    public func _n_get_UseSystemFocusVisualsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_UseSystemFocusVisualsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UseSystemFocusVisualsProperty(pThis, __presult))
         }
@@ -7771,7 +7771,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusLeftProperty()
-    public func _n_get_XYFocusLeftProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusLeftProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusLeftProperty(pThis, __presult))
         }
@@ -7782,7 +7782,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusRightProperty()
-    public func _n_get_XYFocusRightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusRightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusRightProperty(pThis, __presult))
         }
@@ -7793,7 +7793,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusUpProperty()
-    public func _n_get_XYFocusUpProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusUpProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusUpProperty(pThis, __presult))
         }
@@ -7804,7 +7804,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_XYFocusDownProperty()
-    public func _n_get_XYFocusDownProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_XYFocusDownProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_XYFocusDownProperty(pThis, __presult))
         }
@@ -7815,7 +7815,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsTabStopProperty()
-    public func _n_get_IsTabStopProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsTabStopProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTabStopProperty(pThis, __presult))
         }
@@ -7826,7 +7826,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TabIndexProperty()
-    public func _n_get_TabIndexProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_TabIndexProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TabIndexProperty(pThis, __presult))
         }
@@ -7837,7 +7837,7 @@ open class IUIElementStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // bool TryStartDirectManipulation(Microsoft.UI.Xaml.Input.Pointer)
-    public func _n_TryStartDirectManipulation(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointer>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_TryStartDirectManipulation(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointer>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryStartDirectManipulation(pThis, value, __presult))
         }
@@ -7848,7 +7848,7 @@ open class IUIElementStatics
         return __result;
     }
     // void RegisterAsScrollPort(Microsoft.UI.Xaml.UIElement)
-    public func _n_RegisterAsScrollPort(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_RegisterAsScrollPort(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUIElementStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RegisterAsScrollPort(pThis, element))
         }
@@ -8296,7 +8296,7 @@ open class IVector3TransitionFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa3a084fc, Data2: 0xb965, Data3 : 0x534b, Data4 : (0x90, 0x0f, 0x78, 0xe2, 0x88, 0x12, 0x92, 0x32)) }
     // Microsoft.UI.Xaml.Vector3Transition CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIVector3Transition>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIVector3TransitionFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -8319,7 +8319,7 @@ open class IWindow
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61f0ec79, Data2: 0x5d52, Data3 : 0x56b5, Data4 : (0x86, 0xfb, 0x40, 0xfa, 0x4a, 0xf2, 0x88, 0xb0)) }
     // [IsSpecialName] Windows.Foundation.Rect get_Bounds()
-    public func _n_get_Bounds(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CRect>?) throws {
+    private func _n_get_Bounds(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CRect>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Bounds(pThis, __presult))
         }
@@ -8330,7 +8330,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] bool get_Visible()
-    public func _n_get_Visible(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_Visible(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Visible(pThis, __presult))
         }
@@ -8341,7 +8341,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] Microsoft.UI.Xaml.UIElement get_Content()
-    public func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
+    private func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Content(pThis, __presult))
         }
@@ -8352,7 +8352,7 @@ open class IWindow
         return WinRT.Microsoft.UI.Xaml.IUIElement(consuming: __result);
     }
     // [IsSpecialName] void put_Content(Microsoft.UI.Xaml.UIElement)
-    public func _n_put_Content(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_put_Content(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Content(pThis, value))
         }
@@ -8361,7 +8361,7 @@ open class IWindow
         try self._n_put_Content(RawPointer(value));
     }
     // [IsSpecialName] Windows.UI.Core.CoreWindow get_CoreWindow()
-    public func _n_get_CoreWindow(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreWindow>>>?) throws {
+    private func _n_get_CoreWindow(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreWindow>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CoreWindow(pThis, __presult))
         }
@@ -8372,7 +8372,7 @@ open class IWindow
         return WinRT.Windows.UI.Core.ICoreWindow(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Composition.Compositor get_Compositor()
-    public func _n_get_Compositor(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CICompositor>>>?) throws {
+    private func _n_get_Compositor(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CICompositor>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Compositor(pThis, __presult))
         }
@@ -8383,7 +8383,7 @@ open class IWindow
         return WinRT.Microsoft.UI.Composition.ICompositor(consuming: __result);
     }
     // [IsSpecialName] Windows.UI.Core.CoreDispatcher get_Dispatcher()
-    public func _n_get_Dispatcher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreDispatcher>>>?) throws {
+    private func _n_get_Dispatcher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreDispatcher>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Dispatcher(pThis, __presult))
         }
@@ -8394,7 +8394,7 @@ open class IWindow
         return WinRT.Windows.UI.Core.ICoreDispatcher(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Dispatching.DispatcherQueue get_DispatcherQueue()
-    public func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue>>>?) throws {
+    private func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DispatcherQueue(pThis, __presult))
         }
@@ -8405,7 +8405,7 @@ open class IWindow
         return WinRT.Microsoft.UI.Dispatching.IDispatcherQueue(consuming: __result);
     }
     // [IsSpecialName] System.String get_Title()
-    public func _n_get_Title(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Title(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Title(pThis, __presult))
         }
@@ -8416,7 +8416,7 @@ open class IWindow
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_Title(System.String)
-    public func _n_put_Title(_ value : Optional<HSTRING>) throws {
+    private func _n_put_Title(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
@@ -8428,7 +8428,7 @@ open class IWindow
         }
     }
     // [IsSpecialName] bool get_ExtendsContentIntoTitleBar()
-    public func _n_get_ExtendsContentIntoTitleBar(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_ExtendsContentIntoTitleBar(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExtendsContentIntoTitleBar(pThis, __presult))
         }
@@ -8439,7 +8439,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] void put_ExtendsContentIntoTitleBar(bool)
-    public func _n_put_ExtendsContentIntoTitleBar(_ value : boolean) throws {
+    private func _n_put_ExtendsContentIntoTitleBar(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ExtendsContentIntoTitleBar(pThis, value))
         }
@@ -8448,7 +8448,7 @@ open class IWindow
         try self._n_put_ExtendsContentIntoTitleBar(value);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Activated(Windows.Foundation.TypedEventHandler<System.Object,Microsoft.UI.Xaml.WindowActivatedEventArgs>)
-    public func _n_add_Activated(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Activated(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Activated(pThis, handler, __presult))
         }
@@ -8459,7 +8459,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] void remove_Activated(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Activated(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Activated(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Activated(pThis, token))
         }
@@ -8468,7 +8468,7 @@ open class IWindow
         try self._n_remove_Activated(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Closed(Windows.Foundation.TypedEventHandler<System.Object,Microsoft.UI.Xaml.WindowEventArgs>)
-    public func _n_add_Closed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Closed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Closed(pThis, handler, __presult))
         }
@@ -8479,7 +8479,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] void remove_Closed(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Closed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Closed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Closed(pThis, token))
         }
@@ -8488,7 +8488,7 @@ open class IWindow
         try self._n_remove_Closed(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_SizeChanged(Windows.Foundation.TypedEventHandler<System.Object,Microsoft.UI.Xaml.WindowSizeChangedEventArgs>)
-    public func _n_add_SizeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_SizeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SizeChanged(pThis, handler, __presult))
         }
@@ -8499,7 +8499,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] void remove_SizeChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_SizeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_SizeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_SizeChanged(pThis, token))
         }
@@ -8508,7 +8508,7 @@ open class IWindow
         try self._n_remove_SizeChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_VisibilityChanged(Windows.Foundation.TypedEventHandler<System.Object,Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>)
-    public func _n_add_VisibilityChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_VisibilityChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_VisibilityChanged(pThis, handler, __presult))
         }
@@ -8519,7 +8519,7 @@ open class IWindow
         return __result;
     }
     // [IsSpecialName] void remove_VisibilityChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_VisibilityChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_VisibilityChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_VisibilityChanged(pThis, token))
         }
@@ -8528,7 +8528,7 @@ open class IWindow
         try self._n_remove_VisibilityChanged(token);
     }
     // void Activate()
-    public func _n_Activate() throws {
+    private func _n_Activate() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Activate(pThis))
         }
@@ -8537,7 +8537,7 @@ open class IWindow
         try self._n_Activate();
     }
     // void Close()
-    public func _n_Close() throws {
+    private func _n_Close() throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Close(pThis))
         }
@@ -8546,7 +8546,7 @@ open class IWindow
         try self._n_Close();
     }
     // void SetTitleBar(Microsoft.UI.Xaml.UIElement)
-    public func _n_SetTitleBar(_ titleBar : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_SetTitleBar(_ titleBar : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindow.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetTitleBar(pThis, titleBar))
         }
@@ -8636,7 +8636,7 @@ open class IWindowFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf0441536, Data2: 0xafef, Data3 : 0x5222, Data4 : (0x91, 0x8f, 0x32, 0x4a, 0x9b, 0x2d, 0xec, 0x75)) }
     // Microsoft.UI.Xaml.Window CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindow>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindow>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindowFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -8672,7 +8672,7 @@ open class IWindowStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8cc985e3, Data2: 0xa41a, Data3 : 0x5df4, Data4 : (0xb5, 0x31, 0xd3, 0xa1, 0x78, 0x8d, 0x86, 0xc5)) }
     // [IsSpecialName] Microsoft.UI.Xaml.Window get_Current()
-    public func _n_get_Current(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindow>>>?) throws {
+    private func _n_get_Current(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIWindow>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIWindowStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, __presult))
         }
@@ -8816,7 +8816,7 @@ open class IRoutedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdae23d85, Data2: 0x69ca, Data3 : 0x5bdf, Data4 : (0x80, 0x5b, 0x61, 0x61, 0xa3, 0xa2, 0x15, 0xcc)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.RoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -8949,7 +8949,7 @@ open class ISizeChangedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8d7b1a58, Data2: 0x14c6, Data3 : 0x51c9, Data4 : (0x89, 0x2c, 0x9f, 0xcc, 0xe3, 0x68, 0xe7, 0x7d)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.SizeChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CISizeChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CISizeChangedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -11469,7 +11469,7 @@ open class IUnhandledExceptionEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3427c1b6, Data2: 0x5eca, Data3 : 0x5631, Data4 : (0x84, 0xb8, 0x5b, 0xae, 0x73, 0x2f, 0xb6, 0x7f)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.UnhandledExceptionEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }

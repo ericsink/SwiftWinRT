@@ -29,7 +29,7 @@ open class IPowerManagerStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfa3554cc, Data2: 0xbe1c, Data3 : 0x534c, Data4 : (0xbf, 0xf8, 0x72, 0xdf, 0x78, 0xe9, 0xf4, 0xa4)) }
     // [IsSpecialName] Microsoft.Windows.System.Power.EnergySaverStatus get_EnergySaverStatus()
-    public func _n_get_EnergySaverStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus>?) throws {
+    private func _n_get_EnergySaverStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEnergySaverStatus>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EnergySaverStatus(pThis, __presult))
         }
@@ -40,7 +40,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_EnergySaverStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_EnergySaverStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_EnergySaverStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_EnergySaverStatusChanged(pThis, handler, __presult))
         }
@@ -51,7 +51,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_EnergySaverStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_EnergySaverStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_EnergySaverStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_EnergySaverStatusChanged(pThis, token))
         }
@@ -60,7 +60,7 @@ open class IPowerManagerStatics
         try self._n_remove_EnergySaverStatusChanged(token);
     }
     // [IsSpecialName] Microsoft.Windows.System.Power.BatteryStatus get_BatteryStatus()
-    public func _n_get_BatteryStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus>?) throws {
+    private func _n_get_BatteryStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CBatteryStatus>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BatteryStatus(pThis, __presult))
         }
@@ -71,7 +71,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_BatteryStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_BatteryStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_BatteryStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_BatteryStatusChanged(pThis, handler, __presult))
         }
@@ -82,7 +82,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_BatteryStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_BatteryStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_BatteryStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_BatteryStatusChanged(pThis, token))
         }
@@ -91,7 +91,7 @@ open class IPowerManagerStatics
         try self._n_remove_BatteryStatusChanged(token);
     }
     // [IsSpecialName] Microsoft.Windows.System.Power.PowerSupplyStatus get_PowerSupplyStatus()
-    public func _n_get_PowerSupplyStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus>?) throws {
+    private func _n_get_PowerSupplyStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CPowerSupplyStatus>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PowerSupplyStatus(pThis, __presult))
         }
@@ -102,7 +102,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PowerSupplyStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_PowerSupplyStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PowerSupplyStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PowerSupplyStatusChanged(pThis, handler, __presult))
         }
@@ -113,7 +113,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_PowerSupplyStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PowerSupplyStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PowerSupplyStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PowerSupplyStatusChanged(pThis, token))
         }
@@ -122,7 +122,7 @@ open class IPowerManagerStatics
         try self._n_remove_PowerSupplyStatusChanged(token);
     }
     // [IsSpecialName] System.Int32 get_RemainingChargePercent()
-    public func _n_get_RemainingChargePercent(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+    private func _n_get_RemainingChargePercent(_ __presult: UnsafeMutablePointer<INT32>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RemainingChargePercent(pThis, __presult))
         }
@@ -133,7 +133,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_RemainingChargePercentChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_RemainingChargePercentChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_RemainingChargePercentChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemainingChargePercentChanged(pThis, handler, __presult))
         }
@@ -144,7 +144,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_RemainingChargePercentChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_RemainingChargePercentChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_RemainingChargePercentChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_RemainingChargePercentChanged(pThis, token))
         }
@@ -153,7 +153,7 @@ open class IPowerManagerStatics
         try self._n_remove_RemainingChargePercentChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.TimeSpan get_RemainingDischargeTime()
-    public func _n_get_RemainingDischargeTime(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CTimeSpan>?) throws {
+    private func _n_get_RemainingDischargeTime(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CTimeSpan>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RemainingDischargeTime(pThis, __presult))
         }
@@ -164,7 +164,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_RemainingDischargeTimeChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_RemainingDischargeTimeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_RemainingDischargeTimeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemainingDischargeTimeChanged(pThis, handler, __presult))
         }
@@ -175,7 +175,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_RemainingDischargeTimeChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_RemainingDischargeTimeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_RemainingDischargeTimeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_RemainingDischargeTimeChanged(pThis, token))
         }
@@ -184,7 +184,7 @@ open class IPowerManagerStatics
         try self._n_remove_RemainingDischargeTimeChanged(token);
     }
     // [IsSpecialName] Microsoft.Windows.System.Power.PowerSourceKind get_PowerSourceKind()
-    public func _n_get_PowerSourceKind(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind>?) throws {
+    private func _n_get_PowerSourceKind(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CPowerSourceKind>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PowerSourceKind(pThis, __presult))
         }
@@ -195,7 +195,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_PowerSourceKindChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_PowerSourceKindChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_PowerSourceKindChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PowerSourceKindChanged(pThis, handler, __presult))
         }
@@ -206,7 +206,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_PowerSourceKindChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_PowerSourceKindChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_PowerSourceKindChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_PowerSourceKindChanged(pThis, token))
         }
@@ -215,7 +215,7 @@ open class IPowerManagerStatics
         try self._n_remove_PowerSourceKindChanged(token);
     }
     // [IsSpecialName] Microsoft.Windows.System.Power.DisplayStatus get_DisplayStatus()
-    public func _n_get_DisplayStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus>?) throws {
+    private func _n_get_DisplayStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CDisplayStatus>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayStatus(pThis, __presult))
         }
@@ -226,7 +226,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DisplayStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_DisplayStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_DisplayStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DisplayStatusChanged(pThis, handler, __presult))
         }
@@ -237,7 +237,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_DisplayStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_DisplayStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_DisplayStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DisplayStatusChanged(pThis, token))
         }
@@ -246,7 +246,7 @@ open class IPowerManagerStatics
         try self._n_remove_DisplayStatusChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_SystemIdleStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_SystemIdleStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_SystemIdleStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SystemIdleStatusChanged(pThis, handler, __presult))
         }
@@ -257,7 +257,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_SystemIdleStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_SystemIdleStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_SystemIdleStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_SystemIdleStatusChanged(pThis, token))
         }
@@ -266,7 +266,7 @@ open class IPowerManagerStatics
         try self._n_remove_SystemIdleStatusChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.IAsyncOperation<Microsoft.Windows.System.Power.EffectivePowerMode> get_EffectivePowerMode()
-    public func _n_get_EffectivePowerMode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>>?) throws {
+    private func _n_get_EffectivePowerMode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>>>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EffectivePowerMode(pThis, __presult))
         }
@@ -286,7 +286,7 @@ open class IPowerManagerStatics
         }
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_EffectivePowerModeChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_EffectivePowerModeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_EffectivePowerModeChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_EffectivePowerModeChanged(pThis, handler, __presult))
         }
@@ -297,7 +297,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_EffectivePowerModeChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_EffectivePowerModeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_EffectivePowerModeChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_EffectivePowerModeChanged(pThis, token))
         }
@@ -306,7 +306,7 @@ open class IPowerManagerStatics
         try self._n_remove_EffectivePowerModeChanged(token);
     }
     // [IsSpecialName] Microsoft.Windows.System.Power.UserPresenceStatus get_UserPresenceStatus()
-    public func _n_get_UserPresenceStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus>?) throws {
+    private func _n_get_UserPresenceStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UserPresenceStatus(pThis, __presult))
         }
@@ -317,7 +317,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_UserPresenceStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_UserPresenceStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_UserPresenceStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_UserPresenceStatusChanged(pThis, handler, __presult))
         }
@@ -328,7 +328,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_UserPresenceStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_UserPresenceStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_UserPresenceStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_UserPresenceStatusChanged(pThis, token))
         }
@@ -337,7 +337,7 @@ open class IPowerManagerStatics
         try self._n_remove_UserPresenceStatusChanged(token);
     }
     // [IsSpecialName] Microsoft.Windows.System.Power.SystemSuspendStatus get_SystemSuspendStatus()
-    public func _n_get_SystemSuspendStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus>?) throws {
+    private func _n_get_SystemSuspendStatus(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CSystemSuspendStatus>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemSuspendStatus(pThis, __presult))
         }
@@ -348,7 +348,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_SystemSuspendStatusChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_SystemSuspendStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_SystemSuspendStatusChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SystemSuspendStatusChanged(pThis, handler, __presult))
         }
@@ -359,7 +359,7 @@ open class IPowerManagerStatics
         return __result;
     }
     // [IsSpecialName] void remove_SystemSuspendStatusChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_SystemSuspendStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_SystemSuspendStatusChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_SystemSuspendStatusChanged(pThis, token))
         }
@@ -428,7 +428,7 @@ open class IPowerManagerStatics2
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61f3cc25, Data2: 0x65b4, Data3 : 0x5def, Data4 : (0x9c, 0x9b, 0x99, 0x0c, 0xef, 0x3b, 0x08, 0x33)) }
     // [IsSpecialName] Microsoft.Windows.System.Power.EffectivePowerMode get_EffectivePowerMode2()
-    public func _n_get_EffectivePowerMode2(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>?) throws {
+    private func _n_get_EffectivePowerMode2(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>?) throws {
         return try perform(as: _q_CMicrosoft_CWindows_CSystem_CPower_CIPowerManagerStatics2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EffectivePowerMode2(pThis, __presult))
         }

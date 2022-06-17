@@ -139,7 +139,7 @@ open class IHttpClient
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7fda1151, Data2: 0x3574, Data3 : 0x4880, Data4 : (0xa8, 0xba, 0xe6, 0xb1, 0xe0, 0x06, 0x1f, 0x3d)) }
 // method not needed: DeleteAsync
     // Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> GetAsync(Windows.Foundation.Uri)
-    public func _n_GetAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
+    private func _n_GetAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
         return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpClient.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAsync(pThis, uri, __presult))
         }
@@ -179,7 +179,7 @@ open class IHttpClientFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc30c4eca, Data2: 0xe3fa, Data3 : 0x4f99, Data4 : (0xaf, 0xb4, 0x63, 0xcc, 0x65, 0x00, 0x94, 0x62)) }
     // Windows.Web.Http.HttpClient Create(Windows.Web.Http.Filters.IHttpFilter)
-    public func _n_Create(_ filter : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpClient>>>?) throws {
+    private func _n_Create(_ filter : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpClient>>>?) throws {
         return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpClientFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, filter, __presult))
         }
@@ -204,7 +204,7 @@ open class IHttpContent
 // method not needed: ReadAsBufferAsync
 // method not needed: ReadAsInputStreamAsync
     // Windows.Foundation.IAsyncOperationWithProgress<System.String,System.UInt64> ReadAsStringAsync()
-    public func _n_ReadAsStringAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>>?) throws {
+    private func _n_ReadAsStringAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>>?) throws {
         return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpContent.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadAsStringAsync(pThis, __presult))
         }
@@ -236,7 +236,7 @@ open class IHttpResponseMessage
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfee200fb, Data2: 0x8664, Data3 : 0x44e0, Data4 : (0x95, 0xd9, 0x42, 0x69, 0x61, 0x99, 0xbf, 0xfc)) }
     // [IsSpecialName] Windows.Web.Http.IHttpContent get_Content()
-    public func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>>>?) throws {
+    private func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>>>?) throws {
         return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpResponseMessage.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Content(pThis, __presult))
         }
@@ -260,7 +260,7 @@ open class IHttpResponseMessage
 // method not needed: get_Version
 // method not needed: put_Version
     // Windows.Web.Http.HttpResponseMessage EnsureSuccessStatusCode()
-    public func _n_EnsureSuccessStatusCode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
+    private func _n_EnsureSuccessStatusCode(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
         return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpResponseMessage.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.EnsureSuccessStatusCode(pThis, __presult))
         }
@@ -287,7 +287,7 @@ open class IHttpResponseMessageFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x52a8af99, Data2: 0xf095, Data3 : 0x43da, Data4 : (0xb6, 0x0f, 0x7c, 0xfc, 0x2b, 0xc7, 0xea, 0x2f)) }
     // Windows.Web.Http.HttpResponseMessage Create(Windows.Web.Http.HttpStatusCode)
-    public func _n_Create(_ statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
+    private func _n_Create(_ statusCode : _q_CWindows_CWeb_CHttp_CHttpStatusCode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpResponseMessage>>>?) throws {
         return try perform(as: _q_CWindows_CWeb_CHttp_CIHttpResponseMessageFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, statusCode, __presult))
         }

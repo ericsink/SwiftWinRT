@@ -24,7 +24,7 @@ open class IInlineFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfd253a36, Data2: 0xfa2b, Data3 : 0x5b30, Data4 : (0x89, 0xa8, 0x9f, 0x57, 0x78, 0x71, 0xec, 0x07)) }
     // Microsoft.UI.Xaml.Documents.Inline CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CDocuments_CIInlineFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -123,7 +123,7 @@ open class ITextHighlighterFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x69c7311f, Data2: 0xc019, Data3 : 0x5b93, Data4 : (0xb5, 0x11, 0x81, 0x41, 0x85, 0x43, 0xba, 0xb7)) }
     // Microsoft.UI.Xaml.Documents.TextHighlighter CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighterFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }

@@ -27,7 +27,7 @@ open class INotificationDataFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x23c1e33a, Data2: 0x1c10, Data3 : 0x46fb, Data4 : (0x80, 0x40, 0xde, 0xc3, 0x84, 0x62, 0x1c, 0xf8)) }
     // Windows.UI.Notifications.NotificationData CreateNotificationData(Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>, System.UInt32)
-    public func _n_CreateNotificationDataWithValuesAndSequenceNumber(_ initialValues : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING>>, _ sequenceNumber : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>>?) throws {
+    private func _n_CreateNotificationDataWithValuesAndSequenceNumber(_ initialValues : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING>>, _ sequenceNumber : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CINotificationDataFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateNotificationDataWithValuesAndSequenceNumber(pThis, initialValues, sequenceNumber, __presult))
         }
@@ -38,7 +38,7 @@ open class INotificationDataFactory
         return WinRT.Windows.UI.Notifications.INotificationData(consuming: __result);
     }
     // Windows.UI.Notifications.NotificationData CreateNotificationData(Windows.Foundation.Collections.IIterable<Windows.Foundation.Collections.IKeyValuePair<System.String,System.String>>)
-    public func _n_CreateNotificationDataWithValues(_ initialValues : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>>?) throws {
+    private func _n_CreateNotificationDataWithValues(_ initialValues : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CINotificationDataFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateNotificationDataWithValues(pThis, initialValues, __presult))
         }
@@ -76,7 +76,7 @@ open class IScheduledToastNotificationFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe7bed191, Data2: 0x0bb9, Data3 : 0x4189, Data4 : (0x83, 0x94, 0x31, 0x76, 0x1b, 0x47, 0x6f, 0xd7)) }
     // Windows.UI.Notifications.ScheduledToastNotification CreateScheduledToastNotification(Windows.Data.Xml.Dom.XmlDocument, Windows.Foundation.DateTime)
-    public func _n_CreateScheduledToastNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ deliveryTime : _q_CWindows_CFoundation_CDateTime, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>>?) throws {
+    private func _n_CreateScheduledToastNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ deliveryTime : _q_CWindows_CFoundation_CDateTime, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateScheduledToastNotification(pThis, content, deliveryTime, __presult))
         }
@@ -87,7 +87,7 @@ open class IScheduledToastNotificationFactory
         return WinRT.Windows.UI.Notifications.IScheduledToastNotification(consuming: __result);
     }
     // Windows.UI.Notifications.ScheduledToastNotification CreateScheduledToastNotificationRecurring(Windows.Data.Xml.Dom.XmlDocument, Windows.Foundation.DateTime, Windows.Foundation.TimeSpan, System.UInt32)
-    public func _n_CreateScheduledToastNotificationRecurring(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ deliveryTime : _q_CWindows_CFoundation_CDateTime, _ snoozeInterval : _q_CWindows_CFoundation_CTimeSpan, _ maximumSnoozeCount : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>>?) throws {
+    private func _n_CreateScheduledToastNotificationRecurring(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ deliveryTime : _q_CWindows_CFoundation_CDateTime, _ snoozeInterval : _q_CWindows_CFoundation_CTimeSpan, _ maximumSnoozeCount : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIScheduledToastNotificationFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateScheduledToastNotificationRecurring(pThis, content, deliveryTime, snoozeInterval, maximumSnoozeCount, __presult))
         }
@@ -144,7 +144,7 @@ open class IToastNotification
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x997e2675, Data2: 0x059e, Data3 : 0x4e60, Data4 : (0x8b, 0x06, 0x17, 0x60, 0x91, 0x7c, 0x8b, 0x80)) }
     // [IsSpecialName] Windows.Data.Xml.Dom.XmlDocument get_Content()
-    public func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
+    private func _n_get_Content(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Content(pThis, __presult))
         }
@@ -155,7 +155,7 @@ open class IToastNotification
         return WinRT.Windows.Data.Xml.Dom.IXmlDocument(consuming: __result);
     }
     // [IsSpecialName] void put_ExpirationTime(Windows.Foundation.IReference<Windows.Foundation.DateTime>)
-    public func _n_put_ExpirationTime(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime>>) throws {
+    private func _n_put_ExpirationTime(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime>>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ExpirationTime(pThis, value))
         }
@@ -164,7 +164,7 @@ open class IToastNotification
         try self._n_put_ExpirationTime(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.IReference<Windows.Foundation.DateTime> get_ExpirationTime()
-    public func _n_get_ExpirationTime(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime>>>?) throws {
+    private func _n_get_ExpirationTime(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExpirationTime(pThis, __presult))
         }
@@ -175,7 +175,7 @@ open class IToastNotification
         return WinRT.Windows.Foundation.IReference_1__q_CWindows_CFoundation_CDateTime(consuming: __result);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Dismissed(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastDismissedEventArgs>)
-    public func _n_add_Dismissed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Dismissed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Dismissed(pThis, handler, __presult))
         }
@@ -186,7 +186,7 @@ open class IToastNotification
         return __result;
     }
     // [IsSpecialName] void remove_Dismissed(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Dismissed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Dismissed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Dismissed(pThis, token))
         }
@@ -195,7 +195,7 @@ open class IToastNotification
         try self._n_remove_Dismissed(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Activated(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,System.Object>)
-    public func _n_add_Activated(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Activated(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Activated(pThis, handler, __presult))
         }
@@ -206,7 +206,7 @@ open class IToastNotification
         return __result;
     }
     // [IsSpecialName] void remove_Activated(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Activated(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Activated(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Activated(pThis, token))
         }
@@ -215,7 +215,7 @@ open class IToastNotification
         try self._n_remove_Activated(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Failed(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotification,Windows.UI.Notifications.ToastFailedEventArgs>)
-    public func _n_add_Failed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Failed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Failed(pThis, handler, __presult))
         }
@@ -226,7 +226,7 @@ open class IToastNotification
         return __result;
     }
     // [IsSpecialName] void remove_Failed(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Failed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Failed(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Failed(pThis, token))
         }
@@ -255,7 +255,7 @@ open class IToastNotification2
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9dfb9fd1, Data2: 0x143a, Data3 : 0x490e, Data4 : (0x90, 0xbf, 0xb9, 0xfb, 0xa7, 0x13, 0x2d, 0xe7)) }
     // [IsSpecialName] void put_Tag(System.String)
-    public func _n_put_Tag(_ value : Optional<HSTRING>) throws {
+    private func _n_put_Tag(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Tag(pThis, value))
         }
@@ -267,7 +267,7 @@ open class IToastNotification2
         }
     }
     // [IsSpecialName] System.String get_Tag()
-    public func _n_get_Tag(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Tag(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Tag(pThis, __presult))
         }
@@ -278,7 +278,7 @@ open class IToastNotification2
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_Group(System.String)
-    public func _n_put_Group(_ value : Optional<HSTRING>) throws {
+    private func _n_put_Group(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Group(pThis, value))
         }
@@ -290,7 +290,7 @@ open class IToastNotification2
         }
     }
     // [IsSpecialName] System.String get_Group()
-    public func _n_get_Group(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_Group(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Group(pThis, __presult))
         }
@@ -301,7 +301,7 @@ open class IToastNotification2
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_SuppressPopup(bool)
-    public func _n_put_SuppressPopup(_ value : boolean) throws {
+    private func _n_put_SuppressPopup(_ value : boolean) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SuppressPopup(pThis, value))
         }
@@ -310,7 +310,7 @@ open class IToastNotification2
         try self._n_put_SuppressPopup(value);
     }
     // [IsSpecialName] bool get_SuppressPopup()
-    public func _n_get_SuppressPopup(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_SuppressPopup(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SuppressPopup(pThis, __presult))
         }
@@ -346,7 +346,7 @@ open class IToastNotification3
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x31e8aed8, Data2: 0x8141, Data3 : 0x4f99, Data4 : (0xbc, 0x0a, 0xc4, 0xed, 0x21, 0x29, 0x7d, 0x77)) }
     // [IsSpecialName] Windows.UI.Notifications.NotificationMirroring get_NotificationMirroring()
-    public func _n_get_NotificationMirroring(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationMirroring>?) throws {
+    private func _n_get_NotificationMirroring(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationMirroring>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification3.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NotificationMirroring(pThis, __presult))
         }
@@ -357,7 +357,7 @@ open class IToastNotification3
         return __result;
     }
     // [IsSpecialName] void put_NotificationMirroring(Windows.UI.Notifications.NotificationMirroring)
-    public func _n_put_NotificationMirroring(_ value : _q_CWindows_CUI_CNotifications_CNotificationMirroring) throws {
+    private func _n_put_NotificationMirroring(_ value : _q_CWindows_CUI_CNotifications_CNotificationMirroring) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification3.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_NotificationMirroring(pThis, value))
         }
@@ -366,7 +366,7 @@ open class IToastNotification3
         try self._n_put_NotificationMirroring(value);
     }
     // [IsSpecialName] System.String get_RemoteId()
-    public func _n_get_RemoteId(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_RemoteId(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification3.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RemoteId(pThis, __presult))
         }
@@ -377,7 +377,7 @@ open class IToastNotification3
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_RemoteId(System.String)
-    public func _n_put_RemoteId(_ value : Optional<HSTRING>) throws {
+    private func _n_put_RemoteId(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification3.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RemoteId(pThis, value))
         }
@@ -409,7 +409,7 @@ open class IToastNotification4
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x15154935, Data2: 0x28ea, Data3 : 0x4727, Data4 : (0x88, 0xe9, 0xc5, 0x86, 0x80, 0xe2, 0xd1, 0x18)) }
     // [IsSpecialName] Windows.UI.Notifications.NotificationData get_Data()
-    public func _n_get_Data(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>>?) throws {
+    private func _n_get_Data(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification4.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Data(pThis, __presult))
         }
@@ -420,7 +420,7 @@ open class IToastNotification4
         return WinRT.Windows.UI.Notifications.INotificationData(consuming: __result);
     }
     // [IsSpecialName] void put_Data(Windows.UI.Notifications.NotificationData)
-    public func _n_put_Data(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>) throws {
+    private func _n_put_Data(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification4.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Data(pThis, value))
         }
@@ -429,7 +429,7 @@ open class IToastNotification4
         try self._n_put_Data(RawPointer(value));
     }
     // [IsSpecialName] Windows.UI.Notifications.ToastNotificationPriority get_Priority()
-    public func _n_get_Priority(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CToastNotificationPriority>?) throws {
+    private func _n_get_Priority(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CToastNotificationPriority>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification4.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Priority(pThis, __presult))
         }
@@ -440,7 +440,7 @@ open class IToastNotification4
         return __result;
     }
     // [IsSpecialName] void put_Priority(Windows.UI.Notifications.ToastNotificationPriority)
-    public func _n_put_Priority(_ value : _q_CWindows_CUI_CNotifications_CToastNotificationPriority) throws {
+    private func _n_put_Priority(_ value : _q_CWindows_CUI_CNotifications_CToastNotificationPriority) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification4.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Priority(pThis, value))
         }
@@ -469,7 +469,7 @@ open class IToastNotification6
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x43ebfe53, Data2: 0x89ae, Data3 : 0x5c1e, Data4 : (0xa2, 0x79, 0x3a, 0xec, 0xfe, 0x9b, 0x6f, 0x54)) }
     // [IsSpecialName] bool get_ExpiresOnReboot()
-    public func _n_get_ExpiresOnReboot(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_ExpiresOnReboot(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification6.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ExpiresOnReboot(pThis, __presult))
         }
@@ -480,7 +480,7 @@ open class IToastNotification6
         return __result;
     }
     // [IsSpecialName] void put_ExpiresOnReboot(bool)
-    public func _n_put_ExpiresOnReboot(_ value : boolean) throws {
+    private func _n_put_ExpiresOnReboot(_ value : boolean) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotification6.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ExpiresOnReboot(pThis, value))
         }
@@ -505,7 +505,7 @@ open class IToastNotificationFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x04124b20, Data2: 0x82c6, Data3 : 0x4229, Data4 : (0xb1, 0x09, 0xfd, 0x9e, 0xd4, 0x66, 0x2b, 0x53)) }
     // Windows.UI.Notifications.ToastNotification CreateToastNotification(Windows.Data.Xml.Dom.XmlDocument)
-    public func _n_CreateToastNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>>?) throws {
+    private func _n_CreateToastNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotification(pThis, content, __presult))
         }
@@ -557,7 +557,7 @@ open class IToastNotificationManagerStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x50ac103f, Data2: 0xd235, Data3 : 0x4598, Data4 : (0xbb, 0xef, 0x98, 0xfe, 0x4d, 0x1a, 0x3a, 0xd4)) }
     // Windows.UI.Notifications.ToastNotifier CreateToastNotifier()
-    public func _n_CreateToastNotifier(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>>?) throws {
+    private func _n_CreateToastNotifier(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotifier(pThis, __presult))
         }
@@ -568,7 +568,7 @@ open class IToastNotificationManagerStatics
         return WinRT.Windows.UI.Notifications.IToastNotifier(consuming: __result);
     }
     // Windows.UI.Notifications.ToastNotifier CreateToastNotifier(System.String)
-    public func _n_CreateToastNotifierWithId(_ applicationId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>>?) throws {
+    private func _n_CreateToastNotifierWithId(_ applicationId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotifierWithId(pThis, applicationId, __presult))
         }
@@ -582,7 +582,7 @@ open class IToastNotificationManagerStatics
         }
     }
     // Windows.Data.Xml.Dom.XmlDocument GetTemplateContent(Windows.UI.Notifications.ToastTemplateType)
-    public func _n_GetTemplateContent(_ type : _q_CWindows_CUI_CNotifications_CToastTemplateType, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
+    private func _n_GetTemplateContent(_ type : _q_CWindows_CUI_CNotifications_CToastTemplateType, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTemplateContent(pThis, type, __presult))
         }
@@ -603,7 +603,7 @@ open class IToastNotificationManagerStatics2
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7ab93c52, Data2: 0x0e48, Data3 : 0x4750, Data4 : (0xba, 0x9d, 0x1a, 0x41, 0x13, 0x98, 0x18, 0x47)) }
     // [IsSpecialName] Windows.UI.Notifications.ToastNotificationHistory get_History()
-    public func _n_get_History(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotificationHistory>>>?) throws {
+    private func _n_get_History(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotificationHistory>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_History(pThis, __presult))
         }
@@ -629,7 +629,7 @@ open class IToastNotificationManagerStatics4
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8f993fd3, Data2: 0xe516, Data3 : 0x45fb, Data4 : (0x81, 0x30, 0x39, 0x8e, 0x93, 0xfa, 0x52, 0xc3)) }
     // Windows.UI.Notifications.ToastNotificationManagerForUser GetForUser(Windows.System.User)
-    public func _n_GetForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser>>>?) throws {
+    private func _n_GetForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetForUser(pThis, user, __presult))
         }
@@ -640,7 +640,7 @@ open class IToastNotificationManagerStatics4
         return WinRT.Windows.UI.Notifications.IToastNotificationManagerForUser(consuming: __result);
     }
     // void ConfigureNotificationMirroring(Windows.UI.Notifications.NotificationMirroring)
-    public func _n_ConfigureNotificationMirroring(_ value : _q_CWindows_CUI_CNotifications_CNotificationMirroring) throws {
+    private func _n_ConfigureNotificationMirroring(_ value : _q_CWindows_CUI_CNotifications_CNotificationMirroring) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics4.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConfigureNotificationMirroring(pThis, value))
         }
@@ -659,7 +659,7 @@ open class IToastNotificationManagerStatics5
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd6f5f569, Data2: 0xd40d, Data3 : 0x407c, Data4 : (0x89, 0x89, 0x88, 0xca, 0xb4, 0x2c, 0xfd, 0x14)) }
     // Windows.UI.Notifications.ToastNotificationManagerForUser GetDefault()
-    public func _n_GetDefault(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser>>>?) throws {
+    private func _n_GetDefault(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotificationManagerForUser>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotificationManagerStatics5.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetDefault(pThis, __presult))
         }
@@ -680,7 +680,7 @@ open class IToastNotifier
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x75927b93, Data2: 0x03f3, Data3 : 0x41ec, Data4 : (0x91, 0xd3, 0x6e, 0x5b, 0xac, 0x1b, 0x38, 0xe7)) }
     // void Show(Windows.UI.Notifications.ToastNotification)
-    public func _n_Show(_ notification : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>) throws {
+    private func _n_Show(_ notification : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Show(pThis, notification))
         }
@@ -689,7 +689,7 @@ open class IToastNotifier
         try self._n_Show(RawPointer(notification));
     }
     // void Hide(Windows.UI.Notifications.ToastNotification)
-    public func _n_Hide(_ notification : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>) throws {
+    private func _n_Hide(_ notification : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Hide(pThis, notification))
         }
@@ -698,7 +698,7 @@ open class IToastNotifier
         try self._n_Hide(RawPointer(notification));
     }
     // [IsSpecialName] Windows.UI.Notifications.NotificationSetting get_Setting()
-    public func _n_get_Setting(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationSetting>?) throws {
+    private func _n_get_Setting(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationSetting>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Setting(pThis, __presult))
         }
@@ -709,7 +709,7 @@ open class IToastNotifier
         return __result;
     }
     // void AddToSchedule(Windows.UI.Notifications.ScheduledToastNotification)
-    public func _n_AddToSchedule(_ scheduledToast : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>) throws {
+    private func _n_AddToSchedule(_ scheduledToast : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddToSchedule(pThis, scheduledToast))
         }
@@ -718,7 +718,7 @@ open class IToastNotifier
         try self._n_AddToSchedule(RawPointer(scheduledToast));
     }
     // void RemoveFromSchedule(Windows.UI.Notifications.ScheduledToastNotification)
-    public func _n_RemoveFromSchedule(_ scheduledToast : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>) throws {
+    private func _n_RemoveFromSchedule(_ scheduledToast : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotification>>) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveFromSchedule(pThis, scheduledToast))
         }
@@ -727,7 +727,7 @@ open class IToastNotifier
         try self._n_RemoveFromSchedule(RawPointer(scheduledToast));
     }
     // Windows.Foundation.Collections.IVectorView<Windows.UI.Notifications.ScheduledToastNotification> GetScheduledToastNotifications()
-    public func _n_GetScheduledToastNotifications(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification>>>?) throws {
+    private func _n_GetScheduledToastNotifications(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CUI_CNotifications_CScheduledToastNotification>>>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetScheduledToastNotifications(pThis, __presult))
         }
@@ -753,7 +753,7 @@ open class IToastNotifier2
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x354389c6, Data2: 0x7c01, Data3 : 0x4bd5, Data4 : (0x9c, 0x20, 0x60, 0x43, 0x40, 0xcd, 0x2b, 0x74)) }
     // Windows.UI.Notifications.NotificationUpdateResult Update(Windows.UI.Notifications.NotificationData, System.String, System.String)
-    public func _n_UpdateWithTagAndGroup(_ data : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>, _ tag : Optional<HSTRING>, _ group : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationUpdateResult>?) throws {
+    private func _n_UpdateWithTagAndGroup(_ data : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>, _ tag : Optional<HSTRING>, _ group : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationUpdateResult>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateWithTagAndGroup(pThis, data, tag, group, __presult))
         }
@@ -770,7 +770,7 @@ open class IToastNotifier2
         }
     }
     // Windows.UI.Notifications.NotificationUpdateResult Update(Windows.UI.Notifications.NotificationData, System.String)
-    public func _n_UpdateWithTag(_ data : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>, _ tag : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationUpdateResult>?) throws {
+    private func _n_UpdateWithTag(_ data : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CINotificationData>>, _ tag : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CNotificationUpdateResult>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateWithTag(pThis, data, tag, __presult))
         }
@@ -794,7 +794,7 @@ open class IToastNotifier3
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xae75a04a, Data2: 0x3b0c, Data3 : 0x51ad, Data4 : (0xb7, 0xe8, 0xb0, 0x8a, 0xb6, 0x05, 0x25, 0x49)) }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ScheduledToastNotificationShowing(Windows.Foundation.TypedEventHandler<Windows.UI.Notifications.ToastNotifier,Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>)
-    public func _n_add_ScheduledToastNotificationShowing(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ScheduledToastNotificationShowing(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier3.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ScheduledToastNotificationShowing(pThis, handler, __presult))
         }
@@ -805,7 +805,7 @@ open class IToastNotifier3
         return __result;
     }
     // [IsSpecialName] void remove_ScheduledToastNotificationShowing(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ScheduledToastNotificationShowing(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ScheduledToastNotificationShowing(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CWindows_CUI_CNotifications_CIToastNotifier3.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ScheduledToastNotificationShowing(pThis, token))
         }

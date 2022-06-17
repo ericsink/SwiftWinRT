@@ -1172,7 +1172,7 @@ open class IColorsStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8620a5b0, Data2: 0x015a, Data3 : 0x57ac, Data4 : (0xa3, 0xf3, 0x89, 0x5d, 0x0b, 0x12, 0x69, 0xae)) }
     // [IsSpecialName] Windows.UI.Color get_AliceBlue()
-    public func _n_get_AliceBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_AliceBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AliceBlue(pThis, __presult))
         }
@@ -1183,7 +1183,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_AntiqueWhite()
-    public func _n_get_AntiqueWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_AntiqueWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AntiqueWhite(pThis, __presult))
         }
@@ -1194,7 +1194,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Aqua()
-    public func _n_get_Aqua(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Aqua(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Aqua(pThis, __presult))
         }
@@ -1205,7 +1205,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Aquamarine()
-    public func _n_get_Aquamarine(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Aquamarine(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Aquamarine(pThis, __presult))
         }
@@ -1216,7 +1216,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Azure()
-    public func _n_get_Azure(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Azure(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Azure(pThis, __presult))
         }
@@ -1227,7 +1227,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Beige()
-    public func _n_get_Beige(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Beige(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Beige(pThis, __presult))
         }
@@ -1238,7 +1238,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Bisque()
-    public func _n_get_Bisque(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Bisque(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Bisque(pThis, __presult))
         }
@@ -1249,7 +1249,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Black()
-    public func _n_get_Black(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Black(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Black(pThis, __presult))
         }
@@ -1260,7 +1260,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_BlanchedAlmond()
-    public func _n_get_BlanchedAlmond(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_BlanchedAlmond(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BlanchedAlmond(pThis, __presult))
         }
@@ -1271,7 +1271,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Blue()
-    public func _n_get_Blue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Blue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Blue(pThis, __presult))
         }
@@ -1282,7 +1282,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_BlueViolet()
-    public func _n_get_BlueViolet(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_BlueViolet(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BlueViolet(pThis, __presult))
         }
@@ -1293,7 +1293,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Brown()
-    public func _n_get_Brown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Brown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Brown(pThis, __presult))
         }
@@ -1304,7 +1304,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_BurlyWood()
-    public func _n_get_BurlyWood(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_BurlyWood(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_BurlyWood(pThis, __presult))
         }
@@ -1315,7 +1315,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_CadetBlue()
-    public func _n_get_CadetBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_CadetBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CadetBlue(pThis, __presult))
         }
@@ -1326,7 +1326,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Chartreuse()
-    public func _n_get_Chartreuse(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Chartreuse(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Chartreuse(pThis, __presult))
         }
@@ -1337,7 +1337,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Chocolate()
-    public func _n_get_Chocolate(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Chocolate(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Chocolate(pThis, __presult))
         }
@@ -1348,7 +1348,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Coral()
-    public func _n_get_Coral(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Coral(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Coral(pThis, __presult))
         }
@@ -1359,7 +1359,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_CornflowerBlue()
-    public func _n_get_CornflowerBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_CornflowerBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornflowerBlue(pThis, __presult))
         }
@@ -1370,7 +1370,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Cornsilk()
-    public func _n_get_Cornsilk(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Cornsilk(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cornsilk(pThis, __presult))
         }
@@ -1381,7 +1381,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Crimson()
-    public func _n_get_Crimson(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Crimson(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Crimson(pThis, __presult))
         }
@@ -1392,7 +1392,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Cyan()
-    public func _n_get_Cyan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Cyan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cyan(pThis, __presult))
         }
@@ -1403,7 +1403,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkBlue()
-    public func _n_get_DarkBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkBlue(pThis, __presult))
         }
@@ -1414,7 +1414,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkCyan()
-    public func _n_get_DarkCyan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkCyan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkCyan(pThis, __presult))
         }
@@ -1425,7 +1425,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkGoldenrod()
-    public func _n_get_DarkGoldenrod(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkGoldenrod(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkGoldenrod(pThis, __presult))
         }
@@ -1436,7 +1436,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkGray()
-    public func _n_get_DarkGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkGray(pThis, __presult))
         }
@@ -1447,7 +1447,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkGreen()
-    public func _n_get_DarkGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkGreen(pThis, __presult))
         }
@@ -1458,7 +1458,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkKhaki()
-    public func _n_get_DarkKhaki(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkKhaki(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkKhaki(pThis, __presult))
         }
@@ -1469,7 +1469,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkMagenta()
-    public func _n_get_DarkMagenta(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkMagenta(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkMagenta(pThis, __presult))
         }
@@ -1480,7 +1480,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkOliveGreen()
-    public func _n_get_DarkOliveGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkOliveGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkOliveGreen(pThis, __presult))
         }
@@ -1491,7 +1491,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkOrange()
-    public func _n_get_DarkOrange(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkOrange(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkOrange(pThis, __presult))
         }
@@ -1502,7 +1502,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkOrchid()
-    public func _n_get_DarkOrchid(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkOrchid(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkOrchid(pThis, __presult))
         }
@@ -1513,7 +1513,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkRed()
-    public func _n_get_DarkRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkRed(pThis, __presult))
         }
@@ -1524,7 +1524,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkSalmon()
-    public func _n_get_DarkSalmon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkSalmon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSalmon(pThis, __presult))
         }
@@ -1535,7 +1535,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkSeaGreen()
-    public func _n_get_DarkSeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkSeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSeaGreen(pThis, __presult))
         }
@@ -1546,7 +1546,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkSlateBlue()
-    public func _n_get_DarkSlateBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkSlateBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSlateBlue(pThis, __presult))
         }
@@ -1557,7 +1557,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkSlateGray()
-    public func _n_get_DarkSlateGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkSlateGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkSlateGray(pThis, __presult))
         }
@@ -1568,7 +1568,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkTurquoise()
-    public func _n_get_DarkTurquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkTurquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkTurquoise(pThis, __presult))
         }
@@ -1579,7 +1579,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DarkViolet()
-    public func _n_get_DarkViolet(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DarkViolet(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DarkViolet(pThis, __presult))
         }
@@ -1590,7 +1590,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DeepPink()
-    public func _n_get_DeepPink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DeepPink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeepPink(pThis, __presult))
         }
@@ -1601,7 +1601,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DeepSkyBlue()
-    public func _n_get_DeepSkyBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DeepSkyBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DeepSkyBlue(pThis, __presult))
         }
@@ -1612,7 +1612,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DimGray()
-    public func _n_get_DimGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DimGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DimGray(pThis, __presult))
         }
@@ -1623,7 +1623,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_DodgerBlue()
-    public func _n_get_DodgerBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_DodgerBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DodgerBlue(pThis, __presult))
         }
@@ -1634,7 +1634,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Firebrick()
-    public func _n_get_Firebrick(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Firebrick(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Firebrick(pThis, __presult))
         }
@@ -1645,7 +1645,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_FloralWhite()
-    public func _n_get_FloralWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_FloralWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FloralWhite(pThis, __presult))
         }
@@ -1656,7 +1656,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_ForestGreen()
-    public func _n_get_ForestGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_ForestGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ForestGreen(pThis, __presult))
         }
@@ -1667,7 +1667,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Fuchsia()
-    public func _n_get_Fuchsia(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Fuchsia(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Fuchsia(pThis, __presult))
         }
@@ -1678,7 +1678,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Gainsboro()
-    public func _n_get_Gainsboro(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Gainsboro(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gainsboro(pThis, __presult))
         }
@@ -1689,7 +1689,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_GhostWhite()
-    public func _n_get_GhostWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_GhostWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GhostWhite(pThis, __presult))
         }
@@ -1700,7 +1700,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Gold()
-    public func _n_get_Gold(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Gold(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gold(pThis, __presult))
         }
@@ -1711,7 +1711,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Goldenrod()
-    public func _n_get_Goldenrod(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Goldenrod(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Goldenrod(pThis, __presult))
         }
@@ -1722,7 +1722,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Gray()
-    public func _n_get_Gray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Gray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gray(pThis, __presult))
         }
@@ -1733,7 +1733,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Green()
-    public func _n_get_Green(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Green(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Green(pThis, __presult))
         }
@@ -1744,7 +1744,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_GreenYellow()
-    public func _n_get_GreenYellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_GreenYellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GreenYellow(pThis, __presult))
         }
@@ -1755,7 +1755,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Honeydew()
-    public func _n_get_Honeydew(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Honeydew(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Honeydew(pThis, __presult))
         }
@@ -1766,7 +1766,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_HotPink()
-    public func _n_get_HotPink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_HotPink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HotPink(pThis, __presult))
         }
@@ -1777,7 +1777,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_IndianRed()
-    public func _n_get_IndianRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_IndianRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IndianRed(pThis, __presult))
         }
@@ -1788,7 +1788,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Indigo()
-    public func _n_get_Indigo(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Indigo(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Indigo(pThis, __presult))
         }
@@ -1799,7 +1799,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Ivory()
-    public func _n_get_Ivory(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Ivory(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Ivory(pThis, __presult))
         }
@@ -1810,7 +1810,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Khaki()
-    public func _n_get_Khaki(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Khaki(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Khaki(pThis, __presult))
         }
@@ -1821,7 +1821,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Lavender()
-    public func _n_get_Lavender(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Lavender(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Lavender(pThis, __presult))
         }
@@ -1832,7 +1832,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LavenderBlush()
-    public func _n_get_LavenderBlush(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LavenderBlush(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LavenderBlush(pThis, __presult))
         }
@@ -1843,7 +1843,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LawnGreen()
-    public func _n_get_LawnGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LawnGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LawnGreen(pThis, __presult))
         }
@@ -1854,7 +1854,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LemonChiffon()
-    public func _n_get_LemonChiffon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LemonChiffon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LemonChiffon(pThis, __presult))
         }
@@ -1865,7 +1865,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightBlue()
-    public func _n_get_LightBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightBlue(pThis, __presult))
         }
@@ -1876,7 +1876,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightCoral()
-    public func _n_get_LightCoral(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightCoral(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightCoral(pThis, __presult))
         }
@@ -1887,7 +1887,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightCyan()
-    public func _n_get_LightCyan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightCyan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightCyan(pThis, __presult))
         }
@@ -1898,7 +1898,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightGoldenrodYellow()
-    public func _n_get_LightGoldenrodYellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightGoldenrodYellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightGoldenrodYellow(pThis, __presult))
         }
@@ -1909,7 +1909,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightGreen()
-    public func _n_get_LightGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightGreen(pThis, __presult))
         }
@@ -1920,7 +1920,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightGray()
-    public func _n_get_LightGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightGray(pThis, __presult))
         }
@@ -1931,7 +1931,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightPink()
-    public func _n_get_LightPink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightPink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightPink(pThis, __presult))
         }
@@ -1942,7 +1942,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightSalmon()
-    public func _n_get_LightSalmon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightSalmon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSalmon(pThis, __presult))
         }
@@ -1953,7 +1953,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightSeaGreen()
-    public func _n_get_LightSeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightSeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSeaGreen(pThis, __presult))
         }
@@ -1964,7 +1964,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightSkyBlue()
-    public func _n_get_LightSkyBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightSkyBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSkyBlue(pThis, __presult))
         }
@@ -1975,7 +1975,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightSlateGray()
-    public func _n_get_LightSlateGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightSlateGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSlateGray(pThis, __presult))
         }
@@ -1986,7 +1986,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightSteelBlue()
-    public func _n_get_LightSteelBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightSteelBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightSteelBlue(pThis, __presult))
         }
@@ -1997,7 +1997,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LightYellow()
-    public func _n_get_LightYellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LightYellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LightYellow(pThis, __presult))
         }
@@ -2008,7 +2008,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Lime()
-    public func _n_get_Lime(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Lime(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Lime(pThis, __presult))
         }
@@ -2019,7 +2019,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_LimeGreen()
-    public func _n_get_LimeGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_LimeGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LimeGreen(pThis, __presult))
         }
@@ -2030,7 +2030,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Linen()
-    public func _n_get_Linen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Linen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Linen(pThis, __presult))
         }
@@ -2041,7 +2041,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Magenta()
-    public func _n_get_Magenta(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Magenta(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Magenta(pThis, __presult))
         }
@@ -2052,7 +2052,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Maroon()
-    public func _n_get_Maroon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Maroon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Maroon(pThis, __presult))
         }
@@ -2063,7 +2063,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumAquamarine()
-    public func _n_get_MediumAquamarine(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumAquamarine(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumAquamarine(pThis, __presult))
         }
@@ -2074,7 +2074,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumBlue()
-    public func _n_get_MediumBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumBlue(pThis, __presult))
         }
@@ -2085,7 +2085,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumOrchid()
-    public func _n_get_MediumOrchid(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumOrchid(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumOrchid(pThis, __presult))
         }
@@ -2096,7 +2096,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumPurple()
-    public func _n_get_MediumPurple(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumPurple(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumPurple(pThis, __presult))
         }
@@ -2107,7 +2107,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumSeaGreen()
-    public func _n_get_MediumSeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumSeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumSeaGreen(pThis, __presult))
         }
@@ -2118,7 +2118,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumSlateBlue()
-    public func _n_get_MediumSlateBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumSlateBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumSlateBlue(pThis, __presult))
         }
@@ -2129,7 +2129,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumSpringGreen()
-    public func _n_get_MediumSpringGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumSpringGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumSpringGreen(pThis, __presult))
         }
@@ -2140,7 +2140,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumTurquoise()
-    public func _n_get_MediumTurquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumTurquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumTurquoise(pThis, __presult))
         }
@@ -2151,7 +2151,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MediumVioletRed()
-    public func _n_get_MediumVioletRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MediumVioletRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MediumVioletRed(pThis, __presult))
         }
@@ -2162,7 +2162,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MidnightBlue()
-    public func _n_get_MidnightBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MidnightBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MidnightBlue(pThis, __presult))
         }
@@ -2173,7 +2173,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MintCream()
-    public func _n_get_MintCream(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MintCream(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MintCream(pThis, __presult))
         }
@@ -2184,7 +2184,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_MistyRose()
-    public func _n_get_MistyRose(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_MistyRose(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MistyRose(pThis, __presult))
         }
@@ -2195,7 +2195,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Moccasin()
-    public func _n_get_Moccasin(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Moccasin(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Moccasin(pThis, __presult))
         }
@@ -2206,7 +2206,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_NavajoWhite()
-    public func _n_get_NavajoWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_NavajoWhite(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_NavajoWhite(pThis, __presult))
         }
@@ -2217,7 +2217,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Navy()
-    public func _n_get_Navy(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Navy(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Navy(pThis, __presult))
         }
@@ -2228,7 +2228,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_OldLace()
-    public func _n_get_OldLace(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_OldLace(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OldLace(pThis, __presult))
         }
@@ -2239,7 +2239,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Olive()
-    public func _n_get_Olive(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Olive(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Olive(pThis, __presult))
         }
@@ -2250,7 +2250,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_OliveDrab()
-    public func _n_get_OliveDrab(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_OliveDrab(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OliveDrab(pThis, __presult))
         }
@@ -2261,7 +2261,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Orange()
-    public func _n_get_Orange(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Orange(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orange(pThis, __presult))
         }
@@ -2272,7 +2272,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_OrangeRed()
-    public func _n_get_OrangeRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_OrangeRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OrangeRed(pThis, __presult))
         }
@@ -2283,7 +2283,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Orchid()
-    public func _n_get_Orchid(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Orchid(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orchid(pThis, __presult))
         }
@@ -2294,7 +2294,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PaleGoldenrod()
-    public func _n_get_PaleGoldenrod(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PaleGoldenrod(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleGoldenrod(pThis, __presult))
         }
@@ -2305,7 +2305,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PaleGreen()
-    public func _n_get_PaleGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PaleGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleGreen(pThis, __presult))
         }
@@ -2316,7 +2316,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PaleTurquoise()
-    public func _n_get_PaleTurquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PaleTurquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleTurquoise(pThis, __presult))
         }
@@ -2327,7 +2327,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PaleVioletRed()
-    public func _n_get_PaleVioletRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PaleVioletRed(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaleVioletRed(pThis, __presult))
         }
@@ -2338,7 +2338,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PapayaWhip()
-    public func _n_get_PapayaWhip(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PapayaWhip(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PapayaWhip(pThis, __presult))
         }
@@ -2349,7 +2349,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PeachPuff()
-    public func _n_get_PeachPuff(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PeachPuff(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PeachPuff(pThis, __presult))
         }
@@ -2360,7 +2360,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Peru()
-    public func _n_get_Peru(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Peru(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Peru(pThis, __presult))
         }
@@ -2371,7 +2371,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Pink()
-    public func _n_get_Pink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Pink(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Pink(pThis, __presult))
         }
@@ -2382,7 +2382,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Plum()
-    public func _n_get_Plum(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Plum(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Plum(pThis, __presult))
         }
@@ -2393,7 +2393,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_PowderBlue()
-    public func _n_get_PowderBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_PowderBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PowderBlue(pThis, __presult))
         }
@@ -2404,7 +2404,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Purple()
-    public func _n_get_Purple(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Purple(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Purple(pThis, __presult))
         }
@@ -2415,7 +2415,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Red()
-    public func _n_get_Red(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Red(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Red(pThis, __presult))
         }
@@ -2426,7 +2426,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_RosyBrown()
-    public func _n_get_RosyBrown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_RosyBrown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RosyBrown(pThis, __presult))
         }
@@ -2437,7 +2437,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_RoyalBlue()
-    public func _n_get_RoyalBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_RoyalBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoyalBlue(pThis, __presult))
         }
@@ -2448,7 +2448,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SaddleBrown()
-    public func _n_get_SaddleBrown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SaddleBrown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SaddleBrown(pThis, __presult))
         }
@@ -2459,7 +2459,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Salmon()
-    public func _n_get_Salmon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Salmon(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Salmon(pThis, __presult))
         }
@@ -2470,7 +2470,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SandyBrown()
-    public func _n_get_SandyBrown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SandyBrown(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SandyBrown(pThis, __presult))
         }
@@ -2481,7 +2481,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SeaGreen()
-    public func _n_get_SeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SeaGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SeaGreen(pThis, __presult))
         }
@@ -2492,7 +2492,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SeaShell()
-    public func _n_get_SeaShell(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SeaShell(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SeaShell(pThis, __presult))
         }
@@ -2503,7 +2503,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Sienna()
-    public func _n_get_Sienna(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Sienna(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Sienna(pThis, __presult))
         }
@@ -2514,7 +2514,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Silver()
-    public func _n_get_Silver(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Silver(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Silver(pThis, __presult))
         }
@@ -2525,7 +2525,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SkyBlue()
-    public func _n_get_SkyBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SkyBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SkyBlue(pThis, __presult))
         }
@@ -2536,7 +2536,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SlateBlue()
-    public func _n_get_SlateBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SlateBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SlateBlue(pThis, __presult))
         }
@@ -2547,7 +2547,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SlateGray()
-    public func _n_get_SlateGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SlateGray(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SlateGray(pThis, __presult))
         }
@@ -2558,7 +2558,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Snow()
-    public func _n_get_Snow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Snow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Snow(pThis, __presult))
         }
@@ -2569,7 +2569,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SpringGreen()
-    public func _n_get_SpringGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SpringGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SpringGreen(pThis, __presult))
         }
@@ -2580,7 +2580,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_SteelBlue()
-    public func _n_get_SteelBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_SteelBlue(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SteelBlue(pThis, __presult))
         }
@@ -2591,7 +2591,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Tan()
-    public func _n_get_Tan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Tan(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Tan(pThis, __presult))
         }
@@ -2602,7 +2602,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Teal()
-    public func _n_get_Teal(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Teal(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Teal(pThis, __presult))
         }
@@ -2613,7 +2613,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Thistle()
-    public func _n_get_Thistle(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Thistle(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Thistle(pThis, __presult))
         }
@@ -2624,7 +2624,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Tomato()
-    public func _n_get_Tomato(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Tomato(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Tomato(pThis, __presult))
         }
@@ -2635,7 +2635,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Transparent()
-    public func _n_get_Transparent(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Transparent(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transparent(pThis, __presult))
         }
@@ -2646,7 +2646,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Turquoise()
-    public func _n_get_Turquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Turquoise(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Turquoise(pThis, __presult))
         }
@@ -2657,7 +2657,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Violet()
-    public func _n_get_Violet(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Violet(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Violet(pThis, __presult))
         }
@@ -2668,7 +2668,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Wheat()
-    public func _n_get_Wheat(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Wheat(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Wheat(pThis, __presult))
         }
@@ -2679,7 +2679,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_White()
-    public func _n_get_White(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_White(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_White(pThis, __presult))
         }
@@ -2690,7 +2690,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_WhiteSmoke()
-    public func _n_get_WhiteSmoke(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_WhiteSmoke(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_WhiteSmoke(pThis, __presult))
         }
@@ -2701,7 +2701,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_Yellow()
-    public func _n_get_Yellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Yellow(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Yellow(pThis, __presult))
         }
@@ -2712,7 +2712,7 @@ open class IColorsStatics
         return __result;
     }
     // [IsSpecialName] Windows.UI.Color get_YellowGreen()
-    public func _n_get_YellowGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_YellowGreen(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CIColorsStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_YellowGreen(pThis, __presult))
         }

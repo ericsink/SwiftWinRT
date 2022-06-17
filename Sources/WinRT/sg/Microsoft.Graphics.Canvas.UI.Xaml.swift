@@ -202,7 +202,7 @@ open class ICanvasControl
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf006e06d, Data2: 0x79db, Data3 : 0x484f, Data4 : (0xb8, 0x98, 0x47, 0x9c, 0xf0, 0x69, 0xc0, 0xf5)) }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_CreateResources(Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl,Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs>)
-    public func _n_add_CreateResources(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_CreateResources(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_CreateResources(pThis, value, __presult))
         }
@@ -213,7 +213,7 @@ open class ICanvasControl
         return __result;
     }
     // [IsSpecialName] void remove_CreateResources(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_CreateResources(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_CreateResources(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_CreateResources(pThis, token))
         }
@@ -222,7 +222,7 @@ open class ICanvasControl
         try self._n_remove_CreateResources(token);
     }
     // [IsSpecialName] bool get_ReadyToDraw()
-    public func _n_get_ReadyToDraw(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_ReadyToDraw(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ReadyToDraw(pThis, __presult))
         }
@@ -233,7 +233,7 @@ open class ICanvasControl
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Draw(Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl,Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>)
-    public func _n_add_Draw(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Draw(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Draw(pThis, value, __presult))
         }
@@ -244,7 +244,7 @@ open class ICanvasControl
         return __result;
     }
     // [IsSpecialName] void remove_Draw(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Draw(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Draw(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Draw(pThis, token))
         }
@@ -253,7 +253,7 @@ open class ICanvasControl
         try self._n_remove_Draw(token);
     }
     // [IsSpecialName] void put_ClearColor(Windows.UI.Color)
-    public func _n_put_ClearColor(_ value : _q_CWindows_CUI_CColor) throws {
+    private func _n_put_ClearColor(_ value : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ClearColor(pThis, value))
         }
@@ -262,7 +262,7 @@ open class ICanvasControl
         try self._n_put_ClearColor(value);
     }
     // [IsSpecialName] Windows.UI.Color get_ClearColor()
-    public func _n_get_ClearColor(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_ClearColor(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClearColor(pThis, __presult))
         }
@@ -273,7 +273,7 @@ open class ICanvasControl
         return __result;
     }
     // void Invalidate()
-    public func _n_Invalidate() throws {
+    private func _n_Invalidate() throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invalidate(pThis))
         }
@@ -282,7 +282,7 @@ open class ICanvasControl
         try self._n_Invalidate();
     }
     // [IsSpecialName] Windows.Foundation.Size get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -293,7 +293,7 @@ open class ICanvasControl
         return __result;
     }
     // void RemoveFromVisualTree()
-    public func _n_RemoveFromVisualTree() throws {
+    private func _n_RemoveFromVisualTree() throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveFromVisualTree(pThis))
         }
@@ -302,7 +302,7 @@ open class ICanvasControl
         try self._n_RemoveFromVisualTree();
     }
     // [IsSpecialName] bool get_UseSharedDevice()
-    public func _n_get_UseSharedDevice(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_UseSharedDevice(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_UseSharedDevice(pThis, __presult))
         }
@@ -313,7 +313,7 @@ open class ICanvasControl
         return __result;
     }
     // [IsSpecialName] void put_UseSharedDevice(bool)
-    public func _n_put_UseSharedDevice(_ value : boolean) throws {
+    private func _n_put_UseSharedDevice(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_UseSharedDevice(pThis, value))
         }
@@ -322,7 +322,7 @@ open class ICanvasControl
         try self._n_put_UseSharedDevice(value);
     }
     // [IsSpecialName] bool get_ForceSoftwareRenderer()
-    public func _n_get_ForceSoftwareRenderer(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_ForceSoftwareRenderer(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ForceSoftwareRenderer(pThis, __presult))
         }
@@ -333,7 +333,7 @@ open class ICanvasControl
         return __result;
     }
     // [IsSpecialName] void put_ForceSoftwareRenderer(bool)
-    public func _n_put_ForceSoftwareRenderer(_ value : boolean) throws {
+    private func _n_put_ForceSoftwareRenderer(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ForceSoftwareRenderer(pThis, value))
         }
@@ -342,7 +342,7 @@ open class ICanvasControl
         try self._n_put_ForceSoftwareRenderer(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasDevice get_CustomDevice()
-    public func _n_get_CustomDevice(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+    private func _n_get_CustomDevice(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CustomDevice(pThis, __presult))
         }
@@ -353,7 +353,7 @@ open class ICanvasControl
         return WinRT.Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
     }
     // [IsSpecialName] void put_CustomDevice(Microsoft.Graphics.Canvas.CanvasDevice)
-    public func _n_put_CustomDevice(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>) throws {
+    private func _n_put_CustomDevice(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CustomDevice(pThis, value))
         }
@@ -362,7 +362,7 @@ open class ICanvasControl
         try self._n_put_CustomDevice(RawPointer(value));
     }
     // [IsSpecialName] System.Single get_DpiScale()
-    public func _n_get_DpiScale(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_DpiScale(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DpiScale(pThis, __presult))
         }
@@ -373,7 +373,7 @@ open class ICanvasControl
         return __result;
     }
     // [IsSpecialName] void put_DpiScale(System.Single)
-    public func _n_put_DpiScale(_ ratio : FLOAT) throws {
+    private func _n_put_DpiScale(_ ratio : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DpiScale(pThis, ratio))
         }
@@ -427,7 +427,7 @@ open class ICanvasDrawEventArgs
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfb86169f, Data2: 0x25d4, Data3 : 0x4551, Data4 : (0xbd, 0x8f, 0x21, 0x4b, 0xea, 0xf0, 0xac, 0x24)) }
     // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasDrawingSession get_DrawingSession()
-    public func _n_get_DrawingSession(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>>?) throws {
+    private func _n_get_DrawingSession(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DrawingSession(pThis, __presult))
         }
@@ -454,7 +454,7 @@ open class ICanvasDrawEventArgsFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7299d72c, Data2: 0xf8e4, Data3 : 0x4a2f, Data4 : (0x9e, 0x30, 0x7c, 0xdf, 0xcc, 0xf3, 0x1c, 0x44)) }
     // Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs Create(Microsoft.Graphics.Canvas.CanvasDrawingSession)
-    public func _n_Create(_ canvasDrawingSession : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs>>>?) throws {
+    private func _n_Create(_ canvasDrawingSession : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgsFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, canvasDrawingSession, __presult))
         }

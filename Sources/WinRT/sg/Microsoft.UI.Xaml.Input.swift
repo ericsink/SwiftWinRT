@@ -109,7 +109,7 @@ open class IDoubleTappedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf7a501b9, Data2: 0xe277, Data3 : 0x5611, Data4 : (0x87, 0xb0, 0x0e, 0x06, 0x07, 0x62, 0x21, 0x83)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -251,7 +251,7 @@ open class IHoldingEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe23c5bd, Data2: 0x4984, Data3 : 0x56b6, Data4 : (0xb9, 0x2b, 0xfc, 0x9d, 0x12, 0x16, 0xb2, 0x4e)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -530,7 +530,7 @@ open class IKeyboardAcceleratorFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xca1d410a, Data2: 0xaf2a, Data3 : 0x51b9, Data4 : (0xa1, 0xde, 0x6c, 0x0a, 0xf9, 0xf3, 0xb5, 0x98)) }
     // Microsoft.UI.Xaml.Input.KeyboardAccelerator CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -669,7 +669,7 @@ open class IManipulationStartedRoutedEventArgsFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5681b0de, Data2: 0x3fa7, Data3 : 0x503e, Data4 : (0x9c, 0x46, 0xa8, 0x03, 0x39, 0x76, 0x02, 0x92)) }
     // Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgsFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -797,7 +797,7 @@ open class IKeyEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdb68e7cc, Data2: 0x9a2b, Data3 : 0x527d, Data4 : (0x99, 0x89, 0x25, 0x28, 0x4d, 0xac, 0xcc, 0x03)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.KeyRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1000,7 +1000,7 @@ open class IManipulationCompletedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd51df8db, Data2: 0x71cd, Data3 : 0x5bfd, Data4 : (0x84, 0x26, 0x76, 0x72, 0x18, 0xee, 0x55, 0xec)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1119,7 +1119,7 @@ open class IManipulationDeltaEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x83f2d4ce, Data2: 0x105f, Data3 : 0x5392, Data4 : (0xa3, 0x8a, 0xb7, 0x46, 0x7b, 0x7c, 0x2e, 0xa5)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1240,7 +1240,7 @@ open class IManipulationInertiaStartingEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5de296bd, Data2: 0x6f1c, Data3 : 0x5f60, Data4 : (0x91, 0x80, 0x10, 0x70, 0x52, 0x82, 0x57, 0x6c)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1368,7 +1368,7 @@ open class IManipulationStartedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41060669, Data2: 0x304c, Data3 : 0x53ac, Data4 : (0x9d, 0x43, 0xbc, 0x31, 0x12, 0x35, 0xaa, 0xe4)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1490,7 +1490,7 @@ open class IManipulationStartingEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x44f528f1, Data2: 0xf0e4, Data3 : 0x505c, Data4 : (0xa0, 0xbb, 0x0c, 0x48, 0x39, 0xb2, 0x9d, 0xf5)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1645,7 +1645,7 @@ open class IPointerEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa48a71e1, Data2: 0x8bb4, Data3 : 0x5597, Data4 : (0x9e, 0x31, 0x90, 0x3a, 0x3f, 0x6a, 0x04, 0xfb)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1777,7 +1777,7 @@ open class IRightTappedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5070e32f, Data2: 0x3dc7, Data3 : 0x56cf, Data4 : (0x8f, 0xdd, 0xde, 0x1b, 0x40, 0xd0, 0xb4, 0x72)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }
@@ -1892,7 +1892,7 @@ open class ITappedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb60074f3, Data2: 0x125b, Data3 : 0x534e, Data4 : (0x8f, 0x9c, 0x97, 0x69, 0xbd, 0x3f, 0x0f, 0x64)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Input.TappedRoutedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }

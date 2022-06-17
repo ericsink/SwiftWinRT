@@ -689,7 +689,7 @@ open class ICanvasTextFormat
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xaf61bfdc, Data2: 0xeabb, Data3 : 0x4d38, Data4 : (0xba, 0x1b, 0xaf, 0xb3, 0x40, 0x61, 0x2d, 0x33)) }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasTextDirection get_Direction()
-    public func _n_get_Direction(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection>?) throws {
+    private func _n_get_Direction(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Direction(pThis, __presult))
         }
@@ -700,7 +700,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_Direction(Microsoft.Graphics.Canvas.Text.CanvasTextDirection)
-    public func _n_put_Direction(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection) throws {
+    private func _n_put_Direction(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Direction(pThis, value))
         }
@@ -709,7 +709,7 @@ open class ICanvasTextFormat
         try self._n_put_Direction(value);
     }
     // [IsSpecialName] System.String get_FontFamily()
-    public func _n_get_FontFamily(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_FontFamily(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontFamily(pThis, __presult))
         }
@@ -720,7 +720,7 @@ open class ICanvasTextFormat
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_FontFamily(System.String)
-    public func _n_put_FontFamily(_ value : Optional<HSTRING>) throws {
+    private func _n_put_FontFamily(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontFamily(pThis, value))
         }
@@ -732,7 +732,7 @@ open class ICanvasTextFormat
         }
     }
     // [IsSpecialName] System.Single get_FontSize()
-    public func _n_get_FontSize(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_FontSize(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontSize(pThis, __presult))
         }
@@ -743,7 +743,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_FontSize(System.Single)
-    public func _n_put_FontSize(_ value : FLOAT) throws {
+    private func _n_put_FontSize(_ value : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontSize(pThis, value))
         }
@@ -752,7 +752,7 @@ open class ICanvasTextFormat
         try self._n_put_FontSize(value);
     }
     // [IsSpecialName] Windows.UI.Text.FontStretch get_FontStretch()
-    public func _n_get_FontStretch(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontStretch>?) throws {
+    private func _n_get_FontStretch(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontStretch>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontStretch(pThis, __presult))
         }
@@ -763,7 +763,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_FontStretch(Windows.UI.Text.FontStretch)
-    public func _n_put_FontStretch(_ value : _q_CWindows_CUI_CText_CFontStretch) throws {
+    private func _n_put_FontStretch(_ value : _q_CWindows_CUI_CText_CFontStretch) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontStretch(pThis, value))
         }
@@ -772,7 +772,7 @@ open class ICanvasTextFormat
         try self._n_put_FontStretch(value);
     }
     // [IsSpecialName] Windows.UI.Text.FontStyle get_FontStyle()
-    public func _n_get_FontStyle(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontStyle>?) throws {
+    private func _n_get_FontStyle(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontStyle>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontStyle(pThis, __presult))
         }
@@ -783,7 +783,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_FontStyle(Windows.UI.Text.FontStyle)
-    public func _n_put_FontStyle(_ value : _q_CWindows_CUI_CText_CFontStyle) throws {
+    private func _n_put_FontStyle(_ value : _q_CWindows_CUI_CText_CFontStyle) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontStyle(pThis, value))
         }
@@ -792,7 +792,7 @@ open class ICanvasTextFormat
         try self._n_put_FontStyle(value);
     }
     // [IsSpecialName] Windows.UI.Text.FontWeight get_FontWeight()
-    public func _n_get_FontWeight(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontWeight>?) throws {
+    private func _n_get_FontWeight(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CText_CFontWeight>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_FontWeight(pThis, __presult))
         }
@@ -803,7 +803,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_FontWeight(Windows.UI.Text.FontWeight)
-    public func _n_put_FontWeight(_ value : _q_CWindows_CUI_CText_CFontWeight) throws {
+    private func _n_put_FontWeight(_ value : _q_CWindows_CUI_CText_CFontWeight) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontWeight(pThis, value))
         }
@@ -812,7 +812,7 @@ open class ICanvasTextFormat
         try self._n_put_FontWeight(value);
     }
     // [IsSpecialName] System.Single get_IncrementalTabStop()
-    public func _n_get_IncrementalTabStop(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_IncrementalTabStop(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IncrementalTabStop(pThis, __presult))
         }
@@ -823,7 +823,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_IncrementalTabStop(System.Single)
-    public func _n_put_IncrementalTabStop(_ value : FLOAT) throws {
+    private func _n_put_IncrementalTabStop(_ value : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IncrementalTabStop(pThis, value))
         }
@@ -832,7 +832,7 @@ open class ICanvasTextFormat
         try self._n_put_IncrementalTabStop(value);
     }
     // [IsSpecialName] System.Single get_LineSpacing()
-    public func _n_get_LineSpacing(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_LineSpacing(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LineSpacing(pThis, __presult))
         }
@@ -843,7 +843,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_LineSpacing(System.Single)
-    public func _n_put_LineSpacing(_ value : FLOAT) throws {
+    private func _n_put_LineSpacing(_ value : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LineSpacing(pThis, value))
         }
@@ -852,7 +852,7 @@ open class ICanvasTextFormat
         try self._n_put_LineSpacing(value);
     }
     // [IsSpecialName] System.Single get_LineSpacingBaseline()
-    public func _n_get_LineSpacingBaseline(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_LineSpacingBaseline(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LineSpacingBaseline(pThis, __presult))
         }
@@ -863,7 +863,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_LineSpacingBaseline(System.Single)
-    public func _n_put_LineSpacingBaseline(_ value : FLOAT) throws {
+    private func _n_put_LineSpacingBaseline(_ value : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LineSpacingBaseline(pThis, value))
         }
@@ -872,7 +872,7 @@ open class ICanvasTextFormat
         try self._n_put_LineSpacingBaseline(value);
     }
     // [IsSpecialName] System.String get_LocaleName()
-    public func _n_get_LocaleName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_LocaleName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocaleName(pThis, __presult))
         }
@@ -883,7 +883,7 @@ open class ICanvasTextFormat
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_LocaleName(System.String)
-    public func _n_put_LocaleName(_ value : Optional<HSTRING>) throws {
+    private func _n_put_LocaleName(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LocaleName(pThis, value))
         }
@@ -895,7 +895,7 @@ open class ICanvasTextFormat
         }
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasVerticalAlignment get_VerticalAlignment()
-    public func _n_get_VerticalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment>?) throws {
+    private func _n_get_VerticalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalAlignment(pThis, __presult))
         }
@@ -906,7 +906,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_VerticalAlignment(Microsoft.Graphics.Canvas.Text.CanvasVerticalAlignment)
-    public func _n_put_VerticalAlignment(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment) throws {
+    private func _n_put_VerticalAlignment(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_VerticalAlignment(pThis, value))
         }
@@ -915,7 +915,7 @@ open class ICanvasTextFormat
         try self._n_put_VerticalAlignment(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasHorizontalAlignment get_HorizontalAlignment()
-    public func _n_get_HorizontalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment>?) throws {
+    private func _n_get_HorizontalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalAlignment(pThis, __presult))
         }
@@ -926,7 +926,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_HorizontalAlignment(Microsoft.Graphics.Canvas.Text.CanvasHorizontalAlignment)
-    public func _n_put_HorizontalAlignment(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment) throws {
+    private func _n_put_HorizontalAlignment(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_HorizontalAlignment(pThis, value))
         }
@@ -935,7 +935,7 @@ open class ICanvasTextFormat
         try self._n_put_HorizontalAlignment(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasTextTrimmingGranularity get_TrimmingGranularity()
-    public func _n_get_TrimmingGranularity(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextTrimmingGranularity>?) throws {
+    private func _n_get_TrimmingGranularity(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextTrimmingGranularity>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TrimmingGranularity(pThis, __presult))
         }
@@ -946,7 +946,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_TrimmingGranularity(Microsoft.Graphics.Canvas.Text.CanvasTextTrimmingGranularity)
-    public func _n_put_TrimmingGranularity(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextTrimmingGranularity) throws {
+    private func _n_put_TrimmingGranularity(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextTrimmingGranularity) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrimmingGranularity(pThis, value))
         }
@@ -955,7 +955,7 @@ open class ICanvasTextFormat
         try self._n_put_TrimmingGranularity(value);
     }
     // [IsSpecialName] System.String get_TrimmingDelimiter()
-    public func _n_get_TrimmingDelimiter(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+    private func _n_get_TrimmingDelimiter(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TrimmingDelimiter(pThis, __presult))
         }
@@ -966,7 +966,7 @@ open class ICanvasTextFormat
         return Swift.String(from: __result);
     }
     // [IsSpecialName] void put_TrimmingDelimiter(System.String)
-    public func _n_put_TrimmingDelimiter(_ value : Optional<HSTRING>) throws {
+    private func _n_put_TrimmingDelimiter(_ value : Optional<HSTRING>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrimmingDelimiter(pThis, value))
         }
@@ -978,7 +978,7 @@ open class ICanvasTextFormat
         }
     }
     // [IsSpecialName] System.Int32 get_TrimmingDelimiterCount()
-    public func _n_get_TrimmingDelimiterCount(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+    private func _n_get_TrimmingDelimiterCount(_ __presult: UnsafeMutablePointer<INT32>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TrimmingDelimiterCount(pThis, __presult))
         }
@@ -989,7 +989,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_TrimmingDelimiterCount(System.Int32)
-    public func _n_put_TrimmingDelimiterCount(_ value : INT32) throws {
+    private func _n_put_TrimmingDelimiterCount(_ value : INT32) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrimmingDelimiterCount(pThis, value))
         }
@@ -998,7 +998,7 @@ open class ICanvasTextFormat
         try self._n_put_TrimmingDelimiterCount(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasWordWrapping get_WordWrapping()
-    public func _n_get_WordWrapping(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasWordWrapping>?) throws {
+    private func _n_get_WordWrapping(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasWordWrapping>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_WordWrapping(pThis, __presult))
         }
@@ -1009,7 +1009,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_WordWrapping(Microsoft.Graphics.Canvas.Text.CanvasWordWrapping)
-    public func _n_put_WordWrapping(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasWordWrapping) throws {
+    private func _n_put_WordWrapping(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasWordWrapping) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_WordWrapping(pThis, value))
         }
@@ -1018,7 +1018,7 @@ open class ICanvasTextFormat
         try self._n_put_WordWrapping(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasDrawTextOptions get_Options()
-    public func _n_get_Options(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions>?) throws {
+    private func _n_get_Options(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Options(pThis, __presult))
         }
@@ -1029,7 +1029,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_Options(Microsoft.Graphics.Canvas.Text.CanvasDrawTextOptions)
-    public func _n_put_Options(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions) throws {
+    private func _n_put_Options(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Options(pThis, value))
         }
@@ -1038,7 +1038,7 @@ open class ICanvasTextFormat
         try self._n_put_Options(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasVerticalGlyphOrientation get_VerticalGlyphOrientation()
-    public func _n_get_VerticalGlyphOrientation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation>?) throws {
+    private func _n_get_VerticalGlyphOrientation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalGlyphOrientation(pThis, __presult))
         }
@@ -1049,7 +1049,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_VerticalGlyphOrientation(Microsoft.Graphics.Canvas.Text.CanvasVerticalGlyphOrientation)
-    public func _n_put_VerticalGlyphOrientation(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation) throws {
+    private func _n_put_VerticalGlyphOrientation(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_VerticalGlyphOrientation(pThis, value))
         }
@@ -1058,7 +1058,7 @@ open class ICanvasTextFormat
         try self._n_put_VerticalGlyphOrientation(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasOpticalAlignment get_OpticalAlignment()
-    public func _n_get_OpticalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment>?) throws {
+    private func _n_get_OpticalAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OpticalAlignment(pThis, __presult))
         }
@@ -1069,7 +1069,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_OpticalAlignment(Microsoft.Graphics.Canvas.Text.CanvasOpticalAlignment)
-    public func _n_put_OpticalAlignment(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment) throws {
+    private func _n_put_OpticalAlignment(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_OpticalAlignment(pThis, value))
         }
@@ -1078,7 +1078,7 @@ open class ICanvasTextFormat
         try self._n_put_OpticalAlignment(value);
     }
     // [IsSpecialName] bool get_LastLineWrapping()
-    public func _n_get_LastLineWrapping(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_LastLineWrapping(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LastLineWrapping(pThis, __presult))
         }
@@ -1089,7 +1089,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_LastLineWrapping(bool)
-    public func _n_put_LastLineWrapping(_ value : boolean) throws {
+    private func _n_put_LastLineWrapping(_ value : boolean) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LastLineWrapping(pThis, value))
         }
@@ -1098,7 +1098,7 @@ open class ICanvasTextFormat
         try self._n_put_LastLineWrapping(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasLineSpacingMode get_LineSpacingMode()
-    public func _n_get_LineSpacingMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode>?) throws {
+    private func _n_get_LineSpacingMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LineSpacingMode(pThis, __presult))
         }
@@ -1109,7 +1109,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_LineSpacingMode(Microsoft.Graphics.Canvas.Text.CanvasLineSpacingMode)
-    public func _n_put_LineSpacingMode(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode) throws {
+    private func _n_put_LineSpacingMode(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LineSpacingMode(pThis, value))
         }
@@ -1118,7 +1118,7 @@ open class ICanvasTextFormat
         try self._n_put_LineSpacingMode(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasTrimmingSign get_TrimmingSign()
-    public func _n_get_TrimmingSign(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign>?) throws {
+    private func _n_get_TrimmingSign(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TrimmingSign(pThis, __presult))
         }
@@ -1129,7 +1129,7 @@ open class ICanvasTextFormat
         return __result;
     }
     // [IsSpecialName] void put_TrimmingSign(Microsoft.Graphics.Canvas.Text.CanvasTrimmingSign)
-    public func _n_put_TrimmingSign(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign) throws {
+    private func _n_put_TrimmingSign(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrimmingSign(pThis, value))
         }
@@ -1138,7 +1138,7 @@ open class ICanvasTextFormat
         try self._n_put_TrimmingSign(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.ICanvasTextInlineObject get_CustomTrimmingSign()
-    public func _n_get_CustomTrimmingSign(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject>>>?) throws {
+    private func _n_get_CustomTrimmingSign(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CustomTrimmingSign(pThis, __presult))
         }
@@ -1149,7 +1149,7 @@ open class ICanvasTextFormat
         return WinRT.Microsoft.Graphics.Canvas.Text.ICanvasTextInlineObject(consuming: __result);
     }
     // [IsSpecialName] void put_CustomTrimmingSign(Microsoft.Graphics.Canvas.Text.ICanvasTextInlineObject)
-    public func _n_put_CustomTrimmingSign(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject>>) throws {
+    private func _n_put_CustomTrimmingSign(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CustomTrimmingSign(pThis, value))
         }
@@ -1283,7 +1283,7 @@ open class ICanvasTextFormatStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8a927515, Data2: 0x33fc, Data3 : 0x4c92, Data4 : (0xa6, 0xaa, 0x94, 0xa8, 0xf2, 0x9c, 0x14, 0x0b)) }
     // System.String[] GetSystemFontFamilies()
-    public func _n_GetSystemFontFamilies(_ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<Optional<HSTRING>>>>?) throws {
+    private func _n_GetSystemFontFamilies(_ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<Optional<HSTRING>>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormatStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemFontFamilies(pThis, __presultLength, __presult))
         }
@@ -1295,7 +1295,7 @@ open class ICanvasTextFormatStatics
         return __resultLength;
     }
     // System.String[] GetSystemFontFamilies(Windows.Foundation.Collections.IVectorView<System.String>)
-    public func _n_GetSystemFontFamiliesFromLocaleList(_ localeList : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>>, _ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<Optional<HSTRING>>>>?) throws {
+    private func _n_GetSystemFontFamiliesFromLocaleList(_ localeList : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>>, _ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<Optional<HSTRING>>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormatStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemFontFamiliesFromLocaleList(pThis, localeList, __presultLength, __presult))
         }
@@ -1439,7 +1439,7 @@ open class ICanvasTextLayoutFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9c1f7179, Data2: 0xacd0, Data3 : 0x4680, Data4 : (0x93, 0xd5, 0x95, 0xa6, 0x24, 0x7e, 0x8f, 0x6b)) }
     // Microsoft.Graphics.Canvas.Text.CanvasTextLayout Create(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.String, Microsoft.Graphics.Canvas.Text.CanvasTextFormat, System.Single, System.Single)
-    public func _n_Create(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ textString : Optional<HSTRING>, _ textFormat : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>, _ requestedWidth : FLOAT, _ requestedHeight : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>>?) throws {
+    private func _n_Create(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ textString : Optional<HSTRING>, _ textFormat : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>, _ requestedWidth : FLOAT, _ requestedHeight : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, resourceCreator, textString, textFormat, requestedWidth, requestedHeight, __presult))
         }
@@ -1476,7 +1476,7 @@ open class ICanvasTextRenderingParametersFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd240ac25, Data2: 0x4d23, Data3 : 0x4964, Data4 : (0x9d, 0x9a, 0xdb, 0x2f, 0xc8, 0xaf, 0x18, 0x5d)) }
     // Microsoft.Graphics.Canvas.Text.CanvasTextRenderingParameters Create(Microsoft.Graphics.Canvas.Text.CanvasTextRenderingMode, Microsoft.Graphics.Canvas.Text.CanvasTextGridFit)
-    public func _n_Create(_ textRenderingMode : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextRenderingMode, _ gridFit : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextGridFit, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters>>>?) throws {
+    private func _n_Create(_ textRenderingMode : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextRenderingMode, _ gridFit : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextGridFit, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, textRenderingMode, gridFit, __presult))
         }

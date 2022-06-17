@@ -53,7 +53,7 @@ open class ICanvasCreateResourcesEventArgsFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3a21c766, Data2: 0x0781, Data3 : 0x4389, Data4 : (0xbb, 0xc3, 0x86, 0xb1, 0xf5, 0x02, 0x2a, 0xf1)) }
     // Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs Create(Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason)
-    public func _n_Create(_ createResourcesReason : _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs>>>?) throws {
+    private func _n_Create(_ createResourcesReason : _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgsFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, createResourcesReason, __presult))
         }

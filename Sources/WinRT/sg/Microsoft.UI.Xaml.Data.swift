@@ -81,7 +81,7 @@ open class IBindingBaseFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc8a866c5, Data2: 0xf6f3, Data3 : 0x5f7a, Data4 : (0x95, 0x92, 0xd3, 0x85, 0xaf, 0x48, 0xbd, 0x8f)) }
     // Microsoft.UI.Xaml.Data.BindingBase CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIBindingBase>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIBindingBase>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CData_CIBindingBaseFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }

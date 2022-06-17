@@ -134,7 +134,7 @@ open class IAnimationObject
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8f56119d, Data2: 0xb96d, Data3 : 0x58d0, Data4 : (0x99, 0x16, 0xd1, 0xc5, 0xe3, 0x90, 0xf8, 0x90)) }
     // void PopulatePropertyInfo(System.String, Microsoft.UI.Composition.AnimationPropertyInfo)
-    public func _n_PopulatePropertyInfo(_ propertyName : Optional<HSTRING>, _ propertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
+    private func _n_PopulatePropertyInfo(_ propertyName : Optional<HSTRING>, _ propertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CComposition_CIAnimationObject.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfo(pThis, propertyName, propertyInfo))
         }
@@ -278,7 +278,7 @@ open class IVisualElement2
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbc950c8d, Data2: 0x1db0, Data3 : 0x53aa, Data4 : (0x9d, 0xee, 0x34, 0x27, 0x1c, 0xd1, 0x8c, 0xe6)) }
     // Microsoft.UI.Composition.Visual GetVisualInternal()
-    public func _n_GetVisualInternal(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIVisual>>>?) throws {
+    private func _n_GetVisualInternal(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIVisual>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CComposition_CIVisualElement2.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetVisualInternal(pThis, __presult))
         }

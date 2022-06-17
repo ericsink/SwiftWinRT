@@ -27,7 +27,7 @@ open class IOutputStream
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe6, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
 // method not needed: WriteAsync
     // Windows.Foundation.IAsyncOperation<bool> FlushAsync()
-    public func _n_FlushAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+    private func _n_FlushAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
         return try perform(as: _q_CWindows_CStorage_CStreams_CIOutputStream.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FlushAsync(pThis, __presult))
         }

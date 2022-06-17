@@ -100,7 +100,7 @@ open class IDispatcherQueueController
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x22f34e66, Data2: 0x50db, Data3 : 0x4e36, Data4 : (0xa9, 0x8d, 0x61, 0xc0, 0x1b, 0x38, 0x4d, 0x20)) }
     // [IsSpecialName] Windows.System.DispatcherQueue get_DispatcherQueue()
-    public func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueue>>>?) throws {
+    private func _n_get_DispatcherQueue(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueue>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CIDispatcherQueueController.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_DispatcherQueue(pThis, __presult))
         }
@@ -111,7 +111,7 @@ open class IDispatcherQueueController
         return WinRT.Windows.System.IDispatcherQueue(consuming: __result);
     }
     // Windows.Foundation.IAsyncAction ShutdownQueueAsync()
-    public func _n_ShutdownQueueAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+    private func _n_ShutdownQueueAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CIDispatcherQueueController.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ShutdownQueueAsync(pThis, __presult))
         }
@@ -146,7 +146,7 @@ open class IDispatcherQueueControllerStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0a6c98e0, Data2: 0x5198, Data3 : 0x49a2, Data4 : (0xa3, 0x13, 0x3f, 0x70, 0xd1, 0xf1, 0x3c, 0x27)) }
     // Windows.System.DispatcherQueueController CreateOnDedicatedThread()
-    public func _n_CreateOnDedicatedThread(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueueController>>>?) throws {
+    private func _n_CreateOnDedicatedThread(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIDispatcherQueueController>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CIDispatcherQueueControllerStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateOnDedicatedThread(pThis, __presult))
         }

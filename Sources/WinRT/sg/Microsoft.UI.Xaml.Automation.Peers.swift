@@ -157,7 +157,7 @@ open class IAutomationPeerFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa1af86a0, Data2: 0x6ec6, Data3 : 0x5be2, Data4 : (0x85, 0x8f, 0x72, 0x80, 0x8b, 0xe6, 0xfd, 0xdd)) }
     // Microsoft.UI.Xaml.Automation.Peers.AutomationPeer CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }

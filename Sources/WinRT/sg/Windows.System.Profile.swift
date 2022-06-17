@@ -13,7 +13,7 @@ open class ISystemIdentificationInfo
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0c659e7d, Data2: 0xc3c2, Data3 : 0x4d33, Data4 : (0xa2, 0xdf, 0x21, 0xbc, 0x41, 0x91, 0x6e, 0xb3)) }
     // [IsSpecialName] Windows.Storage.Streams.IBuffer get_Id()
-    public func _n_get_Id(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+    private func _n_get_Id(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Id(pThis, __presult))
         }
@@ -24,7 +24,7 @@ open class ISystemIdentificationInfo
         return WinRT.Windows.Storage.Streams.IBuffer(consuming: __result);
     }
     // [IsSpecialName] Windows.System.Profile.SystemIdentificationSource get_Source()
-    public func _n_get_Source(_ __presult: UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CSystemIdentificationSource>?) throws {
+    private func _n_get_Source(_ __presult: UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CSystemIdentificationSource>?) throws {
         return try perform(as: _q_CWindows_CSystem_CProfile_CISystemIdentificationInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Source(pThis, __presult))
         }
@@ -55,7 +55,7 @@ open class ISystemIdentificationStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5581f42a, Data2: 0xd3df, Data3 : 0x4d93, Data4 : (0xa3, 0x7d, 0xc4, 0x1a, 0x61, 0x6c, 0x6d, 0x01)) }
     // Windows.System.Profile.SystemIdentificationInfo GetSystemIdForPublisher()
-    public func _n_GetSystemIdForPublisher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>>>?) throws {
+    private func _n_GetSystemIdForPublisher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemIdForPublisher(pThis, __presult))
         }
@@ -66,7 +66,7 @@ open class ISystemIdentificationStatics
         return WinRT.Windows.System.Profile.ISystemIdentificationInfo(consuming: __result);
     }
     // Windows.System.Profile.SystemIdentificationInfo GetSystemIdForUser(Windows.System.User)
-    public func _n_GetSystemIdForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>>>?) throws {
+    private func _n_GetSystemIdForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CProfile_CISystemIdentificationInfo>>>?) throws {
         return try perform(as: _q_CWindows_CSystem_CProfile_CISystemIdentificationStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSystemIdForUser(pThis, user, __presult))
         }

@@ -231,7 +231,7 @@ open class ICanvasGradientMeshFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4756492d, Data2: 0x251e, Data3 : 0x421d, Data4 : (0x83, 0x4d, 0x87, 0xec, 0x26, 0x0d, 0x5e, 0x4d)) }
     // Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh Create(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Microsoft.Graphics.Canvas.Geometry.CanvasGradientMeshPatch[])
-    public func _n_Create(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ patchElementsLength : UINT32, _ patchElements : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>>?) throws {
+    private func _n_Create(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ patchElementsLength : UINT32, _ patchElements : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, resourceCreator, patchElementsLength, patchElements, __presult))
         }

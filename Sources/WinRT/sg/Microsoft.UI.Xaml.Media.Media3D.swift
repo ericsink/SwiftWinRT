@@ -24,7 +24,7 @@ open class ITransform3DFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9bcce0a1, Data2: 0x10ac, Data3 : 0x5319, Data4 : (0xbd, 0xf1, 0x54, 0x8d, 0x2e, 0x5a, 0xe5, 0x04)) }
     // Microsoft.UI.Xaml.Media.Media3D.Transform3D CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3D>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CMedia3D_CITransform3DFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }

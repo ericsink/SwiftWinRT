@@ -585,7 +585,7 @@ open class IBrush
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2de3cb83, Data2: 0x1329, Data3 : 0x5679, Data4 : (0x88, 0xf8, 0xc8, 0x22, 0xbc, 0x54, 0x42, 0xcb)) }
     // [IsSpecialName] System.Double get_Opacity()
-    public func _n_get_Opacity(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Opacity(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Opacity(pThis, __presult))
         }
@@ -596,7 +596,7 @@ open class IBrush
         return __result;
     }
     // [IsSpecialName] void put_Opacity(System.Double)
-    public func _n_put_Opacity(_ value : DOUBLE) throws {
+    private func _n_put_Opacity(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Opacity(pThis, value))
         }
@@ -605,7 +605,7 @@ open class IBrush
         try self._n_put_Opacity(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Transform get_Transform()
-    public func _n_get_Transform(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>>?) throws {
+    private func _n_get_Transform(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transform(pThis, __presult))
         }
@@ -616,7 +616,7 @@ open class IBrush
         return WinRT.Microsoft.UI.Xaml.Media.ITransform(consuming: __result);
     }
     // [IsSpecialName] void put_Transform(Microsoft.UI.Xaml.Media.Transform)
-    public func _n_put_Transform(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>) throws {
+    private func _n_put_Transform(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Transform(pThis, value))
         }
@@ -625,7 +625,7 @@ open class IBrush
         try self._n_put_Transform(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Transform get_RelativeTransform()
-    public func _n_get_RelativeTransform(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>>?) throws {
+    private func _n_get_RelativeTransform(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RelativeTransform(pThis, __presult))
         }
@@ -636,7 +636,7 @@ open class IBrush
         return WinRT.Microsoft.UI.Xaml.Media.ITransform(consuming: __result);
     }
     // [IsSpecialName] void put_RelativeTransform(Microsoft.UI.Xaml.Media.Transform)
-    public func _n_put_RelativeTransform(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>) throws {
+    private func _n_put_RelativeTransform(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CITransform>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RelativeTransform(pThis, value))
         }
@@ -671,7 +671,7 @@ open class IBrushFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb5258717, Data2: 0x6c49, Data3 : 0x5ba5, Data4 : (0x87, 0xfd, 0x35, 0xdf, 0x38, 0x26, 0x47, 0xa5)) }
     // Microsoft.UI.Xaml.Media.Brush CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -694,7 +694,7 @@ open class IBrushOverrides
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb6b08394, Data2: 0xbacf, Data3 : 0x53db, Data4 : (0x9a, 0xc7, 0xbe, 0x1c, 0x69, 0x3e, 0x35, 0x13)) }
     // void PopulatePropertyInfoOverride(System.String, Microsoft.UI.Composition.AnimationPropertyInfo)
-    public func _n_PopulatePropertyInfoOverride(_ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
+    private func _n_PopulatePropertyInfoOverride(_ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfoOverride(pThis, propertyName, animationPropertyInfo))
         }
@@ -716,7 +716,7 @@ open class IBrushStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5b854f50, Data2: 0xf818, Data3 : 0x5f01, Data4 : (0x91, 0xb0, 0x28, 0x13, 0x2d, 0x3f, 0x59, 0x57)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_OpacityProperty()
-    public func _n_get_OpacityProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_OpacityProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OpacityProperty(pThis, __presult))
         }
@@ -727,7 +727,7 @@ open class IBrushStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TransformProperty()
-    public func _n_get_TransformProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_TransformProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TransformProperty(pThis, __presult))
         }
@@ -738,7 +738,7 @@ open class IBrushStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_RelativeTransformProperty()
-    public func _n_get_RelativeTransformProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_RelativeTransformProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RelativeTransformProperty(pThis, __presult))
         }
@@ -785,7 +785,7 @@ open class ICacheModeFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe257811e, Data2: 0xdcc5, Data3 : 0x51d8, Data4 : (0x82, 0x9a, 0x3e, 0x94, 0x00, 0x19, 0x8a, 0x41)) }
     // Microsoft.UI.Xaml.Media.CacheMode CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CICacheMode>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CICacheMode>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CICacheModeFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -820,7 +820,7 @@ open class IFontFamilyFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x61b88a77, Data2: 0xd0f9, Data3 : 0x5e9e, Data4 : (0x8c, 0x28, 0xed, 0xa0, 0x1f, 0xed, 0xe2, 0x2e)) }
     // Microsoft.UI.Xaml.Media.FontFamily CreateInstanceWithName(System.String, System.Object, ref System.Object)
-    public func _n_CreateInstanceWithName(_ familyName : Optional<HSTRING>, _ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily>>>?) throws {
+    private func _n_CreateInstanceWithName(_ familyName : Optional<HSTRING>, _ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamilyFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithName(pThis, familyName, baseInterface, innerInterface, __presult))
         }
@@ -861,7 +861,7 @@ open class IGeneralTransformFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2f1025a3, Data2: 0x5391, Data3 : 0x5d1b, Data4 : (0x83, 0x82, 0x3c, 0xaa, 0xa1, 0xd2, 0x6a, 0x96)) }
     // Microsoft.UI.Xaml.Media.GeneralTransform CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGeneralTransform>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGeneralTransform>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGeneralTransformFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -897,7 +897,7 @@ open class IGradientBrush
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x77c347fa, Data2: 0xc4c4, Data3 : 0x5174, Data4 : (0xa9, 0x45, 0x65, 0xca, 0xb3, 0xaa, 0x1c, 0x75)) }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.GradientSpreadMethod get_SpreadMethod()
-    public func _n_get_SpreadMethod(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod>?) throws {
+    private func _n_get_SpreadMethod(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SpreadMethod(pThis, __presult))
         }
@@ -908,7 +908,7 @@ open class IGradientBrush
         return __result;
     }
     // [IsSpecialName] void put_SpreadMethod(Microsoft.UI.Xaml.Media.GradientSpreadMethod)
-    public func _n_put_SpreadMethod(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod) throws {
+    private func _n_put_SpreadMethod(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CGradientSpreadMethod) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SpreadMethod(pThis, value))
         }
@@ -917,7 +917,7 @@ open class IGradientBrush
         try self._n_put_SpreadMethod(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.BrushMappingMode get_MappingMode()
-    public func _n_get_MappingMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode>?) throws {
+    private func _n_get_MappingMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MappingMode(pThis, __presult))
         }
@@ -928,7 +928,7 @@ open class IGradientBrush
         return __result;
     }
     // [IsSpecialName] void put_MappingMode(Microsoft.UI.Xaml.Media.BrushMappingMode)
-    public func _n_put_MappingMode(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode) throws {
+    private func _n_put_MappingMode(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CBrushMappingMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MappingMode(pThis, value))
         }
@@ -937,7 +937,7 @@ open class IGradientBrush
         try self._n_put_MappingMode(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.ColorInterpolationMode get_ColorInterpolationMode()
-    public func _n_get_ColorInterpolationMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CColorInterpolationMode>?) throws {
+    private func _n_get_ColorInterpolationMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CColorInterpolationMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColorInterpolationMode(pThis, __presult))
         }
@@ -948,7 +948,7 @@ open class IGradientBrush
         return __result;
     }
     // [IsSpecialName] void put_ColorInterpolationMode(Microsoft.UI.Xaml.Media.ColorInterpolationMode)
-    public func _n_put_ColorInterpolationMode(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CColorInterpolationMode) throws {
+    private func _n_put_ColorInterpolationMode(_ value : _q_CMicrosoft_CUI_CXaml_CMedia_CColorInterpolationMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ColorInterpolationMode(pThis, value))
         }
@@ -957,7 +957,7 @@ open class IGradientBrush
         try self._n_put_ColorInterpolationMode(value);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.GradientStopCollection get_GradientStops()
-    public func _n_get_GradientStops(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>>?) throws {
+    private func _n_get_GradientStops(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GradientStops(pThis, __presult))
         }
@@ -968,7 +968,7 @@ open class IGradientBrush
         return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
     }
     // [IsSpecialName] void put_GradientStops(Microsoft.UI.Xaml.Media.GradientStopCollection)
-    public func _n_put_GradientStops(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>) throws {
+    private func _n_put_GradientStops(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_GradientStops(pThis, value))
         }
@@ -1008,7 +1008,7 @@ open class IGradientBrushFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x64ff6177, Data2: 0x1eda, Data3 : 0x565b, Data4 : (0xb7, 0xaa, 0xac, 0x50, 0x15, 0x2e, 0x31, 0x36)) }
     // Microsoft.UI.Xaml.Media.GradientBrush CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrush>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -1031,7 +1031,7 @@ open class IGradientBrushStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4d3697d7, Data2: 0xc6db, Data3 : 0x501c, Data4 : (0x8f, 0xa2, 0xda, 0x30, 0xb8, 0xc8, 0xca, 0x3b)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SpreadMethodProperty()
-    public func _n_get_SpreadMethodProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_SpreadMethodProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SpreadMethodProperty(pThis, __presult))
         }
@@ -1042,7 +1042,7 @@ open class IGradientBrushStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MappingModeProperty()
-    public func _n_get_MappingModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MappingModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MappingModeProperty(pThis, __presult))
         }
@@ -1053,7 +1053,7 @@ open class IGradientBrushStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColorInterpolationModeProperty()
-    public func _n_get_ColorInterpolationModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ColorInterpolationModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColorInterpolationModeProperty(pThis, __presult))
         }
@@ -1064,7 +1064,7 @@ open class IGradientBrushStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_GradientStopsProperty()
-    public func _n_get_GradientStopsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_GradientStopsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GradientStopsProperty(pThis, __presult))
         }
@@ -1105,7 +1105,7 @@ open class IGradientStop
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x48bcb039, Data2: 0xe8e1, Data3 : 0x5743, Data4 : (0x94, 0xc3, 0xf7, 0x66, 0x01, 0x1d, 0x3b, 0x5d)) }
     // [IsSpecialName] Windows.UI.Color get_Color()
-    public func _n_get_Color(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Color(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Color(pThis, __presult))
         }
@@ -1116,7 +1116,7 @@ open class IGradientStop
         return __result;
     }
     // [IsSpecialName] void put_Color(Windows.UI.Color)
-    public func _n_put_Color(_ value : _q_CWindows_CUI_CColor) throws {
+    private func _n_put_Color(_ value : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Color(pThis, value))
         }
@@ -1125,7 +1125,7 @@ open class IGradientStop
         try self._n_put_Color(value);
     }
     // [IsSpecialName] System.Double get_Offset()
-    public func _n_get_Offset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Offset(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Offset(pThis, __presult))
         }
@@ -1136,7 +1136,7 @@ open class IGradientStop
         return __result;
     }
     // [IsSpecialName] void put_Offset(System.Double)
-    public func _n_put_Offset(_ value : DOUBLE) throws {
+    private func _n_put_Offset(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Offset(pThis, value))
         }
@@ -1165,7 +1165,7 @@ open class IGradientStopStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0b566c1b, Data2: 0x37de, Data3 : 0x5bfd, Data4 : (0xb4, 0x19, 0x0f, 0x7c, 0x4c, 0x0a, 0x05, 0x23)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColorProperty()
-    public func _n_get_ColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColorProperty(pThis, __presult))
         }
@@ -1176,7 +1176,7 @@ open class IGradientStopStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_OffsetProperty()
-    public func _n_get_OffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_OffsetProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStopStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_OffsetProperty(pThis, __presult))
         }
@@ -1207,7 +1207,7 @@ open class ILinearGradientBrush
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0ab9638, Data2: 0x1bd9, Data3 : 0x5fa4, Data4 : (0x96, 0x49, 0x48, 0xcf, 0xa1, 0x2f, 0x0d, 0x1e)) }
     // [IsSpecialName] Windows.Foundation.Point get_StartPoint()
-    public func _n_get_StartPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
+    private func _n_get_StartPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_StartPoint(pThis, __presult))
         }
@@ -1218,7 +1218,7 @@ open class ILinearGradientBrush
         return __result;
     }
     // [IsSpecialName] void put_StartPoint(Windows.Foundation.Point)
-    public func _n_put_StartPoint(_ value : _q_CWindows_CFoundation_CPoint) throws {
+    private func _n_put_StartPoint(_ value : _q_CWindows_CFoundation_CPoint) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_StartPoint(pThis, value))
         }
@@ -1227,7 +1227,7 @@ open class ILinearGradientBrush
         try self._n_put_StartPoint(value);
     }
     // [IsSpecialName] Windows.Foundation.Point get_EndPoint()
-    public func _n_get_EndPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
+    private func _n_get_EndPoint(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CPoint>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EndPoint(pThis, __presult))
         }
@@ -1238,7 +1238,7 @@ open class ILinearGradientBrush
         return __result;
     }
     // [IsSpecialName] void put_EndPoint(Windows.Foundation.Point)
-    public func _n_put_EndPoint(_ value : _q_CWindows_CFoundation_CPoint) throws {
+    private func _n_put_EndPoint(_ value : _q_CWindows_CFoundation_CPoint) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EndPoint(pThis, value))
         }
@@ -1268,7 +1268,7 @@ open class ILinearGradientBrushFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0ba7de3, Data2: 0xccfd, Data3 : 0x534c, Data4 : (0x88, 0x2f, 0x3a, 0xb3, 0x9a, 0xe7, 0x23, 0xf3)) }
     // Microsoft.UI.Xaml.Media.LinearGradientBrush CreateInstanceWithGradientStopCollectionAndAngle(Microsoft.UI.Xaml.Media.GradientStopCollection, System.Double)
-    public func _n_CreateInstanceWithGradientStopCollectionAndAngle(_ gradientStopCollection : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>, _ angle : DOUBLE, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush>>>?) throws {
+    private func _n_CreateInstanceWithGradientStopCollectionAndAngle(_ gradientStopCollection : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>, _ angle : DOUBLE, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithGradientStopCollectionAndAngle(pThis, gradientStopCollection, angle, __presult))
         }
@@ -1289,7 +1289,7 @@ open class ILinearGradientBrushStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdf029e84, Data2: 0xf6be, Data3 : 0x5b7e, Data4 : (0xba, 0x22, 0x3b, 0x4e, 0x7a, 0x6b, 0xce, 0xee)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_StartPointProperty()
-    public func _n_get_StartPointProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_StartPointProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_StartPointProperty(pThis, __presult))
         }
@@ -1300,7 +1300,7 @@ open class ILinearGradientBrushStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_EndPointProperty()
-    public func _n_get_EndPointProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_EndPointProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EndPointProperty(pThis, __presult))
         }
@@ -1342,7 +1342,7 @@ open class IProjectionFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x870ea34f, Data2: 0xdb61, Data3 : 0x5b75, Data4 : (0x89, 0xad, 0xe0, 0x48, 0x0c, 0x80, 0x29, 0x37)) }
     // Microsoft.UI.Xaml.Media.Projection CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -1387,7 +1387,7 @@ open class ISolidColorBrush
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3865c31, Data2: 0x37c8, Data3 : 0x55c1, Data4 : (0x8a, 0x72, 0xd4, 0x1c, 0x67, 0x64, 0x2e, 0x2a)) }
     // [IsSpecialName] Windows.UI.Color get_Color()
-    public func _n_get_Color(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
+    private func _n_get_Color(_ __presult: UnsafeMutablePointer<_q_CWindows_CUI_CColor>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Color(pThis, __presult))
         }
@@ -1398,7 +1398,7 @@ open class ISolidColorBrush
         return __result;
     }
     // [IsSpecialName] void put_Color(Windows.UI.Color)
-    public func _n_put_Color(_ value : _q_CWindows_CUI_CColor) throws {
+    private func _n_put_Color(_ value : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Color(pThis, value))
         }
@@ -1423,7 +1423,7 @@ open class ISolidColorBrushFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7b559384, Data2: 0x4daa, Data3 : 0x54f4, Data4 : (0x91, 0xef, 0x33, 0xa2, 0x3f, 0xd8, 0x16, 0xca)) }
     // Microsoft.UI.Xaml.Media.SolidColorBrush CreateInstanceWithColor(Windows.UI.Color)
-    public func _n_CreateInstanceWithColor(_ color : _q_CWindows_CUI_CColor, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>>>?) throws {
+    private func _n_CreateInstanceWithColor(_ color : _q_CWindows_CUI_CColor, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithColor(pThis, color, __presult))
         }
@@ -1444,7 +1444,7 @@ open class ISolidColorBrushStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6bc16da0, Data2: 0xc4e6, Data3 : 0x59b8, Data4 : (0x99, 0x5b, 0xb3, 0x1e, 0x48, 0x42, 0x4c, 0x07)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ColorProperty()
-    public func _n_get_ColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrushStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColorProperty(pThis, __presult))
         }
@@ -1491,7 +1491,7 @@ open class IXamlLightFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x76da6306, Data2: 0x96fc, Data3 : 0x553e, Data4 : (0xbb, 0x39, 0x9a, 0x48, 0x01, 0xd0, 0x6f, 0x48)) }
     // Microsoft.UI.Xaml.Media.XamlLight CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLightFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }

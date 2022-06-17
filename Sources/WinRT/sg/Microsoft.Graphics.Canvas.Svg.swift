@@ -80,7 +80,7 @@ open class ICanvasSvgDocumentFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbab0f16d, Data2: 0x4050, Data3 : 0x4ef6, Data4 : (0x80, 0x22, 0x8a, 0x07, 0xe9, 0xe7, 0x4a, 0x9d)) }
     // Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument CreateEmpty(Microsoft.Graphics.Canvas.ICanvasResourceCreator)
-    public func _n_CreateEmpty(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>>?) throws {
+    private func _n_CreateEmpty(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEmpty(pThis, resourceCreator, __presult))
         }

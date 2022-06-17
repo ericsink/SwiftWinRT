@@ -51,7 +51,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x030a9884, Data2: 0x05db, Data3 : 0x57af, Data4 : (0xae, 0x3b, 0x4c, 0x77, 0xff, 0xab, 0xfe, 0x57)) }
     // Microsoft.UI.Xaml.Media.Animation.Transition GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -62,7 +62,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         return WinRT.Microsoft.UI.Xaml.Media.Animation.ITransition(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -73,7 +73,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.Animation.Transition> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -84,7 +84,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Media.Animation.Transition, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -97,7 +97,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.Media.Animation.Transition)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -106,7 +106,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Media.Animation.Transition)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -115,7 +115,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -124,7 +124,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.Media.Animation.Transition)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -133,7 +133,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -142,7 +142,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -151,7 +151,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Media.Animation.Transition[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -162,7 +162,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Media.Animation.Transition[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -205,7 +205,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfb6065bb, Data2: 0x83e0, Data3 : 0x57c0, Data4 : (0xae, 0x7f, 0x41, 0x8f, 0xd7, 0x63, 0xb0, 0xce)) }
     // Microsoft.UI.Xaml.Media.XamlLight GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -216,7 +216,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         return WinRT.Microsoft.UI.Xaml.Media.IXamlLight(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -227,7 +227,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.XamlLight> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -238,7 +238,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Media.XamlLight, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -251,7 +251,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.Media.XamlLight)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -260,7 +260,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Media.XamlLight)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -269,7 +269,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -278,7 +278,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.Media.XamlLight)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -287,7 +287,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -296,7 +296,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -305,7 +305,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Media.XamlLight[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -316,7 +316,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Media.XamlLight[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -348,7 +348,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0db091c3, Data2: 0x8538, Data3 : 0x5d25, Data4 : (0x93, 0x7f, 0xdb, 0x6e, 0x00, 0x3e, 0x1f, 0x71)) }
     // Microsoft.UI.Xaml.Input.KeyboardAccelerator GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -359,7 +359,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         return WinRT.Microsoft.UI.Xaml.Input.IKeyboardAccelerator(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -370,7 +370,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Input.KeyboardAccelerator> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -381,7 +381,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Input.KeyboardAccelerator, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -394,7 +394,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.Input.KeyboardAccelerator)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -403,7 +403,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Input.KeyboardAccelerator)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -412,7 +412,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -421,7 +421,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.Input.KeyboardAccelerator)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -430,7 +430,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -439,7 +439,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -448,7 +448,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Input.KeyboardAccelerator[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -459,7 +459,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Input.KeyboardAccelerator[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -548,7 +548,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xef52e000, Data2: 0x0b0f, Data3 : 0x52b5, Data4 : (0xbd, 0xfe, 0x4f, 0x59, 0x35, 0xdc, 0xf1, 0xbc)) }
     // Microsoft.UI.Xaml.TriggerBase GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -559,7 +559,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         return WinRT.Microsoft.UI.Xaml.ITriggerBase(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -570,7 +570,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.TriggerBase> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -581,7 +581,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.TriggerBase, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -594,7 +594,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.TriggerBase)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -603,7 +603,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.TriggerBase)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -612,7 +612,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -621,7 +621,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.TriggerBase)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -630,7 +630,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -639,7 +639,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -648,7 +648,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.TriggerBase[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -659,7 +659,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.TriggerBase[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -691,7 +691,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0015a441, Data2: 0x4c98, Data3 : 0x5d3f, Data4 : (0x88, 0x23, 0x03, 0xe7, 0x22, 0x61, 0x5c, 0x48)) }
     // Microsoft.UI.Xaml.Documents.Inline GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -702,7 +702,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         return WinRT.Microsoft.UI.Xaml.Documents.IInline(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -713,7 +713,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.Inline> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -724,7 +724,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Documents.Inline, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -737,7 +737,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.Documents.Inline)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -746,7 +746,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Documents.Inline)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -755,7 +755,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -764,7 +764,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.Documents.Inline)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -773,7 +773,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -782,7 +782,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -791,7 +791,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Documents.Inline[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -802,7 +802,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Documents.Inline[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -834,7 +834,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6d576f67, Data2: 0x1548, Data3 : 0x51c9, Data4 : (0x83, 0xa8, 0x2b, 0x54, 0x01, 0xb0, 0x28, 0x1b)) }
     // Microsoft.UI.Xaml.Documents.TextHighlighter GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -845,7 +845,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         return WinRT.Microsoft.UI.Xaml.Documents.ITextHighlighter(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -856,7 +856,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Documents.TextHighlighter> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -867,7 +867,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Documents.TextHighlighter, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -880,7 +880,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.Documents.TextHighlighter)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -889,7 +889,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Documents.TextHighlighter)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -898,7 +898,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -907,7 +907,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.Documents.TextHighlighter)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -916,7 +916,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -925,7 +925,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -934,7 +934,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Documents.TextHighlighter[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -945,7 +945,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Documents.TextHighlighter[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -977,7 +977,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xea4a1af0, Data2: 0x4286, Data3 : 0x5f11, Data4 : (0x81, 0x42, 0x6b, 0x01, 0x69, 0xf4, 0xe9, 0xde)) }
     // Microsoft.UI.Xaml.UIElement GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -988,7 +988,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         return WinRT.Microsoft.UI.Xaml.IUIElement(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -999,7 +999,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.UIElement> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -1010,7 +1010,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.UIElement, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -1023,7 +1023,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.UIElement)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -1032,7 +1032,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.UIElement)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -1041,7 +1041,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -1050,7 +1050,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.UIElement)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -1059,7 +1059,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -1068,7 +1068,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -1077,7 +1077,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.UIElement[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -1088,7 +1088,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.UIElement[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
@@ -1131,7 +1131,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa367363d, Data2: 0xdeaf, Data3 : 0x5d2c, Data4 : (0x90, 0x9c, 0x41, 0xb0, 0xf2, 0x59, 0xba, 0x7c)) }
     // Microsoft.UI.Xaml.Media.GradientStop GetAt(System.UInt32)
-    public func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>>?) throws {
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
         }
@@ -1142,7 +1142,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         return WinRT.Microsoft.UI.Xaml.Media.IGradientStop(consuming: __result);
     }
     // [IsSpecialName] System.UInt32 get_Size()
-    public func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
         }
@@ -1153,7 +1153,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         return __result;
     }
     // Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Media.GradientStop> GetView()
-    public func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>>?) throws {
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
@@ -1164,7 +1164,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Media.GradientStop, ref System.UInt32)
-    public func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
@@ -1177,7 +1177,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         return __result;
     }
     // void SetAt(System.UInt32, Microsoft.UI.Xaml.Media.GradientStop)
-    public func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
@@ -1186,7 +1186,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         try self._n_SetAt(index, RawPointer(value));
     }
     // void InsertAt(System.UInt32, Microsoft.UI.Xaml.Media.GradientStop)
-    public func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
@@ -1195,7 +1195,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         try self._n_InsertAt(index, RawPointer(value));
     }
     // void RemoveAt(System.UInt32)
-    public func _n_RemoveAt(_ index : UINT32) throws {
+    private func _n_RemoveAt(_ index : UINT32) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
         }
@@ -1204,7 +1204,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         try self._n_RemoveAt(index);
     }
     // void Append(Microsoft.UI.Xaml.Media.GradientStop)
-    public func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
@@ -1213,7 +1213,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         try self._n_Append(RawPointer(value));
     }
     // void RemoveAtEnd()
-    public func _n_RemoveAtEnd() throws {
+    private func _n_RemoveAtEnd() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
         }
@@ -1222,7 +1222,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         try self._n_RemoveAtEnd();
     }
     // void Clear()
-    public func _n_Clear() throws {
+    private func _n_Clear() throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
         }
@@ -1231,7 +1231,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Media.GradientStop[])
-    public func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
@@ -1242,7 +1242,7 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Media.GradientStop[])
-    public func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }

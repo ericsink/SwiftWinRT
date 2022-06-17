@@ -216,7 +216,7 @@ open class IButtonBase
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x65714269, Data2: 0x2473, Data3 : 0x5327, Data4 : (0xa6, 0x52, 0x0e, 0xa6, 0xbc, 0xe7, 0xf4, 0x03)) }
     // [IsSpecialName] Microsoft.UI.Xaml.Controls.ClickMode get_ClickMode()
-    public func _n_get_ClickMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CClickMode>?) throws {
+    private func _n_get_ClickMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CClickMode>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClickMode(pThis, __presult))
         }
@@ -227,7 +227,7 @@ open class IButtonBase
         return __result;
     }
     // [IsSpecialName] void put_ClickMode(Microsoft.UI.Xaml.Controls.ClickMode)
-    public func _n_put_ClickMode(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CClickMode) throws {
+    private func _n_put_ClickMode(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CClickMode) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ClickMode(pThis, value))
         }
@@ -236,7 +236,7 @@ open class IButtonBase
         try self._n_put_ClickMode(value);
     }
     // [IsSpecialName] bool get_IsPointerOver()
-    public func _n_get_IsPointerOver(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsPointerOver(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPointerOver(pThis, __presult))
         }
@@ -247,7 +247,7 @@ open class IButtonBase
         return __result;
     }
     // [IsSpecialName] bool get_IsPressed()
-    public func _n_get_IsPressed(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_IsPressed(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPressed(pThis, __presult))
         }
@@ -258,7 +258,7 @@ open class IButtonBase
         return __result;
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Input.ICommand get_Command()
-    public func _n_get_Command(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>>>?) throws {
+    private func _n_get_Command(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Command(pThis, __presult))
         }
@@ -269,7 +269,7 @@ open class IButtonBase
         return WinRT.Microsoft.UI.Xaml.Input.ICommand(consuming: __result);
     }
     // [IsSpecialName] void put_Command(Microsoft.UI.Xaml.Input.ICommand)
-    public func _n_put_Command(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>>) throws {
+    private func _n_put_Command(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICommand>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Command(pThis, value))
         }
@@ -278,7 +278,7 @@ open class IButtonBase
         try self._n_put_Command(RawPointer(value));
     }
     // [IsSpecialName] System.Object get_CommandParameter()
-    public func _n_get_CommandParameter(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+    private func _n_get_CommandParameter(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommandParameter(pThis, __presult))
         }
@@ -289,7 +289,7 @@ open class IButtonBase
         return WinRT.IInspectable(consuming: __result);
     }
     // [IsSpecialName] void put_CommandParameter(System.Object)
-    public func _n_put_CommandParameter(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+    private func _n_put_CommandParameter(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CommandParameter(pThis, value))
         }
@@ -298,7 +298,7 @@ open class IButtonBase
         try self._n_put_CommandParameter(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Click(Microsoft.UI.Xaml.RoutedEventHandler)
-    public func _n_add_Click(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_Click(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Click(pThis, handler, __presult))
         }
@@ -309,7 +309,7 @@ open class IButtonBase
         return __result;
     }
     // [IsSpecialName] void remove_Click(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_Click(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_Click(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Click(pThis, token))
         }
@@ -354,7 +354,7 @@ open class IButtonBaseFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x21251aa9, Data2: 0x6fd1, Data3 : 0x5e51, Data4 : (0xab, 0x3b, 0xe6, 0xfc, 0xaf, 0x33, 0x95, 0xed)) }
     // Microsoft.UI.Xaml.Controls.Primitives.ButtonBase CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBase>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -377,7 +377,7 @@ open class IButtonBaseStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdbe812f6, Data2: 0xadf8, Data3 : 0x51d3, Data4 : (0x81, 0x37, 0xa8, 0xfb, 0xf6, 0x44, 0x5b, 0x3c)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ClickModeProperty()
-    public func _n_get_ClickModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ClickModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClickModeProperty(pThis, __presult))
         }
@@ -388,7 +388,7 @@ open class IButtonBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsPointerOverProperty()
-    public func _n_get_IsPointerOverProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsPointerOverProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPointerOverProperty(pThis, __presult))
         }
@@ -399,7 +399,7 @@ open class IButtonBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsPressedProperty()
-    public func _n_get_IsPressedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_IsPressedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsPressedProperty(pThis, __presult))
         }
@@ -410,7 +410,7 @@ open class IButtonBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CommandProperty()
-    public func _n_get_CommandProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_CommandProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommandProperty(pThis, __presult))
         }
@@ -421,7 +421,7 @@ open class IButtonBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CommandParameterProperty()
-    public func _n_get_CommandParameterProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_CommandParameterProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIButtonBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_CommandParameterProperty(pThis, __presult))
         }
@@ -514,7 +514,7 @@ open class IFlyoutBaseFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x006d738f, Data2: 0x7c91, Data3 : 0x5ef3, Data4 : (0x8a, 0x80, 0xa5, 0x48, 0x10, 0x8d, 0xab, 0x8b)) }
     // Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBaseFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -537,7 +537,7 @@ open class IRangeBase
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x540d6d61, Data2: 0x8fac, Data3 : 0x5d5c, Data4 : (0xb5, 0xb0, 0xe1, 0x72, 0xa7, 0xdd, 0xe1, 0x03)) }
     // [IsSpecialName] System.Double get_Minimum()
-    public func _n_get_Minimum(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Minimum(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Minimum(pThis, __presult))
         }
@@ -548,7 +548,7 @@ open class IRangeBase
         return __result;
     }
     // [IsSpecialName] void put_Minimum(System.Double)
-    public func _n_put_Minimum(_ value : DOUBLE) throws {
+    private func _n_put_Minimum(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Minimum(pThis, value))
         }
@@ -557,7 +557,7 @@ open class IRangeBase
         try self._n_put_Minimum(value);
     }
     // [IsSpecialName] System.Double get_Maximum()
-    public func _n_get_Maximum(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Maximum(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Maximum(pThis, __presult))
         }
@@ -568,7 +568,7 @@ open class IRangeBase
         return __result;
     }
     // [IsSpecialName] void put_Maximum(System.Double)
-    public func _n_put_Maximum(_ value : DOUBLE) throws {
+    private func _n_put_Maximum(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Maximum(pThis, value))
         }
@@ -577,7 +577,7 @@ open class IRangeBase
         try self._n_put_Maximum(value);
     }
     // [IsSpecialName] System.Double get_SmallChange()
-    public func _n_get_SmallChange(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_SmallChange(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SmallChange(pThis, __presult))
         }
@@ -588,7 +588,7 @@ open class IRangeBase
         return __result;
     }
     // [IsSpecialName] void put_SmallChange(System.Double)
-    public func _n_put_SmallChange(_ value : DOUBLE) throws {
+    private func _n_put_SmallChange(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SmallChange(pThis, value))
         }
@@ -597,7 +597,7 @@ open class IRangeBase
         try self._n_put_SmallChange(value);
     }
     // [IsSpecialName] System.Double get_LargeChange()
-    public func _n_get_LargeChange(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_LargeChange(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LargeChange(pThis, __presult))
         }
@@ -608,7 +608,7 @@ open class IRangeBase
         return __result;
     }
     // [IsSpecialName] void put_LargeChange(System.Double)
-    public func _n_put_LargeChange(_ value : DOUBLE) throws {
+    private func _n_put_LargeChange(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LargeChange(pThis, value))
         }
@@ -617,7 +617,7 @@ open class IRangeBase
         try self._n_put_LargeChange(value);
     }
     // [IsSpecialName] System.Double get_Value()
-    public func _n_get_Value(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+    private func _n_get_Value(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Value(pThis, __presult))
         }
@@ -628,7 +628,7 @@ open class IRangeBase
         return __result;
     }
     // [IsSpecialName] void put_Value(System.Double)
-    public func _n_put_Value(_ value : DOUBLE) throws {
+    private func _n_put_Value(_ value : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
@@ -637,7 +637,7 @@ open class IRangeBase
         try self._n_put_Value(value);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ValueChanged(Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler)
-    public func _n_add_ValueChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_ValueChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ValueChanged(pThis, handler, __presult))
         }
@@ -648,7 +648,7 @@ open class IRangeBase
         return __result;
     }
     // [IsSpecialName] void remove_ValueChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_ValueChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_ValueChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ValueChanged(pThis, token))
         }
@@ -693,7 +693,7 @@ open class IRangeBaseFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41c205e2, Data2: 0x4422, Data3 : 0x5dca, Data4 : (0x9b, 0x49, 0xe3, 0x12, 0x10, 0xea, 0x39, 0x6c)) }
     // Microsoft.UI.Xaml.Controls.Primitives.RangeBase CreateInstance(System.Object, ref System.Object)
-    public func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase>>>?) throws {
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBase>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
         }
@@ -716,7 +716,7 @@ open class IRangeBaseOverrides
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3deb76f, Data2: 0x68a6, Data3 : 0x5c14, Data4 : (0xa8, 0x24, 0xab, 0x58, 0xe8, 0x77, 0x47, 0x45)) }
     // void OnMinimumChanged(System.Double, System.Double)
-    public func _n_OnMinimumChanged(_ oldMinimum : DOUBLE, _ newMinimum : DOUBLE) throws {
+    private func _n_OnMinimumChanged(_ oldMinimum : DOUBLE, _ newMinimum : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnMinimumChanged(pThis, oldMinimum, newMinimum))
         }
@@ -725,7 +725,7 @@ open class IRangeBaseOverrides
         try self._n_OnMinimumChanged(oldMinimum, newMinimum);
     }
     // void OnMaximumChanged(System.Double, System.Double)
-    public func _n_OnMaximumChanged(_ oldMaximum : DOUBLE, _ newMaximum : DOUBLE) throws {
+    private func _n_OnMaximumChanged(_ oldMaximum : DOUBLE, _ newMaximum : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnMaximumChanged(pThis, oldMaximum, newMaximum))
         }
@@ -734,7 +734,7 @@ open class IRangeBaseOverrides
         try self._n_OnMaximumChanged(oldMaximum, newMaximum);
     }
     // void OnValueChanged(System.Double, System.Double)
-    public func _n_OnValueChanged(_ oldValue : DOUBLE, _ newValue : DOUBLE) throws {
+    private func _n_OnValueChanged(_ oldValue : DOUBLE, _ newValue : DOUBLE) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.OnValueChanged(pThis, oldValue, newValue))
         }
@@ -753,7 +753,7 @@ open class IRangeBaseStatics
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4aed5e49, Data2: 0x64ec, Data3 : 0x56f1, Data4 : (0x87, 0x4d, 0xb8, 0xc0, 0xf8, 0x3f, 0x9a, 0xc8)) }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MinimumProperty()
-    public func _n_get_MinimumProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MinimumProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinimumProperty(pThis, __presult))
         }
@@ -764,7 +764,7 @@ open class IRangeBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaximumProperty()
-    public func _n_get_MaximumProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_MaximumProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumProperty(pThis, __presult))
         }
@@ -775,7 +775,7 @@ open class IRangeBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SmallChangeProperty()
-    public func _n_get_SmallChangeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_SmallChangeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_SmallChangeProperty(pThis, __presult))
         }
@@ -786,7 +786,7 @@ open class IRangeBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_LargeChangeProperty()
-    public func _n_get_LargeChangeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_LargeChangeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_LargeChangeProperty(pThis, __presult))
         }
@@ -797,7 +797,7 @@ open class IRangeBaseStatics
         return WinRT.Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ValueProperty()
-    public func _n_get_ValueProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+    private func _n_get_ValueProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseStatics.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ValueProperty(pThis, __presult))
         }
@@ -855,7 +855,7 @@ open class IScrollSnapPointsInfo
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd3ea6e09, Data2: 0xecf7, Data3 : 0x51a8, Data4 : (0xbd, 0x54, 0xfc, 0x84, 0xb9, 0x65, 0x37, 0x66)) }
     // [IsSpecialName] bool get_AreHorizontalSnapPointsRegular()
-    public func _n_get_AreHorizontalSnapPointsRegular(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_AreHorizontalSnapPointsRegular(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AreHorizontalSnapPointsRegular(pThis, __presult))
         }
@@ -866,7 +866,7 @@ open class IScrollSnapPointsInfo
         return __result;
     }
     // [IsSpecialName] bool get_AreVerticalSnapPointsRegular()
-    public func _n_get_AreVerticalSnapPointsRegular(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+    private func _n_get_AreVerticalSnapPointsRegular(_ __presult: UnsafeMutablePointer<boolean>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_AreVerticalSnapPointsRegular(pThis, __presult))
         }
@@ -877,7 +877,7 @@ open class IScrollSnapPointsInfo
         return __result;
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_HorizontalSnapPointsChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_HorizontalSnapPointsChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_HorizontalSnapPointsChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_HorizontalSnapPointsChanged(pThis, handler, __presult))
         }
@@ -888,7 +888,7 @@ open class IScrollSnapPointsInfo
         return __result;
     }
     // [IsSpecialName] void remove_HorizontalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_HorizontalSnapPointsChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_HorizontalSnapPointsChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_HorizontalSnapPointsChanged(pThis, token))
         }
@@ -897,7 +897,7 @@ open class IScrollSnapPointsInfo
         try self._n_remove_HorizontalSnapPointsChanged(token);
     }
     // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_VerticalSnapPointsChanged(Windows.Foundation.EventHandler<System.Object>)
-    public func _n_add_VerticalSnapPointsChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+    private func _n_add_VerticalSnapPointsChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_VerticalSnapPointsChanged(pThis, handler, __presult))
         }
@@ -908,7 +908,7 @@ open class IScrollSnapPointsInfo
         return __result;
     }
     // [IsSpecialName] void remove_VerticalSnapPointsChanged(Windows.Foundation.EventRegistrationToken)
-    public func _n_remove_VerticalSnapPointsChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+    private func _n_remove_VerticalSnapPointsChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.remove_VerticalSnapPointsChanged(pThis, token))
         }
@@ -917,7 +917,7 @@ open class IScrollSnapPointsInfo
         try self._n_remove_VerticalSnapPointsChanged(token);
     }
     // Windows.Foundation.Collections.IVectorView<System.Single> GetIrregularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation, Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment)
-    public func _n_GetIrregularSnapPoints(_ orientation : _q_CMicrosoft_CUI_CXaml_CControls_COrientation, _ alignment : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT>>>?) throws {
+    private func _n_GetIrregularSnapPoints(_ orientation : _q_CMicrosoft_CUI_CXaml_CControls_COrientation, _ alignment : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT>>>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetIrregularSnapPoints(pThis, orientation, alignment, __presult))
         }
@@ -928,7 +928,7 @@ open class IScrollSnapPointsInfo
         return WinRT.Windows.Foundation.Collections.IVectorView_1_FLOAT(consuming: __result);
     }
     // System.Single GetRegularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation, Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment, ref System.Single)
-    public func _n_GetRegularSnapPoints(_ orientation : _q_CMicrosoft_CUI_CXaml_CControls_COrientation, _ alignment : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment, _ offset : UnsafeMutablePointer<FLOAT>, _ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_GetRegularSnapPoints(_ orientation : _q_CMicrosoft_CUI_CXaml_CControls_COrientation, _ alignment : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment, _ offset : UnsafeMutablePointer<FLOAT>, _ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIScrollSnapPointsInfo.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetRegularSnapPoints(pThis, orientation, alignment, offset, __presult))
         }
@@ -1278,7 +1278,7 @@ open class IRangeBaseValueChangedEventHandler
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x23f0e209, Data2: 0x9455, Data3 : 0x54cb, Data4 : (0xb8, 0xbc, 0x0b, 0x49, 0x55, 0x3c, 0x7d, 0xcc)) }
     // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs)
-    public func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs>>) throws {
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs>>) throws {
         return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
         }

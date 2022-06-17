@@ -1169,7 +1169,7 @@ open class ICanvasDeviceFactory
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe2c2bf21, Data2: 0x5418, Data3 : 0x43b9, Data4 : (0xa2, 0xda, 0x53, 0x9e, 0x28, 0x7c, 0x79, 0x0f)) }
     // Microsoft.Graphics.Canvas.CanvasDevice CreateWithForceSoftwareRendererOption(bool)
-    public func _n_CreateWithForceSoftwareRendererOption(_ forceSoftwareRenderer : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+    private func _n_CreateWithForceSoftwareRendererOption(_ forceSoftwareRenderer : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactory.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithForceSoftwareRendererOption(pThis, forceSoftwareRenderer, __presult))
         }
@@ -1190,7 +1190,7 @@ open class ICanvasDrawingSession
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf60afd09, Data2: 0xe623, Data3 : 0x4be0, Data4 : (0xb7, 0x50, 0x57, 0x8a, 0xa9, 0x20, 0xb1, 0xdb)) }
     // void Clear(Windows.UI.Color)
-    public func _n_Clear(_ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_Clear(_ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis, color))
         }
@@ -1199,7 +1199,7 @@ open class ICanvasDrawingSession
         try self._n_Clear(color);
     }
     // void Clear(Windows.Foundation.Numerics.Vector4)
-    public func _n_ClearHdr(_ color : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+    private func _n_ClearHdr(_ color : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ClearHdr(pThis, color))
         }
@@ -1208,7 +1208,7 @@ open class ICanvasDrawingSession
         try self._n_ClearHdr(color);
     }
     // void Flush()
-    public func _n_Flush() throws {
+    private func _n_Flush() throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.Flush(pThis))
         }
@@ -1217,7 +1217,7 @@ open class ICanvasDrawingSession
         try self._n_Flush();
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage)
-    public func _n_DrawImageAtOrigin(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>) throws {
+    private func _n_DrawImageAtOrigin(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOrigin(pThis, image))
         }
@@ -1226,7 +1226,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOrigin(RawPointer(image));
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Numerics.Vector2)
-    public func _n_DrawImageAtOffset(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
+    private func _n_DrawImageAtOffset(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOffset(pThis, image, offset))
         }
@@ -1235,7 +1235,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOffset(RawPointer(image), offset);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, System.Single, System.Single)
-    public func _n_DrawImageAtCoords(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT) throws {
+    private func _n_DrawImageAtCoords(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtCoords(pThis, image, x, y))
         }
@@ -1244,7 +1244,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtCoords(RawPointer(image), x, y);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect)
-    public func _n_DrawImageToRect(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect) throws {
+    private func _n_DrawImageToRect(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageToRect(pThis, bitmap, destinationRectangle))
         }
@@ -1253,7 +1253,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageToRect(RawPointer(bitmap), destinationRectangle);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect)
-    public func _n_DrawImageAtOffsetWithSourceRect(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect) throws {
+    private func _n_DrawImageAtOffsetWithSourceRect(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOffsetWithSourceRect(pThis, image, offset, sourceRectangle))
         }
@@ -1262,7 +1262,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOffsetWithSourceRect(RawPointer(image), offset, sourceRectangle);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, System.Single, System.Single, Windows.Foundation.Rect)
-    public func _n_DrawImageAtCoordsWithSourceRect(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect) throws {
+    private func _n_DrawImageAtCoordsWithSourceRect(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtCoordsWithSourceRect(pThis, image, x, y, sourceRectangle))
         }
@@ -1271,7 +1271,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtCoordsWithSourceRect(RawPointer(image), x, y, sourceRectangle);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, Windows.Foundation.Rect)
-    public func _n_DrawImageToRectWithSourceRect(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect) throws {
+    private func _n_DrawImageToRectWithSourceRect(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageToRectWithSourceRect(pThis, image, destinationRectangle, sourceRectangle))
         }
@@ -1280,7 +1280,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageToRectWithSourceRect(RawPointer(image), destinationRectangle, sourceRectangle);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect, System.Single)
-    public func _n_DrawImageAtOffsetWithSourceRectAndOpacity(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT) throws {
+    private func _n_DrawImageAtOffsetWithSourceRectAndOpacity(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOffsetWithSourceRectAndOpacity(pThis, image, offset, sourceRectangle, opacity))
         }
@@ -1289,7 +1289,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOffsetWithSourceRectAndOpacity(RawPointer(image), offset, sourceRectangle, opacity);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, System.Single, System.Single, Windows.Foundation.Rect, System.Single)
-    public func _n_DrawImageAtCoordsWithSourceRectAndOpacity(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT) throws {
+    private func _n_DrawImageAtCoordsWithSourceRectAndOpacity(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtCoordsWithSourceRectAndOpacity(pThis, image, x, y, sourceRectangle, opacity))
         }
@@ -1298,7 +1298,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtCoordsWithSourceRectAndOpacity(RawPointer(image), x, y, sourceRectangle, opacity);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, Windows.Foundation.Rect, System.Single)
-    public func _n_DrawImageToRectWithSourceRectAndOpacity(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT) throws {
+    private func _n_DrawImageToRectWithSourceRectAndOpacity(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageToRectWithSourceRectAndOpacity(pThis, image, destinationRectangle, sourceRectangle, opacity))
         }
@@ -1307,7 +1307,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageToRectWithSourceRectAndOpacity(RawPointer(image), destinationRectangle, sourceRectangle, opacity);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation)
-    public func _n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolation(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation) throws {
+    private func _n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolation(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolation(pThis, image, offset, sourceRectangle, opacity, interpolation))
         }
@@ -1316,7 +1316,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolation(RawPointer(image), offset, sourceRectangle, opacity, interpolation);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, System.Single, System.Single, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation)
-    public func _n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolation(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation) throws {
+    private func _n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolation(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolation(pThis, image, x, y, sourceRectangle, opacity, interpolation))
         }
@@ -1325,7 +1325,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolation(RawPointer(image), x, y, sourceRectangle, opacity, interpolation);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation)
-    public func _n_DrawImageToRectWithSourceRectAndOpacityAndInterpolation(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation) throws {
+    private func _n_DrawImageToRectWithSourceRectAndOpacityAndInterpolation(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageToRectWithSourceRectAndOpacityAndInterpolation(pThis, image, destinationRectangle, sourceRectangle, opacity, interpolation))
         }
@@ -1334,7 +1334,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageToRectWithSourceRectAndOpacityAndInterpolation(RawPointer(image), destinationRectangle, sourceRectangle, opacity, interpolation);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Microsoft.Graphics.Canvas.CanvasComposite)
-    public func _n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndComposite(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ composite : _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite) throws {
+    private func _n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndComposite(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ composite : _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndComposite(pThis, image, offset, sourceRectangle, opacity, interpolation, composite))
         }
@@ -1343,7 +1343,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndComposite(RawPointer(image), offset, sourceRectangle, opacity, interpolation, composite);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, System.Single, System.Single, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Microsoft.Graphics.Canvas.CanvasComposite)
-    public func _n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndComposite(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ composite : _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite) throws {
+    private func _n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndComposite(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ composite : _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndComposite(pThis, image, x, y, sourceRectangle, opacity, interpolation, composite))
         }
@@ -1352,7 +1352,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndComposite(RawPointer(image), x, y, sourceRectangle, opacity, interpolation, composite);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Microsoft.Graphics.Canvas.CanvasComposite)
-    public func _n_DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndComposite(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ composite : _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite) throws {
+    private func _n_DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndComposite(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ composite : _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndComposite(pThis, image, destinationRectangle, sourceRectangle, opacity, interpolation, composite))
         }
@@ -1361,7 +1361,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndComposite(RawPointer(image), destinationRectangle, sourceRectangle, opacity, interpolation, composite);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Windows.Foundation.Numerics.Matrix4x4)
-    public func _n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndPerspective(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ perspective : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
+    private func _n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndPerspective(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ perspective : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndPerspective(pThis, bitmap, offset, sourceRectangle, opacity, interpolation, perspective))
         }
@@ -1370,7 +1370,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtOffsetWithSourceRectAndOpacityAndInterpolationAndPerspective(RawPointer(bitmap), offset, sourceRectangle, opacity, interpolation, perspective);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.CanvasBitmap, System.Single, System.Single, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Windows.Foundation.Numerics.Matrix4x4)
-    public func _n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndPerspective(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ perspective : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
+    private func _n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndPerspective(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ x : FLOAT, _ y : FLOAT, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ perspective : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndPerspective(pThis, bitmap, x, y, sourceRectangle, opacity, interpolation, perspective))
         }
@@ -1379,7 +1379,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageAtCoordsWithSourceRectAndOpacityAndInterpolationAndPerspective(RawPointer(bitmap), x, y, sourceRectangle, opacity, interpolation, perspective);
     }
     // void DrawImage(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Windows.Foundation.Numerics.Matrix4x4)
-    public func _n_DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndPerspective(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ perspective : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
+    private func _n_DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndPerspective(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destinationRectangle : _q_CWindows_CFoundation_CRect, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ opacity : FLOAT, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ perspective : _q_CWindows_CFoundation_CNumerics_CMatrix4x4) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndPerspective(pThis, bitmap, destinationRectangle, sourceRectangle, opacity, interpolation, perspective))
         }
@@ -1388,7 +1388,7 @@ open class ICanvasDrawingSession
         try self._n_DrawImageToRectWithSourceRectAndOpacityAndInterpolationAndPerspective(RawPointer(bitmap), destinationRectangle, sourceRectangle, opacity, interpolation, perspective);
     }
     // void DrawLine(Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawLineWithBrush(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawLineWithBrush(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineWithBrush(pThis, point0, point1, brush))
         }
@@ -1397,7 +1397,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineWithBrush(point0, point1, RawPointer(brush));
     }
     // void DrawLine(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawLineAtCoordsWithBrush(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawLineAtCoordsWithBrush(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineAtCoordsWithBrush(pThis, x0, y0, x1, y1, brush))
         }
@@ -1406,7 +1406,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineAtCoordsWithBrush(x0, y0, x1, y1, RawPointer(brush));
     }
     // void DrawLine(Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector2, Windows.UI.Color)
-    public func _n_DrawLineWithColor(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawLineWithColor(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineWithColor(pThis, point0, point1, color))
         }
@@ -1415,7 +1415,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineWithColor(point0, point1, color);
     }
     // void DrawLine(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawLineAtCoordsWithColor(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawLineAtCoordsWithColor(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineAtCoordsWithColor(pThis, x0, y0, x1, y1, color))
         }
@@ -1424,7 +1424,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineAtCoordsWithColor(x0, y0, x1, y1, color);
     }
     // void DrawLine(Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawLineWithBrushAndStrokeWidth(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawLineWithBrushAndStrokeWidth(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineWithBrushAndStrokeWidth(pThis, point0, point1, brush, strokeWidth))
         }
@@ -1433,7 +1433,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineWithBrushAndStrokeWidth(point0, point1, RawPointer(brush), strokeWidth);
     }
     // void DrawLine(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawLineAtCoordsWithBrushAndStrokeWidth(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawLineAtCoordsWithBrushAndStrokeWidth(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineAtCoordsWithBrushAndStrokeWidth(pThis, x0, y0, x1, y1, brush, strokeWidth))
         }
@@ -1442,7 +1442,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineAtCoordsWithBrushAndStrokeWidth(x0, y0, x1, y1, RawPointer(brush), strokeWidth);
     }
     // void DrawLine(Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector2, Windows.UI.Color, System.Single)
-    public func _n_DrawLineWithColorAndStrokeWidth(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawLineWithColorAndStrokeWidth(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineWithColorAndStrokeWidth(pThis, point0, point1, color, strokeWidth))
         }
@@ -1451,7 +1451,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineWithColorAndStrokeWidth(point0, point1, color, strokeWidth);
     }
     // void DrawLine(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawLineAtCoordsWithColorAndStrokeWidth(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawLineAtCoordsWithColorAndStrokeWidth(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineAtCoordsWithColorAndStrokeWidth(pThis, x0, y0, x1, y1, color, strokeWidth))
         }
@@ -1460,7 +1460,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineAtCoordsWithColorAndStrokeWidth(x0, y0, x1, y1, color, strokeWidth);
     }
     // void DrawLine(Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawLineWithBrushAndStrokeWidthAndStrokeStyle(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawLineWithBrushAndStrokeWidthAndStrokeStyle(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineWithBrushAndStrokeWidthAndStrokeStyle(pThis, point0, point1, brush, strokeWidth, strokeStyle))
         }
@@ -1469,7 +1469,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineWithBrushAndStrokeWidthAndStrokeStyle(point0, point1, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawLine(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawLineAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawLineAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(pThis, x0, y0, x1, y1, brush, strokeWidth, strokeStyle))
         }
@@ -1478,7 +1478,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x0, y0, x1, y1, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawLine(Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector2, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawLineWithColorAndStrokeWidthAndStrokeStyle(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawLineWithColorAndStrokeWidthAndStrokeStyle(_ point0 : _q_CWindows_CFoundation_CNumerics_CVector2, _ point1 : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineWithColorAndStrokeWidthAndStrokeStyle(pThis, point0, point1, color, strokeWidth, strokeStyle))
         }
@@ -1487,7 +1487,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineWithColorAndStrokeWidthAndStrokeStyle(point0, point1, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawLine(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawLineAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawLineAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x0 : FLOAT, _ y0 : FLOAT, _ x1 : FLOAT, _ y1 : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawLineAtCoordsWithColorAndStrokeWidthAndStrokeStyle(pThis, x0, y0, x1, y1, color, strokeWidth, strokeStyle))
         }
@@ -1496,7 +1496,7 @@ open class ICanvasDrawingSession
         try self._n_DrawLineAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x0, y0, x1, y1, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRectangle(Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleWithBrush(pThis, rect, brush))
         }
@@ -1505,7 +1505,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleWithBrush(rect, RawPointer(brush));
     }
     // void DrawRectangle(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleAtCoordsWithBrush(pThis, x, y, w, h, brush))
         }
@@ -1514,7 +1514,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleAtCoordsWithBrush(x, y, w, h, RawPointer(brush));
     }
     // void DrawRectangle(Windows.Foundation.Rect, Windows.UI.Color)
-    public func _n_DrawRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleWithColor(pThis, rect, color))
         }
@@ -1523,7 +1523,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleWithColor(rect, color);
     }
     // void DrawRectangle(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleAtCoordsWithColor(pThis, x, y, w, h, color))
         }
@@ -1532,7 +1532,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleAtCoordsWithColor(x, y, w, h, color);
     }
     // void DrawRectangle(Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawRectangleWithBrushAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRectangleWithBrushAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleWithBrushAndStrokeWidth(pThis, rect, brush, strokeWidth))
         }
@@ -1541,7 +1541,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleWithBrushAndStrokeWidth(rect, RawPointer(brush), strokeWidth);
     }
     // void DrawRectangle(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawRectangleAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRectangleAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleAtCoordsWithBrushAndStrokeWidth(pThis, x, y, w, h, brush, strokeWidth))
         }
@@ -1550,7 +1550,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleAtCoordsWithBrushAndStrokeWidth(x, y, w, h, RawPointer(brush), strokeWidth);
     }
     // void DrawRectangle(Windows.Foundation.Rect, Windows.UI.Color, System.Single)
-    public func _n_DrawRectangleWithColorAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRectangleWithColorAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleWithColorAndStrokeWidth(pThis, rect, color, strokeWidth))
         }
@@ -1559,7 +1559,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleWithColorAndStrokeWidth(rect, color, strokeWidth);
     }
     // void DrawRectangle(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawRectangleAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRectangleAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleAtCoordsWithColorAndStrokeWidth(pThis, x, y, w, h, color, strokeWidth))
         }
@@ -1568,7 +1568,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleAtCoordsWithColorAndStrokeWidth(x, y, w, h, color, strokeWidth);
     }
     // void DrawRectangle(Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRectangleWithBrushAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRectangleWithBrushAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleWithBrushAndStrokeWidthAndStrokeStyle(pThis, rect, brush, strokeWidth, strokeStyle))
         }
@@ -1577,7 +1577,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleWithBrushAndStrokeWidthAndStrokeStyle(rect, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRectangle(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(pThis, x, y, w, h, brush, strokeWidth, strokeStyle))
         }
@@ -1586,7 +1586,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x, y, w, h, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRectangle(Windows.Foundation.Rect, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRectangleWithColorAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRectangleWithColorAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleWithColorAndStrokeWidthAndStrokeStyle(pThis, rect, color, strokeWidth, strokeStyle))
         }
@@ -1595,7 +1595,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleWithColorAndStrokeWidthAndStrokeStyle(rect, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRectangle(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(pThis, x, y, w, h, color, strokeWidth, strokeStyle))
         }
@@ -1604,7 +1604,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x, y, w, h, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void FillRectangle(Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRectangleWithBrush(pThis, rect, brush))
         }
@@ -1613,7 +1613,7 @@ open class ICanvasDrawingSession
         try self._n_FillRectangleWithBrush(rect, RawPointer(brush));
     }
     // void FillRectangle(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRectangleAtCoordsWithBrush(pThis, x, y, w, h, brush))
         }
@@ -1622,7 +1622,7 @@ open class ICanvasDrawingSession
         try self._n_FillRectangleAtCoordsWithBrush(x, y, w, h, RawPointer(brush));
     }
     // void FillRectangle(Windows.Foundation.Rect, Windows.UI.Color)
-    public func _n_FillRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRectangleWithColor(pThis, rect, color))
         }
@@ -1631,7 +1631,7 @@ open class ICanvasDrawingSession
         try self._n_FillRectangleWithColor(rect, color);
     }
     // void FillRectangle(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRectangleAtCoordsWithColor(pThis, x, y, w, h, color))
         }
@@ -1640,7 +1640,7 @@ open class ICanvasDrawingSession
         try self._n_FillRectangleAtCoordsWithColor(x, y, w, h, color);
     }
     // void FillRectangle(Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillRectangleWithBrushAndOpacityBrush(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillRectangleWithBrushAndOpacityBrush(_ rect : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRectangleWithBrushAndOpacityBrush(pThis, rect, brush, opacityBrush))
         }
@@ -1649,7 +1649,7 @@ open class ICanvasDrawingSession
         try self._n_FillRectangleWithBrushAndOpacityBrush(rect, RawPointer(brush), RawPointer(opacityBrush));
     }
     // void FillRectangle(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillRectangleAtCoordsWithBrushAndOpacityBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillRectangleAtCoordsWithBrushAndOpacityBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRectangleAtCoordsWithBrushAndOpacityBrush(pThis, x, y, w, h, brush, opacityBrush))
         }
@@ -1658,7 +1658,7 @@ open class ICanvasDrawingSession
         try self._n_FillRectangleAtCoordsWithBrushAndOpacityBrush(x, y, w, h, RawPointer(brush), RawPointer(opacityBrush));
     }
     // void DrawRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawRoundedRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawRoundedRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleWithBrush(pThis, rect, radiusX, radiusY, brush))
         }
@@ -1667,7 +1667,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleWithBrush(rect, radiusX, radiusY, RawPointer(brush));
     }
     // void DrawRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawRoundedRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawRoundedRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleAtCoordsWithBrush(pThis, x, y, w, h, radiusX, radiusY, brush))
         }
@@ -1676,7 +1676,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleAtCoordsWithBrush(x, y, w, h, radiusX, radiusY, RawPointer(brush));
     }
     // void DrawRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawRoundedRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawRoundedRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleWithColor(pThis, rect, radiusX, radiusY, color))
         }
@@ -1685,7 +1685,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleWithColor(rect, radiusX, radiusY, color);
     }
     // void DrawRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawRoundedRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawRoundedRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleAtCoordsWithColor(pThis, x, y, w, h, radiusX, radiusY, color))
         }
@@ -1694,7 +1694,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleAtCoordsWithColor(x, y, w, h, radiusX, radiusY, color);
     }
     // void DrawRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawRoundedRectangleWithBrushAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRoundedRectangleWithBrushAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleWithBrushAndStrokeWidth(pThis, rect, radiusX, radiusY, brush, strokeWidth))
         }
@@ -1703,7 +1703,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleWithBrushAndStrokeWidth(rect, radiusX, radiusY, RawPointer(brush), strokeWidth);
     }
     // void DrawRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidth(pThis, x, y, w, h, radiusX, radiusY, brush, strokeWidth))
         }
@@ -1712,7 +1712,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidth(x, y, w, h, radiusX, radiusY, RawPointer(brush), strokeWidth);
     }
     // void DrawRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawRoundedRectangleWithColorAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRoundedRectangleWithColorAndStrokeWidth(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleWithColorAndStrokeWidth(pThis, rect, radiusX, radiusY, color, strokeWidth))
         }
@@ -1721,7 +1721,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleWithColorAndStrokeWidth(rect, radiusX, radiusY, color, strokeWidth);
     }
     // void DrawRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawRoundedRectangleAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawRoundedRectangleAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleAtCoordsWithColorAndStrokeWidth(pThis, x, y, w, h, radiusX, radiusY, color, strokeWidth))
         }
@@ -1730,7 +1730,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleAtCoordsWithColorAndStrokeWidth(x, y, w, h, radiusX, radiusY, color, strokeWidth);
     }
     // void DrawRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRoundedRectangleWithBrushAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRoundedRectangleWithBrushAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleWithBrushAndStrokeWidthAndStrokeStyle(pThis, rect, radiusX, radiusY, brush, strokeWidth, strokeStyle))
         }
@@ -1739,7 +1739,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleWithBrushAndStrokeWidthAndStrokeStyle(rect, radiusX, radiusY, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(pThis, x, y, w, h, radiusX, radiusY, brush, strokeWidth, strokeStyle))
         }
@@ -1748,7 +1748,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x, y, w, h, radiusX, radiusY, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRoundedRectangleWithColorAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRoundedRectangleWithColorAndStrokeWidthAndStrokeStyle(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleWithColorAndStrokeWidthAndStrokeStyle(pThis, rect, radiusX, radiusY, color, strokeWidth, strokeStyle))
         }
@@ -1757,7 +1757,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleWithColorAndStrokeWidthAndStrokeStyle(rect, radiusX, radiusY, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawRoundedRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawRoundedRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawRoundedRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(pThis, x, y, w, h, radiusX, radiusY, color, strokeWidth, strokeStyle))
         }
@@ -1766,7 +1766,7 @@ open class ICanvasDrawingSession
         try self._n_DrawRoundedRectangleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x, y, w, h, radiusX, radiusY, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void FillRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillRoundedRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillRoundedRectangleWithBrush(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRoundedRectangleWithBrush(pThis, rect, radiusX, radiusY, brush))
         }
@@ -1775,7 +1775,7 @@ open class ICanvasDrawingSession
         try self._n_FillRoundedRectangleWithBrush(rect, radiusX, radiusY, RawPointer(brush));
     }
     // void FillRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillRoundedRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillRoundedRectangleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRoundedRectangleAtCoordsWithBrush(pThis, x, y, w, h, radiusX, radiusY, brush))
         }
@@ -1784,7 +1784,7 @@ open class ICanvasDrawingSession
         try self._n_FillRoundedRectangleAtCoordsWithBrush(x, y, w, h, radiusX, radiusY, RawPointer(brush));
     }
     // void FillRoundedRectangle(Windows.Foundation.Rect, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillRoundedRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillRoundedRectangleWithColor(_ rect : _q_CWindows_CFoundation_CRect, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRoundedRectangleWithColor(pThis, rect, radiusX, radiusY, color))
         }
@@ -1793,7 +1793,7 @@ open class ICanvasDrawingSession
         try self._n_FillRoundedRectangleWithColor(rect, radiusX, radiusY, color);
     }
     // void FillRoundedRectangle(System.Single, System.Single, System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillRoundedRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillRoundedRectangleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillRoundedRectangleAtCoordsWithColor(pThis, x, y, w, h, radiusX, radiusY, color))
         }
@@ -1802,7 +1802,7 @@ open class ICanvasDrawingSession
         try self._n_FillRoundedRectangleAtCoordsWithColor(x, y, w, h, radiusX, radiusY, color);
     }
     // void DrawEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawEllipseWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawEllipseWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseWithBrush(pThis, centerPoint, radiusX, radiusY, brush))
         }
@@ -1811,7 +1811,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseWithBrush(centerPoint, radiusX, radiusY, RawPointer(brush));
     }
     // void DrawEllipse(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawEllipseAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawEllipseAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseAtCoordsWithBrush(pThis, x, y, radiusX, radiusY, brush))
         }
@@ -1820,7 +1820,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseAtCoordsWithBrush(x, y, radiusX, radiusY, RawPointer(brush));
     }
     // void DrawEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawEllipseWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawEllipseWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseWithColor(pThis, centerPoint, radiusX, radiusY, color))
         }
@@ -1829,7 +1829,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseWithColor(centerPoint, radiusX, radiusY, color);
     }
     // void DrawEllipse(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawEllipseAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawEllipseAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseAtCoordsWithColor(pThis, x, y, radiusX, radiusY, color))
         }
@@ -1838,7 +1838,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseAtCoordsWithColor(x, y, radiusX, radiusY, color);
     }
     // void DrawEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawEllipseWithBrushAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawEllipseWithBrushAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseWithBrushAndStrokeWidth(pThis, centerPoint, radiusX, radiusY, brush, strokeWidth))
         }
@@ -1847,7 +1847,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseWithBrushAndStrokeWidth(centerPoint, radiusX, radiusY, RawPointer(brush), strokeWidth);
     }
     // void DrawEllipse(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawEllipseAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawEllipseAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseAtCoordsWithBrushAndStrokeWidth(pThis, x, y, radiusX, radiusY, brush, strokeWidth))
         }
@@ -1856,7 +1856,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseAtCoordsWithBrushAndStrokeWidth(x, y, radiusX, radiusY, RawPointer(brush), strokeWidth);
     }
     // void DrawEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawEllipseWithColorAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawEllipseWithColorAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseWithColorAndStrokeWidth(pThis, centerPoint, radiusX, radiusY, color, strokeWidth))
         }
@@ -1865,7 +1865,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseWithColorAndStrokeWidth(centerPoint, radiusX, radiusY, color, strokeWidth);
     }
     // void DrawEllipse(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawEllipseAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawEllipseAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseAtCoordsWithColorAndStrokeWidth(pThis, x, y, radiusX, radiusY, color, strokeWidth))
         }
@@ -1874,7 +1874,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseAtCoordsWithColorAndStrokeWidth(x, y, radiusX, radiusY, color, strokeWidth);
     }
     // void DrawEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawEllipseWithBrushAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawEllipseWithBrushAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseWithBrushAndStrokeWidthAndStrokeStyle(pThis, centerPoint, radiusX, radiusY, brush, strokeWidth, strokeStyle))
         }
@@ -1883,7 +1883,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseWithBrushAndStrokeWidthAndStrokeStyle(centerPoint, radiusX, radiusY, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawEllipse(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawEllipseAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawEllipseAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(pThis, x, y, radiusX, radiusY, brush, strokeWidth, strokeStyle))
         }
@@ -1892,7 +1892,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x, y, radiusX, radiusY, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawEllipseWithColorAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawEllipseWithColorAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseWithColorAndStrokeWidthAndStrokeStyle(pThis, centerPoint, radiusX, radiusY, color, strokeWidth, strokeStyle))
         }
@@ -1901,7 +1901,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseWithColorAndStrokeWidthAndStrokeStyle(centerPoint, radiusX, radiusY, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawEllipse(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawEllipseAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawEllipseAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawEllipseAtCoordsWithColorAndStrokeWidthAndStrokeStyle(pThis, x, y, radiusX, radiusY, color, strokeWidth, strokeStyle))
         }
@@ -1910,7 +1910,7 @@ open class ICanvasDrawingSession
         try self._n_DrawEllipseAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x, y, radiusX, radiusY, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void FillEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillEllipseWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillEllipseWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillEllipseWithBrush(pThis, centerPoint, radiusX, radiusY, brush))
         }
@@ -1919,7 +1919,7 @@ open class ICanvasDrawingSession
         try self._n_FillEllipseWithBrush(centerPoint, radiusX, radiusY, RawPointer(brush));
     }
     // void FillEllipse(System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillEllipseAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillEllipseAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillEllipseAtCoordsWithBrush(pThis, x, y, radiusX, radiusY, brush))
         }
@@ -1928,7 +1928,7 @@ open class ICanvasDrawingSession
         try self._n_FillEllipseAtCoordsWithBrush(x, y, radiusX, radiusY, RawPointer(brush));
     }
     // void FillEllipse(Windows.Foundation.Numerics.Vector2, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillEllipseWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillEllipseWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillEllipseWithColor(pThis, centerPoint, radiusX, radiusY, color))
         }
@@ -1937,7 +1937,7 @@ open class ICanvasDrawingSession
         try self._n_FillEllipseWithColor(centerPoint, radiusX, radiusY, color);
     }
     // void FillEllipse(System.Single, System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillEllipseAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillEllipseAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radiusX : FLOAT, _ radiusY : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillEllipseAtCoordsWithColor(pThis, x, y, radiusX, radiusY, color))
         }
@@ -1946,7 +1946,7 @@ open class ICanvasDrawingSession
         try self._n_FillEllipseAtCoordsWithColor(x, y, radiusX, radiusY, color);
     }
     // void DrawCircle(Windows.Foundation.Numerics.Vector2, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawCircleWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawCircleWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleWithBrush(pThis, centerPoint, radius, brush))
         }
@@ -1955,7 +1955,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleWithBrush(centerPoint, radius, RawPointer(brush));
     }
     // void DrawCircle(System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawCircleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawCircleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleAtCoordsWithBrush(pThis, x, y, radius, brush))
         }
@@ -1964,7 +1964,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleAtCoordsWithBrush(x, y, radius, RawPointer(brush));
     }
     // void DrawCircle(Windows.Foundation.Numerics.Vector2, System.Single, Windows.UI.Color)
-    public func _n_DrawCircleWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawCircleWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleWithColor(pThis, centerPoint, radius, color))
         }
@@ -1973,7 +1973,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleWithColor(centerPoint, radius, color);
     }
     // void DrawCircle(System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawCircleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawCircleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleAtCoordsWithColor(pThis, x, y, radius, color))
         }
@@ -1982,7 +1982,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleAtCoordsWithColor(x, y, radius, color);
     }
     // void DrawCircle(Windows.Foundation.Numerics.Vector2, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawCircleWithBrushAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawCircleWithBrushAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleWithBrushAndStrokeWidth(pThis, centerPoint, radius, brush, strokeWidth))
         }
@@ -1991,7 +1991,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleWithBrushAndStrokeWidth(centerPoint, radius, RawPointer(brush), strokeWidth);
     }
     // void DrawCircle(System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawCircleAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawCircleAtCoordsWithBrushAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleAtCoordsWithBrushAndStrokeWidth(pThis, x, y, radius, brush, strokeWidth))
         }
@@ -2000,7 +2000,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleAtCoordsWithBrushAndStrokeWidth(x, y, radius, RawPointer(brush), strokeWidth);
     }
     // void DrawCircle(Windows.Foundation.Numerics.Vector2, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawCircleWithColorAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawCircleWithColorAndStrokeWidth(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleWithColorAndStrokeWidth(pThis, centerPoint, radius, color, strokeWidth))
         }
@@ -2009,7 +2009,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleWithColorAndStrokeWidth(centerPoint, radius, color, strokeWidth);
     }
     // void DrawCircle(System.Single, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawCircleAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawCircleAtCoordsWithColorAndStrokeWidth(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleAtCoordsWithColorAndStrokeWidth(pThis, x, y, radius, color, strokeWidth))
         }
@@ -2018,7 +2018,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleAtCoordsWithColorAndStrokeWidth(x, y, radius, color, strokeWidth);
     }
     // void DrawCircle(Windows.Foundation.Numerics.Vector2, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawCircleWithBrushAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawCircleWithBrushAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleWithBrushAndStrokeWidthAndStrokeStyle(pThis, centerPoint, radius, brush, strokeWidth, strokeStyle))
         }
@@ -2027,7 +2027,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleWithBrushAndStrokeWidthAndStrokeStyle(centerPoint, radius, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawCircle(System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawCircleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawCircleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(pThis, x, y, radius, brush, strokeWidth, strokeStyle))
         }
@@ -2036,7 +2036,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(x, y, radius, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawCircle(Windows.Foundation.Numerics.Vector2, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawCircleWithColorAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawCircleWithColorAndStrokeWidthAndStrokeStyle(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleWithColorAndStrokeWidthAndStrokeStyle(pThis, centerPoint, radius, color, strokeWidth, strokeStyle))
         }
@@ -2045,7 +2045,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleWithColorAndStrokeWidthAndStrokeStyle(centerPoint, radius, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawCircle(System.Single, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawCircleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawCircleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCircleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(pThis, x, y, radius, color, strokeWidth, strokeStyle))
         }
@@ -2054,7 +2054,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCircleAtCoordsWithColorAndStrokeWidthAndStrokeStyle(x, y, radius, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void FillCircle(Windows.Foundation.Numerics.Vector2, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillCircleWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillCircleWithBrush(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillCircleWithBrush(pThis, centerPoint, radius, brush))
         }
@@ -2063,7 +2063,7 @@ open class ICanvasDrawingSession
         try self._n_FillCircleWithBrush(centerPoint, radius, RawPointer(brush));
     }
     // void FillCircle(System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillCircleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillCircleAtCoordsWithBrush(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillCircleAtCoordsWithBrush(pThis, x, y, radius, brush))
         }
@@ -2072,7 +2072,7 @@ open class ICanvasDrawingSession
         try self._n_FillCircleAtCoordsWithBrush(x, y, radius, RawPointer(brush));
     }
     // void FillCircle(Windows.Foundation.Numerics.Vector2, System.Single, Windows.UI.Color)
-    public func _n_FillCircleWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillCircleWithColor(_ centerPoint : _q_CWindows_CFoundation_CNumerics_CVector2, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillCircleWithColor(pThis, centerPoint, radius, color))
         }
@@ -2081,7 +2081,7 @@ open class ICanvasDrawingSession
         try self._n_FillCircleWithColor(centerPoint, radius, color);
     }
     // void FillCircle(System.Single, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillCircleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillCircleAtCoordsWithColor(_ x : FLOAT, _ y : FLOAT, _ radius : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillCircleAtCoordsWithColor(pThis, x, y, radius, color))
         }
@@ -2090,7 +2090,7 @@ open class ICanvasDrawingSession
         try self._n_FillCircleAtCoordsWithColor(x, y, radius, color);
     }
     // void DrawText(System.String, Windows.Foundation.Numerics.Vector2, Windows.UI.Color)
-    public func _n_DrawTextAtPointWithColor(_ text : Optional<HSTRING>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawTextAtPointWithColor(_ text : Optional<HSTRING>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointWithColor(pThis, text, point, color))
         }
@@ -2102,7 +2102,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawTextAtPointCoordsWithColor(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawTextAtPointCoordsWithColor(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointCoordsWithColor(pThis, text, x, y, color))
         }
@@ -2114,7 +2114,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtPointWithBrushAndFormat(_ text : Optional<HSTRING>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtPointWithBrushAndFormat(_ text : Optional<HSTRING>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointWithBrushAndFormat(pThis, text, point, brush, format))
         }
@@ -2126,7 +2126,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtRectWithBrushAndFormat(_ text : Optional<HSTRING>, _ rectangle : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtRectWithBrushAndFormat(_ text : Optional<HSTRING>, _ rectangle : _q_CWindows_CFoundation_CRect, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectWithBrushAndFormat(pThis, text, rectangle, brush, format))
         }
@@ -2138,7 +2138,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtPointCoordsWithBrushAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtPointCoordsWithBrushAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointCoordsWithBrushAndFormat(pThis, text, x, y, brush, format))
         }
@@ -2150,7 +2150,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, System.Single, System.Single, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtRectCoordsWithBrushAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtRectCoordsWithBrushAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectCoordsWithBrushAndFormat(pThis, text, x, y, w, h, brush, format))
         }
@@ -2162,7 +2162,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, Windows.Foundation.Numerics.Vector2, Windows.UI.Color, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtPointWithColorAndFormat(_ text : Optional<HSTRING>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtPointWithColorAndFormat(_ text : Optional<HSTRING>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointWithColorAndFormat(pThis, text, point, color, format))
         }
@@ -2174,7 +2174,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, Windows.Foundation.Rect, Windows.UI.Color, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtRectWithColorAndFormat(_ text : Optional<HSTRING>, _ rectangle : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtRectWithColorAndFormat(_ text : Optional<HSTRING>, _ rectangle : _q_CWindows_CFoundation_CRect, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectWithColorAndFormat(pThis, text, rectangle, color, format))
         }
@@ -2186,7 +2186,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, System.Single, System.Single, Windows.UI.Color, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtPointCoordsWithColorAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtPointCoordsWithColorAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointCoordsWithColorAndFormat(pThis, text, x, y, color, format))
         }
@@ -2198,7 +2198,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawText(System.String, System.Single, System.Single, System.Single, System.Single, Windows.UI.Color, Microsoft.Graphics.Canvas.Text.CanvasTextFormat)
-    public func _n_DrawTextAtRectCoordsWithColorAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
+    private func _n_DrawTextAtRectCoordsWithColorAndFormat(_ text : Optional<HSTRING>, _ x : FLOAT, _ y : FLOAT, _ w : FLOAT, _ h : FLOAT, _ color : _q_CWindows_CUI_CColor, _ format : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectCoordsWithColorAndFormat(pThis, text, x, y, w, h, color, format))
         }
@@ -2210,7 +2210,7 @@ open class ICanvasDrawingSession
         }
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawGeometryWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawGeometryWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryWithBrush(pThis, geometry, offset, brush))
         }
@@ -2219,7 +2219,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryWithBrush(RawPointer(geometry), offset, RawPointer(brush));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Windows.UI.Color)
-    public func _n_DrawGeometryWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawGeometryWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryWithColor(pThis, geometry, offset, color))
         }
@@ -2228,7 +2228,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryWithColor(RawPointer(geometry), offset, color);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawGeometryAtCoordsWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawGeometryAtCoordsWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtCoordsWithBrush(pThis, geometry, x, y, brush))
         }
@@ -2237,7 +2237,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtCoordsWithBrush(RawPointer(geometry), x, y, RawPointer(brush));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawGeometryAtCoordsWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawGeometryAtCoordsWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtCoordsWithColor(pThis, geometry, x, y, color))
         }
@@ -2246,7 +2246,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtCoordsWithColor(RawPointer(geometry), x, y, color);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawGeometryAtOriginWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawGeometryAtOriginWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtOriginWithBrush(pThis, geometry, brush))
         }
@@ -2255,7 +2255,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtOriginWithBrush(RawPointer(geometry), RawPointer(brush));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.UI.Color)
-    public func _n_DrawGeometryAtOriginWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawGeometryAtOriginWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtOriginWithColor(pThis, geometry, color))
         }
@@ -2264,7 +2264,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtOriginWithColor(RawPointer(geometry), color);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawGeometryWithBrushAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawGeometryWithBrushAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryWithBrushAndStrokeWidth(pThis, geometry, offset, brush, strokeWidth))
         }
@@ -2273,7 +2273,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryWithBrushAndStrokeWidth(RawPointer(geometry), offset, RawPointer(brush), strokeWidth);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Windows.UI.Color, System.Single)
-    public func _n_DrawGeometryWithColorAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawGeometryWithColorAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryWithColorAndStrokeWidth(pThis, geometry, offset, color, strokeWidth))
         }
@@ -2282,7 +2282,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryWithColorAndStrokeWidth(RawPointer(geometry), offset, color, strokeWidth);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawGeometryAtCoordsWithBrushAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawGeometryAtCoordsWithBrushAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtCoordsWithBrushAndStrokeWidth(pThis, geometry, x, y, brush, strokeWidth))
         }
@@ -2291,7 +2291,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtCoordsWithBrushAndStrokeWidth(RawPointer(geometry), x, y, RawPointer(brush), strokeWidth);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Windows.UI.Color, System.Single)
-    public func _n_DrawGeometryAtCoordsWithColorAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawGeometryAtCoordsWithColorAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtCoordsWithColorAndStrokeWidth(pThis, geometry, x, y, color, strokeWidth))
         }
@@ -2300,7 +2300,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtCoordsWithColorAndStrokeWidth(RawPointer(geometry), x, y, color, strokeWidth);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single)
-    public func _n_DrawGeometryAtOriginWithBrushAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawGeometryAtOriginWithBrushAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtOriginWithBrushAndStrokeWidth(pThis, geometry, brush, strokeWidth))
         }
@@ -2309,7 +2309,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtOriginWithBrushAndStrokeWidth(RawPointer(geometry), RawPointer(brush), strokeWidth);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.UI.Color, System.Single)
-    public func _n_DrawGeometryAtOriginWithColorAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
+    private func _n_DrawGeometryAtOriginWithColorAndStrokeWidth(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtOriginWithColorAndStrokeWidth(pThis, geometry, color, strokeWidth))
         }
@@ -2318,7 +2318,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtOriginWithColorAndStrokeWidth(RawPointer(geometry), color, strokeWidth);
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawGeometryWithBrushAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawGeometryWithBrushAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryWithBrushAndStrokeWidthAndStrokeStyle(pThis, geometry, offset, brush, strokeWidth, strokeStyle))
         }
@@ -2327,7 +2327,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryWithBrushAndStrokeWidthAndStrokeStyle(RawPointer(geometry), offset, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawGeometryWithColorAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawGeometryWithColorAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryWithColorAndStrokeWidthAndStrokeStyle(pThis, geometry, offset, color, strokeWidth, strokeStyle))
         }
@@ -2336,7 +2336,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryWithColorAndStrokeWidthAndStrokeStyle(RawPointer(geometry), offset, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawGeometryAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawGeometryAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(pThis, geometry, x, y, brush, strokeWidth, strokeStyle))
         }
@@ -2345,7 +2345,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtCoordsWithBrushAndStrokeWidthAndStrokeStyle(RawPointer(geometry), x, y, RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawGeometryAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawGeometryAtCoordsWithColorAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtCoordsWithColorAndStrokeWidthAndStrokeStyle(pThis, geometry, x, y, color, strokeWidth, strokeStyle))
         }
@@ -2354,7 +2354,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtCoordsWithColorAndStrokeWidthAndStrokeStyle(RawPointer(geometry), x, y, color, strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawGeometryAtOriginWithBrushAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawGeometryAtOriginWithBrushAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtOriginWithBrushAndStrokeWidthAndStrokeStyle(pThis, geometry, brush, strokeWidth, strokeStyle))
         }
@@ -2363,7 +2363,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtOriginWithBrushAndStrokeWidthAndStrokeStyle(RawPointer(geometry), RawPointer(brush), strokeWidth, RawPointer(strokeStyle));
     }
     // void DrawGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.UI.Color, System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasStrokeStyle)
-    public func _n_DrawGeometryAtOriginWithColorAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
+    private func _n_DrawGeometryAtOriginWithColorAndStrokeWidthAndStrokeStyle(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor, _ strokeWidth : FLOAT, _ strokeStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGeometryAtOriginWithColorAndStrokeWidthAndStrokeStyle(pThis, geometry, color, strokeWidth, strokeStyle))
         }
@@ -2372,7 +2372,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGeometryAtOriginWithColorAndStrokeWidthAndStrokeStyle(RawPointer(geometry), color, strokeWidth, RawPointer(strokeStyle));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillGeometryWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillGeometryWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryWithBrush(pThis, geometry, offset, brush))
         }
@@ -2381,7 +2381,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryWithBrush(RawPointer(geometry), offset, RawPointer(brush));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillGeometryWithBrushAndOpacityBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillGeometryWithBrushAndOpacityBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryWithBrushAndOpacityBrush(pThis, geometry, offset, brush, opacityBrush))
         }
@@ -2390,7 +2390,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryWithBrushAndOpacityBrush(RawPointer(geometry), offset, RawPointer(brush), RawPointer(opacityBrush));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Vector2, Windows.UI.Color)
-    public func _n_FillGeometryWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillGeometryWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryWithColor(pThis, geometry, offset, color))
         }
@@ -2399,7 +2399,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryWithColor(RawPointer(geometry), offset, color);
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillGeometryAtCoordsWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillGeometryAtCoordsWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryAtCoordsWithBrush(pThis, geometry, x, y, brush))
         }
@@ -2408,7 +2408,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryAtCoordsWithBrush(RawPointer(geometry), x, y, RawPointer(brush));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillGeometryAtCoordsWithBrushAndOpacityBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillGeometryAtCoordsWithBrushAndOpacityBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryAtCoordsWithBrushAndOpacityBrush(pThis, geometry, x, y, brush, opacityBrush))
         }
@@ -2417,7 +2417,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryAtCoordsWithBrushAndOpacityBrush(RawPointer(geometry), x, y, RawPointer(brush), RawPointer(opacityBrush));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, System.Single, System.Single, Windows.UI.Color)
-    public func _n_FillGeometryAtCoordsWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillGeometryAtCoordsWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryAtCoordsWithColor(pThis, geometry, x, y, color))
         }
@@ -2426,7 +2426,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryAtCoordsWithColor(RawPointer(geometry), x, y, color);
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillGeometryAtOriginWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillGeometryAtOriginWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryAtOriginWithBrush(pThis, geometry, brush))
         }
@@ -2435,7 +2435,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryAtOriginWithBrush(RawPointer(geometry), RawPointer(brush));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_FillGeometryAtOriginWithBrushAndOpacityBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_FillGeometryAtOriginWithBrushAndOpacityBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryAtOriginWithBrushAndOpacityBrush(pThis, geometry, brush, opacityBrush))
         }
@@ -2444,7 +2444,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryAtOriginWithBrushAndOpacityBrush(RawPointer(geometry), RawPointer(brush), RawPointer(opacityBrush));
     }
     // void FillGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.UI.Color)
-    public func _n_FillGeometryAtOriginWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_FillGeometryAtOriginWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.FillGeometryAtOriginWithColor(pThis, geometry, color))
         }
@@ -2453,7 +2453,7 @@ open class ICanvasDrawingSession
         try self._n_FillGeometryAtOriginWithColor(RawPointer(geometry), color);
     }
     // void DrawCachedGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawCachedGeometryWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawCachedGeometryWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCachedGeometryWithBrush(pThis, geometry, offset, brush))
         }
@@ -2462,7 +2462,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCachedGeometryWithBrush(RawPointer(geometry), offset, RawPointer(brush));
     }
     // void DrawCachedGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry, Windows.Foundation.Numerics.Vector2, Windows.UI.Color)
-    public func _n_DrawCachedGeometryWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawCachedGeometryWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCachedGeometryWithColor(pThis, geometry, offset, color))
         }
@@ -2471,7 +2471,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCachedGeometryWithColor(RawPointer(geometry), offset, color);
     }
     // void DrawCachedGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawCachedGeometryAtCoordsWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawCachedGeometryAtCoordsWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCachedGeometryAtCoordsWithBrush(pThis, geometry, x, y, brush))
         }
@@ -2480,7 +2480,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCachedGeometryAtCoordsWithBrush(RawPointer(geometry), x, y, RawPointer(brush));
     }
     // void DrawCachedGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawCachedGeometryAtCoordsWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawCachedGeometryAtCoordsWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCachedGeometryAtCoordsWithColor(pThis, geometry, x, y, color))
         }
@@ -2489,7 +2489,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCachedGeometryAtCoordsWithColor(RawPointer(geometry), x, y, color);
     }
     // void DrawCachedGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawCachedGeometryAtOriginWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawCachedGeometryAtOriginWithBrush(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCachedGeometryAtOriginWithBrush(pThis, geometry, brush))
         }
@@ -2498,7 +2498,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCachedGeometryAtOriginWithBrush(RawPointer(geometry), RawPointer(brush));
     }
     // void DrawCachedGeometry(Microsoft.Graphics.Canvas.Geometry.CanvasCachedGeometry, Windows.UI.Color)
-    public func _n_DrawCachedGeometryAtOriginWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawCachedGeometryAtOriginWithColor(_ geometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry>>, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawCachedGeometryAtOriginWithColor(pThis, geometry, color))
         }
@@ -2507,7 +2507,7 @@ open class ICanvasDrawingSession
         try self._n_DrawCachedGeometryAtOriginWithColor(RawPointer(geometry), color);
     }
     // void DrawTextLayout(Microsoft.Graphics.Canvas.Text.CanvasTextLayout, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawTextLayoutWithBrush(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawTextLayoutWithBrush(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextLayoutWithBrush(pThis, textLayout, point, brush))
         }
@@ -2516,7 +2516,7 @@ open class ICanvasDrawingSession
         try self._n_DrawTextLayoutWithBrush(RawPointer(textLayout), point, RawPointer(brush));
     }
     // void DrawTextLayout(Microsoft.Graphics.Canvas.Text.CanvasTextLayout, System.Single, System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawTextLayoutAtCoordsWithBrush(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawTextLayoutAtCoordsWithBrush(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ x : FLOAT, _ y : FLOAT, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextLayoutAtCoordsWithBrush(pThis, textLayout, x, y, brush))
         }
@@ -2525,7 +2525,7 @@ open class ICanvasDrawingSession
         try self._n_DrawTextLayoutAtCoordsWithBrush(RawPointer(textLayout), x, y, RawPointer(brush));
     }
     // void DrawTextLayout(Microsoft.Graphics.Canvas.Text.CanvasTextLayout, Windows.Foundation.Numerics.Vector2, Windows.UI.Color)
-    public func _n_DrawTextLayoutWithColor(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawTextLayoutWithColor(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextLayoutWithColor(pThis, textLayout, point, color))
         }
@@ -2534,7 +2534,7 @@ open class ICanvasDrawingSession
         try self._n_DrawTextLayoutWithColor(RawPointer(textLayout), point, color);
     }
     // void DrawTextLayout(Microsoft.Graphics.Canvas.Text.CanvasTextLayout, System.Single, System.Single, Windows.UI.Color)
-    public func _n_DrawTextLayoutAtCoordsWithColor(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
+    private func _n_DrawTextLayoutAtCoordsWithColor(_ textLayout : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>>, _ x : FLOAT, _ y : FLOAT, _ color : _q_CWindows_CUI_CColor) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextLayoutAtCoordsWithColor(pThis, textLayout, x, y, color))
         }
@@ -2543,7 +2543,7 @@ open class ICanvasDrawingSession
         try self._n_DrawTextLayoutAtCoordsWithColor(RawPointer(textLayout), x, y, color);
     }
     // void DrawGradientMesh(Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh)
-    public func _n_DrawGradientMeshAtOrigin(_ gradientMesh : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>) throws {
+    private func _n_DrawGradientMeshAtOrigin(_ gradientMesh : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGradientMeshAtOrigin(pThis, gradientMesh))
         }
@@ -2552,7 +2552,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGradientMeshAtOrigin(RawPointer(gradientMesh));
     }
     // void DrawGradientMesh(Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh, Windows.Foundation.Numerics.Vector2)
-    public func _n_DrawGradientMesh(_ gradientMesh : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
+    private func _n_DrawGradientMesh(_ gradientMesh : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>, _ point : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGradientMesh(pThis, gradientMesh, point))
         }
@@ -2561,7 +2561,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGradientMesh(RawPointer(gradientMesh), point);
     }
     // void DrawGradientMesh(Microsoft.Graphics.Canvas.Geometry.CanvasGradientMesh, System.Single, System.Single)
-    public func _n_DrawGradientMeshAtCoords(_ gradientMesh : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>, _ x : FLOAT, _ y : FLOAT) throws {
+    private func _n_DrawGradientMeshAtCoords(_ gradientMesh : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh>>, _ x : FLOAT, _ y : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGradientMeshAtCoords(pThis, gradientMesh, x, y))
         }
@@ -2570,7 +2570,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGradientMeshAtCoords(RawPointer(gradientMesh), x, y);
     }
     // void DrawSvg(Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument, Windows.Foundation.Size)
-    public func _n_DrawSvgAtOrigin(_ svgDocument : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>, _ viewportSize : _q_CWindows_CFoundation_CSize) throws {
+    private func _n_DrawSvgAtOrigin(_ svgDocument : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>, _ viewportSize : _q_CWindows_CFoundation_CSize) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawSvgAtOrigin(pThis, svgDocument, viewportSize))
         }
@@ -2579,7 +2579,7 @@ open class ICanvasDrawingSession
         try self._n_DrawSvgAtOrigin(RawPointer(svgDocument), viewportSize);
     }
     // void DrawSvg(Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument, Windows.Foundation.Size, Windows.Foundation.Numerics.Vector2)
-    public func _n_DrawSvgAtPoint(_ svgDocument : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>, _ viewportSize : _q_CWindows_CFoundation_CSize, _ point : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
+    private func _n_DrawSvgAtPoint(_ svgDocument : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>, _ viewportSize : _q_CWindows_CFoundation_CSize, _ point : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawSvgAtPoint(pThis, svgDocument, viewportSize, point))
         }
@@ -2588,7 +2588,7 @@ open class ICanvasDrawingSession
         try self._n_DrawSvgAtPoint(RawPointer(svgDocument), viewportSize, point);
     }
     // void DrawSvg(Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument, Windows.Foundation.Size, System.Single, System.Single)
-    public func _n_DrawSvgAtCoords(_ svgDocument : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>, _ viewportSize : _q_CWindows_CFoundation_CSize, _ x : FLOAT, _ y : FLOAT) throws {
+    private func _n_DrawSvgAtCoords(_ svgDocument : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>>, _ viewportSize : _q_CWindows_CFoundation_CSize, _ x : FLOAT, _ y : FLOAT) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawSvgAtCoords(pThis, svgDocument, viewportSize, x, y))
         }
@@ -2597,7 +2597,7 @@ open class ICanvasDrawingSession
         try self._n_DrawSvgAtCoords(RawPointer(svgDocument), viewportSize, x, y);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasAntialiasing get_Antialiasing()
-    public func _n_get_Antialiasing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing>?) throws {
+    private func _n_get_Antialiasing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Antialiasing(pThis, __presult))
         }
@@ -2608,7 +2608,7 @@ open class ICanvasDrawingSession
         return __result;
     }
     // [IsSpecialName] void put_Antialiasing(Microsoft.Graphics.Canvas.CanvasAntialiasing)
-    public func _n_put_Antialiasing(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing) throws {
+    private func _n_put_Antialiasing(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Antialiasing(pThis, value))
         }
@@ -2617,7 +2617,7 @@ open class ICanvasDrawingSession
         try self._n_put_Antialiasing(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasBlend get_Blend()
-    public func _n_get_Blend(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend>?) throws {
+    private func _n_get_Blend(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Blend(pThis, __presult))
         }
@@ -2628,7 +2628,7 @@ open class ICanvasDrawingSession
         return __result;
     }
     // [IsSpecialName] void put_Blend(Microsoft.Graphics.Canvas.CanvasBlend)
-    public func _n_put_Blend(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend) throws {
+    private func _n_put_Blend(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Blend(pThis, value))
         }
@@ -2637,7 +2637,7 @@ open class ICanvasDrawingSession
         try self._n_put_Blend(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasTextAntialiasing get_TextAntialiasing()
-    public func _n_get_TextAntialiasing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextAntialiasing>?) throws {
+    private func _n_get_TextAntialiasing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextAntialiasing>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextAntialiasing(pThis, __presult))
         }
@@ -2648,7 +2648,7 @@ open class ICanvasDrawingSession
         return __result;
     }
     // [IsSpecialName] void put_TextAntialiasing(Microsoft.Graphics.Canvas.Text.CanvasTextAntialiasing)
-    public func _n_put_TextAntialiasing(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextAntialiasing) throws {
+    private func _n_put_TextAntialiasing(_ value : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextAntialiasing) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TextAntialiasing(pThis, value))
         }
@@ -2657,7 +2657,7 @@ open class ICanvasDrawingSession
         try self._n_put_TextAntialiasing(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.Text.CanvasTextRenderingParameters get_TextRenderingParameters()
-    public func _n_get_TextRenderingParameters(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters>>>?) throws {
+    private func _n_get_TextRenderingParameters(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextRenderingParameters(pThis, __presult))
         }
@@ -2668,7 +2668,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.Text.ICanvasTextRenderingParameters(consuming: __result);
     }
     // [IsSpecialName] void put_TextRenderingParameters(Microsoft.Graphics.Canvas.Text.CanvasTextRenderingParameters)
-    public func _n_put_TextRenderingParameters(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters>>) throws {
+    private func _n_put_TextRenderingParameters(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TextRenderingParameters(pThis, value))
         }
@@ -2677,7 +2677,7 @@ open class ICanvasDrawingSession
         try self._n_put_TextRenderingParameters(RawPointer(value));
     }
     // [IsSpecialName] Windows.Foundation.Numerics.Matrix3x2 get_Transform()
-    public func _n_get_Transform(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CMatrix3x2>?) throws {
+    private func _n_get_Transform(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CMatrix3x2>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transform(pThis, __presult))
         }
@@ -2688,7 +2688,7 @@ open class ICanvasDrawingSession
         return __result;
     }
     // [IsSpecialName] void put_Transform(Windows.Foundation.Numerics.Matrix3x2)
-    public func _n_put_Transform(_ value : _q_CWindows_CFoundation_CNumerics_CMatrix3x2) throws {
+    private func _n_put_Transform(_ value : _q_CWindows_CFoundation_CNumerics_CMatrix3x2) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Transform(pThis, value))
         }
@@ -2697,7 +2697,7 @@ open class ICanvasDrawingSession
         try self._n_put_Transform(value);
     }
     // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasUnits get_Units()
-    public func _n_get_Units(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits>?) throws {
+    private func _n_get_Units(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Units(pThis, __presult))
         }
@@ -2708,7 +2708,7 @@ open class ICanvasDrawingSession
         return __result;
     }
     // [IsSpecialName] void put_Units(Microsoft.Graphics.Canvas.CanvasUnits)
-    public func _n_put_Units(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits) throws {
+    private func _n_put_Units(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Units(pThis, value))
         }
@@ -2717,7 +2717,7 @@ open class ICanvasDrawingSession
         try self._n_put_Units(value);
     }
     // [IsSpecialName] Windows.Foundation.IReference<Microsoft.Graphics.Canvas.CanvasBufferPrecision> get_EffectBufferPrecision()
-    public func _n_get_EffectBufferPrecision(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>>>?) throws {
+    private func _n_get_EffectBufferPrecision(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EffectBufferPrecision(pThis, __presult))
         }
@@ -2728,7 +2728,7 @@ open class ICanvasDrawingSession
         return WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision(consuming: __result);
     }
     // [IsSpecialName] void put_EffectBufferPrecision(Windows.Foundation.IReference<Microsoft.Graphics.Canvas.CanvasBufferPrecision>)
-    public func _n_put_EffectBufferPrecision(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>>) throws {
+    private func _n_put_EffectBufferPrecision(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EffectBufferPrecision(pThis, value))
         }
@@ -2737,7 +2737,7 @@ open class ICanvasDrawingSession
         try self._n_put_EffectBufferPrecision(RawPointer(value));
     }
     // [IsSpecialName] Windows.Graphics.Imaging.BitmapSize get_EffectTileSize()
-    public func _n_get_EffectTileSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CGraphics_CImaging_CBitmapSize>?) throws {
+    private func _n_get_EffectTileSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CGraphics_CImaging_CBitmapSize>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EffectTileSize(pThis, __presult))
         }
@@ -2748,7 +2748,7 @@ open class ICanvasDrawingSession
         return __result;
     }
     // [IsSpecialName] void put_EffectTileSize(Windows.Graphics.Imaging.BitmapSize)
-    public func _n_put_EffectTileSize(_ value : _q_CWindows_CGraphics_CImaging_CBitmapSize) throws {
+    private func _n_put_EffectTileSize(_ value : _q_CWindows_CGraphics_CImaging_CBitmapSize) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EffectTileSize(pThis, value))
         }
@@ -2757,7 +2757,7 @@ open class ICanvasDrawingSession
         try self._n_put_EffectTileSize(value);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(System.Single)
-    public func _n_CreateLayerWithOpacity(_ opacity : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacity(_ opacity : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacity(pThis, opacity, __presult))
         }
@@ -2768,7 +2768,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_CreateLayerWithOpacityBrush(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityBrush(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityBrush(pThis, opacityBrush, __presult))
         }
@@ -2779,7 +2779,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(System.Single, Windows.Foundation.Rect)
-    public func _n_CreateLayerWithOpacityAndClipRectangle(_ opacity : FLOAT, _ clipRectangle : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityAndClipRectangle(_ opacity : FLOAT, _ clipRectangle : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityAndClipRectangle(pThis, opacity, clipRectangle, __presult))
         }
@@ -2790,7 +2790,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Windows.Foundation.Rect)
-    public func _n_CreateLayerWithOpacityBrushAndClipRectangle(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipRectangle : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityBrushAndClipRectangle(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipRectangle : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityBrushAndClipRectangle(pThis, opacityBrush, clipRectangle, __presult))
         }
@@ -2801,7 +2801,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)
-    public func _n_CreateLayerWithOpacityAndClipGeometry(_ opacity : FLOAT, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityAndClipGeometry(_ opacity : FLOAT, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityAndClipGeometry(pThis, opacity, clipGeometry, __presult))
         }
@@ -2812,7 +2812,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Geometry.CanvasGeometry)
-    public func _n_CreateLayerWithOpacityBrushAndClipGeometry(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityBrushAndClipGeometry(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityBrushAndClipGeometry(pThis, opacityBrush, clipGeometry, __presult))
         }
@@ -2823,7 +2823,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(System.Single, Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Matrix3x2)
-    public func _n_CreateLayerWithOpacityAndClipGeometryAndTransform(_ opacity : FLOAT, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ geometryTransform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityAndClipGeometryAndTransform(_ opacity : FLOAT, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ geometryTransform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityAndClipGeometryAndTransform(pThis, opacity, clipGeometry, geometryTransform, __presult))
         }
@@ -2834,7 +2834,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Matrix3x2)
-    public func _n_CreateLayerWithOpacityBrushAndClipGeometryAndTransform(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ geometryTransform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithOpacityBrushAndClipGeometryAndTransform(_ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ geometryTransform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithOpacityBrushAndClipGeometryAndTransform(pThis, opacityBrush, clipGeometry, geometryTransform, __presult))
         }
@@ -2845,7 +2845,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasActiveLayer CreateLayer(System.Single, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Windows.Foundation.Rect, Microsoft.Graphics.Canvas.Geometry.CanvasGeometry, Windows.Foundation.Numerics.Matrix3x2, Microsoft.Graphics.Canvas.CanvasLayerOptions)
-    public func _n_CreateLayerWithAllOptions(_ opacity : FLOAT, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipRectangle : _q_CWindows_CFoundation_CRect, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ geometryTransform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
+    private func _n_CreateLayerWithAllOptions(_ opacity : FLOAT, _ opacityBrush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ clipRectangle : _q_CWindows_CFoundation_CRect, _ clipGeometry : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry>>, _ geometryTransform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLayerWithAllOptions(pThis, opacity, opacityBrush, clipRectangle, clipGeometry, geometryTransform, options, __presult))
         }
@@ -2856,7 +2856,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasActiveLayer(consuming: __result);
     }
     // void DrawGlyphRun(Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Text.CanvasFontFace, System.Single, Microsoft.Graphics.Canvas.Text.CanvasGlyph[], bool, System.UInt32, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush)
-    public func _n_DrawGlyphRun(_ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ fontFace : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace>>, _ fontSize : FLOAT, _ glyphsLength : UINT32, _ glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, _ isSideways : boolean, _ bidiLevel : UINT32, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
+    private func _n_DrawGlyphRun(_ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ fontFace : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace>>, _ fontSize : FLOAT, _ glyphsLength : UINT32, _ glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, _ isSideways : boolean, _ bidiLevel : UINT32, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGlyphRun(pThis, point, fontFace, fontSize, glyphsLength, glyphs, isSideways, bidiLevel, brush))
         }
@@ -2865,7 +2865,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGlyphRun(point, RawPointer(fontFace), fontSize, glyphsLength, glyphs, isSideways, bidiLevel, RawPointer(brush));
     }
     // void DrawGlyphRun(Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Text.CanvasFontFace, System.Single, Microsoft.Graphics.Canvas.Text.CanvasGlyph[], bool, System.UInt32, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode)
-    public func _n_DrawGlyphRunWithMeasuringMode(_ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ fontFace : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace>>, _ fontSize : FLOAT, _ glyphsLength : UINT32, _ glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, _ isSideways : boolean, _ bidiLevel : UINT32, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ measuringMode : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode) throws {
+    private func _n_DrawGlyphRunWithMeasuringMode(_ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ fontFace : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace>>, _ fontSize : FLOAT, _ glyphsLength : UINT32, _ glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, _ isSideways : boolean, _ bidiLevel : UINT32, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ measuringMode : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGlyphRunWithMeasuringMode(pThis, point, fontFace, fontSize, glyphsLength, glyphs, isSideways, bidiLevel, brush, measuringMode))
         }
@@ -2874,7 +2874,7 @@ open class ICanvasDrawingSession
         try self._n_DrawGlyphRunWithMeasuringMode(point, RawPointer(fontFace), fontSize, glyphsLength, glyphs, isSideways, bidiLevel, RawPointer(brush), measuringMode);
     }
     // void DrawGlyphRun(Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.Text.CanvasFontFace, System.Single, Microsoft.Graphics.Canvas.Text.CanvasGlyph[], bool, System.UInt32, Microsoft.Graphics.Canvas.Brushes.ICanvasBrush, Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode, System.String, System.String, System.Int32[], System.UInt32)
-    public func _n_DrawGlyphRunWithMeasuringModeAndDescription(_ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ fontFace : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace>>, _ fontSize : FLOAT, _ glyphsLength : UINT32, _ glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, _ isSideways : boolean, _ bidiLevel : UINT32, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ measuringMode : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode, _ localeName : Optional<HSTRING>, _ textString : Optional<HSTRING>, _ clusterMapIndicesLength : UINT32, _ clusterMapIndices : Optional<UnsafeMutablePointer<INT32>>, _ textPosition : UINT32) throws {
+    private func _n_DrawGlyphRunWithMeasuringModeAndDescription(_ point : _q_CWindows_CFoundation_CNumerics_CVector2, _ fontFace : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace>>, _ fontSize : FLOAT, _ glyphsLength : UINT32, _ glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, _ isSideways : boolean, _ bidiLevel : UINT32, _ brush : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush>>, _ measuringMode : _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode, _ localeName : Optional<HSTRING>, _ textString : Optional<HSTRING>, _ clusterMapIndicesLength : UINT32, _ clusterMapIndices : Optional<UnsafeMutablePointer<INT32>>, _ textPosition : UINT32) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGlyphRunWithMeasuringModeAndDescription(pThis, point, fontFace, fontSize, glyphsLength, glyphs, isSideways, bidiLevel, brush, measuringMode, localeName, textString, clusterMapIndicesLength, clusterMapIndices, textPosition))
         }
@@ -2889,7 +2889,7 @@ open class ICanvasDrawingSession
         }
     }
     // Microsoft.Graphics.Canvas.CanvasSpriteBatch CreateSpriteBatch()
-    public func _n_CreateSpriteBatch(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
+    private func _n_CreateSpriteBatch(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSpriteBatch(pThis, __presult))
         }
@@ -2900,7 +2900,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasSpriteBatch(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasSpriteBatch CreateSpriteBatch(Microsoft.Graphics.Canvas.CanvasSpriteSortMode)
-    public func _n_CreateSpriteBatchWithSortMode(_ sortMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
+    private func _n_CreateSpriteBatchWithSortMode(_ sortMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSpriteBatchWithSortMode(pThis, sortMode, __presult))
         }
@@ -2911,7 +2911,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasSpriteBatch(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasSpriteBatch CreateSpriteBatch(Microsoft.Graphics.Canvas.CanvasSpriteSortMode, Microsoft.Graphics.Canvas.CanvasImageInterpolation)
-    public func _n_CreateSpriteBatchWithSortModeAndInterpolation(_ sortMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
+    private func _n_CreateSpriteBatchWithSortModeAndInterpolation(_ sortMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSpriteBatchWithSortModeAndInterpolation(pThis, sortMode, interpolation, __presult))
         }
@@ -2922,7 +2922,7 @@ open class ICanvasDrawingSession
         return WinRT.Microsoft.Graphics.Canvas.ICanvasSpriteBatch(consuming: __result);
     }
     // Microsoft.Graphics.Canvas.CanvasSpriteBatch CreateSpriteBatch(Microsoft.Graphics.Canvas.CanvasSpriteSortMode, Microsoft.Graphics.Canvas.CanvasImageInterpolation, Microsoft.Graphics.Canvas.CanvasSpriteOptions)
-    public func _n_CreateSpriteBatchWithSortModeAndInterpolationAndOptions(_ sortMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
+    private func _n_CreateSpriteBatchWithSortModeAndInterpolationAndOptions(_ sortMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode, _ interpolation : _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSpriteBatchWithSortModeAndInterpolationAndOptions(pThis, sortMode, interpolation, options, __presult))
         }
@@ -2995,7 +2995,7 @@ open class ICanvasResourceCreator
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8f6d8aa8, Data2: 0x492f, Data3 : 0x4bc6, Data4 : (0xb3, 0xd0, 0xe7, 0xf5, 0xea, 0xe8, 0x4b, 0x11)) }
     // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasDevice get_Device()
-    public func _n_get_Device(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+    private func _n_get_Device(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Device(pThis, __presult))
         }
@@ -3021,7 +3021,7 @@ open class ICanvasResourceCreatorWithDpi
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1a75b512, Data2: 0xe9fa, Data3 : 0x49e6, Data4 : (0xa8, 0x76, 0x38, 0xca, 0xe1, 0x94, 0x01, 0x3e)) }
     // [IsSpecialName] System.Single get_Dpi()
-    public func _n_get_Dpi(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_get_Dpi(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Dpi(pThis, __presult))
         }
@@ -3032,7 +3032,7 @@ open class ICanvasResourceCreatorWithDpi
         return __result;
     }
     // System.Single ConvertPixelsToDips(System.Int32)
-    public func _n_ConvertPixelsToDips(_ pixels : INT32, _ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+    private func _n_ConvertPixelsToDips(_ pixels : INT32, _ __presult: UnsafeMutablePointer<FLOAT>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertPixelsToDips(pThis, pixels, __presult))
         }
@@ -3043,7 +3043,7 @@ open class ICanvasResourceCreatorWithDpi
         return __result;
     }
     // System.Int32 ConvertDipsToPixels(System.Single, Microsoft.Graphics.Canvas.CanvasDpiRounding)
-    public func _n_ConvertDipsToPixels(_ dips : FLOAT, _ dpiRounding : _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding, _ __presult: UnsafeMutablePointer<INT32>?) throws {
+    private func _n_ConvertDipsToPixels(_ dips : FLOAT, _ dpiRounding : _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding, _ __presult: UnsafeMutablePointer<INT32>?) throws {
         return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertDipsToPixels(pThis, dips, dpiRounding, __presult))
         }
