@@ -58,7 +58,7 @@ let SwiftWinRT = Package(
             ),
     .target(name: "MazeGame", dependencies: ["WinRT"],
             resources: [
-                .copy("Assets")
+                .process("Assets")
             ],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),

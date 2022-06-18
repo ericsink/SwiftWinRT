@@ -1,4 +1,5 @@
 
+import Foundation
 import WinRT
 
 public typealias DispatcherTimer = Microsoft.UI.Xaml.DispatcherTimer
@@ -131,11 +132,14 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try grid.put_Width(value: 1024)
         try grid.put_Height(value: 1024)
 
-        // TODO in the following line, the problem is that Swift's notion of resources
+        // TODO in the uri below, the problem is that Swift's notion of resources
         // is conflicting a bit with Windows App SDK's ideas.  The Swift_WinRT_MazeGame.resources
         // part of the path should be obtained from the Bundle, instead of hard-coding it
         // here, which I'm doing for the moment to illustrate how it works.
-        let uri_bg_img = try Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/Assets/gamegrid.png")
+        // TODO the following should find the resource, but it doesn't
+        let bundle_path_bg = Bundle.main.path(forResource: "gamegrid", ofType: "png")
+        print("\(bundle_path_bg)")
+        let uri_bg_img = try Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/gamegrid.png")
         let bg_img = try Microsoft.UI.Xaml.Media.Imaging.BitmapImage(uriSource: uri_bg_img)
         let bg = try Microsoft.UI.Xaml.Media.ImageBrush()
         try bg.put_ImageSource(value: bg_img)
