@@ -170,25 +170,25 @@ open class ContentControl
     private class Container {
         public var self_ref: ContentControl? = nil
     }
-    private struct WithTrailingObjects {
+    private struct WithTrailingObjects_IContentControlOverrides {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides
         public var container: Unmanaged<Container>
     }
-    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
+    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ContentControl? {
-        return pUnk?.bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_IContentControlOverrides(_ pUnk: UnsafeMutableRawPointer?) -> ContentControl? {
+        return pUnk?.bindMemory(to: ContentControl.WithTrailingObjects_IContentControlOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IContentControl?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
-        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        let instance = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
+        instance.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContentControl { return _self; }
-    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverridesVtbl = .init(
+    private static var vtable_IContentControlOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverridesVtbl = .init(
     QueryInterface: {
         guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
             return E_INVALIDARG
@@ -204,13 +204,13 @@ open class ContentControl
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContentControl.WithTrailingObjects_IContentControlOverrides.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContentControl.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContentControl.WithTrailingObjects_IContentControlOverrides.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
@@ -220,7 +220,7 @@ open class ContentControl
         }
         pLen.pointee = 1
         var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
-        mem.pointee = WinRT.Microsoft.UI.Xaml.Controls.IContentControlOverrides.IID
+        (mem + 0).pointee = WinRT.Microsoft.UI.Xaml.Controls.IContentControlOverrides.IID
         ppItems.pointee = mem
         return S_OK;
     },
@@ -247,7 +247,7 @@ open class ContentControl
     },
     OnContentChanged: {
         (pThis, _ oldContent : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ newContent : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = ContentControl.from(pThis) else {
+        guard let self = ContentControl.from_IContentControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -262,7 +262,7 @@ open class ContentControl
     },
     OnContentTemplateChanged: {
         (pThis, _ oldContentTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>, _ newContentTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) in
-        guard let self = ContentControl.from(pThis) else {
+        guard let self = ContentControl.from_IContentControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -277,7 +277,7 @@ open class ContentControl
     },
     OnContentTemplateSelectorChanged: {
         (pThis, _ oldContentTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>, _ newContentTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>) in
-        guard let self = ContentControl.from(pThis) else {
+        guard let self = ContentControl.from_IContentControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -293,9 +293,9 @@ open class ContentControl
     )
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IContentControlFactory
     public override init() throws {
-        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        let instance = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        instance.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IContentControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ContentControl");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
@@ -409,35 +409,11 @@ open class ContentControl
             return try WinRT.Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.ContentTransitions);
         }
     }
-    private var _cb_OnContentChanged : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void> = nil
-    public func Set_OnContentChanged(closure : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) {
-        _cb_OnContentChanged = closure
-    }
     open func OnContentChanged(oldContent : Optional<WinRT.Object>, newContent : Optional<WinRT.Object>) throws -> Void {
-        if let cb = _cb_OnContentChanged {
-            return try cb(oldContent, newContent)
-        } else {
-        }
-    }
-    private var _cb_OnContentTemplateChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void> = nil
-    public func Set_OnContentTemplateChanged(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void) {
-        _cb_OnContentTemplateChanged = closure
     }
     open func OnContentTemplateChanged(oldContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>, newContentTemplate : Optional<WinRT.Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
-        if let cb = _cb_OnContentTemplateChanged {
-            return try cb(oldContentTemplate, newContentTemplate)
-        } else {
-        }
-    }
-    private var _cb_OnContentTemplateSelectorChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void> = nil
-    public func Set_OnContentTemplateSelectorChanged(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void) {
-        _cb_OnContentTemplateSelectorChanged = closure
     }
     open func OnContentTemplateSelectorChanged(oldContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>, newContentTemplateSelector : Optional<WinRT.Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void {
-        if let cb = _cb_OnContentTemplateSelectorChanged {
-            return try cb(oldContentTemplateSelector, newContentTemplateSelector)
-        } else {
-        }
     }
 }
 
@@ -507,7 +483,7 @@ open class ContextMenuOpeningEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs>>) in
-        guard let self = ContextMenuOpeningEventHandler.from(pThis) else {
+        guard let self = ContextMenuOpeningEventHandler.from_ContextMenuOpeningEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -536,7 +512,7 @@ open class ContextMenuOpeningEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ContextMenuOpeningEventHandler? {
+    private static func from_ContextMenuOpeningEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ContextMenuOpeningEventHandler? {
         return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -551,6 +527,20 @@ open class ContextMenuOpeningEventHandler
         }
     }
 }
+// wrap delegate type
+open class foo_ContextMenuOpeningEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler {
+        return _self
+    }
+}
 
 // type: Microsoft.UI.Xaml.Controls.Control
 // runtime class
@@ -562,25 +552,25 @@ open class Control
     private class Container {
         public var self_ref: Control? = nil
     }
-    private struct WithTrailingObjects {
+    private struct WithTrailingObjects_IControlOverrides {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides
         public var container: Unmanaged<Container>
     }
-    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects>>
+    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>>
     private var _inner: Optional<WinRT.IInspectable> = nil
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> Control? {
-        return pUnk?.bindMemory(to: Control.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_IControlOverrides(_ pUnk: UnsafeMutableRawPointer?) -> Control? {
+        return pUnk?.bindMemory(to: Control.WithTrailingObjects_IControlOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     internal init(plok: WinRT.Microsoft.UI.Xaml.Controls.IControl?) throws {
         _self = plok!
         self.instance = nil
         try super.init(plok: _self.QueryInterface())
-        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
-        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        let instance = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
+        instance.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
     }
     internal func Interface() -> WinRT.Microsoft.UI.Xaml.Controls.IControl { return _self; }
-    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverridesVtbl = .init(
+    private static var vtable_IControlOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverridesVtbl = .init(
     QueryInterface: {
         guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
             return E_INVALIDARG
@@ -596,13 +586,13 @@ open class Control
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Control.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Control.WithTrailingObjects_IControlOverrides.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Control.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Control.WithTrailingObjects_IControlOverrides.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
@@ -612,7 +602,7 @@ open class Control
         }
         pLen.pointee = 1
         var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
-        mem.pointee = WinRT.Microsoft.UI.Xaml.Controls.IControlOverrides.IID
+        (mem + 0).pointee = WinRT.Microsoft.UI.Xaml.Controls.IControlOverrides.IID
         ppItems.pointee = mem
         return S_OK;
     },
@@ -639,7 +629,7 @@ open class Control
     },
     OnPointerEntered: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -654,7 +644,7 @@ open class Control
     },
     OnPointerPressed: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -669,7 +659,7 @@ open class Control
     },
     OnPointerMoved: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -684,7 +674,7 @@ open class Control
     },
     OnPointerReleased: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -699,7 +689,7 @@ open class Control
     },
     OnPointerExited: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -714,7 +704,7 @@ open class Control
     },
     OnPointerCaptureLost: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -729,7 +719,7 @@ open class Control
     },
     OnPointerCanceled: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -744,7 +734,7 @@ open class Control
     },
     OnPointerWheelChanged: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -759,7 +749,7 @@ open class Control
     },
     OnTapped: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -774,7 +764,7 @@ open class Control
     },
     OnDoubleTapped: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -789,7 +779,7 @@ open class Control
     },
     OnHolding: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -804,7 +794,7 @@ open class Control
     },
     OnRightTapped: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -819,7 +809,7 @@ open class Control
     },
     OnManipulationStarting: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -834,7 +824,7 @@ open class Control
     },
     OnManipulationInertiaStarting: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -849,7 +839,7 @@ open class Control
     },
     OnManipulationStarted: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -864,7 +854,7 @@ open class Control
     },
     OnManipulationDelta: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -879,7 +869,7 @@ open class Control
     },
     OnManipulationCompleted: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -894,7 +884,7 @@ open class Control
     },
     OnKeyUp: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -909,7 +899,7 @@ open class Control
     },
     OnKeyDown: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -924,7 +914,7 @@ open class Control
     },
     OnPreviewKeyDown: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -939,7 +929,7 @@ open class Control
     },
     OnPreviewKeyUp: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -954,7 +944,7 @@ open class Control
     },
     OnGotFocus: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -969,7 +959,7 @@ open class Control
     },
     OnLostFocus: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -984,7 +974,7 @@ open class Control
     },
     OnCharacterReceived: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CICharacterReceivedRoutedEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -999,7 +989,7 @@ open class Control
     },
     OnDragEnter: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1014,7 +1004,7 @@ open class Control
     },
     OnDragLeave: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1029,7 +1019,7 @@ open class Control
     },
     OnDragOver: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1044,7 +1034,7 @@ open class Control
     },
     OnDrop: {
         (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = Control.from(pThis) else {
+        guard let self = Control.from_IControlOverrides(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1060,9 +1050,9 @@ open class Control
     )
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IControlFactory
     public override init() throws {
-        let instance = UnsafeMutablePointer<WithTrailingObjects>.allocate(capacity: 1)
+        let instance = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
         self.instance = instance
-        instance.pointee = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        instance.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Control");
         let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
@@ -1692,285 +1682,61 @@ open class Control
             return try _ifc.DefaultStyleKey;
         }
     }
-    private var _cb_OnPointerEntered : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerEntered(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerEntered = closure
-    }
     open func OnPointerEntered(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerEntered {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerPressed : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerPressed(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerPressed = closure
     }
     open func OnPointerPressed(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerPressed {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerMoved : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerMoved(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerMoved = closure
     }
     open func OnPointerMoved(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerMoved {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerReleased : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerReleased(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerReleased = closure
     }
     open func OnPointerReleased(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerReleased {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerExited : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerExited(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerExited = closure
     }
     open func OnPointerExited(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerExited {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerCaptureLost : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerCaptureLost(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerCaptureLost = closure
     }
     open func OnPointerCaptureLost(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerCaptureLost {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerCanceled : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerCanceled(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerCanceled = closure
     }
     open func OnPointerCanceled(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerCanceled {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPointerWheelChanged : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPointerWheelChanged(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) {
-        _cb_OnPointerWheelChanged = closure
     }
     open func OnPointerWheelChanged(e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPointerWheelChanged {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnTapped(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void) {
-        _cb_OnTapped = closure
     }
     open func OnTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnTapped {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnDoubleTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnDoubleTapped(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void) {
-        _cb_OnDoubleTapped = closure
     }
     open func OnDoubleTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnDoubleTapped {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnHolding : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnHolding(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void) {
-        _cb_OnHolding = closure
     }
     open func OnHolding(e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnHolding {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnRightTapped : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnRightTapped(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void) {
-        _cb_OnRightTapped = closure
     }
     open func OnRightTapped(e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnRightTapped {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnManipulationStarting : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnManipulationStarting(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void) {
-        _cb_OnManipulationStarting = closure
     }
     open func OnManipulationStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnManipulationStarting {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnManipulationInertiaStarting : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnManipulationInertiaStarting(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void) {
-        _cb_OnManipulationInertiaStarting = closure
     }
     open func OnManipulationInertiaStarting(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnManipulationInertiaStarting {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnManipulationStarted : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnManipulationStarted(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void) {
-        _cb_OnManipulationStarted = closure
     }
     open func OnManipulationStarted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnManipulationStarted {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnManipulationDelta : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnManipulationDelta(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void) {
-        _cb_OnManipulationDelta = closure
     }
     open func OnManipulationDelta(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnManipulationDelta {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnManipulationCompleted : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnManipulationCompleted(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void) {
-        _cb_OnManipulationCompleted = closure
     }
     open func OnManipulationCompleted(e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnManipulationCompleted {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnKeyUp : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnKeyUp(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
-        _cb_OnKeyUp = closure
     }
     open func OnKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnKeyUp {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnKeyDown : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnKeyDown(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
-        _cb_OnKeyDown = closure
     }
     open func OnKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnKeyDown {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPreviewKeyDown : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPreviewKeyDown(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
-        _cb_OnPreviewKeyDown = closure
     }
     open func OnPreviewKeyDown(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPreviewKeyDown {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnPreviewKeyUp : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnPreviewKeyUp(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) {
-        _cb_OnPreviewKeyUp = closure
     }
     open func OnPreviewKeyUp(e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnPreviewKeyUp {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnGotFocus : Optional<(Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnGotFocus(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) {
-        _cb_OnGotFocus = closure
     }
     open func OnGotFocus(e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnGotFocus {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnLostFocus : Optional<(Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnLostFocus(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) {
-        _cb_OnLostFocus = closure
     }
     open func OnLostFocus(e : Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnLostFocus {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnCharacterReceived : Optional<(Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void> = nil
-    public func Set_OnCharacterReceived(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void) {
-        _cb_OnCharacterReceived = closure
     }
     open func OnCharacterReceived(e : Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
-        if let cb = _cb_OnCharacterReceived {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnDragEnter : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
-    public func Set_OnDragEnter(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
-        _cb_OnDragEnter = closure
     }
     open func OnDragEnter(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
-        if let cb = _cb_OnDragEnter {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnDragLeave : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
-    public func Set_OnDragLeave(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
-        _cb_OnDragLeave = closure
     }
     open func OnDragLeave(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
-        if let cb = _cb_OnDragLeave {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnDragOver : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
-    public func Set_OnDragOver(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
-        _cb_OnDragOver = closure
     }
     open func OnDragOver(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
-        if let cb = _cb_OnDragOver {
-            return try cb(e)
-        } else {
-        }
-    }
-    private var _cb_OnDrop : Optional<(Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void> = nil
-    public func Set_OnDrop(closure : @escaping (Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) {
-        _cb_OnDrop = closure
     }
     open func OnDrop(e : Optional<WinRT.Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
-        if let cb = _cb_OnDrop {
-            return try cb(e)
-        } else {
-        }
     }
 }
 

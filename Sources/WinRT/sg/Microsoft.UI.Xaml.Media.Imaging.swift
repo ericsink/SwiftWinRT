@@ -389,7 +389,7 @@ open class DownloadProgressEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs>>) in
-        guard let self = DownloadProgressEventHandler.from(pThis) else {
+        guard let self = DownloadProgressEventHandler.from_DownloadProgressEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -418,7 +418,7 @@ open class DownloadProgressEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> DownloadProgressEventHandler? {
+    private static func from_DownloadProgressEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DownloadProgressEventHandler? {
         return pUnk?.bindMemory(to: DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -431,6 +431,20 @@ open class DownloadProgressEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_DownloadProgressEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler {
+        return _self
     }
 }
 

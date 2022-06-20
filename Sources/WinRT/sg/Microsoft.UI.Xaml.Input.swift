@@ -149,7 +149,7 @@ open class DoubleTappedEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs>>) in
-        guard let self = DoubleTappedEventHandler.from(pThis) else {
+        guard let self = DoubleTappedEventHandler.from_DoubleTappedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -178,7 +178,7 @@ open class DoubleTappedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> DoubleTappedEventHandler? {
+    private static func from_DoubleTappedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DoubleTappedEventHandler? {
         return pUnk?.bindMemory(to: DoubleTappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -191,6 +191,20 @@ open class DoubleTappedEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_DoubleTappedEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler {
+        return _self
     }
 }
 
@@ -291,7 +305,7 @@ open class HoldingEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs>>) in
-        guard let self = HoldingEventHandler.from(pThis) else {
+        guard let self = HoldingEventHandler.from_HoldingEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -320,7 +334,7 @@ open class HoldingEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> HoldingEventHandler? {
+    private static func from_HoldingEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> HoldingEventHandler? {
         return pUnk?.bindMemory(to: HoldingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -333,6 +347,20 @@ open class HoldingEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_HoldingEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IHoldingEventHandler {
+        return _self
     }
 }
 
@@ -920,7 +948,7 @@ open class KeyEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyRoutedEventArgs>>) in
-        guard let self = KeyEventHandler.from(pThis) else {
+        guard let self = KeyEventHandler.from_KeyEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -949,7 +977,7 @@ open class KeyEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIKeyEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> KeyEventHandler? {
+    private static func from_KeyEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> KeyEventHandler? {
         return pUnk?.bindMemory(to: KeyEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -962,6 +990,20 @@ open class KeyEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_KeyEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IKeyEventHandler {
+        return _self
     }
 }
 
@@ -1171,7 +1213,7 @@ open class ManipulationCompletedEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedRoutedEventArgs>>) in
-        guard let self = ManipulationCompletedEventHandler.from(pThis) else {
+        guard let self = ManipulationCompletedEventHandler.from_ManipulationCompletedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1200,7 +1242,7 @@ open class ManipulationCompletedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationCompletedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationCompletedEventHandler? {
+    private static func from_ManipulationCompletedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationCompletedEventHandler? {
         return pUnk?.bindMemory(to: ManipulationCompletedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1213,6 +1255,20 @@ open class ManipulationCompletedEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_ManipulationCompletedEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler {
+        return _self
     }
 }
 
@@ -1290,7 +1346,7 @@ open class ManipulationDeltaEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaRoutedEventArgs>>) in
-        guard let self = ManipulationDeltaEventHandler.from(pThis) else {
+        guard let self = ManipulationDeltaEventHandler.from_ManipulationDeltaEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1319,7 +1375,7 @@ open class ManipulationDeltaEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationDeltaEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationDeltaEventHandler? {
+    private static func from_ManipulationDeltaEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationDeltaEventHandler? {
         return pUnk?.bindMemory(to: ManipulationDeltaEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1332,6 +1388,20 @@ open class ManipulationDeltaEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_ManipulationDeltaEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler {
+        return _self
     }
 }
 
@@ -1411,7 +1481,7 @@ open class ManipulationInertiaStartingEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingRoutedEventArgs>>) in
-        guard let self = ManipulationInertiaStartingEventHandler.from(pThis) else {
+        guard let self = ManipulationInertiaStartingEventHandler.from_ManipulationInertiaStartingEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1440,7 +1510,7 @@ open class ManipulationInertiaStartingEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationInertiaStartingEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationInertiaStartingEventHandler? {
+    private static func from_ManipulationInertiaStartingEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationInertiaStartingEventHandler? {
         return pUnk?.bindMemory(to: ManipulationInertiaStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1453,6 +1523,20 @@ open class ManipulationInertiaStartingEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_ManipulationInertiaStartingEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler {
+        return _self
     }
 }
 
@@ -1539,7 +1623,7 @@ open class ManipulationStartedEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedRoutedEventArgs>>) in
-        guard let self = ManipulationStartedEventHandler.from(pThis) else {
+        guard let self = ManipulationStartedEventHandler.from_ManipulationStartedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1568,7 +1652,7 @@ open class ManipulationStartedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationStartedEventHandler? {
+    private static func from_ManipulationStartedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationStartedEventHandler? {
         return pUnk?.bindMemory(to: ManipulationStartedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1581,6 +1665,20 @@ open class ManipulationStartedEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_ManipulationStartedEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler {
+        return _self
     }
 }
 
@@ -1661,7 +1759,7 @@ open class ManipulationStartingEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingRoutedEventArgs>>) in
-        guard let self = ManipulationStartingEventHandler.from(pThis) else {
+        guard let self = ManipulationStartingEventHandler.from_ManipulationStartingEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1690,7 +1788,7 @@ open class ManipulationStartingEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIManipulationStartingEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationStartingEventHandler? {
+    private static func from_ManipulationStartingEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ManipulationStartingEventHandler? {
         return pUnk?.bindMemory(to: ManipulationStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1703,6 +1801,20 @@ open class ManipulationStartingEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_ManipulationStartingEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler {
+        return _self
     }
 }
 
@@ -1816,7 +1928,7 @@ open class PointerEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIPointerRoutedEventArgs>>) in
-        guard let self = PointerEventHandler.from(pThis) else {
+        guard let self = PointerEventHandler.from_PointerEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1845,7 +1957,7 @@ open class PointerEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIPointerEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> PointerEventHandler? {
+    private static func from_PointerEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> PointerEventHandler? {
         return pUnk?.bindMemory(to: PointerEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1858,6 +1970,20 @@ open class PointerEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_PointerEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IPointerEventHandler {
+        return _self
     }
 }
 
@@ -1948,7 +2074,7 @@ open class RightTappedEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedRoutedEventArgs>>) in
-        guard let self = RightTappedEventHandler.from(pThis) else {
+        guard let self = RightTappedEventHandler.from_RightTappedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1977,7 +2103,7 @@ open class RightTappedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CIRightTappedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> RightTappedEventHandler? {
+    private static func from_RightTappedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> RightTappedEventHandler? {
         return pUnk?.bindMemory(to: RightTappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -1990,6 +2116,20 @@ open class RightTappedEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_RightTappedEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.IRightTappedEventHandler {
+        return _self
     }
 }
 
@@ -2063,7 +2203,7 @@ open class TappedEventHandler
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CITappedRoutedEventArgs>>) in
-        guard let self = TappedEventHandler.from(pThis) else {
+        guard let self = TappedEventHandler.from_TappedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2092,7 +2232,7 @@ open class TappedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CInput_CITappedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from(_ pUnk: UnsafeMutableRawPointer?) -> TappedEventHandler? {
+    private static func from_TappedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> TappedEventHandler? {
         return pUnk?.bindMemory(to: TappedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
@@ -2105,6 +2245,20 @@ open class TappedEventHandler
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TappedEventHandler
+{
+    private var _self : WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler;
+    internal init(plok: WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<WinRT.Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    internal func Interface() -> WinRT.Microsoft.UI.Xaml.Input.ITappedEventHandler {
+        return _self
     }
 }
 

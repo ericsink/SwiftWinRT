@@ -107,12 +107,16 @@ class MyApp : Microsoft.UI.Xaml.Application {
         }
     }
 
+    // TODO we keep a reference to this interface as an
+    // instance property to prevent it from being freed
+    // during async things.  need to investigate further.
+    var _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreator? = nil
+
     // Load the images. Only needs doing once, when the CanvasControl is initialized.
-    private func CreateResourcesAsync(sender: CanvasControl) async throws
+    private func CreateResourcesAsync() async throws
     {
-        let ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreator = try sender.QueryInterface()
-        ninjacat = try await CanvasBitmap.Load(resourceCreator: ifc, fileName: "c:/Users/eric/dev/Win2DMazeGame/Assets/ninjacat.png");
-        //dino = try await CanvasBitmap.Load(resourceCreator: ifc, fileName: "dino.png");
+        ninjacat = try await CanvasBitmap.Load(resourceCreator: _ifc!, uri: Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/ninjacat.png"));
+        dino = try await CanvasBitmap.Load(resourceCreator: _ifc!, uri: Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/dino.png"));
     }
 
     // A 'clean up' method required by the CanvasConrol
@@ -136,9 +140,11 @@ class MyApp : Microsoft.UI.Xaml.Application {
         // is conflicting a bit with Windows App SDK's ideas.  The Swift_WinRT_MazeGame.resources
         // part of the path should be obtained from the Bundle, instead of hard-coding it
         // here, which I'm doing for the moment to illustrate how it works.
+
         // TODO the following should find the resource, but it doesn't
         let bundle_path_bg = Bundle.main.path(forResource: "gamegrid", ofType: "png")
-        print("\(bundle_path_bg)")
+        print("try to get bundle path: \(bundle_path_bg)")
+
         let uri_bg_img = try Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/gamegrid.png")
         let bg_img = try Microsoft.UI.Xaml.Media.Imaging.BitmapImage(uriSource: uri_bg_img)
         let bg = try Microsoft.UI.Xaml.Media.ImageBrush()
@@ -148,15 +154,78 @@ class MyApp : Microsoft.UI.Xaml.Application {
         let canvas = try Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl()
         try grid.Children!.Append(value: canvas)
 
-#if not
+        // an implementation of IAsyncAction that we can pass
+        // to TrackAsyncAction for CreateResources
+        class MyAsyncAction : Windows.Foundation.AsyncAction {
+            private var _status : Windows.Foundation.AsyncStatus = .Started
+            override func get_Id() throws -> Swift.UInt32 {
+                //print("MyActionAction.get_Id")
+                return 0;
+            }
+            override func get_Status() throws -> WinRT.Windows.Foundation.AsyncStatus {
+                //print("MyActionAction.get_Status")
+                return _status
+            }
+            override func get_ErrorCode() throws -> WinRT.Windows.Foundation.HResult {
+                //print("MyActionAction.get_ErrorCode")
+                return Windows.Foundation.HResult(Value: 0);
+            }
+            override func Cancel() throws -> Void {
+                //print("MyActionAction.Cancel")
+            }
+            override func Close() throws -> Void {
+                //print("MyActionAction.Close")
+                // TODO what calls this?
+                _del = nil
+            }
+            private var _del : Optional<WinRT.Windows.Foundation.foo_AsyncActionCompletedHandler> = nil
+            override func put_Completed(handler : Optional<WinRT.Windows.Foundation.foo_AsyncActionCompletedHandler>) throws -> Void {
+                //print("MyActionAction.put_Completed")
+                _del = handler;
+            }
+            override func get_Completed() throws -> Optional<WinRT.Windows.Foundation.AsyncActionCompletedHandler> {
+                //print("MyActionAction.get_Completed")
+                return nil;
+            }
+            override func GetResults() throws -> Void {
+                //print("MyActionAction.GetResults")
+            }
+            internal func Done_Succeeded() throws -> Void {
+                _status = .Completed
+                if let d = _del {
+                    try d.Invoke(asyncInfo: self.to_IAsyncAction(), asyncStatus: _status)
+                }
+            }
+            internal func Done_Failed() throws -> Void {
+                _status = .Error
+                if let d = _del {
+                    try d.Invoke(asyncInfo: self.to_IAsyncAction(), asyncStatus: _status)
+                }
+            }
+        }
+
         _ = try canvas.add_CreateResources
         {
             // This is a method called by the CanvasControl, and we use it to call the routine that loads the graphics
             // for the player and baddies.
             (sender, args) in
-            args!.TrackAsyncAction(action: CreateResourcesAsync(sender).AsAsyncAction());
+
+            self._ifc = try canvas.QueryInterface()
+            let action_done = try MyAsyncAction()
+            Task {
+                do {
+                    try await self.CreateResourcesAsync()
+                    try action_done.Done_Succeeded()
+                } catch {
+                    print("error from CreateResourcesAsync, ignoring (for now): \(error)")
+                    // TODO should call Done_Failed here
+                    try action_done.Done_Succeeded()
+                }
+            }
+
+            try args!.TrackAsyncAction(action: action_done.to_IAsyncAction())
         }
-#endif
+
         _ = try canvas.add_Draw(value: canvasControl_Draw);
         _ = try canvas.add_KeyDown
         {
