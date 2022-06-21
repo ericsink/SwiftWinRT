@@ -77,17 +77,12 @@ public class Baddie
     }
 
     // Draw the baddie. Needs a reference to the canvas
-    public func Draw(_ args: CanvasDrawEventArgs, _ dino: CanvasBitmap) throws
+    public func Draw(_ args: CanvasDrawEventArgs, _ dino: CanvasBitmap?) throws
     {
         let r = Windows.Foundation.Rect(X: Float(x + 4), Y: Float(y + 4), Width: 64, Height: 64)
-        try args.DrawingSession!.DrawImage(bitmap: dino, destinationRectangle: r)
-    }
-
-    // Draw the baddie. Needs a reference to the canvas
-    public func Draw(_ args: CanvasDrawEventArgs) throws
-    {
+        //try args.DrawingSession!.DrawImage(bitmap: dino, destinationRectangle: r)
         // TODO figure out resources.  for now, draw a rectangle
-        let r = Windows.Foundation.Rect(X: Float(x + 4), Y: Float(y + 4), Width: 64, Height: 64)
         try args.DrawingSession!.FillRectangle(rect: r, color: Colors.Red)
     }
+
 }

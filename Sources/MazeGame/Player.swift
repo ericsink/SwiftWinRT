@@ -102,17 +102,11 @@ public class Player
     }
 
     // Draw the player. Needs a reference to the canvas
-    public func Draw(_ args: CanvasDrawEventArgs, _ ninjacat: CanvasBitmap) throws
+    public func Draw(_ args: CanvasDrawEventArgs, _ ninjacat: CanvasBitmap?) throws
     {
         let r = Windows.Foundation.Rect(X: Float(self.x), Y: Float(self.y), Width: 64, Height: 64)
-        try args.DrawingSession!.DrawImage(bitmap: ninjacat, destinationRectangle: r)
-    }
-
-    // Draw the player. Needs a reference to the canvas
-    public func Draw(_ args: CanvasDrawEventArgs) throws
-    {
+        //try args.DrawingSession!.DrawImage(bitmap: ninjacat, destinationRectangle: r)
         // TODO figure out resources.  for now, draw a rectangle
-        let r = Windows.Foundation.Rect(X: Float(self.x), Y: Float(self.y), Width: 64, Height: 64)
         try args.DrawingSession!.FillRectangle(rect: r, color: Colors.Yellow)
     }
 

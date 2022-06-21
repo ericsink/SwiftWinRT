@@ -71,24 +71,15 @@ class MyApp : Microsoft.UI.Xaml.Application {
 
         try player.Move(GameMaze);
 
-        // TODO figure out resources.  for now, draw a rectangle
-
-        try player.Draw(args!);
-        //try player.Draw(args!, ninjacat!);
+        try player.Draw(args!, ninjacat);
 
         try Ringo.Move(4, GameMaze);  // The first parameter is the speed - it must be 1, 2, 4,8, 16 or 32
         try George.Move(8, GameMaze);
         try Paul.Move(8, GameMaze);
 
-        // TODO figure out resources.  for now, draw a rectangle
-
-        try Ringo.Draw(args!);
-        try George.Draw(args!);
-        try Paul.Draw(args!);
-
-        //try Ringo.Draw(args!, dino!);
-        //try George.Draw(args!, dino!);
-        //try Paul.Draw(args!, dino!);
+        try Ringo.Draw(args!, dino);
+        try George.Draw(args!, dino);
+        try Paul.Draw(args!, dino);
 
 
         // Now draw the score 
