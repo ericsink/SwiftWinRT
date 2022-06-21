@@ -98,16 +98,21 @@ class MyApp : Microsoft.UI.Xaml.Application {
         }
     }
 
-    // TODO we keep a reference to this interface as an
+    // TODO we keep a reference to this stuff as an
     // instance property to prevent it from being freed
-    // during async things.  need to investigate further.
+    // during async things?  need to investigate further.
+    // seems unlikely that Swift async can be this badly broken.
     var _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreator? = nil
+    var _path_ninjacat : String? = nil
+    var _path_dino : String? = nil
 
     // Load the images. Only needs doing once, when the CanvasControl is initialized.
     private func CreateResourcesAsync() async throws
     {
-        ninjacat = try await CanvasBitmap.Load(resourceCreator: _ifc!, uri: Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/ninjacat.png"));
-        dino = try await CanvasBitmap.Load(resourceCreator: _ifc!, uri: Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/dino.png"));
+        // in C#, as of the writing of this comment,
+        // LoadAsync() with a path works but with an ms-appx uri does not
+        ninjacat = try await CanvasBitmap.Load(resourceCreator: _ifc!, fileName: _path_ninjacat!);
+        dino = try await CanvasBitmap.Load(resourceCreator: _ifc!, fileName: _path_dino!);
     }
 
     // A 'clean up' method required by the CanvasConrol
@@ -133,8 +138,11 @@ class MyApp : Microsoft.UI.Xaml.Application {
         // here, which I'm doing for the moment to illustrate how it works.
 
         // TODO the following should find the resource, but it doesn't
-        let bundle_path_bg = Bundle.main.path(forResource: "gamegrid", ofType: "png")
-        print("try to get bundle path: \(bundle_path_bg)")
+        //let bundle_path_bg = Bundle.main.path(forResource: "gamegrid", ofType: "png")
+        //print("try to get bundle path: \(bundle_path_bg)")
+        //let bundle_path_bg_indir = Bundle.main.path(forResource: "gamegrid", ofType: "png", inDirectory: "Assets")
+        //print("try to get bundle path_indir: \(bundle_path_bg_indir)")
+        //print("resourcePath: \(Bundle.main.resourcePath)")
 
         let uri_bg_img = try Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/gamegrid.png")
         let bg_img = try Microsoft.UI.Xaml.Media.Imaging.BitmapImage(uriSource: uri_bg_img)
@@ -203,6 +211,11 @@ class MyApp : Microsoft.UI.Xaml.Application {
             (sender, args) in
 
             self._ifc = try canvas.QueryInterface()
+            // TODO having to include SwiftWinRT_MazeGame.resources here is dreadful,
+            // but Bundle.resourcePath seems to be wrong for SwiftPM on Windows
+            let path_resources = Bundle.main.resourcePath! + "/" + "SwiftWinRT_MazeGame.resources"
+            self._path_ninjacat = path_resources + "/" + "ninjacat.png"
+            self._path_dino = path_resources + "/" + "dino.png"
             let action_done = try MyAsyncAction()
             Task {
                 do {
