@@ -154,7 +154,9 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try grid.Children!.Append(value: canvas)
 
         // an implementation of IAsyncAction that we can pass
-        // to TrackAsyncAction for CreateResources
+        // to TrackAsyncAction for CreateResources.
+        // TODO this doesn't belong here.  maybe something like
+        // this should be in the WinRT lib?
         class MyAsyncAction : Windows.Foundation.AsyncAction {
             private var _status : Windows.Foundation.AsyncStatus = .Started
             override func get_Id() throws -> Swift.UInt32 {
@@ -221,9 +223,8 @@ class MyApp : Microsoft.UI.Xaml.Application {
                     try await self.CreateResourcesAsync()
                     try action_done.Done_Succeeded()
                 } catch {
-                    print("error from CreateResourcesAsync, ignoring (for now): \(error)")
-                    // TODO should call Done_Failed here
-                    try action_done.Done_Succeeded()
+                    print("error from CreateResourcesAsync: \(error)")
+                    try action_done.Done_Failed()
                 }
             }
 
