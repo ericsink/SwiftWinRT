@@ -203,7 +203,6 @@ class MyApp : Microsoft.UI.Xaml.Application {
             }
         }
 
-#if not
         _ = try canvas.add_CreateResources
         {
             // This is a method called by the CanvasControl, and we use it to call the routine that loads the graphics
@@ -230,7 +229,6 @@ class MyApp : Microsoft.UI.Xaml.Application {
 
             try args!.TrackAsyncAction(action: action_done.to_IAsyncAction())
         }
-#endif
 
         _ = try canvas.add_Draw(value: canvasControl_Draw);
         _ = try canvas.add_KeyDown

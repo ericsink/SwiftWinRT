@@ -58,9 +58,11 @@ public func RoGetActivationFactory<Factory: IInspectable>(_ activatableClassId: 
         let hstr = try HString(activatableClassId).hRef.hString!
         var p_factory : Optional<UnsafeMutablePointer<IActivationFactory>> = nil
         try CHECKED(gaf_canvas!(hstr, &p_factory))
+        // TODO p_factory is now an IActivationFactory.  we need to query for the interface we actually want
         let factory = UnsafeMutableRawPointer(p_factory)
-        let q = Factory(consuming: factory?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
-        return q
+        let q = WinRT.IUnknown(consuming: factory?.bindMemory(to: WinSDK.IUnknown.self, capacity: 1))
+        let f: Factory = try q.QueryInterface()
+        return f
     } else {
         return try RoGetActivationFactory(HString(activatableClassId))
     }

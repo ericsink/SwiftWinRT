@@ -105,9 +105,7 @@ public class Player
     public func Draw(_ args: CanvasDrawEventArgs, _ ninjacat: CanvasBitmap?) throws
     {
         let r = Windows.Foundation.Rect(X: Float(self.x), Y: Float(self.y), Width: 64, Height: 64)
-        //try args.DrawingSession!.DrawImage(bitmap: ninjacat, destinationRectangle: r)
-        // TODO figure out resources.  for now, draw a rectangle
-        try args.DrawingSession!.FillRectangle(rect: r, color: Colors.Yellow)
+        try args.DrawingSession!.DrawImage(bitmap: ninjacat, destinationRectangle: r)
     }
 
     public func Check(_ badguy: Baddie) -> Bool
