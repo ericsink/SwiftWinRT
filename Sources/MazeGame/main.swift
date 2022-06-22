@@ -155,8 +155,8 @@ class MyApp : Microsoft.UI.Xaml.Application {
 
         // an implementation of IAsyncAction that we can pass
         // to TrackAsyncAction for CreateResources.
-        // TODO this doesn't belong here.  maybe something like
-        // this should be in the WinRT lib?
+        // TODO this doesn't belong here.  once we get the
+        // async capture problem worked out, move it to WinRT lib.
         class MyAsyncAction : Windows.Foundation.AsyncAction {
             private var _status : Windows.Foundation.AsyncStatus = .Started
             override func get_Id() throws -> Swift.UInt32 {
@@ -205,6 +205,21 @@ class MyApp : Microsoft.UI.Xaml.Application {
             }
         }
 
+        func MakeAsyncAction(c : @escaping () async throws -> Void) throws -> Windows.Foundation.IAsyncAction
+        {
+            let action_done = try MyAsyncAction()
+            Task {
+                do {
+                    try await c()
+                    try action_done.Done_Succeeded()
+                } catch {
+                    //print("error from CreateResourcesAsync: \(error)")
+                    try action_done.Done_Failed()
+                }
+            }
+            return action_done.to_IAsyncAction()
+        }
+
         _ = try canvas.add_CreateResources
         {
             // This is a method called by the CanvasControl, and we use it to call the routine that loads the graphics
@@ -217,6 +232,14 @@ class MyApp : Microsoft.UI.Xaml.Application {
             let path_resources = Bundle.main.resourcePath! + "/" + "SwiftWinRT_MazeGame.resources"
             self._path_ninjacat = path_resources + "/" + "ninjacat.png"
             self._path_dino = path_resources + "/" + "dino.png"
+
+#if not // TODO this should work
+            let action = try MakeAsyncAction
+            {
+                try await self.CreateResourcesAsync()
+            }
+            try args!.TrackAsyncAction(action: action)
+#else
             let action_done = try MyAsyncAction()
             Task {
                 do {
@@ -229,6 +252,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
             }
 
             try args!.TrackAsyncAction(action: action_done.to_IAsyncAction())
+#endif
         }
 
         _ = try canvas.add_Draw(value: canvasControl_Draw);
