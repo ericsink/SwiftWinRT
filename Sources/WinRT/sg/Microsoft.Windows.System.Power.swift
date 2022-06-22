@@ -45,7 +45,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_EnergySaverStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_EnergySaverStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_EnergySaverStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_EnergySaverStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -76,7 +76,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_BatteryStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_BatteryStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_BatteryStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_BatteryStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -107,7 +107,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PowerSupplyStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_PowerSupplyStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PowerSupplyStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_PowerSupplyStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -138,7 +138,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemainingChargePercentChanged(pThis, handler, __presult))
         }
     }
-    public func add_RemainingChargePercentChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_RemainingChargePercentChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_RemainingChargePercentChanged(RawPointer(handler), &__result);
         return __result;
@@ -169,7 +169,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_RemainingDischargeTimeChanged(pThis, handler, __presult))
         }
     }
-    public func add_RemainingDischargeTimeChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_RemainingDischargeTimeChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_RemainingDischargeTimeChanged(RawPointer(handler), &__result);
         return __result;
@@ -200,7 +200,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_PowerSourceKindChanged(pThis, handler, __presult))
         }
     }
-    public func add_PowerSourceKindChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_PowerSourceKindChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_PowerSourceKindChanged(RawPointer(handler), &__result);
         return __result;
@@ -231,7 +231,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DisplayStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_DisplayStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DisplayStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_DisplayStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -251,7 +251,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SystemIdleStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_SystemIdleStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_SystemIdleStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_SystemIdleStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -271,10 +271,10 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EffectivePowerMode(pThis, __presult))
         }
     }
-    public func get_EffectivePowerMode() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
+    public func get_EffectivePowerMode() throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>> = nil;
         try self._n_get_EffectivePowerMode(&__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode(consuming: __result);
     }
     public func get_EffectivePowerMode() async throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -291,7 +291,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_EffectivePowerModeChanged(pThis, handler, __presult))
         }
     }
-    public func add_EffectivePowerModeChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_EffectivePowerModeChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_EffectivePowerModeChanged(RawPointer(handler), &__result);
         return __result;
@@ -322,7 +322,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_UserPresenceStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_UserPresenceStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_UserPresenceStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_UserPresenceStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -353,7 +353,7 @@ open class IPowerManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SystemSuspendStatusChanged(pThis, handler, __presult))
         }
     }
-    public func add_SystemSuspendStatusChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_SystemSuspendStatusChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_SystemSuspendStatusChanged(RawPointer(handler), &__result);
         return __result;
@@ -377,7 +377,7 @@ open class IPowerManagerStatics
             return try get_DisplayStatus();
         }
     }
-    public var EffectivePowerMode : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
+    public var EffectivePowerMode : Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
         get throws {
             return try get_EffectivePowerMode();
         }
@@ -461,7 +461,7 @@ public class PowerManager
         return try PowerManagerStatics.get_EnergySaverStatus();
     }
     public static func add_EnergySaverStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_EnergySaverStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_EnergySaverStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_EnergySaverStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_EnergySaverStatusChanged(token: token);
@@ -470,7 +470,7 @@ public class PowerManager
         return try PowerManagerStatics.get_BatteryStatus();
     }
     public static func add_BatteryStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_BatteryStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_BatteryStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_BatteryStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_BatteryStatusChanged(token: token);
@@ -479,7 +479,7 @@ public class PowerManager
         return try PowerManagerStatics.get_PowerSupplyStatus();
     }
     public static func add_PowerSupplyStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_PowerSupplyStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_PowerSupplyStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_PowerSupplyStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_PowerSupplyStatusChanged(token: token);
@@ -488,7 +488,7 @@ public class PowerManager
         return try PowerManagerStatics.get_RemainingChargePercent();
     }
     public static func add_RemainingChargePercentChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_RemainingChargePercentChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_RemainingChargePercentChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_RemainingChargePercentChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_RemainingChargePercentChanged(token: token);
@@ -497,7 +497,7 @@ public class PowerManager
         return try PowerManagerStatics.get_RemainingDischargeTime();
     }
     public static func add_RemainingDischargeTimeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_RemainingDischargeTimeChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_RemainingDischargeTimeChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_RemainingDischargeTimeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_RemainingDischargeTimeChanged(token: token);
@@ -506,7 +506,7 @@ public class PowerManager
         return try PowerManagerStatics.get_PowerSourceKind();
     }
     public static func add_PowerSourceKindChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_PowerSourceKindChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_PowerSourceKindChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_PowerSourceKindChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_PowerSourceKindChanged(token: token);
@@ -515,18 +515,18 @@ public class PowerManager
         return try PowerManagerStatics.get_DisplayStatus();
     }
     public static func add_DisplayStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_DisplayStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_DisplayStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_DisplayStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_DisplayStatusChanged(token: token);
     }
     public static func add_SystemIdleStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_SystemIdleStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_SystemIdleStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_SystemIdleStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_SystemIdleStatusChanged(token: token);
     }
-    public static func get_EffectivePowerMode() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
+    public static func get_EffectivePowerMode() throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
         return try PowerManagerStatics.get_EffectivePowerMode();
     }
     public static func get_EffectivePowerMode() async throws -> WinRT.Microsoft.Windows.System.Power.EffectivePowerMode {
@@ -539,7 +539,7 @@ public class PowerManager
         }
     }
     public static func add_EffectivePowerModeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_EffectivePowerModeChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_EffectivePowerModeChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_EffectivePowerModeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_EffectivePowerModeChanged(token: token);
@@ -548,7 +548,7 @@ public class PowerManager
         return try PowerManagerStatics.get_UserPresenceStatus();
     }
     public static func add_UserPresenceStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_UserPresenceStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_UserPresenceStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_UserPresenceStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_UserPresenceStatusChanged(token: token);
@@ -557,7 +557,7 @@ public class PowerManager
         return try PowerManagerStatics.get_SystemSuspendStatus();
     }
     public static func add_SystemSuspendStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_SystemSuspendStatusChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_SystemSuspendStatusChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_SystemSuspendStatusChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_SystemSuspendStatusChanged(token: token);
@@ -572,7 +572,7 @@ public class PowerManager
         return try PowerManagerStatics.DisplayStatus;
         }
     }
-    public static var EffectivePowerMode : Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
+    public static var EffectivePowerMode : Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode> {
         get throws {
         return try PowerManagerStatics.EffectivePowerMode;
         }

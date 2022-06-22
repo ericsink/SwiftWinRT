@@ -96,64 +96,64 @@ public class ColumnDefinitionCollection
     :
     WinRT.Object
 {
-    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
-    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition?) throws {
+    private var _self : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
+    internal init(plok: WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition?) throws {
         _self = plok!
         try super.init(plok: _self.QueryInterface())
     }
-    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition { return _self; }
+    internal func Interface() -> WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition { return _self; }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition(plok: _ifc.GetAt(index: index));
     }
     public func get_Size() throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.get_Size();
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.GetView();
     }
     public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>, index : inout Swift.UInt32) throws -> boolean {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
             var _tmp_out_index: Swift.UInt32 = 0;
         return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
     }
     public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.SetAt(index: index, value: value!.Interface());
     }
     public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.InsertAt(index: index, value: value!.Interface());
     }
     public func RemoveAt(index : Swift.UInt32) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.RemoveAt(index: index);
     }
     public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.ColumnDefinition>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.Append(value: value!.Interface());
     }
     public func RemoveAtEnd() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.RemoveAtEnd();
     }
     public func Clear() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.Clear();
     }
     public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
     }
     public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
         return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
     }
     public var Size : Swift.UInt32 {
         get throws {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition = try _self.QueryInterface();
             return try _ifc.Size;
         }
     }
@@ -1490,7 +1490,7 @@ open class Control
     }
     public func add_FocusEngaged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusEngaged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FocusEngaged(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(cb: handler).Interface());
     }
     public func remove_FocusEngaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -1498,7 +1498,7 @@ open class Control
     }
     public func add_FocusDisengaged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.Control>, Optional<WinRT.Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusDisengaged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FocusDisengaged(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(cb: handler).Interface());
     }
     public func remove_FocusDisengaged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -2250,10 +2250,10 @@ open class IContentControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentTransitions(pThis, __presult))
         }
     }
-    public func get_ContentTransitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public func get_ContentTransitions() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_get_ContentTransitions(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_ContentTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     private func _n_put_ContentTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
@@ -2261,7 +2261,7 @@ open class IContentControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentTransitions(pThis, value))
         }
     }
-    public func put_ContentTransitions(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+    public func put_ContentTransitions(value : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
         try self._n_put_ContentTransitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.UIElement get_ContentTemplateRoot()
@@ -2295,7 +2295,7 @@ open class IContentControl
             return try get_ContentTemplateSelector();
         }
     }
-    public var ContentTransitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public var ContentTransitions : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         get throws {
             return try get_ContentTransitions();
         }
@@ -2945,7 +2945,7 @@ open class IControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_FocusEngaged(pThis, handler, __presult))
         }
     }
-    public func add_FocusEngaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_FocusEngaged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_FocusEngaged(RawPointer(handler), &__result);
         return __result;
@@ -2965,7 +2965,7 @@ open class IControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_FocusDisengaged(pThis, handler, __presult))
         }
     }
-    public func add_FocusDisengaged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_FocusDisengaged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_FocusDisengaged(RawPointer(handler), &__result);
         return __result;
@@ -4042,10 +4042,10 @@ open class IGrid
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_RowDefinitions(pThis, __presult))
         }
     }
-    public func get_RowDefinitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+    public func get_RowDefinitions() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition>> = nil;
         try self._n_get_RowDefinitions(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection get_ColumnDefinitions()
     private func _n_get_ColumnDefinitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>>>?) throws {
@@ -4053,10 +4053,10 @@ open class IGrid
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ColumnDefinitions(pThis, __presult))
         }
     }
-    public func get_ColumnDefinitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+    public func get_ColumnDefinitions() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>> = nil;
         try self._n_get_ColumnDefinitions(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Controls.BackgroundSizing get_BackgroundSizing()
     private func _n_get_BackgroundSizing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing>?) throws {
@@ -4213,7 +4213,7 @@ open class IGrid
             return try get_BorderThickness();
         }
     }
-    public var ColumnDefinitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+    public var ColumnDefinitions : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
         get throws {
             return try get_ColumnDefinitions();
         }
@@ -4233,7 +4233,7 @@ open class IGrid
             return try get_Padding();
         }
     }
-    public var RowDefinitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+    public var RowDefinitions : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
         get throws {
             return try get_RowDefinitions();
         }
@@ -4582,10 +4582,10 @@ open class IPanel
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Children(pThis, __presult))
         }
     }
-    public func get_Children() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
+    public func get_Children() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement>> = nil;
         try self._n_get_Children(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_Background()
     private func _n_get_Background(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
@@ -4624,10 +4624,10 @@ open class IPanel
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildrenTransitions(pThis, __presult))
         }
     }
-    public func get_ChildrenTransitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public func get_ChildrenTransitions() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_get_ChildrenTransitions(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_ChildrenTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     private func _n_put_ChildrenTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
@@ -4635,7 +4635,7 @@ open class IPanel
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ChildrenTransitions(pThis, value))
         }
     }
-    public func put_ChildrenTransitions(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+    public func put_ChildrenTransitions(value : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
         try self._n_put_ChildrenTransitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.BrushTransition get_BackgroundTransition()
@@ -4668,12 +4668,12 @@ open class IPanel
             return try get_BackgroundTransition();
         }
     }
-    public var Children : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
+    public var Children : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
         get throws {
             return try get_Children();
         }
     }
-    public var ChildrenTransitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public var ChildrenTransitions : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         get throws {
             return try get_ChildrenTransitions();
         }
@@ -5888,10 +5888,10 @@ open class ITextBlock
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Inlines(pThis, __presult))
         }
     }
-    public func get_Inlines() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
+    public func get_Inlines() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline>> = nil;
         try self._n_get_Inlines(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Padding()
     private func _n_get_Padding(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
@@ -6236,10 +6236,10 @@ open class ITextBlock
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextHighlighters(pThis, __presult))
         }
     }
-    public func get_TextHighlighters() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
+    public func get_TextHighlighters() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter>> = nil;
         try self._n_get_TextHighlighters(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase get_SelectionFlyout()
     private func _n_get_SelectionFlyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
@@ -6307,7 +6307,7 @@ open class ITextBlock
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_IsTextTrimmedChanged(pThis, handler, __presult))
         }
     }
-    public func add_IsTextTrimmedChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_IsTextTrimmedChanged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_IsTextTrimmedChanged(RawPointer(handler), &__result);
         return __result;
@@ -6414,7 +6414,7 @@ open class ITextBlock
             return try get_HorizontalTextAlignment();
         }
     }
-    public var Inlines : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
+    public var Inlines : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
         get throws {
             return try get_Inlines();
         }
@@ -6504,7 +6504,7 @@ open class ITextBlock
             return try get_TextDecorations();
         }
     }
-    public var TextHighlighters : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
+    public var TextHighlighters : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
         get throws {
             return try get_TextHighlighters();
         }
@@ -7247,64 +7247,64 @@ public class RowDefinitionCollection
     :
     WinRT.Object
 {
-    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition;
-    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition?) throws {
+    private var _self : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition;
+    internal init(plok: WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition?) throws {
         _self = plok!
         try super.init(plok: _self.QueryInterface())
     }
-    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition { return _self; }
+    internal func Interface() -> WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition { return _self; }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Controls.RowDefinition(plok: _ifc.GetAt(index: index));
     }
     public func get_Size() throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.get_Size();
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.GetView();
     }
     public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>, index : inout Swift.UInt32) throws -> boolean {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
             var _tmp_out_index: Swift.UInt32 = 0;
         return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
     }
     public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.SetAt(index: index, value: value!.Interface());
     }
     public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.InsertAt(index: index, value: value!.Interface());
     }
     public func RemoveAt(index : Swift.UInt32) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.RemoveAt(index: index);
     }
     public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Controls.RowDefinition>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.Append(value: value!.Interface());
     }
     public func RemoveAtEnd() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.RemoveAtEnd();
     }
     public func Clear() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.Clear();
     }
     public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
     }
     public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
         return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
     }
     public var Size : Swift.UInt32 {
         get throws {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition = try _self.QueryInterface();
             return try _ifc.Size;
         }
     }
@@ -7795,7 +7795,7 @@ open class StackPanel
     }
     public func add_HorizontalSnapPointsChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_HorizontalSnapPointsChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_HorizontalSnapPointsChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_HorizontalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
@@ -7803,13 +7803,13 @@ open class StackPanel
     }
     public func add_VerticalSnapPointsChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_VerticalSnapPointsChanged(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_VerticalSnapPointsChanged(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_VerticalSnapPointsChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
         return try _ifc.remove_VerticalSnapPointsChanged(token: token);
     }
-    public func GetIrregularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment) throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1_FLOAT> {
+    public func GetIrregularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment) throws -> Optional<WinRT.ClosedGenerics.IVectorView_1_FLOAT> {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
         return try _ifc.GetIrregularSnapPoints(orientation: orientation, alignment: alignment);
     }
@@ -8301,7 +8301,7 @@ public class TextBlock
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_HorizontalTextAlignment(value: value);
     }
-    public func get_TextHighlighters() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
+    public func get_TextHighlighters() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_TextHighlighters();
     }
@@ -8331,7 +8331,7 @@ public class TextBlock
     }
     public func add_IsTextTrimmedChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.Controls.TextBlock>, Optional<WinRT.Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_IsTextTrimmedChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_IsTextTrimmedChanged(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(cb: handler).Interface());
     }
     public func remove_IsTextTrimmedChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
@@ -8527,7 +8527,7 @@ public class TextBlock
             return try _ifc.TextDecorations;
         }
     }
-    public var TextHighlighters : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
+    public var TextHighlighters : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
         get throws {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
             return try _ifc.TextHighlighters;
@@ -8565,68 +8565,68 @@ public class UIElementCollection
     :
     WinRT.Object
 {
-    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement;
-    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement?) throws {
+    private var _self : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement;
+    internal init(plok: WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement?) throws {
         _self = plok!
         try super.init(plok: _self.QueryInterface())
     }
-    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement { return _self; }
+    internal func Interface() -> WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement { return _self; }
     public func Move(oldIndex : Swift.UInt32, newIndex : Swift.UInt32) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.Controls.IUIElementCollection = try _self.QueryInterface();
         return try _ifc.Move(oldIndex: oldIndex, newIndex: newIndex);
     }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.UIElement> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.UIElement(plok: _ifc.GetAt(index: index));
     }
     public func get_Size() throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.get_Size();
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.GetView();
     }
     public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>, index : inout Swift.UInt32) throws -> boolean {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
             var _tmp_out_index: Swift.UInt32 = 0;
         return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
     }
     public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.SetAt(index: index, value: value!.Interface());
     }
     public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.InsertAt(index: index, value: value!.Interface());
     }
     public func RemoveAt(index : Swift.UInt32) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.RemoveAt(index: index);
     }
     public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.UIElement>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.Append(value: value!.Interface());
     }
     public func RemoveAtEnd() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.RemoveAtEnd();
     }
     public func Clear() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.Clear();
     }
     public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
     }
     public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
         return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
     }
     public var Size : Swift.UInt32 {
         get throws {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement = try _self.QueryInterface();
             return try _ifc.Size;
         }
     }

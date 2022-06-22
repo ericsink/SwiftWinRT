@@ -857,7 +857,7 @@ open class DispatcherTimer
     }
     public func add_Tick(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
-        return try _ifc.add_Tick(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Tick(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_Tick(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
@@ -1839,7 +1839,7 @@ open class FrameworkElement
     }
     public func add_DataContextChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_DataContextChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_DataContextChanged(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(cb: handler).Interface());
     }
     public func remove_DataContextChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1855,7 +1855,7 @@ open class FrameworkElement
     }
     public func add_LayoutUpdated(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_LayoutUpdated(handler: WinRT.Windows.Foundation.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_LayoutUpdated(handler: WinRT.ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_LayoutUpdated(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1863,7 +1863,7 @@ open class FrameworkElement
     }
     public func add_Loading(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Loading(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Loading(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
     }
     public func remove_Loading(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1871,7 +1871,7 @@ open class FrameworkElement
     }
     public func add_ActualThemeChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_ActualThemeChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ActualThemeChanged(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
     }
     public func remove_ActualThemeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1879,7 +1879,7 @@ open class FrameworkElement
     }
     public func add_EffectiveViewportChanged(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_EffectiveViewportChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_EffectiveViewportChanged(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(cb: handler).Interface());
     }
     public func remove_EffectiveViewportChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -2742,7 +2742,7 @@ open class IDispatcherTimer
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Tick(pThis, handler, __presult))
         }
     }
-    public func add_Tick(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Tick(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_Tick(RawPointer(handler), &__result);
         return __result;
@@ -2900,10 +2900,10 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Triggers(pThis, __presult))
         }
     }
-    public func get_Triggers() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
+    public func get_Triggers() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>> = nil;
         try self._n_get_Triggers(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.ResourceDictionary get_Resources()
     private func _n_get_Resources(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIResourceDictionary>>>?) throws {
@@ -3503,7 +3503,7 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DataContextChanged(pThis, handler, __presult))
         }
     }
-    public func add_DataContextChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DataContextChanged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_DataContextChanged(RawPointer(handler), &__result);
         return __result;
@@ -3543,7 +3543,7 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_LayoutUpdated(pThis, handler, __presult))
         }
     }
-    public func add_LayoutUpdated(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_LayoutUpdated(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_LayoutUpdated(RawPointer(handler), &__result);
         return __result;
@@ -3563,7 +3563,7 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Loading(pThis, handler, __presult))
         }
     }
-    public func add_Loading(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Loading(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_Loading(RawPointer(handler), &__result);
         return __result;
@@ -3583,7 +3583,7 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ActualThemeChanged(pThis, handler, __presult))
         }
     }
-    public func add_ActualThemeChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ActualThemeChanged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_ActualThemeChanged(RawPointer(handler), &__result);
         return __result;
@@ -3603,7 +3603,7 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_EffectiveViewportChanged(pThis, handler, __presult))
         }
     }
-    public func add_EffectiveViewportChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_EffectiveViewportChanged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_EffectiveViewportChanged(RawPointer(handler), &__result);
         return __result;
@@ -3791,7 +3791,7 @@ open class IFrameworkElement
             return try get_Tag();
         }
     }
-    public var Triggers : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
+    public var Triggers : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
         get throws {
             return try get_Triggers();
         }
@@ -4818,10 +4818,10 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Transitions(pThis, __presult))
         }
     }
-    public func get_Transitions() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public func get_Transitions() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_get_Transitions(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // [IsSpecialName] void put_Transitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
     private func _n_put_Transitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
@@ -4829,7 +4829,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Transitions(pThis, value))
         }
     }
-    public func put_Transitions(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+    public func put_Transitions(value : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
         try self._n_put_Transitions(RawPointer(value));
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Media.CacheMode get_CacheMode()
@@ -4978,10 +4978,10 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_PointerCaptures(pThis, __presult))
         }
     }
-    public func get_PointerCaptures() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
+    public func get_PointerCaptures() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer>> = nil;
         try self._n_get_PointerCaptures(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase get_ContextFlyout()
     private func _n_get_ContextFlyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
@@ -5029,10 +5029,10 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_Lights(pThis, __presult))
         }
     }
-    public func get_Lights() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
+    public func get_Lights() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight>> = nil;
         try self._n_get_Lights(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight(consuming: __result);
     }
     // [IsSpecialName] bool get_CanBeScrollAnchor()
     private func _n_get_CanBeScrollAnchor(_ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -5323,10 +5323,10 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_KeyboardAccelerators(pThis, __presult))
         }
     }
-    public func get_KeyboardAccelerators() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
+    public func get_KeyboardAccelerators() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator>> = nil;
         try self._n_get_KeyboardAccelerators(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator(consuming: __result);
     }
     // [IsSpecialName] Microsoft.UI.Xaml.DependencyObject get_KeyboardAcceleratorPlacementTarget()
     private func _n_get_KeyboardAcceleratorPlacementTarget(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
@@ -5927,7 +5927,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragStarting(pThis, handler, __presult))
         }
     }
-    public func add_DragStarting(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DragStarting(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_DragStarting(RawPointer(handler), &__result);
         return __result;
@@ -5947,7 +5947,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_DropCompleted(pThis, handler, __presult))
         }
     }
-    public func add_DropCompleted(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_DropCompleted(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_DropCompleted(RawPointer(handler), &__result);
         return __result;
@@ -5967,7 +5967,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_CharacterReceived(pThis, handler, __presult))
         }
     }
-    public func add_CharacterReceived(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_CharacterReceived(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_CharacterReceived(RawPointer(handler), &__result);
         return __result;
@@ -6287,7 +6287,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ContextRequested(pThis, handler, __presult))
         }
     }
-    public func add_ContextRequested(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ContextRequested(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_ContextRequested(RawPointer(handler), &__result);
         return __result;
@@ -6307,7 +6307,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ContextCanceled(pThis, handler, __presult))
         }
     }
-    public func add_ContextCanceled(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ContextCanceled(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_ContextCanceled(RawPointer(handler), &__result);
         return __result;
@@ -6447,7 +6447,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_AccessKeyDisplayRequested(pThis, handler, __presult))
         }
     }
-    public func add_AccessKeyDisplayRequested(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_AccessKeyDisplayRequested(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_AccessKeyDisplayRequested(RawPointer(handler), &__result);
         return __result;
@@ -6467,7 +6467,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_AccessKeyDisplayDismissed(pThis, handler, __presult))
         }
     }
-    public func add_AccessKeyDisplayDismissed(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_AccessKeyDisplayDismissed(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_AccessKeyDisplayDismissed(RawPointer(handler), &__result);
         return __result;
@@ -6487,7 +6487,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_AccessKeyInvoked(pThis, handler, __presult))
         }
     }
-    public func add_AccessKeyInvoked(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_AccessKeyInvoked(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_AccessKeyInvoked(RawPointer(handler), &__result);
         return __result;
@@ -6507,7 +6507,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_ProcessKeyboardAccelerators(pThis, handler, __presult))
         }
     }
-    public func add_ProcessKeyboardAccelerators(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_ProcessKeyboardAccelerators(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_ProcessKeyboardAccelerators(RawPointer(handler), &__result);
         return __result;
@@ -6527,7 +6527,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_GettingFocus(pThis, handler, __presult))
         }
     }
-    public func add_GettingFocus(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_GettingFocus(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_GettingFocus(RawPointer(handler), &__result);
         return __result;
@@ -6547,7 +6547,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_LosingFocus(pThis, handler, __presult))
         }
     }
-    public func add_LosingFocus(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_LosingFocus(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_LosingFocus(RawPointer(handler), &__result);
         return __result;
@@ -6567,7 +6567,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_NoFocusCandidateFound(pThis, handler, __presult))
         }
     }
-    public func add_NoFocusCandidateFound(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_NoFocusCandidateFound(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_NoFocusCandidateFound(RawPointer(handler), &__result);
         return __result;
@@ -6627,7 +6627,7 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_BringIntoViewRequested(pThis, handler, __presult))
         }
     }
-    public func add_BringIntoViewRequested(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_BringIntoViewRequested(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_BringIntoViewRequested(RawPointer(handler), &__result);
         return __result;
@@ -6761,10 +6761,10 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.StartDragAsync(pThis, pointerPoint, __presult))
         }
     }
-    public func StartDragAsync(pointerPoint : Optional<WinRT.Microsoft.UI.Input.IPointerPoint>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation> {
+    public func StartDragAsync(pointerPoint : Optional<WinRT.Microsoft.UI.Input.IPointerPoint>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>> = nil;
         try self._n_StartDragAsync(RawPointer(pointerPoint), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(consuming: __result);
     }
     public func StartDrag(pointerPoint : Optional<WinRT.Microsoft.UI.Input.IPointerPoint>) async throws -> WinRT.Windows.ApplicationModel.DataTransfer.DataPackageOperation {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -6976,12 +6976,12 @@ open class IUIElement
             return try get_KeyboardAcceleratorPlacementTarget();
         }
     }
-    public var KeyboardAccelerators : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
+    public var KeyboardAccelerators : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
         get throws {
             return try get_KeyboardAccelerators();
         }
     }
-    public var Lights : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
+    public var Lights : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
         get throws {
             return try get_Lights();
         }
@@ -7001,7 +7001,7 @@ open class IUIElement
             return try get_OpacityTransition();
         }
     }
-    public var PointerCaptures : Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
+    public var PointerCaptures : Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
         get throws {
             return try get_PointerCaptures();
         }
@@ -7081,7 +7081,7 @@ open class IUIElement
             return try get_TransformMatrix();
         }
     }
-    public var Transitions : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public var Transitions : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         get throws {
             return try get_Transitions();
         }
@@ -7197,10 +7197,10 @@ open class IUIElementOverrides
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindSubElementsForTouchTargeting(pThis, point, boundingRect, __presult))
         }
     }
-    public func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
+    public func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.ClosedGenerics.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>> = nil;
         try self._n_FindSubElementsForTouchTargeting(point, boundingRect, &__result);
-        return WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint(consuming: __result);
+        return WinRT.ClosedGenerics.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint(consuming: __result);
     }
     // Windows.Foundation.Collections.IIterable<Microsoft.UI.Xaml.DependencyObject> GetChildrenInTabFocusOrder()
     private func _n_GetChildrenInTabFocusOrder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>>>?) throws {
@@ -7208,10 +7208,10 @@ open class IUIElementOverrides
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetChildrenInTabFocusOrder(pThis, __presult))
         }
     }
-    public func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
+    public func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.ClosedGenerics.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>> = nil;
         try self._n_GetChildrenInTabFocusOrder(&__result);
-        return WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject(consuming: __result);
+        return WinRT.ClosedGenerics.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject(consuming: __result);
     }
     // void OnKeyboardAcceleratorInvoked(Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs)
     private func _n_OnKeyboardAcceleratorInvoked(_ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs>>) throws {
@@ -8794,7 +8794,7 @@ open class IWindow
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Activated(pThis, handler, __presult))
         }
     }
-    public func add_Activated(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Activated(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_Activated(RawPointer(handler), &__result);
         return __result;
@@ -8814,7 +8814,7 @@ open class IWindow
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Closed(pThis, handler, __presult))
         }
     }
-    public func add_Closed(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Closed(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_Closed(RawPointer(handler), &__result);
         return __result;
@@ -8834,7 +8834,7 @@ open class IWindow
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_SizeChanged(pThis, handler, __presult))
         }
     }
-    public func add_SizeChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_SizeChanged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_SizeChanged(RawPointer(handler), &__result);
         return __result;
@@ -8854,7 +8854,7 @@ open class IWindow
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_VisibilityChanged(pThis, handler, __presult))
         }
     }
-    public func add_VisibilityChanged(handler : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_VisibilityChanged(handler : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_VisibilityChanged(RawPointer(handler), &__result);
         return __result;
@@ -9488,64 +9488,64 @@ public class TriggerCollection
     :
     WinRT.Object
 {
-    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase;
-    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase?) throws {
+    private var _self : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase;
+    internal init(plok: WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase?) throws {
         _self = plok!
         try super.init(plok: _self.QueryInterface())
     }
-    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase { return _self; }
+    internal func Interface() -> WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase { return _self; }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.TriggerBase> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.TriggerBase(plok: _ifc.GetAt(index: index));
     }
     public func get_Size() throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.get_Size();
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.GetView();
     }
     public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.TriggerBase>, index : inout Swift.UInt32) throws -> boolean {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
             var _tmp_out_index: Swift.UInt32 = 0;
         return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
     }
     public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.TriggerBase>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.SetAt(index: index, value: value!.Interface());
     }
     public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.TriggerBase>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.InsertAt(index: index, value: value!.Interface());
     }
     public func RemoveAt(index : Swift.UInt32) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.RemoveAt(index: index);
     }
     public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.TriggerBase>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.Append(value: value!.Interface());
     }
     public func RemoveAtEnd() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.RemoveAtEnd();
     }
     public func Clear() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.Clear();
     }
     public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
     }
     public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
         return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
     }
     public var Size : Swift.UInt32 {
         get throws {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
             return try _ifc.Size;
         }
     }
@@ -9674,7 +9674,7 @@ open class UIElement
             return E_INVALIDARG
         }
         do {
-            let _ret : Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> = try self.FindSubElementsForTouchTargeting(point: point, boundingRect: boundingRect)
+            let _ret : Optional<WinRT.ClosedGenerics.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> = try self.FindSubElementsForTouchTargeting(point: point, boundingRect: boundingRect)
             __presult!.pointee = RawPointer(_ret);
             return S_OK
         }
@@ -9690,7 +9690,7 @@ open class UIElement
             return E_INVALIDARG
         }
         do {
-            let _ret : Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> = try self.GetChildrenInTabFocusOrder()
+            let _ret : Optional<WinRT.ClosedGenerics.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> = try self.GetChildrenInTabFocusOrder()
             __presult!.pointee = RawPointer(_ret);
             return S_OK
         }
@@ -10568,7 +10568,7 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.put_ManipulationMode(value: value);
     }
-    public func get_PointerCaptures() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
+    public func get_PointerCaptures() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.get_PointerCaptures();
     }
@@ -10588,7 +10588,7 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.put_CompositeMode(value: value);
     }
-    public func get_Lights() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
+    public func get_Lights() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.get_Lights();
     }
@@ -10704,7 +10704,7 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.put_XYFocusRightNavigationStrategy(value: value);
     }
-    public func get_KeyboardAccelerators() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
+    public func get_KeyboardAccelerators() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.get_KeyboardAccelerators();
     }
@@ -10946,7 +10946,7 @@ open class UIElement
     }
     public func add_DragStarting(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragStarting(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(cb: handler).Interface());
+        return try _ifc.add_DragStarting(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(cb: handler).Interface());
     }
     public func remove_DragStarting(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10954,7 +10954,7 @@ open class UIElement
     }
     public func add_DropCompleted(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DropCompleted(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(cb: handler).Interface());
+        return try _ifc.add_DropCompleted(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(cb: handler).Interface());
     }
     public func remove_DropCompleted(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10962,7 +10962,7 @@ open class UIElement
     }
     public func add_CharacterReceived(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_CharacterReceived(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(cb: handler).Interface());
+        return try _ifc.add_CharacterReceived(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(cb: handler).Interface());
     }
     public func remove_CharacterReceived(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11090,7 +11090,7 @@ open class UIElement
     }
     public func add_ContextRequested(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ContextRequested(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ContextRequested(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_ContextRequested(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11098,7 +11098,7 @@ open class UIElement
     }
     public func add_ContextCanceled(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ContextCanceled(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ContextCanceled(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(cb: handler).Interface());
     }
     public func remove_ContextCanceled(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11154,7 +11154,7 @@ open class UIElement
     }
     public func add_AccessKeyDisplayRequested(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyDisplayRequested(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccessKeyDisplayRequested(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyDisplayRequested(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11162,7 +11162,7 @@ open class UIElement
     }
     public func add_AccessKeyDisplayDismissed(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyDisplayDismissed(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccessKeyDisplayDismissed(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyDisplayDismissed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11170,7 +11170,7 @@ open class UIElement
     }
     public func add_AccessKeyInvoked(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyInvoked(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccessKeyInvoked(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyInvoked(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11178,7 +11178,7 @@ open class UIElement
     }
     public func add_ProcessKeyboardAccelerators(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ProcessKeyboardAccelerators(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(cb: handler).Interface());
+        return try _ifc.add_ProcessKeyboardAccelerators(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(cb: handler).Interface());
     }
     public func remove_ProcessKeyboardAccelerators(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11186,7 +11186,7 @@ open class UIElement
     }
     public func add_GettingFocus(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_GettingFocus(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(cb: handler).Interface());
+        return try _ifc.add_GettingFocus(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(cb: handler).Interface());
     }
     public func remove_GettingFocus(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11194,7 +11194,7 @@ open class UIElement
     }
     public func add_LosingFocus(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_LosingFocus(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(cb: handler).Interface());
+        return try _ifc.add_LosingFocus(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(cb: handler).Interface());
     }
     public func remove_LosingFocus(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11202,7 +11202,7 @@ open class UIElement
     }
     public func add_NoFocusCandidateFound(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_NoFocusCandidateFound(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(cb: handler).Interface());
+        return try _ifc.add_NoFocusCandidateFound(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(cb: handler).Interface());
     }
     public func remove_NoFocusCandidateFound(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11226,7 +11226,7 @@ open class UIElement
     }
     public func add_BringIntoViewRequested(handler : @escaping (Optional<WinRT.Microsoft.UI.Xaml.UIElement>, Optional<WinRT.Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_BringIntoViewRequested(handler: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_BringIntoViewRequested(handler: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_BringIntoViewRequested(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11280,7 +11280,7 @@ open class UIElement
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.CancelDirectManipulations();
     }
-    public func StartDragAsync(pointerPoint : Optional<WinRT.Microsoft.UI.Input.PointerPoint>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation> {
+    public func StartDragAsync(pointerPoint : Optional<WinRT.Microsoft.UI.Input.PointerPoint>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation> {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.StartDragAsync(pointerPoint: pointerPoint!.Interface());
     }
@@ -11491,13 +11491,13 @@ open class UIElement
             return try WinRT.Microsoft.UI.Xaml.DependencyObject(plok: _ifc.KeyboardAcceleratorPlacementTarget);
         }
     }
-    public var KeyboardAccelerators : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
+    public var KeyboardAccelerators : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
         get throws {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
             return try _ifc.KeyboardAccelerators;
         }
     }
-    public var Lights : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
+    public var Lights : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
         get throws {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
             return try _ifc.Lights;
@@ -11521,7 +11521,7 @@ open class UIElement
             return try WinRT.Microsoft.UI.Xaml.ScalarTransition(plok: _ifc.OpacityTransition);
         }
     }
-    public var PointerCaptures : Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
+    public var PointerCaptures : Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
         get throws {
         let _ifc : WinRT.Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
             return try _ifc.PointerCaptures;
@@ -11732,10 +11732,10 @@ open class UIElement
     }
     open func OnDisconnectVisualChildren() throws -> Void {
     }
-    open func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
+    open func FindSubElementsForTouchTargeting(point : WinRT.Windows.Foundation.Point, boundingRect : WinRT.Windows.Foundation.Rect) throws -> Optional<WinRT.ClosedGenerics.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
     return nil;
     }
-    open func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.Windows.Foundation.Collections.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
+    open func GetChildrenInTabFocusOrder() throws -> Optional<WinRT.ClosedGenerics.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
     return nil;
     }
     open func OnKeyboardAcceleratorInvoked(args : Optional<WinRT.Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void {
@@ -12001,7 +12001,7 @@ open class Window
     }
     public func add_Activated(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_Activated(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Activated(handler: WinRT.ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(cb: handler).Interface());
     }
     public func remove_Activated(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
@@ -12009,7 +12009,7 @@ open class Window
     }
     public func add_Closed(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_Closed(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(cb: handler).Interface());
+        return try _ifc.add_Closed(handler: WinRT.ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(cb: handler).Interface());
     }
     public func remove_Closed(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
@@ -12017,7 +12017,7 @@ open class Window
     }
     public func add_SizeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_SizeChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_SizeChanged(handler: WinRT.ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(cb: handler).Interface());
     }
     public func remove_SizeChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
@@ -12025,7 +12025,7 @@ open class Window
     }
     public func add_VisibilityChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_VisibilityChanged(handler: WinRT.Windows.Foundation.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_VisibilityChanged(handler: WinRT.ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(cb: handler).Interface());
     }
     public func remove_VisibilityChanged(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();

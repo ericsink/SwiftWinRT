@@ -509,68 +509,68 @@ public class GradientStopCollection
     :
     WinRT.Object
 {
-    private var _self : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
-    internal init(plok: WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop?) throws {
+    private var _self : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
+    internal init(plok: WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop?) throws {
         _self = plok!
         try super.init(plok: _self.QueryInterface())
     }
-    internal func Interface() -> WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop { return _self; }
+    internal func Interface() -> WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop { return _self; }
     public init() throws {
         _self = try RoActivateInstance("Microsoft.UI.Xaml.Media.GradientStopCollection")
         try super.init(plok: _self.QueryInterface())
     }
     public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try WinRT.Microsoft.UI.Xaml.Media.GradientStop(plok: _ifc.GetAt(index: index));
     }
     public func get_Size() throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.get_Size();
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.GetView();
     }
     public func IndexOf(value : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop>, index : inout Swift.UInt32) throws -> boolean {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
             var _tmp_out_index: Swift.UInt32 = 0;
         return try _ifc.IndexOf(value: value!.Interface(), index: &_tmp_out_index);
     }
     public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.SetAt(index: index, value: value!.Interface());
     }
     public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.InsertAt(index: index, value: value!.Interface());
     }
     public func RemoveAt(index : Swift.UInt32) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.RemoveAt(index: index);
     }
     public func Append(value : Optional<WinRT.Microsoft.UI.Xaml.Media.GradientStop>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.Append(value: value!.Interface());
     }
     public func RemoveAtEnd() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.RemoveAtEnd();
     }
     public func Clear() throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.Clear();
     }
     public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws -> Swift.UInt32 {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
     }
     public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>) throws -> Void {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
         return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
     }
     public var Size : Swift.UInt32 {
         get throws {
-        let _ifc : WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
+        let _ifc : WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
             return try _ifc.Size;
         }
     }
@@ -962,10 +962,10 @@ open class IGradientBrush
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_GradientStops(pThis, __presult))
         }
     }
-    public func get_GradientStops() throws -> Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
+    public func get_GradientStops() throws -> Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>> = nil;
         try self._n_get_GradientStops(&__result);
-        return WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
+        return WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
     }
     // [IsSpecialName] void put_GradientStops(Microsoft.UI.Xaml.Media.GradientStopCollection)
     private func _n_put_GradientStops(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>>) throws {
@@ -973,7 +973,7 @@ open class IGradientBrush
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_GradientStops(pThis, value))
         }
     }
-    public func put_GradientStops(value : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>) throws -> Void {
+    public func put_GradientStops(value : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>) throws -> Void {
         try self._n_put_GradientStops(RawPointer(value));
     }
     public var ColorInterpolationMode : WinRT.Microsoft.UI.Xaml.Media.ColorInterpolationMode {
@@ -981,7 +981,7 @@ open class IGradientBrush
             return try get_ColorInterpolationMode();
         }
     }
-    public var GradientStops : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
+    public var GradientStops : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
         get throws {
             return try get_GradientStops();
         }
@@ -1384,7 +1384,7 @@ open class ILinearGradientBrushFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithGradientStopCollectionAndAngle(pThis, gradientStopCollection, angle, __presult))
         }
     }
-    public func CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection : Optional<WinRT.Windows.Foundation.Collections.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>, angle : Swift.Double) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush> {
+    public func CreateInstanceWithGradientStopCollectionAndAngle(gradientStopCollection : Optional<WinRT.ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>, angle : Swift.Double) throws -> Optional<WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush> {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CILinearGradientBrush>> = nil;
         try self._n_CreateInstanceWithGradientStopCollectionAndAngle(RawPointer(gradientStopCollection), angle, &__result);
         return WinRT.Microsoft.UI.Xaml.Media.ILinearGradientBrush(consuming: __result);

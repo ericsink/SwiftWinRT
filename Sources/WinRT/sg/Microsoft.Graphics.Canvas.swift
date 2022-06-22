@@ -91,7 +91,7 @@ open class CanvasBitmap
     public static func CreateFromSoftwareBitmap(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, sourceBitmap : Optional<WinRT.Windows.Graphics.Imaging.SoftwareBitmap>) throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
         return try WinRT.Microsoft.Graphics.Canvas.CanvasBitmap(plok: CanvasBitmapStatics.CreateFromSoftwareBitmap(resourceCreator: resourceCreator, sourceBitmap: sourceBitmap!.Interface()));
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromHstring(resourceCreator: resourceCreator, fileName: fileName);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -103,7 +103,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromHstringWithDpi(resourceCreator: resourceCreator, fileName: fileName, dpi: dpi);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -115,7 +115,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator: resourceCreator, fileName: fileName, dpi: dpi, alpha: alpha);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -127,7 +127,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromUri(resourceCreator: resourceCreator, uri: uri!.Interface());
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -139,7 +139,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>, dpi : Swift.Float) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>, dpi : Swift.Float) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromUriWithDpi(resourceCreator: resourceCreator, uri: uri!.Interface(), dpi: dpi);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>, dpi : Swift.Float) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -151,7 +151,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromUriWithDpiAndAlpha(resourceCreator: resourceCreator, uri: uri!.Interface(), dpi: dpi, alpha: alpha);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.Uri>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -163,7 +163,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromStream(resourceCreator: resourceCreator, stream: stream);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -175,7 +175,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromStreamWithDpi(resourceCreator: resourceCreator, stream: stream, dpi: dpi);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -187,7 +187,7 @@ open class CanvasBitmap
             }
         }
     }
-    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public static func LoadAsync(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         return try CanvasBitmapStatics.LoadAsyncFromStreamWithDpiAndAlpha(resourceCreator: resourceCreator, stream: stream, dpi: dpi, alpha: alpha);
     }
     public static func Load(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.CanvasBitmap> {
@@ -1171,11 +1171,11 @@ public class CanvasDrawingSession
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.put_Units(value: value);
     }
-    public func get_EffectBufferPrecision() throws -> Optional<WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
+    public func get_EffectBufferPrecision() throws -> Optional<WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.get_EffectBufferPrecision();
     }
-    public func put_EffectBufferPrecision(value : Optional<WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>) throws -> Void {
+    public func put_EffectBufferPrecision(value : Optional<WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
         return try _ifc.put_EffectBufferPrecision(value: value);
     }
@@ -1263,7 +1263,7 @@ public class CanvasDrawingSession
             return try _ifc.Blend;
         }
     }
-    public var EffectBufferPrecision : Optional<WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
+    public var EffectBufferPrecision : Optional<WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
         get throws {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.ICanvasDrawingSession = try _self.QueryInterface();
             return try _ifc.EffectBufferPrecision;
@@ -1930,12 +1930,12 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromHstring(pThis, resourceCreator, fileName, __presult))
         }
     }
-    public func LoadAsyncFromHstring(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromHstring(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         let __hstr_fileName = try HString(fileName);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromHstring(RawPointer(resourceCreator), __hstr_fileName.hRef.hString, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
         }
     }
     public func LoadAsyncFromHstring(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
@@ -1953,12 +1953,12 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromHstringWithDpi(pThis, resourceCreator, fileName, dpi, __presult))
         }
     }
-    public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         let __hstr_fileName = try HString(fileName);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromHstringWithDpi(RawPointer(resourceCreator), __hstr_fileName.hRef.hString, dpi, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
         }
     }
     public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
@@ -1976,12 +1976,12 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromHstringWithDpiAndAlpha(pThis, resourceCreator, fileName, dpi, alpha, __presult))
         }
     }
-    public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         let __hstr_fileName = try HString(fileName);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromHstringWithDpiAndAlpha(RawPointer(resourceCreator), __hstr_fileName.hRef.hString, dpi, alpha, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
         }
     }
     public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
@@ -1999,10 +1999,10 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromUri(pThis, resourceCreator, uri, __presult))
         }
     }
-    public func LoadAsyncFromUri(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromUri(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromUri(RawPointer(resourceCreator), RawPointer(uri), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
     }
     public func LoadAsyncFromUri(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -2019,10 +2019,10 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromUriWithDpi(pThis, resourceCreator, uri, dpi, __presult))
         }
     }
-    public func LoadAsyncFromUriWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, dpi : Swift.Float) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromUriWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, dpi : Swift.Float) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromUriWithDpi(RawPointer(resourceCreator), RawPointer(uri), dpi, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
     }
     public func LoadAsyncFromUriWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, dpi : Swift.Float) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -2039,10 +2039,10 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromUriWithDpiAndAlpha(pThis, resourceCreator, uri, dpi, alpha, __presult))
         }
     }
-    public func LoadAsyncFromUriWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromUriWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromUriWithDpiAndAlpha(RawPointer(resourceCreator), RawPointer(uri), dpi, alpha, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
     }
     public func LoadAsyncFromUriWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -2059,10 +2059,10 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromStream(pThis, resourceCreator, stream, __presult))
         }
     }
-    public func LoadAsyncFromStream(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromStream(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromStream(RawPointer(resourceCreator), RawPointer(stream), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
     }
     public func LoadAsyncFromStream(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -2079,10 +2079,10 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromStreamWithDpi(pThis, resourceCreator, stream, dpi, __presult))
         }
     }
-    public func LoadAsyncFromStreamWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromStreamWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromStreamWithDpi(RawPointer(resourceCreator), RawPointer(stream), dpi, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
     }
     public func LoadAsyncFromStreamWithDpi(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -2099,10 +2099,10 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromStreamWithDpiAndAlpha(pThis, resourceCreator, stream, dpi, alpha, __presult))
         }
     }
-    public func LoadAsyncFromStreamWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+    public func LoadAsyncFromStreamWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromStreamWithDpiAndAlpha(RawPointer(resourceCreator), RawPointer(stream), dpi, alpha, &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
     }
     public func LoadAsyncFromStreamWithDpiAndAlpha(resourceCreator : Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<WinRT.Windows.Storage.Streams.IRandomAccessStream>, dpi : Swift.Float, alpha : WinRT.Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<WinRT.Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -3701,10 +3701,10 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.get_EffectBufferPrecision(pThis, __presult))
         }
     }
-    public func get_EffectBufferPrecision() throws -> Optional<WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
+    public func get_EffectBufferPrecision() throws -> Optional<WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>> = nil;
         try self._n_get_EffectBufferPrecision(&__result);
-        return WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision(consuming: __result);
+        return WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision(consuming: __result);
     }
     // [IsSpecialName] void put_EffectBufferPrecision(Windows.Foundation.IReference<Microsoft.Graphics.Canvas.CanvasBufferPrecision>)
     private func _n_put_EffectBufferPrecision(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>>) throws {
@@ -3712,7 +3712,7 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EffectBufferPrecision(pThis, value))
         }
     }
-    public func put_EffectBufferPrecision(value : Optional<WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>) throws -> Void {
+    public func put_EffectBufferPrecision(value : Optional<WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision>) throws -> Void {
         try self._n_put_EffectBufferPrecision(RawPointer(value));
     }
     // [IsSpecialName] Windows.Graphics.Imaging.BitmapSize get_EffectTileSize()
@@ -3921,7 +3921,7 @@ open class ICanvasDrawingSession
             return try get_Blend();
         }
     }
-    public var EffectBufferPrecision : Optional<WinRT.Windows.Foundation.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
+    public var EffectBufferPrecision : Optional<WinRT.ClosedGenerics.IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision> {
         get throws {
             return try get_EffectBufferPrecision();
         }

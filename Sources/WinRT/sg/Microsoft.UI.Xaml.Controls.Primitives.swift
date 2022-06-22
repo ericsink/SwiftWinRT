@@ -882,7 +882,7 @@ open class IScrollSnapPointsInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_HorizontalSnapPointsChanged(pThis, handler, __presult))
         }
     }
-    public func add_HorizontalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_HorizontalSnapPointsChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_HorizontalSnapPointsChanged(RawPointer(handler), &__result);
         return __result;
@@ -902,7 +902,7 @@ open class IScrollSnapPointsInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_VerticalSnapPointsChanged(pThis, handler, __presult))
         }
     }
-    public func add_VerticalSnapPointsChanged(handler : Optional<WinRT.Windows.Foundation.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_VerticalSnapPointsChanged(handler : Optional<WinRT.ClosedGenerics.IEventHandler_1_IInspectable>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_VerticalSnapPointsChanged(RawPointer(handler), &__result);
         return __result;
@@ -922,10 +922,10 @@ open class IScrollSnapPointsInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetIrregularSnapPoints(pThis, orientation, alignment, __presult))
         }
     }
-    public func GetIrregularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment) throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1_FLOAT> {
+    public func GetIrregularSnapPoints(orientation : WinRT.Microsoft.UI.Xaml.Controls.Orientation, alignment : WinRT.Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment) throws -> Optional<WinRT.ClosedGenerics.IVectorView_1_FLOAT> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT>> = nil;
         try self._n_GetIrregularSnapPoints(orientation, alignment, &__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1_FLOAT(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1_FLOAT(consuming: __result);
     }
     // System.Single GetRegularSnapPoints(Microsoft.UI.Xaml.Controls.Orientation, Microsoft.UI.Xaml.Controls.Primitives.SnapPointsAlignment, ref System.Single)
     private func _n_GetRegularSnapPoints(_ orientation : _q_CMicrosoft_CUI_CXaml_CControls_COrientation, _ alignment : _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CSnapPointsAlignment, _ offset : UnsafeMutablePointer<FLOAT>, _ __presult: UnsafeMutablePointer<FLOAT>?) throws {

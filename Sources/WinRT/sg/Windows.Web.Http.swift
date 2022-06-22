@@ -27,7 +27,7 @@ public class HttpClient
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: DeleteAsync
-    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
+    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
         let _ifc : WinRT.Windows.Web.Http.IHttpClient = try _self.QueryInterface();
         return try _ifc.GetAsync(uri: uri!.Interface());
     }
@@ -144,10 +144,10 @@ open class IHttpClient
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAsync(pThis, uri, __presult))
         }
     }
-    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
+    public func GetAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>> = nil;
         try self._n_GetAsync(RawPointer(uri), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(consuming: __result);
     }
     public func Get(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<WinRT.Windows.Web.Http.IHttpResponseMessage> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -209,10 +209,10 @@ open class IHttpContent
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadAsStringAsync(pThis, __presult))
         }
     }
-    public func ReadAsStringAsync() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64> {
+    public func ReadAsStringAsync() throws -> Optional<WinRT.ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>> = nil;
         try self._n_ReadAsStringAsync(&__result);
-        return WinRT.Windows.Foundation.IAsyncOperationWithProgress_2_HSTRING_UINT64(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64(consuming: __result);
     }
     public func ReadAsString() async throws -> Swift.String {
         return try await withUnsafeThrowingContinuation { continuation in

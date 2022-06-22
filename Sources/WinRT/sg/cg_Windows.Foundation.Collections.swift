@@ -4,7 +4,7 @@
 
 import CWinRT;
 
-extension Windows.Foundation.Collections {
+extension ClosedGenerics {
 // closed interface type
 public class IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
     :
@@ -78,10 +78,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Media.Animation.Transition, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -232,10 +232,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Media.XamlLight, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -375,10 +375,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Input.KeyboardAccelerator, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -575,10 +575,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CTriggerBase(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.TriggerBase, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CITriggerBase>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -718,10 +718,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CUIElement(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.UIElement, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -861,10 +861,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Controls.RowDefinition, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -1004,10 +1004,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Controls.ColumnDefinition, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -1147,10 +1147,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Documents.Inline, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -1290,10 +1290,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Documents.TextHighlighter, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
@@ -1444,10 +1444,10 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
         }
     }
-    public func GetView() throws -> Optional<WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
+    public func GetView() throws -> Optional<WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop>> = nil;
         try self._n_GetView(&__result);
-        return WinRT.Windows.Foundation.Collections.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
+        return WinRT.ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop(consuming: __result);
     }
     // bool IndexOf(Microsoft.UI.Xaml.Media.GradientStop, ref System.UInt32)
     private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {

@@ -32,10 +32,10 @@ open class IOutputStream
             try CHECKED(pThis.pointee.lpVtbl.pointee.FlushAsync(pThis, __presult))
         }
     }
-    public func FlushAsync() throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1_boolean> {
+    public func FlushAsync() throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1_boolean> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
         try self._n_FlushAsync(&__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1_boolean(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
     }
     public func Flush() async throws -> boolean {
         return try await withUnsafeThrowingContinuation { continuation in

@@ -397,10 +397,10 @@ open class IXmlDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromUriAsync(pThis, uri, __presult))
         }
     }
-    public func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>> = nil;
         try self._n_LoadFromUriAsync(RawPointer(uri), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
     }
     public func LoadFromUri(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -417,10 +417,10 @@ open class IXmlDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromUriWithSettingsAsync(pThis, uri, loadSettings, __presult))
         }
     }
-    public func LoadFromUriWithSettingsAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.IXmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public func LoadFromUriWithSettingsAsync(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.IXmlLoadSettings>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>> = nil;
         try self._n_LoadFromUriWithSettingsAsync(RawPointer(uri), RawPointer(loadSettings), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
     }
     public func LoadFromUriWithSettings(uri : Optional<WinRT.Windows.Foundation.IUriRuntimeClass>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.IXmlLoadSettings>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -437,10 +437,10 @@ open class IXmlDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromFileAsync(pThis, file, __presult))
         }
     }
-    public func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>> = nil;
         try self._n_LoadFromFileAsync(RawPointer(file), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
     }
     public func LoadFromFile(file : Optional<WinRT.Windows.Storage.IStorageFile>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -457,10 +457,10 @@ open class IXmlDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromFileWithSettingsAsync(pThis, file, loadSettings, __presult))
         }
     }
-    public func LoadFromFileWithSettingsAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.IXmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public func LoadFromFileWithSettingsAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.IXmlLoadSettings>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>> = nil;
         try self._n_LoadFromFileWithSettingsAsync(RawPointer(file), RawPointer(loadSettings), &__result);
-        return WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
+        return WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument(consuming: __result);
     }
     public func LoadFromFileWithSettings(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.IXmlLoadSettings>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.IXmlDocument> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -1753,7 +1753,7 @@ public class XmlDocument
     public static var XmlDocumentStatics : IXmlDocumentStatics {
         _IXmlDocumentStatics.x
     }
-    public static func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public static func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.Uri>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromUriAsync(uri: uri!.Interface());
     }
     public static func LoadFromUri(uri : Optional<WinRT.Windows.Foundation.Uri>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
@@ -1765,7 +1765,7 @@ public class XmlDocument
             }
         }
     }
-    public static func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.Uri>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public static func LoadFromUriAsync(uri : Optional<WinRT.Windows.Foundation.Uri>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromUriWithSettingsAsync(uri: uri!.Interface(), loadSettings: loadSettings!.Interface());
     }
     public static func LoadFromUri(uri : Optional<WinRT.Windows.Foundation.Uri>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
@@ -1777,7 +1777,7 @@ public class XmlDocument
             }
         }
     }
-    public static func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public static func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromFileAsync(file: file);
     }
     public static func LoadFromFile(file : Optional<WinRT.Windows.Storage.IStorageFile>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {
@@ -1789,7 +1789,7 @@ public class XmlDocument
             }
         }
     }
-    public static func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.Windows.Foundation.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
+    public static func LoadFromFileAsync(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) throws -> Optional<WinRT.ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument> {
         return try XmlDocumentStatics.LoadFromFileWithSettingsAsync(file: file, loadSettings: loadSettings!.Interface());
     }
     public static func LoadFromFile(file : Optional<WinRT.Windows.Storage.IStorageFile>, loadSettings : Optional<WinRT.Windows.Data.Xml.Dom.XmlLoadSettings>) async throws -> Optional<WinRT.Windows.Data.Xml.Dom.XmlDocument> {

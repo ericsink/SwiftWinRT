@@ -23,7 +23,7 @@ public class CanvasControl
     }
     public func add_CreateResources(value : @escaping (Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<WinRT.Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-        return try _ifc.add_CreateResources(value: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
+        return try _ifc.add_CreateResources(value: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
     }
     public func remove_CreateResources(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
@@ -35,7 +35,7 @@ public class CanvasControl
     }
     public func add_Draw(value : @escaping (Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<WinRT.Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-        return try _ifc.add_Draw(value: WinRT.Windows.Foundation.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: value).Interface());
+        return try _ifc.add_Draw(value: WinRT.ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: value).Interface());
     }
     public func remove_Draw(token : WinRT.Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : WinRT.Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
@@ -207,7 +207,7 @@ open class ICanvasControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_CreateResources(pThis, value, __presult))
         }
     }
-    public func add_CreateResources(value : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_CreateResources(value : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_CreateResources(RawPointer(value), &__result);
         return __result;
@@ -238,7 +238,7 @@ open class ICanvasControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.add_Draw(pThis, value, __presult))
         }
     }
-    public func add_Draw(value : Optional<WinRT.Windows.Foundation.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
+    public func add_Draw(value : Optional<WinRT.ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs>) throws -> WinRT.Windows.Foundation.EventRegistrationToken {
         var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
         try self._n_add_Draw(RawPointer(value), &__result);
         return __result;
