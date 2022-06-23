@@ -3,10 +3,11 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
-
+import WindowsSdk;
 import WindowsApp;
+
 extension Microsoft.Graphics.Canvas.UI.Xaml {
 // type: Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl
 // runtime class

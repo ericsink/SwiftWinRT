@@ -3,10 +3,11 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
-
+import WindowsSdk;
 import WindowsApp;
+
 extension ClosedGenerics {
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs

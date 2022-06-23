@@ -1,4 +1,5 @@
 
+import WindowsSdk
 import WindowsApp
 
 // This class controls and draws the player object.

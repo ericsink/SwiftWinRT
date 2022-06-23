@@ -1,6 +1,6 @@
 
 import WinRT
-import WindowsApp
+import WindowsSdk
 
 @main
 class HttpClientDemo {

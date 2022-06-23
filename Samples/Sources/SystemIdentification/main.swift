@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: BSD-3
 
 import WinRT
-import WindowsApp
+import WindowsSdk
 
 @main
 class WinRTDemo {

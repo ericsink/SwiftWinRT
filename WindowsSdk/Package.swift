@@ -3,18 +3,17 @@
 import PackageDescription
 
 let SwiftWinRT = Package(
-  name: "WindowsApp",
+  name: "WindowsSdk",
   products: [
-    .library(name: "WindowsApp", targets: ["WindowsApp"]),
+    .library(name: "WindowsSdk", targets: ["WindowsSdk"]),
   ],
     dependencies : [
     .package(name: "WinRT", path: "../WinRT"),
-    .package(name: "WindowsSdk", path: "../WindowsSdk"),
     ],
   targets: [
-    .target(name: "CWindowsApp"),
-    .target(name: "WindowsApp", 
-            dependencies: ["WinRT", "WindowsSdk", "CWindowsApp"],
+    .target(name: "CWindowsSdk"),
+    .target(name: "WindowsSdk", 
+            dependencies: ["WinRT", "CWindowsSdk"],
             linkerSettings: [
               .linkedLibrary("Ole32"),
             ]

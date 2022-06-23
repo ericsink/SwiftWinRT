@@ -3,10 +3,11 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
-
+import WindowsSdk;
 import WindowsApp;
+
 extension Microsoft.Graphics.Canvas.Svg {
 // type: Microsoft.Graphics.Canvas.Svg.CanvasSvgDocument
 // runtime class

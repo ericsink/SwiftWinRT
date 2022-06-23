@@ -3,10 +3,11 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
-
+import WindowsSdk;
 import WindowsApp;
+
 extension Microsoft.Graphics.Canvas.Text {
 // type: Microsoft.Graphics.Canvas.Text.CanvasDrawTextOptions
 // enum type

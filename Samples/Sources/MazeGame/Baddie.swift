@@ -1,4 +1,5 @@
 
+import WindowsSdk
 import WindowsApp
 
 // This class contains the code that draws and moves the "badguy" image.

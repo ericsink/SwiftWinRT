@@ -3,6 +3,7 @@
 
 import CWinRT
 import WinRT
+import WindowsSdk
 import WindowsApp
 
 @main

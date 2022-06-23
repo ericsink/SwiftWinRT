@@ -3,8 +3,9 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import WindowsSdk;
 
 extension Microsoft.Windows.System.Power {
 // type: Microsoft.Windows.System.Power.BatteryStatus

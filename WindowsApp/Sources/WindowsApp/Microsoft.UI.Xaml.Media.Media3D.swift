@@ -3,8 +3,9 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import WindowsSdk;
 
 extension Microsoft.UI.Xaml.Media.Media3D {
 // type: Microsoft.UI.Xaml.Media.Media3D.ITransform3D

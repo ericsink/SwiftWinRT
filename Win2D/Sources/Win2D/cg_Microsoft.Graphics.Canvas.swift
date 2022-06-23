@@ -3,10 +3,11 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
-
+import WindowsSdk;
 import WindowsApp;
+
 extension ClosedGenerics {
 // closed interface type
 public class IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision

@@ -3,7 +3,7 @@
 
 
 import CWinRT;
-import CWindowsApp;
+import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
 
 extension Windows.System.Profile {

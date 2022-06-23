@@ -1,5 +1,6 @@
 
 import WinRT
+import WindowsSdk
 import WindowsApp
 
 typealias GradientStop = Microsoft.UI.Xaml.Media.GradientStop

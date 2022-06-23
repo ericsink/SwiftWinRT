@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: BSD-3
 
 import WinRT
+import WindowsSdk
 import WindowsApp
 
 typealias PowerManager = Microsoft.Windows.System.Power.PowerManager
