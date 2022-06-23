@@ -145,7 +145,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
         //print("try to get bundle path_indir: \(bundle_path_bg_indir)")
         //print("resourcePath: \(Bundle.main.resourcePath)")
 
-        let uri_bg_img = try Windows.Foundation.Uri(uri: "ms-appx:///SwiftWinRT_MazeGame.resources/gamegrid.png")
+        let uri_bg_img = try Windows.Foundation.Uri(uri: "ms-appx:///Samples_MazeGame.resources/gamegrid.png")
         let bg_img = try Microsoft.UI.Xaml.Media.Imaging.BitmapImage(uriSource: uri_bg_img)
         let bg = try Microsoft.UI.Xaml.Media.ImageBrush()
         try bg.put_ImageSource(value: bg_img)
@@ -228,9 +228,9 @@ class MyApp : Microsoft.UI.Xaml.Application {
             (sender, args) in
 
             self._ifc = try canvas.QueryInterface()
-            // TODO having to include SwiftWinRT_MazeGame.resources here is dreadful,
+            // TODO having to include Samples_MazeGame.resources here is dreadful,
             // but Bundle.resourcePath seems to be wrong for SwiftPM on Windows
-            let path_resources = Bundle.main.resourcePath! + "/" + "SwiftWinRT_MazeGame.resources"
+            let path_resources = Bundle.main.resourcePath! + "/" + "Samples_MazeGame.resources"
             self._path_ninjacat = path_resources + "/" + "ninjacat.png"
             self._path_dino = path_resources + "/" + "dino.png"
 
