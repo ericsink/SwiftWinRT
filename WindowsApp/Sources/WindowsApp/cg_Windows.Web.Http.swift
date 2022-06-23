@@ -258,7 +258,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
 }
 }
-extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress : Future {
+extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
@@ -270,7 +270,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
             _ = SetEvent(self.hEvent)
         }
 }
-        internal func get() throws -> Optional<Windows.Web.Http.IHttpResponseMessage> {
+        public func get() throws -> Optional<Windows.Web.Http.IHttpResponseMessage> {
             let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
             if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
             let event: HANDLE =

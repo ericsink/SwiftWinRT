@@ -89,7 +89,7 @@ open class Application
         guard let pThis = $0, let presult = $1 else {
             return E_INVALIDARG
         }
-        presult.pointee = CWinRT.TrustLevel.FullTrust;
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
         return S_OK;
     },
     OnLaunched: {
@@ -1305,7 +1305,7 @@ open class FrameworkElement
         guard let pThis = $0, let presult = $1 else {
             return E_INVALIDARG
         }
-        presult.pointee = CWinRT.TrustLevel.FullTrust;
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
         return S_OK;
     },
     MeasureOverride: {
@@ -9636,7 +9636,7 @@ open class UIElement
         guard let pThis = $0, let presult = $1 else {
             return E_INVALIDARG
         }
-        presult.pointee = CWinRT.TrustLevel.FullTrust;
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
         return S_OK;
     },
     OnCreateAutomationPeer: {

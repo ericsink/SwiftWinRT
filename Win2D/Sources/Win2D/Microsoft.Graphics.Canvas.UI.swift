@@ -6,6 +6,7 @@ import CWinRT;
 import CWindowsApp;
 @_spi(IUnknown) import WinRT;
 
+import WindowsApp;
 extension Microsoft.Graphics.Canvas.UI {
 // type: Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs
 // runtime class

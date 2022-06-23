@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
     }
 }
 }
-extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument : Future {
+extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
@@ -154,7 +154,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocum
             _ = SetEvent(self.hEvent)
         }
 }
-        internal func get() throws -> Optional<Windows.Data.Xml.Dom.IXmlDocument> {
+        public func get() throws -> Optional<Windows.Data.Xml.Dom.IXmlDocument> {
             let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
             if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
             let event: HANDLE =

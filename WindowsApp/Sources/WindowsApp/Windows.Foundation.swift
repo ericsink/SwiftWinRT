@@ -7,26 +7,7 @@ import CWindowsApp;
 @_spi(IUnknown) import WinRT;
 
 
-internal protocol Future {
-  associatedtype ValueType
-  func get() throws -> ValueType
-}
-
-extension TrustLevel {
-  public static var BaseTrust: TrustLevel {
-    TrustLevel(rawValue: 0)
-  }
-
-  public static var PartialTrust: TrustLevel {
-    TrustLevel(rawValue: 1)
-  }
-
-  public static var FullTrust: TrustLevel {
-    TrustLevel(rawValue: 2)
-  }
-}
-
-extension Windows.Foundation.IAsyncAction: Future {
+extension Windows.Foundation.IAsyncAction: WinRT.Future {
   private final class CompletedHandler: Windows.Foundation.AsyncActionCompletedHandler {
     private var hEvent: HANDLE
 
@@ -41,7 +22,7 @@ extension Windows.Foundation.IAsyncAction: Future {
     }
   }
 
-  internal func get() throws -> Void {
+  public func get() throws -> Void {
     let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
     if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
       let event: HANDLE =
@@ -307,7 +288,7 @@ open class AsyncAction
         guard let pThis = $0, let presult = $1 else {
             return E_INVALIDARG
         }
-        presult.pointee = CWinRT.TrustLevel.FullTrust;
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
         return S_OK;
     },
     get_Id: {
@@ -463,7 +444,7 @@ open class AsyncAction
         guard let pThis = $0, let presult = $1 else {
             return E_INVALIDARG
         }
-        presult.pointee = CWinRT.TrustLevel.FullTrust;
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
         return S_OK;
     },
     put_Completed: {

@@ -16,6 +16,7 @@ let SwiftWinRT = Package(
   ],
     dependencies : [
     .package(name: "WindowsApp", path: "../WindowsApp"),
+    .package(name: "Win2D", path: "../Win2D"),
     ],
   targets: [
     .target(name: "Power", dependencies: ["WindowsApp"],
@@ -40,7 +41,7 @@ let SwiftWinRT = Package(
               .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "Canvas", dependencies: ["WindowsApp"],
+    .target(name: "Canvas", dependencies: ["WindowsApp", "Win2D"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -51,7 +52,7 @@ let SwiftWinRT = Package(
               .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "MazeGame", dependencies: ["WindowsApp"],
+    .target(name: "MazeGame", dependencies: ["WindowsApp", "Win2D"],
             resources: [
                 .process("Assets")
             ],

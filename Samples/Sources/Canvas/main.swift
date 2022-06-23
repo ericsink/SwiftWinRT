@@ -1,6 +1,7 @@
 
 import WinRT
 import WindowsApp
+import Win2D
 
 class MyApp : Microsoft.UI.Xaml.Application {
     override func OnLaunched(args : Optional<Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 

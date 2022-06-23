@@ -6,6 +6,7 @@ import CWinRT;
 import CWindowsApp;
 @_spi(IUnknown) import WinRT;
 
+import WindowsApp;
 extension Microsoft.Graphics.Canvas {
 // type: Microsoft.Graphics.Canvas.CanvasActiveLayer
 // runtime class

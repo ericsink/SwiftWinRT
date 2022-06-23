@@ -6,7 +6,16 @@ import CWinRT;
 import CWindowsApp;
 @_spi(IUnknown) import WinRT;
 
+import WindowsApp;
 extension ClosedGenerics {
+// closed interface type
+public class IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8bff1f50, Data2: 0xaef3, Data3 : 0x558e, Data4 : (0xa0, 0x2b, 0x58, 0x9b, 0x6c, 0x0c, 0xfe, 0xa8)) }
+// method not needed: get_Value
+} // IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision
 // closed interface type
 public class IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
     :
@@ -142,7 +151,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
     }
 }
 }
-extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap : Future {
+extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
@@ -154,7 +163,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanv
             _ = SetEvent(self.hEvent)
         }
 }
-        internal func get() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
+        public func get() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
             let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
             if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
             let event: HANDLE =

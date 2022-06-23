@@ -2,6 +2,7 @@
 import Foundation
 import WinRT
 import WindowsApp
+import Win2D
 
 public typealias DispatcherTimer = Microsoft.UI.Xaml.DispatcherTimer
 public typealias CanvasControl = Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl

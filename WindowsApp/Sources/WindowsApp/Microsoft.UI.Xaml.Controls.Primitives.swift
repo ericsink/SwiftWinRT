@@ -1037,7 +1037,7 @@ open class RangeBase
         guard let pThis = $0, let presult = $1 else {
             return E_INVALIDARG
         }
-        presult.pointee = CWinRT.TrustLevel.FullTrust;
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
         return S_OK;
     },
     OnMinimumChanged: {
