@@ -9,9 +9,9 @@ cp ../bridge/pkg/sourcegear-bridge-WinRT/Sources/WinRT/*.swift ./WindowsSdk/Sour
 # TODO this is cheesy
 
 rm ./WindowsApp/Sources/WindowsApp/generated/*.swift
-mv ./WindowsSdk/Sources/WindowsSdk/Microsoft.*.swift ./WindowsApp/Sources/WindowsApp/generated
-mv ./WindowsSdk/Sources/WindowsSdk/cg_Microsoft.*.swift ./WindowsApp/Sources/WindowsApp/generated
+mv ./WindowsSdk/Sources/WindowsSdk/generated/Microsoft.*.swift ./WindowsApp/Sources/WindowsApp/generated
+mv ./WindowsSdk/Sources/WindowsSdk/generated/cg_Microsoft.*.swift ./WindowsApp/Sources/WindowsApp/generated
 
 rm ./Win2D/Sources/Win2D/generated/*.swift
-mv ./WindowsApp/Sources/WindowsApp/*Graphics.Canvas* ./Win2D/Sources/Win2D/generated
+mv ./WindowsApp/Sources/WindowsApp/generated/*Graphics.Canvas* ./Win2D/Sources/Win2D/generated
 
