@@ -156,58 +156,6 @@ class MyApp : Microsoft.UI.Xaml.Application {
         let canvas = try Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl()
         try grid.Children!.Append(value: canvas)
 
-        // an implementation of IAsyncAction that we can pass
-        // to TrackAsyncAction for CreateResources.
-        // TODO this doesn't belong here.  once we get the
-        // async capture problem worked out, move it to WinRT lib.
-        class MyAsyncAction : Windows.Foundation.AsyncAction {
-            private var _status : Windows.Foundation.AsyncStatus = .Started
-            override func get_Id() throws -> Swift.UInt32 {
-                //print("MyActionAction.get_Id")
-                return 0;
-            }
-            override func get_Status() throws -> Windows.Foundation.AsyncStatus {
-                //print("MyActionAction.get_Status")
-                return _status
-            }
-            override func get_ErrorCode() throws -> Windows.Foundation.HResult {
-                //print("MyActionAction.get_ErrorCode")
-                return Windows.Foundation.HResult(Value: 0);
-            }
-            override func Cancel() throws -> Void {
-                //print("MyActionAction.Cancel")
-            }
-            override func Close() throws -> Void {
-                //print("MyActionAction.Close")
-                // TODO what calls this?
-                _del = nil
-            }
-            private var _del : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> = nil
-            override func put_Completed(handler : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler>) throws -> Void {
-                //print("MyActionAction.put_Completed")
-                _del = handler;
-            }
-            override func get_Completed() throws -> Optional<Windows.Foundation.AsyncActionCompletedHandler> {
-                //print("MyActionAction.get_Completed")
-                return nil;
-            }
-            override func GetResults() throws -> Void {
-                //print("MyActionAction.GetResults")
-            }
-            internal func Done_Succeeded() throws -> Void {
-                _status = .Completed
-                if let d = _del {
-                    try d.Invoke(asyncInfo: self.to_IAsyncAction(), asyncStatus: _status)
-                }
-            }
-            internal func Done_Failed() throws -> Void {
-                _status = .Error
-                if let d = _del {
-                    try d.Invoke(asyncInfo: self.to_IAsyncAction(), asyncStatus: _status)
-                }
-            }
-        }
-
         func MakeAsyncAction(c : @escaping () async throws -> Void) throws -> Windows.Foundation.IAsyncAction
         {
             let action_done = try MyAsyncAction()
