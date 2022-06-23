@@ -4,60 +4,32 @@ Notes on this fork
 
 This fork of compnerd/SwiftWinRT contains some work
 I've been doing toward automatic generation of the
-Swift bindings for WinRT.
+Swift bindings for WinRT.  It has changed very
+significantly from the original repo.
 
-As much as possible, I have tried to avoid modifying
-the contents of this repo.  Quite a few things are
-unchanged.
+There are three SwiftPM packages here:
 
-The `ABI` directory from the original repo has been
-removed, as all that stuff has been replaced with 
-automatically generated code.
+WinRT contains the core definitions for supporting
+IInspectable and such.  It is largely similar to
+the original repo.
 
-The generated Swift code files are in `Sources/WinRT/sg`.
-And the generated C header file is at
-`Sources/CWinRT/include/W.h`.
+WindowsAppp contains automatically generated bindings
+for a bunch of WinRT things in the Windows SDK, and
+the Windows App SDK, and Win2D.  It needs to split
+up further, but for now, it's all there.  Oh, and also,
+it's not complete.
 
-This fork does not rely on the `__x__ABI` prefixed
-symbols from the WinRT header files.  I started
-with that approach, but I was constantly running
-into problems where things were missing from
-the headers, so I decided to
-generate my own header file.
-The symbols defined there use a different
-prefix, to avoid confusion.
-
-Currently, the generated code is still only a small
-portion of the WinRT API surface.  The main problem
-is that if I generate everything, `swift build` has a
-lot of
-problems because of the sheer size.  The resulting library exceeds the limit of 65535 exported
-symbols.  Also, if I break things up into one file per
-namespace, the resulting `swiftc` command line exceeds
-the 32KB limit, and if I put everything in one file,
-the build takes a lot longer.
-
-So as a possibly-temporary solution, my generator has
-an ugly config setting where I can declare which methods
-I want to call, and the generator outputs only those
-methods plus anything they require.  Currently,
-the config is setup to include everything needed by
-the 3 samples here, and not much else.  A method
-which is excluded by this "pre-linker" gets a
-comment in the Swift code plus a placeholder
-pointer in the interface vtable.
-
-The code generator currently cannot handle anything
-with generic/parameterized types.
-
-The original repo says it requires a pre-release
-toolchain, but some time has passed, and I'm using
-the Swift 5.6.1 release without problems.
+Samples contains several sample apps.
 
 The two original samples are still here and have been
 modified a little bit to build with the new bindings.
 
 A new toast notification sample has been added.
+
+The most complete sample is MazeGame, a Swift port
+of the Win2DMazeGame sample from Microsoft.  It
+uses WinUI3 for a simple GUI shell and Win2D for
+the game itself.
 
 The generator itself is not here, and is (currently)
 not open souce, sorry.  It's part of a larger project
