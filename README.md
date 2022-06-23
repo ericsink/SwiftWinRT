@@ -7,22 +7,25 @@ I've been doing toward automatic generation of the
 Swift bindings for WinRT.  It has changed very
 significantly from the original repo.
 
-There are four SwiftPM packages here:
+There are five SwiftPM packages here:
 
-WinRT contains the core definitions for supporting
+- WinRT contains the core definitions for supporting
 IInspectable and such.  It is largely similar to
 the original repo.
 
-WindowsApp contains automatically generated bindings
-for a bunch of WinRT things in the Windows SDK, and
-the Windows App SDK.  It needs to be split
-up further, but for now, it is what it is.  Oh, and also,
-it's not complete.
+- WindowsSdk contains automatically generated bindings
+for a bunch of WinRT things in the Windows SDK.
+It's not complete.
 
-Win2D contains automatically generated bindings
+- WindowsApp contains automatically generated bindings
+for a bunch of WinRT things in the Windows App SDK.
+Oh, and also, it's not complete.
+
+- Win2D contains automatically generated bindings
 for Win2D.
+Oh, and also, it's not complete.
 
-Samples contains several sample apps.
+- Samples contains several sample apps.
 
 ----
 
