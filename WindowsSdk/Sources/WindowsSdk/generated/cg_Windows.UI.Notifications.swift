@@ -89,7 +89,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs {
@@ -194,7 +194,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<WinRT.Object>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable {
@@ -299,7 +299,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs {
@@ -415,7 +415,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotifier>, args : Optional<Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs {

@@ -1332,7 +1332,7 @@ open class RangeBaseValueChangedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler {

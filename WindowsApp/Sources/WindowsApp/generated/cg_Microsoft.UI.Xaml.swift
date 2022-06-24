@@ -90,7 +90,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActiv
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs {
@@ -195,7 +195,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEvent
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs {
@@ -300,7 +300,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeC
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs {
@@ -405,7 +405,7 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs {
@@ -510,7 +510,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs {
@@ -615,7 +615,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs {
@@ -720,7 +720,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs {
@@ -825,7 +825,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs {
@@ -930,7 +930,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs {
@@ -1035,7 +1035,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs {
@@ -1140,7 +1140,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs {
@@ -1245,7 +1245,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs {
@@ -1350,7 +1350,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs {
@@ -1455,7 +1455,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs {
@@ -1560,7 +1560,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs {
@@ -1665,7 +1665,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs {
@@ -1770,7 +1770,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs {
@@ -2037,7 +2037,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.FrameworkElement>, args : Optional<Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs {
@@ -2142,7 +2142,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspec
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Object>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable {
@@ -2247,7 +2247,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.FrameworkElement>, args : Optional<Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs {

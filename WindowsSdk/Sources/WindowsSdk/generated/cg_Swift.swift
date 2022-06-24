@@ -160,7 +160,7 @@ open class AsyncOperationCompletedHandler_1_boolean
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1_boolean>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1_boolean {
@@ -341,7 +341,7 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, progressInfo)
+            return try cb(asyncInfo, progressInfo)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
@@ -446,7 +446,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
@@ -551,7 +551,7 @@ open class EventHandler_1_IInspectable
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.IEventHandler_1_IInspectable {

@@ -521,7 +521,7 @@ open class ContextMenuOpeningEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler {

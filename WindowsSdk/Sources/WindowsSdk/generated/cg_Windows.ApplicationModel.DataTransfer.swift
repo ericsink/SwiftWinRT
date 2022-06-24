@@ -132,7 +132,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {

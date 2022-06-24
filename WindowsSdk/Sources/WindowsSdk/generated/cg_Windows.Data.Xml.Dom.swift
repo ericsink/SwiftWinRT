@@ -132,7 +132,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {

@@ -376,7 +376,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBlock>, args : Optional<Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs {
@@ -481,7 +481,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.Control>, args : Optional<Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs {
@@ -586,7 +586,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.Control>, args : Optional<Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs {

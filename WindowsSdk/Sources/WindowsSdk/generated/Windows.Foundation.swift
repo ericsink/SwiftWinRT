@@ -125,7 +125,7 @@ open class AsyncActionCompletedHandler
 
     open func Invoke(asyncInfo : Optional<Windows.Foundation.IAsyncAction>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> Windows.Foundation.IAsyncActionCompletedHandler {

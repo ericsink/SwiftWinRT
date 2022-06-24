@@ -133,7 +133,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPowe
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode {

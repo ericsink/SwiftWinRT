@@ -427,7 +427,7 @@ open class DownloadProgressEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler {

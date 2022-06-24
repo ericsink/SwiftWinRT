@@ -91,7 +91,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, args : Optional<Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, args)
+            return try cb(sender, args)
         }
     }
     public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs {

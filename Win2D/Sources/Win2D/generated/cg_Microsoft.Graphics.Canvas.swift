@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap {

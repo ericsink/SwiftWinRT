@@ -187,7 +187,7 @@ open class DoubleTappedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler {
@@ -343,7 +343,7 @@ open class HoldingEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IHoldingEventHandler {
@@ -986,7 +986,7 @@ open class KeyEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IKeyEventHandler {
@@ -1251,7 +1251,7 @@ open class ManipulationCompletedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler {
@@ -1384,7 +1384,7 @@ open class ManipulationDeltaEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler {
@@ -1519,7 +1519,7 @@ open class ManipulationInertiaStartingEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler {
@@ -1661,7 +1661,7 @@ open class ManipulationStartedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler {
@@ -1797,7 +1797,7 @@ open class ManipulationStartingEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler {
@@ -1966,7 +1966,7 @@ open class PointerEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IPointerEventHandler {
@@ -2112,7 +2112,7 @@ open class RightTappedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.IRightTappedEventHandler {
@@ -2241,7 +2241,7 @@ open class TappedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.Input.ITappedEventHandler {

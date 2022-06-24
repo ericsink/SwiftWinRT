@@ -315,7 +315,7 @@ open class ApplicationInitializationCallback
 
     open func Invoke(p : Optional<Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void {
         if let cb = _cb {
-            try cb(p)
+            return try cb(p)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IApplicationInitializationCallback {
@@ -678,7 +678,7 @@ open class DependencyPropertyChangedCallback
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.DependencyObject>, dp : Optional<Microsoft.UI.Xaml.DependencyProperty>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, dp)
+            return try cb(sender, dp)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IDependencyPropertyChangedCallback {
@@ -802,7 +802,7 @@ open class DependencyPropertyChangedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler {
@@ -997,7 +997,7 @@ open class DragEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IDragEventHandler {
@@ -1188,7 +1188,7 @@ open class ExceptionRoutedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IExceptionRoutedEventHandler {
@@ -9244,7 +9244,7 @@ open class RoutedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IRoutedEventHandler {
@@ -9391,7 +9391,7 @@ open class SizeChangedEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.ISizeChangedEventHandler {
@@ -11861,7 +11861,7 @@ open class UnhandledExceptionEventHandler
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
         if let cb = _cb {
-            try cb(sender, e)
+            return try cb(sender, e)
         }
     }
     public func Interface() -> Microsoft.UI.Xaml.IUnhandledExceptionEventHandler {

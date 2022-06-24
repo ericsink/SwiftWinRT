@@ -157,7 +157,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, progressInfo)
+            return try cb(asyncInfo, progressInfo)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
@@ -262,7 +262,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
         if let cb = _cb {
-            try cb(asyncInfo, asyncStatus)
+            return try cb(asyncInfo, asyncStatus)
         }
     }
     public func Interface() -> ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
