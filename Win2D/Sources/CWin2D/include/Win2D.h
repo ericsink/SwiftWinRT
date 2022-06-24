@@ -8978,8 +8978,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransitionVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
 {
@@ -9037,8 +9037,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIXamlLight** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLightVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight
 {
@@ -9079,8 +9079,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis, _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAcceleratorVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator
 {
@@ -9384,8 +9384,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis, _q_CMicrosoft_CUI_CXaml_CITriggerBase* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CITriggerBase* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CITriggerBase* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CITriggerBase** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CITriggerBase** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBaseVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase
 {
@@ -9459,8 +9459,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CIUIElement** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CUIElement
 {
@@ -9501,8 +9501,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinitionVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition
 {
@@ -9543,8 +9543,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition
 {
@@ -9585,8 +9585,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CIInline** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline
 {
@@ -9627,8 +9627,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CDocuments_CITextHighlighter** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighterVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter
 {
@@ -9697,8 +9697,8 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
     HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop* value);
     HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis);
     HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis);
-    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop* items, UINT32* __pret);
-    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop* items);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop* pThis, UINT32 itemsLength, _q_CMicrosoft_CUI_CXaml_CMedia_CIGradientStop** items);
 } _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStopVtbl;
 struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop
 {

@@ -232,11 +232,11 @@ public class InlineCollection
         let _ifc : ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline = try _self.QueryInterface();
         return try _ifc.Clear();
     }
-    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws -> Swift.UInt32 {
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>>>) throws -> Swift.UInt32 {
         let _ifc : ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline = try _self.QueryInterface();
         return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
     }
-    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>) throws -> Void {
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CDocuments_CIInline>>>>) throws -> Void {
         let _ifc : ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline = try _self.QueryInterface();
         return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
     }

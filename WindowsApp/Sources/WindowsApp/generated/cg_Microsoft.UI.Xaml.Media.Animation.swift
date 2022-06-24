@@ -115,23 +115,23 @@ public class IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition
         try self._n_Clear();
     }
     // System.UInt32 GetMany(System.UInt32, Microsoft.UI.Xaml.Media.Animation.Transition[])
-    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
         }
     }
-    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws -> Swift.UInt32 {
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>>>) throws -> Swift.UInt32 {
         var __result : UINT32 = 0;
         try self._n_GetMany(startIndex, itemsLength, items, &__result);
         return __result;
     }
     // void ReplaceAll(Microsoft.UI.Xaml.Media.Animation.Transition[])
-    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws {
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>>>) throws {
         return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition.self) { pThis in
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
         }
     }
-    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>) throws -> Void {
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition>>>>) throws -> Void {
         try self._n_ReplaceAll(itemsLength, items);
     }
     public var Size : Swift.UInt32 {
