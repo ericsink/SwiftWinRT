@@ -3,8 +3,8 @@
 
 
 import CWinRT;
-import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import CWindowsSdk;
 
 extension Windows.Web.Http.Filters {
 // type: Windows.Web.Http.Filters.IHttpFilter

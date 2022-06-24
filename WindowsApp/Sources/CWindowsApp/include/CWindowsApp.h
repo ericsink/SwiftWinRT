@@ -31,6 +31,7 @@ STDAPI MddBootstrapInitialize2(
     );
 
 // the following file contains stuff that is automatically generated from winmd
+#include <WindowsSdk.h>
 #include <WindowsApp.h>
 
 #pragma comment(lib, "runtimeobject")

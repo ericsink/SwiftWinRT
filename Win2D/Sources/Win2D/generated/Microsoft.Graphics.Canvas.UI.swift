@@ -3,10 +3,12 @@
 
 
 import CWinRT;
-import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import CWin2D;
 import WindowsSdk;
+import CWindowsSdk;
 import WindowsApp;
+import CWindowsApp;
 
 extension Microsoft.Graphics.Canvas.UI {
 // type: Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs

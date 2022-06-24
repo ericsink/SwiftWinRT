@@ -3,8 +3,8 @@
 
 
 import CWinRT;
-import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import CWindowsSdk;
 
 extension Windows.Foundation.Numerics {
 // type: Windows.Foundation.Numerics.Matrix3x2

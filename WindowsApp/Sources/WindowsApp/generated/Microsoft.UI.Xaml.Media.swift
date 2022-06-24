@@ -3,9 +3,10 @@
 
 
 import CWinRT;
-import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import CWindowsApp;
 import WindowsSdk;
+import CWindowsSdk;
 
 extension Microsoft.UI.Xaml.Media {
 // type: Microsoft.UI.Xaml.Media.AlignmentX

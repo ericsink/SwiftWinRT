@@ -3,8 +3,8 @@
 
 
 import CWinRT;
-import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import CWindowsSdk;
 
 extension Windows.ApplicationModel.DataTransfer {
 // type: Windows.ApplicationModel.DataTransfer.DataPackageOperation

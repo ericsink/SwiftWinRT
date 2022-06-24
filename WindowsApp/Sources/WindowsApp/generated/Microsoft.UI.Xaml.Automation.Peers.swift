@@ -3,9 +3,10 @@
 
 
 import CWinRT;
-import CWindowsSdk;
 @_spi(IUnknown) import WinRT;
+import CWindowsApp;
 import WindowsSdk;
+import CWindowsSdk;
 
 extension Microsoft.UI.Xaml.Automation.Peers {
 // type: Microsoft.UI.Xaml.Automation.Peers.AutomationPeer
