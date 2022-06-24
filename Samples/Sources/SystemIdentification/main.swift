@@ -14,9 +14,9 @@ class WinRTDemo {
     let id = try buffer.Id!
 
     let hex: String =
-        try Windows.Security.Cryptography.CryptographicBuffer.EncodeToHexString(buffer: id)
+        try Windows.Security.Cryptography.CryptographicBuffer.EncodeToHexString(buffer: id)!
     let base64: String =
-        try Windows.Security.Cryptography.CryptographicBuffer.EncodeToBase64String(buffer: id)
+        try Windows.Security.Cryptography.CryptographicBuffer.EncodeToBase64String(buffer: id)!
 
     print("System ID for Publisher [hex]: \(hex)")
     print("System ID for Publisher [base64]: \(base64)")
