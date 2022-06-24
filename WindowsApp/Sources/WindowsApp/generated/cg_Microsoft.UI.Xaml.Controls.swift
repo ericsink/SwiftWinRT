@@ -385,6 +385,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBlock>, args : Optional<Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
     :
@@ -476,6 +490,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.Control>, args : Optional<Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
     :
@@ -565,6 +593,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.Control>, args : Optional<Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs {
+        return _self
     }
 }
 }

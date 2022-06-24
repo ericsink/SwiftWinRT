@@ -98,6 +98,20 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
     :
@@ -189,6 +203,20 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<WinRT.Object>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.GetInterface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
     :
@@ -278,6 +306,20 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs {
+        return _self
     }
 }
 // closed interface type
@@ -380,6 +422,20 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotifier>, args : Optional<Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs {
+        return _self
     }
 }
 }

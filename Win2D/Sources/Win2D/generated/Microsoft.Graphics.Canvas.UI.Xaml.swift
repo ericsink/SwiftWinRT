@@ -100,43 +100,43 @@ public class CanvasControl
     public var ClearColor : Windows.UI.Color {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try _ifc.ClearColor;
+        return try _ifc.ClearColor;
         }
     }
     public var CustomDevice : Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.CustomDevice);
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.CustomDevice);
         }
     }
     public var DpiScale : Swift.Float {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try _ifc.DpiScale;
+        return try _ifc.DpiScale;
         }
     }
     public var ForceSoftwareRenderer : boolean {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try _ifc.ForceSoftwareRenderer;
+        return try _ifc.ForceSoftwareRenderer;
         }
     }
     public var ReadyToDraw : boolean {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try _ifc.ReadyToDraw;
+        return try _ifc.ReadyToDraw;
         }
     }
     public var Size : Windows.Foundation.Size {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try _ifc.Size;
+        return try _ifc.Size;
         }
     }
     public var UseSharedDevice : boolean {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-            return try _ifc.UseSharedDevice;
+        return try _ifc.UseSharedDevice;
         }
     }
     public func get_Dpi() throws -> Swift.Float {
@@ -154,7 +154,7 @@ public class CanvasControl
     public var Dpi : Swift.Float {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi = try _self.QueryInterface();
-            return try _ifc.Dpi;
+        return try _ifc.Dpi;
         }
     }
     public func get_Device() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
@@ -164,7 +164,7 @@ public class CanvasControl
     public var Device : Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreator = try _self.QueryInterface();
-            return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.Device);
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.Device);
         }
     }
 }
@@ -193,7 +193,7 @@ public class CanvasDrawEventArgs
     public var DrawingSession : Optional<Microsoft.Graphics.Canvas.CanvasDrawingSession> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasDrawEventArgs = try _self.QueryInterface();
-            return try Microsoft.Graphics.Canvas.CanvasDrawingSession(plok: _ifc.DrawingSession);
+        return try Microsoft.Graphics.Canvas.CanvasDrawingSession(plok: _ifc.DrawingSession);
         }
     }
 }

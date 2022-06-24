@@ -142,6 +142,20 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPowe
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CWindows_CSystem_CPower_CEffectivePowerMode {

@@ -50,7 +50,7 @@ public class CanvasCreateResourcesEventArgs
     public var Reason : Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesReason {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.UI.ICanvasCreateResourcesEventArgs = try _self.QueryInterface();
-            return try _ifc.Reason;
+        return try _ifc.Reason;
         }
     }
 }

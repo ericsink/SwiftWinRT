@@ -1164,85 +1164,85 @@ public class XmlAttribute
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -1260,7 +1260,7 @@ public class XmlAttribute
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -1390,85 +1390,85 @@ public class XmlCDataSection
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -1486,7 +1486,7 @@ public class XmlCDataSection
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -1615,85 +1615,85 @@ public class XmlComment
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -1711,7 +1711,7 @@ public class XmlComment
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -1874,25 +1874,25 @@ public class XmlDocument
     public var Doctype : Optional<Windows.Data.Xml.Dom.XmlDocumentType> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocumentType(plok: _ifc.Doctype);
+        return try Windows.Data.Xml.Dom.XmlDocumentType(plok: _ifc.Doctype);
         }
     }
     public var DocumentElement : Optional<Windows.Data.Xml.Dom.XmlElement> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlElement(plok: _ifc.DocumentElement);
+        return try Windows.Data.Xml.Dom.XmlElement(plok: _ifc.DocumentElement);
         }
     }
     public var DocumentUri : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
-            return try _ifc.DocumentUri;
+        return try _ifc.DocumentUri;
         }
     }
     public var Implementation : Optional<Windows.Data.Xml.Dom.XmlDomImplementation> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDomImplementation(plok: _ifc.Implementation);
+        return try Windows.Data.Xml.Dom.XmlDomImplementation(plok: _ifc.Implementation);
         }
     }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
@@ -1990,85 +1990,85 @@ public class XmlDocument
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -2086,7 +2086,7 @@ public class XmlDocument
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -2243,85 +2243,85 @@ public class XmlDocumentFragment
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -2339,7 +2339,7 @@ public class XmlDocumentFragment
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -2470,85 +2470,85 @@ public class XmlDocumentType
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -2566,7 +2566,7 @@ public class XmlDocumentType
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -2722,85 +2722,85 @@ public class XmlElement
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -2818,7 +2818,7 @@ public class XmlElement
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -2946,85 +2946,85 @@ public class XmlEntityReference
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -3042,7 +3042,7 @@ public class XmlEntityReference
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -3243,85 +3243,85 @@ public class XmlProcessingInstruction
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -3339,7 +3339,7 @@ public class XmlProcessingInstruction
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
@@ -3469,85 +3469,85 @@ public class XmlText
     public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
         }
     }
     public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
         }
     }
     public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.FirstChild;
+        return try _ifc.FirstChild;
         }
     }
     public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LastChild;
+        return try _ifc.LastChild;
         }
     }
     public var LocalName : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.LocalName;
+        return try _ifc.LocalName;
         }
     }
     public var NamespaceUri : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NamespaceUri;
+        return try _ifc.NamespaceUri;
         }
     }
     public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NextSibling;
+        return try _ifc.NextSibling;
         }
     }
     public var NodeName : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeName;
+        return try _ifc.NodeName;
         }
     }
     public var NodeType : Windows.Data.Xml.Dom.NodeType {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeType;
+        return try _ifc.NodeType;
         }
     }
     public var NodeValue : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.NodeValue;
+        return try _ifc.NodeValue;
         }
     }
     public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
         }
     }
     public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.ParentNode;
+        return try _ifc.ParentNode;
         }
     }
     public var Prefix : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.Prefix;
+        return try _ifc.Prefix;
         }
     }
     public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
-            return try _ifc.PreviousSibling;
+        return try _ifc.PreviousSibling;
         }
     }
     public func GetXml() throws -> Swift.String {
@@ -3565,7 +3565,7 @@ public class XmlText
     public var InnerText : Swift.String {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
-            return try _ifc.InnerText;
+        return try _ifc.InnerText;
         }
     }
     public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {

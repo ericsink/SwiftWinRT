@@ -141,6 +141,20 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {

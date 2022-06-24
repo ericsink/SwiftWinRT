@@ -317,139 +317,139 @@ public class CanvasTextFormat
     public var CustomTrimmingSign : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextInlineObject> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.CustomTrimmingSign;
+        return try _ifc.CustomTrimmingSign;
         }
     }
     public var Direction : Microsoft.Graphics.Canvas.Text.CanvasTextDirection {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.Direction;
+        return try _ifc.Direction;
         }
     }
     public var FontFamily : Swift.String {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.FontFamily;
+        return try _ifc.FontFamily;
         }
     }
     public var FontSize : Swift.Float {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.FontSize;
+        return try _ifc.FontSize;
         }
     }
     public var FontStretch : Windows.UI.Text.FontStretch {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.FontStretch;
+        return try _ifc.FontStretch;
         }
     }
     public var FontStyle : Windows.UI.Text.FontStyle {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.FontStyle;
+        return try _ifc.FontStyle;
         }
     }
     public var FontWeight : Windows.UI.Text.FontWeight {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.FontWeight;
+        return try _ifc.FontWeight;
         }
     }
     public var HorizontalAlignment : Microsoft.Graphics.Canvas.Text.CanvasHorizontalAlignment {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.HorizontalAlignment;
+        return try _ifc.HorizontalAlignment;
         }
     }
     public var IncrementalTabStop : Swift.Float {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.IncrementalTabStop;
+        return try _ifc.IncrementalTabStop;
         }
     }
     public var LastLineWrapping : boolean {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.LastLineWrapping;
+        return try _ifc.LastLineWrapping;
         }
     }
     public var LineSpacing : Swift.Float {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.LineSpacing;
+        return try _ifc.LineSpacing;
         }
     }
     public var LineSpacingBaseline : Swift.Float {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.LineSpacingBaseline;
+        return try _ifc.LineSpacingBaseline;
         }
     }
     public var LineSpacingMode : Microsoft.Graphics.Canvas.Text.CanvasLineSpacingMode {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.LineSpacingMode;
+        return try _ifc.LineSpacingMode;
         }
     }
     public var LocaleName : Swift.String {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.LocaleName;
+        return try _ifc.LocaleName;
         }
     }
     public var OpticalAlignment : Microsoft.Graphics.Canvas.Text.CanvasOpticalAlignment {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.OpticalAlignment;
+        return try _ifc.OpticalAlignment;
         }
     }
     public var Options : Microsoft.Graphics.Canvas.Text.CanvasDrawTextOptions {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.Options;
+        return try _ifc.Options;
         }
     }
     public var TrimmingDelimiter : Swift.String {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.TrimmingDelimiter;
+        return try _ifc.TrimmingDelimiter;
         }
     }
     public var TrimmingDelimiterCount : Swift.Int32 {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.TrimmingDelimiterCount;
+        return try _ifc.TrimmingDelimiterCount;
         }
     }
     public var TrimmingGranularity : Microsoft.Graphics.Canvas.Text.CanvasTextTrimmingGranularity {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.TrimmingGranularity;
+        return try _ifc.TrimmingGranularity;
         }
     }
     public var TrimmingSign : Microsoft.Graphics.Canvas.Text.CanvasTrimmingSign {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.TrimmingSign;
+        return try _ifc.TrimmingSign;
         }
     }
     public var VerticalAlignment : Microsoft.Graphics.Canvas.Text.CanvasVerticalAlignment {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.VerticalAlignment;
+        return try _ifc.VerticalAlignment;
         }
     }
     public var VerticalGlyphOrientation : Microsoft.Graphics.Canvas.Text.CanvasVerticalGlyphOrientation {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.VerticalGlyphOrientation;
+        return try _ifc.VerticalGlyphOrientation;
         }
     }
     public var WordWrapping : Microsoft.Graphics.Canvas.Text.CanvasWordWrapping {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
-            return try _ifc.WordWrapping;
+        return try _ifc.WordWrapping;
         }
     }
     public func Close() throws -> Void {

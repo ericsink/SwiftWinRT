@@ -123,13 +123,13 @@ public class SystemIdentificationInfo
     public var Id : Optional<Windows.Storage.Streams.IBuffer> {
         get throws {
         let _ifc : Windows.System.Profile.ISystemIdentificationInfo = try _self.QueryInterface();
-            return try _ifc.Id;
+        return try _ifc.Id;
         }
     }
     public var Source : Windows.System.Profile.SystemIdentificationSource {
         get throws {
         let _ifc : Windows.System.Profile.ISystemIdentificationInfo = try _self.QueryInterface();
-            return try _ifc.Source;
+        return try _ifc.Source;
         }
     }
 }

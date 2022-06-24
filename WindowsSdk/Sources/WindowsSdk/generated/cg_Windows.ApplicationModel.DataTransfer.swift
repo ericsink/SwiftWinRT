@@ -141,6 +141,20 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {

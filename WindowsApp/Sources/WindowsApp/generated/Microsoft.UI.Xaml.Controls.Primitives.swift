@@ -118,31 +118,31 @@ open class ButtonBase
     public var ClickMode : Microsoft.UI.Xaml.Controls.ClickMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-            return try _ifc.ClickMode;
+        return try _ifc.ClickMode;
         }
     }
     public var Command : Optional<Microsoft.UI.Xaml.Input.ICommand> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-            return try _ifc.Command;
+        return try _ifc.Command;
         }
     }
     public var CommandParameter : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-            return try _ifc.CommandParameter;
+        return try _ifc.CommandParameter;
         }
     }
     public var IsPointerOver : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-            return try _ifc.IsPointerOver;
+        return try _ifc.IsPointerOver;
         }
     }
     public var IsPressed : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-            return try _ifc.IsPressed;
+        return try _ifc.IsPressed;
         }
     }
 }
@@ -1198,31 +1198,31 @@ open class RangeBase
     public var LargeChange : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-            return try _ifc.LargeChange;
+        return try _ifc.LargeChange;
         }
     }
     public var Maximum : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-            return try _ifc.Maximum;
+        return try _ifc.Maximum;
         }
     }
     public var Minimum : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-            return try _ifc.Minimum;
+        return try _ifc.Minimum;
         }
     }
     public var SmallChange : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-            return try _ifc.SmallChange;
+        return try _ifc.SmallChange;
         }
     }
     public var Value : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-            return try _ifc.Value;
+        return try _ifc.Value;
         }
     }
     open func OnMinimumChanged(oldMinimum : Swift.Double, newMinimum : Swift.Double) throws -> Void {

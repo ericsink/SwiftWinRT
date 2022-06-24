@@ -1049,31 +1049,31 @@ public class KeyRoutedEventArgs
     public var DeviceId : Swift.String {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
-            return try _ifc.DeviceId;
+        return try _ifc.DeviceId;
         }
     }
     public var Handled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
-            return try _ifc.Handled;
+        return try _ifc.Handled;
         }
     }
     public var Key : Windows.System.VirtualKey {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
-            return try _ifc.Key;
+        return try _ifc.Key;
         }
     }
     public var KeyStatus : Windows.UI.Core.CorePhysicalKeyStatus {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
-            return try _ifc.KeyStatus;
+        return try _ifc.KeyStatus;
         }
     }
     public var OriginalKey : Windows.System.VirtualKey {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
-            return try _ifc.OriginalKey;
+        return try _ifc.OriginalKey;
         }
     }
 }

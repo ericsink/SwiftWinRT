@@ -195,49 +195,49 @@ public class BitmapImage
     public var AutoPlay : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.AutoPlay;
+        return try _ifc.AutoPlay;
         }
     }
     public var CreateOptions : Microsoft.UI.Xaml.Media.Imaging.BitmapCreateOptions {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.CreateOptions;
+        return try _ifc.CreateOptions;
         }
     }
     public var DecodePixelHeight : Swift.Int32 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.DecodePixelHeight;
+        return try _ifc.DecodePixelHeight;
         }
     }
     public var DecodePixelType : Microsoft.UI.Xaml.Media.Imaging.DecodePixelType {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.DecodePixelType;
+        return try _ifc.DecodePixelType;
         }
     }
     public var DecodePixelWidth : Swift.Int32 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.DecodePixelWidth;
+        return try _ifc.DecodePixelWidth;
         }
     }
     public var IsAnimatedBitmap : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.IsAnimatedBitmap;
+        return try _ifc.IsAnimatedBitmap;
         }
     }
     public var IsPlaying : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try _ifc.IsPlaying;
+        return try _ifc.IsPlaying;
         }
     }
     public var UriSource : Optional<Windows.Foundation.Uri> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-            return try Windows.Foundation.Uri(plok: _ifc.UriSource);
+        return try Windows.Foundation.Uri(plok: _ifc.UriSource);
         }
     }
 }
@@ -313,13 +313,13 @@ open class BitmapSource
     public var PixelHeight : Swift.Int32 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapSource = try _self.QueryInterface();
-            return try _ifc.PixelHeight;
+        return try _ifc.PixelHeight;
         }
     }
     public var PixelWidth : Swift.Int32 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapSource = try _self.QueryInterface();
-            return try _ifc.PixelWidth;
+        return try _ifc.PixelWidth;
         }
     }
 }

@@ -166,6 +166,20 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+{
+    private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress;
+    public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, progressInfo: progressInfo);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
+        return _self
+    }
+}
 // closed generic delegate type
 public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
     :
@@ -255,6 +269,20 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+{
+    private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress;
+    public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
+        return _self
     }
 }
 }

@@ -100,4 +100,18 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, args : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs {
+        return _self
+    }
+}
 }

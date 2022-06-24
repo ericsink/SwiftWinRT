@@ -188,19 +188,19 @@ open class Brush
     public var Opacity : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IBrush = try _self.QueryInterface();
-            return try _ifc.Opacity;
+        return try _ifc.Opacity;
         }
     }
     public var RelativeTransform : Optional<Microsoft.UI.Xaml.Media.Transform> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IBrush = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Transform(plok: _ifc.RelativeTransform);
+        return try Microsoft.UI.Xaml.Media.Transform(plok: _ifc.RelativeTransform);
         }
     }
     public var Transform : Optional<Microsoft.UI.Xaml.Media.Transform> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IBrush = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Transform(plok: _ifc.Transform);
+        return try Microsoft.UI.Xaml.Media.Transform(plok: _ifc.Transform);
         }
     }
     open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
@@ -410,25 +410,25 @@ open class GradientBrush
     public var ColorInterpolationMode : Microsoft.UI.Xaml.Media.ColorInterpolationMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IGradientBrush = try _self.QueryInterface();
-            return try _ifc.ColorInterpolationMode;
+        return try _ifc.ColorInterpolationMode;
         }
     }
     public var GradientStops : Optional<Microsoft.UI.Xaml.Media.GradientStopCollection> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IGradientBrush = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.GradientStopCollection(plok: _ifc.GradientStops);
+        return try Microsoft.UI.Xaml.Media.GradientStopCollection(plok: _ifc.GradientStops);
         }
     }
     public var MappingMode : Microsoft.UI.Xaml.Media.BrushMappingMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IGradientBrush = try _self.QueryInterface();
-            return try _ifc.MappingMode;
+        return try _ifc.MappingMode;
         }
     }
     public var SpreadMethod : Microsoft.UI.Xaml.Media.GradientSpreadMethod {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IGradientBrush = try _self.QueryInterface();
-            return try _ifc.SpreadMethod;
+        return try _ifc.SpreadMethod;
         }
     }
 }
@@ -495,13 +495,13 @@ public class GradientStop
     public var Color : Windows.UI.Color {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
-            return try _ifc.Color;
+        return try _ifc.Color;
         }
     }
     public var Offset : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IGradientStop = try _self.QueryInterface();
-            return try _ifc.Offset;
+        return try _ifc.Offset;
         }
     }
 }
@@ -574,7 +574,7 @@ public class GradientStopCollection
     public var Size : Swift.UInt32 {
         get throws {
         let _ifc : ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop = try _self.QueryInterface();
-            return try _ifc.Size;
+        return try _ifc.Size;
         }
     }
     // method not needed: First
@@ -1845,7 +1845,7 @@ public class ImageBrush
     public var ImageSource : Optional<Microsoft.UI.Xaml.Media.ImageSource> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.ImageSource(plok: _ifc.ImageSource);
+        return try Microsoft.UI.Xaml.Media.ImageSource(plok: _ifc.ImageSource);
         }
     }
 }
@@ -1929,13 +1929,13 @@ public class LinearGradientBrush
     public var EndPoint : Windows.Foundation.Point {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
-            return try _ifc.EndPoint;
+        return try _ifc.EndPoint;
         }
     }
     public var StartPoint : Windows.Foundation.Point {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.ILinearGradientBrush = try _self.QueryInterface();
-            return try _ifc.StartPoint;
+        return try _ifc.StartPoint;
         }
     }
 }
@@ -2046,7 +2046,7 @@ public class SolidColorBrush
     public var Color : Windows.UI.Color {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.ISolidColorBrush = try _self.QueryInterface();
-            return try _ifc.Color;
+        return try _ifc.Color;
         }
     }
 }
@@ -2133,19 +2133,19 @@ open class TileBrush
     public var AlignmentX : Microsoft.UI.Xaml.Media.AlignmentX {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
-            return try _ifc.AlignmentX;
+        return try _ifc.AlignmentX;
         }
     }
     public var AlignmentY : Microsoft.UI.Xaml.Media.AlignmentY {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
-            return try _ifc.AlignmentY;
+        return try _ifc.AlignmentY;
         }
     }
     public var Stretch : Microsoft.UI.Xaml.Media.Stretch {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Media.ITileBrush = try _self.QueryInterface();
-            return try _ifc.Stretch;
+        return try _ifc.Stretch;
         }
     }
 }

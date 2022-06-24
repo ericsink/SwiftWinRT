@@ -169,6 +169,20 @@ open class AsyncOperationCompletedHandler_1_boolean
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1_boolean
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1_boolean;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1_boolean?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1_boolean>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1_boolean {
+        return _self
+    }
+}
 // closed interface type
 public class IReference_1_UINT64
     :
@@ -336,6 +350,20 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationProgressHandler_2_HSTRING_UINT64
+{
+    private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2_HSTRING_UINT64;
+    public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2_HSTRING_UINT64?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, progressInfo: progressInfo);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationProgressHandler_2_HSTRING_UINT64 {
+        return _self
+    }
+}
 // closed generic delegate type
 public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     :
@@ -427,6 +455,20 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
+{
+    private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64;
+    public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
+        return _self
+    }
+}
 // closed generic delegate type
 public class IEventHandler_1_IInspectable
     :
@@ -516,6 +558,20 @@ open class EventHandler_1_IInspectable
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.IEventHandler_1_IInspectable(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_EventHandler_1_IInspectable
+{
+    private var _self : ClosedGenerics.IEventHandler_1_IInspectable;
+    public init(plok: ClosedGenerics.IEventHandler_1_IInspectable?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.GetInterface());
+    }
+    public func Interface() -> ClosedGenerics.IEventHandler_1_IInspectable {
+        return _self
     }
 }
 // closed interface type

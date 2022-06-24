@@ -998,13 +998,13 @@ public class ToastNotification
     public var Content : Optional<Windows.Data.Xml.Dom.XmlDocument> {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-            return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.Content);
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.Content);
         }
     }
     public var ExpirationTime : Optional<ClosedGenerics.IReference_1__q_CWindows_CFoundation_CDateTime> {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-            return try _ifc.ExpirationTime;
+        return try _ifc.ExpirationTime;
         }
     }
     public func put_Tag(value : Swift.String) throws -> Void {
@@ -1034,19 +1034,19 @@ public class ToastNotification
     public var Group : Swift.String {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
-            return try _ifc.Group;
+        return try _ifc.Group;
         }
     }
     public var SuppressPopup : boolean {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
-            return try _ifc.SuppressPopup;
+        return try _ifc.SuppressPopup;
         }
     }
     public var Tag : Swift.String {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
-            return try _ifc.Tag;
+        return try _ifc.Tag;
         }
     }
     public func get_NotificationMirroring() throws -> Windows.UI.Notifications.NotificationMirroring {
@@ -1068,13 +1068,13 @@ public class ToastNotification
     public var NotificationMirroring : Windows.UI.Notifications.NotificationMirroring {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification3 = try _self.QueryInterface();
-            return try _ifc.NotificationMirroring;
+        return try _ifc.NotificationMirroring;
         }
     }
     public var RemoteId : Swift.String {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification3 = try _self.QueryInterface();
-            return try _ifc.RemoteId;
+        return try _ifc.RemoteId;
         }
     }
     public func get_Data() throws -> Optional<Windows.UI.Notifications.NotificationData> {
@@ -1096,13 +1096,13 @@ public class ToastNotification
     public var Data : Optional<Windows.UI.Notifications.NotificationData> {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification4 = try _self.QueryInterface();
-            return try Windows.UI.Notifications.NotificationData(plok: _ifc.Data);
+        return try Windows.UI.Notifications.NotificationData(plok: _ifc.Data);
         }
     }
     public var Priority : Windows.UI.Notifications.ToastNotificationPriority {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification4 = try _self.QueryInterface();
-            return try _ifc.Priority;
+        return try _ifc.Priority;
         }
     }
     public func get_ExpiresOnReboot() throws -> boolean {
@@ -1116,7 +1116,7 @@ public class ToastNotification
     public var ExpiresOnReboot : boolean {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification6 = try _self.QueryInterface();
-            return try _ifc.ExpiresOnReboot;
+        return try _ifc.ExpiresOnReboot;
         }
     }
 }
@@ -1265,7 +1265,7 @@ public class ToastNotifier
     public var Setting : Windows.UI.Notifications.NotificationSetting {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotifier = try _self.QueryInterface();
-            return try _ifc.Setting;
+        return try _ifc.Setting;
         }
     }
     public func Update(data : Optional<Windows.UI.Notifications.NotificationData>, tag : Swift.String, group : Swift.String) throws -> Windows.UI.Notifications.NotificationUpdateResult {

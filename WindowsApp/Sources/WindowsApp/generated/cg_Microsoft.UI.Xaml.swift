@@ -99,6 +99,20 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActiv
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
     :
@@ -188,6 +202,20 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEvent
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -281,6 +309,20 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeC
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
     :
@@ -370,6 +412,20 @@ open class TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisib
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -463,6 +519,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs
     :
@@ -552,6 +622,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -645,6 +729,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs
     :
@@ -734,6 +832,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -827,6 +939,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs
     :
@@ -916,6 +1042,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -1009,6 +1149,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs
     :
@@ -1098,6 +1252,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -1191,6 +1359,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs
     :
@@ -1280,6 +1462,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs {
+        return _self
     }
 }
 // closed generic delegate type
@@ -1373,6 +1569,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs
     :
@@ -1464,6 +1674,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs
     :
@@ -1553,6 +1777,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.UIElement>, args : Optional<Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs {
+        return _self
     }
 }
 // closed interface type
@@ -1808,6 +2046,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.FrameworkElement>, args : Optional<Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable
     :
@@ -1899,6 +2151,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspec
         }
     }
 }
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.FrameworkElement>, args : Optional<WinRT.Object>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.GetInterface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs
     :
@@ -1988,6 +2254,20 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMic
         return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
             ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(UnsafeMutableRawPointer($0))
         }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.FrameworkElement>, args : Optional<Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs {
+        return _self
     }
 }
 // closed interface type

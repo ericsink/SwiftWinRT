@@ -115,7 +115,7 @@ public class HttpResponseMessage
     public var Content : Optional<Windows.Web.Http.IHttpContent> {
         get throws {
         let _ifc : Windows.Web.Http.IHttpResponseMessage = try _self.QueryInterface();
-            return try _ifc.Content;
+        return try _ifc.Content;
         }
     }
     public func Close() throws -> Void {

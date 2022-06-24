@@ -151,6 +151,20 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
         }
     }
 }
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap {

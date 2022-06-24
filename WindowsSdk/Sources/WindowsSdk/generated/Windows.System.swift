@@ -72,7 +72,7 @@ public class DispatcherQueueController
     public var DispatcherQueue : Optional<Windows.System.DispatcherQueue> {
         get throws {
         let _ifc : Windows.System.IDispatcherQueueController = try _self.QueryInterface();
-            return try Windows.System.DispatcherQueue(plok: _ifc.DispatcherQueue);
+        return try Windows.System.DispatcherQueue(plok: _ifc.DispatcherQueue);
         }
     }
 }

@@ -243,7 +243,7 @@ public class InlineCollection
     public var Size : Swift.UInt32 {
         get throws {
         let _ifc : ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline = try _self.QueryInterface();
-            return try _ifc.Size;
+        return try _ifc.Size;
         }
     }
     // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.Documents.Inline, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]

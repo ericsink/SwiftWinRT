@@ -197,31 +197,31 @@ open class Application
     public var DebugSettings : Optional<Microsoft.UI.Xaml.DebugSettings> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DebugSettings(plok: _ifc.DebugSettings);
+        return try Microsoft.UI.Xaml.DebugSettings(plok: _ifc.DebugSettings);
         }
     }
     public var FocusVisualKind : Microsoft.UI.Xaml.FocusVisualKind {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-            return try _ifc.FocusVisualKind;
+        return try _ifc.FocusVisualKind;
         }
     }
     public var HighContrastAdjustment : Microsoft.UI.Xaml.ApplicationHighContrastAdjustment {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-            return try _ifc.HighContrastAdjustment;
+        return try _ifc.HighContrastAdjustment;
         }
     }
     public var RequestedTheme : Microsoft.UI.Xaml.ApplicationTheme {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-            return try _ifc.RequestedTheme;
+        return try _ifc.RequestedTheme;
         }
     }
     public var Resources : Optional<Microsoft.UI.Xaml.ResourceDictionary> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
+        return try Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
     }
     open func OnLaunched(args : Optional<Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
@@ -568,13 +568,13 @@ open class DependencyObject
     public var Dispatcher : Optional<Windows.UI.Core.CoreDispatcher> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
-            return try Windows.UI.Core.CoreDispatcher(plok: _ifc.Dispatcher);
+        return try Windows.UI.Core.CoreDispatcher(plok: _ifc.Dispatcher);
         }
     }
     public var DispatcherQueue : Optional<Microsoft.UI.Dispatching.DispatcherQueue> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
-            return try Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.DispatcherQueue);
+        return try Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.DispatcherQueue);
         }
     }
 }
@@ -877,13 +877,13 @@ open class DispatcherTimer
     public var Interval : Windows.Foundation.TimeSpan {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
-            return try _ifc.Interval;
+        return try _ifc.Interval;
         }
     }
     public var IsEnabled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
-            return try _ifc.IsEnabled;
+        return try _ifc.IsEnabled;
         }
     }
 }
@@ -1903,187 +1903,187 @@ open class FrameworkElement
     public var ActualHeight : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.ActualHeight;
+        return try _ifc.ActualHeight;
         }
     }
     public var ActualTheme : Microsoft.UI.Xaml.ElementTheme {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.ActualTheme;
+        return try _ifc.ActualTheme;
         }
     }
     public var ActualWidth : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.ActualWidth;
+        return try _ifc.ActualWidth;
         }
     }
     public var AllowFocusOnInteraction : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.AllowFocusOnInteraction;
+        return try _ifc.AllowFocusOnInteraction;
         }
     }
     public var AllowFocusWhenDisabled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.AllowFocusWhenDisabled;
+        return try _ifc.AllowFocusWhenDisabled;
         }
     }
     public var BaseUri : Optional<Windows.Foundation.Uri> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Windows.Foundation.Uri(plok: _ifc.BaseUri);
+        return try Windows.Foundation.Uri(plok: _ifc.BaseUri);
         }
     }
     public var DataContext : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.DataContext;
+        return try _ifc.DataContext;
         }
     }
     public var FlowDirection : Microsoft.UI.Xaml.FlowDirection {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.FlowDirection;
+        return try _ifc.FlowDirection;
         }
     }
     public var FocusVisualMargin : Microsoft.UI.Xaml.Thickness {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.FocusVisualMargin;
+        return try _ifc.FocusVisualMargin;
         }
     }
     public var FocusVisualPrimaryBrush : Optional<Microsoft.UI.Xaml.Media.Brush> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.FocusVisualPrimaryBrush);
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.FocusVisualPrimaryBrush);
         }
     }
     public var FocusVisualPrimaryThickness : Microsoft.UI.Xaml.Thickness {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.FocusVisualPrimaryThickness;
+        return try _ifc.FocusVisualPrimaryThickness;
         }
     }
     public var FocusVisualSecondaryBrush : Optional<Microsoft.UI.Xaml.Media.Brush> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.FocusVisualSecondaryBrush);
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.FocusVisualSecondaryBrush);
         }
     }
     public var FocusVisualSecondaryThickness : Microsoft.UI.Xaml.Thickness {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.FocusVisualSecondaryThickness;
+        return try _ifc.FocusVisualSecondaryThickness;
         }
     }
     public var Height : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.Height;
+        return try _ifc.Height;
         }
     }
     public var HorizontalAlignment : Microsoft.UI.Xaml.HorizontalAlignment {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.HorizontalAlignment;
+        return try _ifc.HorizontalAlignment;
         }
     }
     public var IsLoaded : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.IsLoaded;
+        return try _ifc.IsLoaded;
         }
     }
     public var Language : Swift.String {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.Language;
+        return try _ifc.Language;
         }
     }
     public var Margin : Microsoft.UI.Xaml.Thickness {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.Margin;
+        return try _ifc.Margin;
         }
     }
     public var MaxHeight : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.MaxHeight;
+        return try _ifc.MaxHeight;
         }
     }
     public var MaxWidth : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.MaxWidth;
+        return try _ifc.MaxWidth;
         }
     }
     public var MinHeight : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.MinHeight;
+        return try _ifc.MinHeight;
         }
     }
     public var MinWidth : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.MinWidth;
+        return try _ifc.MinWidth;
         }
     }
     public var Name : Swift.String {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.Name;
+        return try _ifc.Name;
         }
     }
     public var Parent : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.Parent);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.Parent);
         }
     }
     public var RequestedTheme : Microsoft.UI.Xaml.ElementTheme {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.RequestedTheme;
+        return try _ifc.RequestedTheme;
         }
     }
     public var Resources : Optional<Microsoft.UI.Xaml.ResourceDictionary> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
+        return try Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
     }
     public var Style : Optional<Microsoft.UI.Xaml.Style> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Style(plok: _ifc.Style);
+        return try Microsoft.UI.Xaml.Style(plok: _ifc.Style);
         }
     }
     public var Tag : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.Tag;
+        return try _ifc.Tag;
         }
     }
     public var Triggers : Optional<Microsoft.UI.Xaml.TriggerCollection> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.TriggerCollection(plok: _ifc.Triggers);
+        return try Microsoft.UI.Xaml.TriggerCollection(plok: _ifc.Triggers);
         }
     }
     public var VerticalAlignment : Microsoft.UI.Xaml.VerticalAlignment {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.VerticalAlignment;
+        return try _ifc.VerticalAlignment;
         }
     }
     public var Width : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-            return try _ifc.Width;
+        return try _ifc.Width;
         }
     }
     public func InvalidateViewport() throws -> Void {
@@ -9156,7 +9156,7 @@ open class RoutedEventArgs
     public var OriginalSource : Optional<WinRT.IInspectable> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IRoutedEventArgs = try _self.QueryInterface();
-            return try _ifc.OriginalSource;
+        return try _ifc.OriginalSource;
         }
     }
 }
@@ -9549,7 +9549,7 @@ public class TriggerCollection
     public var Size : Swift.UInt32 {
         get throws {
         let _ifc : ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CTriggerBase = try _self.QueryInterface();
-            return try _ifc.Size;
+        return try _ifc.Size;
         }
     }
     // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.TriggerBase, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
@@ -11323,397 +11323,397 @@ open class UIElement
     public var AccessKey : Swift.String {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.AccessKey;
+        return try _ifc.AccessKey;
         }
     }
     public var AccessKeyScopeOwner : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.AccessKeyScopeOwner);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.AccessKeyScopeOwner);
         }
     }
     public var ActualOffset : Windows.Foundation.Numerics.Vector3 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.ActualOffset;
+        return try _ifc.ActualOffset;
         }
     }
     public var ActualSize : Windows.Foundation.Numerics.Vector2 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.ActualSize;
+        return try _ifc.ActualSize;
         }
     }
     public var AllowDrop : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.AllowDrop;
+        return try _ifc.AllowDrop;
         }
     }
     public var CacheMode : Optional<Microsoft.UI.Xaml.Media.CacheMode> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.CacheMode(plok: _ifc.CacheMode);
+        return try Microsoft.UI.Xaml.Media.CacheMode(plok: _ifc.CacheMode);
         }
     }
     public var CanBeScrollAnchor : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.CanBeScrollAnchor;
+        return try _ifc.CanBeScrollAnchor;
         }
     }
     public var CanDrag : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.CanDrag;
+        return try _ifc.CanDrag;
         }
     }
     public var CenterPoint : Windows.Foundation.Numerics.Vector3 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.CenterPoint;
+        return try _ifc.CenterPoint;
         }
     }
     public var Clip : Optional<Microsoft.UI.Xaml.Media.RectangleGeometry> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.RectangleGeometry(plok: _ifc.Clip);
+        return try Microsoft.UI.Xaml.Media.RectangleGeometry(plok: _ifc.Clip);
         }
     }
     public var CompositeMode : Microsoft.UI.Xaml.Media.ElementCompositeMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.CompositeMode;
+        return try _ifc.CompositeMode;
         }
     }
     public var ContextFlyout : Optional<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.ContextFlyout);
+        return try Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.ContextFlyout);
         }
     }
     public var DesiredSize : Windows.Foundation.Size {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.DesiredSize;
+        return try _ifc.DesiredSize;
         }
     }
     public var ExitDisplayModeOnAccessKeyInvoked : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.ExitDisplayModeOnAccessKeyInvoked;
+        return try _ifc.ExitDisplayModeOnAccessKeyInvoked;
         }
     }
     public var FocusState : Microsoft.UI.Xaml.FocusState {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.FocusState;
+        return try _ifc.FocusState;
         }
     }
     public var HighContrastAdjustment : Microsoft.UI.Xaml.ElementHighContrastAdjustment {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.HighContrastAdjustment;
+        return try _ifc.HighContrastAdjustment;
         }
     }
     public var IsAccessKeyScope : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsAccessKeyScope;
+        return try _ifc.IsAccessKeyScope;
         }
     }
     public var IsDoubleTapEnabled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsDoubleTapEnabled;
+        return try _ifc.IsDoubleTapEnabled;
         }
     }
     public var IsHitTestVisible : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsHitTestVisible;
+        return try _ifc.IsHitTestVisible;
         }
     }
     public var IsHoldingEnabled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsHoldingEnabled;
+        return try _ifc.IsHoldingEnabled;
         }
     }
     public var IsRightTapEnabled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsRightTapEnabled;
+        return try _ifc.IsRightTapEnabled;
         }
     }
     public var IsTabStop : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsTabStop;
+        return try _ifc.IsTabStop;
         }
     }
     public var IsTapEnabled : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.IsTapEnabled;
+        return try _ifc.IsTapEnabled;
         }
     }
     public var KeyTipHorizontalOffset : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.KeyTipHorizontalOffset;
+        return try _ifc.KeyTipHorizontalOffset;
         }
     }
     public var KeyTipPlacementMode : Microsoft.UI.Xaml.Input.KeyTipPlacementMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.KeyTipPlacementMode;
+        return try _ifc.KeyTipPlacementMode;
         }
     }
     public var KeyTipTarget : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.KeyTipTarget);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.KeyTipTarget);
         }
     }
     public var KeyTipVerticalOffset : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.KeyTipVerticalOffset;
+        return try _ifc.KeyTipVerticalOffset;
         }
     }
     public var KeyboardAcceleratorPlacementMode : Microsoft.UI.Xaml.Input.KeyboardAcceleratorPlacementMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.KeyboardAcceleratorPlacementMode;
+        return try _ifc.KeyboardAcceleratorPlacementMode;
         }
     }
     public var KeyboardAcceleratorPlacementTarget : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.KeyboardAcceleratorPlacementTarget);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.KeyboardAcceleratorPlacementTarget);
         }
     }
     public var KeyboardAccelerators : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CInput_CKeyboardAccelerator> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.KeyboardAccelerators;
+        return try _ifc.KeyboardAccelerators;
         }
     }
     public var Lights : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CXamlLight> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.Lights;
+        return try _ifc.Lights;
         }
     }
     public var ManipulationMode : Microsoft.UI.Xaml.Input.ManipulationModes {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.ManipulationMode;
+        return try _ifc.ManipulationMode;
         }
     }
     public var Opacity : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.Opacity;
+        return try _ifc.Opacity;
         }
     }
     public var OpacityTransition : Optional<Microsoft.UI.Xaml.ScalarTransition> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.ScalarTransition(plok: _ifc.OpacityTransition);
+        return try Microsoft.UI.Xaml.ScalarTransition(plok: _ifc.OpacityTransition);
         }
     }
     public var PointerCaptures : Optional<ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CInput_CPointer> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.PointerCaptures;
+        return try _ifc.PointerCaptures;
         }
     }
     public var Projection : Optional<Microsoft.UI.Xaml.Media.Projection> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Projection(plok: _ifc.Projection);
+        return try Microsoft.UI.Xaml.Media.Projection(plok: _ifc.Projection);
         }
     }
     public var RasterizationScale : Swift.Double {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.RasterizationScale;
+        return try _ifc.RasterizationScale;
         }
     }
     public var RenderSize : Windows.Foundation.Size {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.RenderSize;
+        return try _ifc.RenderSize;
         }
     }
     public var RenderTransform : Optional<Microsoft.UI.Xaml.Media.Transform> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Transform(plok: _ifc.RenderTransform);
+        return try Microsoft.UI.Xaml.Media.Transform(plok: _ifc.RenderTransform);
         }
     }
     public var RenderTransformOrigin : Windows.Foundation.Point {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.RenderTransformOrigin;
+        return try _ifc.RenderTransformOrigin;
         }
     }
     public var Rotation : Swift.Float {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.Rotation;
+        return try _ifc.Rotation;
         }
     }
     public var RotationAxis : Windows.Foundation.Numerics.Vector3 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.RotationAxis;
+        return try _ifc.RotationAxis;
         }
     }
     public var RotationTransition : Optional<Microsoft.UI.Xaml.ScalarTransition> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.ScalarTransition(plok: _ifc.RotationTransition);
+        return try Microsoft.UI.Xaml.ScalarTransition(plok: _ifc.RotationTransition);
         }
     }
     public var Scale : Windows.Foundation.Numerics.Vector3 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.Scale;
+        return try _ifc.Scale;
         }
     }
     public var ScaleTransition : Optional<Microsoft.UI.Xaml.Vector3Transition> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Vector3Transition(plok: _ifc.ScaleTransition);
+        return try Microsoft.UI.Xaml.Vector3Transition(plok: _ifc.ScaleTransition);
         }
     }
     public var Shadow : Optional<Microsoft.UI.Xaml.Media.Shadow> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Shadow(plok: _ifc.Shadow);
+        return try Microsoft.UI.Xaml.Media.Shadow(plok: _ifc.Shadow);
         }
     }
     public var TabFocusNavigation : Microsoft.UI.Xaml.Input.KeyboardNavigationMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.TabFocusNavigation;
+        return try _ifc.TabFocusNavigation;
         }
     }
     public var TabIndex : Swift.Int32 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.TabIndex;
+        return try _ifc.TabIndex;
         }
     }
     public var Transform3D : Optional<Microsoft.UI.Xaml.Media.Media3D.Transform3D> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Media3D.Transform3D(plok: _ifc.Transform3D);
+        return try Microsoft.UI.Xaml.Media.Media3D.Transform3D(plok: _ifc.Transform3D);
         }
     }
     public var TransformMatrix : Windows.Foundation.Numerics.Matrix4x4 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.TransformMatrix;
+        return try _ifc.TransformMatrix;
         }
     }
     public var Transitions : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.Transitions);
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.Transitions);
         }
     }
     public var Translation : Windows.Foundation.Numerics.Vector3 {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.Translation;
+        return try _ifc.Translation;
         }
     }
     public var TranslationTransition : Optional<Microsoft.UI.Xaml.Vector3Transition> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.Vector3Transition(plok: _ifc.TranslationTransition);
+        return try Microsoft.UI.Xaml.Vector3Transition(plok: _ifc.TranslationTransition);
         }
     }
     public var UseLayoutRounding : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.UseLayoutRounding;
+        return try _ifc.UseLayoutRounding;
         }
     }
     public var UseSystemFocusVisuals : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.UseSystemFocusVisuals;
+        return try _ifc.UseSystemFocusVisuals;
         }
     }
     public var Visibility : Microsoft.UI.Xaml.Visibility {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.Visibility;
+        return try _ifc.Visibility;
         }
     }
     public var XYFocusDown : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusDown);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusDown);
         }
     }
     public var XYFocusDownNavigationStrategy : Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.XYFocusDownNavigationStrategy;
+        return try _ifc.XYFocusDownNavigationStrategy;
         }
     }
     public var XYFocusKeyboardNavigation : Microsoft.UI.Xaml.Input.XYFocusKeyboardNavigationMode {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.XYFocusKeyboardNavigation;
+        return try _ifc.XYFocusKeyboardNavigation;
         }
     }
     public var XYFocusLeft : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusLeft);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusLeft);
         }
     }
     public var XYFocusLeftNavigationStrategy : Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.XYFocusLeftNavigationStrategy;
+        return try _ifc.XYFocusLeftNavigationStrategy;
         }
     }
     public var XYFocusRight : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusRight);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusRight);
         }
     }
     public var XYFocusRightNavigationStrategy : Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.XYFocusRightNavigationStrategy;
+        return try _ifc.XYFocusRightNavigationStrategy;
         }
     }
     public var XYFocusUp : Optional<Microsoft.UI.Xaml.DependencyObject> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusUp);
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.XYFocusUp);
         }
     }
     public var XYFocusUpNavigationStrategy : Microsoft.UI.Xaml.Input.XYFocusNavigationStrategy {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try _ifc.XYFocusUpNavigationStrategy;
+        return try _ifc.XYFocusUpNavigationStrategy;
         }
     }
     public var XamlRoot : Optional<Microsoft.UI.Xaml.XamlRoot> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.XamlRoot(plok: _ifc.XamlRoot);
+        return try Microsoft.UI.Xaml.XamlRoot(plok: _ifc.XamlRoot);
         }
     }
     public func get_ProtectedCursor() throws -> Optional<Microsoft.UI.Input.InputCursor> {
@@ -11727,7 +11727,7 @@ open class UIElement
     public var ProtectedCursor : Optional<Microsoft.UI.Input.InputCursor> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElementProtected = try _self.QueryInterface();
-            return try Microsoft.UI.Input.InputCursor(plok: _ifc.ProtectedCursor);
+        return try Microsoft.UI.Input.InputCursor(plok: _ifc.ProtectedCursor);
         }
     }
     open func OnCreateAutomationPeer() throws -> Optional<Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> {
@@ -12049,55 +12049,55 @@ open class Window
     public var Bounds : Windows.Foundation.Rect {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try _ifc.Bounds;
+        return try _ifc.Bounds;
         }
     }
     public var Compositor : Optional<Microsoft.UI.Composition.Compositor> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try Microsoft.UI.Composition.Compositor(plok: _ifc.Compositor);
+        return try Microsoft.UI.Composition.Compositor(plok: _ifc.Compositor);
         }
     }
     public var Content : Optional<Microsoft.UI.Xaml.UIElement> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try Microsoft.UI.Xaml.UIElement(plok: _ifc.Content);
+        return try Microsoft.UI.Xaml.UIElement(plok: _ifc.Content);
         }
     }
     public var CoreWindow : Optional<Windows.UI.Core.CoreWindow> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try Windows.UI.Core.CoreWindow(plok: _ifc.CoreWindow);
+        return try Windows.UI.Core.CoreWindow(plok: _ifc.CoreWindow);
         }
     }
     public var Dispatcher : Optional<Windows.UI.Core.CoreDispatcher> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try Windows.UI.Core.CoreDispatcher(plok: _ifc.Dispatcher);
+        return try Windows.UI.Core.CoreDispatcher(plok: _ifc.Dispatcher);
         }
     }
     public var DispatcherQueue : Optional<Microsoft.UI.Dispatching.DispatcherQueue> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.DispatcherQueue);
+        return try Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.DispatcherQueue);
         }
     }
     public var ExtendsContentIntoTitleBar : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try _ifc.ExtendsContentIntoTitleBar;
+        return try _ifc.ExtendsContentIntoTitleBar;
         }
     }
     public var Title : Swift.String {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try _ifc.Title;
+        return try _ifc.Title;
         }
     }
     public var Visible : boolean {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-            return try _ifc.Visible;
+        return try _ifc.Visible;
         }
     }
 }
