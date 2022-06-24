@@ -42,19 +42,19 @@ public class CryptographicBuffer
     public static func DecodeFromHexString(value : Swift.String) throws -> Optional<Windows.Storage.Streams.IBuffer> {
         return try CryptographicBufferStatics.DecodeFromHexString(value: value);
     }
-    public static func EncodeToHexString(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Swift.String {
+    public static func EncodeToHexString(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Swift.String> {
         return try CryptographicBufferStatics.EncodeToHexString(buffer: buffer);
     }
     public static func DecodeFromBase64String(value : Swift.String) throws -> Optional<Windows.Storage.Streams.IBuffer> {
         return try CryptographicBufferStatics.DecodeFromBase64String(value: value);
     }
-    public static func EncodeToBase64String(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Swift.String {
+    public static func EncodeToBase64String(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Swift.String> {
         return try CryptographicBufferStatics.EncodeToBase64String(buffer: buffer);
     }
     public static func ConvertStringToBinary(value : Swift.String, encoding : Windows.Security.Cryptography.BinaryStringEncoding) throws -> Optional<Windows.Storage.Streams.IBuffer> {
         return try CryptographicBufferStatics.ConvertStringToBinary(value: value, encoding: encoding);
     }
-    public static func ConvertBinaryToString(encoding : Windows.Security.Cryptography.BinaryStringEncoding, buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Swift.String {
+    public static func ConvertBinaryToString(encoding : Windows.Security.Cryptography.BinaryStringEncoding, buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Swift.String> {
         return try CryptographicBufferStatics.ConvertBinaryToString(encoding: encoding, buffer: buffer);
     }
 }

@@ -1042,11 +1042,11 @@ public class KeyRoutedEventArgs
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
         return try _ifc.get_OriginalKey();
     }
-    public func get_DeviceId() throws -> Swift.String {
+    public func get_DeviceId() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
         return try _ifc.get_DeviceId();
     }
-    public var DeviceId : Swift.String {
+    public var DeviceId : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs = try _self.QueryInterface();
         return try _ifc.DeviceId;

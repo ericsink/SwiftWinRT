@@ -1081,7 +1081,7 @@ public class XmlAttribute
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -1203,7 +1203,7 @@ public class XmlAttribute
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -1245,11 +1245,11 @@ public class XmlAttribute
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -1257,7 +1257,7 @@ public class XmlAttribute
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -1307,7 +1307,7 @@ public class XmlCDataSection
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -1429,7 +1429,7 @@ public class XmlCDataSection
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -1471,11 +1471,11 @@ public class XmlCDataSection
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -1483,7 +1483,7 @@ public class XmlCDataSection
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -1532,7 +1532,7 @@ public class XmlComment
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -1654,7 +1654,7 @@ public class XmlComment
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -1696,11 +1696,11 @@ public class XmlComment
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -1708,7 +1708,7 @@ public class XmlComment
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -1851,7 +1851,7 @@ public class XmlDocument
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
         return try Windows.Data.Xml.Dom.XmlCDataSection(plok: _ifc.CreateCDataSection(data: data));
     }
-    public func get_DocumentUri() throws -> Swift.String {
+    public func get_DocumentUri() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
         return try _ifc.get_DocumentUri();
     }
@@ -1883,7 +1883,7 @@ public class XmlDocument
         return try Windows.Data.Xml.Dom.XmlElement(plok: _ifc.DocumentElement);
         }
     }
-    public var DocumentUri : Swift.String {
+    public var DocumentUri : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlDocument = try _self.QueryInterface();
         return try _ifc.DocumentUri;
@@ -1907,7 +1907,7 @@ public class XmlDocument
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -2029,7 +2029,7 @@ public class XmlDocument
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -2071,11 +2071,11 @@ public class XmlDocument
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -2083,7 +2083,7 @@ public class XmlDocument
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -2160,7 +2160,7 @@ public class XmlDocumentFragment
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -2282,7 +2282,7 @@ public class XmlDocumentFragment
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -2324,11 +2324,11 @@ public class XmlDocumentFragment
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -2336,7 +2336,7 @@ public class XmlDocumentFragment
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -2387,7 +2387,7 @@ public class XmlDocumentType
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -2509,7 +2509,7 @@ public class XmlDocumentType
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -2551,11 +2551,11 @@ public class XmlDocumentType
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -2563,7 +2563,7 @@ public class XmlDocumentType
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -2639,7 +2639,7 @@ public class XmlElement
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -2761,7 +2761,7 @@ public class XmlElement
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -2803,11 +2803,11 @@ public class XmlElement
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -2815,7 +2815,7 @@ public class XmlElement
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -2863,7 +2863,7 @@ public class XmlEntityReference
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -2985,7 +2985,7 @@ public class XmlEntityReference
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -3027,11 +3027,11 @@ public class XmlEntityReference
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -3039,7 +3039,7 @@ public class XmlEntityReference
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -3160,7 +3160,7 @@ public class XmlProcessingInstruction
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -3282,7 +3282,7 @@ public class XmlProcessingInstruction
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -3324,11 +3324,11 @@ public class XmlProcessingInstruction
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -3336,7 +3336,7 @@ public class XmlProcessingInstruction
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;
@@ -3386,7 +3386,7 @@ public class XmlText
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeType();
     }
-    public func get_NodeName() throws -> Swift.String {
+    public func get_NodeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeName();
     }
@@ -3508,7 +3508,7 @@ public class XmlText
         return try _ifc.NextSibling;
         }
     }
-    public var NodeName : Swift.String {
+    public var NodeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.NodeName;
@@ -3550,11 +3550,11 @@ public class XmlText
         return try _ifc.PreviousSibling;
         }
     }
-    public func GetXml() throws -> Swift.String {
+    public func GetXml() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.GetXml();
     }
-    public func get_InnerText() throws -> Swift.String {
+    public func get_InnerText() throws -> Optional<Swift.String> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.get_InnerText();
     }
@@ -3562,7 +3562,7 @@ public class XmlText
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.put_InnerText(value: value);
     }
-    public var InnerText : Swift.String {
+    public var InnerText : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
         return try _ifc.InnerText;

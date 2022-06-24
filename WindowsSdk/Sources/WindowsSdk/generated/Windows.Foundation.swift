@@ -1126,45 +1126,45 @@ public class Uri
     public static var UriEscapeStatics : IUriEscapeStatics {
         _IUriEscapeStatics.x
     }
-    public static func UnescapeComponent(toUnescape : Swift.String) throws -> Swift.String {
+    public static func UnescapeComponent(toUnescape : Swift.String) throws -> Optional<Swift.String> {
         return try UriEscapeStatics.UnescapeComponent(toUnescape: toUnescape);
     }
-    public static func EscapeComponent(toEscape : Swift.String) throws -> Swift.String {
+    public static func EscapeComponent(toEscape : Swift.String) throws -> Optional<Swift.String> {
         return try UriEscapeStatics.EscapeComponent(toEscape: toEscape);
     }
-    public func get_AbsoluteUri() throws -> Swift.String {
+    public func get_AbsoluteUri() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_AbsoluteUri();
     }
-    public func get_DisplayUri() throws -> Swift.String {
+    public func get_DisplayUri() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_DisplayUri();
     }
-    public func get_Domain() throws -> Swift.String {
+    public func get_Domain() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Domain();
     }
-    public func get_Extension() throws -> Swift.String {
+    public func get_Extension() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Extension();
     }
-    public func get_Fragment() throws -> Swift.String {
+    public func get_Fragment() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Fragment();
     }
-    public func get_Host() throws -> Swift.String {
+    public func get_Host() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Host();
     }
-    public func get_Password() throws -> Swift.String {
+    public func get_Password() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Password();
     }
-    public func get_Path() throws -> Swift.String {
+    public func get_Path() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Path();
     }
-    public func get_Query() throws -> Swift.String {
+    public func get_Query() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_Query();
     }
@@ -1172,15 +1172,15 @@ public class Uri
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try Windows.Foundation.WwwFormUrlDecoder(plok: _ifc.get_QueryParsed());
     }
-    public func get_RawUri() throws -> Swift.String {
+    public func get_RawUri() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_RawUri();
     }
-    public func get_SchemeName() throws -> Swift.String {
+    public func get_SchemeName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_SchemeName();
     }
-    public func get_UserName() throws -> Swift.String {
+    public func get_UserName() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.get_UserName();
     }
@@ -1200,49 +1200,49 @@ public class Uri
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try Windows.Foundation.Uri(plok: _ifc.CombineUri(relativeUri: relativeUri));
     }
-    public var AbsoluteUri : Swift.String {
+    public var AbsoluteUri : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.AbsoluteUri;
         }
     }
-    public var DisplayUri : Swift.String {
+    public var DisplayUri : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.DisplayUri;
         }
     }
-    public var Domain : Swift.String {
+    public var Domain : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Domain;
         }
     }
-    public var Extension : Swift.String {
+    public var Extension : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Extension;
         }
     }
-    public var Fragment : Swift.String {
+    public var Fragment : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Fragment;
         }
     }
-    public var Host : Swift.String {
+    public var Host : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Host;
         }
     }
-    public var Password : Swift.String {
+    public var Password : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Password;
         }
     }
-    public var Path : Swift.String {
+    public var Path : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Path;
@@ -1254,7 +1254,7 @@ public class Uri
         return try _ifc.Port;
         }
     }
-    public var Query : Swift.String {
+    public var Query : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.Query;
@@ -1266,13 +1266,13 @@ public class Uri
         return try Windows.Foundation.WwwFormUrlDecoder(plok: _ifc.QueryParsed);
         }
     }
-    public var RawUri : Swift.String {
+    public var RawUri : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.RawUri;
         }
     }
-    public var SchemeName : Swift.String {
+    public var SchemeName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.SchemeName;
@@ -1284,33 +1284,33 @@ public class Uri
         return try _ifc.Suspicious;
         }
     }
-    public var UserName : Swift.String {
+    public var UserName : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClass = try _self.QueryInterface();
         return try _ifc.UserName;
         }
     }
-    public func get_AbsoluteCanonicalUri() throws -> Swift.String {
+    public func get_AbsoluteCanonicalUri() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
         return try _ifc.get_AbsoluteCanonicalUri();
     }
-    public func get_DisplayIri() throws -> Swift.String {
+    public func get_DisplayIri() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
         return try _ifc.get_DisplayIri();
     }
-    public var AbsoluteCanonicalUri : Swift.String {
+    public var AbsoluteCanonicalUri : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
         return try _ifc.AbsoluteCanonicalUri;
         }
     }
-    public var DisplayIri : Swift.String {
+    public var DisplayIri : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.Foundation.IUriRuntimeClassWithAbsoluteCanonicalUri = try _self.QueryInterface();
         return try _ifc.DisplayIri;
         }
     }
-    public func ToString() throws -> Swift.String {
+    public func ToString() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IStringable = try _self.QueryInterface();
         return try _ifc.ToString();
     }

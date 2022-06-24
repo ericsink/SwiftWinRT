@@ -138,7 +138,7 @@ public class CanvasTextFormat
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.put_Direction(value: value);
     }
-    public func get_FontFamily() throws -> Swift.String {
+    public func get_FontFamily() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.get_FontFamily();
     }
@@ -202,7 +202,7 @@ public class CanvasTextFormat
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.put_LineSpacingBaseline(value: value);
     }
-    public func get_LocaleName() throws -> Swift.String {
+    public func get_LocaleName() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.get_LocaleName();
     }
@@ -234,7 +234,7 @@ public class CanvasTextFormat
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.put_TrimmingGranularity(value: value);
     }
-    public func get_TrimmingDelimiter() throws -> Swift.String {
+    public func get_TrimmingDelimiter() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.get_TrimmingDelimiter();
     }
@@ -326,7 +326,7 @@ public class CanvasTextFormat
         return try _ifc.Direction;
         }
     }
-    public var FontFamily : Swift.String {
+    public var FontFamily : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.FontFamily;
@@ -392,7 +392,7 @@ public class CanvasTextFormat
         return try _ifc.LineSpacingMode;
         }
     }
-    public var LocaleName : Swift.String {
+    public var LocaleName : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.LocaleName;
@@ -410,7 +410,7 @@ public class CanvasTextFormat
         return try _ifc.Options;
         }
     }
-    public var TrimmingDelimiter : Swift.String {
+    public var TrimmingDelimiter : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.Graphics.Canvas.Text.ICanvasTextFormat = try _self.QueryInterface();
         return try _ifc.TrimmingDelimiter;

@@ -1624,7 +1624,7 @@ open class FrameworkElement
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.put_Tag(value: value!.GetInterface());
     }
-    public func get_Language() throws -> Swift.String {
+    public func get_Language() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.get_Language();
     }
@@ -1712,7 +1712,7 @@ open class FrameworkElement
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.put_Margin(value: value);
     }
-    public func get_Name() throws -> Swift.String {
+    public func get_Name() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.get_Name();
     }
@@ -1996,7 +1996,7 @@ open class FrameworkElement
         return try _ifc.IsLoaded;
         }
     }
-    public var Language : Swift.String {
+    public var Language : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.Language;
@@ -2032,7 +2032,7 @@ open class FrameworkElement
         return try _ifc.MinWidth;
         }
     }
-    public var Name : Swift.String {
+    public var Name : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
         return try _ifc.Name;
@@ -10627,7 +10627,7 @@ open class UIElement
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.put_AccessKeyScopeOwner(value: value!.Interface());
     }
-    public func get_AccessKey() throws -> Swift.String {
+    public func get_AccessKey() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.get_AccessKey();
     }
@@ -11320,7 +11320,7 @@ open class UIElement
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.StopAnimation(animation: animation);
     }
-    public var AccessKey : Swift.String {
+    public var AccessKey : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
         return try _ifc.AccessKey;
@@ -11986,7 +11986,7 @@ open class Window
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try Microsoft.UI.Dispatching.DispatcherQueue(plok: _ifc.get_DispatcherQueue());
     }
-    public func get_Title() throws -> Swift.String {
+    public func get_Title() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.get_Title();
     }
@@ -12088,7 +12088,7 @@ open class Window
         return try _ifc.ExtendsContentIntoTitleBar;
         }
     }
-    public var Title : Swift.String {
+    public var Title : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
         return try _ifc.Title;

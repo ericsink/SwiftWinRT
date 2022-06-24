@@ -8160,7 +8160,7 @@ public class TextBlock
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_TextAlignment(value: value);
     }
-    public func get_Text() throws -> Swift.String {
+    public func get_Text() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_Text();
     }
@@ -8204,7 +8204,7 @@ public class TextBlock
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.put_IsTextSelectionEnabled(value: value);
     }
-    public func get_SelectedText() throws -> Swift.String {
+    public func get_SelectedText() throws -> Optional<Swift.String> {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.get_SelectedText();
     }
@@ -8482,7 +8482,7 @@ public class TextBlock
         return try _ifc.Padding;
         }
     }
-    public var SelectedText : Swift.String {
+    public var SelectedText : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.SelectedText;
@@ -8512,7 +8512,7 @@ public class TextBlock
         return try Microsoft.UI.Xaml.Documents.TextPointer(plok: _ifc.SelectionStart);
         }
     }
-    public var Text : Swift.String {
+    public var Text : Optional<Swift.String> {
         get throws {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
         return try _ifc.Text;

@@ -1011,7 +1011,7 @@ public class ToastNotification
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.put_Tag(value: value);
     }
-    public func get_Tag() throws -> Swift.String {
+    public func get_Tag() throws -> Optional<Swift.String> {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.get_Tag();
     }
@@ -1019,7 +1019,7 @@ public class ToastNotification
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.put_Group(value: value);
     }
-    public func get_Group() throws -> Swift.String {
+    public func get_Group() throws -> Optional<Swift.String> {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.get_Group();
     }
@@ -1031,7 +1031,7 @@ public class ToastNotification
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.get_SuppressPopup();
     }
-    public var Group : Swift.String {
+    public var Group : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.Group;
@@ -1043,7 +1043,7 @@ public class ToastNotification
         return try _ifc.SuppressPopup;
         }
     }
-    public var Tag : Swift.String {
+    public var Tag : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification2 = try _self.QueryInterface();
         return try _ifc.Tag;
@@ -1057,7 +1057,7 @@ public class ToastNotification
         let _ifc : Windows.UI.Notifications.IToastNotification3 = try _self.QueryInterface();
         return try _ifc.put_NotificationMirroring(value: value);
     }
-    public func get_RemoteId() throws -> Swift.String {
+    public func get_RemoteId() throws -> Optional<Swift.String> {
         let _ifc : Windows.UI.Notifications.IToastNotification3 = try _self.QueryInterface();
         return try _ifc.get_RemoteId();
     }
@@ -1071,7 +1071,7 @@ public class ToastNotification
         return try _ifc.NotificationMirroring;
         }
     }
-    public var RemoteId : Swift.String {
+    public var RemoteId : Optional<Swift.String> {
         get throws {
         let _ifc : Windows.UI.Notifications.IToastNotification3 = try _self.QueryInterface();
         return try _ifc.RemoteId;

@@ -56,7 +56,7 @@ public class HttpClient
         let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
         return try _ifc.Close();
     }
-    public func ToString() throws -> Swift.String {
+    public func ToString() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IStringable = try _self.QueryInterface();
         return try _ifc.ToString();
     }
@@ -122,7 +122,7 @@ public class HttpResponseMessage
         let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
         return try _ifc.Close();
     }
-    public func ToString() throws -> Swift.String {
+    public func ToString() throws -> Optional<Swift.String> {
         let _ifc : Windows.Foundation.IStringable = try _self.QueryInterface();
         return try _ifc.ToString();
     }
