@@ -15,11 +15,13 @@ let SwiftWinRT = Package(
     .executable(name: "MazeGame", targets: ["MazeGame"]),
   ],
     dependencies : [
+    .package(name: "WinRT", path: "../WinRT"),
+    .package(name: "WindowsSdk", path: "../WindowsSdk"),
     .package(name: "WindowsApp", path: "../WindowsApp"),
     .package(name: "Win2D", path: "../Win2D"),
     ],
   targets: [
-    .target(name: "Power", dependencies: ["WindowsApp"],
+    .target(name: "Power", dependencies: ["WindowsApp", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -27,10 +29,10 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "XamlApp", dependencies: ["WindowsApp"],
+    .target(name: "XamlApp", 
+            dependencies: ["WindowsApp", "WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -38,10 +40,10 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "Canvas", dependencies: ["WindowsApp", "Win2D"],
+    .target(name: "Canvas", 
+            dependencies: ["WindowsApp", "Win2D", "WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -49,10 +51,9 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "MazeGame", dependencies: ["WindowsApp", "Win2D"],
+    .target(name: "MazeGame", dependencies: ["WindowsApp", "Win2D", "WindowsSdk", "WinRT"],
             resources: [
                 .process("Assets")
             ],
@@ -63,10 +64,9 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "HttpClient", dependencies: ["WindowsApp"],
+    .target(name: "HttpClient", dependencies: ["WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -74,10 +74,9 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "Toast", dependencies: ["WindowsApp"],
+    .target(name: "Toast", dependencies: ["WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -85,10 +84,9 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "DispatcherQueue", dependencies: ["WindowsApp"],
+    .target(name: "DispatcherQueue", dependencies: ["WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -96,10 +94,9 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
-    .target(name: "SystemIdentification", dependencies: ["WindowsApp"],
+    .target(name: "SystemIdentification", dependencies: ["WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],
@@ -107,7 +104,6 @@ let SwiftWinRT = Package(
               // need /MANIFEST:embed for bootstrap Windows App SDK to work
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
-              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
             ]
             ),
   ]

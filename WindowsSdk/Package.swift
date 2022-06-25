@@ -5,7 +5,7 @@ import PackageDescription
 let SwiftWinRT = Package(
   name: "WindowsSdk",
   products: [
-    .library(name: "WindowsSdk", targets: ["WindowsSdk"]),
+    .library(name: "WindowsSdk", type: .dynamic, targets: ["WindowsSdk"]),
   ],
     dependencies : [
     .package(name: "WinRT", path: "../WinRT"),

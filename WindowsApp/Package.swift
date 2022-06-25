@@ -5,7 +5,7 @@ import PackageDescription
 let SwiftWinRT = Package(
   name: "WindowsApp",
   products: [
-    .library(name: "WindowsApp", targets: ["WindowsApp"]),
+    .library(name: "WindowsApp", type: .dynamic, targets: ["WindowsApp"]),
   ],
     dependencies : [
     .package(name: "WinRT", path: "../WinRT"),
@@ -16,6 +16,10 @@ let SwiftWinRT = Package(
     .target(name: "WindowsApp", 
             dependencies: ["WinRT", "WindowsSdk", "CWindowsApp"],
             linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
               .linkedLibrary("Ole32"),
             ]
             ),

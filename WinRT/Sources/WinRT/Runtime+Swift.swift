@@ -3,13 +3,6 @@
 
 import CWinRT
 
-public func WindowsAppSdkBootstrapInitialize() throws {
-    // TODO this currently hard-codes the arguments, 
-    // specifying Windows App SDK 1.1, no version tag, no minVersion
-    // which is kinda wrong.
-    try CHECKED(MddBootstrapInitialize(0x00010001, nil, 0));
-}
-
 public func RoInitialize(_ type: RO_INIT_TYPE = RO_INIT_MULTITHREADED) throws {
   try CHECKED(RoInitialize(type))
 }

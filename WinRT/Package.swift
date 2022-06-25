@@ -5,7 +5,7 @@ import PackageDescription
 let SwiftWinRT = Package(
   name: "WinRT",
   products: [
-    .library(name: "WinRT", targets: ["WinRT"]),
+    .library(name: "WinRT", type: .dynamic, targets: ["WinRT"]),
   ],
   targets: [
     .target(name: "CWinRT"),
