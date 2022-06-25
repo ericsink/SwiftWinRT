@@ -5,13 +5,13 @@ cp ../bridge/pkg/sourcegear-bridge-WinRT/C/WinRT/include/Win2D.h ./Win2D/Sources
 
 rm ./WindowsSdk/Sources/WindowsSdk/generated/*.swift
 cp ../bridge/pkg/sourcegear-bridge-WinRT/Sources/WinRT/*.swift ./WindowsSdk/Sources/WindowsSdk/generated
+cp ../bridge/pkg/sourcegear-bridge-WinRT/Sources/WindowsSdk/*.swift ./WindowsSdk/Sources/WindowsSdk/generated
 
 # TODO this is cheesy
 
 rm ./WindowsApp/Sources/WindowsApp/generated/*.swift
-mv ./WindowsSdk/Sources/WindowsSdk/generated/Microsoft.*.swift ./WindowsApp/Sources/WindowsApp/generated
-mv ./WindowsSdk/Sources/WindowsSdk/generated/cg_Microsoft.*.swift ./WindowsApp/Sources/WindowsApp/generated
+cp ../bridge/pkg/sourcegear-bridge-WinRT/Sources/WindowsApp/*.swift ./WindowsApp/Sources/WindowsApp/generated
 
 rm ./Win2D/Sources/Win2D/generated/*.swift
-mv ./WindowsApp/Sources/WindowsApp/generated/*Graphics.Canvas* ./Win2D/Sources/Win2D/generated
+cp ../bridge/pkg/sourcegear-bridge-WinRT/Sources/Win2D/*.swift ./Win2D/Sources/Win2D/generated
 
