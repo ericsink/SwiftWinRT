@@ -950,6 +950,461 @@ public class IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProf
 // method not needed: IndexOf
 // method not needed: GetMany
 } // IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+// closed interface type
+public class IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x94fc6211, Data2: 0x4702, Data3 : 0x5d24, Data4 : (0x81, 0xbf, 0x17, 0x0c, 0xa7, 0x81, 0x89, 0x95)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Connectivity.ConnectionSession>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Connectivity.ConnectionSession> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(consuming: __result);
+    }
+    // Windows.Networking.Connectivity.ConnectionSession GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIConnectionSession>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Optional<Windows.Networking.Connectivity.IConnectionSession> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIConnectionSession>> = nil;
+        try self._n_GetResults(&__result);
+        return Windows.Networking.Connectivity.IConnectionSession(consuming: __result);
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3bc680d8, Data2: 0x9e83, Data3 : 0x5086, Data4 : (0x8f, 0x49, 0x7a, 0x29, 0xbf, 0xb1, 0xc7, 0xe1)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ConnectionSession>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSessionVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession {
+        return _self
+    }
+}
+// closed interface type
+public class IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41286159, Data2: 0xb91d, Data3 : 0x5736, Data4 : (0xad, 0x8b, 0xe1, 0x6f, 0xcf, 0x8a, 0xce, 0xd0)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier
+// closed interface type
+public class IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1e7651f6, Data2: 0x6562, Data3 : 0x59c7, Data4 : (0x9a, 0xf3, 0x87, 0x56, 0x63, 0x6e, 0xee, 0xe2)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Connectivity.ProxyConfiguration>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Networking.Connectivity.ProxyConfiguration> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(consuming: __result);
+    }
+    // Windows.Networking.Connectivity.ProxyConfiguration GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIProxyConfiguration>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Optional<Windows.Networking.Connectivity.IProxyConfiguration> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIProxyConfiguration>> = nil;
+        try self._n_GetResults(&__result);
+        return Windows.Networking.Connectivity.IProxyConfiguration(consuming: __result);
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x035b2567, Data2: 0xefb9, Data3 : 0x5bc3, Data4 : (0xb6, 0x09, 0xf9, 0xa8, 0xc2, 0x0b, 0x70, 0x01)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ProxyConfiguration>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfigurationVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration {
+        return _self
+    }
+}
+// closed interface type
+public class IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0023294, Data2: 0xc2cb, Data3 : 0x52f0, Data4 : (0xa9, 0xf4, 0x21, 0x91, 0x60, 0x32, 0xf6, 0x9d)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile>>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile>> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(consuming: __result);
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>> = nil;
+        try self._n_GetResults(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(consuming: __result);
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc523d9dd, Data2: 0x4ea6, Data3 : 0x5115, Data4 : (0x80, 0xe9, 0x4e, 0x7a, 0xd4, 0x76, 0x97, 0x98)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile>>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfileVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CNetworkUsage : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CNetworkUsage {
@@ -1116,6 +1571,93 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
             let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Optional<Windows.Networking.Connectivity.IConnectionSession> {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Optional<Windows.Networking.Connectivity.IProxyConfiguration> {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

@@ -328,6 +328,25 @@ public class IVector_1__q_CWindows_CNetworking_CHostName
         }
     }
 } // IVector_1__q_CWindows_CNetworking_CHostName
+// closed interface type
+public class IIterable_1__q_CWindows_CNetworking_CEndpointPair
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd7ec83c4, Data2: 0xa17b, Data3 : 0x51bf, Data4 : (0x89, 0x97, 0xaa, 0x33, 0xb9, 0x10, 0x2d, 0xc9)) }
+// method not needed: First
+} // IIterable_1__q_CWindows_CNetworking_CEndpointPair
+// closed interface type
+public class IIterator_1__q_CWindows_CNetworking_CEndpointPair
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc899ff9f, Data2: 0xe6f5, Data3 : 0x5673, Data4 : (0x81, 0x0c, 0x04, 0xe2, 0xff, 0x98, 0x70, 0x4f)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__q_CWindows_CNetworking_CEndpointPair
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {

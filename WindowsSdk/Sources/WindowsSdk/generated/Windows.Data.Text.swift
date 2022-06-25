@@ -798,6 +798,205 @@ open class ITextReverseConversionGeneratorFactory
 } // ITextReverseConversionGeneratorFactory
 
 
+// type: Windows.Data.Text.IUnicodeCharactersStatics
+// interface type
+open class IUnicodeCharactersStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x97909e87, Data2: 0x9291, Data3 : 0x4f91, Data4 : (0xb6, 0xc8, 0xb6, 0xe3, 0x59, 0xd7, 0xa7, 0xfb)) }
+    // System.UInt32 GetCodepointFromSurrogatePair(System.UInt32, System.UInt32)
+    private func _n_GetCodepointFromSurrogatePair(_ highSurrogate : UINT32, _ lowSurrogate : UINT32, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetCodepointFromSurrogatePair(pThis, highSurrogate, lowSurrogate, __presult))
+        }
+    }
+    public func GetCodepointFromSurrogatePair(highSurrogate : Swift.UInt32, lowSurrogate : Swift.UInt32) throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_GetCodepointFromSurrogatePair(highSurrogate, lowSurrogate, &__result);
+        return __result;
+    }
+    // void GetSurrogatePairFromCodepoint(System.UInt32, ref System.Char, ref System.Char)
+    private func _n_GetSurrogatePairFromCodepoint(_ codepoint : UINT32, _ highSurrogate : UnsafeMutablePointer<WCHAR>, _ lowSurrogate : UnsafeMutablePointer<WCHAR>) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetSurrogatePairFromCodepoint(pThis, codepoint, highSurrogate, lowSurrogate))
+        }
+    }
+    public func GetSurrogatePairFromCodepoint(codepoint : Swift.UInt32, highSurrogate : inout WCHAR, lowSurrogate : inout WCHAR) throws -> Void {
+            var _tmp_out_highSurrogate: WCHAR = 0;
+            var _tmp_out_lowSurrogate: WCHAR = 0;
+        try self._n_GetSurrogatePairFromCodepoint(codepoint, &_tmp_out_highSurrogate, &_tmp_out_lowSurrogate);
+            highSurrogate = _tmp_out_highSurrogate;
+            lowSurrogate = _tmp_out_lowSurrogate;
+    }
+    // bool IsHighSurrogate(System.UInt32)
+    private func _n_IsHighSurrogate(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsHighSurrogate(pThis, codepoint, __presult))
+        }
+    }
+    public func IsHighSurrogate(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsHighSurrogate(codepoint, &__result);
+        return __result;
+    }
+    // bool IsLowSurrogate(System.UInt32)
+    private func _n_IsLowSurrogate(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsLowSurrogate(pThis, codepoint, __presult))
+        }
+    }
+    public func IsLowSurrogate(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsLowSurrogate(codepoint, &__result);
+        return __result;
+    }
+    // bool IsSupplementary(System.UInt32)
+    private func _n_IsSupplementary(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsSupplementary(pThis, codepoint, __presult))
+        }
+    }
+    public func IsSupplementary(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsSupplementary(codepoint, &__result);
+        return __result;
+    }
+    // bool IsNoncharacter(System.UInt32)
+    private func _n_IsNoncharacter(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsNoncharacter(pThis, codepoint, __presult))
+        }
+    }
+    public func IsNoncharacter(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsNoncharacter(codepoint, &__result);
+        return __result;
+    }
+    // bool IsWhitespace(System.UInt32)
+    private func _n_IsWhitespace(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsWhitespace(pThis, codepoint, __presult))
+        }
+    }
+    public func IsWhitespace(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsWhitespace(codepoint, &__result);
+        return __result;
+    }
+    // bool IsAlphabetic(System.UInt32)
+    private func _n_IsAlphabetic(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsAlphabetic(pThis, codepoint, __presult))
+        }
+    }
+    public func IsAlphabetic(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsAlphabetic(codepoint, &__result);
+        return __result;
+    }
+    // bool IsCased(System.UInt32)
+    private func _n_IsCased(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsCased(pThis, codepoint, __presult))
+        }
+    }
+    public func IsCased(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsCased(codepoint, &__result);
+        return __result;
+    }
+    // bool IsUppercase(System.UInt32)
+    private func _n_IsUppercase(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsUppercase(pThis, codepoint, __presult))
+        }
+    }
+    public func IsUppercase(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsUppercase(codepoint, &__result);
+        return __result;
+    }
+    // bool IsLowercase(System.UInt32)
+    private func _n_IsLowercase(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsLowercase(pThis, codepoint, __presult))
+        }
+    }
+    public func IsLowercase(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsLowercase(codepoint, &__result);
+        return __result;
+    }
+    // bool IsIdStart(System.UInt32)
+    private func _n_IsIdStart(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsIdStart(pThis, codepoint, __presult))
+        }
+    }
+    public func IsIdStart(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsIdStart(codepoint, &__result);
+        return __result;
+    }
+    // bool IsIdContinue(System.UInt32)
+    private func _n_IsIdContinue(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsIdContinue(pThis, codepoint, __presult))
+        }
+    }
+    public func IsIdContinue(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsIdContinue(codepoint, &__result);
+        return __result;
+    }
+    // bool IsGraphemeBase(System.UInt32)
+    private func _n_IsGraphemeBase(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsGraphemeBase(pThis, codepoint, __presult))
+        }
+    }
+    public func IsGraphemeBase(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsGraphemeBase(codepoint, &__result);
+        return __result;
+    }
+    // bool IsGraphemeExtend(System.UInt32)
+    private func _n_IsGraphemeExtend(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsGraphemeExtend(pThis, codepoint, __presult))
+        }
+    }
+    public func IsGraphemeExtend(codepoint : Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsGraphemeExtend(codepoint, &__result);
+        return __result;
+    }
+    // Windows.Data.Text.UnicodeNumericType GetNumericType(System.UInt32)
+    private func _n_GetNumericType(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CData_CText_CUnicodeNumericType>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetNumericType(pThis, codepoint, __presult))
+        }
+    }
+    public func GetNumericType(codepoint : Swift.UInt32) throws -> Windows.Data.Text.UnicodeNumericType {
+        var __result : _q_CWindows_CData_CText_CUnicodeNumericType = _q_CWindows_CData_CText_CUnicodeNumericType_None;
+        try self._n_GetNumericType(codepoint, &__result);
+        return __result;
+    }
+    // Windows.Data.Text.UnicodeGeneralCategory GetGeneralCategory(System.UInt32)
+    private func _n_GetGeneralCategory(_ codepoint : UINT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CData_CText_CUnicodeGeneralCategory>?) throws {
+        return try perform(as: _q_CWindows_CData_CText_CIUnicodeCharactersStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetGeneralCategory(pThis, codepoint, __presult))
+        }
+    }
+    public func GetGeneralCategory(codepoint : Swift.UInt32) throws -> Windows.Data.Text.UnicodeGeneralCategory {
+        var __result : _q_CWindows_CData_CText_CUnicodeGeneralCategory = _q_CWindows_CData_CText_CUnicodeGeneralCategory_UppercaseLetter;
+        try self._n_GetGeneralCategory(codepoint, &__result);
+        return __result;
+    }
+} // IUnicodeCharactersStatics
+
+
 // type: Windows.Data.Text.IWordSegment
 // interface type
 open class IWordSegment
@@ -1438,6 +1637,80 @@ public class TextReverseConversionGenerator
 // struct type
 public typealias TextSegment = _q_CWindows_CData_CText_CTextSegment;
 
+// type: Windows.Data.Text.UnicodeCharacters
+// static class
+public class UnicodeCharacters
+{
+    private struct _IUnicodeCharactersStatics {
+        static var x : IUnicodeCharactersStatics =
+            try! RoGetActivationFactory("Windows.Data.Text.UnicodeCharacters")
+    }
+    public static var UnicodeCharactersStatics : IUnicodeCharactersStatics {
+        _IUnicodeCharactersStatics.x
+    }
+    public static func GetCodepointFromSurrogatePair(highSurrogate : Swift.UInt32, lowSurrogate : Swift.UInt32) throws -> Swift.UInt32 {
+        return try UnicodeCharactersStatics.GetCodepointFromSurrogatePair(highSurrogate: highSurrogate, lowSurrogate: lowSurrogate);
+    }
+    public static func GetSurrogatePairFromCodepoint(codepoint : Swift.UInt32, highSurrogate : inout WCHAR, lowSurrogate : inout WCHAR) throws -> Void {
+            var _tmp_out_highSurrogate: WCHAR = 0;
+            var _tmp_out_lowSurrogate: WCHAR = 0;
+        return try UnicodeCharactersStatics.GetSurrogatePairFromCodepoint(codepoint: codepoint, highSurrogate: &_tmp_out_highSurrogate, lowSurrogate: &_tmp_out_lowSurrogate);
+    }
+    public static func IsHighSurrogate(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsHighSurrogate(codepoint: codepoint);
+    }
+    public static func IsLowSurrogate(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsLowSurrogate(codepoint: codepoint);
+    }
+    public static func IsSupplementary(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsSupplementary(codepoint: codepoint);
+    }
+    public static func IsNoncharacter(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsNoncharacter(codepoint: codepoint);
+    }
+    public static func IsWhitespace(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsWhitespace(codepoint: codepoint);
+    }
+    public static func IsAlphabetic(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsAlphabetic(codepoint: codepoint);
+    }
+    public static func IsCased(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsCased(codepoint: codepoint);
+    }
+    public static func IsUppercase(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsUppercase(codepoint: codepoint);
+    }
+    public static func IsLowercase(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsLowercase(codepoint: codepoint);
+    }
+    public static func IsIdStart(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsIdStart(codepoint: codepoint);
+    }
+    public static func IsIdContinue(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsIdContinue(codepoint: codepoint);
+    }
+    public static func IsGraphemeBase(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsGraphemeBase(codepoint: codepoint);
+    }
+    public static func IsGraphemeExtend(codepoint : Swift.UInt32) throws -> boolean {
+        return try UnicodeCharactersStatics.IsGraphemeExtend(codepoint: codepoint);
+    }
+    public static func GetNumericType(codepoint : Swift.UInt32) throws -> Windows.Data.Text.UnicodeNumericType {
+        return try UnicodeCharactersStatics.GetNumericType(codepoint: codepoint);
+    }
+    public static func GetGeneralCategory(codepoint : Swift.UInt32) throws -> Windows.Data.Text.UnicodeGeneralCategory {
+        return try UnicodeCharactersStatics.GetGeneralCategory(codepoint: codepoint);
+    }
+}
+
+// type: Windows.Data.Text.UnicodeGeneralCategory
+// enum type
+public typealias UnicodeGeneralCategory = _q_CWindows_CData_CText_CUnicodeGeneralCategory;
+
+// type: Windows.Data.Text.UnicodeNumericType
+// enum type
+public typealias UnicodeNumericType = _q_CWindows_CData_CText_CUnicodeNumericType;
+
 // type: Windows.Data.Text.WordSegment
 // runtime class
 public class WordSegment
@@ -1672,6 +1945,180 @@ extension Windows.Data.Text.TextPredictionOptions {
     public static var Corrections : Self {
         get {
             return _q_CWindows_CData_CText_CTextPredictionOptions_Corrections;
+        }
+    }
+}
+extension Windows.Data.Text.UnicodeGeneralCategory {
+    public static var UppercaseLetter : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_UppercaseLetter;
+        }
+    }
+    public static var LowercaseLetter : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_LowercaseLetter;
+        }
+    }
+    public static var TitlecaseLetter : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_TitlecaseLetter;
+        }
+    }
+    public static var ModifierLetter : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_ModifierLetter;
+        }
+    }
+    public static var OtherLetter : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_OtherLetter;
+        }
+    }
+    public static var NonspacingMark : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_NonspacingMark;
+        }
+    }
+    public static var SpacingCombiningMark : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_SpacingCombiningMark;
+        }
+    }
+    public static var EnclosingMark : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_EnclosingMark;
+        }
+    }
+    public static var DecimalDigitNumber : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_DecimalDigitNumber;
+        }
+    }
+    public static var LetterNumber : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_LetterNumber;
+        }
+    }
+    public static var OtherNumber : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_OtherNumber;
+        }
+    }
+    public static var SpaceSeparator : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_SpaceSeparator;
+        }
+    }
+    public static var LineSeparator : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_LineSeparator;
+        }
+    }
+    public static var ParagraphSeparator : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_ParagraphSeparator;
+        }
+    }
+    public static var Control : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_Control;
+        }
+    }
+    public static var Format : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_Format;
+        }
+    }
+    public static var Surrogate : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_Surrogate;
+        }
+    }
+    public static var PrivateUse : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_PrivateUse;
+        }
+    }
+    public static var ConnectorPunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_ConnectorPunctuation;
+        }
+    }
+    public static var DashPunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_DashPunctuation;
+        }
+    }
+    public static var OpenPunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_OpenPunctuation;
+        }
+    }
+    public static var ClosePunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_ClosePunctuation;
+        }
+    }
+    public static var InitialQuotePunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_InitialQuotePunctuation;
+        }
+    }
+    public static var FinalQuotePunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_FinalQuotePunctuation;
+        }
+    }
+    public static var OtherPunctuation : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_OtherPunctuation;
+        }
+    }
+    public static var MathSymbol : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_MathSymbol;
+        }
+    }
+    public static var CurrencySymbol : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_CurrencySymbol;
+        }
+    }
+    public static var ModifierSymbol : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_ModifierSymbol;
+        }
+    }
+    public static var OtherSymbol : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_OtherSymbol;
+        }
+    }
+    public static var NotAssigned : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeGeneralCategory_NotAssigned;
+        }
+    }
+}
+extension Windows.Data.Text.UnicodeNumericType {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeNumericType_None;
+        }
+    }
+    public static var Decimal : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeNumericType_Decimal;
+        }
+    }
+    public static var Digit : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeNumericType_Digit;
+        }
+    }
+    public static var Numeric : Self {
+        get {
+            return _q_CWindows_CData_CText_CUnicodeNumericType_Numeric;
         }
     }
 }

@@ -7,9 +7,29 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.Storage.Provider {
+// type: Windows.Storage.Provider.CachedFileOptions
+// enum type
+public typealias CachedFileOptions = _q_CWindows_CStorage_CProvider_CCachedFileOptions;
+
 // type: Windows.Storage.Provider.CachedFileTarget
 // enum type
 public typealias CachedFileTarget = _q_CWindows_CStorage_CProvider_CCachedFileTarget;
+
+// type: Windows.Storage.Provider.CachedFileUpdater
+// static class
+public class CachedFileUpdater
+{
+    private struct _ICachedFileUpdaterStatics {
+        static var x : ICachedFileUpdaterStatics =
+            try! RoGetActivationFactory("Windows.Storage.Provider.CachedFileUpdater")
+    }
+    public static var CachedFileUpdaterStatics : ICachedFileUpdaterStatics {
+        _ICachedFileUpdaterStatics.x
+    }
+    public static func SetUpdateInformation(file : Optional<Windows.Storage.IStorageFile>, contentId : Swift.String, readMode : Windows.Storage.Provider.ReadActivationMode, writeMode : Windows.Storage.Provider.WriteActivationMode, options : Windows.Storage.Provider.CachedFileOptions) throws -> Void {
+        return try CachedFileUpdaterStatics.SetUpdateInformation(file: file, contentId: contentId, readMode: readMode, writeMode: writeMode, options: options);
+    }
+}
 
 // type: Windows.Storage.Provider.CachedFileUpdaterUI
 // runtime class
@@ -204,6 +224,28 @@ public class FileUpdateRequestedEventArgs
 // type: Windows.Storage.Provider.FileUpdateStatus
 // enum type
 public typealias FileUpdateStatus = _q_CWindows_CStorage_CProvider_CFileUpdateStatus;
+
+// type: Windows.Storage.Provider.ICachedFileUpdaterStatics
+// interface type
+open class ICachedFileUpdaterStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9fc90920, Data2: 0x7bcf, Data3 : 0x4888, Data4 : (0xa8, 0x1e, 0x10, 0x2d, 0x70, 0x34, 0xd7, 0xce)) }
+    // void SetUpdateInformation(Windows.Storage.IStorageFile, System.String, Windows.Storage.Provider.ReadActivationMode, Windows.Storage.Provider.WriteActivationMode, Windows.Storage.Provider.CachedFileOptions)
+    private func _n_SetUpdateInformation(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ contentId : Optional<HSTRING>, _ readMode : _q_CWindows_CStorage_CProvider_CReadActivationMode, _ writeMode : _q_CWindows_CStorage_CProvider_CWriteActivationMode, _ options : _q_CWindows_CStorage_CProvider_CCachedFileOptions) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CICachedFileUpdaterStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetUpdateInformation(pThis, file, contentId, readMode, writeMode, options))
+        }
+    }
+    public func SetUpdateInformation(file : Optional<Windows.Storage.IStorageFile>, contentId : Swift.String, readMode : Windows.Storage.Provider.ReadActivationMode, writeMode : Windows.Storage.Provider.WriteActivationMode, options : Windows.Storage.Provider.CachedFileOptions) throws -> Void {
+        let __hstr_contentId = try HString(contentId);
+        return try withExtendedLifetime(__hstr_contentId) {
+        try self._n_SetUpdateInformation(RawPointer(file), __hstr_contentId.Raw(), readMode, writeMode, options);
+        }
+    }
+} // ICachedFileUpdaterStatics
+
 
 // type: Windows.Storage.Provider.ICachedFileUpdaterUI
 // interface type
@@ -1005,6 +1047,36 @@ open class IStorageProviderGetPathForContentUriResult
 } // IStorageProviderGetPathForContentUriResult
 
 
+// type: Windows.Storage.Provider.IStorageProviderItemPropertiesStatics
+// interface type
+open class IStorageProviderItemPropertiesStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2d2c1c97, Data2: 0x2704, Data3 : 0x4729, Data4 : (0x8f, 0xa9, 0x7e, 0x6b, 0x8e, 0x15, 0x8c, 0x2f)) }
+    // Windows.Foundation.IAsyncAction SetAsync(Windows.Storage.IStorageItem, Windows.Foundation.Collections.IIterable<Windows.Storage.Provider.StorageProviderItemProperty>)
+    private func _n_SetAsync(_ item : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageItem>>, _ itemProperties : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderItemPropertiesStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAsync(pThis, item, itemProperties, __presult))
+        }
+    }
+    public func SetAsync(item : Optional<Windows.Storage.IStorageItem>, itemProperties : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SetAsync(RawPointer(item), RawPointer(itemProperties), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func Set(item : Optional<Windows.Storage.IStorageItem>, itemProperties : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SetAsync(item: item, itemProperties: itemProperties)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageProviderItemPropertiesStatics
+
+
 // type: Windows.Storage.Provider.IStorageProviderItemProperty
 // interface type
 open class IStorageProviderItemProperty
@@ -1730,6 +1802,98 @@ open class IStorageProviderSyncRootInfo3
 } // IStorageProviderSyncRootInfo3
 
 
+// type: Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics
+// interface type
+open class IStorageProviderSyncRootManagerStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3e99fbbf, Data2: 0x8fe3, Data3 : 0x4b40, Data4 : (0xab, 0xc7, 0xf6, 0xfc, 0x3d, 0x74, 0xc9, 0x8e)) }
+    // void Register(Windows.Storage.Provider.StorageProviderSyncRootInfo)
+    private func _n_Register(_ syncRootInformation : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Register(pThis, syncRootInformation))
+        }
+    }
+    public func Register(syncRootInformation : Optional<Windows.Storage.Provider.IStorageProviderSyncRootInfo>) throws -> Void {
+        try self._n_Register(RawPointer(syncRootInformation));
+    }
+    // void Unregister(System.String)
+    private func _n_Unregister(_ id : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Unregister(pThis, id))
+        }
+    }
+    public func Unregister(id : Swift.String) throws -> Void {
+        let __hstr_id = try HString(id);
+        return try withExtendedLifetime(__hstr_id) {
+        try self._n_Unregister(__hstr_id.Raw());
+        }
+    }
+    // Windows.Storage.Provider.StorageProviderSyncRootInfo GetSyncRootInformationForFolder(Windows.Storage.IStorageFolder)
+    private func _n_GetSyncRootInformationForFolder(_ folder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetSyncRootInformationForFolder(pThis, folder, __presult))
+        }
+    }
+    public func GetSyncRootInformationForFolder(folder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<Windows.Storage.Provider.IStorageProviderSyncRootInfo> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo>> = nil;
+        try self._n_GetSyncRootInformationForFolder(RawPointer(folder), &__result);
+        return Windows.Storage.Provider.IStorageProviderSyncRootInfo(consuming: __result);
+    }
+    // Windows.Storage.Provider.StorageProviderSyncRootInfo GetSyncRootInformationForId(System.String)
+    private func _n_GetSyncRootInformationForId(_ id : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetSyncRootInformationForId(pThis, id, __presult))
+        }
+    }
+    public func GetSyncRootInformationForId(id : Swift.String) throws -> Optional<Windows.Storage.Provider.IStorageProviderSyncRootInfo> {
+        let __hstr_id = try HString(id);
+        return try withExtendedLifetime(__hstr_id) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo>> = nil;
+        try self._n_GetSyncRootInformationForId(__hstr_id.Raw(), &__result);
+        return Windows.Storage.Provider.IStorageProviderSyncRootInfo(consuming: __result);
+        }
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Storage.Provider.StorageProviderSyncRootInfo> GetCurrentSyncRoots()
+    private func _n_GetCurrentSyncRoots(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetCurrentSyncRoots(pThis, __presult))
+        }
+    }
+    public func GetCurrentSyncRoots() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo>> = nil;
+        try self._n_GetCurrentSyncRoots(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo(consuming: __result);
+    }
+} // IStorageProviderSyncRootManagerStatics
+
+
+// type: Windows.Storage.Provider.IStorageProviderSyncRootManagerStatics2
+// interface type
+open class IStorageProviderSyncRootManagerStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xefb6cfee, Data2: 0x1374, Data3 : 0x544e, Data4 : (0x9d, 0xf1, 0x55, 0x98, 0xd2, 0xe9, 0xcf, 0xdd)) }
+    // bool IsSupported()
+    private func _n_IsSupported(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootManagerStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsSupported(pThis, __presult))
+        }
+    }
+    public func IsSupported() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsSupported(&__result);
+        return __result;
+    }
+} // IStorageProviderSyncRootManagerStatics2
+
+
+// type: Windows.Storage.Provider.ReadActivationMode
+// enum type
+public typealias ReadActivationMode = _q_CWindows_CStorage_CProvider_CReadActivationMode;
+
 // type: Windows.Storage.Provider.StorageProviderError
 // runtime class
 public class StorageProviderError
@@ -2034,6 +2198,31 @@ public typealias StorageProviderHydrationPolicyModifier = _q_CWindows_CStorage_C
 // type: Windows.Storage.Provider.StorageProviderInSyncPolicy
 // enum type
 public typealias StorageProviderInSyncPolicy = _q_CWindows_CStorage_CProvider_CStorageProviderInSyncPolicy;
+
+// type: Windows.Storage.Provider.StorageProviderItemProperties
+// static class
+public class StorageProviderItemProperties
+{
+    private struct _IStorageProviderItemPropertiesStatics {
+        static var x : IStorageProviderItemPropertiesStatics =
+            try! RoGetActivationFactory("Windows.Storage.Provider.StorageProviderItemProperties")
+    }
+    public static var StorageProviderItemPropertiesStatics : IStorageProviderItemPropertiesStatics {
+        _IStorageProviderItemPropertiesStatics.x
+    }
+    public static func SetAsync(item : Optional<Windows.Storage.IStorageItem>, itemProperties : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        return try StorageProviderItemPropertiesStatics.SetAsync(item: item, itemProperties: itemProperties);
+    }
+    public static func Set(item : Optional<Windows.Storage.IStorageItem>, itemProperties : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.SetAsync(item: item, itemProperties: itemProperties)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
 
 // type: Windows.Storage.Provider.StorageProviderItemProperty
 // runtime class
@@ -2469,6 +2658,44 @@ public class StorageProviderSyncRootInfo
     }
 }
 
+// type: Windows.Storage.Provider.StorageProviderSyncRootManager
+// static class
+public class StorageProviderSyncRootManager
+{
+    private struct _IStorageProviderSyncRootManagerStatics2 {
+        static var x : IStorageProviderSyncRootManagerStatics2 =
+            try! RoGetActivationFactory("Windows.Storage.Provider.StorageProviderSyncRootManager")
+    }
+    public static var StorageProviderSyncRootManagerStatics2 : IStorageProviderSyncRootManagerStatics2 {
+        _IStorageProviderSyncRootManagerStatics2.x
+    }
+    public static func IsSupported() throws -> boolean {
+        return try StorageProviderSyncRootManagerStatics2.IsSupported();
+    }
+    private struct _IStorageProviderSyncRootManagerStatics {
+        static var x : IStorageProviderSyncRootManagerStatics =
+            try! RoGetActivationFactory("Windows.Storage.Provider.StorageProviderSyncRootManager")
+    }
+    public static var StorageProviderSyncRootManagerStatics : IStorageProviderSyncRootManagerStatics {
+        _IStorageProviderSyncRootManagerStatics.x
+    }
+    public static func Register(syncRootInformation : Optional<Windows.Storage.Provider.StorageProviderSyncRootInfo>) throws -> Void {
+        return try StorageProviderSyncRootManagerStatics.Register(syncRootInformation: syncRootInformation!.Interface());
+    }
+    public static func Unregister(id : Swift.String) throws -> Void {
+        return try StorageProviderSyncRootManagerStatics.Unregister(id: id);
+    }
+    public static func GetSyncRootInformationForFolder(folder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<Windows.Storage.Provider.StorageProviderSyncRootInfo> {
+        return try Windows.Storage.Provider.StorageProviderSyncRootInfo(plok: StorageProviderSyncRootManagerStatics.GetSyncRootInformationForFolder(folder: folder));
+    }
+    public static func GetSyncRootInformationForId(id : Swift.String) throws -> Optional<Windows.Storage.Provider.StorageProviderSyncRootInfo> {
+        return try Windows.Storage.Provider.StorageProviderSyncRootInfo(plok: StorageProviderSyncRootManagerStatics.GetSyncRootInformationForId(id: id));
+    }
+    public static func GetCurrentSyncRoots() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo> {
+        return try StorageProviderSyncRootManagerStatics.GetCurrentSyncRoots();
+    }
+}
+
 // type: Windows.Storage.Provider.StorageProviderUriSourceStatus
 // enum type
 public typealias StorageProviderUriSourceStatus = _q_CWindows_CStorage_CProvider_CStorageProviderUriSourceStatus;
@@ -2477,6 +2704,32 @@ public typealias StorageProviderUriSourceStatus = _q_CWindows_CStorage_CProvider
 // enum type
 public typealias UIStatus = _q_CWindows_CStorage_CProvider_CUIStatus;
 
+// type: Windows.Storage.Provider.WriteActivationMode
+// enum type
+public typealias WriteActivationMode = _q_CWindows_CStorage_CProvider_CWriteActivationMode;
+
+}
+extension Windows.Storage.Provider.CachedFileOptions {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CCachedFileOptions_None;
+        }
+    }
+    public static var RequireUpdateOnAccess : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CCachedFileOptions_RequireUpdateOnAccess;
+        }
+    }
+    public static var UseCachedFileWhenOffline : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CCachedFileOptions_UseCachedFileWhenOffline;
+        }
+    }
+    public static var DenyAccessWhenOffline : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CCachedFileOptions_DenyAccessWhenOffline;
+        }
+    }
 }
 extension Windows.Storage.Provider.CachedFileTarget {
     public static var Local : Self {
@@ -2519,6 +2772,18 @@ extension Windows.Storage.Provider.FileUpdateStatus {
     public static var CompleteAndRenamed : Self {
         get {
             return _q_CWindows_CStorage_CProvider_CFileUpdateStatus_CompleteAndRenamed;
+        }
+    }
+}
+extension Windows.Storage.Provider.ReadActivationMode {
+    public static var NotNeeded : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CReadActivationMode_NotNeeded;
+        }
+    }
+    public static var BeforeAccess : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CReadActivationMode_BeforeAccess;
         }
     }
 }
@@ -2737,6 +3002,23 @@ extension Windows.Storage.Provider.UIStatus {
     public static var Complete : Self {
         get {
             return _q_CWindows_CStorage_CProvider_CUIStatus_Complete;
+        }
+    }
+}
+extension Windows.Storage.Provider.WriteActivationMode {
+    public static var ReadOnly : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CWriteActivationMode_ReadOnly;
+        }
+    }
+    public static var NotNeeded : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CWriteActivationMode_NotNeeded;
+        }
+    }
+    public static var AfterWrite : Self {
+        get {
+            return _q_CWindows_CStorage_CProvider_CWriteActivationMode_AfterWrite;
         }
     }
 }

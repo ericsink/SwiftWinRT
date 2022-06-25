@@ -729,6 +729,111 @@ public class IIterator_1_IInspectable
 // method not needed: MoveNext
 // method not needed: GetMany
 } // IIterator_1_IInspectable
+// closed generic delegate type
+public class IEventHandler_1_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc50898f6, Data2: 0xc536, Data3 : 0x5f47, Data4 : (0x85, 0x83, 0x8b, 0x2c, 0x24, 0x38, 0xa1, 0x3b)) }
+    // [IsSpecialName] void Invoke(System.Object, System.Object)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // IEventHandler_1_IInspectable
+// impl delegate type
+open class EventHandler_1_IInspectable
+{
+    private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IEventHandler_1_IInspectable.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
+        guard let self = EventHandler_1_IInspectable.from_EventHandler_1_IInspectable(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Object(plok: WinRT.IInspectable(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: EventHandler_1_IInspectable? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_EventHandler_1_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> EventHandler_1_IInspectable? {
+        return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IEventHandler_1_IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IEventHandler_1_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_EventHandler_1_IInspectable
+{
+    private var _self : ClosedGenerics.IEventHandler_1_IInspectable;
+    public init(plok: ClosedGenerics.IEventHandler_1_IInspectable?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.GetInterface());
+    }
+    public func Interface() -> ClosedGenerics.IEventHandler_1_IInspectable {
+        return _self
+    }
+}
 // closed interface type
 public class IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
     :
@@ -1877,33 +1982,153 @@ public class IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTR
 // method not needed: GetMany
 } // IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 // closed interface type
-public class IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+public class IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
     :
     WinRT.IInspectable
 {
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe9bdaaf0, Data2: 0xcbf6, Data3 : 0x5c72, Data4 : (0xbe, 0x90, 0x29, 0xcb, 0xf3, 0xa1, 0x31, 0x9b)) }
-// method not needed: First
-} // IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
-// closed interface type
-public class IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x92b02cd3, Data2: 0xaa6e, Data3 : 0x573d, Data4 : (0xbc, 0x03, 0x8d, 0x23, 0x09, 0xcb, 0xa3, 0xeb)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<System.String>>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVector<System.String>> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(consuming: __result);
+    }
+    // Windows.Foundation.Collections.IVector<System.String> GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Optional<ClosedGenerics.IVector_1_HSTRING> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>> = nil;
+        try self._n_GetResults(&__result);
+        return ClosedGenerics.IVector_1_HSTRING(consuming: __result);
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
     :
     WinRT.IInspectable
 {
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x05eb86f1, Data2: 0x7140, Data3 : 0x5517, Data4 : (0xb8, 0x8d, 0xcb, 0xae, 0xbe, 0x57, 0xe6, 0xb1)) }
-// method not needed: get_Current
-// method not needed: get_HasCurrent
-// method not needed: MoveNext
-// method not needed: GetMany
-} // IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
-// closed interface type
-public class IKeyValuePair_2_HSTRING_HSTRING
-    :
-    WinRT.IInspectable
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfae4b396, Data2: 0x97c8, Data3 : 0x5cc3, Data4 : (0xbf, 0x88, 0xea, 0x30, 0x98, 0xed, 0xf6, 0xb2)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVector<System.String>>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
 {
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x60310303, Data2: 0x49c5, Data3 : 0x52e6, Data4 : (0xab, 0xc6, 0xa9, 0xb3, 0x6e, 0xcc, 0xc7, 0x16)) }
-// method not needed: get_Key
-// method not needed: get_Value
-} // IKeyValuePair_2_HSTRING_HSTRING
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRINGVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING {
+        return _self
+    }
+}
 // closed interface type
 public class IAsyncOperationWithProgress_2_UINT64_UINT64
     :
@@ -2183,6 +2408,34 @@ open class foo_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
     }
 }
 // closed interface type
+public class IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe9bdaaf0, Data2: 0xcbf6, Data3 : 0x5c72, Data4 : (0xbe, 0x90, 0x29, 0xcb, 0xf3, 0xa1, 0x31, 0x9b)) }
+// method not needed: First
+} // IIterable_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+// closed interface type
+public class IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x05eb86f1, Data2: 0x7140, Data3 : 0x5517, Data4 : (0xb8, 0x8d, 0xcb, 0xae, 0xbe, 0x57, 0xe6, 0xb1)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2_HSTRING_HSTRING
+// closed interface type
+public class IKeyValuePair_2_HSTRING_HSTRING
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x60310303, Data2: 0x49c5, Data3 : 0x52e6, Data4 : (0xab, 0xc6, 0xa9, 0xb3, 0x6e, 0xcc, 0xc7, 0x16)) }
+// method not needed: get_Key
+// method not needed: get_Value
+} // IKeyValuePair_2_HSTRING_HSTRING
+// closed interface type
 public class IAsyncOperationWithProgress_2_HSTRING_UINT64
     :
     WinRT.IInspectable
@@ -2460,111 +2713,6 @@ open class foo_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         return _self
     }
 }
-// closed generic delegate type
-public class IEventHandler_1_IInspectable
-    :
-    WinRT.IInspectable
-{
-    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc50898f6, Data2: 0xc536, Data3 : 0x5f47, Data4 : (0x85, 0x83, 0x8b, 0x2c, 0x24, 0x38, 0xa1, 0x3b)) }
-    // [IsSpecialName] void Invoke(System.Object, System.Object)
-    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
-        return try perform(as: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable.self) { pThis in
-            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
-        }
-    }
-    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<WinRT.IInspectable>) throws -> Void {
-        try self._n_Invoke(RawPointer(sender), RawPointer(args));
-    }
-} // IEventHandler_1_IInspectable
-// impl delegate type
-open class EventHandler_1_IInspectable
-{
-    private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, ClosedGenerics.IEventHandler_1_IInspectable.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        default:
-            ppvObject.pointee = nil
-            return E_NOINTERFACE
-        }
-    },
-    AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
-        _ = pinstance.pointee.container.retain()
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
-        return __res;
-    },
-    Invoke: {
-        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = EventHandler_1_IInspectable.from_EventHandler_1_IInspectable(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: WinRT.Object(plok: WinRT.IInspectable(args)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
-    private class Container {
-        public var self_ref: EventHandler_1_IInspectable? = nil
-    }
-    private struct WithTrailingObjects {
-        public var interface_struct: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
-        public var container: Unmanaged<Container>
-    }
-    private var instance: WithTrailingObjects
-
-    private var _cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void>
-    public init(cb : Optional<(Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void> = nil) {
-        _cb = cb
-        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
-        self.instance.container.takeUnretainedValue().self_ref = self
-    }
-    private static func from_EventHandler_1_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> EventHandler_1_IInspectable? {
-        return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
-    }
-
-    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
-        if let cb = _cb {
-            return try cb(sender, args)
-        }
-    }
-    public func Interface() -> ClosedGenerics.IEventHandler_1_IInspectable {
-        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
-            ClosedGenerics.IEventHandler_1_IInspectable(UnsafeMutableRawPointer($0))
-        }
-    }
-}
-// wrap delegate type
-open class foo_EventHandler_1_IInspectable
-{
-    private var _self : ClosedGenerics.IEventHandler_1_IInspectable;
-    public init(plok: ClosedGenerics.IEventHandler_1_IInspectable?) throws {
-        _self = plok!
-    }
-    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
-        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.GetInterface());
-    }
-    public func Interface() -> ClosedGenerics.IEventHandler_1_IInspectable {
-        return _self
-    }
-}
 // closed interface type
 public class IVectorView_1_FLOAT
     :
@@ -2800,6 +2948,35 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
             let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Optional<ClosedGenerics.IVector_1_HSTRING> {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

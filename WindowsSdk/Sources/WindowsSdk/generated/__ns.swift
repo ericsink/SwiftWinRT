@@ -36,6 +36,7 @@ extension Windows.ApplicationModel { public struct Activation { } }
 extension Windows.ApplicationModel { public struct Background { } }
 extension Windows.ApplicationModel { public struct DataTransfer { } }
 extension Windows { public struct Data { } }
+extension Windows.Data { public struct Html { } }
 extension Windows.Data { public struct Json { } }
 extension Windows.Data { public struct Pdf { } }
 extension Windows.Data { public struct Text { } }
@@ -43,6 +44,7 @@ extension Windows.Data { public struct Xml { } }
 extension Windows.Data.Xml { public struct Dom { } }
 extension Windows.Data.Xml { public struct Xsl { } }
 extension Windows { public struct Devices { } }
+extension Windows.Devices { public struct Geolocation { } }
 extension Windows.Devices { public struct Sms { } }
 extension Windows { public struct Foundation { } }
 extension Windows.Foundation { public struct Collections { } }

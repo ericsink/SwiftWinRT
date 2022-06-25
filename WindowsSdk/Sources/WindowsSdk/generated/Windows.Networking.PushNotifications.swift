@@ -229,6 +229,154 @@ open class IPushNotificationChannelManagerForUser2
 } // IPushNotificationChannelManagerForUser2
 
 
+// type: Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics
+// interface type
+open class IPushNotificationChannelManagerStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8baf9b65, Data2: 0x77a1, Data3 : 0x4588, Data4 : (0xbd, 0x19, 0x86, 0x15, 0x29, 0xa9, 0xdc, 0xf0)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> CreatePushNotificationChannelForApplicationAsync()
+    private func _n_CreatePushNotificationChannelForApplicationAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForApplicationAsync(pThis, __presult))
+        }
+    }
+    public func CreatePushNotificationChannelForApplicationAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
+        try self._n_CreatePushNotificationChannelForApplicationAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
+    }
+    public func CreatePushNotificationChannelForApplication() async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreatePushNotificationChannelForApplicationAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> CreatePushNotificationChannelForApplicationAsync(System.String)
+    private func _n_CreatePushNotificationChannelForApplicationAsyncWithId(_ applicationId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForApplicationAsyncWithId(pThis, applicationId, __presult))
+        }
+    }
+    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_applicationId = try HString(applicationId);
+        return try withExtendedLifetime(__hstr_applicationId) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
+        try self._n_CreatePushNotificationChannelForApplicationAsyncWithId(__hstr_applicationId.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
+        }
+    }
+    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreatePushNotificationChannelForApplicationAsyncWithId(applicationId: applicationId)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Networking.PushNotifications.PushNotificationChannel> CreatePushNotificationChannelForSecondaryTileAsync(System.String)
+    private func _n_CreatePushNotificationChannelForSecondaryTileAsync(_ tileId : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForSecondaryTileAsync(pThis, tileId, __presult))
+        }
+    }
+    public func CreatePushNotificationChannelForSecondaryTileAsync(tileId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_tileId = try HString(tileId);
+        return try withExtendedLifetime(__hstr_tileId) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
+        try self._n_CreatePushNotificationChannelForSecondaryTileAsync(__hstr_tileId.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
+        }
+    }
+    public func CreatePushNotificationChannelForSecondaryTile(tileId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreatePushNotificationChannelForSecondaryTileAsync(tileId: tileId)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IPushNotificationChannelManagerStatics
+
+
+// type: Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics2
+// interface type
+open class IPushNotificationChannelManagerStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb444a65d, Data2: 0xa7e9, Data3 : 0x4b28, Data4 : (0x95, 0x0e, 0xf3, 0x75, 0xa9, 0x07, 0xf9, 0xdf)) }
+    // Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser GetForUser(Windows.System.User)
+    private func _n_GetForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetForUser(pThis, user, __presult))
+        }
+    }
+    public func GetForUser(user : Optional<Windows.System.IUser>) throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser>> = nil;
+        try self._n_GetForUser(RawPointer(user), &__result);
+        return Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser(consuming: __result);
+    }
+} // IPushNotificationChannelManagerStatics2
+
+
+// type: Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics3
+// interface type
+open class IPushNotificationChannelManagerStatics3
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4701fefe, Data2: 0x0ede, Data3 : 0x4a3f, Data4 : (0xae, 0x78, 0xbf, 0xa4, 0x71, 0x49, 0x69, 0x25)) }
+    // Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser GetDefault()
+    private func _n_GetDefault(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetDefault(pThis, __presult))
+        }
+    }
+    public func GetDefault() throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerForUser>> = nil;
+        try self._n_GetDefault(&__result);
+        return Windows.Networking.PushNotifications.IPushNotificationChannelManagerForUser(consuming: __result);
+    }
+} // IPushNotificationChannelManagerStatics3
+
+
+// type: Windows.Networking.PushNotifications.IPushNotificationChannelManagerStatics4
+// interface type
+open class IPushNotificationChannelManagerStatics4
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbc540efb, Data2: 0x7820, Data3 : 0x5a5b, Data4 : (0x9c, 0x01, 0xb4, 0x75, 0x7f, 0x77, 0x40, 0x25)) }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ChannelsRevoked(Windows.Foundation.EventHandler<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>)
+    private func _n_add_ChannelsRevoked(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics4.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ChannelsRevoked(pThis, handler, __presult))
+        }
+    }
+    public func add_ChannelsRevoked(handler : Optional<ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ChannelsRevoked(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ChannelsRevoked(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ChannelsRevoked(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelManagerStatics4.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ChannelsRevoked(pThis, token))
+        }
+    }
+    public func remove_ChannelsRevoked(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ChannelsRevoked(token);
+    }
+} // IPushNotificationChannelManagerStatics4
+
+
 // type: Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs
 // interface type
 open class IPushNotificationChannelsRevokedEventArgs
@@ -491,6 +639,88 @@ public class PushNotificationChannel
         let _ifc : Windows.Networking.PushNotifications.IPushNotificationChannel = try _self.QueryInterface();
         return try _ifc.Uri;
         }
+    }
+}
+
+// type: Windows.Networking.PushNotifications.PushNotificationChannelManager
+// static class
+public class PushNotificationChannelManager
+{
+    private struct _IPushNotificationChannelManagerStatics3 {
+        static var x : IPushNotificationChannelManagerStatics3 =
+            try! RoGetActivationFactory("Windows.Networking.PushNotifications.PushNotificationChannelManager")
+    }
+    public static var PushNotificationChannelManagerStatics3 : IPushNotificationChannelManagerStatics3 {
+        _IPushNotificationChannelManagerStatics3.x
+    }
+    public static func GetDefault() throws -> Optional<Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser> {
+        return try Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser(plok: PushNotificationChannelManagerStatics3.GetDefault());
+    }
+    private struct _IPushNotificationChannelManagerStatics4 {
+        static var x : IPushNotificationChannelManagerStatics4 =
+            try! RoGetActivationFactory("Windows.Networking.PushNotifications.PushNotificationChannelManager")
+    }
+    public static var PushNotificationChannelManagerStatics4 : IPushNotificationChannelManagerStatics4 {
+        _IPushNotificationChannelManagerStatics4.x
+    }
+    public static func add_ChannelsRevoked(handler : @escaping (Optional<WinRT.Object>, Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        return try PushNotificationChannelManagerStatics4.add_ChannelsRevoked(handler: ClosedGenerics.EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(cb: handler).Interface());
+    }
+    public static func remove_ChannelsRevoked(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        return try PushNotificationChannelManagerStatics4.remove_ChannelsRevoked(token: token);
+    }
+    private struct _IPushNotificationChannelManagerStatics {
+        static var x : IPushNotificationChannelManagerStatics =
+            try! RoGetActivationFactory("Windows.Networking.PushNotifications.PushNotificationChannelManager")
+    }
+    public static var PushNotificationChannelManagerStatics : IPushNotificationChannelManagerStatics {
+        _IPushNotificationChannelManagerStatics.x
+    }
+    public static func CreatePushNotificationChannelForApplicationAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        return try PushNotificationChannelManagerStatics.CreatePushNotificationChannelForApplicationAsync();
+    }
+    public static func CreatePushNotificationChannelForApplication() async throws -> Optional<Windows.Networking.PushNotifications.PushNotificationChannel> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Networking.PushNotifications.PushNotificationChannel(plok: Self.CreatePushNotificationChannelForApplicationAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func CreatePushNotificationChannelForApplicationAsync(applicationId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        return try PushNotificationChannelManagerStatics.CreatePushNotificationChannelForApplicationAsyncWithId(applicationId: applicationId);
+    }
+    public static func CreatePushNotificationChannelForApplication(applicationId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.PushNotificationChannel> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Networking.PushNotifications.PushNotificationChannel(plok: Self.CreatePushNotificationChannelForApplicationAsync(applicationId: applicationId)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func CreatePushNotificationChannelForSecondaryTileAsync(tileId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        return try PushNotificationChannelManagerStatics.CreatePushNotificationChannelForSecondaryTileAsync(tileId: tileId);
+    }
+    public static func CreatePushNotificationChannelForSecondaryTile(tileId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.PushNotificationChannel> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Networking.PushNotifications.PushNotificationChannel(plok: Self.CreatePushNotificationChannelForSecondaryTileAsync(tileId: tileId)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    private struct _IPushNotificationChannelManagerStatics2 {
+        static var x : IPushNotificationChannelManagerStatics2 =
+            try! RoGetActivationFactory("Windows.Networking.PushNotifications.PushNotificationChannelManager")
+    }
+    public static var PushNotificationChannelManagerStatics2 : IPushNotificationChannelManagerStatics2 {
+        _IPushNotificationChannelManagerStatics2.x
+    }
+    public static func GetForUser(user : Optional<Windows.System.User>) throws -> Optional<Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser> {
+        return try Windows.Networking.PushNotifications.PushNotificationChannelManagerForUser(plok: PushNotificationChannelManagerStatics2.GetForUser(user: user!.Interface()));
     }
 }
 

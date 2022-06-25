@@ -271,6 +271,332 @@ open class IConnectionRequestedEventArgs
 } // IConnectionRequestedEventArgs
 
 
+// type: Windows.Networking.Proximity.IPeerFinderStatics
+// interface type
+open class IPeerFinderStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x914b3b61, Data2: 0xf6e1, Data3 : 0x47c4, Data4 : (0xa1, 0x4c, 0x14, 0x8a, 0x19, 0x03, 0xd0, 0xc6)) }
+    // [IsSpecialName] bool get_AllowBluetooth()
+    private func _n_get_AllowBluetooth(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowBluetooth(pThis, __presult))
+        }
+    }
+    public func get_AllowBluetooth() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AllowBluetooth(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AllowBluetooth(bool)
+    private func _n_put_AllowBluetooth(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowBluetooth(pThis, value))
+        }
+    }
+    public func put_AllowBluetooth(value : boolean) throws -> Void {
+        try self._n_put_AllowBluetooth(value);
+    }
+    // [IsSpecialName] bool get_AllowInfrastructure()
+    private func _n_get_AllowInfrastructure(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowInfrastructure(pThis, __presult))
+        }
+    }
+    public func get_AllowInfrastructure() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AllowInfrastructure(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AllowInfrastructure(bool)
+    private func _n_put_AllowInfrastructure(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowInfrastructure(pThis, value))
+        }
+    }
+    public func put_AllowInfrastructure(value : boolean) throws -> Void {
+        try self._n_put_AllowInfrastructure(value);
+    }
+    // [IsSpecialName] bool get_AllowWiFiDirect()
+    private func _n_get_AllowWiFiDirect(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowWiFiDirect(pThis, __presult))
+        }
+    }
+    public func get_AllowWiFiDirect() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AllowWiFiDirect(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AllowWiFiDirect(bool)
+    private func _n_put_AllowWiFiDirect(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowWiFiDirect(pThis, value))
+        }
+    }
+    public func put_AllowWiFiDirect(value : boolean) throws -> Void {
+        try self._n_put_AllowWiFiDirect(value);
+    }
+    // [IsSpecialName] System.String get_DisplayName()
+    private func _n_get_DisplayName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayName(pThis, __presult))
+        }
+    }
+    public func get_DisplayName() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayName(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_DisplayName(System.String)
+    private func _n_put_DisplayName(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayName(pThis, value))
+        }
+    }
+    public func put_DisplayName(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_DisplayName(__hstr_value.Raw());
+        }
+    }
+    // [IsSpecialName] Windows.Networking.Proximity.PeerDiscoveryTypes get_SupportedDiscoveryTypes()
+    private func _n_get_SupportedDiscoveryTypes(_ __presult: UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SupportedDiscoveryTypes(pThis, __presult))
+        }
+    }
+    public func get_SupportedDiscoveryTypes() throws -> Windows.Networking.Proximity.PeerDiscoveryTypes {
+        var __result : _q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes = _q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes_None;
+        try self._n_get_SupportedDiscoveryTypes(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IMap<System.String,System.String> get_AlternateIdentities()
+    private func _n_get_AlternateIdentities(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_HSTRING>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlternateIdentities(pThis, __presult))
+        }
+    }
+    public func get_AlternateIdentities() throws -> Optional<ClosedGenerics.IMap_2_HSTRING_HSTRING> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_HSTRING>> = nil;
+        try self._n_get_AlternateIdentities(&__result);
+        return ClosedGenerics.IMap_2_HSTRING_HSTRING(consuming: __result);
+    }
+    // void Start()
+    private func _n_Start() throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Start(pThis))
+        }
+    }
+    public func Start() throws -> Void {
+        try self._n_Start();
+    }
+    // void Start(System.String)
+    private func _n_StartWithMessage(_ peerMessage : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.StartWithMessage(pThis, peerMessage))
+        }
+    }
+    public func StartWithMessage(peerMessage : Swift.String) throws -> Void {
+        let __hstr_peerMessage = try HString(peerMessage);
+        return try withExtendedLifetime(__hstr_peerMessage) {
+        try self._n_StartWithMessage(__hstr_peerMessage.Raw());
+        }
+    }
+    // void Stop()
+    private func _n_Stop() throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Stop(pThis))
+        }
+    }
+    public func Stop() throws -> Void {
+        try self._n_Stop();
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_TriggeredConnectionStateChanged(Windows.Foundation.TypedEventHandler<System.Object,Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>)
+    private func _n_add_TriggeredConnectionStateChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_TriggeredConnectionStateChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_TriggeredConnectionStateChanged(handler : Optional<ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_TriggeredConnectionStateChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_TriggeredConnectionStateChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_TriggeredConnectionStateChanged(_ cookie : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TriggeredConnectionStateChanged(pThis, cookie))
+        }
+    }
+    public func remove_TriggeredConnectionStateChanged(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_TriggeredConnectionStateChanged(cookie);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ConnectionRequested(Windows.Foundation.TypedEventHandler<System.Object,Windows.Networking.Proximity.ConnectionRequestedEventArgs>)
+    private func _n_add_ConnectionRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ConnectionRequested(pThis, handler, __presult))
+        }
+    }
+    public func add_ConnectionRequested(handler : Optional<ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ConnectionRequested(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ConnectionRequested(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ConnectionRequested(_ cookie : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ConnectionRequested(pThis, cookie))
+        }
+    }
+    public func remove_ConnectionRequested(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ConnectionRequested(cookie);
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>> FindAllPeersAsync()
+    private func _n_FindAllPeersAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.FindAllPeersAsync(pThis, __presult))
+        }
+    }
+    public func FindAllPeersAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>> = nil;
+        try self._n_FindAllPeersAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(consuming: __result);
+    }
+    public func FindAllPeers() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FindAllPeersAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Networking.Sockets.StreamSocket> ConnectAsync(Windows.Networking.Proximity.PeerInformation)
+    private func _n_ConnectAsync(_ peerInformation : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIPeerInformation>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ConnectAsync(pThis, peerInformation, __presult))
+        }
+    }
+    public func ConnectAsync(peerInformation : Optional<Windows.Networking.Proximity.IPeerInformation>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket>> = nil;
+        try self._n_ConnectAsync(RawPointer(peerInformation), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket(consuming: __result);
+    }
+    public func Connect(peerInformation : Optional<Windows.Networking.Proximity.IPeerInformation>) async throws -> Optional<Windows.Networking.Sockets.IStreamSocket> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ConnectAsync(peerInformation: peerInformation)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var AllowBluetooth : boolean {
+        get throws {
+            return try get_AllowBluetooth();
+        }
+    }
+    public var AllowInfrastructure : boolean {
+        get throws {
+            return try get_AllowInfrastructure();
+        }
+    }
+    public var AllowWiFiDirect : boolean {
+        get throws {
+            return try get_AllowWiFiDirect();
+        }
+    }
+    public var AlternateIdentities : Optional<ClosedGenerics.IMap_2_HSTRING_HSTRING> {
+        get throws {
+            return try get_AlternateIdentities();
+        }
+    }
+    public var DisplayName : Swift.String {
+        get throws {
+            return try get_DisplayName();
+        }
+    }
+    public var SupportedDiscoveryTypes : Windows.Networking.Proximity.PeerDiscoveryTypes {
+        get throws {
+            return try get_SupportedDiscoveryTypes();
+        }
+    }
+} // IPeerFinderStatics
+
+
+// type: Windows.Networking.Proximity.IPeerFinderStatics2
+// interface type
+open class IPeerFinderStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd6e73c65, Data2: 0xfdd0, Data3 : 0x4b0b, Data4 : (0x93, 0x12, 0x86, 0x64, 0x08, 0x93, 0x5d, 0x82)) }
+    // [IsSpecialName] Windows.Networking.Proximity.PeerRole get_Role()
+    private func _n_get_Role(_ __presult: UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CPeerRole>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Role(pThis, __presult))
+        }
+    }
+    public func get_Role() throws -> Windows.Networking.Proximity.PeerRole {
+        var __result : _q_CWindows_CNetworking_CProximity_CPeerRole = _q_CWindows_CNetworking_CProximity_CPeerRole_Peer;
+        try self._n_get_Role(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Role(Windows.Networking.Proximity.PeerRole)
+    private func _n_put_Role(_ value : _q_CWindows_CNetworking_CProximity_CPeerRole) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Role(pThis, value))
+        }
+    }
+    public func put_Role(value : Windows.Networking.Proximity.PeerRole) throws -> Void {
+        try self._n_put_Role(value);
+    }
+    // [IsSpecialName] Windows.Storage.Streams.IBuffer get_DiscoveryData()
+    private func _n_get_DiscoveryData(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DiscoveryData(pThis, __presult))
+        }
+    }
+    public func get_DiscoveryData() throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
+        try self._n_get_DiscoveryData(&__result);
+        return Windows.Storage.Streams.IBuffer(consuming: __result);
+    }
+    // [IsSpecialName] void put_DiscoveryData(Windows.Storage.Streams.IBuffer)
+    private func _n_put_DiscoveryData(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DiscoveryData(pThis, value))
+        }
+    }
+    public func put_DiscoveryData(value : Optional<Windows.Storage.Streams.IBuffer>) throws -> Void {
+        try self._n_put_DiscoveryData(RawPointer(value));
+    }
+    // Windows.Networking.Proximity.PeerWatcher CreateWatcher()
+    private func _n_CreateWatcher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIPeerWatcher>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CProximity_CIPeerFinderStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWatcher(pThis, __presult))
+        }
+    }
+    public func CreateWatcher() throws -> Optional<Windows.Networking.Proximity.IPeerWatcher> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIPeerWatcher>> = nil;
+        try self._n_CreateWatcher(&__result);
+        return Windows.Networking.Proximity.IPeerWatcher(consuming: __result);
+    }
+    public var DiscoveryData : Optional<Windows.Storage.Streams.IBuffer> {
+        get throws {
+            return try get_DiscoveryData();
+        }
+    }
+    public var Role : Windows.Networking.Proximity.PeerRole {
+        get throws {
+            return try get_Role();
+        }
+    }
+} // IPeerFinderStatics2
+
+
 // type: Windows.Networking.Proximity.IPeerInformation
 // interface type
 open class IPeerInformation
@@ -1131,6 +1457,160 @@ open class foo_MessageTransmittedHandler
     }
 }
 
+// type: Windows.Networking.Proximity.PeerDiscoveryTypes
+// enum type
+public typealias PeerDiscoveryTypes = _q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes;
+
+// type: Windows.Networking.Proximity.PeerFinder
+// static class
+public class PeerFinder
+{
+    private struct _IPeerFinderStatics {
+        static var x : IPeerFinderStatics =
+            try! RoGetActivationFactory("Windows.Networking.Proximity.PeerFinder")
+    }
+    public static var PeerFinderStatics : IPeerFinderStatics {
+        _IPeerFinderStatics.x
+    }
+    public static func get_AllowBluetooth() throws -> boolean {
+        return try PeerFinderStatics.get_AllowBluetooth();
+    }
+    public static func put_AllowBluetooth(value : boolean) throws -> Void {
+        return try PeerFinderStatics.put_AllowBluetooth(value: value);
+    }
+    public static func get_AllowInfrastructure() throws -> boolean {
+        return try PeerFinderStatics.get_AllowInfrastructure();
+    }
+    public static func put_AllowInfrastructure(value : boolean) throws -> Void {
+        return try PeerFinderStatics.put_AllowInfrastructure(value: value);
+    }
+    public static func get_AllowWiFiDirect() throws -> boolean {
+        return try PeerFinderStatics.get_AllowWiFiDirect();
+    }
+    public static func put_AllowWiFiDirect(value : boolean) throws -> Void {
+        return try PeerFinderStatics.put_AllowWiFiDirect(value: value);
+    }
+    public static func get_DisplayName() throws -> Optional<Swift.String> {
+        return try PeerFinderStatics.get_DisplayName();
+    }
+    public static func put_DisplayName(value : Swift.String) throws -> Void {
+        return try PeerFinderStatics.put_DisplayName(value: value);
+    }
+    public static func get_SupportedDiscoveryTypes() throws -> Windows.Networking.Proximity.PeerDiscoveryTypes {
+        return try PeerFinderStatics.get_SupportedDiscoveryTypes();
+    }
+    public static func get_AlternateIdentities() throws -> Optional<ClosedGenerics.IMap_2_HSTRING_HSTRING> {
+        return try PeerFinderStatics.get_AlternateIdentities();
+    }
+    public static func Start() throws -> Void {
+        return try PeerFinderStatics.Start();
+    }
+    public static func Start(peerMessage : Swift.String) throws -> Void {
+        return try PeerFinderStatics.StartWithMessage(peerMessage: peerMessage);
+    }
+    public static func Stop() throws -> Void {
+        return try PeerFinderStatics.Stop();
+    }
+    public static func add_TriggeredConnectionStateChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        return try PeerFinderStatics.add_TriggeredConnectionStateChanged(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(cb: handler).Interface());
+    }
+    public static func remove_TriggeredConnectionStateChanged(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        return try PeerFinderStatics.remove_TriggeredConnectionStateChanged(cookie: cookie);
+    }
+    public static func add_ConnectionRequested(handler : @escaping (Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.ConnectionRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        return try PeerFinderStatics.add_ConnectionRequested(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(cb: handler).Interface());
+    }
+    public static func remove_ConnectionRequested(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        return try PeerFinderStatics.remove_ConnectionRequested(cookie: cookie);
+    }
+    public static func FindAllPeersAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        return try PeerFinderStatics.FindAllPeersAsync();
+    }
+    public static func FindAllPeers() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.FindAllPeersAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func ConnectAsync(peerInformation : Optional<Windows.Networking.Proximity.PeerInformation>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket> {
+        return try PeerFinderStatics.ConnectAsync(peerInformation: peerInformation!.Interface());
+    }
+    public static func Connect(peerInformation : Optional<Windows.Networking.Proximity.PeerInformation>) async throws -> Optional<Windows.Networking.Sockets.StreamSocket> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Networking.Sockets.StreamSocket(plok: Self.ConnectAsync(peerInformation: peerInformation)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static var AllowBluetooth : boolean {
+        get throws {
+        return try PeerFinderStatics.AllowBluetooth;
+        }
+    }
+    public static var AllowInfrastructure : boolean {
+        get throws {
+        return try PeerFinderStatics.AllowInfrastructure;
+        }
+    }
+    public static var AllowWiFiDirect : boolean {
+        get throws {
+        return try PeerFinderStatics.AllowWiFiDirect;
+        }
+    }
+    public static var AlternateIdentities : Optional<ClosedGenerics.IMap_2_HSTRING_HSTRING> {
+        get throws {
+        return try PeerFinderStatics.AlternateIdentities;
+        }
+    }
+    public static var DisplayName : Optional<Swift.String> {
+        get throws {
+        return try PeerFinderStatics.DisplayName;
+        }
+    }
+    public static var SupportedDiscoveryTypes : Windows.Networking.Proximity.PeerDiscoveryTypes {
+        get throws {
+        return try PeerFinderStatics.SupportedDiscoveryTypes;
+        }
+    }
+    private struct _IPeerFinderStatics2 {
+        static var x : IPeerFinderStatics2 =
+            try! RoGetActivationFactory("Windows.Networking.Proximity.PeerFinder")
+    }
+    public static var PeerFinderStatics2 : IPeerFinderStatics2 {
+        _IPeerFinderStatics2.x
+    }
+    public static func get_Role() throws -> Windows.Networking.Proximity.PeerRole {
+        return try PeerFinderStatics2.get_Role();
+    }
+    public static func put_Role(value : Windows.Networking.Proximity.PeerRole) throws -> Void {
+        return try PeerFinderStatics2.put_Role(value: value);
+    }
+    public static func get_DiscoveryData() throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try PeerFinderStatics2.get_DiscoveryData();
+    }
+    public static func put_DiscoveryData(value : Optional<Windows.Storage.Streams.IBuffer>) throws -> Void {
+        return try PeerFinderStatics2.put_DiscoveryData(value: value);
+    }
+    public static func CreateWatcher() throws -> Optional<Windows.Networking.Proximity.PeerWatcher> {
+        return try Windows.Networking.Proximity.PeerWatcher(plok: PeerFinderStatics2.CreateWatcher());
+    }
+    public static var DiscoveryData : Optional<Windows.Storage.Streams.IBuffer> {
+        get throws {
+        return try PeerFinderStatics2.DiscoveryData;
+        }
+    }
+    public static var Role : Windows.Networking.Proximity.PeerRole {
+        get throws {
+        return try PeerFinderStatics2.Role;
+        }
+    }
+}
+
 // type: Windows.Networking.Proximity.PeerInformation
 // runtime class
 public class PeerInformation
@@ -1194,6 +1674,10 @@ public class PeerInformation
         }
     }
 }
+
+// type: Windows.Networking.Proximity.PeerRole
+// enum type
+public typealias PeerRole = _q_CWindows_CNetworking_CProximity_CPeerRole;
 
 // type: Windows.Networking.Proximity.PeerWatcher
 // runtime class
@@ -1485,6 +1969,40 @@ public class TriggeredConnectionStateChangedEventArgs
     }
 }
 
+}
+extension Windows.Networking.Proximity.PeerDiscoveryTypes {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes_None;
+        }
+    }
+    public static var Browse : Self {
+        get {
+            return _q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes_Browse;
+        }
+    }
+    public static var Triggered : Self {
+        get {
+            return _q_CWindows_CNetworking_CProximity_CPeerDiscoveryTypes_Triggered;
+        }
+    }
+}
+extension Windows.Networking.Proximity.PeerRole {
+    public static var Peer : Self {
+        get {
+            return _q_CWindows_CNetworking_CProximity_CPeerRole_Peer;
+        }
+    }
+    public static var Host : Self {
+        get {
+            return _q_CWindows_CNetworking_CProximity_CPeerRole_Host;
+        }
+    }
+    public static var Client : Self {
+        get {
+            return _q_CWindows_CNetworking_CProximity_CPeerRole_Client;
+        }
+    }
 }
 extension Windows.Networking.Proximity.PeerWatcherStatus {
     public static var Created : Self {

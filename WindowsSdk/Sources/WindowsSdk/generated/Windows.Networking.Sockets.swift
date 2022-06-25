@@ -2431,6 +2431,27 @@ open class ISocketActivityTriggerDetails
 } // ISocketActivityTriggerDetails
 
 
+// type: Windows.Networking.Sockets.ISocketErrorStatics
+// interface type
+open class ISocketErrorStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x828337f4, Data2: 0x7d56, Data3 : 0x4d8e, Data4 : (0xb7, 0xb4, 0xa0, 0x7d, 0xd7, 0xc1, 0xbc, 0xa9)) }
+    // Windows.Networking.Sockets.SocketErrorStatus GetStatus(System.Int32)
+    private func _n_GetStatus(_ hresult : INT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CSocketErrorStatus>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CSockets_CISocketErrorStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetStatus(pThis, hresult, __presult))
+        }
+    }
+    public func GetStatus(hresult : Swift.Int32) throws -> Windows.Networking.Sockets.SocketErrorStatus {
+        var __result : _q_CWindows_CNetworking_CSockets_CSocketErrorStatus = _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_Unknown;
+        try self._n_GetStatus(hresult, &__result);
+        return __result;
+    }
+} // ISocketErrorStatics
+
+
 // type: Windows.Networking.Sockets.IStreamSocket
 // interface type
 open class IStreamSocket
@@ -4178,6 +4199,27 @@ open class IWebSocketControl2
 } // IWebSocketControl2
 
 
+// type: Windows.Networking.Sockets.IWebSocketErrorStatics
+// interface type
+open class IWebSocketErrorStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x27cdf35b, Data2: 0x1f61, Data3 : 0x4709, Data4 : (0x8e, 0x02, 0x61, 0x28, 0x3a, 0xda, 0x4e, 0x9d)) }
+    // Windows.Web.WebErrorStatus GetStatus(System.Int32)
+    private func _n_GetStatus(_ hresult : INT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CWebErrorStatus>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CSockets_CIWebSocketErrorStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetStatus(pThis, hresult, __presult))
+        }
+    }
+    public func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.WebErrorStatus {
+        var __result : _q_CWindows_CWeb_CWebErrorStatus = _q_CWindows_CWeb_CWebErrorStatus_Unknown;
+        try self._n_GetStatus(hresult, &__result);
+        return __result;
+    }
+} // IWebSocketErrorStatics
+
+
 // type: Windows.Networking.Sockets.IWebSocketInformation
 // interface type
 open class IWebSocketInformation
@@ -5234,6 +5276,26 @@ public class SocketActivityTriggerDetails
 // type: Windows.Networking.Sockets.SocketActivityTriggerReason
 // enum type
 public typealias SocketActivityTriggerReason = _q_CWindows_CNetworking_CSockets_CSocketActivityTriggerReason;
+
+// type: Windows.Networking.Sockets.SocketError
+// static class
+public class SocketError
+{
+    private struct _ISocketErrorStatics {
+        static var x : ISocketErrorStatics =
+            try! RoGetActivationFactory("Windows.Networking.Sockets.SocketError")
+    }
+    public static var SocketErrorStatics : ISocketErrorStatics {
+        _ISocketErrorStatics.x
+    }
+    public static func GetStatus(hresult : Swift.Int32) throws -> Windows.Networking.Sockets.SocketErrorStatus {
+        return try SocketErrorStatics.GetStatus(hresult: hresult);
+    }
+}
+
+// type: Windows.Networking.Sockets.SocketErrorStatus
+// enum type
+public typealias SocketErrorStatus = _q_CWindows_CNetworking_CSockets_CSocketErrorStatus;
 
 // type: Windows.Networking.Sockets.SocketMessageType
 // enum type
@@ -6353,6 +6415,22 @@ public class WebSocketClosedEventArgs
     }
 }
 
+// type: Windows.Networking.Sockets.WebSocketError
+// static class
+public class WebSocketError
+{
+    private struct _IWebSocketErrorStatics {
+        static var x : IWebSocketErrorStatics =
+            try! RoGetActivationFactory("Windows.Networking.Sockets.WebSocketError")
+    }
+    public static var WebSocketErrorStatics : IWebSocketErrorStatics {
+        _IWebSocketErrorStatics.x
+    }
+    public static func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.WebErrorStatus {
+        return try WebSocketErrorStatics.GetStatus(hresult: hresult);
+    }
+}
+
 // type: Windows.Networking.Sockets.WebSocketKeepAlive
 // runtime class
 public class WebSocketKeepAlive
@@ -6557,6 +6635,163 @@ extension Windows.Networking.Sockets.SocketActivityTriggerReason {
     public static var SocketClosed : Self {
         get {
             return _q_CWindows_CNetworking_CSockets_CSocketActivityTriggerReason_SocketClosed;
+        }
+    }
+}
+extension Windows.Networking.Sockets.SocketErrorStatus {
+    public static var Unknown : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_Unknown;
+        }
+    }
+    public static var OperationAborted : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_OperationAborted;
+        }
+    }
+    public static var HttpInvalidServerResponse : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_HttpInvalidServerResponse;
+        }
+    }
+    public static var ConnectionTimedOut : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_ConnectionTimedOut;
+        }
+    }
+    public static var AddressFamilyNotSupported : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_AddressFamilyNotSupported;
+        }
+    }
+    public static var SocketTypeNotSupported : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_SocketTypeNotSupported;
+        }
+    }
+    public static var HostNotFound : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_HostNotFound;
+        }
+    }
+    public static var NoDataRecordOfRequestedType : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_NoDataRecordOfRequestedType;
+        }
+    }
+    public static var NonAuthoritativeHostNotFound : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_NonAuthoritativeHostNotFound;
+        }
+    }
+    public static var ClassTypeNotFound : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_ClassTypeNotFound;
+        }
+    }
+    public static var AddressAlreadyInUse : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_AddressAlreadyInUse;
+        }
+    }
+    public static var CannotAssignRequestedAddress : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CannotAssignRequestedAddress;
+        }
+    }
+    public static var ConnectionRefused : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_ConnectionRefused;
+        }
+    }
+    public static var NetworkIsUnreachable : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_NetworkIsUnreachable;
+        }
+    }
+    public static var UnreachableHost : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_UnreachableHost;
+        }
+    }
+    public static var NetworkIsDown : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_NetworkIsDown;
+        }
+    }
+    public static var NetworkDroppedConnectionOnReset : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_NetworkDroppedConnectionOnReset;
+        }
+    }
+    public static var SoftwareCausedConnectionAbort : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_SoftwareCausedConnectionAbort;
+        }
+    }
+    public static var ConnectionResetByPeer : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_ConnectionResetByPeer;
+        }
+    }
+    public static var HostIsDown : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_HostIsDown;
+        }
+    }
+    public static var NoAddressesFound : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_NoAddressesFound;
+        }
+    }
+    public static var TooManyOpenFiles : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_TooManyOpenFiles;
+        }
+    }
+    public static var MessageTooLong : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_MessageTooLong;
+        }
+    }
+    public static var CertificateExpired : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateExpired;
+        }
+    }
+    public static var CertificateUntrustedRoot : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateUntrustedRoot;
+        }
+    }
+    public static var CertificateCommonNameIsIncorrect : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateCommonNameIsIncorrect;
+        }
+    }
+    public static var CertificateWrongUsage : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateWrongUsage;
+        }
+    }
+    public static var CertificateRevoked : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateRevoked;
+        }
+    }
+    public static var CertificateNoRevocationCheck : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateNoRevocationCheck;
+        }
+    }
+    public static var CertificateRevocationServerOffline : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateRevocationServerOffline;
+        }
+    }
+    public static var CertificateIsInvalid : Self {
+        get {
+            return _q_CWindows_CNetworking_CSockets_CSocketErrorStatus_CertificateIsInvalid;
         }
     }
 }

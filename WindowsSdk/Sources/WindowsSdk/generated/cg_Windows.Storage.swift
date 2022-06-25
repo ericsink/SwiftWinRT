@@ -1885,6 +1885,154 @@ public class IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
 // method not needed: IndexOf
 // method not needed: GetMany
 } // IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
+// closed interface type
+public class IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd7f094b5, Data2: 0x0ea2, Data3 : 0x5654, Data4 : (0x85, 0xb9, 0x38, 0xee, 0x5d, 0xe9, 0x0f, 0xfa)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.KnownFoldersAccessStatus>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.KnownFoldersAccessStatus> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(consuming: __result);
+    }
+    // Windows.Storage.KnownFoldersAccessStatus GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CKnownFoldersAccessStatus>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Windows.Storage.KnownFoldersAccessStatus {
+        var __result : _q_CWindows_CStorage_CKnownFoldersAccessStatus = _q_CWindows_CStorage_CKnownFoldersAccessStatus_DeniedBySystem;
+        try self._n_GetResults(&__result);
+        return __result;
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa2f87fc6, Data2: 0x4ea5, Data3 : 0x58cf, Data4 : (0x94, 0x90, 0x18, 0x16, 0x04, 0xfb, 0xd6, 0xa2)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Storage.KnownFoldersAccessStatus>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatusVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem {
@@ -2167,6 +2315,35 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
             let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
+}
+extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Windows.Storage.KnownFoldersAccessStatus {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

@@ -191,6 +191,55 @@ public class DocumentProperties
     }
 }
 
+// type: Windows.Storage.FileProperties.GeotagHelper
+// static class
+public class GeotagHelper
+{
+    private struct _IGeotagHelperStatics {
+        static var x : IGeotagHelperStatics =
+            try! RoGetActivationFactory("Windows.Storage.FileProperties.GeotagHelper")
+    }
+    public static var GeotagHelperStatics : IGeotagHelperStatics {
+        _IGeotagHelperStatics.x
+    }
+    public static func GetGeotagAsync(file : Optional<Windows.Storage.IStorageFile>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CDevices_CGeolocation_CGeopoint> {
+        return try GeotagHelperStatics.GetGeotagAsync(file: file);
+    }
+    public static func GetGeotag(file : Optional<Windows.Storage.IStorageFile>) async throws -> Optional<Windows.Devices.Geolocation.Geopoint> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Devices.Geolocation.Geopoint(plok: Self.GetGeotagAsync(file: file)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func SetGeotagFromGeolocatorAsync(file : Optional<Windows.Storage.IStorageFile>, geolocator : Optional<Windows.Devices.Geolocation.Geolocator>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        return try GeotagHelperStatics.SetGeotagFromGeolocatorAsync(file: file, geolocator: geolocator!.Interface());
+    }
+    public static func SetGeotagFromGeolocator(file : Optional<Windows.Storage.IStorageFile>, geolocator : Optional<Windows.Devices.Geolocation.Geolocator>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.SetGeotagFromGeolocatorAsync(file: file, geolocator: geolocator)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func SetGeotagAsync(file : Optional<Windows.Storage.IStorageFile>, geopoint : Optional<Windows.Devices.Geolocation.Geopoint>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        return try GeotagHelperStatics.SetGeotagAsync(file: file, geopoint: geopoint!.Interface());
+    }
+    public static func SetGeotag(file : Optional<Windows.Storage.IStorageFile>, geopoint : Optional<Windows.Devices.Geolocation.Geopoint>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.SetGeotagAsync(file: file, geopoint: geopoint)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
 // type: Windows.Storage.FileProperties.IBasicProperties
 // interface type
 open class IBasicProperties
@@ -345,6 +394,76 @@ open class IDocumentProperties
         }
     }
 } // IDocumentProperties
+
+
+// type: Windows.Storage.FileProperties.IGeotagHelperStatics
+// interface type
+open class IGeotagHelperStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41493244, Data2: 0x2524, Data3 : 0x4655, Data4 : (0x86, 0xa6, 0xed, 0x16, 0xf5, 0xfc, 0x71, 0x6b)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Devices.Geolocation.Geopoint> GetGeotagAsync(Windows.Storage.IStorageFile)
+    private func _n_GetGeotagAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CDevices_CGeolocation_CGeopoint>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetGeotagAsync(pThis, file, __presult))
+        }
+    }
+    public func GetGeotagAsync(file : Optional<Windows.Storage.IStorageFile>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CDevices_CGeolocation_CGeopoint> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CDevices_CGeolocation_CGeopoint>> = nil;
+        try self._n_GetGeotagAsync(RawPointer(file), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CDevices_CGeolocation_CGeopoint(consuming: __result);
+    }
+    public func GetGeotag(file : Optional<Windows.Storage.IStorageFile>) async throws -> Optional<Windows.Devices.Geolocation.IGeopoint> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetGeotagAsync(file: file)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction SetGeotagFromGeolocatorAsync(Windows.Storage.IStorageFile, Windows.Devices.Geolocation.Geolocator)
+    private func _n_SetGeotagFromGeolocatorAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ geolocator : Optional<UnsafeMutablePointer<_q_CWindows_CDevices_CGeolocation_CIGeolocator>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetGeotagFromGeolocatorAsync(pThis, file, geolocator, __presult))
+        }
+    }
+    public func SetGeotagFromGeolocatorAsync(file : Optional<Windows.Storage.IStorageFile>, geolocator : Optional<Windows.Devices.Geolocation.IGeolocator>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SetGeotagFromGeolocatorAsync(RawPointer(file), RawPointer(geolocator), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func SetGeotagFromGeolocator(file : Optional<Windows.Storage.IStorageFile>, geolocator : Optional<Windows.Devices.Geolocation.IGeolocator>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SetGeotagFromGeolocatorAsync(file: file, geolocator: geolocator)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction SetGeotagAsync(Windows.Storage.IStorageFile, Windows.Devices.Geolocation.Geopoint)
+    private func _n_SetGeotagAsync(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ geopoint : Optional<UnsafeMutablePointer<_q_CWindows_CDevices_CGeolocation_CIGeopoint>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CFileProperties_CIGeotagHelperStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetGeotagAsync(pThis, file, geopoint, __presult))
+        }
+    }
+    public func SetGeotagAsync(file : Optional<Windows.Storage.IStorageFile>, geopoint : Optional<Windows.Devices.Geolocation.IGeopoint>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SetGeotagAsync(RawPointer(file), RawPointer(geopoint), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func SetGeotag(file : Optional<Windows.Storage.IStorageFile>, geopoint : Optional<Windows.Devices.Geolocation.IGeopoint>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SetGeotagAsync(file: file, geopoint: geopoint)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IGeotagHelperStatics
 
 
 // type: Windows.Storage.FileProperties.IImageProperties

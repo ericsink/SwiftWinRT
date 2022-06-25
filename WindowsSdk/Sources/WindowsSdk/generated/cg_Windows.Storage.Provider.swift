@@ -533,4 +533,211 @@ public class IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderFileTy
 // method not needed: IndexOf
 // method not needed: GetMany
 } // IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderFileTypeInfo
+// closed interface type
+public class IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8f0f439e, Data2: 0x87d0, Data3 : 0x531f, Data4 : (0x85, 0xb1, 0x54, 0xf4, 0x52, 0x8f, 0x29, 0xc3)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Provider.FileUpdateStatus>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Storage.Provider.FileUpdateStatus> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(consuming: __result);
+    }
+    // Windows.Storage.Provider.FileUpdateStatus GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CFileUpdateStatus>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Windows.Storage.Provider.FileUpdateStatus {
+        var __result : _q_CWindows_CStorage_CProvider_CFileUpdateStatus = _q_CWindows_CStorage_CProvider_CFileUpdateStatus_Incomplete;
+        try self._n_GetResults(&__result);
+        return __result;
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbb185a07, Data2: 0x0285, Data3 : 0x5f37, Data4 : (0x9c, 0x7d, 0x2f, 0xc6, 0xa3, 0xe0, 0xe6, 0xe5)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Storage.Provider.FileUpdateStatus>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatusVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus {
+        return _self
+    }
+}
+// closed interface type
+public class IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4584cb69, Data2: 0xee26, Data3 : 0x59e0, Data4 : (0xb0, 0x5d, 0xc9, 0xa7, 0x85, 0x1a, 0x73, 0x17)) }
+// method not needed: First
+} // IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty
+// closed interface type
+public class IIterator_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0c6dddde, Data2: 0x1aa3, Data3 : 0x54f5, Data4 : (0xb1, 0x39, 0xe4, 0xa2, 0x37, 0xdc, 0x1c, 0x5f)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__q_CWindows_CStorage_CProvider_CStorageProviderItemProperty
+// closed interface type
+public class IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x211521e5, Data2: 0x217c, Data3 : 0x5ff3, Data4 : (0xbf, 0x9e, 0x8d, 0xc4, 0xd6, 0x75, 0x17, 0x7f)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo
+}
+extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Windows.Storage.Provider.FileUpdateStatus {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
 }

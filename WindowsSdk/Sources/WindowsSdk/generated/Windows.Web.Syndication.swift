@@ -456,6 +456,27 @@ open class ISyndicationContentFactory
 } // ISyndicationContentFactory
 
 
+// type: Windows.Web.Syndication.ISyndicationErrorStatics
+// interface type
+open class ISyndicationErrorStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1fbb2361, Data2: 0x45c7, Data3 : 0x4833, Data4 : (0x8a, 0xa0, 0xbe, 0x5f, 0x3b, 0x58, 0xa7, 0xf4)) }
+    // Windows.Web.Syndication.SyndicationErrorStatus GetStatus(System.Int32)
+    private func _n_GetStatus(_ hresult : INT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CSyndication_CISyndicationErrorStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetStatus(pThis, hresult, __presult))
+        }
+    }
+    public func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.Syndication.SyndicationErrorStatus {
+        var __result : _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus = _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_Unknown;
+        try self._n_GetStatus(hresult, &__result);
+        return __result;
+    }
+} // ISyndicationErrorStatics
+
+
 // type: Windows.Web.Syndication.ISyndicationFeed
 // interface type
 open class ISyndicationFeed
@@ -2589,6 +2610,26 @@ public class SyndicationContent
     }
 }
 
+// type: Windows.Web.Syndication.SyndicationError
+// static class
+public class SyndicationError
+{
+    private struct _ISyndicationErrorStatics {
+        static var x : ISyndicationErrorStatics =
+            try! RoGetActivationFactory("Windows.Web.Syndication.SyndicationError")
+    }
+    public static var SyndicationErrorStatics : ISyndicationErrorStatics {
+        _ISyndicationErrorStatics.x
+    }
+    public static func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.Syndication.SyndicationErrorStatus {
+        return try SyndicationErrorStatics.GetStatus(hresult: hresult);
+    }
+}
+
+// type: Windows.Web.Syndication.SyndicationErrorStatus
+// enum type
+public typealias SyndicationErrorStatus = _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus;
+
 // type: Windows.Web.Syndication.SyndicationFeed
 // runtime class
 public class SyndicationFeed
@@ -4079,6 +4120,38 @@ public typealias SyndicationTextType = _q_CWindows_CWeb_CSyndication_CSyndicatio
 // struct type
 public typealias TransferProgress = _q_CWindows_CWeb_CSyndication_CTransferProgress;
 
+}
+extension Windows.Web.Syndication.SyndicationErrorStatus {
+    public static var Unknown : Self {
+        get {
+            return _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_Unknown;
+        }
+    }
+    public static var MissingRequiredElement : Self {
+        get {
+            return _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_MissingRequiredElement;
+        }
+    }
+    public static var MissingRequiredAttribute : Self {
+        get {
+            return _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_MissingRequiredAttribute;
+        }
+    }
+    public static var InvalidXml : Self {
+        get {
+            return _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_InvalidXml;
+        }
+    }
+    public static var UnexpectedContent : Self {
+        get {
+            return _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_UnexpectedContent;
+        }
+    }
+    public static var UnsupportedFormat : Self {
+        get {
+            return _q_CWindows_CWeb_CSyndication_CSyndicationErrorStatus_UnsupportedFormat;
+        }
+    }
 }
 extension Windows.Web.Syndication.SyndicationFormat {
     public static var Atom10 : Self {

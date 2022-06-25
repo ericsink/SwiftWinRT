@@ -260,6 +260,111 @@ open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNot
         return _self
     }
 }
+// closed generic delegate type
+public class IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7d4309e7, Data2: 0xb3ca, Data3 : 0x5fde, Data4 : (0x9b, 0x37, 0xbe, 0x32, 0x3a, 0xdb, 0x37, 0x0f)) }
+    // [IsSpecialName] void Invoke(System.Object, Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelsRevokedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
+// impl delegate type
+open class EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelsRevokedEventArgs>>) in
+        guard let self = EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.from_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs(plok: Windows.Networking.PushNotifications.IPushNotificationChannelsRevokedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs? {
+        return pUnk?.bindMemory(to: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
+{
+    private var _self : ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs;
+    public init(plok: ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs {
+        return _self
+    }
+}
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel {

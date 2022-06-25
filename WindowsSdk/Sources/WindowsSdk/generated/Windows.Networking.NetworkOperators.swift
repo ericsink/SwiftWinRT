@@ -324,6 +324,36 @@ public class ESimDownloadProfileMetadataResult
     }
 }
 
+// type: Windows.Networking.NetworkOperators.ESimManager
+// static class
+public class ESimManager
+{
+    private struct _IESimManagerStatics {
+        static var x : IESimManagerStatics =
+            try! RoGetActivationFactory("Windows.Networking.NetworkOperators.ESimManager")
+    }
+    public static var ESimManagerStatics : IESimManagerStatics {
+        _IESimManagerStatics.x
+    }
+    public static func get_ServiceInfo() throws -> Optional<Windows.Networking.NetworkOperators.ESimServiceInfo> {
+        return try Windows.Networking.NetworkOperators.ESimServiceInfo(plok: ESimManagerStatics.get_ServiceInfo());
+    }
+    public static func TryCreateESimWatcher() throws -> Optional<Windows.Networking.NetworkOperators.ESimWatcher> {
+        return try Windows.Networking.NetworkOperators.ESimWatcher(plok: ESimManagerStatics.TryCreateESimWatcher());
+    }
+    public static func add_ServiceInfoChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        return try ESimManagerStatics.add_ServiceInfoChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+    }
+    public static func remove_ServiceInfoChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        return try ESimManagerStatics.remove_ServiceInfoChanged(token: token);
+    }
+    public static var ServiceInfo : Optional<Windows.Networking.NetworkOperators.ESimServiceInfo> {
+        get throws {
+        return try Windows.Networking.NetworkOperators.ESimServiceInfo(plok: ESimManagerStatics.ServiceInfo);
+        }
+    }
+}
+
 // type: Windows.Networking.NetworkOperators.ESimOperationResult
 // runtime class
 public class ESimOperationResult
@@ -1532,6 +1562,63 @@ open class IESimDownloadProfileMetadataResult
 } // IESimDownloadProfileMetadataResult
 
 
+// type: Windows.Networking.NetworkOperators.IESimManagerStatics
+// interface type
+open class IESimManagerStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0bfa2c0c, Data2: 0xdf88, Data3 : 0x4631, Data4 : (0xbf, 0x04, 0xc1, 0x2e, 0x28, 0x1b, 0x39, 0x62)) }
+    // [IsSpecialName] Windows.Networking.NetworkOperators.ESimServiceInfo get_ServiceInfo()
+    private func _n_get_ServiceInfo(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimServiceInfo>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIESimManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ServiceInfo(pThis, __presult))
+        }
+    }
+    public func get_ServiceInfo() throws -> Optional<Windows.Networking.NetworkOperators.IESimServiceInfo> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimServiceInfo>> = nil;
+        try self._n_get_ServiceInfo(&__result);
+        return Windows.Networking.NetworkOperators.IESimServiceInfo(consuming: __result);
+    }
+    // Windows.Networking.NetworkOperators.ESimWatcher TryCreateESimWatcher()
+    private func _n_TryCreateESimWatcher(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimWatcher>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIESimManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.TryCreateESimWatcher(pThis, __presult))
+        }
+    }
+    public func TryCreateESimWatcher() throws -> Optional<Windows.Networking.NetworkOperators.IESimWatcher> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimWatcher>> = nil;
+        try self._n_TryCreateESimWatcher(&__result);
+        return Windows.Networking.NetworkOperators.IESimWatcher(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ServiceInfoChanged(Windows.Foundation.EventHandler<System.Object>)
+    private func _n_add_ServiceInfoChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IEventHandler_1_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIESimManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ServiceInfoChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_ServiceInfoChanged(handler : Optional<ClosedGenerics.IEventHandler_1_IInspectable>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ServiceInfoChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ServiceInfoChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ServiceInfoChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIESimManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ServiceInfoChanged(pThis, token))
+        }
+    }
+    public func remove_ServiceInfoChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ServiceInfoChanged(token);
+    }
+    public var ServiceInfo : Optional<Windows.Networking.NetworkOperators.IESimServiceInfo> {
+        get throws {
+            return try get_ServiceInfo();
+        }
+    }
+} // IESimManagerStatics
+
+
 // type: Windows.Networking.NetworkOperators.IESimOperationResult
 // interface type
 open class IESimOperationResult
@@ -2611,6 +2698,286 @@ open class IHotspotCredentialsAuthenticationResult
         }
     }
 } // IHotspotCredentialsAuthenticationResult
+
+
+// type: Windows.Networking.NetworkOperators.IKnownCSimFilePathsStatics
+// interface type
+open class IKnownCSimFilePathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb458aeed, Data2: 0x49f1, Data3 : 0x4c22, Data4 : (0xb0, 0x73, 0x96, 0xd5, 0x11, 0xbf, 0x9c, 0x35)) }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFSpn()
+    private func _n_get_EFSpn(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownCSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFSpn(pThis, __presult))
+        }
+    }
+    public func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFSpn(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid1()
+    private func _n_get_Gid1(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownCSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid1(pThis, __presult))
+        }
+    }
+    public func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid1(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid2()
+    private func _n_get_Gid2(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownCSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid2(pThis, __presult))
+        }
+    }
+    public func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid2(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    public var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFSpn();
+        }
+    }
+    public var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid1();
+        }
+    }
+    public var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid2();
+        }
+    }
+} // IKnownCSimFilePathsStatics
+
+
+// type: Windows.Networking.NetworkOperators.IKnownRuimFilePathsStatics
+// interface type
+open class IKnownRuimFilePathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3883c8b9, Data2: 0xff24, Data3 : 0x4571, Data4 : (0xa8, 0x67, 0x09, 0xf9, 0x60, 0x42, 0x6e, 0x14)) }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFSpn()
+    private func _n_get_EFSpn(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownRuimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFSpn(pThis, __presult))
+        }
+    }
+    public func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFSpn(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid1()
+    private func _n_get_Gid1(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownRuimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid1(pThis, __presult))
+        }
+    }
+    public func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid1(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid2()
+    private func _n_get_Gid2(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownRuimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid2(pThis, __presult))
+        }
+    }
+    public func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid2(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    public var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFSpn();
+        }
+    }
+    public var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid1();
+        }
+    }
+    public var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid2();
+        }
+    }
+} // IKnownRuimFilePathsStatics
+
+
+// type: Windows.Networking.NetworkOperators.IKnownSimFilePathsStatics
+// interface type
+open class IKnownSimFilePathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x80cd1a63, Data2: 0x37a5, Data3 : 0x43d3, Data4 : (0x80, 0xa3, 0xcc, 0xd2, 0x3e, 0x8f, 0xec, 0xee)) }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFOns()
+    private func _n_get_EFOns(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFOns(pThis, __presult))
+        }
+    }
+    public func get_EFOns() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFOns(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFSpn()
+    private func _n_get_EFSpn(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFSpn(pThis, __presult))
+        }
+    }
+    public func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFSpn(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid1()
+    private func _n_get_Gid1(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid1(pThis, __presult))
+        }
+    }
+    public func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid1(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid2()
+    private func _n_get_Gid2(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid2(pThis, __presult))
+        }
+    }
+    public func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid2(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    public var EFOns : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFOns();
+        }
+    }
+    public var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFSpn();
+        }
+    }
+    public var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid1();
+        }
+    }
+    public var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid2();
+        }
+    }
+} // IKnownSimFilePathsStatics
+
+
+// type: Windows.Networking.NetworkOperators.IKnownUSimFilePathsStatics
+// interface type
+open class IKnownUSimFilePathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7c34e581, Data2: 0x1f1b, Data3 : 0x43f4, Data4 : (0x95, 0x30, 0x8b, 0x09, 0x2d, 0x32, 0xd7, 0x1f)) }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFSpn()
+    private func _n_get_EFSpn(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownUSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFSpn(pThis, __presult))
+        }
+    }
+    public func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFSpn(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFOpl()
+    private func _n_get_EFOpl(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownUSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFOpl(pThis, __presult))
+        }
+    }
+    public func get_EFOpl() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFOpl(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_EFPnn()
+    private func _n_get_EFPnn(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownUSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EFPnn(pThis, __presult))
+        }
+    }
+    public func get_EFPnn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_EFPnn(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid1()
+    private func _n_get_Gid1(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownUSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid1(pThis, __presult))
+        }
+    }
+    public func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid1(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<System.UInt32> get_Gid2()
+    private func _n_get_Gid2(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CNetworkOperators_CIKnownUSimFilePathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Gid2(pThis, __presult))
+        }
+    }
+    public func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_UINT32>> = nil;
+        try self._n_get_Gid2(&__result);
+        return ClosedGenerics.IVectorView_1_UINT32(consuming: __result);
+    }
+    public var EFOpl : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFOpl();
+        }
+    }
+    public var EFPnn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFPnn();
+        }
+    }
+    public var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_EFSpn();
+        }
+    }
+    public var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid1();
+        }
+    }
+    public var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+            return try get_Gid2();
+        }
+    }
+} // IKnownUSimFilePathsStatics
 
 
 // type: Windows.Networking.NetworkOperators.IMobileBroadbandAccount
@@ -8148,6 +8515,178 @@ open class IUssdSessionStatics
     }
 } // IUssdSessionStatics
 
+
+// type: Windows.Networking.NetworkOperators.KnownCSimFilePaths
+// static class
+public class KnownCSimFilePaths
+{
+    private struct _IKnownCSimFilePathsStatics {
+        static var x : IKnownCSimFilePathsStatics =
+            try! RoGetActivationFactory("Windows.Networking.NetworkOperators.KnownCSimFilePaths")
+    }
+    public static var KnownCSimFilePathsStatics : IKnownCSimFilePathsStatics {
+        _IKnownCSimFilePathsStatics.x
+    }
+    public static func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownCSimFilePathsStatics.get_EFSpn();
+    }
+    public static func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownCSimFilePathsStatics.get_Gid1();
+    }
+    public static func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownCSimFilePathsStatics.get_Gid2();
+    }
+    public static var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownCSimFilePathsStatics.EFSpn;
+        }
+    }
+    public static var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownCSimFilePathsStatics.Gid1;
+        }
+    }
+    public static var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownCSimFilePathsStatics.Gid2;
+        }
+    }
+}
+
+// type: Windows.Networking.NetworkOperators.KnownRuimFilePaths
+// static class
+public class KnownRuimFilePaths
+{
+    private struct _IKnownRuimFilePathsStatics {
+        static var x : IKnownRuimFilePathsStatics =
+            try! RoGetActivationFactory("Windows.Networking.NetworkOperators.KnownRuimFilePaths")
+    }
+    public static var KnownRuimFilePathsStatics : IKnownRuimFilePathsStatics {
+        _IKnownRuimFilePathsStatics.x
+    }
+    public static func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownRuimFilePathsStatics.get_EFSpn();
+    }
+    public static func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownRuimFilePathsStatics.get_Gid1();
+    }
+    public static func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownRuimFilePathsStatics.get_Gid2();
+    }
+    public static var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownRuimFilePathsStatics.EFSpn;
+        }
+    }
+    public static var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownRuimFilePathsStatics.Gid1;
+        }
+    }
+    public static var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownRuimFilePathsStatics.Gid2;
+        }
+    }
+}
+
+// type: Windows.Networking.NetworkOperators.KnownSimFilePaths
+// static class
+public class KnownSimFilePaths
+{
+    private struct _IKnownSimFilePathsStatics {
+        static var x : IKnownSimFilePathsStatics =
+            try! RoGetActivationFactory("Windows.Networking.NetworkOperators.KnownSimFilePaths")
+    }
+    public static var KnownSimFilePathsStatics : IKnownSimFilePathsStatics {
+        _IKnownSimFilePathsStatics.x
+    }
+    public static func get_EFOns() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownSimFilePathsStatics.get_EFOns();
+    }
+    public static func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownSimFilePathsStatics.get_EFSpn();
+    }
+    public static func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownSimFilePathsStatics.get_Gid1();
+    }
+    public static func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownSimFilePathsStatics.get_Gid2();
+    }
+    public static var EFOns : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownSimFilePathsStatics.EFOns;
+        }
+    }
+    public static var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownSimFilePathsStatics.EFSpn;
+        }
+    }
+    public static var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownSimFilePathsStatics.Gid1;
+        }
+    }
+    public static var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownSimFilePathsStatics.Gid2;
+        }
+    }
+}
+
+// type: Windows.Networking.NetworkOperators.KnownUSimFilePaths
+// static class
+public class KnownUSimFilePaths
+{
+    private struct _IKnownUSimFilePathsStatics {
+        static var x : IKnownUSimFilePathsStatics =
+            try! RoGetActivationFactory("Windows.Networking.NetworkOperators.KnownUSimFilePaths")
+    }
+    public static var KnownUSimFilePathsStatics : IKnownUSimFilePathsStatics {
+        _IKnownUSimFilePathsStatics.x
+    }
+    public static func get_EFSpn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownUSimFilePathsStatics.get_EFSpn();
+    }
+    public static func get_EFOpl() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownUSimFilePathsStatics.get_EFOpl();
+    }
+    public static func get_EFPnn() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownUSimFilePathsStatics.get_EFPnn();
+    }
+    public static func get_Gid1() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownUSimFilePathsStatics.get_Gid1();
+    }
+    public static func get_Gid2() throws -> Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        return try KnownUSimFilePathsStatics.get_Gid2();
+    }
+    public static var EFOpl : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownUSimFilePathsStatics.EFOpl;
+        }
+    }
+    public static var EFPnn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownUSimFilePathsStatics.EFPnn;
+        }
+    }
+    public static var EFSpn : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownUSimFilePathsStatics.EFSpn;
+        }
+    }
+    public static var Gid1 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownUSimFilePathsStatics.Gid1;
+        }
+    }
+    public static var Gid2 : Optional<ClosedGenerics.IVectorView_1_UINT32> {
+        get throws {
+        return try KnownUSimFilePathsStatics.Gid2;
+        }
+    }
+}
 
 // type: Windows.Networking.NetworkOperators.MobileBroadbandAccount
 // runtime class

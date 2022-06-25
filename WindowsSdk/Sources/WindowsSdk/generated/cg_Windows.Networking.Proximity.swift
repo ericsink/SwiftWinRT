@@ -217,4 +217,402 @@ open class foo_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatch
         return _self
     }
 }
+// closed generic delegate type
+public class ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2e5ad6fa, Data2: 0x3ca6, Data3 : 0x5518, Data4 : (0xbd, 0x4d, 0xfe, 0xfc, 0x45, 0x35, 0x58, 0x0e)) }
+    // [IsSpecialName] void Invoke(System.Object, Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
+// impl delegate type
+open class TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CITriggeredConnectionStateChangedEventArgs>>) in
+        guard let self = TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs.from_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs(plok: Windows.Networking.Proximity.ITriggeredConnectionStateChangedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs {
+        return _self
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x512c383c, Data2: 0x8b29, Data3 : 0x5079, Data4 : (0x95, 0x3e, 0x8d, 0xee, 0x8f, 0x8a, 0x82, 0x24)) }
+    // [IsSpecialName] void Invoke(System.Object, Windows.Networking.Proximity.ConnectionRequestedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, args : Optional<Windows.Networking.Proximity.IConnectionRequestedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
+// impl delegate type
+open class TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIConnectionRequestedEventArgs>>) in
+        guard let self = TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs.from_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), args: Windows.Networking.Proximity.ConnectionRequestedEventArgs(plok: Windows.Networking.Proximity.IConnectionRequestedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.ConnectionRequestedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.ConnectionRequestedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.Proximity.ConnectionRequestedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.Proximity.ConnectionRequestedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs {
+        return _self
+    }
+}
+// closed interface type
+public class IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa36ec4bc, Data2: 0x607a, Data3 : 0x5180, Data4 : (0xa7, 0x85, 0x40, 0x42, 0xf8, 0x79, 0x5c, 0x8b)) }
+    // [IsSpecialName] void put_Completed(Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>>)
+    private func _n_put_Completed(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Completed(pThis, handler))
+        }
+    }
+    public func put_Completed(handler : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>) throws -> Void {
+        try self._n_put_Completed(RawPointer(handler));
+    }
+    // [IsSpecialName] Windows.Foundation.AsyncOperationCompletedHandler<Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>> get_Completed()
+    private func _n_get_Completed(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Completed(pThis, __presult))
+        }
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>> = nil;
+        try self._n_get_Completed(&__result);
+        return ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(consuming: __result);
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation> GetResults()
+    private func _n_GetResults(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetResults(pThis, __presult))
+        }
+    }
+    public func GetResults() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>> = nil;
+        try self._n_GetResults(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(consuming: __result);
+    }
+    public var Completed : Optional<ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+        get throws {
+            return try get_Completed();
+        }
+    }
+} // IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+// closed generic delegate type
+public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xecf90f2c, Data2: 0xe3f4, Data3 : 0x5b62, Data4 : (0xa0, 0x66, 0x8b, 0x9c, 0x81, 0x8f, 0xd4, 0x1a)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Proximity.PeerInformation>>, Windows.Foundation.AsyncStatus)
+    private func _n_Invoke(_ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) throws {
+        return try perform(as: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, asyncInfo, asyncStatus))
+        }
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        try self._n_Invoke(RawPointer(asyncInfo), asyncStatus);
+    }
+} // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+// impl delegate type
+open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+{
+    private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformationVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
+        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(asyncInfo), asyncStatus: asyncStatus)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>, Windows.Foundation.AsyncStatus) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>, Windows.Foundation.AsyncStatus) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation? {
+        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        if let cb = _cb {
+            return try cb(asyncInfo, asyncStatus)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+{
+    private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation;
+    public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation?) throws {
+        _self = plok!
+    }
+    public func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
+        return try _self.Invoke(asyncInfo: asyncInfo, asyncStatus: asyncStatus);
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation {
+        return _self
+    }
+}
+// closed interface type
+public class IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x948f92bc, Data2: 0x2a05, Data3 : 0x5c80, Data4 : (0x95, 0xf2, 0x96, 0xfe, 0x34, 0x58, 0x52, 0xcc)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+}
+extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation : WinRT.Future {
+    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation {
+        private var hEvent: HANDLE
+        public init(signal event: HANDLE) {
+            self.hEvent = event
+            super.init()
+        }
+        override func Invoke(asyncInfo: ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation?,
+            asyncStatus: Windows.Foundation.AsyncStatus) throws {
+            _ = SetEvent(self.hEvent)
+        }
+}
+        public func get() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation> {
+            let info: Windows.Foundation.IAsyncInfo = try QueryInterface()
+            if try info.get_Status() == Windows.Foundation.AsyncStatus.Started {
+            let event: HANDLE =
+            CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
+            // TODO(compnerd) validate event
+            defer { _ = CloseHandle(event) }
+            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation =
+            MyCompletedHandler(signal: event)
+            try withExtendedLifetime(completion) {
+            try self.put_Completed(handler: completion.Interface())
+            _ = WaitForSingleObject(event, INFINITE)
+            }
+        }
+        return try self.GetResults();
+        }
 }

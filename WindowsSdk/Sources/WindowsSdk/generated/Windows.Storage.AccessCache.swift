@@ -60,6 +60,80 @@ open class IItemRemovedEventArgs
 } // IItemRemovedEventArgs
 
 
+// type: Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics
+// interface type
+open class IStorageApplicationPermissionsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4391dfaa, Data2: 0xd033, Data3 : 0x48f9, Data4 : (0x80, 0x60, 0x3e, 0xc8, 0x47, 0xd2, 0xe3, 0xf1)) }
+    // [IsSpecialName] Windows.Storage.AccessCache.StorageItemAccessList get_FutureAccessList()
+    private func _n_get_FutureAccessList(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemAccessList>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FutureAccessList(pThis, __presult))
+        }
+    }
+    public func get_FutureAccessList() throws -> Optional<Windows.Storage.AccessCache.IStorageItemAccessList> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemAccessList>> = nil;
+        try self._n_get_FutureAccessList(&__result);
+        return Windows.Storage.AccessCache.IStorageItemAccessList(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList get_MostRecentlyUsedList()
+    private func _n_get_MostRecentlyUsedList(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MostRecentlyUsedList(pThis, __presult))
+        }
+    }
+    public func get_MostRecentlyUsedList() throws -> Optional<Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList>> = nil;
+        try self._n_get_MostRecentlyUsedList(&__result);
+        return Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList(consuming: __result);
+    }
+    public var FutureAccessList : Optional<Windows.Storage.AccessCache.IStorageItemAccessList> {
+        get throws {
+            return try get_FutureAccessList();
+        }
+    }
+    public var MostRecentlyUsedList : Optional<Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList> {
+        get throws {
+            return try get_MostRecentlyUsedList();
+        }
+    }
+} // IStorageApplicationPermissionsStatics
+
+
+// type: Windows.Storage.AccessCache.IStorageApplicationPermissionsStatics2
+// interface type
+open class IStorageApplicationPermissionsStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x072716ec, Data2: 0xaa05, Data3 : 0x4294, Data4 : (0x9a, 0x11, 0x1a, 0x3d, 0x04, 0x51, 0x9a, 0xd0)) }
+    // Windows.Storage.AccessCache.StorageItemAccessList GetFutureAccessListForUser(Windows.System.User)
+    private func _n_GetFutureAccessListForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemAccessList>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFutureAccessListForUser(pThis, user, __presult))
+        }
+    }
+    public func GetFutureAccessListForUser(user : Optional<Windows.System.IUser>) throws -> Optional<Windows.Storage.AccessCache.IStorageItemAccessList> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemAccessList>> = nil;
+        try self._n_GetFutureAccessListForUser(RawPointer(user), &__result);
+        return Windows.Storage.AccessCache.IStorageItemAccessList(consuming: __result);
+    }
+    // Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList GetMostRecentlyUsedListForUser(Windows.System.User)
+    private func _n_GetMostRecentlyUsedListForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CAccessCache_CIStorageApplicationPermissionsStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMostRecentlyUsedListForUser(pThis, user, __presult))
+        }
+    }
+    public func GetMostRecentlyUsedListForUser(user : Optional<Windows.System.IUser>) throws -> Optional<Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CAccessCache_CIStorageItemMostRecentlyUsedList>> = nil;
+        try self._n_GetMostRecentlyUsedListForUser(RawPointer(user), &__result);
+        return Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList(consuming: __result);
+    }
+} // IStorageApplicationPermissionsStatics2
+
+
 // type: Windows.Storage.AccessCache.IStorageItemAccessList
 // interface type
 open class IStorageItemAccessList
@@ -434,6 +508,48 @@ public class ItemRemovedEventArgs
 // type: Windows.Storage.AccessCache.RecentStorageItemVisibility
 // enum type
 public typealias RecentStorageItemVisibility = _q_CWindows_CStorage_CAccessCache_CRecentStorageItemVisibility;
+
+// type: Windows.Storage.AccessCache.StorageApplicationPermissions
+// static class
+public class StorageApplicationPermissions
+{
+    private struct _IStorageApplicationPermissionsStatics2 {
+        static var x : IStorageApplicationPermissionsStatics2 =
+            try! RoGetActivationFactory("Windows.Storage.AccessCache.StorageApplicationPermissions")
+    }
+    public static var StorageApplicationPermissionsStatics2 : IStorageApplicationPermissionsStatics2 {
+        _IStorageApplicationPermissionsStatics2.x
+    }
+    public static func GetFutureAccessListForUser(user : Optional<Windows.System.User>) throws -> Optional<Windows.Storage.AccessCache.StorageItemAccessList> {
+        return try Windows.Storage.AccessCache.StorageItemAccessList(plok: StorageApplicationPermissionsStatics2.GetFutureAccessListForUser(user: user!.Interface()));
+    }
+    public static func GetMostRecentlyUsedListForUser(user : Optional<Windows.System.User>) throws -> Optional<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList> {
+        return try Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList(plok: StorageApplicationPermissionsStatics2.GetMostRecentlyUsedListForUser(user: user!.Interface()));
+    }
+    private struct _IStorageApplicationPermissionsStatics {
+        static var x : IStorageApplicationPermissionsStatics =
+            try! RoGetActivationFactory("Windows.Storage.AccessCache.StorageApplicationPermissions")
+    }
+    public static var StorageApplicationPermissionsStatics : IStorageApplicationPermissionsStatics {
+        _IStorageApplicationPermissionsStatics.x
+    }
+    public static func get_FutureAccessList() throws -> Optional<Windows.Storage.AccessCache.StorageItemAccessList> {
+        return try Windows.Storage.AccessCache.StorageItemAccessList(plok: StorageApplicationPermissionsStatics.get_FutureAccessList());
+    }
+    public static func get_MostRecentlyUsedList() throws -> Optional<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList> {
+        return try Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList(plok: StorageApplicationPermissionsStatics.get_MostRecentlyUsedList());
+    }
+    public static var FutureAccessList : Optional<Windows.Storage.AccessCache.StorageItemAccessList> {
+        get throws {
+        return try Windows.Storage.AccessCache.StorageItemAccessList(plok: StorageApplicationPermissionsStatics.FutureAccessList);
+        }
+    }
+    public static var MostRecentlyUsedList : Optional<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList> {
+        get throws {
+        return try Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList(plok: StorageApplicationPermissionsStatics.MostRecentlyUsedList);
+        }
+    }
+}
 
 // type: Windows.Storage.AccessCache.StorageItemAccessList
 // runtime class

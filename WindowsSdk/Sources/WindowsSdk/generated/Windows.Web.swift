@@ -18,6 +18,43 @@ open class IUriToStreamResolver
 } // IUriToStreamResolver
 
 
+// type: Windows.Web.IWebErrorStatics
+// interface type
+open class IWebErrorStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe616766, Data2: 0xbf27, Data3 : 0x4064, Data4 : (0x87, 0xb7, 0x65, 0x63, 0xbb, 0x11, 0xce, 0x2e)) }
+    // Windows.Web.WebErrorStatus GetStatus(System.Int32)
+    private func _n_GetStatus(_ hresult : INT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CWebErrorStatus>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CIWebErrorStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetStatus(pThis, hresult, __presult))
+        }
+    }
+    public func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.WebErrorStatus {
+        var __result : _q_CWindows_CWeb_CWebErrorStatus = _q_CWindows_CWeb_CWebErrorStatus_Unknown;
+        try self._n_GetStatus(hresult, &__result);
+        return __result;
+    }
+} // IWebErrorStatics
+
+
+// type: Windows.Web.WebError
+// static class
+public class WebError
+{
+    private struct _IWebErrorStatics {
+        static var x : IWebErrorStatics =
+            try! RoGetActivationFactory("Windows.Web.WebError")
+    }
+    public static var WebErrorStatics : IWebErrorStatics {
+        _IWebErrorStatics.x
+    }
+    public static func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.WebErrorStatus {
+        return try WebErrorStatics.GetStatus(hresult: hresult);
+    }
+}
+
 // type: Windows.Web.WebErrorStatus
 // enum type
 public typealias WebErrorStatus = _q_CWindows_CWeb_CWebErrorStatus;

@@ -676,6 +676,37 @@ public class ConnectivityInterval
     }
 }
 
+// type: Windows.Networking.Connectivity.ConnectivityManager
+// static class
+public class ConnectivityManager
+{
+    private struct _IConnectivityManagerStatics {
+        static var x : IConnectivityManagerStatics =
+            try! RoGetActivationFactory("Windows.Networking.Connectivity.ConnectivityManager")
+    }
+    public static var ConnectivityManagerStatics : IConnectivityManagerStatics {
+        _IConnectivityManagerStatics.x
+    }
+    public static func AcquireConnectionAsync(cellularApnContext : Optional<Windows.Networking.Connectivity.CellularApnContext>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession> {
+        return try ConnectivityManagerStatics.AcquireConnectionAsync(cellularApnContext: cellularApnContext!.Interface());
+    }
+    public static func AcquireConnection(cellularApnContext : Optional<Windows.Networking.Connectivity.CellularApnContext>) async throws -> Optional<Windows.Networking.Connectivity.ConnectionSession> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Networking.Connectivity.ConnectionSession(plok: Self.AcquireConnectionAsync(cellularApnContext: cellularApnContext)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func AddHttpRoutePolicy(routePolicy : Optional<Windows.Networking.Connectivity.RoutePolicy>) throws -> Void {
+        return try ConnectivityManagerStatics.AddHttpRoutePolicy(routePolicy: routePolicy!.Interface());
+    }
+    public static func RemoveHttpRoutePolicy(routePolicy : Optional<Windows.Networking.Connectivity.RoutePolicy>) throws -> Void {
+        return try ConnectivityManagerStatics.RemoveHttpRoutePolicy(routePolicy: routePolicy!.Interface());
+    }
+}
+
 // type: Windows.Networking.Connectivity.DataPlanStatus
 // runtime class
 public class DataPlanStatus
@@ -1947,6 +1978,54 @@ open class IConnectivityInterval
 } // IConnectivityInterval
 
 
+// type: Windows.Networking.Connectivity.IConnectivityManagerStatics
+// interface type
+open class IConnectivityManagerStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5120d4b1, Data2: 0x4fb1, Data3 : 0x48b0, Data4 : (0xaf, 0xc9, 0x42, 0xe0, 0x09, 0x2a, 0x81, 0x64)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ConnectionSession> AcquireConnectionAsync(Windows.Networking.Connectivity.CellularApnContext)
+    private func _n_AcquireConnectionAsync(_ cellularApnContext : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CICellularApnContext>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CIConnectivityManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.AcquireConnectionAsync(pThis, cellularApnContext, __presult))
+        }
+    }
+    public func AcquireConnectionAsync(cellularApnContext : Optional<Windows.Networking.Connectivity.ICellularApnContext>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession>> = nil;
+        try self._n_AcquireConnectionAsync(RawPointer(cellularApnContext), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CConnectionSession(consuming: __result);
+    }
+    public func AcquireConnection(cellularApnContext : Optional<Windows.Networking.Connectivity.ICellularApnContext>) async throws -> Optional<Windows.Networking.Connectivity.IConnectionSession> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.AcquireConnectionAsync(cellularApnContext: cellularApnContext)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // void AddHttpRoutePolicy(Windows.Networking.Connectivity.RoutePolicy)
+    private func _n_AddHttpRoutePolicy(_ routePolicy : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIRoutePolicy>>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CIConnectivityManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.AddHttpRoutePolicy(pThis, routePolicy))
+        }
+    }
+    public func AddHttpRoutePolicy(routePolicy : Optional<Windows.Networking.Connectivity.IRoutePolicy>) throws -> Void {
+        try self._n_AddHttpRoutePolicy(RawPointer(routePolicy));
+    }
+    // void RemoveHttpRoutePolicy(Windows.Networking.Connectivity.RoutePolicy)
+    private func _n_RemoveHttpRoutePolicy(_ routePolicy : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIRoutePolicy>>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CIConnectivityManagerStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveHttpRoutePolicy(pThis, routePolicy))
+        }
+    }
+    public func RemoveHttpRoutePolicy(routePolicy : Optional<Windows.Networking.Connectivity.IRoutePolicy>) throws -> Void {
+        try self._n_RemoveHttpRoutePolicy(RawPointer(routePolicy));
+    }
+} // IConnectivityManagerStatics
+
+
 // type: Windows.Networking.Connectivity.IDataPlanStatus
 // interface type
 open class IDataPlanStatus
@@ -2387,6 +2466,141 @@ open class INetworkAdapter
         }
     }
 } // INetworkAdapter
+
+
+// type: Windows.Networking.Connectivity.INetworkInformationStatics
+// interface type
+open class INetworkInformationStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5074f851, Data2: 0x950d, Data3 : 0x4165, Data4 : (0x9c, 0x15, 0x36, 0x56, 0x19, 0x48, 0x1e, 0xea)) }
+    // Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile> GetConnectionProfiles()
+    private func _n_GetConnectionProfiles(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetConnectionProfiles(pThis, __presult))
+        }
+    }
+    public func GetConnectionProfiles() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>> = nil;
+        try self._n_GetConnectionProfiles(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(consuming: __result);
+    }
+    // Windows.Networking.Connectivity.ConnectionProfile GetInternetConnectionProfile()
+    private func _n_GetInternetConnectionProfile(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIConnectionProfile>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetInternetConnectionProfile(pThis, __presult))
+        }
+    }
+    public func GetInternetConnectionProfile() throws -> Optional<Windows.Networking.Connectivity.IConnectionProfile> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIConnectionProfile>> = nil;
+        try self._n_GetInternetConnectionProfile(&__result);
+        return Windows.Networking.Connectivity.IConnectionProfile(consuming: __result);
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.LanIdentifier> GetLanIdentifiers()
+    private func _n_GetLanIdentifiers(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetLanIdentifiers(pThis, __presult))
+        }
+    }
+    public func GetLanIdentifiers() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier>> = nil;
+        try self._n_GetLanIdentifiers(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier(consuming: __result);
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Networking.HostName> GetHostNames()
+    private func _n_GetHostNames(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CHostName>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetHostNames(pThis, __presult))
+        }
+    }
+    public func GetHostNames() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CHostName> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CHostName>> = nil;
+        try self._n_GetHostNames(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CHostName(consuming: __result);
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Networking.Connectivity.ProxyConfiguration> GetProxyConfigurationAsync(Windows.Foundation.Uri)
+    private func _n_GetProxyConfigurationAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetProxyConfigurationAsync(pThis, uri, __presult))
+        }
+    }
+    public func GetProxyConfigurationAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration>> = nil;
+        try self._n_GetProxyConfigurationAsync(RawPointer(uri), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration(consuming: __result);
+    }
+    public func GetProxyConfiguration(uri : Optional<Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<Windows.Networking.Connectivity.IProxyConfiguration> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetProxyConfigurationAsync(uri: uri)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Networking.EndpointPair> GetSortedEndpointPairs(Windows.Foundation.Collections.IIterable<Windows.Networking.EndpointPair>, Windows.Networking.HostNameSortOptions)
+    private func _n_GetSortedEndpointPairs(_ destinationList : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CNetworking_CEndpointPair>>, _ sortOptions : _q_CWindows_CNetworking_CHostNameSortOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetSortedEndpointPairs(pThis, destinationList, sortOptions, __presult))
+        }
+    }
+    public func GetSortedEndpointPairs(destinationList : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CEndpointPair>, sortOptions : Windows.Networking.HostNameSortOptions) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
+        try self._n_GetSortedEndpointPairs(RawPointer(destinationList), sortOptions, &__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_NetworkStatusChanged(Windows.Networking.Connectivity.NetworkStatusChangedEventHandler)
+    private func _n_add_NetworkStatusChanged(_ networkStatusHandler : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_NetworkStatusChanged(pThis, networkStatusHandler, __presult))
+        }
+    }
+    public func add_NetworkStatusChanged(networkStatusHandler : Optional<Windows.Networking.Connectivity.INetworkStatusChangedEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_NetworkStatusChanged(RawPointer(networkStatusHandler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_NetworkStatusChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_NetworkStatusChanged(_ eventCookie : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_NetworkStatusChanged(pThis, eventCookie))
+        }
+    }
+    public func remove_NetworkStatusChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_NetworkStatusChanged(eventCookie);
+    }
+} // INetworkInformationStatics
+
+
+// type: Windows.Networking.Connectivity.INetworkInformationStatics2
+// interface type
+open class INetworkInformationStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x459ced14, Data2: 0x2832, Data3 : 0x49b6, Data4 : (0xba, 0x6e, 0xe2, 0x65, 0xf0, 0x47, 0x86, 0xa8)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Networking.Connectivity.ConnectionProfile>> FindConnectionProfilesAsync(Windows.Networking.Connectivity.ConnectionProfileFilter)
+    private func _n_FindConnectionProfilesAsync(_ pProfileFilter : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CConnectivity_CIConnectionProfileFilter>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkInformationStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.FindConnectionProfilesAsync(pThis, pProfileFilter, __presult))
+        }
+    }
+    public func FindConnectionProfilesAsync(pProfileFilter : Optional<Windows.Networking.Connectivity.IConnectionProfileFilter>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile>> = nil;
+        try self._n_FindConnectionProfilesAsync(RawPointer(pProfileFilter), &__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile(consuming: __result);
+    }
+    public func FindConnectionProfiles(pProfileFilter : Optional<Windows.Networking.Connectivity.IConnectionProfileFilter>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FindConnectionProfilesAsync(pProfileFilter: pProfileFilter)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // INetworkInformationStatics2
 
 
 // type: Windows.Networking.Connectivity.INetworkItem
@@ -3186,6 +3400,71 @@ public typealias NetworkCostType = _q_CWindows_CNetworking_CConnectivity_CNetwor
 // enum type
 public typealias NetworkEncryptionType = _q_CWindows_CNetworking_CConnectivity_CNetworkEncryptionType;
 
+// type: Windows.Networking.Connectivity.NetworkInformation
+// static class
+public class NetworkInformation
+{
+    private struct _INetworkInformationStatics {
+        static var x : INetworkInformationStatics =
+            try! RoGetActivationFactory("Windows.Networking.Connectivity.NetworkInformation")
+    }
+    public static var NetworkInformationStatics : INetworkInformationStatics {
+        _INetworkInformationStatics.x
+    }
+    public static func GetConnectionProfiles() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        return try NetworkInformationStatics.GetConnectionProfiles();
+    }
+    public static func GetInternetConnectionProfile() throws -> Optional<Windows.Networking.Connectivity.ConnectionProfile> {
+        return try Windows.Networking.Connectivity.ConnectionProfile(plok: NetworkInformationStatics.GetInternetConnectionProfile());
+    }
+    public static func GetLanIdentifiers() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CLanIdentifier> {
+        return try NetworkInformationStatics.GetLanIdentifiers();
+    }
+    public static func GetHostNames() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CHostName> {
+        return try NetworkInformationStatics.GetHostNames();
+    }
+    public static func GetProxyConfigurationAsync(uri : Optional<Windows.Foundation.Uri>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CConnectivity_CProxyConfiguration> {
+        return try NetworkInformationStatics.GetProxyConfigurationAsync(uri: uri!.Interface());
+    }
+    public static func GetProxyConfiguration(uri : Optional<Windows.Foundation.Uri>) async throws -> Optional<Windows.Networking.Connectivity.ProxyConfiguration> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Networking.Connectivity.ProxyConfiguration(plok: Self.GetProxyConfigurationAsync(uri: uri)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func GetSortedEndpointPairs(destinationList : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CEndpointPair>, sortOptions : Windows.Networking.HostNameSortOptions) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+        return try NetworkInformationStatics.GetSortedEndpointPairs(destinationList: destinationList, sortOptions: sortOptions);
+    }
+    public static func add_NetworkStatusChanged(networkStatusHandler : @escaping (Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        return try NetworkInformationStatics.add_NetworkStatusChanged(networkStatusHandler: Windows.Networking.Connectivity.NetworkStatusChangedEventHandler(cb: networkStatusHandler).Interface());
+    }
+    public static func remove_NetworkStatusChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        return try NetworkInformationStatics.remove_NetworkStatusChanged(eventCookie: eventCookie);
+    }
+    private struct _INetworkInformationStatics2 {
+        static var x : INetworkInformationStatics2 =
+            try! RoGetActivationFactory("Windows.Networking.Connectivity.NetworkInformation")
+    }
+    public static var NetworkInformationStatics2 : INetworkInformationStatics2 {
+        _INetworkInformationStatics2.x
+    }
+    public static func FindConnectionProfilesAsync(pProfileFilter : Optional<Windows.Networking.Connectivity.ConnectionProfileFilter>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        return try NetworkInformationStatics2.FindConnectionProfilesAsync(pProfileFilter: pProfileFilter!.Interface());
+    }
+    public static func FindConnectionProfiles(pProfileFilter : Optional<Windows.Networking.Connectivity.ConnectionProfileFilter>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CConnectivity_CConnectionProfile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.FindConnectionProfilesAsync(pProfileFilter: pProfileFilter)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
 // type: Windows.Networking.Connectivity.NetworkItem
 // runtime class
 public class NetworkItem
@@ -3339,6 +3618,113 @@ public class NetworkStateChangeEventDetails
         let _ifc : Windows.Networking.Connectivity.INetworkStateChangeEventDetails2 = try _self.QueryInterface();
         return try _ifc.HasNewTetheringOperationalState;
         }
+    }
+}
+
+// type: Windows.Networking.Connectivity.NetworkStatusChangedEventHandler
+// delegate type
+open class INetworkStatusChangedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x71ba143f, Data2: 0x598e, Data3 : 0x49d0, Data4 : (0x84, 0xeb, 0x8f, 0xeb, 0xae, 0xdc, 0xc1, 0x95)) }
+    // [IsSpecialName] void Invoke(System.Object)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender));
+    }
+}
+// impl delegate type
+open class NetworkStatusChangedEventHandler
+{
+    private static var vtable: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Windows.Networking.Connectivity.INetworkStatusChangedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
+        guard let self = NetworkStatusChangedEventHandler.from_NetworkStatusChangedEventHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: NetworkStatusChangedEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_NetworkStatusChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> NetworkStatusChangedEventHandler? {
+        return pUnk?.bindMemory(to: NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender)
+        }
+    }
+    public func Interface() -> Windows.Networking.Connectivity.INetworkStatusChangedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Windows.Networking.Connectivity.INetworkStatusChangedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_NetworkStatusChangedEventHandler
+{
+    private var _self : Windows.Networking.Connectivity.INetworkStatusChangedEventHandler;
+    public init(plok: Windows.Networking.Connectivity.INetworkStatusChangedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface());
+    }
+    public func Interface() -> Windows.Networking.Connectivity.INetworkStatusChangedEventHandler {
+        return _self
     }
 }
 

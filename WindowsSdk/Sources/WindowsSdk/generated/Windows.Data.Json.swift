@@ -112,6 +112,27 @@ open class IJsonArrayStatics
 } // IJsonArrayStatics
 
 
+// type: Windows.Data.Json.IJsonErrorStatics2
+// interface type
+open class IJsonErrorStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x404030da, Data2: 0x87d0, Data3 : 0x436c, Data4 : (0x83, 0xab, 0xfc, 0x7b, 0x12, 0xc0, 0xcc, 0x26)) }
+    // Windows.Data.Json.JsonErrorStatus GetJsonStatus(System.Int32)
+    private func _n_GetJsonStatus(_ hresult : INT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CData_CJson_CJsonErrorStatus>?) throws {
+        return try perform(as: _q_CWindows_CData_CJson_CIJsonErrorStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetJsonStatus(pThis, hresult, __presult))
+        }
+    }
+    public func GetJsonStatus(hresult : Swift.Int32) throws -> Windows.Data.Json.JsonErrorStatus {
+        var __result : _q_CWindows_CData_CJson_CJsonErrorStatus = _q_CWindows_CData_CJson_CJsonErrorStatus_Unknown;
+        try self._n_GetJsonStatus(hresult, &__result);
+        return __result;
+    }
+} // IJsonErrorStatics2
+
+
 // type: Windows.Data.Json.IJsonObject
 // interface type
 open class IJsonObject
@@ -690,6 +711,26 @@ public class JsonArray
     }
 }
 
+// type: Windows.Data.Json.JsonError
+// static class
+public class JsonError
+{
+    private struct _IJsonErrorStatics2 {
+        static var x : IJsonErrorStatics2 =
+            try! RoGetActivationFactory("Windows.Data.Json.JsonError")
+    }
+    public static var JsonErrorStatics2 : IJsonErrorStatics2 {
+        _IJsonErrorStatics2.x
+    }
+    public static func GetJsonStatus(hresult : Swift.Int32) throws -> Windows.Data.Json.JsonErrorStatus {
+        return try JsonErrorStatics2.GetJsonStatus(hresult: hresult);
+    }
+}
+
+// type: Windows.Data.Json.JsonErrorStatus
+// enum type
+public typealias JsonErrorStatus = _q_CWindows_CData_CJson_CJsonErrorStatus;
+
 // type: Windows.Data.Json.JsonObject
 // runtime class
 public class JsonObject
@@ -909,6 +950,33 @@ public class JsonValue
 // enum type
 public typealias JsonValueType = _q_CWindows_CData_CJson_CJsonValueType;
 
+}
+extension Windows.Data.Json.JsonErrorStatus {
+    public static var Unknown : Self {
+        get {
+            return _q_CWindows_CData_CJson_CJsonErrorStatus_Unknown;
+        }
+    }
+    public static var InvalidJsonString : Self {
+        get {
+            return _q_CWindows_CData_CJson_CJsonErrorStatus_InvalidJsonString;
+        }
+    }
+    public static var InvalidJsonNumber : Self {
+        get {
+            return _q_CWindows_CData_CJson_CJsonErrorStatus_InvalidJsonNumber;
+        }
+    }
+    public static var JsonValueNotFound : Self {
+        get {
+            return _q_CWindows_CData_CJson_CJsonErrorStatus_JsonValueNotFound;
+        }
+    }
+    public static var ImplementationLimit : Self {
+        get {
+            return _q_CWindows_CData_CJson_CJsonErrorStatus_ImplementationLimit;
+        }
+    }
 }
 extension Windows.Data.Json.JsonValueType {
     public static var Null : Self {

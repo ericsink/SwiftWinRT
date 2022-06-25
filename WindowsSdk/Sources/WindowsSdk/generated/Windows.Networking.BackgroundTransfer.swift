@@ -402,6 +402,22 @@ public class BackgroundTransferContentPart
 // enum type
 public typealias BackgroundTransferCostPolicy = _q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferCostPolicy;
 
+// type: Windows.Networking.BackgroundTransfer.BackgroundTransferError
+// static class
+public class BackgroundTransferError
+{
+    private struct _IBackgroundTransferErrorStaticMethods {
+        static var x : IBackgroundTransferErrorStaticMethods =
+            try! RoGetActivationFactory("Windows.Networking.BackgroundTransfer.BackgroundTransferError")
+    }
+    public static var BackgroundTransferErrorStaticMethods : IBackgroundTransferErrorStaticMethods {
+        _IBackgroundTransferErrorStaticMethods.x
+    }
+    public static func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.WebErrorStatus {
+        return try BackgroundTransferErrorStaticMethods.GetStatus(hresult: hresult);
+    }
+}
+
 // type: Windows.Networking.BackgroundTransfer.BackgroundTransferFileRange
 // struct type
 public typealias BackgroundTransferFileRange = _q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferFileRange;
@@ -802,6 +818,53 @@ public class BackgroundUploader
         get throws {
         let _ifc : Windows.Networking.BackgroundTransfer.IBackgroundUploader3 = try _self.QueryInterface();
         return try Windows.Networking.BackgroundTransfer.BackgroundTransferCompletionGroup(plok: _ifc.CompletionGroup);
+        }
+    }
+}
+
+// type: Windows.Networking.BackgroundTransfer.ContentPrefetcher
+// static class
+public class ContentPrefetcher
+{
+    private struct _IContentPrefetcher {
+        static var x : IContentPrefetcher =
+            try! RoGetActivationFactory("Windows.Networking.BackgroundTransfer.ContentPrefetcher")
+    }
+    public static var ContentPrefetcher : IContentPrefetcher {
+        _IContentPrefetcher.x
+    }
+    public static func get_ContentUris() throws -> Optional<ClosedGenerics.IVector_1__q_CWindows_CFoundation_CUri> {
+        return try ContentPrefetcher.get_ContentUris();
+    }
+    public static func put_IndirectContentUri(value : Optional<Windows.Foundation.Uri>) throws -> Void {
+        return try ContentPrefetcher.put_IndirectContentUri(value: value!.Interface());
+    }
+    public static func get_IndirectContentUri() throws -> Optional<Windows.Foundation.Uri> {
+        return try Windows.Foundation.Uri(plok: ContentPrefetcher.get_IndirectContentUri());
+    }
+    public static var ContentUris : Optional<ClosedGenerics.IVector_1__q_CWindows_CFoundation_CUri> {
+        get throws {
+        return try ContentPrefetcher.ContentUris;
+        }
+    }
+    public static var IndirectContentUri : Optional<Windows.Foundation.Uri> {
+        get throws {
+        return try Windows.Foundation.Uri(plok: ContentPrefetcher.IndirectContentUri);
+        }
+    }
+    private struct _IContentPrefetcherTime {
+        static var x : IContentPrefetcherTime =
+            try! RoGetActivationFactory("Windows.Networking.BackgroundTransfer.ContentPrefetcher")
+    }
+    public static var ContentPrefetcherTime : IContentPrefetcherTime {
+        _IContentPrefetcherTime.x
+    }
+    public static func get_LastSuccessfulPrefetchTime() throws -> Optional<ClosedGenerics.IReference_1__q_CWindows_CFoundation_CDateTime> {
+        return try ContentPrefetcherTime.get_LastSuccessfulPrefetchTime();
+    }
+    public static var LastSuccessfulPrefetchTime : Optional<ClosedGenerics.IReference_1__q_CWindows_CFoundation_CDateTime> {
+        get throws {
+        return try ContentPrefetcherTime.LastSuccessfulPrefetchTime;
         }
     }
 }
@@ -1710,6 +1773,27 @@ open class IBackgroundTransferContentPartFactory
 } // IBackgroundTransferContentPartFactory
 
 
+// type: Windows.Networking.BackgroundTransfer.IBackgroundTransferErrorStaticMethods
+// interface type
+open class IBackgroundTransferErrorStaticMethods
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xaad33b04, Data2: 0x1192, Data3 : 0x4bf4, Data4 : (0x8b, 0x68, 0x39, 0xc5, 0xad, 0xd2, 0x44, 0xe2)) }
+    // Windows.Web.WebErrorStatus GetStatus(System.Int32)
+    private func _n_GetStatus(_ hresult : INT32, _ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CWebErrorStatus>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferErrorStaticMethods.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetStatus(pThis, hresult, __presult))
+        }
+    }
+    public func GetStatus(hresult : Swift.Int32) throws -> Windows.Web.WebErrorStatus {
+        var __result : _q_CWindows_CWeb_CWebErrorStatus = _q_CWindows_CWeb_CWebErrorStatus_Unknown;
+        try self._n_GetStatus(hresult, &__result);
+        return __result;
+    }
+} // IBackgroundTransferErrorStaticMethods
+
+
 // type: Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup
 // interface type
 open class IBackgroundTransferGroup
@@ -2398,6 +2482,83 @@ open class IBackgroundUploaderUserConsent
         }
     }
 } // IBackgroundUploaderUserConsent
+
+
+// type: Windows.Networking.BackgroundTransfer.IContentPrefetcher
+// interface type
+open class IContentPrefetcher
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa8d6f754, Data2: 0x7dc1, Data3 : 0x4cd9, Data4 : (0x88, 0x10, 0x2a, 0x6a, 0xa9, 0x41, 0x7e, 0x11)) }
+    // [IsSpecialName] Windows.Foundation.Collections.IVector<Windows.Foundation.Uri> get_ContentUris()
+    private func _n_get_ContentUris(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentUris(pThis, __presult))
+        }
+    }
+    public func get_ContentUris() throws -> Optional<ClosedGenerics.IVector_1__q_CWindows_CFoundation_CUri> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri>> = nil;
+        try self._n_get_ContentUris(&__result);
+        return ClosedGenerics.IVector_1__q_CWindows_CFoundation_CUri(consuming: __result);
+    }
+    // [IsSpecialName] void put_IndirectContentUri(Windows.Foundation.Uri)
+    private func _n_put_IndirectContentUri(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
+        return try perform(as: _q_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IndirectContentUri(pThis, value))
+        }
+    }
+    public func put_IndirectContentUri(value : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Void {
+        try self._n_put_IndirectContentUri(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.Uri get_IndirectContentUri()
+    private func _n_get_IndirectContentUri(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcher.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IndirectContentUri(pThis, __presult))
+        }
+    }
+    public func get_IndirectContentUri() throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
+        try self._n_get_IndirectContentUri(&__result);
+        return Windows.Foundation.IUriRuntimeClass(consuming: __result);
+    }
+    public var ContentUris : Optional<ClosedGenerics.IVector_1__q_CWindows_CFoundation_CUri> {
+        get throws {
+            return try get_ContentUris();
+        }
+    }
+    public var IndirectContentUri : Optional<Windows.Foundation.IUriRuntimeClass> {
+        get throws {
+            return try get_IndirectContentUri();
+        }
+    }
+} // IContentPrefetcher
+
+
+// type: Windows.Networking.BackgroundTransfer.IContentPrefetcherTime
+// interface type
+open class IContentPrefetcherTime
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe361fd08, Data2: 0x132a, Data3 : 0x4fde, Data4 : (0xa7, 0xcc, 0xfc, 0xb0, 0xe6, 0x65, 0x23, 0xaf)) }
+    // [IsSpecialName] Windows.Foundation.IReference<Windows.Foundation.DateTime> get_LastSuccessfulPrefetchTime()
+    private func _n_get_LastSuccessfulPrefetchTime(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime>>>?) throws {
+        return try perform(as: _q_CWindows_CNetworking_CBackgroundTransfer_CIContentPrefetcherTime.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LastSuccessfulPrefetchTime(pThis, __presult))
+        }
+    }
+    public func get_LastSuccessfulPrefetchTime() throws -> Optional<ClosedGenerics.IReference_1__q_CWindows_CFoundation_CDateTime> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CDateTime>> = nil;
+        try self._n_get_LastSuccessfulPrefetchTime(&__result);
+        return ClosedGenerics.IReference_1__q_CWindows_CFoundation_CDateTime(consuming: __result);
+    }
+    public var LastSuccessfulPrefetchTime : Optional<ClosedGenerics.IReference_1__q_CWindows_CFoundation_CDateTime> {
+        get throws {
+            return try get_LastSuccessfulPrefetchTime();
+        }
+    }
+} // IContentPrefetcherTime
 
 
 // type: Windows.Networking.BackgroundTransfer.IDownloadOperation

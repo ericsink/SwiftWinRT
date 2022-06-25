@@ -2136,6 +2136,76 @@ open class IRandomAccessStreamReferenceStatics
 } // IRandomAccessStreamReferenceStatics
 
 
+// type: Windows.Storage.Streams.IRandomAccessStreamStatics
+// interface type
+open class IRandomAccessStreamStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x524cedcf, Data2: 0x6e29, Data3 : 0x4ce5, Data4 : (0x95, 0x73, 0x6b, 0x75, 0x3d, 0xb6, 0x6c, 0x3a)) }
+    // Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> CopyAsync(Windows.Storage.Streams.IInputStream, Windows.Storage.Streams.IOutputStream)
+    private func _n_CopyAsync(_ source : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>>, _ destination : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopyAsync(pThis, source, destination, __presult))
+        }
+    }
+    public func CopyAsync(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>> = nil;
+        try self._n_CopyAsync(RawPointer(source), RawPointer(destination), &__result);
+        return ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64(consuming: __result);
+    }
+    public func Copy(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) async throws -> Swift.UInt64 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyAsync(source: source, destination: destination)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> CopyAsync(Windows.Storage.Streams.IInputStream, Windows.Storage.Streams.IOutputStream, System.UInt64)
+    private func _n_CopySizeAsync(_ source : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>>, _ destination : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>, _ bytesToCopy : UINT64, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopySizeAsync(pThis, source, destination, bytesToCopy, __presult))
+        }
+    }
+    public func CopySizeAsync(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>, bytesToCopy : Swift.UInt64) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>> = nil;
+        try self._n_CopySizeAsync(RawPointer(source), RawPointer(destination), bytesToCopy, &__result);
+        return ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64(consuming: __result);
+    }
+    public func CopySize(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>, bytesToCopy : Swift.UInt64) async throws -> Swift.UInt64 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopySizeAsync(source: source, destination: destination, bytesToCopy: bytesToCopy)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperationWithProgress<System.UInt64,System.UInt64> CopyAndCloseAsync(Windows.Storage.Streams.IInputStream, Windows.Storage.Streams.IOutputStream)
+    private func _n_CopyAndCloseAsync(_ source : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>>, _ destination : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopyAndCloseAsync(pThis, source, destination, __presult))
+        }
+    }
+    public func CopyAndCloseAsync(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>> = nil;
+        try self._n_CopyAndCloseAsync(RawPointer(source), RawPointer(destination), &__result);
+        return ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64(consuming: __result);
+    }
+    public func CopyAndClose(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) async throws -> Swift.UInt64 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyAndCloseAsync(source: source, destination: destination)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IRandomAccessStreamStatics
+
+
 // type: Windows.Storage.Streams.IRandomAccessStreamWithContentType
 // interface type
 open class IRandomAccessStreamWithContentType
@@ -2343,6 +2413,55 @@ public class OutputStreamOverStream
     public func Close() throws -> Void {
         let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
         return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.RandomAccessStream
+// static class
+public class RandomAccessStream
+{
+    private struct _IRandomAccessStreamStatics {
+        static var x : IRandomAccessStreamStatics =
+            try! RoGetActivationFactory("Windows.Storage.Streams.RandomAccessStream")
+    }
+    public static var RandomAccessStreamStatics : IRandomAccessStreamStatics {
+        _IRandomAccessStreamStatics.x
+    }
+    public static func CopyAsync(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64> {
+        return try RandomAccessStreamStatics.CopyAsync(source: source, destination: destination);
+    }
+    public static func Copy(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) async throws -> Swift.UInt64 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.CopyAsync(source: source, destination: destination)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func CopyAsync(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>, bytesToCopy : Swift.UInt64) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64> {
+        return try RandomAccessStreamStatics.CopySizeAsync(source: source, destination: destination, bytesToCopy: bytesToCopy);
+    }
+    public static func Copy(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>, bytesToCopy : Swift.UInt64) async throws -> Swift.UInt64 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.CopyAsync(source: source, destination: destination, bytesToCopy: bytesToCopy)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func CopyAndCloseAsync(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64> {
+        return try RandomAccessStreamStatics.CopyAndCloseAsync(source: source, destination: destination);
+    }
+    public static func CopyAndClose(source : Optional<Windows.Storage.Streams.IInputStream>, destination : Optional<Windows.Storage.Streams.IOutputStream>) async throws -> Swift.UInt64 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.CopyAndCloseAsync(source: source, destination: destination)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
     }
 }
 
