@@ -155,6 +155,36 @@ open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXml
         return _self
     }
 }
+// closed interface type
+public class IVectorView_1__q_CWindows_CData_CXml_CDom_CIXmlNode
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x139d959e, Data2: 0xe7b5, Data3 : 0x5cb6, Data4 : (0xa5, 0x96, 0x4b, 0x54, 0x44, 0x78, 0xda, 0x9b)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CWindows_CData_CXml_CDom_CIXmlNode
+// closed interface type
+public class IIterable_1__q_CWindows_CData_CXml_CDom_CIXmlNode
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf1146ffc, Data2: 0x8c92, Data3 : 0x56e8, Data4 : (0x93, 0xf1, 0x71, 0x1f, 0x86, 0x72, 0x26, 0x33)) }
+// method not needed: First
+} // IIterable_1__q_CWindows_CData_CXml_CDom_CIXmlNode
+// closed interface type
+public class IIterator_1__q_CWindows_CData_CXml_CDom_CIXmlNode
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3833a35e, Data2: 0x2c61, Data3 : 0x56bd, Data4 : (0xb0, 0x93, 0x36, 0x94, 0x16, 0x5f, 0x88, 0x98)) }
+// method not needed: get_Current
+// method not needed: get_HasCurrent
+// method not needed: MoveNext
+// method not needed: GetMany
+} // IIterator_1__q_CWindows_CData_CXml_CDom_CIXmlNode
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument : WinRT.Future {
     private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {

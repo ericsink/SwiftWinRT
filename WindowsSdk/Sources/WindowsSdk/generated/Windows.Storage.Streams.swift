@@ -7,6 +7,828 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.Storage.Streams {
+// type: Windows.Storage.Streams.Buffer
+// runtime class
+public class Buffer
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IBuffer;
+    public init(plok: Windows.Storage.Streams.IBuffer?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IBuffer { return _self; }
+    public init(capacity : Swift.UInt32) throws {
+        let _af : IBufferFactory = try RoGetActivationFactory("Windows.Storage.Streams.Buffer");
+        _self = try _af.Create(capacity: capacity)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IBufferStatics {
+        static var x : IBufferStatics =
+            try! RoGetActivationFactory("Windows.Storage.Streams.Buffer")
+    }
+    public static var BufferStatics : IBufferStatics {
+        _IBufferStatics.x
+    }
+    public static func CreateCopyFromMemoryBuffer(input : Optional<Windows.Foundation.IMemoryBuffer>) throws -> Optional<Windows.Storage.Streams.Buffer> {
+        return try Windows.Storage.Streams.Buffer(plok: BufferStatics.CreateCopyFromMemoryBuffer(input: input));
+    }
+    public static func CreateMemoryBufferOverIBuffer(input : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Windows.Foundation.MemoryBuffer> {
+        return try Windows.Foundation.MemoryBuffer(plok: BufferStatics.CreateMemoryBufferOverIBuffer(input: input));
+    }
+    public func get_Capacity() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IBuffer = try _self.QueryInterface();
+        return try _ifc.get_Capacity();
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IBuffer = try _self.QueryInterface();
+        return try _ifc.get_Length();
+    }
+    public func put_Length(value : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IBuffer = try _self.QueryInterface();
+        return try _ifc.put_Length(value: value);
+    }
+    public var Capacity : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IBuffer = try _self.QueryInterface();
+        return try _ifc.Capacity;
+        }
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IBuffer = try _self.QueryInterface();
+        return try _ifc.Length;
+        }
+    }
+}
+
+// type: Windows.Storage.Streams.ByteOrder
+// enum type
+public typealias ByteOrder = _q_CWindows_CStorage_CStreams_CByteOrder;
+
+// type: Windows.Storage.Streams.DataReader
+// runtime class
+public class DataReader
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IDataReader;
+    public init(plok: Windows.Storage.Streams.IDataReader?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IDataReader { return _self; }
+    public init(inputStream : Optional<Windows.Storage.Streams.IInputStream>) throws {
+        let _af : IDataReaderFactory = try RoGetActivationFactory("Windows.Storage.Streams.DataReader");
+        _self = try _af.CreateDataReader(inputStream: inputStream)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IDataReaderStatics {
+        static var x : IDataReaderStatics =
+            try! RoGetActivationFactory("Windows.Storage.Streams.DataReader")
+    }
+    public static var DataReaderStatics : IDataReaderStatics {
+        _IDataReaderStatics.x
+    }
+    public static func FromBuffer(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Windows.Storage.Streams.DataReader> {
+        return try Windows.Storage.Streams.DataReader(plok: DataReaderStatics.FromBuffer(buffer: buffer));
+    }
+    public func get_UnconsumedBufferLength() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.get_UnconsumedBufferLength();
+    }
+    public func get_UnicodeEncoding() throws -> Windows.Storage.Streams.UnicodeEncoding {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.get_UnicodeEncoding();
+    }
+    public func put_UnicodeEncoding(value : Windows.Storage.Streams.UnicodeEncoding) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.put_UnicodeEncoding(value: value);
+    }
+    public func get_ByteOrder() throws -> Windows.Storage.Streams.ByteOrder {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.get_ByteOrder();
+    }
+    public func put_ByteOrder(value : Windows.Storage.Streams.ByteOrder) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.put_ByteOrder(value: value);
+    }
+    public func get_InputStreamOptions() throws -> Windows.Storage.Streams.InputStreamOptions {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.get_InputStreamOptions();
+    }
+    public func put_InputStreamOptions(value : Windows.Storage.Streams.InputStreamOptions) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.put_InputStreamOptions(value: value);
+    }
+    public func ReadByte() throws -> Swift.UInt8 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadByte();
+    }
+    public func ReadBytes(valueLength : UINT32, value : Optional<UnsafeMutablePointer<UINT8>>) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadBytes(valueLength: valueLength, value: value);
+    }
+    public func ReadBuffer(length : Swift.UInt32) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadBuffer(length: length);
+    }
+    public func ReadBoolean() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadBoolean();
+    }
+    public func ReadGuid() throws -> GUID {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadGuid();
+    }
+    public func ReadInt16() throws -> Swift.Int16 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadInt16();
+    }
+    public func ReadInt32() throws -> Swift.Int32 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadInt32();
+    }
+    public func ReadInt64() throws -> Swift.Int64 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadInt64();
+    }
+    public func ReadUInt16() throws -> Swift.UInt16 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadUInt16();
+    }
+    public func ReadUInt32() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadUInt32();
+    }
+    public func ReadUInt64() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadUInt64();
+    }
+    public func ReadSingle() throws -> Swift.Float {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadSingle();
+    }
+    public func ReadDouble() throws -> Swift.Double {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadDouble();
+    }
+    public func ReadString(codeUnitCount : Swift.UInt32) throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadString(codeUnitCount: codeUnitCount);
+    }
+    public func ReadDateTime() throws -> Windows.Foundation.DateTime {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadDateTime();
+    }
+    public func ReadTimeSpan() throws -> Windows.Foundation.TimeSpan {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ReadTimeSpan();
+    }
+    public func LoadAsync(count : Swift.UInt32) throws -> Optional<Windows.Storage.Streams.DataReaderLoadOperation> {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try Windows.Storage.Streams.DataReaderLoadOperation(plok: _ifc.LoadAsync(count: count));
+    }
+    public func DetachBuffer() throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.DetachBuffer();
+    }
+    public func DetachStream() throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.DetachStream();
+    }
+    public var ByteOrder : Windows.Storage.Streams.ByteOrder {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.ByteOrder;
+        }
+    }
+    public var InputStreamOptions : Windows.Storage.Streams.InputStreamOptions {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.InputStreamOptions;
+        }
+    }
+    public var UnconsumedBufferLength : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.UnconsumedBufferLength;
+        }
+    }
+    public var UnicodeEncoding : Windows.Storage.Streams.UnicodeEncoding {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataReader = try _self.QueryInterface();
+        return try _ifc.UnicodeEncoding;
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.DataReaderLoadOperation
+// runtime class
+public class DataReaderLoadOperation
+    :
+    WinRT.Object
+{
+    private var _self : ClosedGenerics.IAsyncOperation_1_UINT32;
+    public init(plok: ClosedGenerics.IAsyncOperation_1_UINT32?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperation_1_UINT32 { return _self; }
+    public func put_Completed(handler : @escaping (Optional<ClosedGenerics.IAsyncOperation_1_UINT32>, Windows.Foundation.AsyncStatus) throws -> Void) throws -> Void {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try _ifc.put_Completed(handler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.get_Completed());
+    }
+    public func GetResults() throws -> Swift.UInt32 {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try _ifc.GetResults();
+    }
+    public var Completed : Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+        get throws {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.Completed);
+        }
+    }
+    public func get_Id() throws -> Swift.UInt32 {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.get_Id();
+    }
+    public func get_Status() throws -> Windows.Foundation.AsyncStatus {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.get_Status();
+    }
+    public func get_ErrorCode() throws -> Windows.Foundation.HResult {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.get_ErrorCode();
+    }
+    public func Cancel() throws -> Void {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Cancel();
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+    public var ErrorCode : Windows.Foundation.HResult {
+        get throws {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.ErrorCode;
+        }
+    }
+    public var Id : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Id;
+        }
+    }
+    public var Status : Windows.Foundation.AsyncStatus {
+        get throws {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Status;
+        }
+    }
+}
+
+// type: Windows.Storage.Streams.DataWriter
+// runtime class
+public class DataWriter
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IDataWriter;
+    public init(plok: Windows.Storage.Streams.IDataWriter?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IDataWriter { return _self; }
+    public init(outputStream : Optional<Windows.Storage.Streams.IOutputStream>) throws {
+        let _af : IDataWriterFactory = try RoGetActivationFactory("Windows.Storage.Streams.DataWriter");
+        _self = try _af.CreateDataWriter(outputStream: outputStream)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init() throws {
+        _self = try RoActivateInstance("Windows.Storage.Streams.DataWriter")
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func get_UnstoredBufferLength() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.get_UnstoredBufferLength();
+    }
+    public func get_UnicodeEncoding() throws -> Windows.Storage.Streams.UnicodeEncoding {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.get_UnicodeEncoding();
+    }
+    public func put_UnicodeEncoding(value : Windows.Storage.Streams.UnicodeEncoding) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.put_UnicodeEncoding(value: value);
+    }
+    public func get_ByteOrder() throws -> Windows.Storage.Streams.ByteOrder {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.get_ByteOrder();
+    }
+    public func put_ByteOrder(value : Windows.Storage.Streams.ByteOrder) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.put_ByteOrder(value: value);
+    }
+    public func WriteByte(value : Swift.UInt8) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteByte(value: value);
+    }
+    public func WriteBytes(valueLength : UINT32, value : Optional<UnsafeMutablePointer<UINT8>>) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteBytes(valueLength: valueLength, value: value);
+    }
+    public func WriteBuffer(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteBuffer(buffer: buffer);
+    }
+    public func WriteBuffer(buffer : Optional<Windows.Storage.Streams.IBuffer>, start : Swift.UInt32, count : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteBufferRange(buffer: buffer, start: start, count: count);
+    }
+    public func WriteBoolean(value : boolean) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteBoolean(value: value);
+    }
+    public func WriteGuid(value : GUID) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteGuid(value: value);
+    }
+    public func WriteInt16(value : Swift.Int16) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteInt16(value: value);
+    }
+    public func WriteInt32(value : Swift.Int32) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteInt32(value: value);
+    }
+    public func WriteInt64(value : Swift.Int64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteInt64(value: value);
+    }
+    public func WriteUInt16(value : Swift.UInt16) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteUInt16(value: value);
+    }
+    public func WriteUInt32(value : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteUInt32(value: value);
+    }
+    public func WriteUInt64(value : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteUInt64(value: value);
+    }
+    public func WriteSingle(value : Swift.Float) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteSingle(value: value);
+    }
+    public func WriteDouble(value : Swift.Double) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteDouble(value: value);
+    }
+    public func WriteDateTime(value : Windows.Foundation.DateTime) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteDateTime(value: value);
+    }
+    public func WriteTimeSpan(value : Windows.Foundation.TimeSpan) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteTimeSpan(value: value);
+    }
+    public func WriteString(value : Swift.String) throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.WriteString(value: value);
+    }
+    public func MeasureString(value : Swift.String) throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.MeasureString(value: value);
+    }
+    public func StoreAsync() throws -> Optional<Windows.Storage.Streams.DataWriterStoreOperation> {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try Windows.Storage.Streams.DataWriterStoreOperation(plok: _ifc.StoreAsync());
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func DetachBuffer() throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.DetachBuffer();
+    }
+    public func DetachStream() throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.DetachStream();
+    }
+    public var ByteOrder : Windows.Storage.Streams.ByteOrder {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.ByteOrder;
+        }
+    }
+    public var UnicodeEncoding : Windows.Storage.Streams.UnicodeEncoding {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.UnicodeEncoding;
+        }
+    }
+    public var UnstoredBufferLength : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IDataWriter = try _self.QueryInterface();
+        return try _ifc.UnstoredBufferLength;
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.DataWriterStoreOperation
+// runtime class
+public class DataWriterStoreOperation
+    :
+    WinRT.Object
+{
+    private var _self : ClosedGenerics.IAsyncOperation_1_UINT32;
+    public init(plok: ClosedGenerics.IAsyncOperation_1_UINT32?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> ClosedGenerics.IAsyncOperation_1_UINT32 { return _self; }
+    public func put_Completed(handler : @escaping (Optional<ClosedGenerics.IAsyncOperation_1_UINT32>, Windows.Foundation.AsyncStatus) throws -> Void) throws -> Void {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try _ifc.put_Completed(handler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
+    }
+    public func get_Completed() throws -> Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.get_Completed());
+    }
+    public func GetResults() throws -> Swift.UInt32 {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try _ifc.GetResults();
+    }
+    public var Completed : Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+        get throws {
+        let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
+        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.Completed);
+        }
+    }
+    public func get_Id() throws -> Swift.UInt32 {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.get_Id();
+    }
+    public func get_Status() throws -> Windows.Foundation.AsyncStatus {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.get_Status();
+    }
+    public func get_ErrorCode() throws -> Windows.Foundation.HResult {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.get_ErrorCode();
+    }
+    public func Cancel() throws -> Void {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Cancel();
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+    public var ErrorCode : Windows.Foundation.HResult {
+        get throws {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.ErrorCode;
+        }
+    }
+    public var Id : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Id;
+        }
+    }
+    public var Status : Windows.Foundation.AsyncStatus {
+        get throws {
+        let _ifc : Windows.Foundation.IAsyncInfo = try _self.QueryInterface();
+        return try _ifc.Status;
+        }
+    }
+}
+
+// type: Windows.Storage.Streams.FileInputStream
+// runtime class
+public class FileInputStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IInputStream;
+    public init(plok: Windows.Storage.Streams.IInputStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IInputStream { return _self; }
+    public func ReadAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32> {
+        let _ifc : Windows.Storage.Streams.IInputStream = try _self.QueryInterface();
+        return try _ifc.ReadAsync(buffer: buffer, count: count, options: options);
+    }
+    public func Read(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadAsync(buffer: buffer, count: count, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.FileOpenDisposition
+// enum type
+public typealias FileOpenDisposition = _q_CWindows_CStorage_CStreams_CFileOpenDisposition;
+
+// type: Windows.Storage.Streams.FileOutputStream
+// runtime class
+public class FileOutputStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IOutputStream;
+    public init(plok: Windows.Storage.Streams.IOutputStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IOutputStream { return _self; }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.WriteAsync(buffer: buffer);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.FileRandomAccessStream
+// runtime class
+public class FileRandomAccessStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IRandomAccessStream;
+    public init(plok: Windows.Storage.Streams.IRandomAccessStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IRandomAccessStream { return _self; }
+    private struct _IFileRandomAccessStreamStatics {
+        static var x : IFileRandomAccessStreamStatics =
+            try! RoGetActivationFactory("Windows.Storage.Streams.FileRandomAccessStream")
+    }
+    public static var FileRandomAccessStreamStatics : IFileRandomAccessStreamStatics {
+        _IFileRandomAccessStreamStatics.x
+    }
+    public static func OpenAsync(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        return try FileRandomAccessStreamStatics.OpenAsync(filePath: filePath, accessMode: accessMode);
+    }
+    public static func Open(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.OpenAsync(filePath: filePath, accessMode: accessMode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenAsync(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        return try FileRandomAccessStreamStatics.OpenWithOptionsAsync(filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition);
+    }
+    public static func Open(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.OpenAsync(filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenTransactedWriteAsync(filePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        return try FileRandomAccessStreamStatics.OpenTransactedWriteAsync(filePath: filePath);
+    }
+    public static func OpenTransactedWrite(filePath : Swift.String) async throws -> Optional<Windows.Storage.StorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageStreamTransaction(plok: Self.OpenTransactedWriteAsync(filePath: filePath)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenTransactedWriteAsync(filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        return try FileRandomAccessStreamStatics.OpenTransactedWriteWithOptionsAsync(filePath: filePath, openOptions: openOptions, openDisposition: openDisposition);
+    }
+    public static func OpenTransactedWrite(filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.StorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageStreamTransaction(plok: Self.OpenTransactedWriteAsync(filePath: filePath, openOptions: openOptions, openDisposition: openDisposition)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenForUserAsync(user : Optional<Windows.System.User>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        return try FileRandomAccessStreamStatics.OpenForUserAsync(user: user!.Interface(), filePath: filePath, accessMode: accessMode);
+    }
+    public static func OpenForUser(user : Optional<Windows.System.User>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.OpenForUserAsync(user: user, filePath: filePath, accessMode: accessMode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenForUserAsync(user : Optional<Windows.System.User>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        return try FileRandomAccessStreamStatics.OpenForUserWithOptionsAsync(user: user!.Interface(), filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition);
+    }
+    public static func OpenForUser(user : Optional<Windows.System.User>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.OpenForUserAsync(user: user, filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenTransactedWriteForUserAsync(user : Optional<Windows.System.User>, filePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        return try FileRandomAccessStreamStatics.OpenTransactedWriteForUserAsync(user: user!.Interface(), filePath: filePath);
+    }
+    public static func OpenTransactedWriteForUser(user : Optional<Windows.System.User>, filePath : Swift.String) async throws -> Optional<Windows.Storage.StorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageStreamTransaction(plok: Self.OpenTransactedWriteForUserAsync(user: user, filePath: filePath)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func OpenTransactedWriteForUserAsync(user : Optional<Windows.System.User>, filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        return try FileRandomAccessStreamStatics.OpenTransactedWriteForUserWithOptionsAsync(user: user!.Interface(), filePath: filePath, openOptions: openOptions, openDisposition: openDisposition);
+    }
+    public static func OpenTransactedWriteForUser(user : Optional<Windows.System.User>, filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.StorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageStreamTransaction(plok: Self.OpenTransactedWriteForUserAsync(user: user, filePath: filePath, openOptions: openOptions, openDisposition: openDisposition)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_Size() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func put_Size(value : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.put_Size(value: value);
+    }
+    public func GetInputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.GetInputStreamAt(position: position);
+    }
+    public func GetOutputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.GetOutputStreamAt(position: position);
+    }
+    public func get_Position() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_Position();
+    }
+    public func Seek(position : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Seek(position: position);
+    }
+    public func CloneStream() throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CloneStream();
+    }
+    public func get_CanRead() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_CanRead();
+    }
+    public func get_CanWrite() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_CanWrite();
+    }
+    public var CanRead : boolean {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CanRead;
+        }
+    }
+    public var CanWrite : boolean {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CanWrite;
+        }
+    }
+    public var Position : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Position;
+        }
+    }
+    public var Size : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Size;
+        }
+    }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.WriteAsync(buffer: buffer);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+    public func ReadAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32> {
+        let _ifc : Windows.Storage.Streams.IInputStream = try _self.QueryInterface();
+        return try _ifc.ReadAsync(buffer: buffer, count: count, options: options);
+    }
+    public func Read(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadAsync(buffer: buffer, count: count, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
 // type: Windows.Storage.Streams.IBuffer
 // interface type
 open class IBuffer
@@ -14,10 +836,1056 @@ open class IBuffer
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe0, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
-// method not needed: get_Capacity
-// method not needed: get_Length
-// method not needed: put_Length
+    // [IsSpecialName] System.UInt32 get_Capacity()
+    private func _n_get_Capacity(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIBuffer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Capacity(pThis, __presult))
+        }
+    }
+    public func get_Capacity() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Capacity(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.UInt32 get_Length()
+    private func _n_get_Length(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIBuffer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Length(pThis, __presult))
+        }
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Length(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Length(System.UInt32)
+    private func _n_put_Length(_ value : UINT32) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIBuffer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Length(pThis, value))
+        }
+    }
+    public func put_Length(value : Swift.UInt32) throws -> Void {
+        try self._n_put_Length(value);
+    }
+    public var Capacity : Swift.UInt32 {
+        get throws {
+            return try get_Capacity();
+        }
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+            return try get_Length();
+        }
+    }
 } // IBuffer
+
+
+// type: Windows.Storage.Streams.IBufferFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IBufferFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x71af914d, Data2: 0xc10f, Data3 : 0x484b, Data4 : (0xbc, 0x50, 0x14, 0xbc, 0x62, 0x3b, 0x3a, 0x27)) }
+    // Windows.Storage.Streams.Buffer Create(System.UInt32)
+    private func _n_Create(_ capacity : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIBufferFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, capacity, __presult))
+        }
+    }
+    public func Create(capacity : Swift.UInt32) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
+        try self._n_Create(capacity, &__result);
+        return Windows.Storage.Streams.IBuffer(consuming: __result);
+    }
+} // IBufferFactory
+
+
+// type: Windows.Storage.Streams.IBufferStatics
+// interface type
+open class IBufferStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe901e65b, Data2: 0xd716, Data3 : 0x475a, Data4 : (0xa9, 0x0a, 0xaf, 0x72, 0x29, 0xb1, 0xe7, 0x41)) }
+    // Windows.Storage.Streams.Buffer CreateCopyFromMemoryBuffer(Windows.Foundation.IMemoryBuffer)
+    private func _n_CreateCopyFromMemoryBuffer(_ input : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIMemoryBuffer>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIBufferStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateCopyFromMemoryBuffer(pThis, input, __presult))
+        }
+    }
+    public func CreateCopyFromMemoryBuffer(input : Optional<Windows.Foundation.IMemoryBuffer>) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
+        try self._n_CreateCopyFromMemoryBuffer(RawPointer(input), &__result);
+        return Windows.Storage.Streams.IBuffer(consuming: __result);
+    }
+    // Windows.Foundation.MemoryBuffer CreateMemoryBufferOverIBuffer(Windows.Storage.Streams.IBuffer)
+    private func _n_CreateMemoryBufferOverIBuffer(_ input : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIMemoryBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIBufferStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateMemoryBufferOverIBuffer(pThis, input, __presult))
+        }
+    }
+    public func CreateMemoryBufferOverIBuffer(input : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Windows.Foundation.IMemoryBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIMemoryBuffer>> = nil;
+        try self._n_CreateMemoryBufferOverIBuffer(RawPointer(input), &__result);
+        return Windows.Foundation.IMemoryBuffer(consuming: __result);
+    }
+} // IBufferStatics
+
+
+// type: Windows.Storage.Streams.IContentTypeProvider
+// interface type
+open class IContentTypeProvider
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x97d098a5, Data2: 0x3b99, Data3 : 0x4de9, Data4 : (0x88, 0xa5, 0xe1, 0x1d, 0x2f, 0x50, 0xc7, 0x95)) }
+    // [IsSpecialName] System.String get_ContentType()
+    private func _n_get_ContentType(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIContentTypeProvider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentType(pThis, __presult))
+        }
+    }
+    public func get_ContentType() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_ContentType(&__result);
+        return Swift.String(from: __result);
+    }
+    public var ContentType : Swift.String {
+        get throws {
+            return try get_ContentType();
+        }
+    }
+} // IContentTypeProvider
+
+
+// type: Windows.Storage.Streams.IDataReader
+// interface type
+open class IDataReader
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe2b50029, Data2: 0xb4c1, Data3 : 0x4314, Data4 : (0xa4, 0xb8, 0xfb, 0x81, 0x3a, 0x2f, 0x27, 0x5e)) }
+    // [IsSpecialName] System.UInt32 get_UnconsumedBufferLength()
+    private func _n_get_UnconsumedBufferLength(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UnconsumedBufferLength(pThis, __presult))
+        }
+    }
+    public func get_UnconsumedBufferLength() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_UnconsumedBufferLength(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Storage.Streams.UnicodeEncoding get_UnicodeEncoding()
+    private func _n_get_UnicodeEncoding(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CUnicodeEncoding>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UnicodeEncoding(pThis, __presult))
+        }
+    }
+    public func get_UnicodeEncoding() throws -> Windows.Storage.Streams.UnicodeEncoding {
+        var __result : _q_CWindows_CStorage_CStreams_CUnicodeEncoding = _q_CWindows_CStorage_CStreams_CUnicodeEncoding_Utf8;
+        try self._n_get_UnicodeEncoding(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_UnicodeEncoding(Windows.Storage.Streams.UnicodeEncoding)
+    private func _n_put_UnicodeEncoding(_ value : _q_CWindows_CStorage_CStreams_CUnicodeEncoding) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_UnicodeEncoding(pThis, value))
+        }
+    }
+    public func put_UnicodeEncoding(value : Windows.Storage.Streams.UnicodeEncoding) throws -> Void {
+        try self._n_put_UnicodeEncoding(value);
+    }
+    // [IsSpecialName] Windows.Storage.Streams.ByteOrder get_ByteOrder()
+    private func _n_get_ByteOrder(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CByteOrder>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ByteOrder(pThis, __presult))
+        }
+    }
+    public func get_ByteOrder() throws -> Windows.Storage.Streams.ByteOrder {
+        var __result : _q_CWindows_CStorage_CStreams_CByteOrder = _q_CWindows_CStorage_CStreams_CByteOrder_LittleEndian;
+        try self._n_get_ByteOrder(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ByteOrder(Windows.Storage.Streams.ByteOrder)
+    private func _n_put_ByteOrder(_ value : _q_CWindows_CStorage_CStreams_CByteOrder) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ByteOrder(pThis, value))
+        }
+    }
+    public func put_ByteOrder(value : Windows.Storage.Streams.ByteOrder) throws -> Void {
+        try self._n_put_ByteOrder(value);
+    }
+    // [IsSpecialName] Windows.Storage.Streams.InputStreamOptions get_InputStreamOptions()
+    private func _n_get_InputStreamOptions(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CInputStreamOptions>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_InputStreamOptions(pThis, __presult))
+        }
+    }
+    public func get_InputStreamOptions() throws -> Windows.Storage.Streams.InputStreamOptions {
+        var __result : _q_CWindows_CStorage_CStreams_CInputStreamOptions = _q_CWindows_CStorage_CStreams_CInputStreamOptions_None;
+        try self._n_get_InputStreamOptions(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_InputStreamOptions(Windows.Storage.Streams.InputStreamOptions)
+    private func _n_put_InputStreamOptions(_ value : _q_CWindows_CStorage_CStreams_CInputStreamOptions) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_InputStreamOptions(pThis, value))
+        }
+    }
+    public func put_InputStreamOptions(value : Windows.Storage.Streams.InputStreamOptions) throws -> Void {
+        try self._n_put_InputStreamOptions(value);
+    }
+    // System.Byte ReadByte()
+    private func _n_ReadByte(_ __presult: UnsafeMutablePointer<UINT8>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadByte(pThis, __presult))
+        }
+    }
+    public func ReadByte() throws -> Swift.UInt8 {
+        var __result : UINT8 = 0;
+        try self._n_ReadByte(&__result);
+        return __result;
+    }
+    // void ReadBytes(System.Byte[])
+    private func _n_ReadBytes(_ valueLength : UINT32, _ value : Optional<UnsafeMutablePointer<UINT8>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadBytes(pThis, valueLength, value))
+        }
+    }
+    public func ReadBytes(valueLength : UINT32, value : Optional<UnsafeMutablePointer<UINT8>>) throws -> Void {
+        try self._n_ReadBytes(valueLength, value);
+    }
+    // Windows.Storage.Streams.IBuffer ReadBuffer(System.UInt32)
+    private func _n_ReadBuffer(_ length : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadBuffer(pThis, length, __presult))
+        }
+    }
+    public func ReadBuffer(length : Swift.UInt32) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
+        try self._n_ReadBuffer(length, &__result);
+        return Windows.Storage.Streams.IBuffer(consuming: __result);
+    }
+    // bool ReadBoolean()
+    private func _n_ReadBoolean(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadBoolean(pThis, __presult))
+        }
+    }
+    public func ReadBoolean() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_ReadBoolean(&__result);
+        return __result;
+    }
+    // System.Guid ReadGuid()
+    private func _n_ReadGuid(_ __presult: UnsafeMutablePointer<GUID>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadGuid(pThis, __presult))
+        }
+    }
+    public func ReadGuid() throws -> GUID {
+        var __result : GUID = CWinRT.GUID(Data1: 0x00000000, Data2: 0x0000, Data3 : 0x0000, Data4 : (0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00));
+        try self._n_ReadGuid(&__result);
+        return __result;
+    }
+    // System.Int16 ReadInt16()
+    private func _n_ReadInt16(_ __presult: UnsafeMutablePointer<INT16>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadInt16(pThis, __presult))
+        }
+    }
+    public func ReadInt16() throws -> Swift.Int16 {
+        var __result : INT16 = 0;
+        try self._n_ReadInt16(&__result);
+        return __result;
+    }
+    // System.Int32 ReadInt32()
+    private func _n_ReadInt32(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadInt32(pThis, __presult))
+        }
+    }
+    public func ReadInt32() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_ReadInt32(&__result);
+        return __result;
+    }
+    // System.Int64 ReadInt64()
+    private func _n_ReadInt64(_ __presult: UnsafeMutablePointer<INT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadInt64(pThis, __presult))
+        }
+    }
+    public func ReadInt64() throws -> Swift.Int64 {
+        var __result : INT64 = 0;
+        try self._n_ReadInt64(&__result);
+        return __result;
+    }
+    // System.UInt16 ReadUInt16()
+    private func _n_ReadUInt16(_ __presult: UnsafeMutablePointer<UINT16>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadUInt16(pThis, __presult))
+        }
+    }
+    public func ReadUInt16() throws -> Swift.UInt16 {
+        var __result : UINT16 = 0;
+        try self._n_ReadUInt16(&__result);
+        return __result;
+    }
+    // System.UInt32 ReadUInt32()
+    private func _n_ReadUInt32(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadUInt32(pThis, __presult))
+        }
+    }
+    public func ReadUInt32() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_ReadUInt32(&__result);
+        return __result;
+    }
+    // System.UInt64 ReadUInt64()
+    private func _n_ReadUInt64(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadUInt64(pThis, __presult))
+        }
+    }
+    public func ReadUInt64() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_ReadUInt64(&__result);
+        return __result;
+    }
+    // System.Single ReadSingle()
+    private func _n_ReadSingle(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadSingle(pThis, __presult))
+        }
+    }
+    public func ReadSingle() throws -> Swift.Float {
+        var __result : FLOAT = 0;
+        try self._n_ReadSingle(&__result);
+        return __result;
+    }
+    // System.Double ReadDouble()
+    private func _n_ReadDouble(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadDouble(pThis, __presult))
+        }
+    }
+    public func ReadDouble() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_ReadDouble(&__result);
+        return __result;
+    }
+    // System.String ReadString(System.UInt32)
+    private func _n_ReadString(_ codeUnitCount : UINT32, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadString(pThis, codeUnitCount, __presult))
+        }
+    }
+    public func ReadString(codeUnitCount : Swift.UInt32) throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_ReadString(codeUnitCount, &__result);
+        return Swift.String(from: __result);
+    }
+    // Windows.Foundation.DateTime ReadDateTime()
+    private func _n_ReadDateTime(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CDateTime>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadDateTime(pThis, __presult))
+        }
+    }
+    public func ReadDateTime() throws -> Windows.Foundation.DateTime {
+        var __result : _q_CWindows_CFoundation_CDateTime = _q_CWindows_CFoundation_CDateTime(UniversalTime: 0);
+        try self._n_ReadDateTime(&__result);
+        return __result;
+    }
+    // Windows.Foundation.TimeSpan ReadTimeSpan()
+    private func _n_ReadTimeSpan(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CTimeSpan>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadTimeSpan(pThis, __presult))
+        }
+    }
+    public func ReadTimeSpan() throws -> Windows.Foundation.TimeSpan {
+        var __result : _q_CWindows_CFoundation_CTimeSpan = _q_CWindows_CFoundation_CTimeSpan(Duration: 0);
+        try self._n_ReadTimeSpan(&__result);
+        return __result;
+    }
+    // Windows.Storage.Streams.DataReaderLoadOperation LoadAsync(System.UInt32)
+    private func _n_LoadAsync(_ count : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsync(pThis, count, __presult))
+        }
+    }
+    public func LoadAsync(count : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_UINT32>> = nil;
+        try self._n_LoadAsync(count, &__result);
+        return ClosedGenerics.IAsyncOperation_1_UINT32(consuming: __result);
+    }
+    // Windows.Storage.Streams.IBuffer DetachBuffer()
+    private func _n_DetachBuffer(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DetachBuffer(pThis, __presult))
+        }
+    }
+    public func DetachBuffer() throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
+        try self._n_DetachBuffer(&__result);
+        return Windows.Storage.Streams.IBuffer(consuming: __result);
+    }
+    // Windows.Storage.Streams.IInputStream DetachStream()
+    private func _n_DetachStream(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DetachStream(pThis, __presult))
+        }
+    }
+    public func DetachStream() throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>> = nil;
+        try self._n_DetachStream(&__result);
+        return Windows.Storage.Streams.IInputStream(consuming: __result);
+    }
+    public var ByteOrder : Windows.Storage.Streams.ByteOrder {
+        get throws {
+            return try get_ByteOrder();
+        }
+    }
+    public var InputStreamOptions : Windows.Storage.Streams.InputStreamOptions {
+        get throws {
+            return try get_InputStreamOptions();
+        }
+    }
+    public var UnconsumedBufferLength : Swift.UInt32 {
+        get throws {
+            return try get_UnconsumedBufferLength();
+        }
+    }
+    public var UnicodeEncoding : Windows.Storage.Streams.UnicodeEncoding {
+        get throws {
+            return try get_UnicodeEncoding();
+        }
+    }
+} // IDataReader
+
+
+// type: Windows.Storage.Streams.IDataReaderFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IDataReaderFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd7527847, Data2: 0x57da, Data3 : 0x4e15, Data4 : (0x91, 0x4c, 0x06, 0x80, 0x66, 0x99, 0xa0, 0x98)) }
+    // Windows.Storage.Streams.DataReader CreateDataReader(Windows.Storage.Streams.IInputStream)
+    private func _n_CreateDataReader(_ inputStream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIDataReader>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReaderFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateDataReader(pThis, inputStream, __presult))
+        }
+    }
+    public func CreateDataReader(inputStream : Optional<Windows.Storage.Streams.IInputStream>) throws -> Optional<Windows.Storage.Streams.IDataReader> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIDataReader>> = nil;
+        try self._n_CreateDataReader(RawPointer(inputStream), &__result);
+        return Windows.Storage.Streams.IDataReader(consuming: __result);
+    }
+} // IDataReaderFactory
+
+
+// type: Windows.Storage.Streams.IDataReaderStatics
+// interface type
+open class IDataReaderStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x11fcbfc8, Data2: 0xf93a, Data3 : 0x471b, Data4 : (0xb1, 0x21, 0xf3, 0x79, 0xe3, 0x49, 0x31, 0x3c)) }
+    // Windows.Storage.Streams.DataReader FromBuffer(Windows.Storage.Streams.IBuffer)
+    private func _n_FromBuffer(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIDataReader>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataReaderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.FromBuffer(pThis, buffer, __presult))
+        }
+    }
+    public func FromBuffer(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Windows.Storage.Streams.IDataReader> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIDataReader>> = nil;
+        try self._n_FromBuffer(RawPointer(buffer), &__result);
+        return Windows.Storage.Streams.IDataReader(consuming: __result);
+    }
+} // IDataReaderStatics
+
+
+// type: Windows.Storage.Streams.IDataWriter
+// interface type
+open class IDataWriter
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x64b89265, Data2: 0xd341, Data3 : 0x4922, Data4 : (0xb3, 0x8a, 0xdd, 0x4a, 0xf8, 0x80, 0x8c, 0x4e)) }
+    // [IsSpecialName] System.UInt32 get_UnstoredBufferLength()
+    private func _n_get_UnstoredBufferLength(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UnstoredBufferLength(pThis, __presult))
+        }
+    }
+    public func get_UnstoredBufferLength() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_UnstoredBufferLength(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Storage.Streams.UnicodeEncoding get_UnicodeEncoding()
+    private func _n_get_UnicodeEncoding(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CUnicodeEncoding>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UnicodeEncoding(pThis, __presult))
+        }
+    }
+    public func get_UnicodeEncoding() throws -> Windows.Storage.Streams.UnicodeEncoding {
+        var __result : _q_CWindows_CStorage_CStreams_CUnicodeEncoding = _q_CWindows_CStorage_CStreams_CUnicodeEncoding_Utf8;
+        try self._n_get_UnicodeEncoding(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_UnicodeEncoding(Windows.Storage.Streams.UnicodeEncoding)
+    private func _n_put_UnicodeEncoding(_ value : _q_CWindows_CStorage_CStreams_CUnicodeEncoding) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_UnicodeEncoding(pThis, value))
+        }
+    }
+    public func put_UnicodeEncoding(value : Windows.Storage.Streams.UnicodeEncoding) throws -> Void {
+        try self._n_put_UnicodeEncoding(value);
+    }
+    // [IsSpecialName] Windows.Storage.Streams.ByteOrder get_ByteOrder()
+    private func _n_get_ByteOrder(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CByteOrder>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ByteOrder(pThis, __presult))
+        }
+    }
+    public func get_ByteOrder() throws -> Windows.Storage.Streams.ByteOrder {
+        var __result : _q_CWindows_CStorage_CStreams_CByteOrder = _q_CWindows_CStorage_CStreams_CByteOrder_LittleEndian;
+        try self._n_get_ByteOrder(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ByteOrder(Windows.Storage.Streams.ByteOrder)
+    private func _n_put_ByteOrder(_ value : _q_CWindows_CStorage_CStreams_CByteOrder) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ByteOrder(pThis, value))
+        }
+    }
+    public func put_ByteOrder(value : Windows.Storage.Streams.ByteOrder) throws -> Void {
+        try self._n_put_ByteOrder(value);
+    }
+    // void WriteByte(System.Byte)
+    private func _n_WriteByte(_ value : UINT8) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteByte(pThis, value))
+        }
+    }
+    public func WriteByte(value : Swift.UInt8) throws -> Void {
+        try self._n_WriteByte(value);
+    }
+    // void WriteBytes(System.Byte[])
+    private func _n_WriteBytes(_ valueLength : UINT32, _ value : Optional<UnsafeMutablePointer<UINT8>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteBytes(pThis, valueLength, value))
+        }
+    }
+    public func WriteBytes(valueLength : UINT32, value : Optional<UnsafeMutablePointer<UINT8>>) throws -> Void {
+        try self._n_WriteBytes(valueLength, value);
+    }
+    // void WriteBuffer(Windows.Storage.Streams.IBuffer)
+    private func _n_WriteBuffer(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteBuffer(pThis, buffer))
+        }
+    }
+    public func WriteBuffer(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Void {
+        try self._n_WriteBuffer(RawPointer(buffer));
+    }
+    // void WriteBuffer(Windows.Storage.Streams.IBuffer, System.UInt32, System.UInt32)
+    private func _n_WriteBufferRange(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ start : UINT32, _ count : UINT32) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteBufferRange(pThis, buffer, start, count))
+        }
+    }
+    public func WriteBufferRange(buffer : Optional<Windows.Storage.Streams.IBuffer>, start : Swift.UInt32, count : Swift.UInt32) throws -> Void {
+        try self._n_WriteBufferRange(RawPointer(buffer), start, count);
+    }
+    // void WriteBoolean(bool)
+    private func _n_WriteBoolean(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteBoolean(pThis, value))
+        }
+    }
+    public func WriteBoolean(value : boolean) throws -> Void {
+        try self._n_WriteBoolean(value);
+    }
+    // void WriteGuid(System.Guid)
+    private func _n_WriteGuid(_ value : GUID) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteGuid(pThis, value))
+        }
+    }
+    public func WriteGuid(value : GUID) throws -> Void {
+        try self._n_WriteGuid(value);
+    }
+    // void WriteInt16(System.Int16)
+    private func _n_WriteInt16(_ value : INT16) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteInt16(pThis, value))
+        }
+    }
+    public func WriteInt16(value : Swift.Int16) throws -> Void {
+        try self._n_WriteInt16(value);
+    }
+    // void WriteInt32(System.Int32)
+    private func _n_WriteInt32(_ value : INT32) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteInt32(pThis, value))
+        }
+    }
+    public func WriteInt32(value : Swift.Int32) throws -> Void {
+        try self._n_WriteInt32(value);
+    }
+    // void WriteInt64(System.Int64)
+    private func _n_WriteInt64(_ value : INT64) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteInt64(pThis, value))
+        }
+    }
+    public func WriteInt64(value : Swift.Int64) throws -> Void {
+        try self._n_WriteInt64(value);
+    }
+    // void WriteUInt16(System.UInt16)
+    private func _n_WriteUInt16(_ value : UINT16) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteUInt16(pThis, value))
+        }
+    }
+    public func WriteUInt16(value : Swift.UInt16) throws -> Void {
+        try self._n_WriteUInt16(value);
+    }
+    // void WriteUInt32(System.UInt32)
+    private func _n_WriteUInt32(_ value : UINT32) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteUInt32(pThis, value))
+        }
+    }
+    public func WriteUInt32(value : Swift.UInt32) throws -> Void {
+        try self._n_WriteUInt32(value);
+    }
+    // void WriteUInt64(System.UInt64)
+    private func _n_WriteUInt64(_ value : UINT64) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteUInt64(pThis, value))
+        }
+    }
+    public func WriteUInt64(value : Swift.UInt64) throws -> Void {
+        try self._n_WriteUInt64(value);
+    }
+    // void WriteSingle(System.Single)
+    private func _n_WriteSingle(_ value : FLOAT) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteSingle(pThis, value))
+        }
+    }
+    public func WriteSingle(value : Swift.Float) throws -> Void {
+        try self._n_WriteSingle(value);
+    }
+    // void WriteDouble(System.Double)
+    private func _n_WriteDouble(_ value : DOUBLE) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteDouble(pThis, value))
+        }
+    }
+    public func WriteDouble(value : Swift.Double) throws -> Void {
+        try self._n_WriteDouble(value);
+    }
+    // void WriteDateTime(Windows.Foundation.DateTime)
+    private func _n_WriteDateTime(_ value : _q_CWindows_CFoundation_CDateTime) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteDateTime(pThis, value))
+        }
+    }
+    public func WriteDateTime(value : Windows.Foundation.DateTime) throws -> Void {
+        try self._n_WriteDateTime(value);
+    }
+    // void WriteTimeSpan(Windows.Foundation.TimeSpan)
+    private func _n_WriteTimeSpan(_ value : _q_CWindows_CFoundation_CTimeSpan) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteTimeSpan(pThis, value))
+        }
+    }
+    public func WriteTimeSpan(value : Windows.Foundation.TimeSpan) throws -> Void {
+        try self._n_WriteTimeSpan(value);
+    }
+    // System.UInt32 WriteString(System.String)
+    private func _n_WriteString(_ value : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteString(pThis, value, __presult))
+        }
+    }
+    public func WriteString(value : Swift.String) throws -> Swift.UInt32 {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        var __result : UINT32 = 0;
+        try self._n_WriteString(__hstr_value.Raw(), &__result);
+        return __result;
+        }
+    }
+    // System.UInt32 MeasureString(System.String)
+    private func _n_MeasureString(_ value : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MeasureString(pThis, value, __presult))
+        }
+    }
+    public func MeasureString(value : Swift.String) throws -> Swift.UInt32 {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        var __result : UINT32 = 0;
+        try self._n_MeasureString(__hstr_value.Raw(), &__result);
+        return __result;
+        }
+    }
+    // Windows.Storage.Streams.DataWriterStoreOperation StoreAsync()
+    private func _n_StoreAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.StoreAsync(pThis, __presult))
+        }
+    }
+    public func StoreAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_UINT32>> = nil;
+        try self._n_StoreAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1_UINT32(consuming: __result);
+    }
+    // Windows.Foundation.IAsyncOperation<bool> FlushAsync()
+    private func _n_FlushAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.FlushAsync(pThis, __presult))
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
+        try self._n_FlushAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Storage.Streams.IBuffer DetachBuffer()
+    private func _n_DetachBuffer(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DetachBuffer(pThis, __presult))
+        }
+    }
+    public func DetachBuffer() throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
+        try self._n_DetachBuffer(&__result);
+        return Windows.Storage.Streams.IBuffer(consuming: __result);
+    }
+    // Windows.Storage.Streams.IOutputStream DetachStream()
+    private func _n_DetachStream(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DetachStream(pThis, __presult))
+        }
+    }
+    public func DetachStream() throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>> = nil;
+        try self._n_DetachStream(&__result);
+        return Windows.Storage.Streams.IOutputStream(consuming: __result);
+    }
+    public var ByteOrder : Windows.Storage.Streams.ByteOrder {
+        get throws {
+            return try get_ByteOrder();
+        }
+    }
+    public var UnicodeEncoding : Windows.Storage.Streams.UnicodeEncoding {
+        get throws {
+            return try get_UnicodeEncoding();
+        }
+    }
+    public var UnstoredBufferLength : Swift.UInt32 {
+        get throws {
+            return try get_UnstoredBufferLength();
+        }
+    }
+} // IDataWriter
+
+
+// type: Windows.Storage.Streams.IDataWriterFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IDataWriterFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x338c67c2, Data2: 0x8b84, Data3 : 0x4c2b, Data4 : (0x9c, 0x50, 0x7b, 0x87, 0x67, 0x84, 0x7a, 0x1f)) }
+    // Windows.Storage.Streams.DataWriter CreateDataWriter(Windows.Storage.Streams.IOutputStream)
+    private func _n_CreateDataWriter(_ outputStream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIDataWriter>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIDataWriterFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateDataWriter(pThis, outputStream, __presult))
+        }
+    }
+    public func CreateDataWriter(outputStream : Optional<Windows.Storage.Streams.IOutputStream>) throws -> Optional<Windows.Storage.Streams.IDataWriter> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIDataWriter>> = nil;
+        try self._n_CreateDataWriter(RawPointer(outputStream), &__result);
+        return Windows.Storage.Streams.IDataWriter(consuming: __result);
+    }
+} // IDataWriterFactory
+
+
+// type: Windows.Storage.Streams.IFileRandomAccessStreamStatics
+// interface type
+open class IFileRandomAccessStreamStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x73550107, Data2: 0x3b57, Data3 : 0x4b5d, Data4 : (0x83, 0x45, 0x55, 0x4d, 0x2f, 0xc6, 0x21, 0xf0)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> OpenAsync(System.String, Windows.Storage.FileAccessMode)
+    private func _n_OpenAsync(_ filePath : Optional<HSTRING>, _ accessMode : _q_CWindows_CStorage_CFileAccessMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenAsync(pThis, filePath, accessMode, __presult))
+        }
+    }
+    public func OpenAsync(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_OpenAsync(__hstr_filePath.Raw(), accessMode, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
+        }
+    }
+    public func Open(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenAsync(filePath: filePath, accessMode: accessMode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> OpenAsync(System.String, Windows.Storage.FileAccessMode, Windows.Storage.StorageOpenOptions, Windows.Storage.Streams.FileOpenDisposition)
+    private func _n_OpenWithOptionsAsync(_ filePath : Optional<HSTRING>, _ accessMode : _q_CWindows_CStorage_CFileAccessMode, _ sharingOptions : _q_CWindows_CStorage_CStorageOpenOptions, _ openDisposition : _q_CWindows_CStorage_CStreams_CFileOpenDisposition, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenWithOptionsAsync(pThis, filePath, accessMode, sharingOptions, openDisposition, __presult))
+        }
+    }
+    public func OpenWithOptionsAsync(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_OpenWithOptionsAsync(__hstr_filePath.Raw(), accessMode, sharingOptions, openDisposition, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
+        }
+    }
+    public func OpenWithOptions(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenWithOptionsAsync(filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> OpenTransactedWriteAsync(System.String)
+    private func _n_OpenTransactedWriteAsync(_ filePath : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteAsync(pThis, filePath, __presult))
+        }
+    }
+    public func OpenTransactedWriteAsync(filePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
+        try self._n_OpenTransactedWriteAsync(__hstr_filePath.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
+        }
+    }
+    public func OpenTransactedWrite(filePath : Swift.String) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenTransactedWriteAsync(filePath: filePath)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> OpenTransactedWriteAsync(System.String, Windows.Storage.StorageOpenOptions, Windows.Storage.Streams.FileOpenDisposition)
+    private func _n_OpenTransactedWriteWithOptionsAsync(_ filePath : Optional<HSTRING>, _ openOptions : _q_CWindows_CStorage_CStorageOpenOptions, _ openDisposition : _q_CWindows_CStorage_CStreams_CFileOpenDisposition, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteWithOptionsAsync(pThis, filePath, openOptions, openDisposition, __presult))
+        }
+    }
+    public func OpenTransactedWriteWithOptionsAsync(filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
+        try self._n_OpenTransactedWriteWithOptionsAsync(__hstr_filePath.Raw(), openOptions, openDisposition, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
+        }
+    }
+    public func OpenTransactedWriteWithOptions(filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenTransactedWriteWithOptionsAsync(filePath: filePath, openOptions: openOptions, openDisposition: openDisposition)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> OpenForUserAsync(Windows.System.User, System.String, Windows.Storage.FileAccessMode)
+    private func _n_OpenForUserAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ filePath : Optional<HSTRING>, _ accessMode : _q_CWindows_CStorage_CFileAccessMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenForUserAsync(pThis, user, filePath, accessMode, __presult))
+        }
+    }
+    public func OpenForUserAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_OpenForUserAsync(RawPointer(user), __hstr_filePath.Raw(), accessMode, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
+        }
+    }
+    public func OpenForUser(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenForUserAsync(user: user, filePath: filePath, accessMode: accessMode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> OpenForUserAsync(Windows.System.User, System.String, Windows.Storage.FileAccessMode, Windows.Storage.StorageOpenOptions, Windows.Storage.Streams.FileOpenDisposition)
+    private func _n_OpenForUserWithOptionsAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ filePath : Optional<HSTRING>, _ accessMode : _q_CWindows_CStorage_CFileAccessMode, _ sharingOptions : _q_CWindows_CStorage_CStorageOpenOptions, _ openDisposition : _q_CWindows_CStorage_CStreams_CFileOpenDisposition, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenForUserWithOptionsAsync(pThis, user, filePath, accessMode, sharingOptions, openDisposition, __presult))
+        }
+    }
+    public func OpenForUserWithOptionsAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_OpenForUserWithOptionsAsync(RawPointer(user), __hstr_filePath.Raw(), accessMode, sharingOptions, openDisposition, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
+        }
+    }
+    public func OpenForUserWithOptions(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenForUserWithOptionsAsync(user: user, filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> OpenTransactedWriteForUserAsync(Windows.System.User, System.String)
+    private func _n_OpenTransactedWriteForUserAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ filePath : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteForUserAsync(pThis, user, filePath, __presult))
+        }
+    }
+    public func OpenTransactedWriteForUserAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
+        try self._n_OpenTransactedWriteForUserAsync(RawPointer(user), __hstr_filePath.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
+        }
+    }
+    public func OpenTransactedWriteForUser(user : Optional<Windows.System.IUser>, filePath : Swift.String) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenTransactedWriteForUserAsync(user: user, filePath: filePath)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> OpenTransactedWriteForUserAsync(Windows.System.User, System.String, Windows.Storage.StorageOpenOptions, Windows.Storage.Streams.FileOpenDisposition)
+    private func _n_OpenTransactedWriteForUserWithOptionsAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ filePath : Optional<HSTRING>, _ openOptions : _q_CWindows_CStorage_CStorageOpenOptions, _ openDisposition : _q_CWindows_CStorage_CStreams_CFileOpenDisposition, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIFileRandomAccessStreamStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteForUserWithOptionsAsync(pThis, user, filePath, openOptions, openDisposition, __presult))
+        }
+    }
+    public func OpenTransactedWriteForUserWithOptionsAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath);
+        return try withExtendedLifetime(__hstr_filePath) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
+        try self._n_OpenTransactedWriteForUserWithOptionsAsync(RawPointer(user), __hstr_filePath.Raw(), openOptions, openDisposition, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
+        }
+    }
+    public func OpenTransactedWriteForUserWithOptions(user : Optional<Windows.System.IUser>, filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenTransactedWriteForUserWithOptionsAsync(user: user, filePath: filePath, openOptions: openOptions, openDisposition: openDisposition)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IFileRandomAccessStreamStatics
+
+
+// type: Windows.Storage.Streams.IInputStream
+// interface type
+open class IInputStream
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe2, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
+    // Windows.Foundation.IAsyncOperationWithProgress<Windows.Storage.Streams.IBuffer,System.UInt32> ReadAsync(Windows.Storage.Streams.IBuffer, System.UInt32, Windows.Storage.Streams.InputStreamOptions)
+    private func _n_ReadAsync(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ count : UINT32, _ options : _q_CWindows_CStorage_CStreams_CInputStreamOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIInputStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadAsync(pThis, buffer, count, options, __presult))
+        }
+    }
+    public func ReadAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32>> = nil;
+        try self._n_ReadAsync(RawPointer(buffer), count, options, &__result);
+        return ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(consuming: __result);
+    }
+    public func Read(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadAsync(buffer: buffer, count: count, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IInputStream
+
+
+// type: Windows.Storage.Streams.IInputStreamReference
+// interface type
+open class IInputStreamReference
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x43929d18, Data2: 0x5ec9, Data3 : 0x4b5a, Data4 : (0x91, 0x9c, 0x42, 0x05, 0xb0, 0xc8, 0x04, 0xb6)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IInputStream> OpenSequentialReadAsync()
+    private func _n_OpenSequentialReadAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIInputStreamReference.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenSequentialReadAsync(pThis, __presult))
+        }
+    }
+    public func OpenSequentialReadAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream>> = nil;
+        try self._n_OpenSequentialReadAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream(consuming: __result);
+    }
+    public func OpenSequentialRead() async throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenSequentialReadAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IInputStreamReference
 
 
 // type: Windows.Storage.Streams.IOutputStream
@@ -27,7 +1895,26 @@ open class IOutputStream
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe6, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
-// method not needed: WriteAsync
+    // Windows.Foundation.IAsyncOperationWithProgress<System.UInt32,System.UInt32> WriteAsync(Windows.Storage.Streams.IBuffer)
+    private func _n_WriteAsync(_ buffer : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT32_UINT32>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIOutputStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WriteAsync(pThis, buffer, __presult))
+        }
+    }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT32_UINT32>> = nil;
+        try self._n_WriteAsync(RawPointer(buffer), &__result);
+        return ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32(consuming: __result);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
     // Windows.Foundation.IAsyncOperation<bool> FlushAsync()
     private func _n_FlushAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
         return try perform(as: _q_CWindows_CStorage_CStreams_CIOutputStream.self) { pThis in
@@ -58,16 +1945,642 @@ open class IRandomAccessStream
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x905a0fe1, Data2: 0xbc53, Data3 : 0x11df, Data4 : (0x8c, 0x49, 0x00, 0x1e, 0x4f, 0xc6, 0x86, 0xda)) }
-// method not needed: get_Size
-// method not needed: put_Size
-// method not needed: GetInputStreamAt
-// method not needed: GetOutputStreamAt
-// method not needed: get_Position
-// method not needed: Seek
-// method not needed: CloneStream
-// method not needed: get_CanRead
-// method not needed: get_CanWrite
+    // [IsSpecialName] System.UInt64 get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Size(System.UInt64)
+    private func _n_put_Size(_ value : UINT64) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Size(pThis, value))
+        }
+    }
+    public func put_Size(value : Swift.UInt64) throws -> Void {
+        try self._n_put_Size(value);
+    }
+    // Windows.Storage.Streams.IInputStream GetInputStreamAt(System.UInt64)
+    private func _n_GetInputStreamAt(_ position : UINT64, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetInputStreamAt(pThis, position, __presult))
+        }
+    }
+    public func GetInputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIInputStream>> = nil;
+        try self._n_GetInputStreamAt(position, &__result);
+        return Windows.Storage.Streams.IInputStream(consuming: __result);
+    }
+    // Windows.Storage.Streams.IOutputStream GetOutputStreamAt(System.UInt64)
+    private func _n_GetOutputStreamAt(_ position : UINT64, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetOutputStreamAt(pThis, position, __presult))
+        }
+    }
+    public func GetOutputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>> = nil;
+        try self._n_GetOutputStreamAt(position, &__result);
+        return Windows.Storage.Streams.IOutputStream(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt64 get_Position()
+    private func _n_get_Position(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Position(pThis, __presult))
+        }
+    }
+    public func get_Position() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_get_Position(&__result);
+        return __result;
+    }
+    // void Seek(System.UInt64)
+    private func _n_Seek(_ position : UINT64) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Seek(pThis, position))
+        }
+    }
+    public func Seek(position : Swift.UInt64) throws -> Void {
+        try self._n_Seek(position);
+    }
+    // Windows.Storage.Streams.IRandomAccessStream CloneStream()
+    private func _n_CloneStream(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CloneStream(pThis, __presult))
+        }
+    }
+    public func CloneStream() throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_CloneStream(&__result);
+        return Windows.Storage.Streams.IRandomAccessStream(consuming: __result);
+    }
+    // [IsSpecialName] bool get_CanRead()
+    private func _n_get_CanRead(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanRead(pThis, __presult))
+        }
+    }
+    public func get_CanRead() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanRead(&__result);
+        return __result;
+    }
+    // [IsSpecialName] bool get_CanWrite()
+    private func _n_get_CanWrite(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStream.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanWrite(pThis, __presult))
+        }
+    }
+    public func get_CanWrite() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanWrite(&__result);
+        return __result;
+    }
+    public var CanRead : boolean {
+        get throws {
+            return try get_CanRead();
+        }
+    }
+    public var CanWrite : boolean {
+        get throws {
+            return try get_CanWrite();
+        }
+    }
+    public var Position : Swift.UInt64 {
+        get throws {
+            return try get_Position();
+        }
+    }
+    public var Size : Swift.UInt64 {
+        get throws {
+            return try get_Size();
+        }
+    }
 } // IRandomAccessStream
 
 
+// type: Windows.Storage.Streams.IRandomAccessStreamReference
+// interface type
+open class IRandomAccessStreamReference
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x33ee3134, Data2: 0x1dd6, Data3 : 0x4e3a, Data4 : (0x80, 0x67, 0xd1, 0xc1, 0x62, 0xe8, 0x64, 0x2b)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStreamWithContentType> OpenReadAsync()
+    private func _n_OpenReadAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenReadAsync(pThis, __presult))
+        }
+    }
+    public func OpenReadAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType>> = nil;
+        try self._n_OpenReadAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType(consuming: __result);
+    }
+    public func OpenRead() async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenReadAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IRandomAccessStreamReference
+
+
+// type: Windows.Storage.Streams.IRandomAccessStreamReferenceStatics
+// interface type
+open class IRandomAccessStreamReferenceStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x857309dc, Data2: 0x3fbf, Data3 : 0x4e7d, Data4 : (0x98, 0x6f, 0xef, 0x3b, 0x1a, 0x07, 0xa9, 0x64)) }
+    // Windows.Storage.Streams.RandomAccessStreamReference CreateFromFile(Windows.Storage.IStorageFile)
+    private func _n_CreateFromFile(_ file : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromFile(pThis, file, __presult))
+        }
+    }
+    public func CreateFromFile(file : Optional<Windows.Storage.IStorageFile>) throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamReference> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>> = nil;
+        try self._n_CreateFromFile(RawPointer(file), &__result);
+        return Windows.Storage.Streams.IRandomAccessStreamReference(consuming: __result);
+    }
+    // Windows.Storage.Streams.RandomAccessStreamReference CreateFromUri(Windows.Foundation.Uri)
+    private func _n_CreateFromUri(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromUri(pThis, uri, __presult))
+        }
+    }
+    public func CreateFromUri(uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamReference> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>> = nil;
+        try self._n_CreateFromUri(RawPointer(uri), &__result);
+        return Windows.Storage.Streams.IRandomAccessStreamReference(consuming: __result);
+    }
+    // Windows.Storage.Streams.RandomAccessStreamReference CreateFromStream(Windows.Storage.Streams.IRandomAccessStream)
+    private func _n_CreateFromStream(_ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CStreams_CIRandomAccessStreamReferenceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromStream(pThis, stream, __presult))
+        }
+    }
+    public func CreateFromStream(stream : Optional<Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamReference> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>> = nil;
+        try self._n_CreateFromStream(RawPointer(stream), &__result);
+        return Windows.Storage.Streams.IRandomAccessStreamReference(consuming: __result);
+    }
+} // IRandomAccessStreamReferenceStatics
+
+
+// type: Windows.Storage.Streams.IRandomAccessStreamWithContentType
+// interface type
+open class IRandomAccessStreamWithContentType
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcc254827, Data2: 0x4b3d, Data3 : 0x438f, Data4 : (0x92, 0x32, 0x10, 0xc7, 0x6b, 0xc7, 0xe0, 0x38)) }
+} // IRandomAccessStreamWithContentType
+
+
+// type: Windows.Storage.Streams.InMemoryRandomAccessStream
+// runtime class
+public class InMemoryRandomAccessStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IRandomAccessStream;
+    public init(plok: Windows.Storage.Streams.IRandomAccessStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IRandomAccessStream { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Windows.Storage.Streams.InMemoryRandomAccessStream")
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func get_Size() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func put_Size(value : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.put_Size(value: value);
+    }
+    public func GetInputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.GetInputStreamAt(position: position);
+    }
+    public func GetOutputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.GetOutputStreamAt(position: position);
+    }
+    public func get_Position() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_Position();
+    }
+    public func Seek(position : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Seek(position: position);
+    }
+    public func CloneStream() throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CloneStream();
+    }
+    public func get_CanRead() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_CanRead();
+    }
+    public func get_CanWrite() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_CanWrite();
+    }
+    public var CanRead : boolean {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CanRead;
+        }
+    }
+    public var CanWrite : boolean {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CanWrite;
+        }
+    }
+    public var Position : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Position;
+        }
+    }
+    public var Size : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Size;
+        }
+    }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.WriteAsync(buffer: buffer);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+    public func ReadAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32> {
+        let _ifc : Windows.Storage.Streams.IInputStream = try _self.QueryInterface();
+        return try _ifc.ReadAsync(buffer: buffer, count: count, options: options);
+    }
+    public func Read(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadAsync(buffer: buffer, count: count, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
+// type: Windows.Storage.Streams.InputStreamOptions
+// enum type
+public typealias InputStreamOptions = _q_CWindows_CStorage_CStreams_CInputStreamOptions;
+
+// type: Windows.Storage.Streams.InputStreamOverStream
+// runtime class
+public class InputStreamOverStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IInputStream;
+    public init(plok: Windows.Storage.Streams.IInputStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IInputStream { return _self; }
+    public func ReadAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32> {
+        let _ifc : Windows.Storage.Streams.IInputStream = try _self.QueryInterface();
+        return try _ifc.ReadAsync(buffer: buffer, count: count, options: options);
+    }
+    public func Read(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadAsync(buffer: buffer, count: count, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.OutputStreamOverStream
+// runtime class
+public class OutputStreamOverStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IOutputStream;
+    public init(plok: Windows.Storage.Streams.IOutputStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IOutputStream { return _self; }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.WriteAsync(buffer: buffer);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.Streams.RandomAccessStreamOverStream
+// runtime class
+public class RandomAccessStreamOverStream
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IRandomAccessStream;
+    public init(plok: Windows.Storage.Streams.IRandomAccessStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IRandomAccessStream { return _self; }
+    public func get_Size() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func put_Size(value : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.put_Size(value: value);
+    }
+    public func GetInputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.GetInputStreamAt(position: position);
+    }
+    public func GetOutputStreamAt(position : Swift.UInt64) throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.GetOutputStreamAt(position: position);
+    }
+    public func get_Position() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_Position();
+    }
+    public func Seek(position : Swift.UInt64) throws -> Void {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Seek(position: position);
+    }
+    public func CloneStream() throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CloneStream();
+    }
+    public func get_CanRead() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_CanRead();
+    }
+    public func get_CanWrite() throws -> boolean {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.get_CanWrite();
+    }
+    public var CanRead : boolean {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CanRead;
+        }
+    }
+    public var CanWrite : boolean {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.CanWrite;
+        }
+    }
+    public var Position : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Position;
+        }
+    }
+    public var Size : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStream = try _self.QueryInterface();
+        return try _ifc.Size;
+        }
+    }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.WriteAsync(buffer: buffer);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+    public func ReadAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32> {
+        let _ifc : Windows.Storage.Streams.IInputStream = try _self.QueryInterface();
+        return try _ifc.ReadAsync(buffer: buffer, count: count, options: options);
+    }
+    public func Read(buffer : Optional<Windows.Storage.Streams.IBuffer>, count : Swift.UInt32, options : Windows.Storage.Streams.InputStreamOptions) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadAsync(buffer: buffer, count: count, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
+// type: Windows.Storage.Streams.RandomAccessStreamReference
+// runtime class
+public class RandomAccessStreamReference
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IRandomAccessStreamReference;
+    public init(plok: Windows.Storage.Streams.IRandomAccessStreamReference?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IRandomAccessStreamReference { return _self; }
+    private struct _IRandomAccessStreamReferenceStatics {
+        static var x : IRandomAccessStreamReferenceStatics =
+            try! RoGetActivationFactory("Windows.Storage.Streams.RandomAccessStreamReference")
+    }
+    public static var RandomAccessStreamReferenceStatics : IRandomAccessStreamReferenceStatics {
+        _IRandomAccessStreamReferenceStatics.x
+    }
+    public static func CreateFromFile(file : Optional<Windows.Storage.IStorageFile>) throws -> Optional<Windows.Storage.Streams.RandomAccessStreamReference> {
+        return try Windows.Storage.Streams.RandomAccessStreamReference(plok: RandomAccessStreamReferenceStatics.CreateFromFile(file: file));
+    }
+    public static func CreateFromUri(uri : Optional<Windows.Foundation.Uri>) throws -> Optional<Windows.Storage.Streams.RandomAccessStreamReference> {
+        return try Windows.Storage.Streams.RandomAccessStreamReference(plok: RandomAccessStreamReferenceStatics.CreateFromUri(uri: uri!.Interface()));
+    }
+    public static func CreateFromStream(stream : Optional<Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<Windows.Storage.Streams.RandomAccessStreamReference> {
+        return try Windows.Storage.Streams.RandomAccessStreamReference(plok: RandomAccessStreamReferenceStatics.CreateFromStream(stream: stream));
+    }
+    public func OpenReadAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStreamReference = try _self.QueryInterface();
+        return try _ifc.OpenReadAsync();
+    }
+    public func OpenRead() async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenReadAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
+// type: Windows.Storage.Streams.UnicodeEncoding
+// enum type
+public typealias UnicodeEncoding = _q_CWindows_CStorage_CStreams_CUnicodeEncoding;
+
+}
+extension Windows.Storage.Streams.ByteOrder {
+    public static var LittleEndian : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CByteOrder_LittleEndian;
+        }
+    }
+    public static var BigEndian : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CByteOrder_BigEndian;
+        }
+    }
+}
+extension Windows.Storage.Streams.FileOpenDisposition {
+    public static var OpenExisting : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CFileOpenDisposition_OpenExisting;
+        }
+    }
+    public static var OpenAlways : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CFileOpenDisposition_OpenAlways;
+        }
+    }
+    public static var CreateNew : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CFileOpenDisposition_CreateNew;
+        }
+    }
+    public static var CreateAlways : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CFileOpenDisposition_CreateAlways;
+        }
+    }
+    public static var TruncateExisting : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CFileOpenDisposition_TruncateExisting;
+        }
+    }
+}
+extension Windows.Storage.Streams.InputStreamOptions {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CInputStreamOptions_None;
+        }
+    }
+    public static var Partial : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CInputStreamOptions_Partial;
+        }
+    }
+    public static var ReadAhead : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CInputStreamOptions_ReadAhead;
+        }
+    }
+}
+extension Windows.Storage.Streams.UnicodeEncoding {
+    public static var Utf8 : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CUnicodeEncoding_Utf8;
+        }
+    }
+    public static var Utf16LE : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CUnicodeEncoding_Utf16LE;
+        }
+    }
+    public static var Utf16BE : Self {
+        get {
+            return _q_CWindows_CStorage_CStreams_CUnicodeEncoding_Utf16BE;
+        }
+    }
 }

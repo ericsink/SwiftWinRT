@@ -7,6 +7,63 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.UI.Notifications {
+// type: Windows.UI.Notifications.BadgeNotification
+// runtime class
+public class BadgeNotification
+    :
+    WinRT.Object
+{
+    private var _self : Windows.UI.Notifications.IBadgeNotification;
+    public init(plok: Windows.UI.Notifications.IBadgeNotification?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.UI.Notifications.IBadgeNotification { return _self; }
+    public init(content : Optional<Windows.Data.Xml.Dom.XmlDocument>) throws {
+        let _af : IBadgeNotificationFactory = try RoGetActivationFactory("Windows.UI.Notifications.BadgeNotification");
+        _self = try _af.CreateBadgeNotification(content: content!.Interface())!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Content
+    // method not needed: put_ExpirationTime
+    // method not needed: get_ExpirationTime
+}
+
+// type: Windows.UI.Notifications.IBadgeNotification
+// interface type
+open class IBadgeNotification
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x075cb4ca, Data2: 0xd08a, Data3 : 0x4e2f, Data4 : (0x92, 0x33, 0x7e, 0x28, 0x9c, 0x1f, 0x77, 0x22)) }
+// method not needed: get_Content
+// method not needed: put_ExpirationTime
+// method not needed: get_ExpirationTime
+} // IBadgeNotification
+
+
+// type: Windows.UI.Notifications.IBadgeNotificationFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IBadgeNotificationFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xedf255ce, Data2: 0x0618, Data3 : 0x4d59, Data4 : (0x94, 0x8a, 0x5a, 0x61, 0x04, 0x0c, 0x52, 0xf9)) }
+    // Windows.UI.Notifications.BadgeNotification CreateBadgeNotification(Windows.Data.Xml.Dom.XmlDocument)
+    private func _n_CreateBadgeNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIBadgeNotification>>>?) throws {
+        return try perform(as: _q_CWindows_CUI_CNotifications_CIBadgeNotificationFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateBadgeNotification(pThis, content, __presult))
+        }
+    }
+    public func CreateBadgeNotification(content : Optional<Windows.Data.Xml.Dom.IXmlDocument>) throws -> Optional<Windows.UI.Notifications.IBadgeNotification> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIBadgeNotification>> = nil;
+        try self._n_CreateBadgeNotification(RawPointer(content), &__result);
+        return Windows.UI.Notifications.IBadgeNotification(consuming: __result);
+    }
+} // IBadgeNotificationFactory
+
+
 // type: Windows.UI.Notifications.INotificationData
 // interface type
 open class INotificationData
@@ -114,6 +171,43 @@ open class IScheduledToastNotificationShowingEventArgs
 // method not needed: get_ScheduledToastNotification
 // method not needed: GetDeferral
 } // IScheduledToastNotificationShowingEventArgs
+
+
+// type: Windows.UI.Notifications.ITileNotification
+// interface type
+open class ITileNotification
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xebaec8fa, Data2: 0x50ec, Data3 : 0x4c18, Data4 : (0xb4, 0xd0, 0x3a, 0xf0, 0x2e, 0x55, 0x40, 0xab)) }
+// method not needed: get_Content
+// method not needed: put_ExpirationTime
+// method not needed: get_ExpirationTime
+// method not needed: put_Tag
+// method not needed: get_Tag
+} // ITileNotification
+
+
+// type: Windows.UI.Notifications.ITileNotificationFactory
+// interface type
+// ACTIVATION INTERFACE
+open class ITileNotificationFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc6abdd6e, Data2: 0x4928, Data3 : 0x46c8, Data4 : (0xbd, 0xbf, 0x81, 0xa0, 0x47, 0xde, 0xa0, 0xd4)) }
+    // Windows.UI.Notifications.TileNotification CreateTileNotification(Windows.Data.Xml.Dom.XmlDocument)
+    private func _n_CreateTileNotification(_ content : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlDocument>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CITileNotification>>>?) throws {
+        return try perform(as: _q_CWindows_CUI_CNotifications_CITileNotificationFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateTileNotification(pThis, content, __presult))
+        }
+    }
+    public func CreateTileNotification(content : Optional<Windows.Data.Xml.Dom.IXmlDocument>) throws -> Optional<Windows.UI.Notifications.ITileNotification> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CITileNotification>> = nil;
+        try self._n_CreateTileNotification(RawPointer(content), &__result);
+        return Windows.UI.Notifications.ITileNotification(consuming: __result);
+    }
+} // ITileNotificationFactory
 
 
 // type: Windows.UI.Notifications.IToastDismissedEventArgs
@@ -910,6 +1004,30 @@ public class ScheduledToastNotificationShowingEventArgs
     // method not needed: put_Cancel
     // method not needed: get_ScheduledToastNotification
     // method not needed: GetDeferral
+}
+
+// type: Windows.UI.Notifications.TileNotification
+// runtime class
+public class TileNotification
+    :
+    WinRT.Object
+{
+    private var _self : Windows.UI.Notifications.ITileNotification;
+    public init(plok: Windows.UI.Notifications.ITileNotification?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.UI.Notifications.ITileNotification { return _self; }
+    public init(content : Optional<Windows.Data.Xml.Dom.XmlDocument>) throws {
+        let _af : ITileNotificationFactory = try RoGetActivationFactory("Windows.UI.Notifications.TileNotification");
+        _self = try _af.CreateTileNotification(content: content!.Interface())!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Content
+    // method not needed: put_ExpirationTime
+    // method not needed: get_ExpirationTime
+    // method not needed: put_Tag
+    // method not needed: get_Tag
 }
 
 // type: Windows.UI.Notifications.ToastDismissedEventArgs

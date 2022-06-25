@@ -28,7 +28,7 @@ open class MyAsyncAction : Windows.Foundation.AsyncAction {
         //print("MyActionAction.put_Completed")
         _del = handler;
     }
-    open override func get_Completed() throws -> Optional<Windows.Foundation.AsyncActionCompletedHandler> {
+    open override func get_Completed() throws -> Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> {
         //print("MyActionAction.get_Completed")
         return nil;
     }

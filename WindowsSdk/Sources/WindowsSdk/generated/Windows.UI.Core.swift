@@ -7,6 +7,10 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.UI.Core {
+// type: Windows.UI.Core.CoreAcceleratorKeyEventType
+// enum type
+public typealias CoreAcceleratorKeyEventType = _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType;
+
 // type: Windows.UI.Core.CoreDispatcher
 // runtime class
 public class CoreDispatcher
@@ -181,4 +185,51 @@ open class ICoreWindow
 } // ICoreWindow
 
 
+}
+extension Windows.UI.Core.CoreAcceleratorKeyEventType {
+    public static var Character : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_Character;
+        }
+    }
+    public static var DeadCharacter : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_DeadCharacter;
+        }
+    }
+    public static var KeyDown : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_KeyDown;
+        }
+    }
+    public static var KeyUp : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_KeyUp;
+        }
+    }
+    public static var SystemCharacter : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_SystemCharacter;
+        }
+    }
+    public static var SystemDeadCharacter : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_SystemDeadCharacter;
+        }
+    }
+    public static var SystemKeyDown : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_SystemKeyDown;
+        }
+    }
+    public static var SystemKeyUp : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_SystemKeyUp;
+        }
+    }
+    public static var UnicodeCharacter : Self {
+        get {
+            return _q_CWindows_CUI_CCore_CCoreAcceleratorKeyEventType_UnicodeCharacter;
+        }
+    }
 }

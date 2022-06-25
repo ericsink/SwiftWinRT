@@ -7,6 +7,1292 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.Storage {
+// type: Windows.Storage.AppDataPaths
+// runtime class
+public class AppDataPaths
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IAppDataPaths;
+    public init(plok: Windows.Storage.IAppDataPaths?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IAppDataPaths { return _self; }
+    private struct _IAppDataPathsStatics {
+        static var x : IAppDataPathsStatics =
+            try! RoGetActivationFactory("Windows.Storage.AppDataPaths")
+    }
+    public static var AppDataPathsStatics : IAppDataPathsStatics {
+        _IAppDataPathsStatics.x
+    }
+    public static func GetForUser(user : Optional<Windows.System.User>) throws -> Optional<Windows.Storage.AppDataPaths> {
+        return try Windows.Storage.AppDataPaths(plok: AppDataPathsStatics.GetForUser(user: user!.Interface()));
+    }
+    public static func GetDefault() throws -> Optional<Windows.Storage.AppDataPaths> {
+        return try Windows.Storage.AppDataPaths(plok: AppDataPathsStatics.GetDefault());
+    }
+    public func get_Cookies() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Cookies();
+    }
+    public func get_Desktop() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Desktop();
+    }
+    public func get_Documents() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Documents();
+    }
+    public func get_Favorites() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Favorites();
+    }
+    public func get_History() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_History();
+    }
+    public func get_InternetCache() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_InternetCache();
+    }
+    public func get_LocalAppData() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_LocalAppData();
+    }
+    public func get_ProgramData() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_ProgramData();
+    }
+    public func get_RoamingAppData() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.get_RoamingAppData();
+    }
+    public var Cookies : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.Cookies;
+        }
+    }
+    public var Desktop : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.Desktop;
+        }
+    }
+    public var Documents : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.Documents;
+        }
+    }
+    public var Favorites : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.Favorites;
+        }
+    }
+    public var History : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.History;
+        }
+    }
+    public var InternetCache : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.InternetCache;
+        }
+    }
+    public var LocalAppData : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.LocalAppData;
+        }
+    }
+    public var ProgramData : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.ProgramData;
+        }
+    }
+    public var RoamingAppData : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IAppDataPaths = try _self.QueryInterface();
+        return try _ifc.RoamingAppData;
+        }
+    }
+}
+
+// type: Windows.Storage.ApplicationData
+// runtime class
+public class ApplicationData
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IApplicationData;
+    public init(plok: Windows.Storage.IApplicationData?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IApplicationData { return _self; }
+    private struct _IApplicationDataStatics2 {
+        static var x : IApplicationDataStatics2 =
+            try! RoGetActivationFactory("Windows.Storage.ApplicationData")
+    }
+    public static var ApplicationDataStatics2 : IApplicationDataStatics2 {
+        _IApplicationDataStatics2.x
+    }
+    public static func GetForUserAsync(user : Optional<Windows.System.User>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData> {
+        return try ApplicationDataStatics2.GetForUserAsync(user: user!.Interface());
+    }
+    public static func GetForUser(user : Optional<Windows.System.User>) async throws -> Optional<Windows.Storage.ApplicationData> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.ApplicationData(plok: Self.GetForUserAsync(user: user)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    private struct _IApplicationDataStatics {
+        static var x : IApplicationDataStatics =
+            try! RoGetActivationFactory("Windows.Storage.ApplicationData")
+    }
+    public static var ApplicationDataStatics : IApplicationDataStatics {
+        _IApplicationDataStatics.x
+    }
+    public static func get_Current() throws -> Optional<Windows.Storage.ApplicationData> {
+        return try Windows.Storage.ApplicationData(plok: ApplicationDataStatics.get_Current());
+    }
+    public static var Current : Optional<Windows.Storage.ApplicationData> {
+        get throws {
+        return try Windows.Storage.ApplicationData(plok: ApplicationDataStatics.Current);
+        }
+    }
+    public func get_Version() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.get_Version();
+    }
+    public func SetVersionAsync(desiredVersion : Swift.UInt32, handler : @escaping (Optional<Windows.Storage.SetVersionRequest>) throws -> Void) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.SetVersionAsync(desiredVersion: desiredVersion, handler: Windows.Storage.ApplicationDataSetVersionHandler(cb: handler).Interface());
+    }
+    public func SetVersion(desiredVersion : Swift.UInt32, handler : @escaping (Optional<Windows.Storage.SetVersionRequest>) throws -> Void) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SetVersionAsync(desiredVersion: desiredVersion, handler: handler)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func ClearAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.ClearAllAsync();
+    }
+    public func Clear() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ClearAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func ClearAsync(locality : Windows.Storage.ApplicationDataLocality) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.ClearAsync(locality: locality);
+    }
+    public func Clear(locality : Windows.Storage.ApplicationDataLocality) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ClearAsync(locality: locality)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_LocalSettings() throws -> Optional<Windows.Storage.ApplicationDataContainer> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.ApplicationDataContainer(plok: _ifc.get_LocalSettings());
+    }
+    public func get_RoamingSettings() throws -> Optional<Windows.Storage.ApplicationDataContainer> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.ApplicationDataContainer(plok: _ifc.get_RoamingSettings());
+    }
+    public func get_LocalFolder() throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.get_LocalFolder());
+    }
+    public func get_RoamingFolder() throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.get_RoamingFolder());
+    }
+    public func get_TemporaryFolder() throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.get_TemporaryFolder());
+    }
+    public func add_DataChanged(handler : @escaping (Optional<Windows.Storage.ApplicationData>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.add_DataChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(cb: handler).Interface());
+    }
+    public func remove_DataChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.remove_DataChanged(token: token);
+    }
+    public func SignalDataChanged() throws -> Void {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.SignalDataChanged();
+    }
+    public func get_RoamingStorageQuota() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.get_RoamingStorageQuota();
+    }
+    public var LocalFolder : Optional<Windows.Storage.StorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.LocalFolder);
+        }
+    }
+    public var LocalSettings : Optional<Windows.Storage.ApplicationDataContainer> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.ApplicationDataContainer(plok: _ifc.LocalSettings);
+        }
+    }
+    public var RoamingFolder : Optional<Windows.Storage.StorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.RoamingFolder);
+        }
+    }
+    public var RoamingSettings : Optional<Windows.Storage.ApplicationDataContainer> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.ApplicationDataContainer(plok: _ifc.RoamingSettings);
+        }
+    }
+    public var RoamingStorageQuota : Swift.UInt64 {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.RoamingStorageQuota;
+        }
+    }
+    public var TemporaryFolder : Optional<Windows.Storage.StorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.TemporaryFolder);
+        }
+    }
+    public var Version : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
+        return try _ifc.Version;
+        }
+    }
+    public func get_LocalCacheFolder() throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IApplicationData2 = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.get_LocalCacheFolder());
+    }
+    public var LocalCacheFolder : Optional<Windows.Storage.StorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData2 = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.LocalCacheFolder);
+        }
+    }
+    public func GetPublisherCacheFolder(folderName : Swift.String) throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IApplicationData3 = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.GetPublisherCacheFolder(folderName: folderName));
+    }
+    public func ClearPublisherCacheFolderAsync(folderName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IApplicationData3 = try _self.QueryInterface();
+        return try _ifc.ClearPublisherCacheFolderAsync(folderName: folderName);
+    }
+    public func ClearPublisherCacheFolder(folderName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ClearPublisherCacheFolderAsync(folderName: folderName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_SharedLocalFolder() throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IApplicationData3 = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.get_SharedLocalFolder());
+    }
+    public var SharedLocalFolder : Optional<Windows.Storage.StorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationData3 = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.SharedLocalFolder);
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.ApplicationDataCompositeValue
+// runtime class
+public class ApplicationDataCompositeValue
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Foundation.Collections.IPropertySet;
+    public init(plok: Windows.Foundation.Collections.IPropertySet?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Foundation.Collections.IPropertySet { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Windows.Storage.ApplicationDataCompositeValue")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: add_MapChanged
+    // method not needed: remove_MapChanged
+    // method not needed: Lookup
+    // method not needed: get_Size
+    // method not needed: HasKey
+    // method not needed: GetView
+    // method not needed: Insert
+    // method not needed: Remove
+    // method not needed: Clear
+    // method not needed: First
+}
+
+// type: Windows.Storage.ApplicationDataContainer
+// runtime class
+public class ApplicationDataContainer
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IApplicationDataContainer;
+    public init(plok: Windows.Storage.IApplicationDataContainer?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IApplicationDataContainer { return _self; }
+    public func get_Name() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.get_Name();
+    }
+    public func get_Locality() throws -> Windows.Storage.ApplicationDataLocality {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.get_Locality();
+    }
+    public func get_Values() throws -> Optional<Windows.Foundation.Collections.IPropertySet> {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.get_Values();
+    }
+    public func get_Containers() throws -> Optional<ClosedGenerics.IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer> {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.get_Containers();
+    }
+    public func CreateContainer(name : Swift.String, disposition : Windows.Storage.ApplicationDataCreateDisposition) throws -> Optional<Windows.Storage.ApplicationDataContainer> {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try Windows.Storage.ApplicationDataContainer(plok: _ifc.CreateContainer(name: name, disposition: disposition));
+    }
+    public func DeleteContainer(name : Swift.String) throws -> Void {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.DeleteContainer(name: name);
+    }
+    public var Containers : Optional<ClosedGenerics.IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.Containers;
+        }
+    }
+    public var Locality : Windows.Storage.ApplicationDataLocality {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.Locality;
+        }
+    }
+    public var Name : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.Name;
+        }
+    }
+    public var Values : Optional<Windows.Foundation.Collections.IPropertySet> {
+        get throws {
+        let _ifc : Windows.Storage.IApplicationDataContainer = try _self.QueryInterface();
+        return try _ifc.Values;
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.ApplicationDataContainerSettings
+// runtime class
+public class ApplicationDataContainerSettings
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Foundation.Collections.IPropertySet;
+    public init(plok: Windows.Foundation.Collections.IPropertySet?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Foundation.Collections.IPropertySet { return _self; }
+    // method not needed: add_MapChanged
+    // method not needed: remove_MapChanged
+    // method not needed: Lookup
+    // method not needed: get_Size
+    // method not needed: HasKey
+    // method not needed: GetView
+    // method not needed: Insert
+    // method not needed: Remove
+    // method not needed: Clear
+    // method not needed: First
+}
+
+// type: Windows.Storage.ApplicationDataCreateDisposition
+// enum type
+public typealias ApplicationDataCreateDisposition = _q_CWindows_CStorage_CApplicationDataCreateDisposition;
+
+// type: Windows.Storage.ApplicationDataLocality
+// enum type
+public typealias ApplicationDataLocality = _q_CWindows_CStorage_CApplicationDataLocality;
+
+// type: Windows.Storage.ApplicationDataSetVersionHandler
+// delegate type
+open class IApplicationDataSetVersionHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa05791e6, Data2: 0xcc9f, Data3 : 0x4687, Data4 : (0xac, 0xab, 0xa3, 0x64, 0xfd, 0x78, 0x54, 0x63)) }
+    // [IsSpecialName] void Invoke(Windows.Storage.SetVersionRequest)
+    private func _n_Invoke(_ setVersionRequest : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISetVersionRequest>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataSetVersionHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, setVersionRequest))
+        }
+    }
+    public func Invoke(setVersionRequest : Optional<Windows.Storage.ISetVersionRequest>) throws -> Void {
+        try self._n_Invoke(RawPointer(setVersionRequest));
+    }
+}
+// impl delegate type
+open class ApplicationDataSetVersionHandler
+{
+    private static var vtable: _q_CWindows_CStorage_CIApplicationDataSetVersionHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Windows.Storage.IApplicationDataSetVersionHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ setVersionRequest : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISetVersionRequest>>) in
+        guard let self = ApplicationDataSetVersionHandler.from_ApplicationDataSetVersionHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(setVersionRequest: Windows.Storage.SetVersionRequest(plok: Windows.Storage.ISetVersionRequest(setVersionRequest)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: ApplicationDataSetVersionHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CWindows_CStorage_CIApplicationDataSetVersionHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Windows.Storage.SetVersionRequest>) throws -> Void>
+    public init(cb : Optional<(Optional<Windows.Storage.SetVersionRequest>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CStorage_CIApplicationDataSetVersionHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_ApplicationDataSetVersionHandler(_ pUnk: UnsafeMutableRawPointer?) -> ApplicationDataSetVersionHandler? {
+        return pUnk?.bindMemory(to: ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(setVersionRequest : Optional<Windows.Storage.SetVersionRequest>) throws -> Void {
+        if let cb = _cb {
+            return try cb(setVersionRequest)
+        }
+    }
+    public func Interface() -> Windows.Storage.IApplicationDataSetVersionHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Windows.Storage.IApplicationDataSetVersionHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_ApplicationDataSetVersionHandler
+{
+    private var _self : Windows.Storage.IApplicationDataSetVersionHandler;
+    public init(plok: Windows.Storage.IApplicationDataSetVersionHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(setVersionRequest : Optional<Windows.Storage.SetVersionRequest>) throws -> Void {
+        return try _self.Invoke(setVersionRequest: setVersionRequest!.Interface());
+    }
+    public func Interface() -> Windows.Storage.IApplicationDataSetVersionHandler {
+        return _self
+    }
+}
+
+// type: Windows.Storage.CreationCollisionOption
+// enum type
+public typealias CreationCollisionOption = _q_CWindows_CStorage_CCreationCollisionOption;
+
+// type: Windows.Storage.FileAccessMode
+// enum type
+public typealias FileAccessMode = _q_CWindows_CStorage_CFileAccessMode;
+
+// type: Windows.Storage.FileAttributes
+// enum type
+public typealias FileAttributes = _q_CWindows_CStorage_CFileAttributes;
+
+// type: Windows.Storage.IAppDataPaths
+// interface type
+open class IAppDataPaths
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7301d60a, Data2: 0x79a2, Data3 : 0x48c9, Data4 : (0x9e, 0xc0, 0x3f, 0xda, 0x09, 0x2f, 0x79, 0xe1)) }
+    // [IsSpecialName] System.String get_Cookies()
+    private func _n_get_Cookies(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cookies(pThis, __presult))
+        }
+    }
+    public func get_Cookies() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Cookies(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Desktop()
+    private func _n_get_Desktop(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Desktop(pThis, __presult))
+        }
+    }
+    public func get_Desktop() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Desktop(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Documents()
+    private func _n_get_Documents(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Documents(pThis, __presult))
+        }
+    }
+    public func get_Documents() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Documents(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Favorites()
+    private func _n_get_Favorites(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Favorites(pThis, __presult))
+        }
+    }
+    public func get_Favorites() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Favorites(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_History()
+    private func _n_get_History(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_History(pThis, __presult))
+        }
+    }
+    public func get_History() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_History(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_InternetCache()
+    private func _n_get_InternetCache(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_InternetCache(pThis, __presult))
+        }
+    }
+    public func get_InternetCache() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_InternetCache(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_LocalAppData()
+    private func _n_get_LocalAppData(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalAppData(pThis, __presult))
+        }
+    }
+    public func get_LocalAppData() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_LocalAppData(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_ProgramData()
+    private func _n_get_ProgramData(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProgramData(pThis, __presult))
+        }
+    }
+    public func get_ProgramData() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_ProgramData(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_RoamingAppData()
+    private func _n_get_RoamingAppData(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoamingAppData(pThis, __presult))
+        }
+    }
+    public func get_RoamingAppData() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_RoamingAppData(&__result);
+        return Swift.String(from: __result);
+    }
+    public var Cookies : Swift.String {
+        get throws {
+            return try get_Cookies();
+        }
+    }
+    public var Desktop : Swift.String {
+        get throws {
+            return try get_Desktop();
+        }
+    }
+    public var Documents : Swift.String {
+        get throws {
+            return try get_Documents();
+        }
+    }
+    public var Favorites : Swift.String {
+        get throws {
+            return try get_Favorites();
+        }
+    }
+    public var History : Swift.String {
+        get throws {
+            return try get_History();
+        }
+    }
+    public var InternetCache : Swift.String {
+        get throws {
+            return try get_InternetCache();
+        }
+    }
+    public var LocalAppData : Swift.String {
+        get throws {
+            return try get_LocalAppData();
+        }
+    }
+    public var ProgramData : Swift.String {
+        get throws {
+            return try get_ProgramData();
+        }
+    }
+    public var RoamingAppData : Swift.String {
+        get throws {
+            return try get_RoamingAppData();
+        }
+    }
+} // IAppDataPaths
+
+
+// type: Windows.Storage.IAppDataPathsStatics
+// interface type
+open class IAppDataPathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd8eb2afe, Data2: 0xa9d9, Data3 : 0x4b14, Data4 : (0xb9, 0x99, 0xe3, 0x92, 0x13, 0x79, 0xd9, 0x03)) }
+    // Windows.Storage.AppDataPaths GetForUser(Windows.System.User)
+    private func _n_GetForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIAppDataPaths>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetForUser(pThis, user, __presult))
+        }
+    }
+    public func GetForUser(user : Optional<Windows.System.IUser>) throws -> Optional<Windows.Storage.IAppDataPaths> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIAppDataPaths>> = nil;
+        try self._n_GetForUser(RawPointer(user), &__result);
+        return Windows.Storage.IAppDataPaths(consuming: __result);
+    }
+    // Windows.Storage.AppDataPaths GetDefault()
+    private func _n_GetDefault(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIAppDataPaths>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIAppDataPathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetDefault(pThis, __presult))
+        }
+    }
+    public func GetDefault() throws -> Optional<Windows.Storage.IAppDataPaths> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIAppDataPaths>> = nil;
+        try self._n_GetDefault(&__result);
+        return Windows.Storage.IAppDataPaths(consuming: __result);
+    }
+} // IAppDataPathsStatics
+
+
+// type: Windows.Storage.IApplicationData
+// interface type
+open class IApplicationData
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc3da6fb7, Data2: 0xb744, Data3 : 0x4b45, Data4 : (0xb0, 0xb8, 0x22, 0x3a, 0x09, 0x38, 0xd0, 0xdc)) }
+    // [IsSpecialName] System.UInt32 get_Version()
+    private func _n_get_Version(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Version(pThis, __presult))
+        }
+    }
+    public func get_Version() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Version(&__result);
+        return __result;
+    }
+    // Windows.Foundation.IAsyncAction SetVersionAsync(System.UInt32, Windows.Storage.ApplicationDataSetVersionHandler)
+    private func _n_SetVersionAsync(_ desiredVersion : UINT32, _ handler : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataSetVersionHandler>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetVersionAsync(pThis, desiredVersion, handler, __presult))
+        }
+    }
+    public func SetVersionAsync(desiredVersion : Swift.UInt32, handler : Optional<Windows.Storage.IApplicationDataSetVersionHandler>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SetVersionAsync(desiredVersion, RawPointer(handler), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func SetVersion(desiredVersion : Swift.UInt32, handler : Optional<Windows.Storage.IApplicationDataSetVersionHandler>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SetVersionAsync(desiredVersion: desiredVersion, handler: handler)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction ClearAsync()
+    private func _n_ClearAllAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ClearAllAsync(pThis, __presult))
+        }
+    }
+    public func ClearAllAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_ClearAllAsync(&__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func ClearAll() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ClearAllAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction ClearAsync(Windows.Storage.ApplicationDataLocality)
+    private func _n_ClearAsync(_ locality : _q_CWindows_CStorage_CApplicationDataLocality, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ClearAsync(pThis, locality, __presult))
+        }
+    }
+    public func ClearAsync(locality : Windows.Storage.ApplicationDataLocality) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_ClearAsync(locality, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func Clear(locality : Windows.Storage.ApplicationDataLocality) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ClearAsync(locality: locality)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // [IsSpecialName] Windows.Storage.ApplicationDataContainer get_LocalSettings()
+    private func _n_get_LocalSettings(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalSettings(pThis, __presult))
+        }
+    }
+    public func get_LocalSettings() throws -> Optional<Windows.Storage.IApplicationDataContainer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>> = nil;
+        try self._n_get_LocalSettings(&__result);
+        return Windows.Storage.IApplicationDataContainer(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Storage.ApplicationDataContainer get_RoamingSettings()
+    private func _n_get_RoamingSettings(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoamingSettings(pThis, __presult))
+        }
+    }
+    public func get_RoamingSettings() throws -> Optional<Windows.Storage.IApplicationDataContainer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>> = nil;
+        try self._n_get_RoamingSettings(&__result);
+        return Windows.Storage.IApplicationDataContainer(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Storage.StorageFolder get_LocalFolder()
+    private func _n_get_LocalFolder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalFolder(pThis, __presult))
+        }
+    }
+    public func get_LocalFolder() throws -> Optional<Windows.Storage.IStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_get_LocalFolder(&__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Storage.StorageFolder get_RoamingFolder()
+    private func _n_get_RoamingFolder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoamingFolder(pThis, __presult))
+        }
+    }
+    public func get_RoamingFolder() throws -> Optional<Windows.Storage.IStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_get_RoamingFolder(&__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Storage.StorageFolder get_TemporaryFolder()
+    private func _n_get_TemporaryFolder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TemporaryFolder(pThis, __presult))
+        }
+    }
+    public func get_TemporaryFolder() throws -> Optional<Windows.Storage.IStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_get_TemporaryFolder(&__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DataChanged(Windows.Foundation.TypedEventHandler<Windows.Storage.ApplicationData,System.Object>)
+    private func _n_add_DataChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_DataChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_DataChanged(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_DataChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_DataChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_DataChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DataChanged(pThis, token))
+        }
+    }
+    public func remove_DataChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_DataChanged(token);
+    }
+    // void SignalDataChanged()
+    private func _n_SignalDataChanged() throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SignalDataChanged(pThis))
+        }
+    }
+    public func SignalDataChanged() throws -> Void {
+        try self._n_SignalDataChanged();
+    }
+    // [IsSpecialName] System.UInt64 get_RoamingStorageQuota()
+    private func _n_get_RoamingStorageQuota(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoamingStorageQuota(pThis, __presult))
+        }
+    }
+    public func get_RoamingStorageQuota() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_get_RoamingStorageQuota(&__result);
+        return __result;
+    }
+    public var LocalFolder : Optional<Windows.Storage.IStorageFolder> {
+        get throws {
+            return try get_LocalFolder();
+        }
+    }
+    public var LocalSettings : Optional<Windows.Storage.IApplicationDataContainer> {
+        get throws {
+            return try get_LocalSettings();
+        }
+    }
+    public var RoamingFolder : Optional<Windows.Storage.IStorageFolder> {
+        get throws {
+            return try get_RoamingFolder();
+        }
+    }
+    public var RoamingSettings : Optional<Windows.Storage.IApplicationDataContainer> {
+        get throws {
+            return try get_RoamingSettings();
+        }
+    }
+    public var RoamingStorageQuota : Swift.UInt64 {
+        get throws {
+            return try get_RoamingStorageQuota();
+        }
+    }
+    public var TemporaryFolder : Optional<Windows.Storage.IStorageFolder> {
+        get throws {
+            return try get_TemporaryFolder();
+        }
+    }
+    public var Version : Swift.UInt32 {
+        get throws {
+            return try get_Version();
+        }
+    }
+} // IApplicationData
+
+
+// type: Windows.Storage.IApplicationData2
+// interface type
+open class IApplicationData2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9e65cd69, Data2: 0x0ba3, Data3 : 0x4e32, Data4 : (0xbe, 0x29, 0xb0, 0x2d, 0xe6, 0x60, 0x76, 0x38)) }
+    // [IsSpecialName] Windows.Storage.StorageFolder get_LocalCacheFolder()
+    private func _n_get_LocalCacheFolder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalCacheFolder(pThis, __presult))
+        }
+    }
+    public func get_LocalCacheFolder() throws -> Optional<Windows.Storage.IStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_get_LocalCacheFolder(&__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+    }
+    public var LocalCacheFolder : Optional<Windows.Storage.IStorageFolder> {
+        get throws {
+            return try get_LocalCacheFolder();
+        }
+    }
+} // IApplicationData2
+
+
+// type: Windows.Storage.IApplicationData3
+// interface type
+open class IApplicationData3
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xdc222cf4, Data2: 0x2772, Data3 : 0x4c1d, Data4 : (0xaa, 0x2c, 0xc9, 0xf7, 0x43, 0xad, 0xe8, 0xd1)) }
+    // Windows.Storage.StorageFolder GetPublisherCacheFolder(System.String)
+    private func _n_GetPublisherCacheFolder(_ folderName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetPublisherCacheFolder(pThis, folderName, __presult))
+        }
+    }
+    public func GetPublisherCacheFolder(folderName : Swift.String) throws -> Optional<Windows.Storage.IStorageFolder> {
+        let __hstr_folderName = try HString(folderName);
+        return try withExtendedLifetime(__hstr_folderName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_GetPublisherCacheFolder(__hstr_folderName.Raw(), &__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+        }
+    }
+    // Windows.Foundation.IAsyncAction ClearPublisherCacheFolderAsync(System.String)
+    private func _n_ClearPublisherCacheFolderAsync(_ folderName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ClearPublisherCacheFolderAsync(pThis, folderName, __presult))
+        }
+    }
+    public func ClearPublisherCacheFolderAsync(folderName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_folderName = try HString(folderName);
+        return try withExtendedLifetime(__hstr_folderName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_ClearPublisherCacheFolderAsync(__hstr_folderName.Raw(), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+        }
+    }
+    public func ClearPublisherCacheFolder(folderName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ClearPublisherCacheFolderAsync(folderName: folderName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // [IsSpecialName] Windows.Storage.StorageFolder get_SharedLocalFolder()
+    private func _n_get_SharedLocalFolder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationData3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SharedLocalFolder(pThis, __presult))
+        }
+    }
+    public func get_SharedLocalFolder() throws -> Optional<Windows.Storage.IStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_get_SharedLocalFolder(&__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+    }
+    public var SharedLocalFolder : Optional<Windows.Storage.IStorageFolder> {
+        get throws {
+            return try get_SharedLocalFolder();
+        }
+    }
+} // IApplicationData3
+
+
+// type: Windows.Storage.IApplicationDataContainer
+// interface type
+open class IApplicationDataContainer
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc5aefd1e, Data2: 0xf467, Data3 : 0x40ba, Data4 : (0x85, 0x66, 0xab, 0x64, 0x0a, 0x44, 0x1e, 0x1d)) }
+    // [IsSpecialName] System.String get_Name()
+    private func _n_get_Name(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataContainer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Name(pThis, __presult))
+        }
+    }
+    public func get_Name() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Name(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] Windows.Storage.ApplicationDataLocality get_Locality()
+    private func _n_get_Locality(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CApplicationDataLocality>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataContainer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Locality(pThis, __presult))
+        }
+    }
+    public func get_Locality() throws -> Windows.Storage.ApplicationDataLocality {
+        var __result : _q_CWindows_CStorage_CApplicationDataLocality = _q_CWindows_CStorage_CApplicationDataLocality_Local;
+        try self._n_get_Locality(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IPropertySet get_Values()
+    private func _n_get_Values(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIPropertySet>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataContainer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Values(pThis, __presult))
+        }
+    }
+    public func get_Values() throws -> Optional<Windows.Foundation.Collections.IPropertySet> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIPropertySet>> = nil;
+        try self._n_get_Values(&__result);
+        return Windows.Foundation.Collections.IPropertySet(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IMapView<System.String,Windows.Storage.ApplicationDataContainer> get_Containers()
+    private func _n_get_Containers(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataContainer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Containers(pThis, __presult))
+        }
+    }
+    public func get_Containers() throws -> Optional<ClosedGenerics.IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer>> = nil;
+        try self._n_get_Containers(&__result);
+        return ClosedGenerics.IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer(consuming: __result);
+    }
+    // Windows.Storage.ApplicationDataContainer CreateContainer(System.String, Windows.Storage.ApplicationDataCreateDisposition)
+    private func _n_CreateContainer(_ name : Optional<HSTRING>, _ disposition : _q_CWindows_CStorage_CApplicationDataCreateDisposition, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataContainer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateContainer(pThis, name, disposition, __presult))
+        }
+    }
+    public func CreateContainer(name : Swift.String, disposition : Windows.Storage.ApplicationDataCreateDisposition) throws -> Optional<Windows.Storage.IApplicationDataContainer> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>> = nil;
+        try self._n_CreateContainer(__hstr_name.Raw(), disposition, &__result);
+        return Windows.Storage.IApplicationDataContainer(consuming: __result);
+        }
+    }
+    // void DeleteContainer(System.String)
+    private func _n_DeleteContainer(_ name : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataContainer.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteContainer(pThis, name))
+        }
+    }
+    public func DeleteContainer(name : Swift.String) throws -> Void {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        try self._n_DeleteContainer(__hstr_name.Raw());
+        }
+    }
+    public var Containers : Optional<ClosedGenerics.IMapView_2_HSTRING__q_CWindows_CStorage_CApplicationDataContainer> {
+        get throws {
+            return try get_Containers();
+        }
+    }
+    public var Locality : Windows.Storage.ApplicationDataLocality {
+        get throws {
+            return try get_Locality();
+        }
+    }
+    public var Name : Swift.String {
+        get throws {
+            return try get_Name();
+        }
+    }
+    public var Values : Optional<Windows.Foundation.Collections.IPropertySet> {
+        get throws {
+            return try get_Values();
+        }
+    }
+} // IApplicationDataContainer
+
+
+// type: Windows.Storage.IApplicationDataStatics
+// interface type
+open class IApplicationDataStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5612147b, Data2: 0xe843, Data3 : 0x45e3, Data4 : (0x94, 0xd8, 0x06, 0x16, 0x9e, 0x3c, 0x8e, 0x17)) }
+    // [IsSpecialName] Windows.Storage.ApplicationData get_Current()
+    private func _n_get_Current(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationData>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Current(pThis, __presult))
+        }
+    }
+    public func get_Current() throws -> Optional<Windows.Storage.IApplicationData> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationData>> = nil;
+        try self._n_get_Current(&__result);
+        return Windows.Storage.IApplicationData(consuming: __result);
+    }
+    public var Current : Optional<Windows.Storage.IApplicationData> {
+        get throws {
+            return try get_Current();
+        }
+    }
+} // IApplicationDataStatics
+
+
+// type: Windows.Storage.IApplicationDataStatics2
+// interface type
+open class IApplicationDataStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcd606211, Data2: 0xcf49, Data3 : 0x40a4, Data4 : (0xa4, 0x7c, 0xc7, 0xf0, 0xdb, 0xba, 0x81, 0x07)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.ApplicationData> GetForUserAsync(Windows.System.User)
+    private func _n_GetForUserAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CApplicationData>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIApplicationDataStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetForUserAsync(pThis, user, __presult))
+        }
+    }
+    public func GetForUserAsync(user : Optional<Windows.System.IUser>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CApplicationData>> = nil;
+        try self._n_GetForUserAsync(RawPointer(user), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData(consuming: __result);
+    }
+    public func GetForUser(user : Optional<Windows.System.IUser>) async throws -> Optional<Windows.Storage.IApplicationData> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetForUserAsync(user: user)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IApplicationDataStatics2
+
+
+// type: Windows.Storage.ISetVersionDeferral
+// interface type
+open class ISetVersionDeferral
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x033508a2, Data2: 0x781a, Data3 : 0x437a, Data4 : (0xb0, 0x78, 0x3f, 0x32, 0xba, 0xdc, 0xfe, 0x47)) }
+    // void Complete()
+    private func _n_Complete() throws {
+        return try perform(as: _q_CWindows_CStorage_CISetVersionDeferral.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Complete(pThis))
+        }
+    }
+    public func Complete() throws -> Void {
+        try self._n_Complete();
+    }
+} // ISetVersionDeferral
+
+
+// type: Windows.Storage.ISetVersionRequest
+// interface type
+open class ISetVersionRequest
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb9c76b9b, Data2: 0x1056, Data3 : 0x4e69, Data4 : (0x83, 0x30, 0x16, 0x26, 0x19, 0x95, 0x6f, 0x9b)) }
+    // [IsSpecialName] System.UInt32 get_CurrentVersion()
+    private func _n_get_CurrentVersion(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISetVersionRequest.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CurrentVersion(pThis, __presult))
+        }
+    }
+    public func get_CurrentVersion() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_CurrentVersion(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.UInt32 get_DesiredVersion()
+    private func _n_get_DesiredVersion(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISetVersionRequest.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DesiredVersion(pThis, __presult))
+        }
+    }
+    public func get_DesiredVersion() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_DesiredVersion(&__result);
+        return __result;
+    }
+    // Windows.Storage.SetVersionDeferral GetDeferral()
+    private func _n_GetDeferral(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISetVersionDeferral>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISetVersionRequest.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetDeferral(pThis, __presult))
+        }
+    }
+    public func GetDeferral() throws -> Optional<Windows.Storage.ISetVersionDeferral> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISetVersionDeferral>> = nil;
+        try self._n_GetDeferral(&__result);
+        return Windows.Storage.ISetVersionDeferral(consuming: __result);
+    }
+    public var CurrentVersion : Swift.UInt32 {
+        get throws {
+            return try get_CurrentVersion();
+        }
+    }
+    public var DesiredVersion : Swift.UInt32 {
+        get throws {
+            return try get_DesiredVersion();
+        }
+    }
+} // ISetVersionRequest
+
+
 // type: Windows.Storage.IStorageFile
 // interface type
 open class IStorageFile
@@ -14,19 +1300,5992 @@ open class IStorageFile
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfa3f6186, Data2: 0x4214, Data3 : 0x428c, Data4 : (0xa6, 0x4c, 0x14, 0xc9, 0xac, 0x73, 0x15, 0xea)) }
-// method not needed: get_FileType
-// method not needed: get_ContentType
-// method not needed: OpenAsync
-// method not needed: OpenTransactedWriteAsync
-// method not needed: CopyOverloadDefaultNameAndOptions
-// method not needed: CopyOverloadDefaultOptions
-// method not needed: CopyOverload
-// method not needed: CopyAndReplaceAsync
-// method not needed: MoveOverloadDefaultNameAndOptions
-// method not needed: MoveOverloadDefaultOptions
-// method not needed: MoveOverload
-// method not needed: MoveAndReplaceAsync
+    // [IsSpecialName] System.String get_FileType()
+    private func _n_get_FileType(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FileType(pThis, __presult))
+        }
+    }
+    public func get_FileType() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_FileType(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_ContentType()
+    private func _n_get_ContentType(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ContentType(pThis, __presult))
+        }
+    }
+    public func get_ContentType() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_ContentType(&__result);
+        return Swift.String(from: __result);
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> OpenAsync(Windows.Storage.FileAccessMode)
+    private func _n_OpenAsync(_ accessMode : _q_CWindows_CStorage_CFileAccessMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenAsync(pThis, accessMode, __presult))
+        }
+    }
+    public func OpenAsync(accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_OpenAsync(accessMode, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
+    }
+    public func Open(accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenAsync(accessMode: accessMode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> OpenTransactedWriteAsync()
+    private func _n_OpenTransactedWriteAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteAsync(pThis, __presult))
+        }
+    }
+    public func OpenTransactedWriteAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
+        try self._n_OpenTransactedWriteAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
+    }
+    public func OpenTransactedWrite() async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenTransactedWriteAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CopyAsync(Windows.Storage.IStorageFolder)
+    private func _n_CopyOverloadDefaultNameAndOptions(_ destinationFolder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopyOverloadDefaultNameAndOptions(pThis, destinationFolder, __presult))
+        }
+    }
+    public func CopyOverloadDefaultNameAndOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CopyOverloadDefaultNameAndOptions(RawPointer(destinationFolder), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+    }
+    public func CopyOverloadDefaultNameAndOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyOverloadDefaultNameAndOptions(destinationFolder: destinationFolder)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CopyAsync(Windows.Storage.IStorageFolder, System.String)
+    private func _n_CopyOverloadDefaultOptions(_ destinationFolder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ desiredNewName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopyOverloadDefaultOptions(pThis, destinationFolder, desiredNewName, __presult))
+        }
+    }
+    public func CopyOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredNewName = try HString(desiredNewName);
+        return try withExtendedLifetime(__hstr_desiredNewName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CopyOverloadDefaultOptions(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func CopyOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyOverloadDefaultOptions(destinationFolder: destinationFolder, desiredNewName: desiredNewName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CopyAsync(Windows.Storage.IStorageFolder, System.String, Windows.Storage.NameCollisionOption)
+    private func _n_CopyOverload(_ destinationFolder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ desiredNewName : Optional<HSTRING>, _ option : _q_CWindows_CStorage_CNameCollisionOption, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopyOverload(pThis, destinationFolder, desiredNewName, option, __presult))
+        }
+    }
+    public func CopyOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredNewName = try HString(desiredNewName);
+        return try withExtendedLifetime(__hstr_desiredNewName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CopyOverload(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), option, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func CopyOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyOverload(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction CopyAndReplaceAsync(Windows.Storage.IStorageFile)
+    private func _n_CopyAndReplaceAsync(_ fileToReplace : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopyAndReplaceAsync(pThis, fileToReplace, __presult))
+        }
+    }
+    public func CopyAndReplaceAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_CopyAndReplaceAsync(RawPointer(fileToReplace), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func CopyAndReplace(fileToReplace : Optional<Windows.Storage.IStorageFile>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyAndReplaceAsync(fileToReplace: fileToReplace)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction MoveAsync(Windows.Storage.IStorageFolder)
+    private func _n_MoveOverloadDefaultNameAndOptions(_ destinationFolder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveOverloadDefaultNameAndOptions(pThis, destinationFolder, __presult))
+        }
+    }
+    public func MoveOverloadDefaultNameAndOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_MoveOverloadDefaultNameAndOptions(RawPointer(destinationFolder), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func MoveOverloadDefaultNameAndOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveOverloadDefaultNameAndOptions(destinationFolder: destinationFolder)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction MoveAsync(Windows.Storage.IStorageFolder, System.String)
+    private func _n_MoveOverloadDefaultOptions(_ destinationFolder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ desiredNewName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveOverloadDefaultOptions(pThis, destinationFolder, desiredNewName, __presult))
+        }
+    }
+    public func MoveOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredNewName = try HString(desiredNewName);
+        return try withExtendedLifetime(__hstr_desiredNewName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_MoveOverloadDefaultOptions(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+        }
+    }
+    public func MoveOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveOverloadDefaultOptions(destinationFolder: destinationFolder, desiredNewName: desiredNewName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction MoveAsync(Windows.Storage.IStorageFolder, System.String, Windows.Storage.NameCollisionOption)
+    private func _n_MoveOverload(_ destinationFolder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ desiredNewName : Optional<HSTRING>, _ option : _q_CWindows_CStorage_CNameCollisionOption, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveOverload(pThis, destinationFolder, desiredNewName, option, __presult))
+        }
+    }
+    public func MoveOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredNewName = try HString(desiredNewName);
+        return try withExtendedLifetime(__hstr_desiredNewName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_MoveOverload(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), option, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+        }
+    }
+    public func MoveOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveOverload(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction MoveAndReplaceAsync(Windows.Storage.IStorageFile)
+    private func _n_MoveAndReplaceAsync(_ fileToReplace : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MoveAndReplaceAsync(pThis, fileToReplace, __presult))
+        }
+    }
+    public func MoveAndReplaceAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_MoveAndReplaceAsync(RawPointer(fileToReplace), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func MoveAndReplace(fileToReplace : Optional<Windows.Storage.IStorageFile>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveAndReplaceAsync(fileToReplace: fileToReplace)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var ContentType : Swift.String {
+        get throws {
+            return try get_ContentType();
+        }
+    }
+    public var FileType : Swift.String {
+        get throws {
+            return try get_FileType();
+        }
+    }
 } // IStorageFile
 
 
+// type: Windows.Storage.IStorageFile2
+// interface type
+open class IStorageFile2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x954e4bcf, Data2: 0x0a77, Data3 : 0x42fb, Data4 : (0xb7, 0x77, 0xc2, 0xed, 0x58, 0xa5, 0x2e, 0x44)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.Streams.IRandomAccessStream> OpenAsync(Windows.Storage.FileAccessMode, Windows.Storage.StorageOpenOptions)
+    private func _n_OpenWithOptionsAsync(_ accessMode : _q_CWindows_CStorage_CFileAccessMode, _ options : _q_CWindows_CStorage_CStorageOpenOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenWithOptionsAsync(pThis, accessMode, options, __presult))
+        }
+    }
+    public func OpenWithOptionsAsync(accessMode : Windows.Storage.FileAccessMode, options : Windows.Storage.StorageOpenOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_OpenWithOptionsAsync(accessMode, options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
+    }
+    public func OpenWithOptions(accessMode : Windows.Storage.FileAccessMode, options : Windows.Storage.StorageOpenOptions) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenWithOptionsAsync(accessMode: accessMode, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageStreamTransaction> OpenTransactedWriteAsync(Windows.Storage.StorageOpenOptions)
+    private func _n_OpenTransactedWriteWithOptionsAsync(_ options : _q_CWindows_CStorage_CStorageOpenOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFile2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteWithOptionsAsync(pThis, options, __presult))
+        }
+    }
+    public func OpenTransactedWriteWithOptionsAsync(options : Windows.Storage.StorageOpenOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
+        try self._n_OpenTransactedWriteWithOptionsAsync(options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
+    }
+    public func OpenTransactedWriteWithOptions(options : Windows.Storage.StorageOpenOptions) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenTransactedWriteWithOptionsAsync(options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFile2
+
+
+// type: Windows.Storage.IStorageFilePropertiesWithAvailability
+// interface type
+open class IStorageFilePropertiesWithAvailability
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xafcbbe9b, Data2: 0x582b, Data3 : 0x4133, Data4 : (0x96, 0x48, 0xe4, 0x4c, 0xa4, 0x6e, 0xe4, 0x91)) }
+    // [IsSpecialName] bool get_IsAvailable()
+    private func _n_get_IsAvailable(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFilePropertiesWithAvailability.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsAvailable(pThis, __presult))
+        }
+    }
+    public func get_IsAvailable() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsAvailable(&__result);
+        return __result;
+    }
+    public var IsAvailable : boolean {
+        get throws {
+            return try get_IsAvailable();
+        }
+    }
+} // IStorageFilePropertiesWithAvailability
+
+
+// type: Windows.Storage.IStorageFileStatics
+// interface type
+open class IStorageFileStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5984c710, Data2: 0xdaf2, Data3 : 0x43c8, Data4 : (0x8b, 0xb4, 0xa4, 0xd3, 0xea, 0xcf, 0xd0, 0x3f)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> GetFileFromPathAsync(System.String)
+    private func _n_GetFileFromPathAsync(_ path : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileFromPathAsync(pThis, path, __presult))
+        }
+    }
+    public func GetFileFromPathAsync(path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_path = try HString(path);
+        return try withExtendedLifetime(__hstr_path) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_GetFileFromPathAsync(__hstr_path.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func GetFileFromPath(path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFileFromPathAsync(path: path)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> GetFileFromApplicationUriAsync(Windows.Foundation.Uri)
+    private func _n_GetFileFromApplicationUriAsync(_ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileFromApplicationUriAsync(pThis, uri, __presult))
+        }
+    }
+    public func GetFileFromApplicationUriAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_GetFileFromApplicationUriAsync(RawPointer(uri), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+    }
+    public func GetFileFromApplicationUri(uri : Optional<Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFileFromApplicationUriAsync(uri: uri)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CreateStreamedFileAsync(System.String, Windows.Storage.StreamedFileDataRequestedHandler, Windows.Storage.Streams.IRandomAccessStreamReference)
+    private func _n_CreateStreamedFileAsync(_ displayNameWithExtension : Optional<HSTRING>, _ dataRequested : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStreamedFileDataRequestedHandler>>, _ thumbnail : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateStreamedFileAsync(pThis, displayNameWithExtension, dataRequested, thumbnail, __presult))
+        }
+    }
+    public func CreateStreamedFileAsync(displayNameWithExtension : Swift.String, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_displayNameWithExtension = try HString(displayNameWithExtension);
+        return try withExtendedLifetime(__hstr_displayNameWithExtension) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CreateStreamedFileAsync(__hstr_displayNameWithExtension.Raw(), RawPointer(dataRequested), RawPointer(thumbnail), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func CreateStreamedFile(displayNameWithExtension : Swift.String, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreateStreamedFileAsync(displayNameWithExtension: displayNameWithExtension, dataRequested: dataRequested, thumbnail: thumbnail)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> ReplaceWithStreamedFileAsync(Windows.Storage.IStorageFile, Windows.Storage.StreamedFileDataRequestedHandler, Windows.Storage.Streams.IRandomAccessStreamReference)
+    private func _n_ReplaceWithStreamedFileAsync(_ fileToReplace : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ dataRequested : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStreamedFileDataRequestedHandler>>, _ thumbnail : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceWithStreamedFileAsync(pThis, fileToReplace, dataRequested, thumbnail, __presult))
+        }
+    }
+    public func ReplaceWithStreamedFileAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_ReplaceWithStreamedFileAsync(RawPointer(fileToReplace), RawPointer(dataRequested), RawPointer(thumbnail), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+    }
+    public func ReplaceWithStreamedFile(fileToReplace : Optional<Windows.Storage.IStorageFile>, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReplaceWithStreamedFileAsync(fileToReplace: fileToReplace, dataRequested: dataRequested, thumbnail: thumbnail)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CreateStreamedFileFromUriAsync(System.String, Windows.Foundation.Uri, Windows.Storage.Streams.IRandomAccessStreamReference)
+    private func _n_CreateStreamedFileFromUriAsync(_ displayNameWithExtension : Optional<HSTRING>, _ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ thumbnail : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateStreamedFileFromUriAsync(pThis, displayNameWithExtension, uri, thumbnail, __presult))
+        }
+    }
+    public func CreateStreamedFileFromUriAsync(displayNameWithExtension : Swift.String, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_displayNameWithExtension = try HString(displayNameWithExtension);
+        return try withExtendedLifetime(__hstr_displayNameWithExtension) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CreateStreamedFileFromUriAsync(__hstr_displayNameWithExtension.Raw(), RawPointer(uri), RawPointer(thumbnail), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func CreateStreamedFileFromUri(displayNameWithExtension : Swift.String, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreateStreamedFileFromUriAsync(displayNameWithExtension: displayNameWithExtension, uri: uri, thumbnail: thumbnail)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> ReplaceWithStreamedFileFromUriAsync(Windows.Storage.IStorageFile, Windows.Foundation.Uri, Windows.Storage.Streams.IRandomAccessStreamReference)
+    private func _n_ReplaceWithStreamedFileFromUriAsync(_ fileToReplace : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFile>>, _ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ thumbnail : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStreamReference>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceWithStreamedFileFromUriAsync(pThis, fileToReplace, uri, thumbnail, __presult))
+        }
+    }
+    public func ReplaceWithStreamedFileFromUriAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_ReplaceWithStreamedFileFromUriAsync(RawPointer(fileToReplace), RawPointer(uri), RawPointer(thumbnail), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+    }
+    public func ReplaceWithStreamedFileFromUri(fileToReplace : Optional<Windows.Storage.IStorageFile>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReplaceWithStreamedFileFromUriAsync(fileToReplace: fileToReplace, uri: uri, thumbnail: thumbnail)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFileStatics
+
+
+// type: Windows.Storage.IStorageFileStatics2
+// interface type
+open class IStorageFileStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5c76a781, Data2: 0x212e, Data3 : 0x4af9, Data4 : (0x8f, 0x04, 0x74, 0x0c, 0xae, 0x10, 0x89, 0x74)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> GetFileFromPathForUserAsync(Windows.System.User, System.String)
+    private func _n_GetFileFromPathForUserAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ path : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFileStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileFromPathForUserAsync(pThis, user, path, __presult))
+        }
+    }
+    public func GetFileFromPathForUserAsync(user : Optional<Windows.System.IUser>, path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_path = try HString(path);
+        return try withExtendedLifetime(__hstr_path) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_GetFileFromPathForUserAsync(RawPointer(user), __hstr_path.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func GetFileFromPathForUser(user : Optional<Windows.System.IUser>, path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFileFromPathForUserAsync(user: user, path: path)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFileStatics2
+
+
+// type: Windows.Storage.IStorageFolder
+// interface type
+open class IStorageFolder
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x72d1cb78, Data2: 0xb3ef, Data3 : 0x4f75, Data4 : (0xa8, 0x0b, 0x6f, 0xd9, 0xda, 0xe2, 0x94, 0x4b)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CreateFileAsync(System.String)
+    private func _n_CreateFileAsyncOverloadDefaultOptions(_ desiredName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileAsyncOverloadDefaultOptions(pThis, desiredName, __presult))
+        }
+    }
+    public func CreateFileAsyncOverloadDefaultOptions(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName);
+        return try withExtendedLifetime(__hstr_desiredName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CreateFileAsyncOverloadDefaultOptions(__hstr_desiredName.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func CreateFileAsyncOverloadDefaultOptions(desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreateFileAsyncOverloadDefaultOptions(desiredName: desiredName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> CreateFileAsync(System.String, Windows.Storage.CreationCollisionOption)
+    private func _n_CreateFileAsync(_ desiredName : Optional<HSTRING>, _ options : _q_CWindows_CStorage_CCreationCollisionOption, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileAsync(pThis, desiredName, options, __presult))
+        }
+    }
+    public func CreateFileAsync(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName);
+        return try withExtendedLifetime(__hstr_desiredName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_CreateFileAsync(__hstr_desiredName.Raw(), options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func CreateFile(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreateFileAsync(desiredName: desiredName, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> CreateFolderAsync(System.String)
+    private func _n_CreateFolderAsyncOverloadDefaultOptions(_ desiredName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderAsyncOverloadDefaultOptions(pThis, desiredName, __presult))
+        }
+    }
+    public func CreateFolderAsyncOverloadDefaultOptions(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName);
+        return try withExtendedLifetime(__hstr_desiredName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_CreateFolderAsyncOverloadDefaultOptions(__hstr_desiredName.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+        }
+    }
+    public func CreateFolderAsyncOverloadDefaultOptions(desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreateFolderAsyncOverloadDefaultOptions(desiredName: desiredName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> CreateFolderAsync(System.String, Windows.Storage.CreationCollisionOption)
+    private func _n_CreateFolderAsync(_ desiredName : Optional<HSTRING>, _ options : _q_CWindows_CStorage_CCreationCollisionOption, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderAsync(pThis, desiredName, options, __presult))
+        }
+    }
+    public func CreateFolderAsync(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName);
+        return try withExtendedLifetime(__hstr_desiredName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_CreateFolderAsync(__hstr_desiredName.Raw(), options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+        }
+    }
+    public func CreateFolder(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CreateFolderAsync(desiredName: desiredName, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFile> GetFileAsync(System.String)
+    private func _n_GetFileAsync(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileAsync(pThis, name, __presult))
+        }
+    }
+    public func GetFileAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_GetFileAsync(__hstr_name.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+        }
+    }
+    public func GetFile(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFileAsync(name: name)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderAsync(System.String)
+    private func _n_GetFolderAsync(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderAsync(pThis, name, __presult))
+        }
+    }
+    public func GetFolderAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_GetFolderAsync(__hstr_name.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+        }
+    }
+    public func GetFolder(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFolderAsync(name: name)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> GetItemAsync(System.String)
+    private func _n_GetItemAsync(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetItemAsync(pThis, name, __presult))
+        }
+    }
+    public func GetItemAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
+        try self._n_GetItemAsync(__hstr_name.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
+        }
+    }
+    public func GetItem(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetItemAsync(name: name)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFile>> GetFilesAsync()
+    private func _n_GetFilesAsyncOverloadDefaultOptionsStartAndCount(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFilesAsyncOverloadDefaultOptionsStartAndCount(pThis, __presult))
+        }
+    }
+    public func GetFilesAsyncOverloadDefaultOptionsStartAndCount() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile>> = nil;
+        try self._n_GetFilesAsyncOverloadDefaultOptionsStartAndCount(&__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
+    }
+    public func GetFilesAsyncOverloadDefaultOptionsStartAndCount() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFilesAsyncOverloadDefaultOptionsStartAndCount()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageFolder>> GetFoldersAsync()
+    private func _n_GetFoldersAsyncOverloadDefaultOptionsStartAndCount(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFoldersAsyncOverloadDefaultOptionsStartAndCount(pThis, __presult))
+        }
+    }
+    public func GetFoldersAsyncOverloadDefaultOptionsStartAndCount() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_GetFoldersAsyncOverloadDefaultOptionsStartAndCount(&__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+    }
+    public func GetFoldersAsyncOverloadDefaultOptionsStartAndCount() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFoldersAsyncOverloadDefaultOptionsStartAndCount()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.IStorageItem>> GetItemsAsync()
+    private func _n_GetItemsAsyncOverloadDefaultStartAndCount(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetItemsAsyncOverloadDefaultStartAndCount(pThis, __presult))
+        }
+    }
+    public func GetItemsAsyncOverloadDefaultStartAndCount() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem>> = nil;
+        try self._n_GetItemsAsyncOverloadDefaultStartAndCount(&__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
+    }
+    public func GetItemsAsyncOverloadDefaultStartAndCount() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CIStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetItemsAsyncOverloadDefaultStartAndCount()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFolder
+
+
+// type: Windows.Storage.IStorageFolder2
+// interface type
+open class IStorageFolder2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe827e8b9, Data2: 0x08d9, Data3 : 0x4a8e, Data4 : (0xa0, 0xac, 0xfe, 0x5e, 0xd3, 0xcb, 0xbb, 0xd3)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> TryGetItemAsync(System.String)
+    private func _n_TryGetItemAsync(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.TryGetItemAsync(pThis, name, __presult))
+        }
+    }
+    public func TryGetItemAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
+        try self._n_TryGetItemAsync(__hstr_name.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
+        }
+    }
+    public func TryGetItem(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.TryGetItemAsync(name: name)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFolder2
+
+
+// type: Windows.Storage.IStorageFolder3
+// interface type
+open class IStorageFolder3
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9f617899, Data2: 0xbde1, Data3 : 0x4124, Data4 : (0xae, 0xb3, 0xb0, 0x6a, 0xd9, 0x6f, 0x98, 0xd4)) }
+    // Windows.Storage.StorageLibraryChangeTracker TryGetChangeTracker()
+    private func _n_TryGetChangeTracker(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeTracker>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolder3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.TryGetChangeTracker(pThis, __presult))
+        }
+    }
+    public func TryGetChangeTracker() throws -> Optional<Windows.Storage.IStorageLibraryChangeTracker> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeTracker>> = nil;
+        try self._n_TryGetChangeTracker(&__result);
+        return Windows.Storage.IStorageLibraryChangeTracker(consuming: __result);
+    }
+} // IStorageFolder3
+
+
+// type: Windows.Storage.IStorageFolderStatics
+// interface type
+open class IStorageFolderStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x08f327ff, Data2: 0x85d5, Data3 : 0x48b9, Data4 : (0xae, 0xe9, 0x28, 0x51, 0x1e, 0x33, 0x9f, 0x9f)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderFromPathAsync(System.String)
+    private func _n_GetFolderFromPathAsync(_ path : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderFromPathAsync(pThis, path, __presult))
+        }
+    }
+    public func GetFolderFromPathAsync(path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_path = try HString(path);
+        return try withExtendedLifetime(__hstr_path) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_GetFolderFromPathAsync(__hstr_path.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+        }
+    }
+    public func GetFolderFromPath(path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFolderFromPathAsync(path: path)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFolderStatics
+
+
+// type: Windows.Storage.IStorageFolderStatics2
+// interface type
+open class IStorageFolderStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb4656dc3, Data2: 0x71d2, Data3 : 0x467d, Data4 : (0x8b, 0x29, 0x37, 0x1f, 0x0f, 0x62, 0xbf, 0x6f)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetFolderFromPathForUserAsync(Windows.System.User, System.String)
+    private func _n_GetFolderFromPathForUserAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ path : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageFolderStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderFromPathForUserAsync(pThis, user, path, __presult))
+        }
+    }
+    public func GetFolderFromPathForUserAsync(user : Optional<Windows.System.IUser>, path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_path = try HString(path);
+        return try withExtendedLifetime(__hstr_path) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_GetFolderFromPathForUserAsync(RawPointer(user), __hstr_path.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+        }
+    }
+    public func GetFolderFromPathForUser(user : Optional<Windows.System.IUser>, path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFolderFromPathForUserAsync(user: user, path: path)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageFolderStatics2
+
+
+// type: Windows.Storage.IStorageItem
+// interface type
+open class IStorageItem
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4207a996, Data2: 0xca2f, Data3 : 0x42f7, Data4 : (0xbd, 0xe8, 0x8b, 0x10, 0x45, 0x7a, 0x7f, 0x30)) }
+    // Windows.Foundation.IAsyncAction RenameAsync(System.String)
+    private func _n_RenameAsyncOverloadDefaultOptions(_ desiredName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RenameAsyncOverloadDefaultOptions(pThis, desiredName, __presult))
+        }
+    }
+    public func RenameAsyncOverloadDefaultOptions(desiredName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredName = try HString(desiredName);
+        return try withExtendedLifetime(__hstr_desiredName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_RenameAsyncOverloadDefaultOptions(__hstr_desiredName.Raw(), &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+        }
+    }
+    public func RenameAsyncOverloadDefaultOptions(desiredName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RenameAsyncOverloadDefaultOptions(desiredName: desiredName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction RenameAsync(System.String, Windows.Storage.NameCollisionOption)
+    private func _n_RenameAsync(_ desiredName : Optional<HSTRING>, _ option : _q_CWindows_CStorage_CNameCollisionOption, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RenameAsync(pThis, desiredName, option, __presult))
+        }
+    }
+    public func RenameAsync(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredName = try HString(desiredName);
+        return try withExtendedLifetime(__hstr_desiredName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_RenameAsync(__hstr_desiredName.Raw(), option, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+        }
+    }
+    public func Rename(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RenameAsync(desiredName: desiredName, option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction DeleteAsync()
+    private func _n_DeleteAsyncOverloadDefaultOptions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteAsyncOverloadDefaultOptions(pThis, __presult))
+        }
+    }
+    public func DeleteAsyncOverloadDefaultOptions() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_DeleteAsyncOverloadDefaultOptions(&__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func DeleteAsyncOverloadDefaultOptions() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.DeleteAsyncOverloadDefaultOptions()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction DeleteAsync(Windows.Storage.StorageDeleteOption)
+    private func _n_DeleteAsync(_ option : _q_CWindows_CStorage_CStorageDeleteOption, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteAsync(pThis, option, __presult))
+        }
+    }
+    public func DeleteAsync(option : Windows.Storage.StorageDeleteOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_DeleteAsync(option, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func Delete(option : Windows.Storage.StorageDeleteOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.DeleteAsync(option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.BasicProperties> GetBasicPropertiesAsync()
+    private func _n_GetBasicPropertiesAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CBasicProperties>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetBasicPropertiesAsync(pThis, __presult))
+        }
+    }
+    public func GetBasicPropertiesAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CBasicProperties> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CBasicProperties>> = nil;
+        try self._n_GetBasicPropertiesAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CBasicProperties(consuming: __result);
+    }
+    public func GetBasicProperties() async throws -> Optional<Windows.Storage.FileProperties.IBasicProperties> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetBasicPropertiesAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // [IsSpecialName] System.String get_Name()
+    private func _n_get_Name(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Name(pThis, __presult))
+        }
+    }
+    public func get_Name() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Name(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Path()
+    private func _n_get_Path(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, __presult))
+        }
+    }
+    public func get_Path() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Path(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] Windows.Storage.FileAttributes get_Attributes()
+    private func _n_get_Attributes(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CFileAttributes>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Attributes(pThis, __presult))
+        }
+    }
+    public func get_Attributes() throws -> Windows.Storage.FileAttributes {
+        var __result : _q_CWindows_CStorage_CFileAttributes = _q_CWindows_CStorage_CFileAttributes_Normal;
+        try self._n_get_Attributes(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.DateTime get_DateCreated()
+    private func _n_get_DateCreated(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CDateTime>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DateCreated(pThis, __presult))
+        }
+    }
+    public func get_DateCreated() throws -> Windows.Foundation.DateTime {
+        var __result : _q_CWindows_CFoundation_CDateTime = _q_CWindows_CFoundation_CDateTime(UniversalTime: 0);
+        try self._n_get_DateCreated(&__result);
+        return __result;
+    }
+    // bool IsOfType(Windows.Storage.StorageItemTypes)
+    private func _n_IsOfType(_ type : _q_CWindows_CStorage_CStorageItemTypes, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsOfType(pThis, type, __presult))
+        }
+    }
+    public func IsOfType(type : Windows.Storage.StorageItemTypes) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsOfType(type, &__result);
+        return __result;
+    }
+    public var Attributes : Windows.Storage.FileAttributes {
+        get throws {
+            return try get_Attributes();
+        }
+    }
+    public var DateCreated : Windows.Foundation.DateTime {
+        get throws {
+            return try get_DateCreated();
+        }
+    }
+    public var Name : Swift.String {
+        get throws {
+            return try get_Name();
+        }
+    }
+    public var Path : Swift.String {
+        get throws {
+            return try get_Path();
+        }
+    }
+} // IStorageItem
+
+
+// type: Windows.Storage.IStorageItem2
+// interface type
+open class IStorageItem2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x53f926d2, Data2: 0x083c, Data3 : 0x4283, Data4 : (0xb4, 0x5b, 0x81, 0xc0, 0x07, 0x23, 0x7e, 0x44)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> GetParentAsync()
+    private func _n_GetParentAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetParentAsync(pThis, __presult))
+        }
+    }
+    public func GetParentAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_GetParentAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+    }
+    public func GetParent() async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetParentAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // bool IsEqual(Windows.Storage.IStorageItem)
+    private func _n_IsEqual(_ item : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageItem>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItem2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsEqual(pThis, item, __presult))
+        }
+    }
+    public func IsEqual(item : Optional<Windows.Storage.IStorageItem>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsEqual(RawPointer(item), &__result);
+        return __result;
+    }
+} // IStorageItem2
+
+
+// type: Windows.Storage.IStorageItemProperties
+// interface type
+open class IStorageItemProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x86664478, Data2: 0x8029, Data3 : 0x46fe, Data4 : (0xa7, 0x89, 0x1c, 0x2f, 0x3e, 0x2f, 0xfb, 0x5c)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    private func _n_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(_ mode : _q_CWindows_CStorage_CFileProperties_CThumbnailMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(pThis, mode, __presult))
+        }
+    }
+    public func GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>> = nil;
+        try self._n_GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail(consuming: __result);
+    }
+    public func GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode: mode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode, System.UInt32)
+    private func _n_GetThumbnailAsyncOverloadDefaultOptions(_ mode : _q_CWindows_CStorage_CFileProperties_CThumbnailMode, _ requestedSize : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetThumbnailAsyncOverloadDefaultOptions(pThis, mode, requestedSize, __presult))
+        }
+    }
+    public func GetThumbnailAsyncOverloadDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>> = nil;
+        try self._n_GetThumbnailAsyncOverloadDefaultOptions(mode, requestedSize, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail(consuming: __result);
+    }
+    public func GetThumbnailAsyncOverloadDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetThumbnailAsyncOverloadDefaultOptions(mode: mode, requestedSize: requestedSize)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> GetThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode, System.UInt32, Windows.Storage.FileProperties.ThumbnailOptions)
+    private func _n_GetThumbnailAsync(_ mode : _q_CWindows_CStorage_CFileProperties_CThumbnailMode, _ requestedSize : UINT32, _ options : _q_CWindows_CStorage_CFileProperties_CThumbnailOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetThumbnailAsync(pThis, mode, requestedSize, options, __presult))
+        }
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>> = nil;
+        try self._n_GetThumbnailAsync(mode, requestedSize, options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail(consuming: __result);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // [IsSpecialName] System.String get_DisplayName()
+    private func _n_get_DisplayName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayName(pThis, __presult))
+        }
+    }
+    public func get_DisplayName() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayName(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_DisplayType()
+    private func _n_get_DisplayType(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayType(pThis, __presult))
+        }
+    }
+    public func get_DisplayType() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayType(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_FolderRelativeId()
+    private func _n_get_FolderRelativeId(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FolderRelativeId(pThis, __presult))
+        }
+    }
+    public func get_FolderRelativeId() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_FolderRelativeId(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] Windows.Storage.FileProperties.StorageItemContentProperties get_Properties()
+    private func _n_get_Properties(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CFileProperties_CIStorageItemContentProperties>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Properties(pThis, __presult))
+        }
+    }
+    public func get_Properties() throws -> Optional<Windows.Storage.FileProperties.IStorageItemContentProperties> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CFileProperties_CIStorageItemContentProperties>> = nil;
+        try self._n_get_Properties(&__result);
+        return Windows.Storage.FileProperties.IStorageItemContentProperties(consuming: __result);
+    }
+    public var DisplayName : Swift.String {
+        get throws {
+            return try get_DisplayName();
+        }
+    }
+    public var DisplayType : Swift.String {
+        get throws {
+            return try get_DisplayType();
+        }
+    }
+    public var FolderRelativeId : Swift.String {
+        get throws {
+            return try get_FolderRelativeId();
+        }
+    }
+    public var Properties : Optional<Windows.Storage.FileProperties.IStorageItemContentProperties> {
+        get throws {
+            return try get_Properties();
+        }
+    }
+} // IStorageItemProperties
+
+
+// type: Windows.Storage.IStorageItemProperties2
+// interface type
+open class IStorageItemProperties2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8e86a951, Data2: 0x04b9, Data3 : 0x4bd2, Data4 : (0x92, 0x9d, 0xfe, 0xf3, 0xf7, 0x16, 0x21, 0xd0)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode)
+    private func _n_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(_ mode : _q_CWindows_CStorage_CFileProperties_CThumbnailMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(pThis, mode, __presult))
+        }
+    }
+    public func GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>> = nil;
+        try self._n_GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail(consuming: __result);
+    }
+    public func GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode: mode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode, System.UInt32)
+    private func _n_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(_ mode : _q_CWindows_CStorage_CFileProperties_CThumbnailMode, _ requestedSize : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(pThis, mode, requestedSize, __presult))
+        }
+    }
+    public func GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>> = nil;
+        try self._n_GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(mode, requestedSize, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail(consuming: __result);
+    }
+    public func GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(mode: mode, requestedSize: requestedSize)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.FileProperties.StorageItemThumbnail> GetScaledImageAsThumbnailAsync(Windows.Storage.FileProperties.ThumbnailMode, System.UInt32, Windows.Storage.FileProperties.ThumbnailOptions)
+    private func _n_GetScaledImageAsThumbnailAsync(_ mode : _q_CWindows_CStorage_CFileProperties_CThumbnailMode, _ requestedSize : UINT32, _ options : _q_CWindows_CStorage_CFileProperties_CThumbnailOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemProperties2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetScaledImageAsThumbnailAsync(pThis, mode, requestedSize, options, __presult))
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail>> = nil;
+        try self._n_GetScaledImageAsThumbnailAsync(mode, requestedSize, options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail(consuming: __result);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageItemProperties2
+
+
+// type: Windows.Storage.IStorageItemPropertiesWithProvider
+// interface type
+open class IStorageItemPropertiesWithProvider
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x861bf39b, Data2: 0x6368, Data3 : 0x4dee, Data4 : (0xb4, 0x0e, 0x74, 0x68, 0x4a, 0x5c, 0xe7, 0x14)) }
+    // [IsSpecialName] Windows.Storage.StorageProvider get_Provider()
+    private func _n_get_Provider(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageProvider>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageItemPropertiesWithProvider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Provider(pThis, __presult))
+        }
+    }
+    public func get_Provider() throws -> Optional<Windows.Storage.IStorageProvider> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageProvider>> = nil;
+        try self._n_get_Provider(&__result);
+        return Windows.Storage.IStorageProvider(consuming: __result);
+    }
+    public var Provider : Optional<Windows.Storage.IStorageProvider> {
+        get throws {
+            return try get_Provider();
+        }
+    }
+} // IStorageItemPropertiesWithProvider
+
+
+// type: Windows.Storage.IStorageLibrary
+// interface type
+open class IStorageLibrary
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1edd7103, Data2: 0x0e5e, Data3 : 0x4d6c, Data4 : (0xb5, 0xe8, 0x93, 0x18, 0x98, 0x3d, 0x6a, 0x03)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageFolder> RequestAddFolderAsync()
+    private func _n_RequestAddFolderAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RequestAddFolderAsync(pThis, __presult))
+        }
+    }
+    public func RequestAddFolderAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_RequestAddFolderAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+    }
+    public func RequestAddFolder() async throws -> Optional<Windows.Storage.IStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RequestAddFolderAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<bool> RequestRemoveFolderAsync(Windows.Storage.StorageFolder)
+    private func _n_RequestRemoveFolderAsync(_ folder : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RequestRemoveFolderAsync(pThis, folder, __presult))
+        }
+    }
+    public func RequestRemoveFolderAsync(folder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
+        try self._n_RequestRemoveFolderAsync(RawPointer(folder), &__result);
+        return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
+    }
+    public func RequestRemoveFolder(folder : Optional<Windows.Storage.IStorageFolder>) async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RequestRemoveFolderAsync(folder: folder)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IObservableVector<Windows.Storage.StorageFolder> get_Folders()
+    private func _n_get_Folders(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CWindows_CStorage_CStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Folders(pThis, __presult))
+        }
+    }
+    public func get_Folders() throws -> Optional<ClosedGenerics.IObservableVector_1__q_CWindows_CStorage_CStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CWindows_CStorage_CStorageFolder>> = nil;
+        try self._n_get_Folders(&__result);
+        return ClosedGenerics.IObservableVector_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Storage.StorageFolder get_SaveFolder()
+    private func _n_get_SaveFolder(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SaveFolder(pThis, __presult))
+        }
+    }
+    public func get_SaveFolder() throws -> Optional<Windows.Storage.IStorageFolder> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
+        try self._n_get_SaveFolder(&__result);
+        return Windows.Storage.IStorageFolder(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DefinitionChanged(Windows.Foundation.TypedEventHandler<Windows.Storage.StorageLibrary,System.Object>)
+    private func _n_add_DefinitionChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_DefinitionChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_DefinitionChanged(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_DefinitionChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_DefinitionChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_DefinitionChanged(_ eventCookie : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DefinitionChanged(pThis, eventCookie))
+        }
+    }
+    public func remove_DefinitionChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_DefinitionChanged(eventCookie);
+    }
+    public var Folders : Optional<ClosedGenerics.IObservableVector_1__q_CWindows_CStorage_CStorageFolder> {
+        get throws {
+            return try get_Folders();
+        }
+    }
+    public var SaveFolder : Optional<Windows.Storage.IStorageFolder> {
+        get throws {
+            return try get_SaveFolder();
+        }
+    }
+} // IStorageLibrary
+
+
+// type: Windows.Storage.IStorageLibrary2
+// interface type
+open class IStorageLibrary2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5b0ce348, Data2: 0xfcb3, Data3 : 0x4031, Data4 : (0xaf, 0xb0, 0xa6, 0x8d, 0x7b, 0xd4, 0x45, 0x34)) }
+    // [IsSpecialName] Windows.Storage.StorageLibraryChangeTracker get_ChangeTracker()
+    private func _n_get_ChangeTracker(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeTracker>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChangeTracker(pThis, __presult))
+        }
+    }
+    public func get_ChangeTracker() throws -> Optional<Windows.Storage.IStorageLibraryChangeTracker> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeTracker>> = nil;
+        try self._n_get_ChangeTracker(&__result);
+        return Windows.Storage.IStorageLibraryChangeTracker(consuming: __result);
+    }
+    public var ChangeTracker : Optional<Windows.Storage.IStorageLibraryChangeTracker> {
+        get throws {
+            return try get_ChangeTracker();
+        }
+    }
+} // IStorageLibrary2
+
+
+// type: Windows.Storage.IStorageLibrary3
+// interface type
+open class IStorageLibrary3
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8a281291, Data2: 0x2154, Data3 : 0x4201, Data4 : (0x81, 0x13, 0xd2, 0xc0, 0x5c, 0xe1, 0xad, 0x23)) }
+    // Windows.Foundation.IAsyncOperation<bool> AreFolderSuggestionsAvailableAsync()
+    private func _n_AreFolderSuggestionsAvailableAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibrary3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.AreFolderSuggestionsAvailableAsync(pThis, __presult))
+        }
+    }
+    public func AreFolderSuggestionsAvailableAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
+        try self._n_AreFolderSuggestionsAvailableAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
+    }
+    public func AreFolderSuggestionsAvailable() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.AreFolderSuggestionsAvailableAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageLibrary3
+
+
+// type: Windows.Storage.IStorageLibraryChange
+// interface type
+open class IStorageLibraryChange
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x00980b23, Data2: 0x2be2, Data3 : 0x4909, Data4 : (0xaa, 0x48, 0x15, 0x9f, 0x52, 0x03, 0xa5, 0x1e)) }
+    // [IsSpecialName] Windows.Storage.StorageLibraryChangeType get_ChangeType()
+    private func _n_get_ChangeType(_ __presult: UnsafeMutablePointer<_q_CWindows_CStorage_CStorageLibraryChangeType>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChangeType(pThis, __presult))
+        }
+    }
+    public func get_ChangeType() throws -> Windows.Storage.StorageLibraryChangeType {
+        var __result : _q_CWindows_CStorage_CStorageLibraryChangeType = _q_CWindows_CStorage_CStorageLibraryChangeType_Created;
+        try self._n_get_ChangeType(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.String get_Path()
+    private func _n_get_Path(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Path(pThis, __presult))
+        }
+    }
+    public func get_Path() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Path(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PreviousPath()
+    private func _n_get_PreviousPath(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreviousPath(pThis, __presult))
+        }
+    }
+    public func get_PreviousPath() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PreviousPath(&__result);
+        return Swift.String(from: __result);
+    }
+    // bool IsOfType(Windows.Storage.StorageItemTypes)
+    private func _n_IsOfType(_ type : _q_CWindows_CStorage_CStorageItemTypes, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsOfType(pThis, type, __presult))
+        }
+    }
+    public func IsOfType(type : Windows.Storage.StorageItemTypes) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsOfType(type, &__result);
+        return __result;
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.IStorageItem> GetStorageItemAsync()
+    private func _n_GetStorageItemAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChange.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetStorageItemAsync(pThis, __presult))
+        }
+    }
+    public func GetStorageItemAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
+        try self._n_GetStorageItemAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
+    }
+    public func GetStorageItem() async throws -> Optional<Windows.Storage.IStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetStorageItemAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var ChangeType : Windows.Storage.StorageLibraryChangeType {
+        get throws {
+            return try get_ChangeType();
+        }
+    }
+    public var Path : Swift.String {
+        get throws {
+            return try get_Path();
+        }
+    }
+    public var PreviousPath : Swift.String {
+        get throws {
+            return try get_PreviousPath();
+        }
+    }
+} // IStorageLibraryChange
+
+
+// type: Windows.Storage.IStorageLibraryChangeReader
+// interface type
+open class IStorageLibraryChangeReader
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf205bc83, Data2: 0xfca2, Data3 : 0x41f9, Data4 : (0x89, 0x54, 0xee, 0x2e, 0x99, 0x1e, 0xb9, 0x6f)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<Windows.Storage.StorageLibraryChange>> ReadBatchAsync()
+    private func _n_ReadBatchAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReadBatchAsync(pThis, __presult))
+        }
+    }
+    public func ReadBatchAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange>> = nil;
+        try self._n_ReadBatchAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange(consuming: __result);
+    }
+    public func ReadBatch() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadBatchAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction AcceptChangesAsync()
+    private func _n_AcceptChangesAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeReader.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.AcceptChangesAsync(pThis, __presult))
+        }
+    }
+    public func AcceptChangesAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_AcceptChangesAsync(&__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func AcceptChanges() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.AcceptChangesAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageLibraryChangeReader
+
+
+// type: Windows.Storage.IStorageLibraryChangeReader2
+// interface type
+open class IStorageLibraryChangeReader2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xabf4868b, Data2: 0xfbcc, Data3 : 0x4a4f, Data4 : (0x99, 0x9e, 0xe7, 0xab, 0x7c, 0x64, 0x6d, 0xbe)) }
+    // System.UInt64 GetLastChangeId()
+    private func _n_GetLastChangeId(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeReader2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetLastChangeId(pThis, __presult))
+        }
+    }
+    public func GetLastChangeId() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_GetLastChangeId(&__result);
+        return __result;
+    }
+} // IStorageLibraryChangeReader2
+
+
+// type: Windows.Storage.IStorageLibraryChangeTracker
+// interface type
+open class IStorageLibraryChangeTracker
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9e157316, Data2: 0x6073, Data3 : 0x44f6, Data4 : (0x96, 0x81, 0x74, 0x92, 0xd1, 0x28, 0x6c, 0x90)) }
+    // Windows.Storage.StorageLibraryChangeReader GetChangeReader()
+    private func _n_GetChangeReader(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeReader>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTracker.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetChangeReader(pThis, __presult))
+        }
+    }
+    public func GetChangeReader() throws -> Optional<Windows.Storage.IStorageLibraryChangeReader> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeReader>> = nil;
+        try self._n_GetChangeReader(&__result);
+        return Windows.Storage.IStorageLibraryChangeReader(consuming: __result);
+    }
+    // void Enable()
+    private func _n_Enable() throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTracker.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Enable(pThis))
+        }
+    }
+    public func Enable() throws -> Void {
+        try self._n_Enable();
+    }
+    // void Reset()
+    private func _n_Reset() throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTracker.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Reset(pThis))
+        }
+    }
+    public func Reset() throws -> Void {
+        try self._n_Reset();
+    }
+} // IStorageLibraryChangeTracker
+
+
+// type: Windows.Storage.IStorageLibraryChangeTracker2
+// interface type
+open class IStorageLibraryChangeTracker2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xcd051c3b, Data2: 0x0f9f, Data3 : 0x42f9, Data4 : (0x8f, 0xb3, 0x15, 0x8d, 0x82, 0xe1, 0x38, 0x21)) }
+    // void Enable(Windows.Storage.StorageLibraryChangeTrackerOptions)
+    private func _n_EnableWithOptions(_ options : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibraryChangeTrackerOptions>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTracker2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.EnableWithOptions(pThis, options))
+        }
+    }
+    public func EnableWithOptions(options : Optional<Windows.Storage.IStorageLibraryChangeTrackerOptions>) throws -> Void {
+        try self._n_EnableWithOptions(RawPointer(options));
+    }
+    // void Disable()
+    private func _n_Disable() throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTracker2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Disable(pThis))
+        }
+    }
+    public func Disable() throws -> Void {
+        try self._n_Disable();
+    }
+} // IStorageLibraryChangeTracker2
+
+
+// type: Windows.Storage.IStorageLibraryChangeTrackerOptions
+// interface type
+open class IStorageLibraryChangeTrackerOptions
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbb52bcd4, Data2: 0x1a6d, Data3 : 0x59c0, Data4 : (0xad, 0x2a, 0x82, 0x3a, 0x20, 0x53, 0x24, 0x83)) }
+    // [IsSpecialName] bool get_TrackChangeDetails()
+    private func _n_get_TrackChangeDetails(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTrackerOptions.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TrackChangeDetails(pThis, __presult))
+        }
+    }
+    public func get_TrackChangeDetails() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_TrackChangeDetails(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TrackChangeDetails(bool)
+    private func _n_put_TrackChangeDetails(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryChangeTrackerOptions.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrackChangeDetails(pThis, value))
+        }
+    }
+    public func put_TrackChangeDetails(value : boolean) throws -> Void {
+        try self._n_put_TrackChangeDetails(value);
+    }
+    public var TrackChangeDetails : boolean {
+        get throws {
+            return try get_TrackChangeDetails();
+        }
+    }
+} // IStorageLibraryChangeTrackerOptions
+
+
+// type: Windows.Storage.IStorageLibraryLastChangeId
+// interface type
+open class IStorageLibraryLastChangeId
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5281826a, Data2: 0xbbe1, Data3 : 0x53bc, Data4 : (0x82, 0xca, 0x81, 0xcc, 0x7f, 0x03, 0x93, 0x29)) }
+} // IStorageLibraryLastChangeId
+
+
+// type: Windows.Storage.IStorageLibraryLastChangeIdStatics
+// interface type
+open class IStorageLibraryLastChangeIdStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x81a49128, Data2: 0x2ca3, Data3 : 0x5309, Data4 : (0xb0, 0xd1, 0xcf, 0x07, 0x88, 0xe4, 0x07, 0x62)) }
+    // [IsSpecialName] System.UInt64 get_Unknown()
+    private func _n_get_Unknown(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryLastChangeIdStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Unknown(pThis, __presult))
+        }
+    }
+    public func get_Unknown() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_get_Unknown(&__result);
+        return __result;
+    }
+    public var Unknown : Swift.UInt64 {
+        get throws {
+            return try get_Unknown();
+        }
+    }
+} // IStorageLibraryLastChangeIdStatics
+
+
+// type: Windows.Storage.IStorageLibraryStatics
+// interface type
+open class IStorageLibraryStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4208a6db, Data2: 0x684a, Data3 : 0x49c6, Data4 : (0x9e, 0x59, 0x90, 0x12, 0x1e, 0xe0, 0x50, 0xd6)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageLibrary> GetLibraryAsync(Windows.Storage.KnownLibraryId)
+    private func _n_GetLibraryAsync(_ libraryId : _q_CWindows_CStorage_CKnownLibraryId, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetLibraryAsync(pThis, libraryId, __presult))
+        }
+    }
+    public func GetLibraryAsync(libraryId : Windows.Storage.KnownLibraryId) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary>> = nil;
+        try self._n_GetLibraryAsync(libraryId, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary(consuming: __result);
+    }
+    public func GetLibrary(libraryId : Windows.Storage.KnownLibraryId) async throws -> Optional<Windows.Storage.IStorageLibrary> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetLibraryAsync(libraryId: libraryId)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageLibraryStatics
+
+
+// type: Windows.Storage.IStorageLibraryStatics2
+// interface type
+open class IStorageLibraryStatics2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xffb08ddc, Data2: 0xfa75, Data3 : 0x4695, Data4 : (0xb9, 0xd1, 0x7f, 0x81, 0xf9, 0x78, 0x32, 0xe3)) }
+    // Windows.Foundation.IAsyncOperation<Windows.Storage.StorageLibrary> GetLibraryForUserAsync(Windows.System.User, Windows.Storage.KnownLibraryId)
+    private func _n_GetLibraryForUserAsync(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ libraryId : _q_CWindows_CStorage_CKnownLibraryId, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageLibraryStatics2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetLibraryForUserAsync(pThis, user, libraryId, __presult))
+        }
+    }
+    public func GetLibraryForUserAsync(user : Optional<Windows.System.IUser>, libraryId : Windows.Storage.KnownLibraryId) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary>> = nil;
+        try self._n_GetLibraryForUserAsync(RawPointer(user), libraryId, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary(consuming: __result);
+    }
+    public func GetLibraryForUser(user : Optional<Windows.System.IUser>, libraryId : Windows.Storage.KnownLibraryId) async throws -> Optional<Windows.Storage.IStorageLibrary> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetLibraryForUserAsync(user: user, libraryId: libraryId)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageLibraryStatics2
+
+
+// type: Windows.Storage.IStorageProvider
+// interface type
+open class IStorageProvider
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe705eed4, Data2: 0xd478, Data3 : 0x47d6, Data4 : (0xba, 0x46, 0x1a, 0x8e, 0xbe, 0x11, 0x4a, 0x20)) }
+    // [IsSpecialName] System.String get_Id()
+    private func _n_get_Id(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageProvider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Id(pThis, __presult))
+        }
+    }
+    public func get_Id() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Id(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_DisplayName()
+    private func _n_get_DisplayName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageProvider.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayName(pThis, __presult))
+        }
+    }
+    public func get_DisplayName() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayName(&__result);
+        return Swift.String(from: __result);
+    }
+    public var DisplayName : Swift.String {
+        get throws {
+            return try get_DisplayName();
+        }
+    }
+    public var Id : Swift.String {
+        get throws {
+            return try get_Id();
+        }
+    }
+} // IStorageProvider
+
+
+// type: Windows.Storage.IStorageProvider2
+// interface type
+open class IStorageProvider2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x010d1917, Data2: 0x3404, Data3 : 0x414b, Data4 : (0x9f, 0xd7, 0xcd, 0x44, 0x47, 0x2e, 0xaa, 0x39)) }
+    // Windows.Foundation.IAsyncOperation<bool> IsPropertySupportedForPartialFileAsync(System.String)
+    private func _n_IsPropertySupportedForPartialFileAsync(_ propertyCanonicalName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageProvider2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsPropertySupportedForPartialFileAsync(pThis, propertyCanonicalName, __presult))
+        }
+    }
+    public func IsPropertySupportedForPartialFileAsync(propertyCanonicalName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let __hstr_propertyCanonicalName = try HString(propertyCanonicalName);
+        return try withExtendedLifetime(__hstr_propertyCanonicalName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
+        try self._n_IsPropertySupportedForPartialFileAsync(__hstr_propertyCanonicalName.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
+        }
+    }
+    public func IsPropertySupportedForPartialFile(propertyCanonicalName : Swift.String) async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.IsPropertySupportedForPartialFileAsync(propertyCanonicalName: propertyCanonicalName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // IStorageProvider2
+
+
+// type: Windows.Storage.IStorageStreamTransaction
+// interface type
+open class IStorageStreamTransaction
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf67cf363, Data2: 0xa53d, Data3 : 0x4d94, Data4 : (0xae, 0x2c, 0x67, 0x23, 0x2d, 0x93, 0xac, 0xdd)) }
+    // [IsSpecialName] Windows.Storage.Streams.IRandomAccessStream get_Stream()
+    private func _n_get_Stream(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageStreamTransaction.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Stream(pThis, __presult))
+        }
+    }
+    public func get_Stream() throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
+        try self._n_get_Stream(&__result);
+        return Windows.Storage.Streams.IRandomAccessStream(consuming: __result);
+    }
+    // Windows.Foundation.IAsyncAction CommitAsync()
+    private func _n_CommitAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStorageStreamTransaction.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CommitAsync(pThis, __presult))
+        }
+    }
+    public func CommitAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_CommitAsync(&__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func Commit() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CommitAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var Stream : Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        get throws {
+            return try get_Stream();
+        }
+    }
+} // IStorageStreamTransaction
+
+
+// type: Windows.Storage.IStreamedFileDataRequest
+// interface type
+open class IStreamedFileDataRequest
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1673fcce, Data2: 0xdabd, Data3 : 0x4d50, Data4 : (0xbe, 0xee, 0x18, 0x0b, 0x8a, 0x81, 0x91, 0xb6)) }
+    // void FailAndClose(Windows.Storage.StreamedFileFailureMode)
+    private func _n_FailAndClose(_ failureMode : _q_CWindows_CStorage_CStreamedFileFailureMode) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStreamedFileDataRequest.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.FailAndClose(pThis, failureMode))
+        }
+    }
+    public func FailAndClose(failureMode : Windows.Storage.StreamedFileFailureMode) throws -> Void {
+        try self._n_FailAndClose(failureMode);
+    }
+} // IStreamedFileDataRequest
+
+
+// type: Windows.Storage.ISystemAudioProperties
+// interface type
+open class ISystemAudioProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3f8f38b7, Data2: 0x308c, Data3 : 0x47e1, Data4 : (0x92, 0x4d, 0x86, 0x45, 0x34, 0x8e, 0x5d, 0xb7)) }
+    // [IsSpecialName] System.String get_EncodingBitrate()
+    private func _n_get_EncodingBitrate(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemAudioProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_EncodingBitrate(pThis, __presult))
+        }
+    }
+    public func get_EncodingBitrate() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_EncodingBitrate(&__result);
+        return Swift.String(from: __result);
+    }
+    public var EncodingBitrate : Swift.String {
+        get throws {
+            return try get_EncodingBitrate();
+        }
+    }
+} // ISystemAudioProperties
+
+
+// type: Windows.Storage.ISystemDataPaths
+// interface type
+open class ISystemDataPaths
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe32abf70, Data2: 0xd8fa, Data3 : 0x45ec, Data4 : (0xa9, 0x42, 0xd2, 0xe2, 0x6f, 0xb6, 0x0b, 0xa5)) }
+    // [IsSpecialName] System.String get_Fonts()
+    private func _n_get_Fonts(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Fonts(pThis, __presult))
+        }
+    }
+    public func get_Fonts() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Fonts(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_ProgramData()
+    private func _n_get_ProgramData(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProgramData(pThis, __presult))
+        }
+    }
+    public func get_ProgramData() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_ProgramData(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Public()
+    private func _n_get_Public(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Public(pThis, __presult))
+        }
+    }
+    public func get_Public() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Public(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PublicDesktop()
+    private func _n_get_PublicDesktop(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicDesktop(pThis, __presult))
+        }
+    }
+    public func get_PublicDesktop() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PublicDesktop(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PublicDocuments()
+    private func _n_get_PublicDocuments(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicDocuments(pThis, __presult))
+        }
+    }
+    public func get_PublicDocuments() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PublicDocuments(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PublicDownloads()
+    private func _n_get_PublicDownloads(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicDownloads(pThis, __presult))
+        }
+    }
+    public func get_PublicDownloads() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PublicDownloads(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PublicMusic()
+    private func _n_get_PublicMusic(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicMusic(pThis, __presult))
+        }
+    }
+    public func get_PublicMusic() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PublicMusic(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PublicPictures()
+    private func _n_get_PublicPictures(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicPictures(pThis, __presult))
+        }
+    }
+    public func get_PublicPictures() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PublicPictures(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PublicVideos()
+    private func _n_get_PublicVideos(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicVideos(pThis, __presult))
+        }
+    }
+    public func get_PublicVideos() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PublicVideos(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_System()
+    private func _n_get_System(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_System(pThis, __presult))
+        }
+    }
+    public func get_System() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_System(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SystemHost()
+    private func _n_get_SystemHost(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemHost(pThis, __presult))
+        }
+    }
+    public func get_SystemHost() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SystemHost(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SystemX86()
+    private func _n_get_SystemX86(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemX86(pThis, __presult))
+        }
+    }
+    public func get_SystemX86() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SystemX86(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SystemX64()
+    private func _n_get_SystemX64(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemX64(pThis, __presult))
+        }
+    }
+    public func get_SystemX64() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SystemX64(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SystemArm()
+    private func _n_get_SystemArm(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemArm(pThis, __presult))
+        }
+    }
+    public func get_SystemArm() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SystemArm(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_UserProfiles()
+    private func _n_get_UserProfiles(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UserProfiles(pThis, __presult))
+        }
+    }
+    public func get_UserProfiles() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_UserProfiles(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Windows()
+    private func _n_get_Windows(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Windows(pThis, __presult))
+        }
+    }
+    public func get_Windows() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Windows(&__result);
+        return Swift.String(from: __result);
+    }
+    public var Fonts : Swift.String {
+        get throws {
+            return try get_Fonts();
+        }
+    }
+    public var ProgramData : Swift.String {
+        get throws {
+            return try get_ProgramData();
+        }
+    }
+    public var Public : Swift.String {
+        get throws {
+            return try get_Public();
+        }
+    }
+    public var PublicDesktop : Swift.String {
+        get throws {
+            return try get_PublicDesktop();
+        }
+    }
+    public var PublicDocuments : Swift.String {
+        get throws {
+            return try get_PublicDocuments();
+        }
+    }
+    public var PublicDownloads : Swift.String {
+        get throws {
+            return try get_PublicDownloads();
+        }
+    }
+    public var PublicMusic : Swift.String {
+        get throws {
+            return try get_PublicMusic();
+        }
+    }
+    public var PublicPictures : Swift.String {
+        get throws {
+            return try get_PublicPictures();
+        }
+    }
+    public var PublicVideos : Swift.String {
+        get throws {
+            return try get_PublicVideos();
+        }
+    }
+    public var System : Swift.String {
+        get throws {
+            return try get_System();
+        }
+    }
+    public var SystemArm : Swift.String {
+        get throws {
+            return try get_SystemArm();
+        }
+    }
+    public var SystemHost : Swift.String {
+        get throws {
+            return try get_SystemHost();
+        }
+    }
+    public var SystemX64 : Swift.String {
+        get throws {
+            return try get_SystemX64();
+        }
+    }
+    public var SystemX86 : Swift.String {
+        get throws {
+            return try get_SystemX86();
+        }
+    }
+    public var UserProfiles : Swift.String {
+        get throws {
+            return try get_UserProfiles();
+        }
+    }
+    public var Windows : Swift.String {
+        get throws {
+            return try get_Windows();
+        }
+    }
+} // ISystemDataPaths
+
+
+// type: Windows.Storage.ISystemDataPathsStatics
+// interface type
+open class ISystemDataPathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe0f96fd0, Data2: 0x9920, Data3 : 0x4bca, Data4 : (0xb3, 0x79, 0xf9, 0x6f, 0xdf, 0x7c, 0xaa, 0xd8)) }
+    // Windows.Storage.SystemDataPaths GetDefault()
+    private func _n_GetDefault(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISystemDataPaths>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemDataPathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetDefault(pThis, __presult))
+        }
+    }
+    public func GetDefault() throws -> Optional<Windows.Storage.ISystemDataPaths> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISystemDataPaths>> = nil;
+        try self._n_GetDefault(&__result);
+        return Windows.Storage.ISystemDataPaths(consuming: __result);
+    }
+} // ISystemDataPathsStatics
+
+
+// type: Windows.Storage.ISystemGPSProperties
+// interface type
+open class ISystemGPSProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0f46eb4, Data2: 0xc174, Data3 : 0x481a, Data4 : (0xbc, 0x25, 0x92, 0x19, 0x86, 0xf6, 0xa6, 0xf3)) }
+    // [IsSpecialName] System.String get_LatitudeDecimal()
+    private func _n_get_LatitudeDecimal(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemGPSProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LatitudeDecimal(pThis, __presult))
+        }
+    }
+    public func get_LatitudeDecimal() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_LatitudeDecimal(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_LongitudeDecimal()
+    private func _n_get_LongitudeDecimal(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemGPSProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LongitudeDecimal(pThis, __presult))
+        }
+    }
+    public func get_LongitudeDecimal() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_LongitudeDecimal(&__result);
+        return Swift.String(from: __result);
+    }
+    public var LatitudeDecimal : Swift.String {
+        get throws {
+            return try get_LatitudeDecimal();
+        }
+    }
+    public var LongitudeDecimal : Swift.String {
+        get throws {
+            return try get_LongitudeDecimal();
+        }
+    }
+} // ISystemGPSProperties
+
+
+// type: Windows.Storage.ISystemImageProperties
+// interface type
+open class ISystemImageProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x011b2e30, Data2: 0x8b39, Data3 : 0x4308, Data4 : (0xbe, 0xa1, 0xe8, 0xaa, 0x61, 0xe4, 0x78, 0x26)) }
+    // [IsSpecialName] System.String get_HorizontalSize()
+    private func _n_get_HorizontalSize(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemImageProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalSize(pThis, __presult))
+        }
+    }
+    public func get_HorizontalSize() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_HorizontalSize(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_VerticalSize()
+    private func _n_get_VerticalSize(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemImageProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_VerticalSize(pThis, __presult))
+        }
+    }
+    public func get_VerticalSize() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_VerticalSize(&__result);
+        return Swift.String(from: __result);
+    }
+    public var HorizontalSize : Swift.String {
+        get throws {
+            return try get_HorizontalSize();
+        }
+    }
+    public var VerticalSize : Swift.String {
+        get throws {
+            return try get_VerticalSize();
+        }
+    }
+} // ISystemImageProperties
+
+
+// type: Windows.Storage.ISystemMediaProperties
+// interface type
+open class ISystemMediaProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa42b3316, Data2: 0x8415, Data3 : 0x40dc, Data4 : (0x8c, 0x44, 0x98, 0x36, 0x1d, 0x23, 0x54, 0x30)) }
+    // [IsSpecialName] System.String get_Duration()
+    private func _n_get_Duration(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMediaProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Duration(pThis, __presult))
+        }
+    }
+    public func get_Duration() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Duration(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Producer()
+    private func _n_get_Producer(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMediaProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Producer(pThis, __presult))
+        }
+    }
+    public func get_Producer() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Producer(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Publisher()
+    private func _n_get_Publisher(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMediaProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Publisher(pThis, __presult))
+        }
+    }
+    public func get_Publisher() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Publisher(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SubTitle()
+    private func _n_get_SubTitle(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMediaProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SubTitle(pThis, __presult))
+        }
+    }
+    public func get_SubTitle() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SubTitle(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Writer()
+    private func _n_get_Writer(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMediaProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Writer(pThis, __presult))
+        }
+    }
+    public func get_Writer() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Writer(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Year()
+    private func _n_get_Year(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMediaProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Year(pThis, __presult))
+        }
+    }
+    public func get_Year() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Year(&__result);
+        return Swift.String(from: __result);
+    }
+    public var Duration : Swift.String {
+        get throws {
+            return try get_Duration();
+        }
+    }
+    public var Producer : Swift.String {
+        get throws {
+            return try get_Producer();
+        }
+    }
+    public var Publisher : Swift.String {
+        get throws {
+            return try get_Publisher();
+        }
+    }
+    public var SubTitle : Swift.String {
+        get throws {
+            return try get_SubTitle();
+        }
+    }
+    public var Writer : Swift.String {
+        get throws {
+            return try get_Writer();
+        }
+    }
+    public var Year : Swift.String {
+        get throws {
+            return try get_Year();
+        }
+    }
+} // ISystemMediaProperties
+
+
+// type: Windows.Storage.ISystemMusicProperties
+// interface type
+open class ISystemMusicProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb47988d5, Data2: 0x67af, Data3 : 0x4bc3, Data4 : (0x8d, 0x39, 0x5b, 0x89, 0x02, 0x20, 0x26, 0xa1)) }
+    // [IsSpecialName] System.String get_AlbumArtist()
+    private func _n_get_AlbumArtist(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlbumArtist(pThis, __presult))
+        }
+    }
+    public func get_AlbumArtist() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_AlbumArtist(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_AlbumTitle()
+    private func _n_get_AlbumTitle(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlbumTitle(pThis, __presult))
+        }
+    }
+    public func get_AlbumTitle() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_AlbumTitle(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Artist()
+    private func _n_get_Artist(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Artist(pThis, __presult))
+        }
+    }
+    public func get_Artist() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Artist(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Composer()
+    private func _n_get_Composer(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Composer(pThis, __presult))
+        }
+    }
+    public func get_Composer() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Composer(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Conductor()
+    private func _n_get_Conductor(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Conductor(pThis, __presult))
+        }
+    }
+    public func get_Conductor() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Conductor(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_DisplayArtist()
+    private func _n_get_DisplayArtist(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayArtist(pThis, __presult))
+        }
+    }
+    public func get_DisplayArtist() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayArtist(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Genre()
+    private func _n_get_Genre(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Genre(pThis, __presult))
+        }
+    }
+    public func get_Genre() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Genre(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_TrackNumber()
+    private func _n_get_TrackNumber(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemMusicProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TrackNumber(pThis, __presult))
+        }
+    }
+    public func get_TrackNumber() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_TrackNumber(&__result);
+        return Swift.String(from: __result);
+    }
+    public var AlbumArtist : Swift.String {
+        get throws {
+            return try get_AlbumArtist();
+        }
+    }
+    public var AlbumTitle : Swift.String {
+        get throws {
+            return try get_AlbumTitle();
+        }
+    }
+    public var Artist : Swift.String {
+        get throws {
+            return try get_Artist();
+        }
+    }
+    public var Composer : Swift.String {
+        get throws {
+            return try get_Composer();
+        }
+    }
+    public var Conductor : Swift.String {
+        get throws {
+            return try get_Conductor();
+        }
+    }
+    public var DisplayArtist : Swift.String {
+        get throws {
+            return try get_DisplayArtist();
+        }
+    }
+    public var Genre : Swift.String {
+        get throws {
+            return try get_Genre();
+        }
+    }
+    public var TrackNumber : Swift.String {
+        get throws {
+            return try get_TrackNumber();
+        }
+    }
+} // ISystemMusicProperties
+
+
+// type: Windows.Storage.ISystemPhotoProperties
+// interface type
+open class ISystemPhotoProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4734fc3d, Data2: 0xab21, Data3 : 0x4424, Data4 : (0xb7, 0x35, 0xf4, 0x35, 0x3a, 0x56, 0xc8, 0xfc)) }
+    // [IsSpecialName] System.String get_CameraManufacturer()
+    private func _n_get_CameraManufacturer(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemPhotoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CameraManufacturer(pThis, __presult))
+        }
+    }
+    public func get_CameraManufacturer() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_CameraManufacturer(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_CameraModel()
+    private func _n_get_CameraModel(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemPhotoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CameraModel(pThis, __presult))
+        }
+    }
+    public func get_CameraModel() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_CameraModel(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_DateTaken()
+    private func _n_get_DateTaken(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemPhotoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DateTaken(pThis, __presult))
+        }
+    }
+    public func get_DateTaken() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DateTaken(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Orientation()
+    private func _n_get_Orientation(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemPhotoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orientation(pThis, __presult))
+        }
+    }
+    public func get_Orientation() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Orientation(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_PeopleNames()
+    private func _n_get_PeopleNames(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemPhotoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PeopleNames(pThis, __presult))
+        }
+    }
+    public func get_PeopleNames() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PeopleNames(&__result);
+        return Swift.String(from: __result);
+    }
+    public var CameraManufacturer : Swift.String {
+        get throws {
+            return try get_CameraManufacturer();
+        }
+    }
+    public var CameraModel : Swift.String {
+        get throws {
+            return try get_CameraModel();
+        }
+    }
+    public var DateTaken : Swift.String {
+        get throws {
+            return try get_DateTaken();
+        }
+    }
+    public var Orientation : Swift.String {
+        get throws {
+            return try get_Orientation();
+        }
+    }
+    public var PeopleNames : Swift.String {
+        get throws {
+            return try get_PeopleNames();
+        }
+    }
+} // ISystemPhotoProperties
+
+
+// type: Windows.Storage.ISystemVideoProperties
+// interface type
+open class ISystemVideoProperties
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2040f715, Data2: 0x67f8, Data3 : 0x4322, Data4 : (0x9b, 0x80, 0x4f, 0xa9, 0xfe, 0xfb, 0x83, 0xe8)) }
+    // [IsSpecialName] System.String get_Director()
+    private func _n_get_Director(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemVideoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Director(pThis, __presult))
+        }
+    }
+    public func get_Director() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Director(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_FrameHeight()
+    private func _n_get_FrameHeight(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemVideoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FrameHeight(pThis, __presult))
+        }
+    }
+    public func get_FrameHeight() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_FrameHeight(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_FrameWidth()
+    private func _n_get_FrameWidth(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemVideoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FrameWidth(pThis, __presult))
+        }
+    }
+    public func get_FrameWidth() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_FrameWidth(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Orientation()
+    private func _n_get_Orientation(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemVideoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Orientation(pThis, __presult))
+        }
+    }
+    public func get_Orientation() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Orientation(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_TotalBitrate()
+    private func _n_get_TotalBitrate(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CISystemVideoProperties.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TotalBitrate(pThis, __presult))
+        }
+    }
+    public func get_TotalBitrate() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_TotalBitrate(&__result);
+        return Swift.String(from: __result);
+    }
+    public var Director : Swift.String {
+        get throws {
+            return try get_Director();
+        }
+    }
+    public var FrameHeight : Swift.String {
+        get throws {
+            return try get_FrameHeight();
+        }
+    }
+    public var FrameWidth : Swift.String {
+        get throws {
+            return try get_FrameWidth();
+        }
+    }
+    public var Orientation : Swift.String {
+        get throws {
+            return try get_Orientation();
+        }
+    }
+    public var TotalBitrate : Swift.String {
+        get throws {
+            return try get_TotalBitrate();
+        }
+    }
+} // ISystemVideoProperties
+
+
+// type: Windows.Storage.IUserDataPaths
+// interface type
+open class IUserDataPaths
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf9c53912, Data2: 0xabc4, Data3 : 0x46ff, Data4 : (0x8a, 0x2b, 0xdc, 0x9d, 0x7f, 0xa6, 0xe5, 0x2f)) }
+    // [IsSpecialName] System.String get_CameraRoll()
+    private func _n_get_CameraRoll(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CameraRoll(pThis, __presult))
+        }
+    }
+    public func get_CameraRoll() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_CameraRoll(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Cookies()
+    private func _n_get_Cookies(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Cookies(pThis, __presult))
+        }
+    }
+    public func get_Cookies() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Cookies(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Desktop()
+    private func _n_get_Desktop(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Desktop(pThis, __presult))
+        }
+    }
+    public func get_Desktop() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Desktop(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Documents()
+    private func _n_get_Documents(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Documents(pThis, __presult))
+        }
+    }
+    public func get_Documents() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Documents(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Downloads()
+    private func _n_get_Downloads(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Downloads(pThis, __presult))
+        }
+    }
+    public func get_Downloads() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Downloads(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Favorites()
+    private func _n_get_Favorites(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Favorites(pThis, __presult))
+        }
+    }
+    public func get_Favorites() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Favorites(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_History()
+    private func _n_get_History(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_History(pThis, __presult))
+        }
+    }
+    public func get_History() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_History(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_InternetCache()
+    private func _n_get_InternetCache(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_InternetCache(pThis, __presult))
+        }
+    }
+    public func get_InternetCache() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_InternetCache(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_LocalAppData()
+    private func _n_get_LocalAppData(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalAppData(pThis, __presult))
+        }
+    }
+    public func get_LocalAppData() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_LocalAppData(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_LocalAppDataLow()
+    private func _n_get_LocalAppDataLow(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LocalAppDataLow(pThis, __presult))
+        }
+    }
+    public func get_LocalAppDataLow() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_LocalAppDataLow(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Music()
+    private func _n_get_Music(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Music(pThis, __presult))
+        }
+    }
+    public func get_Music() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Music(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Pictures()
+    private func _n_get_Pictures(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Pictures(pThis, __presult))
+        }
+    }
+    public func get_Pictures() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Pictures(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Profile()
+    private func _n_get_Profile(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Profile(pThis, __presult))
+        }
+    }
+    public func get_Profile() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Profile(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Recent()
+    private func _n_get_Recent(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Recent(pThis, __presult))
+        }
+    }
+    public func get_Recent() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Recent(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_RoamingAppData()
+    private func _n_get_RoamingAppData(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RoamingAppData(pThis, __presult))
+        }
+    }
+    public func get_RoamingAppData() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_RoamingAppData(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_SavedPictures()
+    private func _n_get_SavedPictures(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SavedPictures(pThis, __presult))
+        }
+    }
+    public func get_SavedPictures() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SavedPictures(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Screenshots()
+    private func _n_get_Screenshots(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Screenshots(pThis, __presult))
+        }
+    }
+    public func get_Screenshots() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Screenshots(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Templates()
+    private func _n_get_Templates(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Templates(pThis, __presult))
+        }
+    }
+    public func get_Templates() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Templates(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Videos()
+    private func _n_get_Videos(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPaths.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Videos(pThis, __presult))
+        }
+    }
+    public func get_Videos() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Videos(&__result);
+        return Swift.String(from: __result);
+    }
+    public var CameraRoll : Swift.String {
+        get throws {
+            return try get_CameraRoll();
+        }
+    }
+    public var Cookies : Swift.String {
+        get throws {
+            return try get_Cookies();
+        }
+    }
+    public var Desktop : Swift.String {
+        get throws {
+            return try get_Desktop();
+        }
+    }
+    public var Documents : Swift.String {
+        get throws {
+            return try get_Documents();
+        }
+    }
+    public var Downloads : Swift.String {
+        get throws {
+            return try get_Downloads();
+        }
+    }
+    public var Favorites : Swift.String {
+        get throws {
+            return try get_Favorites();
+        }
+    }
+    public var History : Swift.String {
+        get throws {
+            return try get_History();
+        }
+    }
+    public var InternetCache : Swift.String {
+        get throws {
+            return try get_InternetCache();
+        }
+    }
+    public var LocalAppData : Swift.String {
+        get throws {
+            return try get_LocalAppData();
+        }
+    }
+    public var LocalAppDataLow : Swift.String {
+        get throws {
+            return try get_LocalAppDataLow();
+        }
+    }
+    public var Music : Swift.String {
+        get throws {
+            return try get_Music();
+        }
+    }
+    public var Pictures : Swift.String {
+        get throws {
+            return try get_Pictures();
+        }
+    }
+    public var Profile : Swift.String {
+        get throws {
+            return try get_Profile();
+        }
+    }
+    public var Recent : Swift.String {
+        get throws {
+            return try get_Recent();
+        }
+    }
+    public var RoamingAppData : Swift.String {
+        get throws {
+            return try get_RoamingAppData();
+        }
+    }
+    public var SavedPictures : Swift.String {
+        get throws {
+            return try get_SavedPictures();
+        }
+    }
+    public var Screenshots : Swift.String {
+        get throws {
+            return try get_Screenshots();
+        }
+    }
+    public var Templates : Swift.String {
+        get throws {
+            return try get_Templates();
+        }
+    }
+    public var Videos : Swift.String {
+        get throws {
+            return try get_Videos();
+        }
+    }
+} // IUserDataPaths
+
+
+// type: Windows.Storage.IUserDataPathsStatics
+// interface type
+open class IUserDataPathsStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x01b29def, Data2: 0xe062, Data3 : 0x48a1, Data4 : (0x8b, 0x0c, 0xf2, 0xc7, 0xa9, 0xca, 0x56, 0xc0)) }
+    // Windows.Storage.UserDataPaths GetForUser(Windows.System.User)
+    private func _n_GetForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIUserDataPaths>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetForUser(pThis, user, __presult))
+        }
+    }
+    public func GetForUser(user : Optional<Windows.System.IUser>) throws -> Optional<Windows.Storage.IUserDataPaths> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIUserDataPaths>> = nil;
+        try self._n_GetForUser(RawPointer(user), &__result);
+        return Windows.Storage.IUserDataPaths(consuming: __result);
+    }
+    // Windows.Storage.UserDataPaths GetDefault()
+    private func _n_GetDefault(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIUserDataPaths>>>?) throws {
+        return try perform(as: _q_CWindows_CStorage_CIUserDataPathsStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetDefault(pThis, __presult))
+        }
+    }
+    public func GetDefault() throws -> Optional<Windows.Storage.IUserDataPaths> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIUserDataPaths>> = nil;
+        try self._n_GetDefault(&__result);
+        return Windows.Storage.IUserDataPaths(consuming: __result);
+    }
+} // IUserDataPathsStatics
+
+
+// type: Windows.Storage.KnownLibraryId
+// enum type
+public typealias KnownLibraryId = _q_CWindows_CStorage_CKnownLibraryId;
+
+// type: Windows.Storage.NameCollisionOption
+// enum type
+public typealias NameCollisionOption = _q_CWindows_CStorage_CNameCollisionOption;
+
+// type: Windows.Storage.SetVersionDeferral
+// runtime class
+public class SetVersionDeferral
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISetVersionDeferral;
+    public init(plok: Windows.Storage.ISetVersionDeferral?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISetVersionDeferral { return _self; }
+    public func Complete() throws -> Void {
+        let _ifc : Windows.Storage.ISetVersionDeferral = try _self.QueryInterface();
+        return try _ifc.Complete();
+    }
+}
+
+// type: Windows.Storage.SetVersionRequest
+// runtime class
+public class SetVersionRequest
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISetVersionRequest;
+    public init(plok: Windows.Storage.ISetVersionRequest?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISetVersionRequest { return _self; }
+    public func get_CurrentVersion() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.ISetVersionRequest = try _self.QueryInterface();
+        return try _ifc.get_CurrentVersion();
+    }
+    public func get_DesiredVersion() throws -> Swift.UInt32 {
+        let _ifc : Windows.Storage.ISetVersionRequest = try _self.QueryInterface();
+        return try _ifc.get_DesiredVersion();
+    }
+    public func GetDeferral() throws -> Optional<Windows.Storage.SetVersionDeferral> {
+        let _ifc : Windows.Storage.ISetVersionRequest = try _self.QueryInterface();
+        return try Windows.Storage.SetVersionDeferral(plok: _ifc.GetDeferral());
+    }
+    public var CurrentVersion : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.ISetVersionRequest = try _self.QueryInterface();
+        return try _ifc.CurrentVersion;
+        }
+    }
+    public var DesiredVersion : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Storage.ISetVersionRequest = try _self.QueryInterface();
+        return try _ifc.DesiredVersion;
+        }
+    }
+}
+
+// type: Windows.Storage.StorageDeleteOption
+// enum type
+public typealias StorageDeleteOption = _q_CWindows_CStorage_CStorageDeleteOption;
+
+// type: Windows.Storage.StorageFile
+// runtime class
+public class StorageFile
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageFile;
+    public init(plok: Windows.Storage.IStorageFile?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageFile { return _self; }
+    private struct _IStorageFileStatics {
+        static var x : IStorageFileStatics =
+            try! RoGetActivationFactory("Windows.Storage.StorageFile")
+    }
+    public static var StorageFileStatics : IStorageFileStatics {
+        _IStorageFileStatics.x
+    }
+    public static func GetFileFromPathAsync(path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics.GetFileFromPathAsync(path: path);
+    }
+    public static func GetFileFromPath(path : Swift.String) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.GetFileFromPathAsync(path: path)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func GetFileFromApplicationUriAsync(uri : Optional<Windows.Foundation.Uri>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics.GetFileFromApplicationUriAsync(uri: uri!.Interface());
+    }
+    public static func GetFileFromApplicationUri(uri : Optional<Windows.Foundation.Uri>) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.GetFileFromApplicationUriAsync(uri: uri)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func CreateStreamedFileAsync(displayNameWithExtension : Swift.String, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics.CreateStreamedFileAsync(displayNameWithExtension: displayNameWithExtension, dataRequested: Windows.Storage.StreamedFileDataRequestedHandler(cb: dataRequested).Interface(), thumbnail: thumbnail);
+    }
+    public static func CreateStreamedFile(displayNameWithExtension : Swift.String, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.CreateStreamedFileAsync(displayNameWithExtension: displayNameWithExtension, dataRequested: dataRequested, thumbnail: thumbnail)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func ReplaceWithStreamedFileAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics.ReplaceWithStreamedFileAsync(fileToReplace: fileToReplace, dataRequested: Windows.Storage.StreamedFileDataRequestedHandler(cb: dataRequested).Interface(), thumbnail: thumbnail);
+    }
+    public static func ReplaceWithStreamedFile(fileToReplace : Optional<Windows.Storage.IStorageFile>, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.ReplaceWithStreamedFileAsync(fileToReplace: fileToReplace, dataRequested: dataRequested, thumbnail: thumbnail)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func CreateStreamedFileFromUriAsync(displayNameWithExtension : Swift.String, uri : Optional<Windows.Foundation.Uri>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics.CreateStreamedFileFromUriAsync(displayNameWithExtension: displayNameWithExtension, uri: uri!.Interface(), thumbnail: thumbnail);
+    }
+    public static func CreateStreamedFileFromUri(displayNameWithExtension : Swift.String, uri : Optional<Windows.Foundation.Uri>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.CreateStreamedFileFromUriAsync(displayNameWithExtension: displayNameWithExtension, uri: uri, thumbnail: thumbnail)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func ReplaceWithStreamedFileFromUriAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>, uri : Optional<Windows.Foundation.Uri>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics.ReplaceWithStreamedFileFromUriAsync(fileToReplace: fileToReplace, uri: uri!.Interface(), thumbnail: thumbnail);
+    }
+    public static func ReplaceWithStreamedFileFromUri(fileToReplace : Optional<Windows.Storage.IStorageFile>, uri : Optional<Windows.Foundation.Uri>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.ReplaceWithStreamedFileFromUriAsync(fileToReplace: fileToReplace, uri: uri, thumbnail: thumbnail)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    private struct _IStorageFileStatics2 {
+        static var x : IStorageFileStatics2 =
+            try! RoGetActivationFactory("Windows.Storage.StorageFile")
+    }
+    public static var StorageFileStatics2 : IStorageFileStatics2 {
+        _IStorageFileStatics2.x
+    }
+    public static func GetFileFromPathForUserAsync(user : Optional<Windows.System.User>, path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        return try StorageFileStatics2.GetFileFromPathForUserAsync(user: user!.Interface(), path: path);
+    }
+    public static func GetFileFromPathForUser(user : Optional<Windows.System.User>, path : Swift.String) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: Self.GetFileFromPathForUserAsync(user: user, path: path)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_FileType() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.get_FileType();
+    }
+    public func get_ContentType() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.get_ContentType();
+    }
+    public func OpenAsync(accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.OpenAsync(accessMode: accessMode);
+    }
+    public func Open(accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenAsync(accessMode: accessMode)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func OpenTransactedWriteAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.OpenTransactedWriteAsync();
+    }
+    public func OpenTransactedWrite() async throws -> Optional<Windows.Storage.StorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageStreamTransaction(plok: self.OpenTransactedWriteAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CopyAsync(destinationFolder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.CopyOverloadDefaultNameAndOptions(destinationFolder: destinationFolder);
+    }
+    public func Copy(destinationFolder : Optional<Windows.Storage.IStorageFolder>) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: self.CopyAsync(destinationFolder: destinationFolder)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CopyAsync(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.CopyOverloadDefaultOptions(destinationFolder: destinationFolder, desiredNewName: desiredNewName);
+    }
+    public func Copy(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: self.CopyAsync(destinationFolder: destinationFolder, desiredNewName: desiredNewName)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CopyAsync(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.CopyOverload(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option);
+    }
+    public func Copy(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: self.CopyAsync(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CopyAndReplaceAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.CopyAndReplaceAsync(fileToReplace: fileToReplace);
+    }
+    public func CopyAndReplace(fileToReplace : Optional<Windows.Storage.IStorageFile>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CopyAndReplaceAsync(fileToReplace: fileToReplace)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func MoveAsync(destinationFolder : Optional<Windows.Storage.IStorageFolder>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.MoveOverloadDefaultNameAndOptions(destinationFolder: destinationFolder);
+    }
+    public func Move(destinationFolder : Optional<Windows.Storage.IStorageFolder>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveAsync(destinationFolder: destinationFolder)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func MoveAsync(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.MoveOverloadDefaultOptions(destinationFolder: destinationFolder, desiredNewName: desiredNewName);
+    }
+    public func Move(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveAsync(destinationFolder: destinationFolder, desiredNewName: desiredNewName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func MoveAsync(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.MoveOverload(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option);
+    }
+    public func Move(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveAsync(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func MoveAndReplaceAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.MoveAndReplaceAsync(fileToReplace: fileToReplace);
+    }
+    public func MoveAndReplace(fileToReplace : Optional<Windows.Storage.IStorageFile>) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.MoveAndReplaceAsync(fileToReplace: fileToReplace)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var ContentType : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.ContentType;
+        }
+    }
+    public var FileType : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageFile = try _self.QueryInterface();
+        return try _ifc.FileType;
+        }
+    }
+    public func OpenSequentialReadAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream> {
+        let _ifc : Windows.Storage.Streams.IInputStreamReference = try _self.QueryInterface();
+        return try _ifc.OpenSequentialReadAsync();
+    }
+    public func OpenSequentialRead() async throws -> Optional<Windows.Storage.Streams.IInputStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenSequentialReadAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func OpenReadAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType> {
+        let _ifc : Windows.Storage.Streams.IRandomAccessStreamReference = try _self.QueryInterface();
+        return try _ifc.OpenReadAsync();
+    }
+    public func OpenRead() async throws -> Optional<Windows.Storage.Streams.IRandomAccessStreamWithContentType> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenReadAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func RenameAsync(desiredName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.RenameAsyncOverloadDefaultOptions(desiredName: desiredName);
+    }
+    public func Rename(desiredName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RenameAsync(desiredName: desiredName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func RenameAsync(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.RenameAsync(desiredName: desiredName, option: option);
+    }
+    public func Rename(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RenameAsync(desiredName: desiredName, option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func DeleteAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.DeleteAsyncOverloadDefaultOptions();
+    }
+    public func Delete() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.DeleteAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func DeleteAsync(option : Windows.Storage.StorageDeleteOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.DeleteAsync(option: option);
+    }
+    public func Delete(option : Windows.Storage.StorageDeleteOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.DeleteAsync(option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetBasicPropertiesAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CBasicProperties> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.GetBasicPropertiesAsync();
+    }
+    public func GetBasicProperties() async throws -> Optional<Windows.Storage.FileProperties.BasicProperties> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.BasicProperties(plok: self.GetBasicPropertiesAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_Name() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_Name();
+    }
+    public func get_Path() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_Path();
+    }
+    public func get_Attributes() throws -> Windows.Storage.FileAttributes {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_Attributes();
+    }
+    public func get_DateCreated() throws -> Windows.Foundation.DateTime {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_DateCreated();
+    }
+    public func IsOfType(type : Windows.Storage.StorageItemTypes) throws -> boolean {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.IsOfType(type: type);
+    }
+    public var Attributes : Windows.Storage.FileAttributes {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.Attributes;
+        }
+    }
+    public var DateCreated : Windows.Foundation.DateTime {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.DateCreated;
+        }
+    }
+    public var Name : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.Name;
+        }
+    }
+    public var Path : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.Path;
+        }
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode: mode);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetThumbnailAsync(mode: mode)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.GetThumbnailAsyncOverloadDefaultOptions(mode: mode, requestedSize: requestedSize);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetThumbnailAsync(mode: mode, requestedSize: requestedSize)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.GetThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_DisplayName() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.get_DisplayName();
+    }
+    public func get_DisplayType() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.get_DisplayType();
+    }
+    public func get_FolderRelativeId() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.get_FolderRelativeId();
+    }
+    public func get_Properties() throws -> Optional<Windows.Storage.FileProperties.StorageItemContentProperties> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try Windows.Storage.FileProperties.StorageItemContentProperties(plok: _ifc.get_Properties());
+    }
+    public var DisplayName : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.DisplayName;
+        }
+    }
+    public var DisplayType : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.DisplayType;
+        }
+    }
+    public var FolderRelativeId : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.FolderRelativeId;
+        }
+    }
+    public var Properties : Optional<Windows.Storage.FileProperties.StorageItemContentProperties> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try Windows.Storage.FileProperties.StorageItemContentProperties(plok: _ifc.Properties);
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties2 = try _self.QueryInterface();
+        return try _ifc.GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode: mode);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetScaledImageAsThumbnailAsync(mode: mode)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties2 = try _self.QueryInterface();
+        return try _ifc.GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(mode: mode, requestedSize: requestedSize);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties2 = try _self.QueryInterface();
+        return try _ifc.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetParentAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageItem2 = try _self.QueryInterface();
+        return try _ifc.GetParentAsync();
+    }
+    public func GetParent() async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: self.GetParentAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func IsEqual(item : Optional<Windows.Storage.IStorageItem>) throws -> boolean {
+        let _ifc : Windows.Storage.IStorageItem2 = try _self.QueryInterface();
+        return try _ifc.IsEqual(item: item);
+    }
+    public func get_Provider() throws -> Optional<Windows.Storage.StorageProvider> {
+        let _ifc : Windows.Storage.IStorageItemPropertiesWithProvider = try _self.QueryInterface();
+        return try Windows.Storage.StorageProvider(plok: _ifc.get_Provider());
+    }
+    public var Provider : Optional<Windows.Storage.StorageProvider> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemPropertiesWithProvider = try _self.QueryInterface();
+        return try Windows.Storage.StorageProvider(plok: _ifc.Provider);
+        }
+    }
+    public func get_IsAvailable() throws -> boolean {
+        let _ifc : Windows.Storage.IStorageFilePropertiesWithAvailability = try _self.QueryInterface();
+        return try _ifc.get_IsAvailable();
+    }
+    public var IsAvailable : boolean {
+        get throws {
+        let _ifc : Windows.Storage.IStorageFilePropertiesWithAvailability = try _self.QueryInterface();
+        return try _ifc.IsAvailable;
+        }
+    }
+    public func OpenAsync(accessMode : Windows.Storage.FileAccessMode, options : Windows.Storage.StorageOpenOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let _ifc : Windows.Storage.IStorageFile2 = try _self.QueryInterface();
+        return try _ifc.OpenWithOptionsAsync(accessMode: accessMode, options: options);
+    }
+    public func Open(accessMode : Windows.Storage.FileAccessMode, options : Windows.Storage.StorageOpenOptions) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.OpenAsync(accessMode: accessMode, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func OpenTransactedWriteAsync(options : Windows.Storage.StorageOpenOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let _ifc : Windows.Storage.IStorageFile2 = try _self.QueryInterface();
+        return try _ifc.OpenTransactedWriteWithOptionsAsync(options: options);
+    }
+    public func OpenTransactedWrite(options : Windows.Storage.StorageOpenOptions) async throws -> Optional<Windows.Storage.StorageStreamTransaction> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageStreamTransaction(plok: self.OpenTransactedWriteAsync(options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
+// type: Windows.Storage.StorageFolder
+// runtime class
+public class StorageFolder
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageFolder;
+    public init(plok: Windows.Storage.IStorageFolder?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageFolder { return _self; }
+    private struct _IStorageFolderStatics2 {
+        static var x : IStorageFolderStatics2 =
+            try! RoGetActivationFactory("Windows.Storage.StorageFolder")
+    }
+    public static var StorageFolderStatics2 : IStorageFolderStatics2 {
+        _IStorageFolderStatics2.x
+    }
+    public static func GetFolderFromPathForUserAsync(user : Optional<Windows.System.User>, path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        return try StorageFolderStatics2.GetFolderFromPathForUserAsync(user: user!.Interface(), path: path);
+    }
+    public static func GetFolderFromPathForUser(user : Optional<Windows.System.User>, path : Swift.String) async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: Self.GetFolderFromPathForUserAsync(user: user, path: path)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    private struct _IStorageFolderStatics {
+        static var x : IStorageFolderStatics =
+            try! RoGetActivationFactory("Windows.Storage.StorageFolder")
+    }
+    public static var StorageFolderStatics : IStorageFolderStatics {
+        _IStorageFolderStatics.x
+    }
+    public static func GetFolderFromPathAsync(path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        return try StorageFolderStatics.GetFolderFromPathAsync(path: path);
+    }
+    public static func GetFolderFromPath(path : Swift.String) async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: Self.GetFolderFromPathAsync(path: path)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CreateFileAsync(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.CreateFileAsyncOverloadDefaultOptions(desiredName: desiredName);
+    }
+    public func CreateFile(desiredName : Swift.String) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: self.CreateFileAsync(desiredName: desiredName)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CreateFileAsync(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.CreateFileAsync(desiredName: desiredName, options: options);
+    }
+    public func CreateFile(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: self.CreateFileAsync(desiredName: desiredName, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CreateFolderAsync(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.CreateFolderAsyncOverloadDefaultOptions(desiredName: desiredName);
+    }
+    public func CreateFolder(desiredName : Swift.String) async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: self.CreateFolderAsync(desiredName: desiredName)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CreateFolderAsync(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.CreateFolderAsync(desiredName: desiredName, options: options);
+    }
+    public func CreateFolder(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: self.CreateFolderAsync(desiredName: desiredName, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFileAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.GetFileAsync(name: name);
+    }
+    public func GetFile(name : Swift.String) async throws -> Optional<Windows.Storage.StorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFile(plok: self.GetFileAsync(name: name)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFolderAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.GetFolderAsync(name: name);
+    }
+    public func GetFolder(name : Swift.String) async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: self.GetFolderAsync(name: name)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetItemAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.GetItemAsync(name: name);
+    }
+    public func GetItem(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetItemAsync(name: name)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFilesAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.GetFilesAsyncOverloadDefaultOptionsStartAndCount();
+    }
+    public func GetFiles() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFilesAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFoldersAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.GetFoldersAsyncOverloadDefaultOptionsStartAndCount();
+    }
+    public func GetFolders() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFoldersAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetItemsAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem> {
+        let _ifc : Windows.Storage.IStorageFolder = try _self.QueryInterface();
+        return try _ifc.GetItemsAsyncOverloadDefaultStartAndCount();
+    }
+    public func GetItems() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CIStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetItemsAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func RenameAsync(desiredName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.RenameAsyncOverloadDefaultOptions(desiredName: desiredName);
+    }
+    public func Rename(desiredName : Swift.String) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RenameAsync(desiredName: desiredName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func RenameAsync(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.RenameAsync(desiredName: desiredName, option: option);
+    }
+    public func Rename(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RenameAsync(desiredName: desiredName, option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func DeleteAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.DeleteAsyncOverloadDefaultOptions();
+    }
+    public func Delete() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.DeleteAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func DeleteAsync(option : Windows.Storage.StorageDeleteOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.DeleteAsync(option: option);
+    }
+    public func Delete(option : Windows.Storage.StorageDeleteOption) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.DeleteAsync(option: option)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetBasicPropertiesAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CBasicProperties> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.GetBasicPropertiesAsync();
+    }
+    public func GetBasicProperties() async throws -> Optional<Windows.Storage.FileProperties.BasicProperties> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.BasicProperties(plok: self.GetBasicPropertiesAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_Name() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_Name();
+    }
+    public func get_Path() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_Path();
+    }
+    public func get_Attributes() throws -> Windows.Storage.FileAttributes {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_Attributes();
+    }
+    public func get_DateCreated() throws -> Windows.Foundation.DateTime {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.get_DateCreated();
+    }
+    public func IsOfType(type : Windows.Storage.StorageItemTypes) throws -> boolean {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.IsOfType(type: type);
+    }
+    public var Attributes : Windows.Storage.FileAttributes {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.Attributes;
+        }
+    }
+    public var DateCreated : Windows.Foundation.DateTime {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.DateCreated;
+        }
+    }
+    public var Name : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.Name;
+        }
+    }
+    public var Path : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItem = try _self.QueryInterface();
+        return try _ifc.Path;
+        }
+    }
+    public func GetIndexedStateAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CSearch_CIndexedState> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.GetIndexedStateAsync();
+    }
+    public func GetIndexedState() async throws -> Windows.Storage.Search.IndexedState {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetIndexedStateAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func CreateFileQuery() throws -> Optional<Windows.Storage.Search.StorageFileQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageFileQueryResult(plok: _ifc.CreateFileQueryOverloadDefault());
+    }
+    public func CreateFileQuery(query : Windows.Storage.Search.CommonFileQuery) throws -> Optional<Windows.Storage.Search.StorageFileQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageFileQueryResult(plok: _ifc.CreateFileQuery(query: query));
+    }
+    public func CreateFileQueryWithOptions(queryOptions : Optional<Windows.Storage.Search.QueryOptions>) throws -> Optional<Windows.Storage.Search.StorageFileQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageFileQueryResult(plok: _ifc.CreateFileQueryWithOptions(queryOptions: queryOptions!.Interface()));
+    }
+    public func CreateFolderQuery() throws -> Optional<Windows.Storage.Search.StorageFolderQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageFolderQueryResult(plok: _ifc.CreateFolderQueryOverloadDefault());
+    }
+    public func CreateFolderQuery(query : Windows.Storage.Search.CommonFolderQuery) throws -> Optional<Windows.Storage.Search.StorageFolderQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageFolderQueryResult(plok: _ifc.CreateFolderQuery(query: query));
+    }
+    public func CreateFolderQueryWithOptions(queryOptions : Optional<Windows.Storage.Search.QueryOptions>) throws -> Optional<Windows.Storage.Search.StorageFolderQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageFolderQueryResult(plok: _ifc.CreateFolderQueryWithOptions(queryOptions: queryOptions!.Interface()));
+    }
+    public func CreateItemQuery() throws -> Optional<Windows.Storage.Search.StorageItemQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageItemQueryResult(plok: _ifc.CreateItemQuery());
+    }
+    public func CreateItemQueryWithOptions(queryOptions : Optional<Windows.Storage.Search.QueryOptions>) throws -> Optional<Windows.Storage.Search.StorageItemQueryResult> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try Windows.Storage.Search.StorageItemQueryResult(plok: _ifc.CreateItemQueryWithOptions(queryOptions: queryOptions!.Interface()));
+    }
+    public func GetFilesAsync(query : Windows.Storage.Search.CommonFileQuery, startIndex : Swift.UInt32, maxItemsToRetrieve : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.GetFilesAsync(query: query, startIndex: startIndex, maxItemsToRetrieve: maxItemsToRetrieve);
+    }
+    public func GetFiles(query : Windows.Storage.Search.CommonFileQuery, startIndex : Swift.UInt32, maxItemsToRetrieve : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFilesAsync(query: query, startIndex: startIndex, maxItemsToRetrieve: maxItemsToRetrieve)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFilesAsync(query : Windows.Storage.Search.CommonFileQuery) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.GetFilesAsyncOverloadDefaultStartAndCount(query: query);
+    }
+    public func GetFiles(query : Windows.Storage.Search.CommonFileQuery) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFile> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFilesAsync(query: query)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFoldersAsync(query : Windows.Storage.Search.CommonFolderQuery, startIndex : Swift.UInt32, maxItemsToRetrieve : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.GetFoldersAsync(query: query, startIndex: startIndex, maxItemsToRetrieve: maxItemsToRetrieve);
+    }
+    public func GetFolders(query : Windows.Storage.Search.CommonFolderQuery, startIndex : Swift.UInt32, maxItemsToRetrieve : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFoldersAsync(query: query, startIndex: startIndex, maxItemsToRetrieve: maxItemsToRetrieve)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetFoldersAsync(query : Windows.Storage.Search.CommonFolderQuery) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.GetFoldersAsyncOverloadDefaultStartAndCount(query: query);
+    }
+    public func GetFolders(query : Windows.Storage.Search.CommonFolderQuery) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetFoldersAsync(query: query)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetItemsAsync(startIndex : Swift.UInt32, maxItemsToRetrieve : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem> {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.GetItemsAsync(startIndex: startIndex, maxItemsToRetrieve: maxItemsToRetrieve);
+    }
+    public func GetItems(startIndex : Swift.UInt32, maxItemsToRetrieve : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CIStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetItemsAsync(startIndex: startIndex, maxItemsToRetrieve: maxItemsToRetrieve)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func AreQueryOptionsSupported(queryOptions : Optional<Windows.Storage.Search.QueryOptions>) throws -> boolean {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.AreQueryOptionsSupported(queryOptions: queryOptions!.Interface());
+    }
+    public func IsCommonFolderQuerySupported(query : Windows.Storage.Search.CommonFolderQuery) throws -> boolean {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.IsCommonFolderQuerySupported(query: query);
+    }
+    public func IsCommonFileQuerySupported(query : Windows.Storage.Search.CommonFileQuery) throws -> boolean {
+        let _ifc : Windows.Storage.Search.IStorageFolderQueryOperations = try _self.QueryInterface();
+        return try _ifc.IsCommonFileQuerySupported(query: query);
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.GetThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode: mode);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetThumbnailAsync(mode: mode)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.GetThumbnailAsyncOverloadDefaultOptions(mode: mode, requestedSize: requestedSize);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetThumbnailAsync(mode: mode, requestedSize: requestedSize)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.GetThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options);
+    }
+    public func GetThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_DisplayName() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.get_DisplayName();
+    }
+    public func get_DisplayType() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.get_DisplayType();
+    }
+    public func get_FolderRelativeId() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.get_FolderRelativeId();
+    }
+    public func get_Properties() throws -> Optional<Windows.Storage.FileProperties.StorageItemContentProperties> {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try Windows.Storage.FileProperties.StorageItemContentProperties(plok: _ifc.get_Properties());
+    }
+    public var DisplayName : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.DisplayName;
+        }
+    }
+    public var DisplayType : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.DisplayType;
+        }
+    }
+    public var FolderRelativeId : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try _ifc.FolderRelativeId;
+        }
+    }
+    public var Properties : Optional<Windows.Storage.FileProperties.StorageItemContentProperties> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemProperties = try _self.QueryInterface();
+        return try Windows.Storage.FileProperties.StorageItemContentProperties(plok: _ifc.Properties);
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties2 = try _self.QueryInterface();
+        return try _ifc.GetScaledImageAsThumbnailAsyncOverloadDefaultSizeDefaultOptions(mode: mode);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetScaledImageAsThumbnailAsync(mode: mode)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties2 = try _self.QueryInterface();
+        return try _ifc.GetScaledImageAsThumbnailAsyncOverloadDefaultOptions(mode: mode, requestedSize: requestedSize);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetScaledImageAsThumbnailAsync(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail> {
+        let _ifc : Windows.Storage.IStorageItemProperties2 = try _self.QueryInterface();
+        return try _ifc.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options);
+    }
+    public func GetScaledImageAsThumbnail(mode : Windows.Storage.FileProperties.ThumbnailMode, requestedSize : Swift.UInt32, options : Windows.Storage.FileProperties.ThumbnailOptions) async throws -> Optional<Windows.Storage.FileProperties.StorageItemThumbnail> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.FileProperties.StorageItemThumbnail(plok: self.GetScaledImageAsThumbnailAsync(mode: mode, requestedSize: requestedSize, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetParentAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageItem2 = try _self.QueryInterface();
+        return try _ifc.GetParentAsync();
+    }
+    public func GetParent() async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: self.GetParentAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func IsEqual(item : Optional<Windows.Storage.IStorageItem>) throws -> boolean {
+        let _ifc : Windows.Storage.IStorageItem2 = try _self.QueryInterface();
+        return try _ifc.IsEqual(item: item);
+    }
+    public func TryGetItemAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let _ifc : Windows.Storage.IStorageFolder2 = try _self.QueryInterface();
+        return try _ifc.TryGetItemAsync(name: name);
+    }
+    public func TryGetItem(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.TryGetItemAsync(name: name)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_Provider() throws -> Optional<Windows.Storage.StorageProvider> {
+        let _ifc : Windows.Storage.IStorageItemPropertiesWithProvider = try _self.QueryInterface();
+        return try Windows.Storage.StorageProvider(plok: _ifc.get_Provider());
+    }
+    public var Provider : Optional<Windows.Storage.StorageProvider> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageItemPropertiesWithProvider = try _self.QueryInterface();
+        return try Windows.Storage.StorageProvider(plok: _ifc.Provider);
+        }
+    }
+    public func TryGetChangeTracker() throws -> Optional<Windows.Storage.StorageLibraryChangeTracker> {
+        let _ifc : Windows.Storage.IStorageFolder3 = try _self.QueryInterface();
+        return try Windows.Storage.StorageLibraryChangeTracker(plok: _ifc.TryGetChangeTracker());
+    }
+}
+
+// type: Windows.Storage.StorageItemTypes
+// enum type
+public typealias StorageItemTypes = _q_CWindows_CStorage_CStorageItemTypes;
+
+// type: Windows.Storage.StorageLibrary
+// runtime class
+public class StorageLibrary
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageLibrary;
+    public init(plok: Windows.Storage.IStorageLibrary?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageLibrary { return _self; }
+    private struct _IStorageLibraryStatics {
+        static var x : IStorageLibraryStatics =
+            try! RoGetActivationFactory("Windows.Storage.StorageLibrary")
+    }
+    public static var StorageLibraryStatics : IStorageLibraryStatics {
+        _IStorageLibraryStatics.x
+    }
+    public static func GetLibraryAsync(libraryId : Windows.Storage.KnownLibraryId) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary> {
+        return try StorageLibraryStatics.GetLibraryAsync(libraryId: libraryId);
+    }
+    public static func GetLibrary(libraryId : Windows.Storage.KnownLibraryId) async throws -> Optional<Windows.Storage.StorageLibrary> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageLibrary(plok: Self.GetLibraryAsync(libraryId: libraryId)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    private struct _IStorageLibraryStatics2 {
+        static var x : IStorageLibraryStatics2 =
+            try! RoGetActivationFactory("Windows.Storage.StorageLibrary")
+    }
+    public static var StorageLibraryStatics2 : IStorageLibraryStatics2 {
+        _IStorageLibraryStatics2.x
+    }
+    public static func GetLibraryForUserAsync(user : Optional<Windows.System.User>, libraryId : Windows.Storage.KnownLibraryId) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary> {
+        return try StorageLibraryStatics2.GetLibraryForUserAsync(user: user!.Interface(), libraryId: libraryId);
+    }
+    public static func GetLibraryForUser(user : Optional<Windows.System.User>, libraryId : Windows.Storage.KnownLibraryId) async throws -> Optional<Windows.Storage.StorageLibrary> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageLibrary(plok: Self.GetLibraryForUserAsync(user: user, libraryId: libraryId)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func RequestAddFolderAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try _ifc.RequestAddFolderAsync();
+    }
+    public func RequestAddFolder() async throws -> Optional<Windows.Storage.StorageFolder> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Storage.StorageFolder(plok: self.RequestAddFolderAsync()!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func RequestRemoveFolderAsync(folder : Optional<Windows.Storage.StorageFolder>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try _ifc.RequestRemoveFolderAsync(folder: folder!.Interface());
+    }
+    public func RequestRemoveFolder(folder : Optional<Windows.Storage.StorageFolder>) async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.RequestRemoveFolderAsync(folder: folder)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_Folders() throws -> Optional<ClosedGenerics.IObservableVector_1__q_CWindows_CStorage_CStorageFolder> {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try _ifc.get_Folders();
+    }
+    public func get_SaveFolder() throws -> Optional<Windows.Storage.StorageFolder> {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.get_SaveFolder());
+    }
+    public func add_DefinitionChanged(handler : @escaping (Optional<Windows.Storage.StorageLibrary>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try _ifc.add_DefinitionChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(cb: handler).Interface());
+    }
+    public func remove_DefinitionChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try _ifc.remove_DefinitionChanged(eventCookie: eventCookie);
+    }
+    public var Folders : Optional<ClosedGenerics.IObservableVector_1__q_CWindows_CStorage_CStorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try _ifc.Folders;
+        }
+    }
+    public var SaveFolder : Optional<Windows.Storage.StorageFolder> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
+        return try Windows.Storage.StorageFolder(plok: _ifc.SaveFolder);
+        }
+    }
+    public func get_ChangeTracker() throws -> Optional<Windows.Storage.StorageLibraryChangeTracker> {
+        let _ifc : Windows.Storage.IStorageLibrary2 = try _self.QueryInterface();
+        return try Windows.Storage.StorageLibraryChangeTracker(plok: _ifc.get_ChangeTracker());
+    }
+    public var ChangeTracker : Optional<Windows.Storage.StorageLibraryChangeTracker> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibrary2 = try _self.QueryInterface();
+        return try Windows.Storage.StorageLibraryChangeTracker(plok: _ifc.ChangeTracker);
+        }
+    }
+    public func AreFolderSuggestionsAvailableAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.IStorageLibrary3 = try _self.QueryInterface();
+        return try _ifc.AreFolderSuggestionsAvailableAsync();
+    }
+    public func AreFolderSuggestionsAvailable() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.AreFolderSuggestionsAvailableAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
+// type: Windows.Storage.StorageLibraryChange
+// runtime class
+public class StorageLibraryChange
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageLibraryChange;
+    public init(plok: Windows.Storage.IStorageLibraryChange?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageLibraryChange { return _self; }
+    public func get_ChangeType() throws -> Windows.Storage.StorageLibraryChangeType {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.get_ChangeType();
+    }
+    public func get_Path() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.get_Path();
+    }
+    public func get_PreviousPath() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.get_PreviousPath();
+    }
+    public func IsOfType(type : Windows.Storage.StorageItemTypes) throws -> boolean {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.IsOfType(type: type);
+    }
+    public func GetStorageItemAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.GetStorageItemAsync();
+    }
+    public func GetStorageItem() async throws -> Optional<Windows.Storage.IStorageItem> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetStorageItemAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var ChangeType : Windows.Storage.StorageLibraryChangeType {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.ChangeType;
+        }
+    }
+    public var Path : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.Path;
+        }
+    }
+    public var PreviousPath : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibraryChange = try _self.QueryInterface();
+        return try _ifc.PreviousPath;
+        }
+    }
+}
+
+// type: Windows.Storage.StorageLibraryChangeReader
+// runtime class
+public class StorageLibraryChangeReader
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageLibraryChangeReader;
+    public init(plok: Windows.Storage.IStorageLibraryChangeReader?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageLibraryChangeReader { return _self; }
+    public func ReadBatchAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange> {
+        let _ifc : Windows.Storage.IStorageLibraryChangeReader = try _self.QueryInterface();
+        return try _ifc.ReadBatchAsync();
+    }
+    public func ReadBatch() async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.ReadBatchAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func AcceptChangesAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageLibraryChangeReader = try _self.QueryInterface();
+        return try _ifc.AcceptChangesAsync();
+    }
+    public func AcceptChanges() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.AcceptChangesAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func GetLastChangeId() throws -> Swift.UInt64 {
+        let _ifc : Windows.Storage.IStorageLibraryChangeReader2 = try _self.QueryInterface();
+        return try _ifc.GetLastChangeId();
+    }
+}
+
+// type: Windows.Storage.StorageLibraryChangeTracker
+// runtime class
+public class StorageLibraryChangeTracker
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageLibraryChangeTracker;
+    public init(plok: Windows.Storage.IStorageLibraryChangeTracker?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageLibraryChangeTracker { return _self; }
+    public func GetChangeReader() throws -> Optional<Windows.Storage.StorageLibraryChangeReader> {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTracker = try _self.QueryInterface();
+        return try Windows.Storage.StorageLibraryChangeReader(plok: _ifc.GetChangeReader());
+    }
+    public func Enable() throws -> Void {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTracker = try _self.QueryInterface();
+        return try _ifc.Enable();
+    }
+    public func Reset() throws -> Void {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTracker = try _self.QueryInterface();
+        return try _ifc.Reset();
+    }
+    public func Enable(options : Optional<Windows.Storage.StorageLibraryChangeTrackerOptions>) throws -> Void {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTracker2 = try _self.QueryInterface();
+        return try _ifc.EnableWithOptions(options: options!.Interface());
+    }
+    public func Disable() throws -> Void {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTracker2 = try _self.QueryInterface();
+        return try _ifc.Disable();
+    }
+}
+
+// type: Windows.Storage.StorageLibraryChangeTrackerOptions
+// runtime class
+public class StorageLibraryChangeTrackerOptions
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageLibraryChangeTrackerOptions;
+    public init(plok: Windows.Storage.IStorageLibraryChangeTrackerOptions?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageLibraryChangeTrackerOptions { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Windows.Storage.StorageLibraryChangeTrackerOptions")
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func get_TrackChangeDetails() throws -> boolean {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTrackerOptions = try _self.QueryInterface();
+        return try _ifc.get_TrackChangeDetails();
+    }
+    public func put_TrackChangeDetails(value : boolean) throws -> Void {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTrackerOptions = try _self.QueryInterface();
+        return try _ifc.put_TrackChangeDetails(value: value);
+    }
+    public var TrackChangeDetails : boolean {
+        get throws {
+        let _ifc : Windows.Storage.IStorageLibraryChangeTrackerOptions = try _self.QueryInterface();
+        return try _ifc.TrackChangeDetails;
+        }
+    }
+}
+
+// type: Windows.Storage.StorageLibraryChangeType
+// enum type
+public typealias StorageLibraryChangeType = _q_CWindows_CStorage_CStorageLibraryChangeType;
+
+// type: Windows.Storage.StorageLibraryLastChangeId
+// runtime class
+public class StorageLibraryLastChangeId
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageLibraryLastChangeId;
+    public init(plok: Windows.Storage.IStorageLibraryLastChangeId?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageLibraryLastChangeId { return _self; }
+    private struct _IStorageLibraryLastChangeIdStatics {
+        static var x : IStorageLibraryLastChangeIdStatics =
+            try! RoGetActivationFactory("Windows.Storage.StorageLibraryLastChangeId")
+    }
+    public static var StorageLibraryLastChangeIdStatics : IStorageLibraryLastChangeIdStatics {
+        _IStorageLibraryLastChangeIdStatics.x
+    }
+    public static func get_Unknown() throws -> Swift.UInt64 {
+        return try StorageLibraryLastChangeIdStatics.get_Unknown();
+    }
+    public static var Unknown : Swift.UInt64 {
+        get throws {
+        return try StorageLibraryLastChangeIdStatics.Unknown;
+        }
+    }
+}
+
+// type: Windows.Storage.StorageOpenOptions
+// enum type
+public typealias StorageOpenOptions = _q_CWindows_CStorage_CStorageOpenOptions;
+
+// type: Windows.Storage.StorageProvider
+// runtime class
+public class StorageProvider
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageProvider;
+    public init(plok: Windows.Storage.IStorageProvider?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageProvider { return _self; }
+    public func get_Id() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageProvider = try _self.QueryInterface();
+        return try _ifc.get_Id();
+    }
+    public func get_DisplayName() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IStorageProvider = try _self.QueryInterface();
+        return try _ifc.get_DisplayName();
+    }
+    public var DisplayName : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageProvider = try _self.QueryInterface();
+        return try _ifc.DisplayName;
+        }
+    }
+    public var Id : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageProvider = try _self.QueryInterface();
+        return try _ifc.Id;
+        }
+    }
+    public func IsPropertySupportedForPartialFileAsync(propertyCanonicalName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.IStorageProvider2 = try _self.QueryInterface();
+        return try _ifc.IsPropertySupportedForPartialFileAsync(propertyCanonicalName: propertyCanonicalName);
+    }
+    public func IsPropertySupportedForPartialFile(propertyCanonicalName : Swift.String) async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.IsPropertySupportedForPartialFileAsync(propertyCanonicalName: propertyCanonicalName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+}
+
+// type: Windows.Storage.StorageStreamTransaction
+// runtime class
+public class StorageStreamTransaction
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IStorageStreamTransaction;
+    public init(plok: Windows.Storage.IStorageStreamTransaction?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IStorageStreamTransaction { return _self; }
+    public func get_Stream() throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        let _ifc : Windows.Storage.IStorageStreamTransaction = try _self.QueryInterface();
+        return try _ifc.get_Stream();
+    }
+    public func CommitAsync() throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let _ifc : Windows.Storage.IStorageStreamTransaction = try _self.QueryInterface();
+        return try _ifc.CommitAsync();
+    }
+    public func Commit() async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.CommitAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public var Stream : Optional<Windows.Storage.Streams.IRandomAccessStream> {
+        get throws {
+        let _ifc : Windows.Storage.IStorageStreamTransaction = try _self.QueryInterface();
+        return try _ifc.Stream;
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Storage.StreamedFileDataRequest
+// runtime class
+public class StreamedFileDataRequest
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.Streams.IOutputStream;
+    public init(plok: Windows.Storage.Streams.IOutputStream?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.Streams.IOutputStream { return _self; }
+    public func WriteAsync(buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.WriteAsync(buffer: buffer);
+    }
+    public func Write(buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Swift.UInt32 {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.WriteAsync(buffer: buffer)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func FlushAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Windows.Storage.Streams.IOutputStream = try _self.QueryInterface();
+        return try _ifc.FlushAsync();
+    }
+    public func Flush() async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.FlushAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+    public func FailAndClose(failureMode : Windows.Storage.StreamedFileFailureMode) throws -> Void {
+        let _ifc : Windows.Storage.IStreamedFileDataRequest = try _self.QueryInterface();
+        return try _ifc.FailAndClose(failureMode: failureMode);
+    }
+}
+
+// type: Windows.Storage.StreamedFileDataRequestedHandler
+// delegate type
+open class IStreamedFileDataRequestedHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfef6a824, Data2: 0x2fe1, Data3 : 0x4d07, Data4 : (0xa3, 0x5b, 0xb7, 0x7c, 0x50, 0xb5, 0xf4, 0xcc)) }
+    // [IsSpecialName] void Invoke(Windows.Storage.StreamedFileDataRequest)
+    private func _n_Invoke(_ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>) throws {
+        return try perform(as: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, stream))
+        }
+    }
+    public func Invoke(stream : Optional<Windows.Storage.Streams.IOutputStream>) throws -> Void {
+        try self._n_Invoke(RawPointer(stream));
+    }
+}
+// impl delegate type
+open class StreamedFileDataRequestedHandler
+{
+    private static var vtable: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Windows.Storage.IStreamedFileDataRequestedHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>) in
+        guard let self = StreamedFileDataRequestedHandler.from_StreamedFileDataRequestedHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(stream: Windows.Storage.StreamedFileDataRequest(plok: Windows.Storage.Streams.IOutputStream(stream)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: StreamedFileDataRequestedHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void>
+    public init(cb : Optional<(Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_StreamedFileDataRequestedHandler(_ pUnk: UnsafeMutableRawPointer?) -> StreamedFileDataRequestedHandler? {
+        return pUnk?.bindMemory(to: StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(stream : Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void {
+        if let cb = _cb {
+            return try cb(stream)
+        }
+    }
+    public func Interface() -> Windows.Storage.IStreamedFileDataRequestedHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Windows.Storage.IStreamedFileDataRequestedHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_StreamedFileDataRequestedHandler
+{
+    private var _self : Windows.Storage.IStreamedFileDataRequestedHandler;
+    public init(plok: Windows.Storage.IStreamedFileDataRequestedHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(stream : Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void {
+        return try _self.Invoke(stream: stream!.Interface());
+    }
+    public func Interface() -> Windows.Storage.IStreamedFileDataRequestedHandler {
+        return _self
+    }
+}
+
+// type: Windows.Storage.StreamedFileFailureMode
+// enum type
+public typealias StreamedFileFailureMode = _q_CWindows_CStorage_CStreamedFileFailureMode;
+
+// type: Windows.Storage.SystemAudioProperties
+// runtime class
+public class SystemAudioProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemAudioProperties;
+    public init(plok: Windows.Storage.ISystemAudioProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemAudioProperties { return _self; }
+    public func get_EncodingBitrate() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemAudioProperties = try _self.QueryInterface();
+        return try _ifc.get_EncodingBitrate();
+    }
+    public var EncodingBitrate : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemAudioProperties = try _self.QueryInterface();
+        return try _ifc.EncodingBitrate;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemDataPaths
+// runtime class
+public class SystemDataPaths
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemDataPaths;
+    public init(plok: Windows.Storage.ISystemDataPaths?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemDataPaths { return _self; }
+    private struct _ISystemDataPathsStatics {
+        static var x : ISystemDataPathsStatics =
+            try! RoGetActivationFactory("Windows.Storage.SystemDataPaths")
+    }
+    public static var SystemDataPathsStatics : ISystemDataPathsStatics {
+        _ISystemDataPathsStatics.x
+    }
+    public static func GetDefault() throws -> Optional<Windows.Storage.SystemDataPaths> {
+        return try Windows.Storage.SystemDataPaths(plok: SystemDataPathsStatics.GetDefault());
+    }
+    public func get_Fonts() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Fonts();
+    }
+    public func get_ProgramData() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_ProgramData();
+    }
+    public func get_Public() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Public();
+    }
+    public func get_PublicDesktop() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_PublicDesktop();
+    }
+    public func get_PublicDocuments() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_PublicDocuments();
+    }
+    public func get_PublicDownloads() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_PublicDownloads();
+    }
+    public func get_PublicMusic() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_PublicMusic();
+    }
+    public func get_PublicPictures() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_PublicPictures();
+    }
+    public func get_PublicVideos() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_PublicVideos();
+    }
+    public func get_System() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_System();
+    }
+    public func get_SystemHost() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_SystemHost();
+    }
+    public func get_SystemX86() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_SystemX86();
+    }
+    public func get_SystemX64() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_SystemX64();
+    }
+    public func get_SystemArm() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_SystemArm();
+    }
+    public func get_UserProfiles() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_UserProfiles();
+    }
+    public func get_Windows() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Windows();
+    }
+    public var Fonts : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.Fonts;
+        }
+    }
+    public var ProgramData : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.ProgramData;
+        }
+    }
+    public var Public : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.Public;
+        }
+    }
+    public var PublicDesktop : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.PublicDesktop;
+        }
+    }
+    public var PublicDocuments : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.PublicDocuments;
+        }
+    }
+    public var PublicDownloads : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.PublicDownloads;
+        }
+    }
+    public var PublicMusic : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.PublicMusic;
+        }
+    }
+    public var PublicPictures : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.PublicPictures;
+        }
+    }
+    public var PublicVideos : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.PublicVideos;
+        }
+    }
+    public var System : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.System;
+        }
+    }
+    public var SystemArm : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.SystemArm;
+        }
+    }
+    public var SystemHost : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.SystemHost;
+        }
+    }
+    public var SystemX64 : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.SystemX64;
+        }
+    }
+    public var SystemX86 : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.SystemX86;
+        }
+    }
+    public var UserProfiles : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.UserProfiles;
+        }
+    }
+    public var Wyndows : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemDataPaths = try _self.QueryInterface();
+        return try _ifc.Windows;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemGPSProperties
+// runtime class
+public class SystemGPSProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemGPSProperties;
+    public init(plok: Windows.Storage.ISystemGPSProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemGPSProperties { return _self; }
+    public func get_LatitudeDecimal() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemGPSProperties = try _self.QueryInterface();
+        return try _ifc.get_LatitudeDecimal();
+    }
+    public func get_LongitudeDecimal() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemGPSProperties = try _self.QueryInterface();
+        return try _ifc.get_LongitudeDecimal();
+    }
+    public var LatitudeDecimal : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemGPSProperties = try _self.QueryInterface();
+        return try _ifc.LatitudeDecimal;
+        }
+    }
+    public var LongitudeDecimal : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemGPSProperties = try _self.QueryInterface();
+        return try _ifc.LongitudeDecimal;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemImageProperties
+// runtime class
+public class SystemImageProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemImageProperties;
+    public init(plok: Windows.Storage.ISystemImageProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemImageProperties { return _self; }
+    public func get_HorizontalSize() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemImageProperties = try _self.QueryInterface();
+        return try _ifc.get_HorizontalSize();
+    }
+    public func get_VerticalSize() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemImageProperties = try _self.QueryInterface();
+        return try _ifc.get_VerticalSize();
+    }
+    public var HorizontalSize : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemImageProperties = try _self.QueryInterface();
+        return try _ifc.HorizontalSize;
+        }
+    }
+    public var VerticalSize : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemImageProperties = try _self.QueryInterface();
+        return try _ifc.VerticalSize;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemMediaProperties
+// runtime class
+public class SystemMediaProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemMediaProperties;
+    public init(plok: Windows.Storage.ISystemMediaProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemMediaProperties { return _self; }
+    public func get_Duration() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.get_Duration();
+    }
+    public func get_Producer() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.get_Producer();
+    }
+    public func get_Publisher() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.get_Publisher();
+    }
+    public func get_SubTitle() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.get_SubTitle();
+    }
+    public func get_Writer() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.get_Writer();
+    }
+    public func get_Year() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.get_Year();
+    }
+    public var Duration : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.Duration;
+        }
+    }
+    public var Producer : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.Producer;
+        }
+    }
+    public var Publisher : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.Publisher;
+        }
+    }
+    public var SubTitle : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.SubTitle;
+        }
+    }
+    public var Writer : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.Writer;
+        }
+    }
+    public var Year : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMediaProperties = try _self.QueryInterface();
+        return try _ifc.Year;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemMusicProperties
+// runtime class
+public class SystemMusicProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemMusicProperties;
+    public init(plok: Windows.Storage.ISystemMusicProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemMusicProperties { return _self; }
+    public func get_AlbumArtist() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_AlbumArtist();
+    }
+    public func get_AlbumTitle() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_AlbumTitle();
+    }
+    public func get_Artist() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_Artist();
+    }
+    public func get_Composer() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_Composer();
+    }
+    public func get_Conductor() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_Conductor();
+    }
+    public func get_DisplayArtist() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_DisplayArtist();
+    }
+    public func get_Genre() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_Genre();
+    }
+    public func get_TrackNumber() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.get_TrackNumber();
+    }
+    public var AlbumArtist : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.AlbumArtist;
+        }
+    }
+    public var AlbumTitle : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.AlbumTitle;
+        }
+    }
+    public var Artist : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.Artist;
+        }
+    }
+    public var Composer : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.Composer;
+        }
+    }
+    public var Conductor : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.Conductor;
+        }
+    }
+    public var DisplayArtist : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.DisplayArtist;
+        }
+    }
+    public var Genre : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.Genre;
+        }
+    }
+    public var TrackNumber : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemMusicProperties = try _self.QueryInterface();
+        return try _ifc.TrackNumber;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemPhotoProperties
+// runtime class
+public class SystemPhotoProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemPhotoProperties;
+    public init(plok: Windows.Storage.ISystemPhotoProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemPhotoProperties { return _self; }
+    public func get_CameraManufacturer() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.get_CameraManufacturer();
+    }
+    public func get_CameraModel() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.get_CameraModel();
+    }
+    public func get_DateTaken() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.get_DateTaken();
+    }
+    public func get_Orientation() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.get_Orientation();
+    }
+    public func get_PeopleNames() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.get_PeopleNames();
+    }
+    public var CameraManufacturer : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.CameraManufacturer;
+        }
+    }
+    public var CameraModel : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.CameraModel;
+        }
+    }
+    public var DateTaken : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.DateTaken;
+        }
+    }
+    public var Orientation : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.Orientation;
+        }
+    }
+    public var PeopleNames : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemPhotoProperties = try _self.QueryInterface();
+        return try _ifc.PeopleNames;
+        }
+    }
+}
+
+// type: Windows.Storage.SystemVideoProperties
+// runtime class
+public class SystemVideoProperties
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.ISystemVideoProperties;
+    public init(plok: Windows.Storage.ISystemVideoProperties?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.ISystemVideoProperties { return _self; }
+    public func get_Director() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.get_Director();
+    }
+    public func get_FrameHeight() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.get_FrameHeight();
+    }
+    public func get_FrameWidth() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.get_FrameWidth();
+    }
+    public func get_Orientation() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.get_Orientation();
+    }
+    public func get_TotalBitrate() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.get_TotalBitrate();
+    }
+    public var Director : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.Director;
+        }
+    }
+    public var FrameHeight : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.FrameHeight;
+        }
+    }
+    public var FrameWidth : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.FrameWidth;
+        }
+    }
+    public var Orientation : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.Orientation;
+        }
+    }
+    public var TotalBitrate : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.ISystemVideoProperties = try _self.QueryInterface();
+        return try _ifc.TotalBitrate;
+        }
+    }
+}
+
+// type: Windows.Storage.UserDataPaths
+// runtime class
+public class UserDataPaths
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Storage.IUserDataPaths;
+    public init(plok: Windows.Storage.IUserDataPaths?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Storage.IUserDataPaths { return _self; }
+    private struct _IUserDataPathsStatics {
+        static var x : IUserDataPathsStatics =
+            try! RoGetActivationFactory("Windows.Storage.UserDataPaths")
+    }
+    public static var UserDataPathsStatics : IUserDataPathsStatics {
+        _IUserDataPathsStatics.x
+    }
+    public static func GetForUser(user : Optional<Windows.System.User>) throws -> Optional<Windows.Storage.UserDataPaths> {
+        return try Windows.Storage.UserDataPaths(plok: UserDataPathsStatics.GetForUser(user: user!.Interface()));
+    }
+    public static func GetDefault() throws -> Optional<Windows.Storage.UserDataPaths> {
+        return try Windows.Storage.UserDataPaths(plok: UserDataPathsStatics.GetDefault());
+    }
+    public func get_CameraRoll() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_CameraRoll();
+    }
+    public func get_Cookies() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Cookies();
+    }
+    public func get_Desktop() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Desktop();
+    }
+    public func get_Documents() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Documents();
+    }
+    public func get_Downloads() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Downloads();
+    }
+    public func get_Favorites() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Favorites();
+    }
+    public func get_History() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_History();
+    }
+    public func get_InternetCache() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_InternetCache();
+    }
+    public func get_LocalAppData() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_LocalAppData();
+    }
+    public func get_LocalAppDataLow() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_LocalAppDataLow();
+    }
+    public func get_Music() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Music();
+    }
+    public func get_Pictures() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Pictures();
+    }
+    public func get_Profile() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Profile();
+    }
+    public func get_Recent() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Recent();
+    }
+    public func get_RoamingAppData() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_RoamingAppData();
+    }
+    public func get_SavedPictures() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_SavedPictures();
+    }
+    public func get_Screenshots() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Screenshots();
+    }
+    public func get_Templates() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Templates();
+    }
+    public func get_Videos() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.get_Videos();
+    }
+    public var CameraRoll : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.CameraRoll;
+        }
+    }
+    public var Cookies : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Cookies;
+        }
+    }
+    public var Desktop : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Desktop;
+        }
+    }
+    public var Documents : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Documents;
+        }
+    }
+    public var Downloads : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Downloads;
+        }
+    }
+    public var Favorites : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Favorites;
+        }
+    }
+    public var History : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.History;
+        }
+    }
+    public var InternetCache : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.InternetCache;
+        }
+    }
+    public var LocalAppData : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.LocalAppData;
+        }
+    }
+    public var LocalAppDataLow : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.LocalAppDataLow;
+        }
+    }
+    public var Music : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Music;
+        }
+    }
+    public var Pictures : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Pictures;
+        }
+    }
+    public var Profile : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Profile;
+        }
+    }
+    public var Recent : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Recent;
+        }
+    }
+    public var RoamingAppData : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.RoamingAppData;
+        }
+    }
+    public var SavedPictures : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.SavedPictures;
+        }
+    }
+    public var Screenshots : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Screenshots;
+        }
+    }
+    public var Templates : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Templates;
+        }
+    }
+    public var Videos : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Storage.IUserDataPaths = try _self.QueryInterface();
+        return try _ifc.Videos;
+        }
+    }
+}
+
+}
+extension Windows.Storage.ApplicationDataCreateDisposition {
+    public static var Always : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataCreateDisposition_Always;
+        }
+    }
+    public static var Existing : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataCreateDisposition_Existing;
+        }
+    }
+}
+extension Windows.Storage.ApplicationDataLocality {
+    public static var Local : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataLocality_Local;
+        }
+    }
+    public static var Roaming : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataLocality_Roaming;
+        }
+    }
+    public static var Temporary : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataLocality_Temporary;
+        }
+    }
+    public static var LocalCache : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataLocality_LocalCache;
+        }
+    }
+    public static var SharedLocal : Self {
+        get {
+            return _q_CWindows_CStorage_CApplicationDataLocality_SharedLocal;
+        }
+    }
+}
+extension Windows.Storage.CreationCollisionOption {
+    public static var GenerateUniqueName : Self {
+        get {
+            return _q_CWindows_CStorage_CCreationCollisionOption_GenerateUniqueName;
+        }
+    }
+    public static var ReplaceExisting : Self {
+        get {
+            return _q_CWindows_CStorage_CCreationCollisionOption_ReplaceExisting;
+        }
+    }
+    public static var FailIfExists : Self {
+        get {
+            return _q_CWindows_CStorage_CCreationCollisionOption_FailIfExists;
+        }
+    }
+    public static var OpenIfExists : Self {
+        get {
+            return _q_CWindows_CStorage_CCreationCollisionOption_OpenIfExists;
+        }
+    }
+}
+extension Windows.Storage.FileAccessMode {
+    public static var Read : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAccessMode_Read;
+        }
+    }
+    public static var ReadWrite : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAccessMode_ReadWrite;
+        }
+    }
+}
+extension Windows.Storage.FileAttributes {
+    public static var Normal : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAttributes_Normal;
+        }
+    }
+    public static var ReadOnly : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAttributes_ReadOnly;
+        }
+    }
+    public static var Directory : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAttributes_Directory;
+        }
+    }
+    public static var Archive : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAttributes_Archive;
+        }
+    }
+    public static var Temporary : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAttributes_Temporary;
+        }
+    }
+    public static var LocallyIncomplete : Self {
+        get {
+            return _q_CWindows_CStorage_CFileAttributes_LocallyIncomplete;
+        }
+    }
+}
+extension Windows.Storage.KnownLibraryId {
+    public static var Music : Self {
+        get {
+            return _q_CWindows_CStorage_CKnownLibraryId_Music;
+        }
+    }
+    public static var Pictures : Self {
+        get {
+            return _q_CWindows_CStorage_CKnownLibraryId_Pictures;
+        }
+    }
+    public static var Videos : Self {
+        get {
+            return _q_CWindows_CStorage_CKnownLibraryId_Videos;
+        }
+    }
+    public static var Documents : Self {
+        get {
+            return _q_CWindows_CStorage_CKnownLibraryId_Documents;
+        }
+    }
+}
+extension Windows.Storage.NameCollisionOption {
+    public static var GenerateUniqueName : Self {
+        get {
+            return _q_CWindows_CStorage_CNameCollisionOption_GenerateUniqueName;
+        }
+    }
+    public static var ReplaceExisting : Self {
+        get {
+            return _q_CWindows_CStorage_CNameCollisionOption_ReplaceExisting;
+        }
+    }
+    public static var FailIfExists : Self {
+        get {
+            return _q_CWindows_CStorage_CNameCollisionOption_FailIfExists;
+        }
+    }
+}
+extension Windows.Storage.StorageDeleteOption {
+    public static var Default : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageDeleteOption_Default;
+        }
+    }
+    public static var PermanentDelete : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageDeleteOption_PermanentDelete;
+        }
+    }
+}
+extension Windows.Storage.StorageItemTypes {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageItemTypes_None;
+        }
+    }
+    public static var File : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageItemTypes_File;
+        }
+    }
+    public static var Folder : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageItemTypes_Folder;
+        }
+    }
+}
+extension Windows.Storage.StorageLibraryChangeType {
+    public static var Created : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_Created;
+        }
+    }
+    public static var Deleted : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_Deleted;
+        }
+    }
+    public static var MovedOrRenamed : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_MovedOrRenamed;
+        }
+    }
+    public static var ContentsChanged : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_ContentsChanged;
+        }
+    }
+    public static var MovedOutOfLibrary : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_MovedOutOfLibrary;
+        }
+    }
+    public static var MovedIntoLibrary : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_MovedIntoLibrary;
+        }
+    }
+    public static var ContentsReplaced : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_ContentsReplaced;
+        }
+    }
+    public static var IndexingStatusChanged : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_IndexingStatusChanged;
+        }
+    }
+    public static var EncryptionChanged : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_EncryptionChanged;
+        }
+    }
+    public static var ChangeTrackingLost : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageLibraryChangeType_ChangeTrackingLost;
+        }
+    }
+}
+extension Windows.Storage.StorageOpenOptions {
+    public static var None : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageOpenOptions_None;
+        }
+    }
+    public static var AllowOnlyReaders : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageOpenOptions_AllowOnlyReaders;
+        }
+    }
+    public static var AllowReadersAndWriters : Self {
+        get {
+            return _q_CWindows_CStorage_CStorageOpenOptions_AllowReadersAndWriters;
+        }
+    }
+}
+extension Windows.Storage.StreamedFileFailureMode {
+    public static var Failed : Self {
+        get {
+            return _q_CWindows_CStorage_CStreamedFileFailureMode_Failed;
+        }
+    }
+    public static var CurrentlyUnavailable : Self {
+        get {
+            return _q_CWindows_CStorage_CStreamedFileFailureMode_CurrentlyUnavailable;
+        }
+    }
+    public static var Incomplete : Self {
+        get {
+            return _q_CWindows_CStorage_CStreamedFileFailureMode_Incomplete;
+        }
+    }
 }

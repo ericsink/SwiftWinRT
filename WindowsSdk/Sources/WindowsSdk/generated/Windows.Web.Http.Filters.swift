@@ -7,6 +7,843 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.Web.Http.Filters {
+// type: Windows.Web.Http.Filters.HttpBaseProtocolFilter
+// runtime class
+public class HttpBaseProtocolFilter
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Web.Http.Filters.IHttpBaseProtocolFilter;
+    public init(plok: Windows.Web.Http.Filters.IHttpBaseProtocolFilter?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Web.Http.Filters.IHttpBaseProtocolFilter { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Windows.Web.Http.Filters.HttpBaseProtocolFilter")
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IHttpBaseProtocolFilterStatics {
+        static var x : IHttpBaseProtocolFilterStatics =
+            try! RoGetActivationFactory("Windows.Web.Http.Filters.HttpBaseProtocolFilter")
+    }
+    public static var HttpBaseProtocolFilterStatics : IHttpBaseProtocolFilterStatics {
+        _IHttpBaseProtocolFilterStatics.x
+    }
+    public static func CreateForUser(user : Optional<Windows.System.User>) throws -> Optional<Windows.Web.Http.Filters.HttpBaseProtocolFilter> {
+        return try Windows.Web.Http.Filters.HttpBaseProtocolFilter(plok: HttpBaseProtocolFilterStatics.CreateForUser(user: user!.Interface()));
+    }
+    public func get_AllowAutoRedirect() throws -> boolean {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.get_AllowAutoRedirect();
+    }
+    public func put_AllowAutoRedirect(value : boolean) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_AllowAutoRedirect(value: value);
+    }
+    public func get_AllowUI() throws -> boolean {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.get_AllowUI();
+    }
+    public func put_AllowUI(value : boolean) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_AllowUI(value: value);
+    }
+    public func get_AutomaticDecompression() throws -> boolean {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.get_AutomaticDecompression();
+    }
+    public func put_AutomaticDecompression(value : boolean) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_AutomaticDecompression(value: value);
+    }
+    public func get_CacheControl() throws -> Optional<Windows.Web.Http.Filters.HttpCacheControl> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Web.Http.Filters.HttpCacheControl(plok: _ifc.get_CacheControl());
+    }
+    public func get_CookieManager() throws -> Optional<Windows.Web.Http.HttpCookieManager> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Web.Http.HttpCookieManager(plok: _ifc.get_CookieManager());
+    }
+    public func get_ClientCertificate() throws -> Optional<Windows.Security.Cryptography.Certificates.Certificate> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Security.Cryptography.Certificates.Certificate(plok: _ifc.get_ClientCertificate());
+    }
+    public func put_ClientCertificate(value : Optional<Windows.Security.Cryptography.Certificates.Certificate>) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_ClientCertificate(value: value!.Interface());
+    }
+    public func get_IgnorableServerCertificateErrors() throws -> Optional<ClosedGenerics.IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.get_IgnorableServerCertificateErrors();
+    }
+    public func get_MaxConnectionsPerServer() throws -> Swift.UInt32 {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.get_MaxConnectionsPerServer();
+    }
+    public func put_MaxConnectionsPerServer(value : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_MaxConnectionsPerServer(value: value);
+    }
+    public func get_ProxyCredential() throws -> Optional<Windows.Security.Credentials.PasswordCredential> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Security.Credentials.PasswordCredential(plok: _ifc.get_ProxyCredential());
+    }
+    public func put_ProxyCredential(value : Optional<Windows.Security.Credentials.PasswordCredential>) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_ProxyCredential(value: value!.Interface());
+    }
+    public func get_ServerCredential() throws -> Optional<Windows.Security.Credentials.PasswordCredential> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Security.Credentials.PasswordCredential(plok: _ifc.get_ServerCredential());
+    }
+    public func put_ServerCredential(value : Optional<Windows.Security.Credentials.PasswordCredential>) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_ServerCredential(value: value!.Interface());
+    }
+    public func get_UseProxy() throws -> boolean {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.get_UseProxy();
+    }
+    public func put_UseProxy(value : boolean) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.put_UseProxy(value: value);
+    }
+    public var AllowAutoRedirect : boolean {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.AllowAutoRedirect;
+        }
+    }
+    public var AllowUI : boolean {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.AllowUI;
+        }
+    }
+    public var AutomaticDecompression : boolean {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.AutomaticDecompression;
+        }
+    }
+    public var CacheControl : Optional<Windows.Web.Http.Filters.HttpCacheControl> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Web.Http.Filters.HttpCacheControl(plok: _ifc.CacheControl);
+        }
+    }
+    public var ClientCertificate : Optional<Windows.Security.Cryptography.Certificates.Certificate> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Security.Cryptography.Certificates.Certificate(plok: _ifc.ClientCertificate);
+        }
+    }
+    public var CookieManager : Optional<Windows.Web.Http.HttpCookieManager> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Web.Http.HttpCookieManager(plok: _ifc.CookieManager);
+        }
+    }
+    public var IgnorableServerCertificateErrors : Optional<ClosedGenerics.IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.IgnorableServerCertificateErrors;
+        }
+    }
+    public var MaxConnectionsPerServer : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.MaxConnectionsPerServer;
+        }
+    }
+    public var ProxyCredential : Optional<Windows.Security.Credentials.PasswordCredential> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Security.Credentials.PasswordCredential(plok: _ifc.ProxyCredential);
+        }
+    }
+    public var ServerCredential : Optional<Windows.Security.Credentials.PasswordCredential> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try Windows.Security.Credentials.PasswordCredential(plok: _ifc.ServerCredential);
+        }
+    }
+    public var UseProxy : boolean {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter = try _self.QueryInterface();
+        return try _ifc.UseProxy;
+        }
+    }
+    public func get_MaxVersion() throws -> Windows.Web.Http.HttpVersion {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter2 = try _self.QueryInterface();
+        return try _ifc.get_MaxVersion();
+    }
+    public func put_MaxVersion(value : Windows.Web.Http.HttpVersion) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter2 = try _self.QueryInterface();
+        return try _ifc.put_MaxVersion(value: value);
+    }
+    public var MaxVersion : Windows.Web.Http.HttpVersion {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter2 = try _self.QueryInterface();
+        return try _ifc.MaxVersion;
+        }
+    }
+    public func get_CookieUsageBehavior() throws -> Windows.Web.Http.Filters.HttpCookieUsageBehavior {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter3 = try _self.QueryInterface();
+        return try _ifc.get_CookieUsageBehavior();
+    }
+    public func put_CookieUsageBehavior(value : Windows.Web.Http.Filters.HttpCookieUsageBehavior) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter3 = try _self.QueryInterface();
+        return try _ifc.put_CookieUsageBehavior(value: value);
+    }
+    public var CookieUsageBehavior : Windows.Web.Http.Filters.HttpCookieUsageBehavior {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter3 = try _self.QueryInterface();
+        return try _ifc.CookieUsageBehavior;
+        }
+    }
+    public func add_ServerCustomValidationRequested(handler : @escaping (Optional<Windows.Web.Http.Filters.HttpBaseProtocolFilter>, Optional<Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 = try _self.QueryInterface();
+        return try _ifc.add_ServerCustomValidationRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(cb: handler).Interface());
+    }
+    public func remove_ServerCustomValidationRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 = try _self.QueryInterface();
+        return try _ifc.remove_ServerCustomValidationRequested(token: token);
+    }
+    public func ClearAuthenticationCache() throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 = try _self.QueryInterface();
+        return try _ifc.ClearAuthenticationCache();
+    }
+    public func get_User() throws -> Optional<Windows.System.User> {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter5 = try _self.QueryInterface();
+        return try Windows.System.User(plok: _ifc.get_User());
+    }
+    public var User : Optional<Windows.System.User> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter5 = try _self.QueryInterface();
+        return try Windows.System.User(plok: _ifc.User);
+        }
+    }
+    public func SendRequestAsync(request : Optional<Windows.Web.Http.HttpRequestMessage>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
+        let _ifc : Windows.Web.Http.Filters.IHttpFilter = try _self.QueryInterface();
+        return try _ifc.SendRequestAsync(request: request!.Interface());
+    }
+    public func SendRequest(request : Optional<Windows.Web.Http.HttpRequestMessage>) async throws -> Optional<Windows.Web.Http.HttpResponseMessage> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Windows.Web.Http.HttpResponseMessage(plok: self.SendRequestAsync(request: request)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Web.Http.Filters.HttpCacheControl
+// runtime class
+public class HttpCacheControl
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Web.Http.Filters.IHttpCacheControl;
+    public init(plok: Windows.Web.Http.Filters.IHttpCacheControl?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Web.Http.Filters.IHttpCacheControl { return _self; }
+    public func get_ReadBehavior() throws -> Windows.Web.Http.Filters.HttpCacheReadBehavior {
+        let _ifc : Windows.Web.Http.Filters.IHttpCacheControl = try _self.QueryInterface();
+        return try _ifc.get_ReadBehavior();
+    }
+    public func put_ReadBehavior(value : Windows.Web.Http.Filters.HttpCacheReadBehavior) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpCacheControl = try _self.QueryInterface();
+        return try _ifc.put_ReadBehavior(value: value);
+    }
+    public func get_WriteBehavior() throws -> Windows.Web.Http.Filters.HttpCacheWriteBehavior {
+        let _ifc : Windows.Web.Http.Filters.IHttpCacheControl = try _self.QueryInterface();
+        return try _ifc.get_WriteBehavior();
+    }
+    public func put_WriteBehavior(value : Windows.Web.Http.Filters.HttpCacheWriteBehavior) throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpCacheControl = try _self.QueryInterface();
+        return try _ifc.put_WriteBehavior(value: value);
+    }
+    public var ReadBehavior : Windows.Web.Http.Filters.HttpCacheReadBehavior {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpCacheControl = try _self.QueryInterface();
+        return try _ifc.ReadBehavior;
+        }
+    }
+    public var WriteBehavior : Windows.Web.Http.Filters.HttpCacheWriteBehavior {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpCacheControl = try _self.QueryInterface();
+        return try _ifc.WriteBehavior;
+        }
+    }
+}
+
+// type: Windows.Web.Http.Filters.HttpCacheReadBehavior
+// enum type
+public typealias HttpCacheReadBehavior = _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior;
+
+// type: Windows.Web.Http.Filters.HttpCacheWriteBehavior
+// enum type
+public typealias HttpCacheWriteBehavior = _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior;
+
+// type: Windows.Web.Http.Filters.HttpCookieUsageBehavior
+// enum type
+public typealias HttpCookieUsageBehavior = _q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior;
+
+// type: Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs
+// runtime class
+public class HttpServerCustomValidationRequestedEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs;
+    public init(plok: Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs { return _self; }
+    public func get_RequestMessage() throws -> Optional<Windows.Web.Http.HttpRequestMessage> {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try Windows.Web.Http.HttpRequestMessage(plok: _ifc.get_RequestMessage());
+    }
+    public func get_ServerCertificate() throws -> Optional<Windows.Security.Cryptography.Certificates.Certificate> {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try Windows.Security.Cryptography.Certificates.Certificate(plok: _ifc.get_ServerCertificate());
+    }
+    public func get_ServerCertificateErrorSeverity() throws -> Windows.Networking.Sockets.SocketSslErrorSeverity {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_ServerCertificateErrorSeverity();
+    }
+    public func get_ServerCertificateErrors() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_ServerCertificateErrors();
+    }
+    public func get_ServerIntermediateCertificates() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate> {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.get_ServerIntermediateCertificates();
+    }
+    public func Reject() throws -> Void {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.Reject();
+    }
+    public func GetDeferral() throws -> Optional<Windows.Foundation.Deferral> {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try Windows.Foundation.Deferral(plok: _ifc.GetDeferral());
+    }
+    public var RequestMessage : Optional<Windows.Web.Http.HttpRequestMessage> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try Windows.Web.Http.HttpRequestMessage(plok: _ifc.RequestMessage);
+        }
+    }
+    public var ServerCertificate : Optional<Windows.Security.Cryptography.Certificates.Certificate> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try Windows.Security.Cryptography.Certificates.Certificate(plok: _ifc.ServerCertificate);
+        }
+    }
+    public var ServerCertificateErrorSeverity : Windows.Networking.Sockets.SocketSslErrorSeverity {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.ServerCertificateErrorSeverity;
+        }
+    }
+    public var ServerCertificateErrors : Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.ServerCertificateErrors;
+        }
+    }
+    public var ServerIntermediateCertificates : Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate> {
+        get throws {
+        let _ifc : Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs = try _self.QueryInterface();
+        return try _ifc.ServerIntermediateCertificates;
+        }
+    }
+}
+
+// type: Windows.Web.Http.Filters.IHttpBaseProtocolFilter
+// interface type
+open class IHttpBaseProtocolFilter
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x71c89b09, Data2: 0xe131, Data3 : 0x4b54, Data4 : (0xa5, 0x3c, 0xeb, 0x43, 0xff, 0x37, 0xe9, 0xbb)) }
+    // [IsSpecialName] bool get_AllowAutoRedirect()
+    private func _n_get_AllowAutoRedirect(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowAutoRedirect(pThis, __presult))
+        }
+    }
+    public func get_AllowAutoRedirect() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AllowAutoRedirect(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AllowAutoRedirect(bool)
+    private func _n_put_AllowAutoRedirect(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowAutoRedirect(pThis, value))
+        }
+    }
+    public func put_AllowAutoRedirect(value : boolean) throws -> Void {
+        try self._n_put_AllowAutoRedirect(value);
+    }
+    // [IsSpecialName] bool get_AllowUI()
+    private func _n_get_AllowUI(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AllowUI(pThis, __presult))
+        }
+    }
+    public func get_AllowUI() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AllowUI(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AllowUI(bool)
+    private func _n_put_AllowUI(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AllowUI(pThis, value))
+        }
+    }
+    public func put_AllowUI(value : boolean) throws -> Void {
+        try self._n_put_AllowUI(value);
+    }
+    // [IsSpecialName] bool get_AutomaticDecompression()
+    private func _n_get_AutomaticDecompression(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AutomaticDecompression(pThis, __presult))
+        }
+    }
+    public func get_AutomaticDecompression() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AutomaticDecompression(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AutomaticDecompression(bool)
+    private func _n_put_AutomaticDecompression(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AutomaticDecompression(pThis, value))
+        }
+    }
+    public func put_AutomaticDecompression(value : boolean) throws -> Void {
+        try self._n_put_AutomaticDecompression(value);
+    }
+    // [IsSpecialName] Windows.Web.Http.Filters.HttpCacheControl get_CacheControl()
+    private func _n_get_CacheControl(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CacheControl(pThis, __presult))
+        }
+    }
+    public func get_CacheControl() throws -> Optional<Windows.Web.Http.Filters.IHttpCacheControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl>> = nil;
+        try self._n_get_CacheControl(&__result);
+        return Windows.Web.Http.Filters.IHttpCacheControl(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Web.Http.HttpCookieManager get_CookieManager()
+    private func _n_get_CookieManager(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpCookieManager>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CookieManager(pThis, __presult))
+        }
+    }
+    public func get_CookieManager() throws -> Optional<Windows.Web.Http.IHttpCookieManager> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpCookieManager>> = nil;
+        try self._n_get_CookieManager(&__result);
+        return Windows.Web.Http.IHttpCookieManager(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Security.Cryptography.Certificates.Certificate get_ClientCertificate()
+    private func _n_get_ClientCertificate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCryptography_CCertificates_CICertificate>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClientCertificate(pThis, __presult))
+        }
+    }
+    public func get_ClientCertificate() throws -> Optional<Windows.Security.Cryptography.Certificates.ICertificate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCryptography_CCertificates_CICertificate>> = nil;
+        try self._n_get_ClientCertificate(&__result);
+        return Windows.Security.Cryptography.Certificates.ICertificate(consuming: __result);
+    }
+    // [IsSpecialName] void put_ClientCertificate(Windows.Security.Cryptography.Certificates.Certificate)
+    private func _n_put_ClientCertificate(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCryptography_CCertificates_CICertificate>>) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ClientCertificate(pThis, value))
+        }
+    }
+    public func put_ClientCertificate(value : Optional<Windows.Security.Cryptography.Certificates.ICertificate>) throws -> Void {
+        try self._n_put_ClientCertificate(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVector<Windows.Security.Cryptography.Certificates.ChainValidationResult> get_IgnorableServerCertificateErrors()
+    private func _n_get_IgnorableServerCertificateErrors(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IgnorableServerCertificateErrors(pThis, __presult))
+        }
+    }
+    public func get_IgnorableServerCertificateErrors() throws -> Optional<ClosedGenerics.IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult>> = nil;
+        try self._n_get_IgnorableServerCertificateErrors(&__result);
+        return ClosedGenerics.IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt32 get_MaxConnectionsPerServer()
+    private func _n_get_MaxConnectionsPerServer(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxConnectionsPerServer(pThis, __presult))
+        }
+    }
+    public func get_MaxConnectionsPerServer() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_MaxConnectionsPerServer(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaxConnectionsPerServer(System.UInt32)
+    private func _n_put_MaxConnectionsPerServer(_ value : UINT32) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxConnectionsPerServer(pThis, value))
+        }
+    }
+    public func put_MaxConnectionsPerServer(value : Swift.UInt32) throws -> Void {
+        try self._n_put_MaxConnectionsPerServer(value);
+    }
+    // [IsSpecialName] Windows.Security.Credentials.PasswordCredential get_ProxyCredential()
+    private func _n_get_ProxyCredential(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProxyCredential(pThis, __presult))
+        }
+    }
+    public func get_ProxyCredential() throws -> Optional<Windows.Security.Credentials.IPasswordCredential> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>> = nil;
+        try self._n_get_ProxyCredential(&__result);
+        return Windows.Security.Credentials.IPasswordCredential(consuming: __result);
+    }
+    // [IsSpecialName] void put_ProxyCredential(Windows.Security.Credentials.PasswordCredential)
+    private func _n_put_ProxyCredential(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>>) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProxyCredential(pThis, value))
+        }
+    }
+    public func put_ProxyCredential(value : Optional<Windows.Security.Credentials.IPasswordCredential>) throws -> Void {
+        try self._n_put_ProxyCredential(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Security.Credentials.PasswordCredential get_ServerCredential()
+    private func _n_get_ServerCredential(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ServerCredential(pThis, __presult))
+        }
+    }
+    public func get_ServerCredential() throws -> Optional<Windows.Security.Credentials.IPasswordCredential> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>> = nil;
+        try self._n_get_ServerCredential(&__result);
+        return Windows.Security.Credentials.IPasswordCredential(consuming: __result);
+    }
+    // [IsSpecialName] void put_ServerCredential(Windows.Security.Credentials.PasswordCredential)
+    private func _n_put_ServerCredential(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>>) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ServerCredential(pThis, value))
+        }
+    }
+    public func put_ServerCredential(value : Optional<Windows.Security.Credentials.IPasswordCredential>) throws -> Void {
+        try self._n_put_ServerCredential(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_UseProxy()
+    private func _n_get_UseProxy(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_UseProxy(pThis, __presult))
+        }
+    }
+    public func get_UseProxy() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_UseProxy(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_UseProxy(bool)
+    private func _n_put_UseProxy(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_UseProxy(pThis, value))
+        }
+    }
+    public func put_UseProxy(value : boolean) throws -> Void {
+        try self._n_put_UseProxy(value);
+    }
+    public var AllowAutoRedirect : boolean {
+        get throws {
+            return try get_AllowAutoRedirect();
+        }
+    }
+    public var AllowUI : boolean {
+        get throws {
+            return try get_AllowUI();
+        }
+    }
+    public var AutomaticDecompression : boolean {
+        get throws {
+            return try get_AutomaticDecompression();
+        }
+    }
+    public var CacheControl : Optional<Windows.Web.Http.Filters.IHttpCacheControl> {
+        get throws {
+            return try get_CacheControl();
+        }
+    }
+    public var ClientCertificate : Optional<Windows.Security.Cryptography.Certificates.ICertificate> {
+        get throws {
+            return try get_ClientCertificate();
+        }
+    }
+    public var CookieManager : Optional<Windows.Web.Http.IHttpCookieManager> {
+        get throws {
+            return try get_CookieManager();
+        }
+    }
+    public var IgnorableServerCertificateErrors : Optional<ClosedGenerics.IVector_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        get throws {
+            return try get_IgnorableServerCertificateErrors();
+        }
+    }
+    public var MaxConnectionsPerServer : Swift.UInt32 {
+        get throws {
+            return try get_MaxConnectionsPerServer();
+        }
+    }
+    public var ProxyCredential : Optional<Windows.Security.Credentials.IPasswordCredential> {
+        get throws {
+            return try get_ProxyCredential();
+        }
+    }
+    public var ServerCredential : Optional<Windows.Security.Credentials.IPasswordCredential> {
+        get throws {
+            return try get_ServerCredential();
+        }
+    }
+    public var UseProxy : boolean {
+        get throws {
+            return try get_UseProxy();
+        }
+    }
+} // IHttpBaseProtocolFilter
+
+
+// type: Windows.Web.Http.Filters.IHttpBaseProtocolFilter2
+// interface type
+open class IHttpBaseProtocolFilter2
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2ec30013, Data2: 0x9427, Data3 : 0x4900, Data4 : (0xa0, 0x17, 0xfa, 0x7d, 0xa3, 0xb5, 0xc9, 0xae)) }
+    // [IsSpecialName] Windows.Web.Http.HttpVersion get_MaxVersion()
+    private func _n_get_MaxVersion(_ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHttpVersion>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxVersion(pThis, __presult))
+        }
+    }
+    public func get_MaxVersion() throws -> Windows.Web.Http.HttpVersion {
+        var __result : _q_CWindows_CWeb_CHttp_CHttpVersion = _q_CWindows_CWeb_CHttp_CHttpVersion_None;
+        try self._n_get_MaxVersion(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaxVersion(Windows.Web.Http.HttpVersion)
+    private func _n_put_MaxVersion(_ value : _q_CWindows_CWeb_CHttp_CHttpVersion) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter2.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxVersion(pThis, value))
+        }
+    }
+    public func put_MaxVersion(value : Windows.Web.Http.HttpVersion) throws -> Void {
+        try self._n_put_MaxVersion(value);
+    }
+    public var MaxVersion : Windows.Web.Http.HttpVersion {
+        get throws {
+            return try get_MaxVersion();
+        }
+    }
+} // IHttpBaseProtocolFilter2
+
+
+// type: Windows.Web.Http.Filters.IHttpBaseProtocolFilter3
+// interface type
+open class IHttpBaseProtocolFilter3
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd43f4d4c, Data2: 0xbd42, Data3 : 0x43ae, Data4 : (0x87, 0x17, 0xad, 0x2c, 0x8f, 0x4b, 0x29, 0x37)) }
+    // [IsSpecialName] Windows.Web.Http.Filters.HttpCookieUsageBehavior get_CookieUsageBehavior()
+    private func _n_get_CookieUsageBehavior(_ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CookieUsageBehavior(pThis, __presult))
+        }
+    }
+    public func get_CookieUsageBehavior() throws -> Windows.Web.Http.Filters.HttpCookieUsageBehavior {
+        var __result : _q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior = _q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior_Default;
+        try self._n_get_CookieUsageBehavior(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CookieUsageBehavior(Windows.Web.Http.Filters.HttpCookieUsageBehavior)
+    private func _n_put_CookieUsageBehavior(_ value : _q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter3.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CookieUsageBehavior(pThis, value))
+        }
+    }
+    public func put_CookieUsageBehavior(value : Windows.Web.Http.Filters.HttpCookieUsageBehavior) throws -> Void {
+        try self._n_put_CookieUsageBehavior(value);
+    }
+    public var CookieUsageBehavior : Windows.Web.Http.Filters.HttpCookieUsageBehavior {
+        get throws {
+            return try get_CookieUsageBehavior();
+        }
+    }
+} // IHttpBaseProtocolFilter3
+
+
+// type: Windows.Web.Http.Filters.IHttpBaseProtocolFilter4
+// interface type
+open class IHttpBaseProtocolFilter4
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9fe36ccf, Data2: 0x2983, Data3 : 0x4893, Data4 : (0x94, 0x1f, 0xeb, 0x51, 0x8c, 0xa8, 0xce, 0xf9)) }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ServerCustomValidationRequested(Windows.Foundation.TypedEventHandler<Windows.Web.Http.Filters.HttpBaseProtocolFilter,Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs>)
+    private func _n_add_ServerCustomValidationRequested(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ServerCustomValidationRequested(pThis, handler, __presult))
+        }
+    }
+    public func add_ServerCustomValidationRequested(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ServerCustomValidationRequested(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ServerCustomValidationRequested(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ServerCustomValidationRequested(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ServerCustomValidationRequested(pThis, token))
+        }
+    }
+    public func remove_ServerCustomValidationRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ServerCustomValidationRequested(token);
+    }
+    // void ClearAuthenticationCache()
+    private func _n_ClearAuthenticationCache() throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter4.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ClearAuthenticationCache(pThis))
+        }
+    }
+    public func ClearAuthenticationCache() throws -> Void {
+        try self._n_ClearAuthenticationCache();
+    }
+} // IHttpBaseProtocolFilter4
+
+
+// type: Windows.Web.Http.Filters.IHttpBaseProtocolFilter5
+// interface type
+open class IHttpBaseProtocolFilter5
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x416e4993, Data2: 0x31e3, Data3 : 0x4816, Data4 : (0xbf, 0x09, 0xe0, 0x18, 0xee, 0x8d, 0xc1, 0xf5)) }
+    // [IsSpecialName] Windows.System.User get_User()
+    private func _n_get_User(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter5.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_User(pThis, __presult))
+        }
+    }
+    public func get_User() throws -> Optional<Windows.System.IUser> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>> = nil;
+        try self._n_get_User(&__result);
+        return Windows.System.IUser(consuming: __result);
+    }
+    public var User : Optional<Windows.System.IUser> {
+        get throws {
+            return try get_User();
+        }
+    }
+} // IHttpBaseProtocolFilter5
+
+
+// type: Windows.Web.Http.Filters.IHttpBaseProtocolFilterStatics
+// interface type
+open class IHttpBaseProtocolFilterStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6d4dee0c, Data2: 0xe908, Data3 : 0x494e, Data4 : (0xb5, 0xa3, 0x12, 0x63, 0xc9, 0xb8, 0x24, 0x2a)) }
+    // Windows.Web.Http.Filters.HttpBaseProtocolFilter CreateForUser(Windows.System.User)
+    private func _n_CreateForUser(_ user : Optional<UnsafeMutablePointer<_q_CWindows_CSystem_CIUser>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilterStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateForUser(pThis, user, __presult))
+        }
+    }
+    public func CreateForUser(user : Optional<Windows.System.IUser>) throws -> Optional<Windows.Web.Http.Filters.IHttpBaseProtocolFilter> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter>> = nil;
+        try self._n_CreateForUser(RawPointer(user), &__result);
+        return Windows.Web.Http.Filters.IHttpBaseProtocolFilter(consuming: __result);
+    }
+} // IHttpBaseProtocolFilterStatics
+
+
+// type: Windows.Web.Http.Filters.IHttpCacheControl
+// interface type
+open class IHttpCacheControl
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc77e1cb4, Data2: 0x3cea, Data3 : 0x4eb5, Data4 : (0xac, 0x85, 0x04, 0xe1, 0x86, 0xe6, 0x3a, 0xb7)) }
+    // [IsSpecialName] Windows.Web.Http.Filters.HttpCacheReadBehavior get_ReadBehavior()
+    private func _n_get_ReadBehavior(_ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ReadBehavior(pThis, __presult))
+        }
+    }
+    public func get_ReadBehavior() throws -> Windows.Web.Http.Filters.HttpCacheReadBehavior {
+        var __result : _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior = _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior_Default;
+        try self._n_get_ReadBehavior(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ReadBehavior(Windows.Web.Http.Filters.HttpCacheReadBehavior)
+    private func _n_put_ReadBehavior(_ value : _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ReadBehavior(pThis, value))
+        }
+    }
+    public func put_ReadBehavior(value : Windows.Web.Http.Filters.HttpCacheReadBehavior) throws -> Void {
+        try self._n_put_ReadBehavior(value);
+    }
+    // [IsSpecialName] Windows.Web.Http.Filters.HttpCacheWriteBehavior get_WriteBehavior()
+    private func _n_get_WriteBehavior(_ __presult: UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_WriteBehavior(pThis, __presult))
+        }
+    }
+    public func get_WriteBehavior() throws -> Windows.Web.Http.Filters.HttpCacheWriteBehavior {
+        var __result : _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior = _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior_Default;
+        try self._n_get_WriteBehavior(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_WriteBehavior(Windows.Web.Http.Filters.HttpCacheWriteBehavior)
+    private func _n_put_WriteBehavior(_ value : _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpCacheControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_WriteBehavior(pThis, value))
+        }
+    }
+    public func put_WriteBehavior(value : Windows.Web.Http.Filters.HttpCacheWriteBehavior) throws -> Void {
+        try self._n_put_WriteBehavior(value);
+    }
+    public var ReadBehavior : Windows.Web.Http.Filters.HttpCacheReadBehavior {
+        get throws {
+            return try get_ReadBehavior();
+        }
+    }
+    public var WriteBehavior : Windows.Web.Http.Filters.HttpCacheWriteBehavior {
+        get throws {
+            return try get_WriteBehavior();
+        }
+    }
+} // IHttpCacheControl
+
+
 // type: Windows.Web.Http.Filters.IHttpFilter
 // interface type
 open class IHttpFilter
@@ -14,8 +851,183 @@ open class IHttpFilter
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa4cb6dd5, Data2: 0x0902, Data3 : 0x439e, Data4 : (0xbf, 0xd7, 0xe1, 0x25, 0x52, 0xb1, 0x65, 0xce)) }
-// method not needed: SendRequestAsync
+    // Windows.Foundation.IAsyncOperationWithProgress<Windows.Web.Http.HttpResponseMessage,Windows.Web.Http.HttpProgress> SendRequestAsync(Windows.Web.Http.HttpRequestMessage)
+    private func _n_SendRequestAsync(_ request : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpRequestMessage>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpFilter.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SendRequestAsync(pThis, request, __presult))
+        }
+    }
+    public func SendRequestAsync(request : Optional<Windows.Web.Http.IHttpRequestMessage>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>> = nil;
+        try self._n_SendRequestAsync(RawPointer(request), &__result);
+        return ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(consuming: __result);
+    }
+    public func SendRequest(request : Optional<Windows.Web.Http.IHttpRequestMessage>) async throws -> Optional<Windows.Web.Http.IHttpResponseMessage> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SendRequestAsync(request: request)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
 } // IHttpFilter
 
 
+// type: Windows.Web.Http.Filters.IHttpServerCustomValidationRequestedEventArgs
+// interface type
+open class IHttpServerCustomValidationRequestedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3165fe32, Data2: 0xe7dd, Data3 : 0x48b7, Data4 : (0xa3, 0x61, 0x93, 0x9c, 0x75, 0x0e, 0x63, 0xcc)) }
+    // [IsSpecialName] Windows.Web.Http.HttpRequestMessage get_RequestMessage()
+    private func _n_get_RequestMessage(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpRequestMessage>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_RequestMessage(pThis, __presult))
+        }
+    }
+    public func get_RequestMessage() throws -> Optional<Windows.Web.Http.IHttpRequestMessage> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpRequestMessage>> = nil;
+        try self._n_get_RequestMessage(&__result);
+        return Windows.Web.Http.IHttpRequestMessage(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Security.Cryptography.Certificates.Certificate get_ServerCertificate()
+    private func _n_get_ServerCertificate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCryptography_CCertificates_CICertificate>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ServerCertificate(pThis, __presult))
+        }
+    }
+    public func get_ServerCertificate() throws -> Optional<Windows.Security.Cryptography.Certificates.ICertificate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCryptography_CCertificates_CICertificate>> = nil;
+        try self._n_get_ServerCertificate(&__result);
+        return Windows.Security.Cryptography.Certificates.ICertificate(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Networking.Sockets.SocketSslErrorSeverity get_ServerCertificateErrorSeverity()
+    private func _n_get_ServerCertificateErrorSeverity(_ __presult: UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CSocketSslErrorSeverity>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ServerCertificateErrorSeverity(pThis, __presult))
+        }
+    }
+    public func get_ServerCertificateErrorSeverity() throws -> Windows.Networking.Sockets.SocketSslErrorSeverity {
+        var __result : _q_CWindows_CNetworking_CSockets_CSocketSslErrorSeverity = _q_CWindows_CNetworking_CSockets_CSocketSslErrorSeverity_None;
+        try self._n_get_ServerCertificateErrorSeverity(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.ChainValidationResult> get_ServerCertificateErrors()
+    private func _n_get_ServerCertificateErrors(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ServerCertificateErrors(pThis, __presult))
+        }
+    }
+    public func get_ServerCertificateErrors() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult>> = nil;
+        try self._n_get_ServerCertificateErrors(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<Windows.Security.Cryptography.Certificates.Certificate> get_ServerIntermediateCertificates()
+    private func _n_get_ServerIntermediateCertificates(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ServerIntermediateCertificates(pThis, __presult))
+        }
+    }
+    public func get_ServerIntermediateCertificates() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate>> = nil;
+        try self._n_get_ServerIntermediateCertificates(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate(consuming: __result);
+    }
+    // void Reject()
+    private func _n_Reject() throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Reject(pThis))
+        }
+    }
+    public func Reject() throws -> Void {
+        try self._n_Reject();
+    }
+    // Windows.Foundation.Deferral GetDeferral()
+    private func _n_GetDeferral(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIDeferral>>>?) throws {
+        return try perform(as: _q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetDeferral(pThis, __presult))
+        }
+    }
+    public func GetDeferral() throws -> Optional<Windows.Foundation.IDeferral> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIDeferral>> = nil;
+        try self._n_GetDeferral(&__result);
+        return Windows.Foundation.IDeferral(consuming: __result);
+    }
+    public var RequestMessage : Optional<Windows.Web.Http.IHttpRequestMessage> {
+        get throws {
+            return try get_RequestMessage();
+        }
+    }
+    public var ServerCertificate : Optional<Windows.Security.Cryptography.Certificates.ICertificate> {
+        get throws {
+            return try get_ServerCertificate();
+        }
+    }
+    public var ServerCertificateErrorSeverity : Windows.Networking.Sockets.SocketSslErrorSeverity {
+        get throws {
+            return try get_ServerCertificateErrorSeverity();
+        }
+    }
+    public var ServerCertificateErrors : Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CChainValidationResult> {
+        get throws {
+            return try get_ServerCertificateErrors();
+        }
+    }
+    public var ServerIntermediateCertificates : Optional<ClosedGenerics.IVectorView_1__q_CWindows_CSecurity_CCryptography_CCertificates_CCertificate> {
+        get throws {
+            return try get_ServerIntermediateCertificates();
+        }
+    }
+} // IHttpServerCustomValidationRequestedEventArgs
+
+
+}
+extension Windows.Web.Http.Filters.HttpCacheReadBehavior {
+    public static var Default : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior_Default;
+        }
+    }
+    public static var MostRecent : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior_MostRecent;
+        }
+    }
+    public static var OnlyFromCache : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior_OnlyFromCache;
+        }
+    }
+    public static var NoCache : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheReadBehavior_NoCache;
+        }
+    }
+}
+extension Windows.Web.Http.Filters.HttpCacheWriteBehavior {
+    public static var Default : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior_Default;
+        }
+    }
+    public static var NoCache : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCacheWriteBehavior_NoCache;
+        }
+    }
+}
+extension Windows.Web.Http.Filters.HttpCookieUsageBehavior {
+    public static var Default : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior_Default;
+        }
+    }
+    public static var NoCookies : Self {
+        get {
+            return _q_CWindows_CWeb_CHttp_CFilters_CHttpCookieUsageBehavior_NoCookies;
+        }
+    }
 }

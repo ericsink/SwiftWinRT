@@ -157,6 +157,137 @@ public typealias AsyncStatus = _q_CWindows_CFoundation_CAsyncStatus;
 // struct type
 public typealias DateTime = _q_CWindows_CFoundation_CDateTime;
 
+// type: Windows.Foundation.Deferral
+// runtime class
+public class Deferral
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Foundation.IDeferral;
+    public init(plok: Windows.Foundation.IDeferral?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Foundation.IDeferral { return _self; }
+    public init(handler : @escaping () throws -> Void) throws {
+        let _af : IDeferralFactory = try RoGetActivationFactory("Windows.Foundation.Deferral");
+        _self = try _af.Create(handler: Windows.Foundation.DeferralCompletedHandler(cb: handler).Interface())!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: Complete
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Windows.Foundation.DeferralCompletedHandler
+// delegate type
+open class IDeferralCompletedHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xed32a372, Data2: 0xf3c8, Data3 : 0x4faa, Data4 : (0x9c, 0xfb, 0x47, 0x01, 0x48, 0xda, 0x38, 0x88)) }
+    // [IsSpecialName] void Invoke()
+    private func _n_Invoke() throws {
+        return try perform(as: _q_CWindows_CFoundation_CIDeferralCompletedHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis))
+        }
+    }
+    public func Invoke() throws -> Void {
+        try self._n_Invoke();
+    }
+}
+// impl delegate type
+open class DeferralCompletedHandler
+{
+    private static var vtable: _q_CWindows_CFoundation_CIDeferralCompletedHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Windows.Foundation.IDeferralCompletedHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis) in
+        guard let self = DeferralCompletedHandler.from_DeferralCompletedHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke()
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: DeferralCompletedHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CWindows_CFoundation_CIDeferralCompletedHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<() throws -> Void>
+    public init(cb : Optional<() throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CFoundation_CIDeferralCompletedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_DeferralCompletedHandler(_ pUnk: UnsafeMutableRawPointer?) -> DeferralCompletedHandler? {
+        return pUnk?.bindMemory(to: DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke() throws -> Void {
+        if let cb = _cb {
+            return try cb()
+        }
+    }
+    public func Interface() -> Windows.Foundation.IDeferralCompletedHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Windows.Foundation.IDeferralCompletedHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_DeferralCompletedHandler
+{
+    private var _self : Windows.Foundation.IDeferralCompletedHandler;
+    public init(plok: Windows.Foundation.IDeferralCompletedHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke() throws -> Void {
+        return try _self.Invoke();
+    }
+    public func Interface() -> Windows.Foundation.IDeferralCompletedHandler {
+        return _self
+    }
+}
+
 // type: Windows.Foundation.EventRegistrationToken
 // struct type
 public typealias EventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken;
@@ -468,7 +599,7 @@ open class AsyncAction
             return E_INVALIDARG
         }
         do {
-            let _ret : Optional<Windows.Foundation.AsyncActionCompletedHandler> = try self.get_Completed()
+            let _ret : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> = try self.get_Completed()
             __presult!.pointee = nil;
             return S_OK
         }
@@ -515,7 +646,7 @@ open class AsyncAction
     }
     open func put_Completed(handler : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler>) throws -> Void {
     }
-    open func get_Completed() throws -> Optional<Windows.Foundation.AsyncActionCompletedHandler> {
+    open func get_Completed() throws -> Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> {
     return nil;
     }
     open func GetResults() throws -> Void {
@@ -625,6 +756,72 @@ open class IClosable
         try self._n_Close();
     }
 } // IClosable
+
+
+// type: Windows.Foundation.IDeferral
+// interface type
+open class IDeferral
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd6269732, Data2: 0x3b7f, Data3 : 0x46a7, Data4 : (0xb4, 0x0b, 0x4f, 0xdc, 0xa2, 0xa2, 0xc6, 0x93)) }
+// method not needed: Complete
+} // IDeferral
+
+
+// type: Windows.Foundation.IDeferralFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IDeferralFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x65a1ecc5, Data2: 0x3fb5, Data3 : 0x4832, Data4 : (0x8c, 0xa9, 0xf0, 0x61, 0xb2, 0x81, 0xd1, 0x3a)) }
+    // Windows.Foundation.Deferral Create(Windows.Foundation.DeferralCompletedHandler)
+    private func _n_Create(_ handler : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIDeferralCompletedHandler>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIDeferral>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIDeferralFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, handler, __presult))
+        }
+    }
+    public func Create(handler : Optional<Windows.Foundation.IDeferralCompletedHandler>) throws -> Optional<Windows.Foundation.IDeferral> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIDeferral>> = nil;
+        try self._n_Create(RawPointer(handler), &__result);
+        return Windows.Foundation.IDeferral(consuming: __result);
+    }
+} // IDeferralFactory
+
+
+// type: Windows.Foundation.IMemoryBuffer
+// interface type
+open class IMemoryBuffer
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfbc4dd2a, Data2: 0x245b, Data3 : 0x11e4, Data4 : (0xaf, 0x98, 0x68, 0x94, 0x23, 0x26, 0x0c, 0xf8)) }
+// method not needed: CreateReference
+} // IMemoryBuffer
+
+
+// type: Windows.Foundation.IMemoryBufferFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IMemoryBufferFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfbc4dd2b, Data2: 0x245b, Data3 : 0x11e4, Data4 : (0xaf, 0x98, 0x68, 0x94, 0x23, 0x26, 0x0c, 0xf8)) }
+    // Windows.Foundation.MemoryBuffer Create(System.UInt32)
+    private func _n_Create(_ capacity : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIMemoryBuffer>>>?) throws {
+        return try perform(as: _q_CWindows_CFoundation_CIMemoryBufferFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, capacity, __presult))
+        }
+    }
+    public func Create(capacity : Swift.UInt32) throws -> Optional<Windows.Foundation.IMemoryBuffer> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIMemoryBuffer>> = nil;
+        try self._n_Create(capacity, &__result);
+        return Windows.Foundation.IMemoryBuffer(consuming: __result);
+    }
+} // IMemoryBufferFactory
 
 
 // type: Windows.Foundation.IStringable
@@ -1080,6 +1277,30 @@ open class IWwwFormUrlDecoderRuntimeClassFactory
     }
 } // IWwwFormUrlDecoderRuntimeClassFactory
 
+
+// type: Windows.Foundation.MemoryBuffer
+// runtime class
+public class MemoryBuffer
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Foundation.IMemoryBuffer;
+    public init(plok: Windows.Foundation.IMemoryBuffer?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Foundation.IMemoryBuffer { return _self; }
+    public init(capacity : Swift.UInt32) throws {
+        let _af : IMemoryBufferFactory = try RoGetActivationFactory("Windows.Foundation.MemoryBuffer");
+        _self = try _af.Create(capacity: capacity)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: CreateReference
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
 
 // type: Windows.Foundation.Point
 // struct type

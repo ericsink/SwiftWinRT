@@ -16,6 +16,157 @@ public class IReference_1__q_CWindows_CFoundation_CDateTime
 // method not needed: get_Value
 } // IReference_1__q_CWindows_CFoundation_CDateTime
 // closed interface type
+public class IVectorView_1__q_CWindows_CFoundation_CUri
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4b8385bd, Data2: 0xa2cd, Data3 : 0x5ff1, Data4 : (0xbf, 0x74, 0x7e, 0xa5, 0x80, 0x42, 0x3e, 0x50)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1__q_CWindows_CFoundation_CUri
+// closed interface type
+public class IReference_1__q_CWindows_CFoundation_CTimeSpan
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x604d0c4c, Data2: 0x91de, Data3 : 0x5c2a, Data4 : (0x93, 0x5f, 0x36, 0x2f, 0x13, 0xea, 0xf8, 0x00)) }
+// method not needed: get_Value
+} // IReference_1__q_CWindows_CFoundation_CTimeSpan
+// closed interface type
+public class IVector_1__q_CWindows_CFoundation_CUri
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0d82bd8d, Data2: 0xfe62, Data3 : 0x5d67, Data4 : (0xa7, 0xb9, 0x78, 0x86, 0xdd, 0x75, 0xbc, 0x4e)) }
+    // Windows.Foundation.Uri GetAt(System.UInt32)
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
+        }
+    }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
+        try self._n_GetAt(index, &__result);
+        return Windows.Foundation.IUriRuntimeClass(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt32 get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // Windows.Foundation.Collections.IVectorView<Windows.Foundation.Uri> GetView()
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CFoundation_CUri>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
+        }
+    }
+    public func GetView() throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CFoundation_CUri> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CFoundation_CUri>> = nil;
+        try self._n_GetView(&__result);
+        return ClosedGenerics.IVectorView_1__q_CWindows_CFoundation_CUri(consuming: __result);
+    }
+    // bool IndexOf(Windows.Foundation.Uri, ref System.UInt32)
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
+        }
+    }
+    public func IndexOf(value : Optional<Windows.Foundation.IUriRuntimeClass>, index : inout Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+            var _tmp_out_index: UINT32 = 0;
+        try self._n_IndexOf(RawPointer(value), &_tmp_out_index, &__result);
+            index = _tmp_out_index;
+        return __result;
+    }
+    // void SetAt(System.UInt32, Windows.Foundation.Uri)
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
+        }
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Void {
+        try self._n_SetAt(index, RawPointer(value));
+    }
+    // void InsertAt(System.UInt32, Windows.Foundation.Uri)
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
+        }
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Void {
+        try self._n_InsertAt(index, RawPointer(value));
+    }
+    // void RemoveAt(System.UInt32)
+    private func _n_RemoveAt(_ index : UINT32) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        try self._n_RemoveAt(index);
+    }
+    // void Append(Windows.Foundation.Uri)
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+    // void RemoveAtEnd()
+    private func _n_RemoveAtEnd() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+    public func RemoveAtEnd() throws -> Void {
+        try self._n_RemoveAtEnd();
+    }
+    // void Clear()
+    private func _n_Clear() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+    public func Clear() throws -> Void {
+        try self._n_Clear();
+    }
+    // System.UInt32 GetMany(System.UInt32, Windows.Foundation.Uri[])
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
+        }
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>>) throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_GetMany(startIndex, itemsLength, items, &__result);
+        return __result;
+    }
+    // void ReplaceAll(Windows.Foundation.Uri[])
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CFoundation_CUri.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
+        }
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>>>) throws -> Void {
+        try self._n_ReplaceAll(itemsLength, items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+            return try get_Size();
+        }
+    }
+} // IVector_1__q_CWindows_CFoundation_CUri
+// closed interface type
 public class IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint
     :
     WinRT.IInspectable

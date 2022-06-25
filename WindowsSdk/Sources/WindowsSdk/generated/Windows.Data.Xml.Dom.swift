@@ -7,6 +7,604 @@ import CWinRT;
 import CWindowsSdk;
 
 extension Windows.Data.Xml.Dom {
+// type: Windows.Data.Xml.Dom.DtdEntity
+// runtime class
+public class DtdEntity
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Data.Xml.Dom.IDtdEntity;
+    public init(plok: Windows.Data.Xml.Dom.IDtdEntity?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Data.Xml.Dom.IDtdEntity { return _self; }
+    public func get_PublicId() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IDtdEntity = try _self.QueryInterface();
+        return try _ifc.get_PublicId();
+    }
+    public func get_SystemId() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IDtdEntity = try _self.QueryInterface();
+        return try _ifc.get_SystemId();
+    }
+    public func get_NotationName() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IDtdEntity = try _self.QueryInterface();
+        return try _ifc.get_NotationName();
+    }
+    public var NotationName : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IDtdEntity = try _self.QueryInterface();
+        return try _ifc.NotationName;
+        }
+    }
+    public var PublicId : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IDtdEntity = try _self.QueryInterface();
+        return try _ifc.PublicId;
+        }
+    }
+    public var SystemId : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IDtdEntity = try _self.QueryInterface();
+        return try _ifc.SystemId;
+        }
+    }
+    public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NodeValue();
+    }
+    public func put_NodeValue(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.put_NodeValue(value: value!.GetInterface());
+    }
+    public func get_NodeType() throws -> Windows.Data.Xml.Dom.NodeType {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NodeType();
+    }
+    public func get_NodeName() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NodeName();
+    }
+    public func get_ParentNode() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_ParentNode();
+    }
+    public func get_ChildNodes() throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.get_ChildNodes());
+    }
+    public func get_FirstChild() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_FirstChild();
+    }
+    public func get_LastChild() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_LastChild();
+    }
+    public func get_PreviousSibling() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_PreviousSibling();
+    }
+    public func get_NextSibling() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NextSibling();
+    }
+    public func get_Attributes() throws -> Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.get_Attributes());
+    }
+    public func HasChildNodes() throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.HasChildNodes();
+    }
+    public func get_OwnerDocument() throws -> Optional<Windows.Data.Xml.Dom.XmlDocument> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.get_OwnerDocument());
+    }
+    public func InsertBefore(newChild : Optional<Windows.Data.Xml.Dom.IXmlNode>, referenceChild : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.InsertBefore(newChild: newChild, referenceChild: referenceChild);
+    }
+    public func ReplaceChild(newChild : Optional<Windows.Data.Xml.Dom.IXmlNode>, referenceChild : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.ReplaceChild(newChild: newChild, referenceChild: referenceChild);
+    }
+    public func RemoveChild(childNode : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.RemoveChild(childNode: childNode);
+    }
+    public func AppendChild(newChild : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.AppendChild(newChild: newChild);
+    }
+    public func CloneNode(deep : boolean) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.CloneNode(deep: deep);
+    }
+    public func get_NamespaceUri() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NamespaceUri();
+    }
+    public func get_LocalName() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_LocalName();
+    }
+    public func get_Prefix() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_Prefix();
+    }
+    public func Normalize() throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.Normalize();
+    }
+    public func put_Prefix(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.put_Prefix(value: value!.GetInterface());
+    }
+    public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        }
+    }
+    public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        }
+    }
+    public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.FirstChild;
+        }
+    }
+    public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.LastChild;
+        }
+    }
+    public var LocalName : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.LocalName;
+        }
+    }
+    public var NamespaceUri : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NamespaceUri;
+        }
+    }
+    public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NextSibling;
+        }
+    }
+    public var NodeName : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NodeName;
+        }
+    }
+    public var NodeType : Windows.Data.Xml.Dom.NodeType {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NodeType;
+        }
+    }
+    public var NodeValue : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NodeValue;
+        }
+    }
+    public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        }
+    }
+    public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.ParentNode;
+        }
+    }
+    public var Prefix : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.Prefix;
+        }
+    }
+    public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.PreviousSibling;
+        }
+    }
+    public func GetXml() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.GetXml();
+    }
+    public func get_InnerText() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.get_InnerText();
+    }
+    public func put_InnerText(value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.put_InnerText(value: value);
+    }
+    public var InnerText : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.InnerText;
+        }
+    }
+    public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try _ifc.SelectSingleNode(xpath: xpath);
+    }
+    public func SelectNodes(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.SelectNodes(xpath: xpath));
+    }
+    public func SelectSingleNodeNS(xpath : Swift.String, namespaces : Optional<WinRT.Object>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try _ifc.SelectSingleNodeNS(xpath: xpath, namespaces: namespaces!.GetInterface());
+    }
+    public func SelectNodesNS(xpath : Swift.String, namespaces : Optional<WinRT.Object>) throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.SelectNodesNS(xpath: xpath, namespaces: namespaces!.GetInterface()));
+    }
+}
+
+// type: Windows.Data.Xml.Dom.DtdNotation
+// runtime class
+public class DtdNotation
+    :
+    WinRT.Object
+{
+    private var _self : Windows.Data.Xml.Dom.IDtdNotation;
+    public init(plok: Windows.Data.Xml.Dom.IDtdNotation?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Windows.Data.Xml.Dom.IDtdNotation { return _self; }
+    public func get_PublicId() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IDtdNotation = try _self.QueryInterface();
+        return try _ifc.get_PublicId();
+    }
+    public func get_SystemId() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IDtdNotation = try _self.QueryInterface();
+        return try _ifc.get_SystemId();
+    }
+    public var PublicId : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IDtdNotation = try _self.QueryInterface();
+        return try _ifc.PublicId;
+        }
+    }
+    public var SystemId : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IDtdNotation = try _self.QueryInterface();
+        return try _ifc.SystemId;
+        }
+    }
+    public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NodeValue();
+    }
+    public func put_NodeValue(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.put_NodeValue(value: value!.GetInterface());
+    }
+    public func get_NodeType() throws -> Windows.Data.Xml.Dom.NodeType {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NodeType();
+    }
+    public func get_NodeName() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NodeName();
+    }
+    public func get_ParentNode() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_ParentNode();
+    }
+    public func get_ChildNodes() throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.get_ChildNodes());
+    }
+    public func get_FirstChild() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_FirstChild();
+    }
+    public func get_LastChild() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_LastChild();
+    }
+    public func get_PreviousSibling() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_PreviousSibling();
+    }
+    public func get_NextSibling() throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NextSibling();
+    }
+    public func get_Attributes() throws -> Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.get_Attributes());
+    }
+    public func HasChildNodes() throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.HasChildNodes();
+    }
+    public func get_OwnerDocument() throws -> Optional<Windows.Data.Xml.Dom.XmlDocument> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.get_OwnerDocument());
+    }
+    public func InsertBefore(newChild : Optional<Windows.Data.Xml.Dom.IXmlNode>, referenceChild : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.InsertBefore(newChild: newChild, referenceChild: referenceChild);
+    }
+    public func ReplaceChild(newChild : Optional<Windows.Data.Xml.Dom.IXmlNode>, referenceChild : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.ReplaceChild(newChild: newChild, referenceChild: referenceChild);
+    }
+    public func RemoveChild(childNode : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.RemoveChild(childNode: childNode);
+    }
+    public func AppendChild(newChild : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.AppendChild(newChild: newChild);
+    }
+    public func CloneNode(deep : boolean) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.CloneNode(deep: deep);
+    }
+    public func get_NamespaceUri() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_NamespaceUri();
+    }
+    public func get_LocalName() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_LocalName();
+    }
+    public func get_Prefix() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.get_Prefix();
+    }
+    public func Normalize() throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.Normalize();
+    }
+    public func put_Prefix(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.put_Prefix(value: value!.GetInterface());
+    }
+    public var Attributes : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Attributes);
+        }
+    }
+    public var ChildNodes : Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.ChildNodes);
+        }
+    }
+    public var FirstChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.FirstChild;
+        }
+    }
+    public var LastChild : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.LastChild;
+        }
+    }
+    public var LocalName : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.LocalName;
+        }
+    }
+    public var NamespaceUri : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NamespaceUri;
+        }
+    }
+    public var NextSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NextSibling;
+        }
+    }
+    public var NodeName : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NodeName;
+        }
+    }
+    public var NodeType : Windows.Data.Xml.Dom.NodeType {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NodeType;
+        }
+    }
+    public var NodeValue : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.NodeValue;
+        }
+    }
+    public var OwnerDocument : Optional<Windows.Data.Xml.Dom.XmlDocument> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlDocument(plok: _ifc.OwnerDocument);
+        }
+    }
+    public var ParentNode : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.ParentNode;
+        }
+    }
+    public var Prefix : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.Prefix;
+        }
+    }
+    public var PreviousSibling : Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
+        return try _ifc.PreviousSibling;
+        }
+    }
+    public func GetXml() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.GetXml();
+    }
+    public func get_InnerText() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.get_InnerText();
+    }
+    public func put_InnerText(value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.put_InnerText(value: value);
+    }
+    public var InnerText : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSerializer = try _self.QueryInterface();
+        return try _ifc.InnerText;
+        }
+    }
+    public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try _ifc.SelectSingleNode(xpath: xpath);
+    }
+    public func SelectNodes(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.SelectNodes(xpath: xpath));
+    }
+    public func SelectSingleNodeNS(xpath : Swift.String, namespaces : Optional<WinRT.Object>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try _ifc.SelectSingleNodeNS(xpath: xpath, namespaces: namespaces!.GetInterface());
+    }
+    public func SelectNodesNS(xpath : Swift.String, namespaces : Optional<WinRT.Object>) throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeSelector = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.SelectNodesNS(xpath: xpath, namespaces: namespaces!.GetInterface()));
+    }
+}
+
+// type: Windows.Data.Xml.Dom.IDtdEntity
+// interface type
+open class IDtdEntity
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6a0b5ffc, Data2: 0x63b4, Data3 : 0x480f, Data4 : (0x9e, 0x6a, 0x8a, 0x92, 0x81, 0x6a, 0xad, 0xe4)) }
+    // [IsSpecialName] System.Object get_PublicId()
+    private func _n_get_PublicId(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIDtdEntity.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicId(pThis, __presult))
+        }
+    }
+    public func get_PublicId() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_PublicId(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] System.Object get_SystemId()
+    private func _n_get_SystemId(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIDtdEntity.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemId(pThis, __presult))
+        }
+    }
+    public func get_SystemId() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_SystemId(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] System.Object get_NotationName()
+    private func _n_get_NotationName(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIDtdEntity.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_NotationName(pThis, __presult))
+        }
+    }
+    public func get_NotationName() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_NotationName(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    public var NotationName : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_NotationName();
+        }
+    }
+    public var PublicId : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_PublicId();
+        }
+    }
+    public var SystemId : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_SystemId();
+        }
+    }
+} // IDtdEntity
+
+
+// type: Windows.Data.Xml.Dom.IDtdNotation
+// interface type
+open class IDtdNotation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8cb4e04d, Data2: 0x6d46, Data3 : 0x4edb, Data4 : (0xab, 0x73, 0xdf, 0x83, 0xc5, 0x1a, 0xd3, 0x97)) }
+    // [IsSpecialName] System.Object get_PublicId()
+    private func _n_get_PublicId(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIDtdNotation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PublicId(pThis, __presult))
+        }
+    }
+    public func get_PublicId() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_PublicId(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] System.Object get_SystemId()
+    private func _n_get_SystemId(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIDtdNotation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SystemId(pThis, __presult))
+        }
+    }
+    public func get_SystemId() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_SystemId(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    public var PublicId : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_PublicId();
+        }
+    }
+    public var SystemId : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_SystemId();
+        }
+    }
+} // IDtdNotation
+
+
 // type: Windows.Data.Xml.Dom.IXmlAttribute
 // interface type
 open class IXmlAttribute
@@ -29,6 +627,116 @@ open class IXmlCDataSection
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4d04b46f, Data2: 0xc8bd, Data3 : 0x45b4, Data4 : (0x88, 0x99, 0x04, 0x00, 0xd7, 0xc2, 0xc6, 0x0f)) }
 } // IXmlCDataSection
+
+
+// type: Windows.Data.Xml.Dom.IXmlCharacterData
+// interface type
+open class IXmlCharacterData
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x132e42ab, Data2: 0x4e36, Data3 : 0x4df6, Data4 : (0xb1, 0xc8, 0x0c, 0xe6, 0x2f, 0xd8, 0x8b, 0x26)) }
+    // [IsSpecialName] System.String get_Data()
+    private func _n_get_Data(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Data(pThis, __presult))
+        }
+    }
+    public func get_Data() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Data(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_Data(System.String)
+    private func _n_put_Data(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Data(pThis, value))
+        }
+    }
+    public func put_Data(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_Data(__hstr_value.Raw());
+        }
+    }
+    // [IsSpecialName] System.UInt32 get_Length()
+    private func _n_get_Length(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Length(pThis, __presult))
+        }
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Length(&__result);
+        return __result;
+    }
+    // System.String SubstringData(System.UInt32, System.UInt32)
+    private func _n_SubstringData(_ offset : UINT32, _ count : UINT32, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SubstringData(pThis, offset, count, __presult))
+        }
+    }
+    public func SubstringData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_SubstringData(offset, count, &__result);
+        return Swift.String(from: __result);
+    }
+    // void AppendData(System.String)
+    private func _n_AppendData(_ data : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.AppendData(pThis, data))
+        }
+    }
+    public func AppendData(data : Swift.String) throws -> Void {
+        let __hstr_data = try HString(data);
+        return try withExtendedLifetime(__hstr_data) {
+        try self._n_AppendData(__hstr_data.Raw());
+        }
+    }
+    // void InsertData(System.UInt32, System.String)
+    private func _n_InsertData(_ offset : UINT32, _ data : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertData(pThis, offset, data))
+        }
+    }
+    public func InsertData(offset : Swift.UInt32, data : Swift.String) throws -> Void {
+        let __hstr_data = try HString(data);
+        return try withExtendedLifetime(__hstr_data) {
+        try self._n_InsertData(offset, __hstr_data.Raw());
+        }
+    }
+    // void DeleteData(System.UInt32, System.UInt32)
+    private func _n_DeleteData(_ offset : UINT32, _ count : UINT32) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteData(pThis, offset, count))
+        }
+    }
+    public func DeleteData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Void {
+        try self._n_DeleteData(offset, count);
+    }
+    // void ReplaceData(System.UInt32, System.UInt32, System.String)
+    private func _n_ReplaceData(_ offset : UINT32, _ count : UINT32, _ data : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlCharacterData.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceData(pThis, offset, count, data))
+        }
+    }
+    public func ReplaceData(offset : Swift.UInt32, count : Swift.UInt32, data : Swift.String) throws -> Void {
+        let __hstr_data = try HString(data);
+        return try withExtendedLifetime(__hstr_data) {
+        try self._n_ReplaceData(offset, count, __hstr_data.Raw());
+        }
+    }
+    public var Data : Swift.String {
+        get throws {
+            return try get_Data();
+        }
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+            return try get_Length();
+        }
+    }
+} // IXmlCharacterData
 
 
 // type: Windows.Data.Xml.Dom.IXmlComment
@@ -483,9 +1191,54 @@ open class IXmlDocumentType
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf7342425, Data2: 0x9781, Data3 : 0x4964, Data4 : (0x8e, 0x94, 0x9b, 0x1c, 0x6d, 0xfc, 0x9b, 0xc7)) }
-// method not needed: get_Name
-// method not needed: get_Entities
-// method not needed: get_Notations
+    // [IsSpecialName] System.String get_Name()
+    private func _n_get_Name(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentType.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Name(pThis, __presult))
+        }
+    }
+    public func get_Name() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Name(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] Windows.Data.Xml.Dom.XmlNamedNodeMap get_Entities()
+    private func _n_get_Entities(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentType.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Entities(pThis, __presult))
+        }
+    }
+    public func get_Entities() throws -> Optional<Windows.Data.Xml.Dom.IXmlNamedNodeMap> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap>> = nil;
+        try self._n_get_Entities(&__result);
+        return Windows.Data.Xml.Dom.IXmlNamedNodeMap(consuming: __result);
+    }
+    // [IsSpecialName] Windows.Data.Xml.Dom.XmlNamedNodeMap get_Notations()
+    private func _n_get_Notations(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDocumentType.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Notations(pThis, __presult))
+        }
+    }
+    public func get_Notations() throws -> Optional<Windows.Data.Xml.Dom.IXmlNamedNodeMap> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap>> = nil;
+        try self._n_get_Notations(&__result);
+        return Windows.Data.Xml.Dom.IXmlNamedNodeMap(consuming: __result);
+    }
+    public var Entities : Optional<Windows.Data.Xml.Dom.IXmlNamedNodeMap> {
+        get throws {
+            return try get_Entities();
+        }
+    }
+    public var Name : Swift.String {
+        get throws {
+            return try get_Name();
+        }
+    }
+    public var Notations : Optional<Windows.Data.Xml.Dom.IXmlNamedNodeMap> {
+        get throws {
+            return try get_Notations();
+        }
+    }
 } // IXmlDocumentType
 
 
@@ -496,7 +1249,20 @@ open class IXmlDomImplementation
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6de58132, Data2: 0xf11d, Data3 : 0x4fbb, Data4 : (0x8c, 0xc6, 0x58, 0x3c, 0xba, 0x93, 0x11, 0x2f)) }
-// method not needed: HasFeature
+    // bool HasFeature(System.String, System.Object)
+    private func _n_HasFeature(_ feature : Optional<HSTRING>, _ version : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlDomImplementation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.HasFeature(pThis, feature, version, __presult))
+        }
+    }
+    public func HasFeature(feature : Swift.String, version : Optional<WinRT.IInspectable>) throws -> boolean {
+        let __hstr_feature = try HString(feature);
+        return try withExtendedLifetime(__hstr_feature) {
+        var __result : boolean = 0;
+        try self._n_HasFeature(__hstr_feature.Raw(), RawPointer(version), &__result);
+        return __result;
+        }
+    }
 } // IXmlDomImplementation
 
 
@@ -507,19 +1273,179 @@ open class IXmlElement
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2dfb8a1f, Data2: 0x6b10, Data3 : 0x4ef8, Data4 : (0x9f, 0x83, 0xef, 0xcc, 0xe8, 0xfa, 0xec, 0x37)) }
-// method not needed: get_TagName
-// method not needed: GetAttribute
-// method not needed: SetAttribute
-// method not needed: RemoveAttribute
-// method not needed: GetAttributeNode
-// method not needed: SetAttributeNode
-// method not needed: RemoveAttributeNode
-// method not needed: GetElementsByTagName
-// method not needed: SetAttributeNS
-// method not needed: GetAttributeNS
-// method not needed: RemoveAttributeNS
-// method not needed: SetAttributeNodeNS
-// method not needed: GetAttributeNodeNS
+    // [IsSpecialName] System.String get_TagName()
+    private func _n_get_TagName(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TagName(pThis, __presult))
+        }
+    }
+    public func get_TagName() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_TagName(&__result);
+        return Swift.String(from: __result);
+    }
+    // System.String GetAttribute(System.String)
+    private func _n_GetAttribute(_ attributeName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttribute(pThis, attributeName, __presult))
+        }
+    }
+    public func GetAttribute(attributeName : Swift.String) throws -> Swift.String {
+        let __hstr_attributeName = try HString(attributeName);
+        return try withExtendedLifetime(__hstr_attributeName) {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_GetAttribute(__hstr_attributeName.Raw(), &__result);
+        return Swift.String(from: __result);
+        }
+    }
+    // void SetAttribute(System.String, System.String)
+    private func _n_SetAttribute(_ attributeName : Optional<HSTRING>, _ attributeValue : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttribute(pThis, attributeName, attributeValue))
+        }
+    }
+    public func SetAttribute(attributeName : Swift.String, attributeValue : Swift.String) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName);
+        return try withExtendedLifetime(__hstr_attributeName) {
+        let __hstr_attributeValue = try HString(attributeValue);
+        return try withExtendedLifetime(__hstr_attributeValue) {
+        try self._n_SetAttribute(__hstr_attributeName.Raw(), __hstr_attributeValue.Raw());
+        }
+        }
+    }
+    // void RemoveAttribute(System.String)
+    private func _n_RemoveAttribute(_ attributeName : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAttribute(pThis, attributeName))
+        }
+    }
+    public func RemoveAttribute(attributeName : Swift.String) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName);
+        return try withExtendedLifetime(__hstr_attributeName) {
+        try self._n_RemoveAttribute(__hstr_attributeName.Raw());
+        }
+    }
+    // Windows.Data.Xml.Dom.XmlAttribute GetAttributeNode(System.String)
+    private func _n_GetAttributeNode(_ attributeName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttributeNode(pThis, attributeName, __presult))
+        }
+    }
+    public func GetAttributeNode(attributeName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        let __hstr_attributeName = try HString(attributeName);
+        return try withExtendedLifetime(__hstr_attributeName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
+        try self._n_GetAttributeNode(__hstr_attributeName.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlAttribute(consuming: __result);
+        }
+    }
+    // Windows.Data.Xml.Dom.XmlAttribute SetAttributeNode(Windows.Data.Xml.Dom.XmlAttribute)
+    private func _n_SetAttributeNode(_ newAttribute : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttributeNode(pThis, newAttribute, __presult))
+        }
+    }
+    public func SetAttributeNode(newAttribute : Optional<Windows.Data.Xml.Dom.IXmlAttribute>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
+        try self._n_SetAttributeNode(RawPointer(newAttribute), &__result);
+        return Windows.Data.Xml.Dom.IXmlAttribute(consuming: __result);
+    }
+    // Windows.Data.Xml.Dom.XmlAttribute RemoveAttributeNode(Windows.Data.Xml.Dom.XmlAttribute)
+    private func _n_RemoveAttributeNode(_ attributeNode : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAttributeNode(pThis, attributeNode, __presult))
+        }
+    }
+    public func RemoveAttributeNode(attributeNode : Optional<Windows.Data.Xml.Dom.IXmlAttribute>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
+        try self._n_RemoveAttributeNode(RawPointer(attributeNode), &__result);
+        return Windows.Data.Xml.Dom.IXmlAttribute(consuming: __result);
+    }
+    // Windows.Data.Xml.Dom.XmlNodeList GetElementsByTagName(System.String)
+    private func _n_GetElementsByTagName(_ tagName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetElementsByTagName(pThis, tagName, __presult))
+        }
+    }
+    public func GetElementsByTagName(tagName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
+        let __hstr_tagName = try HString(tagName);
+        return try withExtendedLifetime(__hstr_tagName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>> = nil;
+        try self._n_GetElementsByTagName(__hstr_tagName.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlNodeList(consuming: __result);
+        }
+    }
+    // void SetAttributeNS(System.Object, System.String, System.String)
+    private func _n_SetAttributeNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ qualifiedName : Optional<HSTRING>, _ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttributeNS(pThis, namespaceUri, qualifiedName, value))
+        }
+    }
+    public func SetAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Swift.String, value : Swift.String) throws -> Void {
+        let __hstr_qualifiedName = try HString(qualifiedName);
+        return try withExtendedLifetime(__hstr_qualifiedName) {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_SetAttributeNS(RawPointer(namespaceUri), __hstr_qualifiedName.Raw(), __hstr_value.Raw());
+        }
+        }
+    }
+    // System.String GetAttributeNS(System.Object, System.String)
+    private func _n_GetAttributeNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ localName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttributeNS(pThis, namespaceUri, localName, __presult))
+        }
+    }
+    public func GetAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Swift.String) throws -> Swift.String {
+        let __hstr_localName = try HString(localName);
+        return try withExtendedLifetime(__hstr_localName) {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_GetAttributeNS(RawPointer(namespaceUri), __hstr_localName.Raw(), &__result);
+        return Swift.String(from: __result);
+        }
+    }
+    // void RemoveAttributeNS(System.Object, System.String)
+    private func _n_RemoveAttributeNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ localName : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAttributeNS(pThis, namespaceUri, localName))
+        }
+    }
+    public func RemoveAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Swift.String) throws -> Void {
+        let __hstr_localName = try HString(localName);
+        return try withExtendedLifetime(__hstr_localName) {
+        try self._n_RemoveAttributeNS(RawPointer(namespaceUri), __hstr_localName.Raw());
+        }
+    }
+    // Windows.Data.Xml.Dom.XmlAttribute SetAttributeNodeNS(Windows.Data.Xml.Dom.XmlAttribute)
+    private func _n_SetAttributeNodeNS(_ newAttribute : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttributeNodeNS(pThis, newAttribute, __presult))
+        }
+    }
+    public func SetAttributeNodeNS(newAttribute : Optional<Windows.Data.Xml.Dom.IXmlAttribute>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
+        try self._n_SetAttributeNodeNS(RawPointer(newAttribute), &__result);
+        return Windows.Data.Xml.Dom.IXmlAttribute(consuming: __result);
+    }
+    // Windows.Data.Xml.Dom.XmlAttribute GetAttributeNodeNS(System.Object, System.String)
+    private func _n_GetAttributeNodeNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ localName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlElement.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttributeNodeNS(pThis, namespaceUri, localName, __presult))
+        }
+    }
+    public func GetAttributeNodeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        let __hstr_localName = try HString(localName);
+        return try withExtendedLifetime(__hstr_localName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
+        try self._n_GetAttributeNodeNS(RawPointer(namespaceUri), __hstr_localName.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlAttribute(consuming: __result);
+        }
+    }
+    public var TagName : Swift.String {
+        get throws {
+            return try get_TagName();
+        }
+    }
 } // IXmlElement
 
 
@@ -540,16 +1466,131 @@ open class IXmlLoadSettings
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x58aa07a8, Data2: 0xfed6, Data3 : 0x46f7, Data4 : (0xb4, 0xc5, 0xfb, 0x1b, 0xa7, 0x21, 0x08, 0xd6)) }
-// method not needed: get_MaxElementDepth
-// method not needed: put_MaxElementDepth
-// method not needed: get_ProhibitDtd
-// method not needed: put_ProhibitDtd
-// method not needed: get_ResolveExternals
-// method not needed: put_ResolveExternals
-// method not needed: get_ValidateOnParse
-// method not needed: put_ValidateOnParse
-// method not needed: get_ElementContentWhiteSpace
-// method not needed: put_ElementContentWhiteSpace
+    // [IsSpecialName] System.UInt32 get_MaxElementDepth()
+    private func _n_get_MaxElementDepth(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxElementDepth(pThis, __presult))
+        }
+    }
+    public func get_MaxElementDepth() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_MaxElementDepth(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaxElementDepth(System.UInt32)
+    private func _n_put_MaxElementDepth(_ value : UINT32) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxElementDepth(pThis, value))
+        }
+    }
+    public func put_MaxElementDepth(value : Swift.UInt32) throws -> Void {
+        try self._n_put_MaxElementDepth(value);
+    }
+    // [IsSpecialName] bool get_ProhibitDtd()
+    private func _n_get_ProhibitDtd(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProhibitDtd(pThis, __presult))
+        }
+    }
+    public func get_ProhibitDtd() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_ProhibitDtd(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ProhibitDtd(bool)
+    private func _n_put_ProhibitDtd(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProhibitDtd(pThis, value))
+        }
+    }
+    public func put_ProhibitDtd(value : boolean) throws -> Void {
+        try self._n_put_ProhibitDtd(value);
+    }
+    // [IsSpecialName] bool get_ResolveExternals()
+    private func _n_get_ResolveExternals(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ResolveExternals(pThis, __presult))
+        }
+    }
+    public func get_ResolveExternals() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_ResolveExternals(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ResolveExternals(bool)
+    private func _n_put_ResolveExternals(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ResolveExternals(pThis, value))
+        }
+    }
+    public func put_ResolveExternals(value : boolean) throws -> Void {
+        try self._n_put_ResolveExternals(value);
+    }
+    // [IsSpecialName] bool get_ValidateOnParse()
+    private func _n_get_ValidateOnParse(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ValidateOnParse(pThis, __presult))
+        }
+    }
+    public func get_ValidateOnParse() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_ValidateOnParse(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ValidateOnParse(bool)
+    private func _n_put_ValidateOnParse(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ValidateOnParse(pThis, value))
+        }
+    }
+    public func put_ValidateOnParse(value : boolean) throws -> Void {
+        try self._n_put_ValidateOnParse(value);
+    }
+    // [IsSpecialName] bool get_ElementContentWhiteSpace()
+    private func _n_get_ElementContentWhiteSpace(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ElementContentWhiteSpace(pThis, __presult))
+        }
+    }
+    public func get_ElementContentWhiteSpace() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_ElementContentWhiteSpace(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ElementContentWhiteSpace(bool)
+    private func _n_put_ElementContentWhiteSpace(_ value : boolean) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlLoadSettings.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ElementContentWhiteSpace(pThis, value))
+        }
+    }
+    public func put_ElementContentWhiteSpace(value : boolean) throws -> Void {
+        try self._n_put_ElementContentWhiteSpace(value);
+    }
+    public var ElementContentWhiteSpace : boolean {
+        get throws {
+            return try get_ElementContentWhiteSpace();
+        }
+    }
+    public var MaxElementDepth : Swift.UInt32 {
+        get throws {
+            return try get_MaxElementDepth();
+        }
+    }
+    public var ProhibitDtd : boolean {
+        get throws {
+            return try get_ProhibitDtd();
+        }
+    }
+    public var ResolveExternals : boolean {
+        get throws {
+            return try get_ResolveExternals();
+        }
+    }
+    public var ValidateOnParse : boolean {
+        get throws {
+            return try get_ValidateOnParse();
+        }
+    }
 } // IXmlLoadSettings
 
 
@@ -560,14 +1601,111 @@ open class IXmlNamedNodeMap
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3a69eb0, Data2: 0xaab0, Data3 : 0x4b82, Data4 : (0xa6, 0xfa, 0xb1, 0x45, 0x3f, 0x7c, 0x02, 0x1b)) }
-// method not needed: get_Length
-// method not needed: Item
-// method not needed: GetNamedItem
-// method not needed: SetNamedItem
-// method not needed: RemoveNamedItem
-// method not needed: GetNamedItemNS
-// method not needed: RemoveNamedItemNS
-// method not needed: SetNamedItemNS
+    // [IsSpecialName] System.UInt32 get_Length()
+    private func _n_get_Length(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Length(pThis, __presult))
+        }
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Length(&__result);
+        return __result;
+    }
+    // Windows.Data.Xml.Dom.IXmlNode Item(System.UInt32)
+    private func _n_Item(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Item(pThis, index, __presult))
+        }
+    }
+    public func Item(index : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_Item(index, &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+    }
+    // Windows.Data.Xml.Dom.IXmlNode GetNamedItem(System.String)
+    private func _n_GetNamedItem(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedItem(pThis, name, __presult))
+        }
+    }
+    public func GetNamedItem(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_GetNamedItem(__hstr_name.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+        }
+    }
+    // Windows.Data.Xml.Dom.IXmlNode SetNamedItem(Windows.Data.Xml.Dom.IXmlNode)
+    private func _n_SetNamedItem(_ node : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetNamedItem(pThis, node, __presult))
+        }
+    }
+    public func SetNamedItem(node : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_SetNamedItem(RawPointer(node), &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+    }
+    // Windows.Data.Xml.Dom.IXmlNode RemoveNamedItem(System.String)
+    private func _n_RemoveNamedItem(_ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveNamedItem(pThis, name, __presult))
+        }
+    }
+    public func RemoveNamedItem(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_RemoveNamedItem(__hstr_name.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+        }
+    }
+    // Windows.Data.Xml.Dom.IXmlNode GetNamedItemNS(System.Object, System.String)
+    private func _n_GetNamedItemNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedItemNS(pThis, namespaceUri, name, __presult))
+        }
+    }
+    public func GetNamedItemNS(namespaceUri : Optional<WinRT.IInspectable>, name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_GetNamedItemNS(RawPointer(namespaceUri), __hstr_name.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+        }
+    }
+    // Windows.Data.Xml.Dom.IXmlNode RemoveNamedItemNS(System.Object, System.String)
+    private func _n_RemoveNamedItemNS(_ namespaceUri : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ name : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveNamedItemNS(pThis, namespaceUri, name, __presult))
+        }
+    }
+    public func RemoveNamedItemNS(namespaceUri : Optional<WinRT.IInspectable>, name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name);
+        return try withExtendedLifetime(__hstr_name) {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_RemoveNamedItemNS(RawPointer(namespaceUri), __hstr_name.Raw(), &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+        }
+    }
+    // Windows.Data.Xml.Dom.IXmlNode SetNamedItemNS(Windows.Data.Xml.Dom.IXmlNode)
+    private func _n_SetNamedItemNS(_ node : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNamedNodeMap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetNamedItemNS(pThis, node, __presult))
+        }
+    }
+    public func SetNamedItemNS(node : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_SetNamedItemNS(RawPointer(node), &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+            return try get_Length();
+        }
+    }
 } // IXmlNamedNodeMap
 
 
@@ -905,8 +2043,33 @@ open class IXmlNodeList
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x8c60ad77, Data2: 0x83a4, Data3 : 0x4ec1, Data4 : (0x9c, 0x54, 0x7b, 0xa4, 0x29, 0xe1, 0x3d, 0xa6)) }
-// method not needed: get_Length
-// method not needed: Item
+    // [IsSpecialName] System.UInt32 get_Length()
+    private func _n_get_Length(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeList.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Length(pThis, __presult))
+        }
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Length(&__result);
+        return __result;
+    }
+    // Windows.Data.Xml.Dom.IXmlNode Item(System.UInt32)
+    private func _n_Item(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlNodeList.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Item(pThis, index, __presult))
+        }
+    }
+    public func Item(index : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
+        try self._n_Item(index, &__result);
+        return Windows.Data.Xml.Dom.IXmlNode(consuming: __result);
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+            return try get_Length();
+        }
+    }
 } // IXmlNodeList
 
 
@@ -1032,9 +2195,50 @@ open class IXmlProcessingInstruction
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2707fd1e, Data2: 0x1e92, Data3 : 0x4ece, Data4 : (0xb6, 0xf4, 0x26, 0xf0, 0x69, 0x07, 0x8d, 0xdc)) }
-// method not needed: get_Target
-// method not needed: get_Data
-// method not needed: put_Data
+    // [IsSpecialName] System.String get_Target()
+    private func _n_get_Target(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Target(pThis, __presult))
+        }
+    }
+    public func get_Target() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Target(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] System.String get_Data()
+    private func _n_get_Data(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Data(pThis, __presult))
+        }
+    }
+    public func get_Data() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Data(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_Data(System.String)
+    private func _n_put_Data(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Data(pThis, value))
+        }
+    }
+    public func put_Data(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_Data(__hstr_value.Raw());
+        }
+    }
+    public var Data : Swift.String {
+        get throws {
+            return try get_Data();
+        }
+    }
+    public var Target : Swift.String {
+        get throws {
+            return try get_Target();
+        }
+    }
 } // IXmlProcessingInstruction
 
 
@@ -1045,7 +2249,17 @@ open class IXmlText
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf931a4cb, Data2: 0x308d, Data3 : 0x4760, Data4 : (0xa1, 0xd5, 0x43, 0xb6, 0x74, 0x50, 0xac, 0x7e)) }
-// method not needed: SplitText
+    // Windows.Data.Xml.Dom.IXmlText SplitText(System.UInt32)
+    private func _n_SplitText(_ offset : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlText>>>?) throws {
+        return try perform(as: _q_CWindows_CData_CXml_CDom_CIXmlText.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SplitText(pThis, offset, __presult))
+        }
+    }
+    public func SplitText(offset : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlText> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlText>> = nil;
+        try self._n_SplitText(offset, &__result);
+        return Windows.Data.Xml.Dom.IXmlText(consuming: __result);
+    }
 } // IXmlText
 
 
@@ -1293,8 +2507,54 @@ public class XmlCDataSection
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlCDataSection { return _self; }
-    // method not needed: SplitText
-    // instance interface not needed: Windows.Data.Xml.Dom.IXmlCharacterData
+    public func SplitText(offset : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlText> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlText = try _self.QueryInterface();
+        return try _ifc.SplitText(offset: offset);
+    }
+    public func get_Data() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.get_Data();
+    }
+    public func put_Data(value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.put_Data(value: value);
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.get_Length();
+    }
+    public func SubstringData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.SubstringData(offset: offset, count: count);
+    }
+    public func AppendData(data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.AppendData(data: data);
+    }
+    public func InsertData(offset : Swift.UInt32, data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.InsertData(offset: offset, data: data);
+    }
+    public func DeleteData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.DeleteData(offset: offset, count: count);
+    }
+    public func ReplaceData(offset : Swift.UInt32, count : Swift.UInt32, data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.ReplaceData(offset: offset, count: count, data: data);
+    }
+    public var Data : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.Data;
+        }
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.Length;
+        }
+    }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeValue();
@@ -1519,7 +2779,50 @@ public class XmlComment
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlComment { return _self; }
-    // instance interface not needed: Windows.Data.Xml.Dom.IXmlCharacterData
+    public func get_Data() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.get_Data();
+    }
+    public func put_Data(value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.put_Data(value: value);
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.get_Length();
+    }
+    public func SubstringData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.SubstringData(offset: offset, count: count);
+    }
+    public func AppendData(data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.AppendData(data: data);
+    }
+    public func InsertData(offset : Swift.UInt32, data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.InsertData(offset: offset, data: data);
+    }
+    public func DeleteData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.DeleteData(offset: offset, count: count);
+    }
+    public func ReplaceData(offset : Swift.UInt32, count : Swift.UInt32, data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.ReplaceData(offset: offset, count: count, data: data);
+    }
+    public var Data : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.Data;
+        }
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.Length;
+        }
+    }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeValue();
@@ -2372,9 +3675,36 @@ public class XmlDocumentType
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlDocumentType { return _self; }
-    // method not needed: get_Name
-    // method not needed: get_Entities
-    // method not needed: get_Notations
+    public func get_Name() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDocumentType = try _self.QueryInterface();
+        return try _ifc.get_Name();
+    }
+    public func get_Entities() throws -> Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDocumentType = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.get_Entities());
+    }
+    public func get_Notations() throws -> Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDocumentType = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.get_Notations());
+    }
+    public var Entities : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDocumentType = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Entities);
+        }
+    }
+    public var Name : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDocumentType = try _self.QueryInterface();
+        return try _ifc.Name;
+        }
+    }
+    public var Notations : Optional<Windows.Data.Xml.Dom.XmlNamedNodeMap> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDocumentType = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNamedNodeMap(plok: _ifc.Notations);
+        }
+    }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeValue();
@@ -2599,7 +3929,10 @@ public class XmlDomImplementation
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlDomImplementation { return _self; }
-    // method not needed: HasFeature
+    public func HasFeature(feature : Swift.String, version : Optional<WinRT.Object>) throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlDomImplementation = try _self.QueryInterface();
+        return try _ifc.HasFeature(feature: feature, version: version!.GetInterface());
+    }
 }
 
 // type: Windows.Data.Xml.Dom.XmlElement
@@ -2614,19 +3947,64 @@ public class XmlElement
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlElement { return _self; }
-    // method not needed: get_TagName
-    // method not needed: GetAttribute
-    // method not needed: SetAttribute
-    // method not needed: RemoveAttribute
-    // method not needed: GetAttributeNode
-    // method not needed: SetAttributeNode
-    // method not needed: RemoveAttributeNode
-    // method not needed: GetElementsByTagName
-    // method not needed: SetAttributeNS
-    // method not needed: GetAttributeNS
-    // method not needed: RemoveAttributeNS
-    // method not needed: SetAttributeNodeNS
-    // method not needed: GetAttributeNodeNS
+    public func get_TagName() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.get_TagName();
+    }
+    public func GetAttribute(attributeName : Swift.String) throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.GetAttribute(attributeName: attributeName);
+    }
+    public func SetAttribute(attributeName : Swift.String, attributeValue : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.SetAttribute(attributeName: attributeName, attributeValue: attributeValue);
+    }
+    public func RemoveAttribute(attributeName : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.RemoveAttribute(attributeName: attributeName);
+    }
+    public func GetAttributeNode(attributeName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.XmlAttribute> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlAttribute(plok: _ifc.GetAttributeNode(attributeName: attributeName));
+    }
+    public func SetAttributeNode(newAttribute : Optional<Windows.Data.Xml.Dom.XmlAttribute>) throws -> Optional<Windows.Data.Xml.Dom.XmlAttribute> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlAttribute(plok: _ifc.SetAttributeNode(newAttribute: newAttribute!.Interface()));
+    }
+    public func RemoveAttributeNode(attributeNode : Optional<Windows.Data.Xml.Dom.XmlAttribute>) throws -> Optional<Windows.Data.Xml.Dom.XmlAttribute> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlAttribute(plok: _ifc.RemoveAttributeNode(attributeNode: attributeNode!.Interface()));
+    }
+    public func GetElementsByTagName(tagName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.XmlNodeList> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlNodeList(plok: _ifc.GetElementsByTagName(tagName: tagName));
+    }
+    public func SetAttributeNS(namespaceUri : Optional<WinRT.Object>, qualifiedName : Swift.String, value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.SetAttributeNS(namespaceUri: namespaceUri!.GetInterface(), qualifiedName: qualifiedName, value: value);
+    }
+    public func GetAttributeNS(namespaceUri : Optional<WinRT.Object>, localName : Swift.String) throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.GetAttributeNS(namespaceUri: namespaceUri!.GetInterface(), localName: localName);
+    }
+    public func RemoveAttributeNS(namespaceUri : Optional<WinRT.Object>, localName : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.RemoveAttributeNS(namespaceUri: namespaceUri!.GetInterface(), localName: localName);
+    }
+    public func SetAttributeNodeNS(newAttribute : Optional<Windows.Data.Xml.Dom.XmlAttribute>) throws -> Optional<Windows.Data.Xml.Dom.XmlAttribute> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlAttribute(plok: _ifc.SetAttributeNodeNS(newAttribute: newAttribute!.Interface()));
+    }
+    public func GetAttributeNodeNS(namespaceUri : Optional<WinRT.Object>, localName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.XmlAttribute> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try Windows.Data.Xml.Dom.XmlAttribute(plok: _ifc.GetAttributeNodeNS(namespaceUri: namespaceUri!.GetInterface(), localName: localName));
+    }
+    public var TagName : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlElement = try _self.QueryInterface();
+        return try _ifc.TagName;
+        }
+    }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeValue();
@@ -3079,16 +4457,76 @@ public class XmlLoadSettings
         _self = try RoActivateInstance("Windows.Data.Xml.Dom.XmlLoadSettings")
         try super.init(plok: _self.QueryInterface())
     }
-    // method not needed: get_MaxElementDepth
-    // method not needed: put_MaxElementDepth
-    // method not needed: get_ProhibitDtd
-    // method not needed: put_ProhibitDtd
-    // method not needed: get_ResolveExternals
-    // method not needed: put_ResolveExternals
-    // method not needed: get_ValidateOnParse
-    // method not needed: put_ValidateOnParse
-    // method not needed: get_ElementContentWhiteSpace
-    // method not needed: put_ElementContentWhiteSpace
+    public func get_MaxElementDepth() throws -> Swift.UInt32 {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.get_MaxElementDepth();
+    }
+    public func put_MaxElementDepth(value : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.put_MaxElementDepth(value: value);
+    }
+    public func get_ProhibitDtd() throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.get_ProhibitDtd();
+    }
+    public func put_ProhibitDtd(value : boolean) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.put_ProhibitDtd(value: value);
+    }
+    public func get_ResolveExternals() throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.get_ResolveExternals();
+    }
+    public func put_ResolveExternals(value : boolean) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.put_ResolveExternals(value: value);
+    }
+    public func get_ValidateOnParse() throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.get_ValidateOnParse();
+    }
+    public func put_ValidateOnParse(value : boolean) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.put_ValidateOnParse(value: value);
+    }
+    public func get_ElementContentWhiteSpace() throws -> boolean {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.get_ElementContentWhiteSpace();
+    }
+    public func put_ElementContentWhiteSpace(value : boolean) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.put_ElementContentWhiteSpace(value: value);
+    }
+    public var ElementContentWhiteSpace : boolean {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.ElementContentWhiteSpace;
+        }
+    }
+    public var MaxElementDepth : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.MaxElementDepth;
+        }
+    }
+    public var ProhibitDtd : boolean {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.ProhibitDtd;
+        }
+    }
+    public var ResolveExternals : boolean {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.ResolveExternals;
+        }
+    }
+    public var ValidateOnParse : boolean {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlLoadSettings = try _self.QueryInterface();
+        return try _ifc.ValidateOnParse;
+        }
+    }
 }
 
 // type: Windows.Data.Xml.Dom.XmlNamedNodeMap
@@ -3103,16 +4541,49 @@ public class XmlNamedNodeMap
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlNamedNodeMap { return _self; }
-    // method not needed: get_Length
-    // method not needed: Item
-    // method not needed: GetNamedItem
-    // method not needed: SetNamedItem
-    // method not needed: RemoveNamedItem
-    // method not needed: GetNamedItemNS
-    // method not needed: RemoveNamedItemNS
-    // method not needed: SetNamedItemNS
-    // instance interface not needed: Windows.Foundation.Collections.IVectorView`1[[Windows.Data.Xml.Dom.IXmlNode, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
-    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Windows.Data.Xml.Dom.IXmlNode, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+    public func get_Length() throws -> Swift.UInt32 {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.get_Length();
+    }
+    public func Item(index : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.Item(index: index);
+    }
+    public func GetNamedItem(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.GetNamedItem(name: name);
+    }
+    public func SetNamedItem(node : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.SetNamedItem(node: node);
+    }
+    public func RemoveNamedItem(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.RemoveNamedItem(name: name);
+    }
+    public func GetNamedItemNS(namespaceUri : Optional<WinRT.Object>, name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.GetNamedItemNS(namespaceUri: namespaceUri!.GetInterface(), name: name);
+    }
+    public func RemoveNamedItemNS(namespaceUri : Optional<WinRT.Object>, name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.RemoveNamedItemNS(namespaceUri: namespaceUri!.GetInterface(), name: name);
+    }
+    public func SetNamedItemNS(node : Optional<Windows.Data.Xml.Dom.IXmlNode>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.SetNamedItemNS(node: node);
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNamedNodeMap = try _self.QueryInterface();
+        return try _ifc.Length;
+        }
+    }
+    // method not needed: GetAt
+    // method not needed: get_Size
+    // method not needed: IndexOf
+    // method not needed: GetMany
+    // method not needed: First
 }
 
 // type: Windows.Data.Xml.Dom.XmlNodeList
@@ -3127,10 +4598,25 @@ public class XmlNodeList
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlNodeList { return _self; }
-    // method not needed: get_Length
-    // method not needed: Item
-    // instance interface not needed: Windows.Foundation.Collections.IVectorView`1[[Windows.Data.Xml.Dom.IXmlNode, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
-    // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Windows.Data.Xml.Dom.IXmlNode, Windows, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+    public func get_Length() throws -> Swift.UInt32 {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeList = try _self.QueryInterface();
+        return try _ifc.get_Length();
+    }
+    public func Item(index : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeList = try _self.QueryInterface();
+        return try _ifc.Item(index: index);
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlNodeList = try _self.QueryInterface();
+        return try _ifc.Length;
+        }
+    }
+    // method not needed: GetAt
+    // method not needed: get_Size
+    // method not needed: IndexOf
+    // method not needed: GetMany
+    // method not needed: First
 }
 
 // type: Windows.Data.Xml.Dom.XmlProcessingInstruction
@@ -3145,9 +4631,30 @@ public class XmlProcessingInstruction
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlProcessingInstruction { return _self; }
-    // method not needed: get_Target
-    // method not needed: get_Data
-    // method not needed: put_Data
+    public func get_Target() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlProcessingInstruction = try _self.QueryInterface();
+        return try _ifc.get_Target();
+    }
+    public func get_Data() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlProcessingInstruction = try _self.QueryInterface();
+        return try _ifc.get_Data();
+    }
+    public func put_Data(value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlProcessingInstruction = try _self.QueryInterface();
+        return try _ifc.put_Data(value: value);
+    }
+    public var Data : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlProcessingInstruction = try _self.QueryInterface();
+        return try _ifc.Data;
+        }
+    }
+    public var Target : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlProcessingInstruction = try _self.QueryInterface();
+        return try _ifc.Target;
+        }
+    }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeValue();
@@ -3372,8 +4879,54 @@ public class XmlText
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Windows.Data.Xml.Dom.IXmlText { return _self; }
-    // method not needed: SplitText
-    // instance interface not needed: Windows.Data.Xml.Dom.IXmlCharacterData
+    public func SplitText(offset : Swift.UInt32) throws -> Optional<Windows.Data.Xml.Dom.IXmlText> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlText = try _self.QueryInterface();
+        return try _ifc.SplitText(offset: offset);
+    }
+    public func get_Data() throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.get_Data();
+    }
+    public func put_Data(value : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.put_Data(value: value);
+    }
+    public func get_Length() throws -> Swift.UInt32 {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.get_Length();
+    }
+    public func SubstringData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Optional<Swift.String> {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.SubstringData(offset: offset, count: count);
+    }
+    public func AppendData(data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.AppendData(data: data);
+    }
+    public func InsertData(offset : Swift.UInt32, data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.InsertData(offset: offset, data: data);
+    }
+    public func DeleteData(offset : Swift.UInt32, count : Swift.UInt32) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.DeleteData(offset: offset, count: count);
+    }
+    public func ReplaceData(offset : Swift.UInt32, count : Swift.UInt32, data : Swift.String) throws -> Void {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.ReplaceData(offset: offset, count: count, data: data);
+    }
+    public var Data : Optional<Swift.String> {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.Data;
+        }
+    }
+    public var Length : Swift.UInt32 {
+        get throws {
+        let _ifc : Windows.Data.Xml.Dom.IXmlCharacterData = try _self.QueryInterface();
+        return try _ifc.Length;
+        }
+    }
     public func get_NodeValue() throws -> Optional<WinRT.IInspectable> {
         let _ifc : Windows.Data.Xml.Dom.IXmlNode = try _self.QueryInterface();
         return try _ifc.get_NodeValue();
