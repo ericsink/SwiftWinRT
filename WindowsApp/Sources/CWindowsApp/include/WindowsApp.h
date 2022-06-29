@@ -5,6 +5,8 @@
 typedef struct _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDragEventHandler _q_CMicrosoft_CUI_CXaml_CIDragEventHandler;
@@ -40,6 +42,17 @@ typedef enum _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing
     _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_InnerBorderEdge = 0,
     _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_OuterBorderEdge = 1,
 } _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing;
+typedef enum _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment_Default = 0,
+    _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment_BottomEdge = 1,
+} _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment;
+typedef enum _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Normal = 0,
+    _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Lower = 1,
+    _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Upper = 2,
+} _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing;
 typedef enum _q_CMicrosoft_CUI_CXaml_CControls_CClickMode
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CClickMode_Release = 0,
@@ -358,6 +371,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactor
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButton _q_CMicrosoft_CUI_CXaml_CControls_CIButton;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory;
@@ -391,6 +405,19 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelFactory _q_CMicroso
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBox _q_CMicrosoft_CUI_CXaml_CControls_CITextBox;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIUIElementCollection _q_CMicrosoft_CUI_CXaml_CControls_CIUIElementCollection;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIUserControl _q_CMicrosoft_CUI_CXaml_CControls_CIUserControl;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIUserControlFactory _q_CMicrosoft_CUI_CXaml_CControls_CIUserControlFactory;
@@ -458,6 +485,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIContextRequestedEventArgs _q_CMi
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs _q_CMicrosoft_CUI_CXaml_CInput_CIDoubleTappedRoutedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIGettingFocusEventArgs _q_CMicrosoft_CUI_CXaml_CInput_CIGettingFocusEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIInputScope _q_CMicrosoft_CUI_CXaml_CInput_CIInputScope;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAccelerator;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorFactory _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs;
@@ -588,6 +616,17 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CRowDefinition;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinition;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CTextHighlighter;
@@ -599,8 +638,6 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_C
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CUIElement;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement;
-typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs;
-typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs;
 // definition of structs for value types
 struct _q_CMicrosoft_CUI_CXaml_CCornerRadius
 {
@@ -649,6 +686,28 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueCha
 struct _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandlerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandlerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandlerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler* pThis, IInspectable* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* e);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandlerVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandlerVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallbackVtbl
 {
@@ -1372,6 +1431,20 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStaticsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Bounds;
+} _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl
 {
@@ -2166,6 +2239,315 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStaticsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Text)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Text)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_SelectedText)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectedText)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionLength)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionLength)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionStart)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionStart)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxLength)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaxLength)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_IsReadOnly)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsReadOnly)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AcceptsReturn)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AcceptsReturn)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_TextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_TextWrapping)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextWrapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextWrapping)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextWrapping value);
+    HRESULT (STDMETHODCALLTYPE* get_IsSpellCheckEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsSpellCheckEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextPredictionEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsTextPredictionEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_InputScope)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CInput_CIInputScope** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InputScope)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* value);
+    HRESULT (STDMETHODCALLTYPE* get_Header)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Header)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* get_HeaderTemplate)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CIDataTemplate** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeaderTemplate)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CIDataTemplate* value);
+    HRESULT (STDMETHODCALLTYPE* get_PlaceholderText)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_PlaceholderText)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionHighlightColor)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionHighlightColor)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_PreventKeyboardDisplayOnProgrammaticFocus)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_PreventKeyboardDisplayOnProgrammaticFocus)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_IsColorFontEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IsColorFontEnabled)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionHighlightColorWhenNotFocused)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionHighlightColorWhenNotFocused)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_HorizontalTextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HorizontalTextAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_CharacterCasing)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CharacterCasing)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing value);
+    HRESULT (STDMETHODCALLTYPE* get_PlaceholderForeground)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_PlaceholderForeground)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_CanPasteClipboardContent)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CanUndo)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CanRedo)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionFlyout)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SelectionFlyout)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase* value);
+    HRESULT (STDMETHODCALLTYPE* get_ProofingMenuFlyout)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Description)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Description)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* add_TextChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_TextChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_SelectionChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_SelectionChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_ContextMenuOpening)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_ContextMenuOpening)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Paste)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Paste)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_TextCompositionStarted)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_TextCompositionStarted)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_TextCompositionChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_TextCompositionChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_TextCompositionEnded)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_TextCompositionEnded)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_CopyingToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_CopyingToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_CuttingToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_CuttingToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_BeforeTextChanging)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_BeforeTextChanging)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_SelectionChanging)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_SelectionChanging)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* Select)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32 start, INT32 length);
+    HRESULT (STDMETHODCALLTYPE* SelectAll)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* GetRectFromCharacterIndex)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, INT32 charIndex, boolean trailingEdge, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetLinguisticAlternativesAsync)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING** __pret);
+    HRESULT (STDMETHODCALLTYPE* Undo)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* Redo)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* PasteFromClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* CopySelectionToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* CutSelectionToClipboard)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* ClearUndoRedoHistory)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis);
+    HRESULT (STDMETHODCALLTYPE* get_TextReadingOrder)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextReadingOrder* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TextReadingOrder)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CTextReadingOrder value);
+    HRESULT (STDMETHODCALLTYPE* get_DesiredCandidateWindowAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DesiredCandidateWindowAlignment)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment value);
+    HRESULT (STDMETHODCALLTYPE* add_CandidateWindowBoundsChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_CandidateWindowBoundsChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_TextChanging)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_TextChanging)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBox* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBox
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_NewText;
+    void* unneeded_get_Cancel;
+    void* unneeded_put_Cancel;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_SelectionStart;
+    void* unneeded_get_SelectionLength;
+    void* unneeded_get_Cancel;
+    void* unneeded_put_Cancel;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_TextProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaxLengthProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsReadOnlyProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AcceptsReturnProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextAlignmentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextWrappingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsSpellCheckEnabledProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsTextPredictionEnabledProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_InputScopeProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HeaderProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HeaderTemplateProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PlaceholderTextProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionHighlightColorProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PreventKeyboardDisplayOnProgrammaticFocusProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsColorFontEnabledProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionHighlightColorWhenNotFocusedProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HorizontalTextAlignmentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CharacterCasingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PlaceholderForegroundProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CanPasteClipboardContentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CanUndoProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CanRedoProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SelectionFlyoutProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ProofingMenuFlyoutProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DescriptionProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DesiredCandidateWindowAlignmentProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TextReadingOrderProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_IsContentChanging;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_StartIndex;
+    void* unneeded_get_Length;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_StartIndex;
+    void* unneeded_get_Length;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_StartIndex;
+    void* unneeded_get_Length;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs* This, TrustLevel* trustLevel);
+    void* unneeded_get_Handled;
+    void* unneeded_put_Handled;
+} _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIUIElementCollectionVtbl
 {
@@ -3451,6 +3833,20 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgs
 {
     _q_CMicrosoft_CUI_CXaml_CInput_CIHoldingRoutedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIInputScopeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope* This, TrustLevel* trustLevel);
+    void* unneeded_get_Names;
+} _q_CMicrosoft_CUI_CXaml_CInput_CIInputScopeVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CInput_CIInputScope
+{
+    _q_CMicrosoft_CUI_CXaml_CInput_CIInputScopeVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorVtbl
 {
@@ -5853,6 +6249,127 @@ struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXa
 {
     _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CControls_CColumnDefinitionVtbl* lpVtbl;
 };
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIControl* sender, _q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIControl* sender, _q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CITextBox* sender, _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgsVtbl* lpVtbl;
+};
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInlineVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CDocuments_CInline* This, REFIID riid, void** ppvObject);
@@ -6051,26 +6568,4 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_C
 struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement
 {
     _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl* lpVtbl;
-};
-typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIControl* sender, _q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs* args);
-} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl;
-struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
-{
-    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl* lpVtbl;
-};
-typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl
-{
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* This);
-    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CIControl* sender, _q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs* args);
-} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl;
-struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
-{
-    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl* lpVtbl;
 };

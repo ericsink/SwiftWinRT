@@ -20,6 +20,7 @@ let SwiftWinRT = Package(
               .unsafeFlags(["-Xlinker"]),
               .unsafeFlags(["/MANIFEST:embed"]),
               .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
+              .linkedLibrary("Microsoft.WindowsAppRuntime"), // TODO need this?
               .linkedLibrary("Ole32"),
             ]
             ),

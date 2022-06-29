@@ -64,6 +64,29 @@ open class Button
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.CandidateWindowAlignment
+// enum type
+public typealias CandidateWindowAlignment = _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment;
+
+// type: Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs
+// runtime class
+public class CandidateWindowBoundsChangedEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ICandidateWindowBoundsChangedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ICandidateWindowBoundsChangedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ICandidateWindowBoundsChangedEventArgs { return _self; }
+    // method not needed: get_Bounds
+}
+
+// type: Microsoft.UI.Xaml.Controls.CharacterCasing
+// enum type
+public typealias CharacterCasing = _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing;
+
 // type: Microsoft.UI.Xaml.Controls.ClickMode
 // enum type
 public typealias ClickMode = _q_CMicrosoft_CUI_CXaml_CControls_CClickMode;
@@ -185,11 +208,11 @@ open class ContentControl
     }
     public init(plok: Microsoft.UI.Xaml.Controls.IContentControl?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.IContentControl { return _self; }
     private static var vtable_IContentControlOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverridesVtbl = .init(
@@ -567,11 +590,11 @@ open class Control
     }
     public init(plok: Microsoft.UI.Xaml.Controls.IControl?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.IControl { return _self; }
     private static var vtable_IControlOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverridesVtbl = .init(
@@ -2162,6 +2185,17 @@ open class IButtonStatics
         }
     }
 } // IButtonStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.ICandidateWindowBoundsChangedEventArgs
+// interface type
+open class ICandidateWindowBoundsChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb76faf94, Data2: 0x3172, Data3 : 0x5c50, Data4 : (0x95, 0x07, 0x26, 0xcd, 0x87, 0x38, 0x15, 0xa1)) }
+// method not needed: get_Bounds
+} // ICandidateWindowBoundsChangedEventArgs
 
 
 // type: Microsoft.UI.Xaml.Controls.IColumnDefinition
@@ -6978,6 +7012,1688 @@ open class ITextBlockStatics
 } // ITextBlockStatics
 
 
+// type: Microsoft.UI.Xaml.Controls.ITextBox
+// interface type
+open class ITextBox
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x873af7c2, Data2: 0xab89, Data3 : 0x5d76, Data4 : (0x8d, 0xbe, 0x3d, 0x63, 0x25, 0x66, 0x9d, 0xf5)) }
+    // [IsSpecialName] System.String get_Text()
+    private func _n_get_Text(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Text(pThis, __presult))
+        }
+    }
+    public func get_Text() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_Text(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_Text(System.String)
+    private func _n_put_Text(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
+        }
+    }
+    public func put_Text(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_Text(__hstr_value.Raw());
+        }
+    }
+    // [IsSpecialName] System.String get_SelectedText()
+    private func _n_get_SelectedText(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectedText(pThis, __presult))
+        }
+    }
+    public func get_SelectedText() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_SelectedText(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_SelectedText(System.String)
+    private func _n_put_SelectedText(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectedText(pThis, value))
+        }
+    }
+    public func put_SelectedText(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_SelectedText(__hstr_value.Raw());
+        }
+    }
+    // [IsSpecialName] System.Int32 get_SelectionLength()
+    private func _n_get_SelectionLength(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionLength(pThis, __presult))
+        }
+    }
+    public func get_SelectionLength() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_SelectionLength(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SelectionLength(System.Int32)
+    private func _n_put_SelectionLength(_ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectionLength(pThis, value))
+        }
+    }
+    public func put_SelectionLength(value : Swift.Int32) throws -> Void {
+        try self._n_put_SelectionLength(value);
+    }
+    // [IsSpecialName] System.Int32 get_SelectionStart()
+    private func _n_get_SelectionStart(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionStart(pThis, __presult))
+        }
+    }
+    public func get_SelectionStart() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_SelectionStart(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SelectionStart(System.Int32)
+    private func _n_put_SelectionStart(_ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectionStart(pThis, value))
+        }
+    }
+    public func put_SelectionStart(value : Swift.Int32) throws -> Void {
+        try self._n_put_SelectionStart(value);
+    }
+    // [IsSpecialName] System.Int32 get_MaxLength()
+    private func _n_get_MaxLength(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxLength(pThis, __presult))
+        }
+    }
+    public func get_MaxLength() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_MaxLength(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaxLength(System.Int32)
+    private func _n_put_MaxLength(_ value : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxLength(pThis, value))
+        }
+    }
+    public func put_MaxLength(value : Swift.Int32) throws -> Void {
+        try self._n_put_MaxLength(value);
+    }
+    // [IsSpecialName] bool get_IsReadOnly()
+    private func _n_get_IsReadOnly(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsReadOnly(pThis, __presult))
+        }
+    }
+    public func get_IsReadOnly() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsReadOnly(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsReadOnly(bool)
+    private func _n_put_IsReadOnly(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsReadOnly(pThis, value))
+        }
+    }
+    public func put_IsReadOnly(value : boolean) throws -> Void {
+        try self._n_put_IsReadOnly(value);
+    }
+    // [IsSpecialName] bool get_AcceptsReturn()
+    private func _n_get_AcceptsReturn(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AcceptsReturn(pThis, __presult))
+        }
+    }
+    public func get_AcceptsReturn() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_AcceptsReturn(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_AcceptsReturn(bool)
+    private func _n_put_AcceptsReturn(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_AcceptsReturn(pThis, value))
+        }
+    }
+    public func put_AcceptsReturn(value : boolean) throws -> Void {
+        try self._n_put_AcceptsReturn(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.TextAlignment get_TextAlignment()
+    private func _n_get_TextAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CTextAlignment>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextAlignment(pThis, __presult))
+        }
+    }
+    public func get_TextAlignment() throws -> Microsoft.UI.Xaml.TextAlignment {
+        var __result : _q_CMicrosoft_CUI_CXaml_CTextAlignment = _q_CMicrosoft_CUI_CXaml_CTextAlignment_Center;
+        try self._n_get_TextAlignment(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TextAlignment(Microsoft.UI.Xaml.TextAlignment)
+    private func _n_put_TextAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CTextAlignment) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TextAlignment(pThis, value))
+        }
+    }
+    public func put_TextAlignment(value : Microsoft.UI.Xaml.TextAlignment) throws -> Void {
+        try self._n_put_TextAlignment(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.TextWrapping get_TextWrapping()
+    private func _n_get_TextWrapping(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CTextWrapping>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextWrapping(pThis, __presult))
+        }
+    }
+    public func get_TextWrapping() throws -> Microsoft.UI.Xaml.TextWrapping {
+        var __result : _q_CMicrosoft_CUI_CXaml_CTextWrapping = _q_CMicrosoft_CUI_CXaml_CTextWrapping_NoWrap;
+        try self._n_get_TextWrapping(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TextWrapping(Microsoft.UI.Xaml.TextWrapping)
+    private func _n_put_TextWrapping(_ value : _q_CMicrosoft_CUI_CXaml_CTextWrapping) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TextWrapping(pThis, value))
+        }
+    }
+    public func put_TextWrapping(value : Microsoft.UI.Xaml.TextWrapping) throws -> Void {
+        try self._n_put_TextWrapping(value);
+    }
+    // [IsSpecialName] bool get_IsSpellCheckEnabled()
+    private func _n_get_IsSpellCheckEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsSpellCheckEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsSpellCheckEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsSpellCheckEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsSpellCheckEnabled(bool)
+    private func _n_put_IsSpellCheckEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsSpellCheckEnabled(pThis, value))
+        }
+    }
+    public func put_IsSpellCheckEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsSpellCheckEnabled(value);
+    }
+    // [IsSpecialName] bool get_IsTextPredictionEnabled()
+    private func _n_get_IsTextPredictionEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTextPredictionEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsTextPredictionEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsTextPredictionEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsTextPredictionEnabled(bool)
+    private func _n_put_IsTextPredictionEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsTextPredictionEnabled(pThis, value))
+        }
+    }
+    public func put_IsTextPredictionEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsTextPredictionEnabled(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Input.InputScope get_InputScope()
+    private func _n_get_InputScope(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_InputScope(pThis, __presult))
+        }
+    }
+    public func get_InputScope() throws -> Optional<Microsoft.UI.Xaml.Input.IInputScope> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope>> = nil;
+        try self._n_get_InputScope(&__result);
+        return Microsoft.UI.Xaml.Input.IInputScope(consuming: __result);
+    }
+    // [IsSpecialName] void put_InputScope(Microsoft.UI.Xaml.Input.InputScope)
+    private func _n_put_InputScope(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIInputScope>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_InputScope(pThis, value))
+        }
+    }
+    public func put_InputScope(value : Optional<Microsoft.UI.Xaml.Input.IInputScope>) throws -> Void {
+        try self._n_put_InputScope(RawPointer(value));
+    }
+    // [IsSpecialName] System.Object get_Header()
+    private func _n_get_Header(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Header(pThis, __presult))
+        }
+    }
+    public func get_Header() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_Header(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_Header(System.Object)
+    private func _n_put_Header(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Header(pThis, value))
+        }
+    }
+    public func put_Header(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_Header(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DataTemplate get_HeaderTemplate()
+    private func _n_get_HeaderTemplate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTemplate(pThis, __presult))
+        }
+    }
+    public func get_HeaderTemplate() throws -> Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+        try self._n_get_HeaderTemplate(&__result);
+        return Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
+    private func _n_put_HeaderTemplate(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_HeaderTemplate(pThis, value))
+        }
+    }
+    public func put_HeaderTemplate(value : Optional<Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_put_HeaderTemplate(RawPointer(value));
+    }
+    // [IsSpecialName] System.String get_PlaceholderText()
+    private func _n_get_PlaceholderText(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PlaceholderText(pThis, __presult))
+        }
+    }
+    public func get_PlaceholderText() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_PlaceholderText(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_PlaceholderText(System.String)
+    private func _n_put_PlaceholderText(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_PlaceholderText(pThis, value))
+        }
+    }
+    public func put_PlaceholderText(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_PlaceholderText(__hstr_value.Raw());
+        }
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.SolidColorBrush get_SelectionHighlightColor()
+    private func _n_get_SelectionHighlightColor(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionHighlightColor(pThis, __presult))
+        }
+    }
+    public func get_SelectionHighlightColor() throws -> Optional<Microsoft.UI.Xaml.Media.ISolidColorBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>> = nil;
+        try self._n_get_SelectionHighlightColor(&__result);
+        return Microsoft.UI.Xaml.Media.ISolidColorBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_SelectionHighlightColor(Microsoft.UI.Xaml.Media.SolidColorBrush)
+    private func _n_put_SelectionHighlightColor(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectionHighlightColor(pThis, value))
+        }
+    }
+    public func put_SelectionHighlightColor(value : Optional<Microsoft.UI.Xaml.Media.ISolidColorBrush>) throws -> Void {
+        try self._n_put_SelectionHighlightColor(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_PreventKeyboardDisplayOnProgrammaticFocus()
+    private func _n_get_PreventKeyboardDisplayOnProgrammaticFocus(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreventKeyboardDisplayOnProgrammaticFocus(pThis, __presult))
+        }
+    }
+    public func get_PreventKeyboardDisplayOnProgrammaticFocus() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_PreventKeyboardDisplayOnProgrammaticFocus(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_PreventKeyboardDisplayOnProgrammaticFocus(bool)
+    private func _n_put_PreventKeyboardDisplayOnProgrammaticFocus(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_PreventKeyboardDisplayOnProgrammaticFocus(pThis, value))
+        }
+    }
+    public func put_PreventKeyboardDisplayOnProgrammaticFocus(value : boolean) throws -> Void {
+        try self._n_put_PreventKeyboardDisplayOnProgrammaticFocus(value);
+    }
+    // [IsSpecialName] bool get_IsColorFontEnabled()
+    private func _n_get_IsColorFontEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsColorFontEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsColorFontEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsColorFontEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsColorFontEnabled(bool)
+    private func _n_put_IsColorFontEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsColorFontEnabled(pThis, value))
+        }
+    }
+    public func put_IsColorFontEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsColorFontEnabled(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.SolidColorBrush get_SelectionHighlightColorWhenNotFocused()
+    private func _n_get_SelectionHighlightColorWhenNotFocused(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionHighlightColorWhenNotFocused(pThis, __presult))
+        }
+    }
+    public func get_SelectionHighlightColorWhenNotFocused() throws -> Optional<Microsoft.UI.Xaml.Media.ISolidColorBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>> = nil;
+        try self._n_get_SelectionHighlightColorWhenNotFocused(&__result);
+        return Microsoft.UI.Xaml.Media.ISolidColorBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_SelectionHighlightColorWhenNotFocused(Microsoft.UI.Xaml.Media.SolidColorBrush)
+    private func _n_put_SelectionHighlightColorWhenNotFocused(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CISolidColorBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectionHighlightColorWhenNotFocused(pThis, value))
+        }
+    }
+    public func put_SelectionHighlightColorWhenNotFocused(value : Optional<Microsoft.UI.Xaml.Media.ISolidColorBrush>) throws -> Void {
+        try self._n_put_SelectionHighlightColorWhenNotFocused(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.TextAlignment get_HorizontalTextAlignment()
+    private func _n_get_HorizontalTextAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CTextAlignment>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalTextAlignment(pThis, __presult))
+        }
+    }
+    public func get_HorizontalTextAlignment() throws -> Microsoft.UI.Xaml.TextAlignment {
+        var __result : _q_CMicrosoft_CUI_CXaml_CTextAlignment = _q_CMicrosoft_CUI_CXaml_CTextAlignment_Center;
+        try self._n_get_HorizontalTextAlignment(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_HorizontalTextAlignment(Microsoft.UI.Xaml.TextAlignment)
+    private func _n_put_HorizontalTextAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CTextAlignment) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_HorizontalTextAlignment(pThis, value))
+        }
+    }
+    public func put_HorizontalTextAlignment(value : Microsoft.UI.Xaml.TextAlignment) throws -> Void {
+        try self._n_put_HorizontalTextAlignment(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.CharacterCasing get_CharacterCasing()
+    private func _n_get_CharacterCasing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CharacterCasing(pThis, __presult))
+        }
+    }
+    public func get_CharacterCasing() throws -> Microsoft.UI.Xaml.Controls.CharacterCasing {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing = _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Normal;
+        try self._n_get_CharacterCasing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CharacterCasing(Microsoft.UI.Xaml.Controls.CharacterCasing)
+    private func _n_put_CharacterCasing(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CharacterCasing(pThis, value))
+        }
+    }
+    public func put_CharacterCasing(value : Microsoft.UI.Xaml.Controls.CharacterCasing) throws -> Void {
+        try self._n_put_CharacterCasing(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_PlaceholderForeground()
+    private func _n_get_PlaceholderForeground(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PlaceholderForeground(pThis, __presult))
+        }
+    }
+    public func get_PlaceholderForeground() throws -> Optional<Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_PlaceholderForeground(&__result);
+        return Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_PlaceholderForeground(Microsoft.UI.Xaml.Media.Brush)
+    private func _n_put_PlaceholderForeground(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_PlaceholderForeground(pThis, value))
+        }
+    }
+    public func put_PlaceholderForeground(value : Optional<Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_PlaceholderForeground(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_CanPasteClipboardContent()
+    private func _n_get_CanPasteClipboardContent(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanPasteClipboardContent(pThis, __presult))
+        }
+    }
+    public func get_CanPasteClipboardContent() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanPasteClipboardContent(&__result);
+        return __result;
+    }
+    // [IsSpecialName] bool get_CanUndo()
+    private func _n_get_CanUndo(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanUndo(pThis, __presult))
+        }
+    }
+    public func get_CanUndo() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanUndo(&__result);
+        return __result;
+    }
+    // [IsSpecialName] bool get_CanRedo()
+    private func _n_get_CanRedo(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanRedo(pThis, __presult))
+        }
+    }
+    public func get_CanRedo() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanRedo(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase get_SelectionFlyout()
+    private func _n_get_SelectionFlyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionFlyout(pThis, __presult))
+        }
+    }
+    public func get_SelectionFlyout() throws -> Optional<Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>> = nil;
+        try self._n_get_SelectionFlyout(&__result);
+        return Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase(consuming: __result);
+    }
+    // [IsSpecialName] void put_SelectionFlyout(Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase)
+    private func _n_put_SelectionFlyout(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectionFlyout(pThis, value))
+        }
+    }
+    public func put_SelectionFlyout(value : Optional<Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase>) throws -> Void {
+        try self._n_put_SelectionFlyout(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase get_ProofingMenuFlyout()
+    private func _n_get_ProofingMenuFlyout(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProofingMenuFlyout(pThis, __presult))
+        }
+    }
+    public func get_ProofingMenuFlyout() throws -> Optional<Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIFlyoutBase>> = nil;
+        try self._n_get_ProofingMenuFlyout(&__result);
+        return Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase(consuming: __result);
+    }
+    // [IsSpecialName] System.Object get_Description()
+    private func _n_get_Description(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Description(pThis, __presult))
+        }
+    }
+    public func get_Description() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_Description(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_Description(System.Object)
+    private func _n_put_Description(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Description(pThis, value))
+        }
+    }
+    public func put_Description(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_Description(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_TextChanged(Microsoft.UI.Xaml.Controls.TextChangedEventHandler)
+    private func _n_add_TextChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_TextChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_TextChanged(handler : Optional<Microsoft.UI.Xaml.Controls.ITextChangedEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_TextChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_TextChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_TextChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TextChanged(pThis, token))
+        }
+    }
+    public func remove_TextChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_TextChanged(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_SelectionChanged(Microsoft.UI.Xaml.RoutedEventHandler)
+    private func _n_add_SelectionChanged(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_SelectionChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_SelectionChanged(handler : Optional<Microsoft.UI.Xaml.IRoutedEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_SelectionChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_SelectionChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_SelectionChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_SelectionChanged(pThis, token))
+        }
+    }
+    public func remove_SelectionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_SelectionChanged(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ContextMenuOpening(Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler)
+    private func _n_add_ContextMenuOpening(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ContextMenuOpening(pThis, handler, __presult))
+        }
+    }
+    public func add_ContextMenuOpening(handler : Optional<Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ContextMenuOpening(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ContextMenuOpening(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ContextMenuOpening(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ContextMenuOpening(pThis, token))
+        }
+    }
+    public func remove_ContextMenuOpening(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ContextMenuOpening(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_Paste(Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler)
+    private func _n_add_Paste(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_Paste(pThis, handler, __presult))
+        }
+    }
+    public func add_Paste(handler : Optional<Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_Paste(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_Paste(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_Paste(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_Paste(pThis, token))
+        }
+    }
+    public func remove_Paste(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_Paste(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_TextCompositionStarted(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs>)
+    private func _n_add_TextCompositionStarted(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_TextCompositionStarted(pThis, handler, __presult))
+        }
+    }
+    public func add_TextCompositionStarted(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_TextCompositionStarted(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_TextCompositionStarted(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_TextCompositionStarted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TextCompositionStarted(pThis, token))
+        }
+    }
+    public func remove_TextCompositionStarted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_TextCompositionStarted(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_TextCompositionChanged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs>)
+    private func _n_add_TextCompositionChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_TextCompositionChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_TextCompositionChanged(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_TextCompositionChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_TextCompositionChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_TextCompositionChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TextCompositionChanged(pThis, token))
+        }
+    }
+    public func remove_TextCompositionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_TextCompositionChanged(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_TextCompositionEnded(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs>)
+    private func _n_add_TextCompositionEnded(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_TextCompositionEnded(pThis, handler, __presult))
+        }
+    }
+    public func add_TextCompositionEnded(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_TextCompositionEnded(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_TextCompositionEnded(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_TextCompositionEnded(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TextCompositionEnded(pThis, token))
+        }
+    }
+    public func remove_TextCompositionEnded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_TextCompositionEnded(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_CopyingToClipboard(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs>)
+    private func _n_add_CopyingToClipboard(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_CopyingToClipboard(pThis, handler, __presult))
+        }
+    }
+    public func add_CopyingToClipboard(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_CopyingToClipboard(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_CopyingToClipboard(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_CopyingToClipboard(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_CopyingToClipboard(pThis, token))
+        }
+    }
+    public func remove_CopyingToClipboard(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_CopyingToClipboard(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_CuttingToClipboard(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs>)
+    private func _n_add_CuttingToClipboard(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_CuttingToClipboard(pThis, handler, __presult))
+        }
+    }
+    public func add_CuttingToClipboard(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_CuttingToClipboard(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_CuttingToClipboard(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_CuttingToClipboard(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_CuttingToClipboard(pThis, token))
+        }
+    }
+    public func remove_CuttingToClipboard(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_CuttingToClipboard(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_BeforeTextChanging(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs>)
+    private func _n_add_BeforeTextChanging(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_BeforeTextChanging(pThis, handler, __presult))
+        }
+    }
+    public func add_BeforeTextChanging(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_BeforeTextChanging(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_BeforeTextChanging(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_BeforeTextChanging(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_BeforeTextChanging(pThis, token))
+        }
+    }
+    public func remove_BeforeTextChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_BeforeTextChanging(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_SelectionChanging(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs>)
+    private func _n_add_SelectionChanging(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_SelectionChanging(pThis, handler, __presult))
+        }
+    }
+    public func add_SelectionChanging(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_SelectionChanging(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_SelectionChanging(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_SelectionChanging(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_SelectionChanging(pThis, token))
+        }
+    }
+    public func remove_SelectionChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_SelectionChanging(token);
+    }
+    // void Select(System.Int32, System.Int32)
+    private func _n_Select(_ start : INT32, _ length : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Select(pThis, start, length))
+        }
+    }
+    public func Select(start : Swift.Int32, length : Swift.Int32) throws -> Void {
+        try self._n_Select(start, length);
+    }
+    // void SelectAll()
+    private func _n_SelectAll() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SelectAll(pThis))
+        }
+    }
+    public func SelectAll() throws -> Void {
+        try self._n_SelectAll();
+    }
+    // Windows.Foundation.Rect GetRectFromCharacterIndex(System.Int32, bool)
+    private func _n_GetRectFromCharacterIndex(_ charIndex : INT32, _ trailingEdge : boolean, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CRect>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetRectFromCharacterIndex(pThis, charIndex, trailingEdge, __presult))
+        }
+    }
+    public func GetRectFromCharacterIndex(charIndex : Swift.Int32, trailingEdge : boolean) throws -> Windows.Foundation.Rect {
+        var __result : _q_CWindows_CFoundation_CRect = _q_CWindows_CFoundation_CRect(X: 0, Y: 0, Width: 0, Height: 0);
+        try self._n_GetRectFromCharacterIndex(charIndex, trailingEdge, &__result);
+        return __result;
+    }
+    // Windows.Foundation.IAsyncOperation<Windows.Foundation.Collections.IVectorView<System.String>> GetLinguisticAlternativesAsync()
+    private func _n_GetLinguisticAlternativesAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetLinguisticAlternativesAsync(pThis, __presult))
+        }
+    }
+    public func GetLinguisticAlternativesAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>> = nil;
+        try self._n_GetLinguisticAlternativesAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(consuming: __result);
+    }
+    public func GetLinguisticAlternatives() async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetLinguisticAlternativesAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // void Undo()
+    private func _n_Undo() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Undo(pThis))
+        }
+    }
+    public func Undo() throws -> Void {
+        try self._n_Undo();
+    }
+    // void Redo()
+    private func _n_Redo() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Redo(pThis))
+        }
+    }
+    public func Redo() throws -> Void {
+        try self._n_Redo();
+    }
+    // void PasteFromClipboard()
+    private func _n_PasteFromClipboard() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.PasteFromClipboard(pThis))
+        }
+    }
+    public func PasteFromClipboard() throws -> Void {
+        try self._n_PasteFromClipboard();
+    }
+    // void CopySelectionToClipboard()
+    private func _n_CopySelectionToClipboard() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CopySelectionToClipboard(pThis))
+        }
+    }
+    public func CopySelectionToClipboard() throws -> Void {
+        try self._n_CopySelectionToClipboard();
+    }
+    // void CutSelectionToClipboard()
+    private func _n_CutSelectionToClipboard() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CutSelectionToClipboard(pThis))
+        }
+    }
+    public func CutSelectionToClipboard() throws -> Void {
+        try self._n_CutSelectionToClipboard();
+    }
+    // void ClearUndoRedoHistory()
+    private func _n_ClearUndoRedoHistory() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ClearUndoRedoHistory(pThis))
+        }
+    }
+    public func ClearUndoRedoHistory() throws -> Void {
+        try self._n_ClearUndoRedoHistory();
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.TextReadingOrder get_TextReadingOrder()
+    private func _n_get_TextReadingOrder(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CTextReadingOrder>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextReadingOrder(pThis, __presult))
+        }
+    }
+    public func get_TextReadingOrder() throws -> Microsoft.UI.Xaml.TextReadingOrder {
+        var __result : _q_CMicrosoft_CUI_CXaml_CTextReadingOrder = _q_CMicrosoft_CUI_CXaml_CTextReadingOrder_Default;
+        try self._n_get_TextReadingOrder(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TextReadingOrder(Microsoft.UI.Xaml.TextReadingOrder)
+    private func _n_put_TextReadingOrder(_ value : _q_CMicrosoft_CUI_CXaml_CTextReadingOrder) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TextReadingOrder(pThis, value))
+        }
+    }
+    public func put_TextReadingOrder(value : Microsoft.UI.Xaml.TextReadingOrder) throws -> Void {
+        try self._n_put_TextReadingOrder(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.CandidateWindowAlignment get_DesiredCandidateWindowAlignment()
+    private func _n_get_DesiredCandidateWindowAlignment(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DesiredCandidateWindowAlignment(pThis, __presult))
+        }
+    }
+    public func get_DesiredCandidateWindowAlignment() throws -> Microsoft.UI.Xaml.Controls.CandidateWindowAlignment {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment = _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment_Default;
+        try self._n_get_DesiredCandidateWindowAlignment(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_DesiredCandidateWindowAlignment(Microsoft.UI.Xaml.Controls.CandidateWindowAlignment)
+    private func _n_put_DesiredCandidateWindowAlignment(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DesiredCandidateWindowAlignment(pThis, value))
+        }
+    }
+    public func put_DesiredCandidateWindowAlignment(value : Microsoft.UI.Xaml.Controls.CandidateWindowAlignment) throws -> Void {
+        try self._n_put_DesiredCandidateWindowAlignment(value);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_CandidateWindowBoundsChanged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs>)
+    private func _n_add_CandidateWindowBoundsChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_CandidateWindowBoundsChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_CandidateWindowBoundsChanged(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_CandidateWindowBoundsChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_CandidateWindowBoundsChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_CandidateWindowBoundsChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_CandidateWindowBoundsChanged(pThis, token))
+        }
+    }
+    public func remove_CandidateWindowBoundsChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_CandidateWindowBoundsChanged(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_TextChanging(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.TextBox,Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs>)
+    private func _n_add_TextChanging(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_TextChanging(pThis, handler, __presult))
+        }
+    }
+    public func add_TextChanging(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_TextChanging(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_TextChanging(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_TextChanging(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBox.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_TextChanging(pThis, token))
+        }
+    }
+    public func remove_TextChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_TextChanging(token);
+    }
+    public var AcceptsReturn : boolean {
+        get throws {
+            return try get_AcceptsReturn();
+        }
+    }
+    public var CanPasteClipboardContent : boolean {
+        get throws {
+            return try get_CanPasteClipboardContent();
+        }
+    }
+    public var CanRedo : boolean {
+        get throws {
+            return try get_CanRedo();
+        }
+    }
+    public var CanUndo : boolean {
+        get throws {
+            return try get_CanUndo();
+        }
+    }
+    public var CharacterCasing : Microsoft.UI.Xaml.Controls.CharacterCasing {
+        get throws {
+            return try get_CharacterCasing();
+        }
+    }
+    public var Description : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Description();
+        }
+    }
+    public var DesiredCandidateWindowAlignment : Microsoft.UI.Xaml.Controls.CandidateWindowAlignment {
+        get throws {
+            return try get_DesiredCandidateWindowAlignment();
+        }
+    }
+    public var Header : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Header();
+        }
+    }
+    public var HeaderTemplate : Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        get throws {
+            return try get_HeaderTemplate();
+        }
+    }
+    public var HorizontalTextAlignment : Microsoft.UI.Xaml.TextAlignment {
+        get throws {
+            return try get_HorizontalTextAlignment();
+        }
+    }
+    public var InputScope : Optional<Microsoft.UI.Xaml.Input.IInputScope> {
+        get throws {
+            return try get_InputScope();
+        }
+    }
+    public var IsColorFontEnabled : boolean {
+        get throws {
+            return try get_IsColorFontEnabled();
+        }
+    }
+    public var IsReadOnly : boolean {
+        get throws {
+            return try get_IsReadOnly();
+        }
+    }
+    public var IsSpellCheckEnabled : boolean {
+        get throws {
+            return try get_IsSpellCheckEnabled();
+        }
+    }
+    public var IsTextPredictionEnabled : boolean {
+        get throws {
+            return try get_IsTextPredictionEnabled();
+        }
+    }
+    public var MaxLength : Swift.Int32 {
+        get throws {
+            return try get_MaxLength();
+        }
+    }
+    public var PlaceholderForeground : Optional<Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_PlaceholderForeground();
+        }
+    }
+    public var PlaceholderText : Swift.String {
+        get throws {
+            return try get_PlaceholderText();
+        }
+    }
+    public var PreventKeyboardDisplayOnProgrammaticFocus : boolean {
+        get throws {
+            return try get_PreventKeyboardDisplayOnProgrammaticFocus();
+        }
+    }
+    public var ProofingMenuFlyout : Optional<Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase> {
+        get throws {
+            return try get_ProofingMenuFlyout();
+        }
+    }
+    public var SelectedText : Swift.String {
+        get throws {
+            return try get_SelectedText();
+        }
+    }
+    public var SelectionFlyout : Optional<Microsoft.UI.Xaml.Controls.Primitives.IFlyoutBase> {
+        get throws {
+            return try get_SelectionFlyout();
+        }
+    }
+    public var SelectionHighlightColor : Optional<Microsoft.UI.Xaml.Media.ISolidColorBrush> {
+        get throws {
+            return try get_SelectionHighlightColor();
+        }
+    }
+    public var SelectionHighlightColorWhenNotFocused : Optional<Microsoft.UI.Xaml.Media.ISolidColorBrush> {
+        get throws {
+            return try get_SelectionHighlightColorWhenNotFocused();
+        }
+    }
+    public var SelectionLength : Swift.Int32 {
+        get throws {
+            return try get_SelectionLength();
+        }
+    }
+    public var SelectionStart : Swift.Int32 {
+        get throws {
+            return try get_SelectionStart();
+        }
+    }
+    public var Text : Swift.String {
+        get throws {
+            return try get_Text();
+        }
+    }
+    public var TextAlignment : Microsoft.UI.Xaml.TextAlignment {
+        get throws {
+            return try get_TextAlignment();
+        }
+    }
+    public var TextReadingOrder : Microsoft.UI.Xaml.TextReadingOrder {
+        get throws {
+            return try get_TextReadingOrder();
+        }
+    }
+    public var TextWrapping : Microsoft.UI.Xaml.TextWrapping {
+        get throws {
+            return try get_TextWrapping();
+        }
+    }
+} // ITextBox
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextBoxBeforeTextChangingEventArgs
+// interface type
+open class ITextBoxBeforeTextChangingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xba46105b, Data2: 0x9a16, Data3 : 0x5237, Data4 : (0xa2, 0x0f, 0x5d, 0xf7, 0x50, 0x99, 0x2a, 0x05)) }
+// method not needed: get_NewText
+// method not needed: get_Cancel
+// method not needed: put_Cancel
+} // ITextBoxBeforeTextChangingEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextBoxFactory
+// interface type
+// COMPOSITION INTERFACE
+open class ITextBoxFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe1d8b82e, Data2: 0xbc60, Data3 : 0x5d27, Data4 : (0xb6, 0x46, 0x5c, 0xa4, 0xc4, 0xa6, 0x94, 0x32)) }
+    // Microsoft.UI.Xaml.Controls.TextBox CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.ITextBox> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.ITextBox(consuming: __result);
+    }
+} // ITextBoxFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextBoxSelectionChangingEventArgs
+// interface type
+open class ITextBoxSelectionChangingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6dce20db, Data2: 0x894e, Data3 : 0x5ff6, Data4 : (0x82, 0x5b, 0xf9, 0x89, 0x1a, 0xf7, 0x95, 0x16)) }
+// method not needed: get_SelectionStart
+// method not needed: get_SelectionLength
+// method not needed: get_Cancel
+// method not needed: put_Cancel
+} // ITextBoxSelectionChangingEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextBoxStatics
+// interface type
+open class ITextBoxStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa41cf38f, Data2: 0x712a, Data3 : 0x5599, Data4 : (0xbb, 0xed, 0x5a, 0x3d, 0x9b, 0x6b, 0xd4, 0x6e)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TextProperty()
+    private func _n_get_TextProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextProperty(pThis, __presult))
+        }
+    }
+    public func get_TextProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TextProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaxLengthProperty()
+    private func _n_get_MaxLengthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxLengthProperty(pThis, __presult))
+        }
+    }
+    public func get_MaxLengthProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MaxLengthProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsReadOnlyProperty()
+    private func _n_get_IsReadOnlyProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsReadOnlyProperty(pThis, __presult))
+        }
+    }
+    public func get_IsReadOnlyProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsReadOnlyProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_AcceptsReturnProperty()
+    private func _n_get_AcceptsReturnProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AcceptsReturnProperty(pThis, __presult))
+        }
+    }
+    public func get_AcceptsReturnProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_AcceptsReturnProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TextAlignmentProperty()
+    private func _n_get_TextAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextAlignmentProperty(pThis, __presult))
+        }
+    }
+    public func get_TextAlignmentProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TextAlignmentProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TextWrappingProperty()
+    private func _n_get_TextWrappingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextWrappingProperty(pThis, __presult))
+        }
+    }
+    public func get_TextWrappingProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TextWrappingProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsSpellCheckEnabledProperty()
+    private func _n_get_IsSpellCheckEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsSpellCheckEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsSpellCheckEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsSpellCheckEnabledProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsTextPredictionEnabledProperty()
+    private func _n_get_IsTextPredictionEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsTextPredictionEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsTextPredictionEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsTextPredictionEnabledProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_InputScopeProperty()
+    private func _n_get_InputScopeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_InputScopeProperty(pThis, __presult))
+        }
+    }
+    public func get_InputScopeProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_InputScopeProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderProperty()
+    private func _n_get_HeaderProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderTemplateProperty()
+    private func _n_get_HeaderTemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderTemplateProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PlaceholderTextProperty()
+    private func _n_get_PlaceholderTextProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PlaceholderTextProperty(pThis, __presult))
+        }
+    }
+    public func get_PlaceholderTextProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PlaceholderTextProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SelectionHighlightColorProperty()
+    private func _n_get_SelectionHighlightColorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionHighlightColorProperty(pThis, __presult))
+        }
+    }
+    public func get_SelectionHighlightColorProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SelectionHighlightColorProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PreventKeyboardDisplayOnProgrammaticFocusProperty()
+    private func _n_get_PreventKeyboardDisplayOnProgrammaticFocusProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PreventKeyboardDisplayOnProgrammaticFocusProperty(pThis, __presult))
+        }
+    }
+    public func get_PreventKeyboardDisplayOnProgrammaticFocusProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PreventKeyboardDisplayOnProgrammaticFocusProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsColorFontEnabledProperty()
+    private func _n_get_IsColorFontEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsColorFontEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsColorFontEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsColorFontEnabledProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SelectionHighlightColorWhenNotFocusedProperty()
+    private func _n_get_SelectionHighlightColorWhenNotFocusedProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionHighlightColorWhenNotFocusedProperty(pThis, __presult))
+        }
+    }
+    public func get_SelectionHighlightColorWhenNotFocusedProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SelectionHighlightColorWhenNotFocusedProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HorizontalTextAlignmentProperty()
+    private func _n_get_HorizontalTextAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HorizontalTextAlignmentProperty(pThis, __presult))
+        }
+    }
+    public func get_HorizontalTextAlignmentProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HorizontalTextAlignmentProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CharacterCasingProperty()
+    private func _n_get_CharacterCasingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CharacterCasingProperty(pThis, __presult))
+        }
+    }
+    public func get_CharacterCasingProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CharacterCasingProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PlaceholderForegroundProperty()
+    private func _n_get_PlaceholderForegroundProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PlaceholderForegroundProperty(pThis, __presult))
+        }
+    }
+    public func get_PlaceholderForegroundProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PlaceholderForegroundProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanPasteClipboardContentProperty()
+    private func _n_get_CanPasteClipboardContentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanPasteClipboardContentProperty(pThis, __presult))
+        }
+    }
+    public func get_CanPasteClipboardContentProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CanPasteClipboardContentProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanUndoProperty()
+    private func _n_get_CanUndoProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanUndoProperty(pThis, __presult))
+        }
+    }
+    public func get_CanUndoProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CanUndoProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanRedoProperty()
+    private func _n_get_CanRedoProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanRedoProperty(pThis, __presult))
+        }
+    }
+    public func get_CanRedoProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CanRedoProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SelectionFlyoutProperty()
+    private func _n_get_SelectionFlyoutProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionFlyoutProperty(pThis, __presult))
+        }
+    }
+    public func get_SelectionFlyoutProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SelectionFlyoutProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ProofingMenuFlyoutProperty()
+    private func _n_get_ProofingMenuFlyoutProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ProofingMenuFlyoutProperty(pThis, __presult))
+        }
+    }
+    public func get_ProofingMenuFlyoutProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ProofingMenuFlyoutProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DescriptionProperty()
+    private func _n_get_DescriptionProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DescriptionProperty(pThis, __presult))
+        }
+    }
+    public func get_DescriptionProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_DescriptionProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DesiredCandidateWindowAlignmentProperty()
+    private func _n_get_DesiredCandidateWindowAlignmentProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DesiredCandidateWindowAlignmentProperty(pThis, __presult))
+        }
+    }
+    public func get_DesiredCandidateWindowAlignmentProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_DesiredCandidateWindowAlignmentProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_TextReadingOrderProperty()
+    private func _n_get_TextReadingOrderProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextBoxStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TextReadingOrderProperty(pThis, __presult))
+        }
+    }
+    public func get_TextReadingOrderProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_TextReadingOrderProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var AcceptsReturnProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_AcceptsReturnProperty();
+        }
+    }
+    public var CanPasteClipboardContentProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CanPasteClipboardContentProperty();
+        }
+    }
+    public var CanRedoProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CanRedoProperty();
+        }
+    }
+    public var CanUndoProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CanUndoProperty();
+        }
+    }
+    public var CharacterCasingProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CharacterCasingProperty();
+        }
+    }
+    public var DescriptionProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_DescriptionProperty();
+        }
+    }
+    public var DesiredCandidateWindowAlignmentProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_DesiredCandidateWindowAlignmentProperty();
+        }
+    }
+    public var HeaderProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderProperty();
+        }
+    }
+    public var HeaderTemplateProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderTemplateProperty();
+        }
+    }
+    public var HorizontalTextAlignmentProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HorizontalTextAlignmentProperty();
+        }
+    }
+    public var InputScopeProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_InputScopeProperty();
+        }
+    }
+    public var IsColorFontEnabledProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsColorFontEnabledProperty();
+        }
+    }
+    public var IsReadOnlyProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsReadOnlyProperty();
+        }
+    }
+    public var IsSpellCheckEnabledProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsSpellCheckEnabledProperty();
+        }
+    }
+    public var IsTextPredictionEnabledProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsTextPredictionEnabledProperty();
+        }
+    }
+    public var MaxLengthProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MaxLengthProperty();
+        }
+    }
+    public var PlaceholderForegroundProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PlaceholderForegroundProperty();
+        }
+    }
+    public var PlaceholderTextProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PlaceholderTextProperty();
+        }
+    }
+    public var PreventKeyboardDisplayOnProgrammaticFocusProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PreventKeyboardDisplayOnProgrammaticFocusProperty();
+        }
+    }
+    public var ProofingMenuFlyoutProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ProofingMenuFlyoutProperty();
+        }
+    }
+    public var SelectionFlyoutProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SelectionFlyoutProperty();
+        }
+    }
+    public var SelectionHighlightColorProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SelectionHighlightColorProperty();
+        }
+    }
+    public var SelectionHighlightColorWhenNotFocusedProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SelectionHighlightColorWhenNotFocusedProperty();
+        }
+    }
+    public var TextAlignmentProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TextAlignmentProperty();
+        }
+    }
+    public var TextProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TextProperty();
+        }
+    }
+    public var TextReadingOrderProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TextReadingOrderProperty();
+        }
+    }
+    public var TextWrappingProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_TextWrappingProperty();
+        }
+    }
+} // ITextBoxStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextBoxTextChangingEventArgs
+// interface type
+open class ITextBoxTextChangingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa1a08d48, Data2: 0xe8c0, Data3 : 0x5379, Data4 : (0xb1, 0x38, 0x7e, 0xb3, 0xf8, 0xd5, 0xf5, 0xe6)) }
+// method not needed: get_IsContentChanging
+} // ITextBoxTextChangingEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextChangedEventArgs
+// interface type
+open class ITextChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x71c37e43, Data2: 0x7be7, Data3 : 0x52fc, Data4 : (0xbf, 0x8c, 0x98, 0x67, 0xf4, 0x4b, 0xe5, 0xf4)) }
+} // ITextChangedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextCompositionChangedEventArgs
+// interface type
+open class ITextCompositionChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x04f420d2, Data2: 0xba9c, Data3 : 0x5f59, Data4 : (0xb8, 0xac, 0x0d, 0x8a, 0xa5, 0x0a, 0x92, 0x40)) }
+// method not needed: get_StartIndex
+// method not needed: get_Length
+} // ITextCompositionChangedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextCompositionEndedEventArgs
+// interface type
+open class ITextCompositionEndedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x19d0a5c5, Data2: 0x8d0f, Data3 : 0x5118, Data4 : (0x8c, 0x30, 0xe7, 0x09, 0x32, 0x6f, 0x12, 0x83)) }
+// method not needed: get_StartIndex
+// method not needed: get_Length
+} // ITextCompositionEndedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextCompositionStartedEventArgs
+// interface type
+open class ITextCompositionStartedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa604ff71, Data2: 0x5d44, Data3 : 0x5859, Data4 : (0x8d, 0x71, 0x72, 0x03, 0x0e, 0xd7, 0x8b, 0xc8)) }
+// method not needed: get_StartIndex
+// method not needed: get_Length
+} // ITextCompositionStartedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextControlCopyingToClipboardEventArgs
+// interface type
+open class ITextControlCopyingToClipboardEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1daac6d5, Data2: 0x8db5, Data3 : 0x5d9f, Data4 : (0x93, 0x82, 0x1e, 0x64, 0x4f, 0x9a, 0xa4, 0x37)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // ITextControlCopyingToClipboardEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextControlCuttingToClipboardEventArgs
+// interface type
+open class ITextControlCuttingToClipboardEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9d73671f, Data2: 0xea30, Data3 : 0x555d, Data4 : (0x81, 0x29, 0x5a, 0x96, 0xae, 0xc7, 0x3a, 0x14)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // ITextControlCuttingToClipboardEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ITextControlPasteEventArgs
+// interface type
+open class ITextControlPasteEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfc5e567e, Data2: 0x3aa9, Data3 : 0x5c57, Data4 : (0x88, 0xd4, 0x83, 0x4a, 0xd3, 0xb6, 0x2e, 0x9e)) }
+// method not needed: get_Handled
+// method not needed: put_Handled
+} // ITextControlPasteEventArgs
+
+
 // type: Microsoft.UI.Xaml.Controls.IUIElementCollection
 // interface type
 open class IUIElementCollection
@@ -8563,6 +10279,1182 @@ public class TextBlock
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.TextBox
+// runtime class
+open class TextBox
+    :
+    Microsoft.UI.Xaml.Controls.Control
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextBox;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextBox?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextBox { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.ITextBoxFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : ITextBoxFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TextBox");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _ITextBoxStatics {
+        static var x : ITextBoxStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.TextBox")
+    }
+    public static var TextBoxStatics : ITextBoxStatics {
+        _ITextBoxStatics.x
+    }
+    public static func get_TextProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_TextProperty());
+    }
+    public static func get_MaxLengthProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_MaxLengthProperty());
+    }
+    public static func get_IsReadOnlyProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_IsReadOnlyProperty());
+    }
+    public static func get_AcceptsReturnProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_AcceptsReturnProperty());
+    }
+    public static func get_TextAlignmentProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_TextAlignmentProperty());
+    }
+    public static func get_TextWrappingProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_TextWrappingProperty());
+    }
+    public static func get_IsSpellCheckEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_IsSpellCheckEnabledProperty());
+    }
+    public static func get_IsTextPredictionEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_IsTextPredictionEnabledProperty());
+    }
+    public static func get_InputScopeProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_InputScopeProperty());
+    }
+    public static func get_HeaderProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_HeaderProperty());
+    }
+    public static func get_HeaderTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_HeaderTemplateProperty());
+    }
+    public static func get_PlaceholderTextProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_PlaceholderTextProperty());
+    }
+    public static func get_SelectionHighlightColorProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_SelectionHighlightColorProperty());
+    }
+    public static func get_PreventKeyboardDisplayOnProgrammaticFocusProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_PreventKeyboardDisplayOnProgrammaticFocusProperty());
+    }
+    public static func get_IsColorFontEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_IsColorFontEnabledProperty());
+    }
+    public static func get_SelectionHighlightColorWhenNotFocusedProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_SelectionHighlightColorWhenNotFocusedProperty());
+    }
+    public static func get_HorizontalTextAlignmentProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_HorizontalTextAlignmentProperty());
+    }
+    public static func get_CharacterCasingProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_CharacterCasingProperty());
+    }
+    public static func get_PlaceholderForegroundProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_PlaceholderForegroundProperty());
+    }
+    public static func get_CanPasteClipboardContentProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_CanPasteClipboardContentProperty());
+    }
+    public static func get_CanUndoProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_CanUndoProperty());
+    }
+    public static func get_CanRedoProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_CanRedoProperty());
+    }
+    public static func get_SelectionFlyoutProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_SelectionFlyoutProperty());
+    }
+    public static func get_ProofingMenuFlyoutProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_ProofingMenuFlyoutProperty());
+    }
+    public static func get_DescriptionProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_DescriptionProperty());
+    }
+    public static func get_DesiredCandidateWindowAlignmentProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_DesiredCandidateWindowAlignmentProperty());
+    }
+    public static func get_TextReadingOrderProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.get_TextReadingOrderProperty());
+    }
+    public static var AcceptsReturnProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.AcceptsReturnProperty);
+        }
+    }
+    public static var CanPasteClipboardContentProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.CanPasteClipboardContentProperty);
+        }
+    }
+    public static var CanRedoProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.CanRedoProperty);
+        }
+    }
+    public static var CanUndoProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.CanUndoProperty);
+        }
+    }
+    public static var CharacterCasingProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.CharacterCasingProperty);
+        }
+    }
+    public static var DescriptionProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.DescriptionProperty);
+        }
+    }
+    public static var DesiredCandidateWindowAlignmentProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.DesiredCandidateWindowAlignmentProperty);
+        }
+    }
+    public static var HeaderProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.HeaderProperty);
+        }
+    }
+    public static var HeaderTemplateProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.HeaderTemplateProperty);
+        }
+    }
+    public static var HorizontalTextAlignmentProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.HorizontalTextAlignmentProperty);
+        }
+    }
+    public static var InputScopeProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.InputScopeProperty);
+        }
+    }
+    public static var IsColorFontEnabledProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.IsColorFontEnabledProperty);
+        }
+    }
+    public static var IsReadOnlyProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.IsReadOnlyProperty);
+        }
+    }
+    public static var IsSpellCheckEnabledProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.IsSpellCheckEnabledProperty);
+        }
+    }
+    public static var IsTextPredictionEnabledProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.IsTextPredictionEnabledProperty);
+        }
+    }
+    public static var MaxLengthProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.MaxLengthProperty);
+        }
+    }
+    public static var PlaceholderForegroundProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.PlaceholderForegroundProperty);
+        }
+    }
+    public static var PlaceholderTextProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.PlaceholderTextProperty);
+        }
+    }
+    public static var PreventKeyboardDisplayOnProgrammaticFocusProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.PreventKeyboardDisplayOnProgrammaticFocusProperty);
+        }
+    }
+    public static var ProofingMenuFlyoutProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.ProofingMenuFlyoutProperty);
+        }
+    }
+    public static var SelectionFlyoutProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.SelectionFlyoutProperty);
+        }
+    }
+    public static var SelectionHighlightColorProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.SelectionHighlightColorProperty);
+        }
+    }
+    public static var SelectionHighlightColorWhenNotFocusedProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.SelectionHighlightColorWhenNotFocusedProperty);
+        }
+    }
+    public static var TextAlignmentProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.TextAlignmentProperty);
+        }
+    }
+    public static var TextProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.TextProperty);
+        }
+    }
+    public static var TextReadingOrderProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.TextReadingOrderProperty);
+        }
+    }
+    public static var TextWrappingProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: TextBoxStatics.TextWrappingProperty);
+        }
+    }
+    public func get_Text() throws -> Optional<Swift.String> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_Text();
+    }
+    public func put_Text(value : Swift.String) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_Text(value: value);
+    }
+    public func get_SelectedText() throws -> Optional<Swift.String> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_SelectedText();
+    }
+    public func put_SelectedText(value : Swift.String) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_SelectedText(value: value);
+    }
+    public func get_SelectionLength() throws -> Swift.Int32 {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_SelectionLength();
+    }
+    public func put_SelectionLength(value : Swift.Int32) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_SelectionLength(value: value);
+    }
+    public func get_SelectionStart() throws -> Swift.Int32 {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_SelectionStart();
+    }
+    public func put_SelectionStart(value : Swift.Int32) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_SelectionStart(value: value);
+    }
+    public func get_MaxLength() throws -> Swift.Int32 {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_MaxLength();
+    }
+    public func put_MaxLength(value : Swift.Int32) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_MaxLength(value: value);
+    }
+    public func get_IsReadOnly() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_IsReadOnly();
+    }
+    public func put_IsReadOnly(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_IsReadOnly(value: value);
+    }
+    public func get_AcceptsReturn() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_AcceptsReturn();
+    }
+    public func put_AcceptsReturn(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_AcceptsReturn(value: value);
+    }
+    public func get_TextAlignment() throws -> Microsoft.UI.Xaml.TextAlignment {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_TextAlignment();
+    }
+    public func put_TextAlignment(value : Microsoft.UI.Xaml.TextAlignment) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_TextAlignment(value: value);
+    }
+    public func get_TextWrapping() throws -> Microsoft.UI.Xaml.TextWrapping {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_TextWrapping();
+    }
+    public func put_TextWrapping(value : Microsoft.UI.Xaml.TextWrapping) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_TextWrapping(value: value);
+    }
+    public func get_IsSpellCheckEnabled() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_IsSpellCheckEnabled();
+    }
+    public func put_IsSpellCheckEnabled(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_IsSpellCheckEnabled(value: value);
+    }
+    public func get_IsTextPredictionEnabled() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_IsTextPredictionEnabled();
+    }
+    public func put_IsTextPredictionEnabled(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_IsTextPredictionEnabled(value: value);
+    }
+    public func get_InputScope() throws -> Optional<Microsoft.UI.Xaml.Input.InputScope> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Input.InputScope(plok: _ifc.get_InputScope());
+    }
+    public func put_InputScope(value : Optional<Microsoft.UI.Xaml.Input.InputScope>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_InputScope(value: value!.Interface());
+    }
+    public func get_Header() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_Header();
+    }
+    public func put_Header(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_Header(value: value!.GetInterface());
+    }
+    public func get_HeaderTemplate() throws -> Optional<Microsoft.UI.Xaml.DataTemplate> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.get_HeaderTemplate());
+    }
+    public func put_HeaderTemplate(value : Optional<Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_HeaderTemplate(value: value!.Interface());
+    }
+    public func get_PlaceholderText() throws -> Optional<Swift.String> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_PlaceholderText();
+    }
+    public func put_PlaceholderText(value : Swift.String) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_PlaceholderText(value: value);
+    }
+    public func get_SelectionHighlightColor() throws -> Optional<Microsoft.UI.Xaml.Media.SolidColorBrush> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.SolidColorBrush(plok: _ifc.get_SelectionHighlightColor());
+    }
+    public func put_SelectionHighlightColor(value : Optional<Microsoft.UI.Xaml.Media.SolidColorBrush>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_SelectionHighlightColor(value: value!.Interface());
+    }
+    public func get_PreventKeyboardDisplayOnProgrammaticFocus() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_PreventKeyboardDisplayOnProgrammaticFocus();
+    }
+    public func put_PreventKeyboardDisplayOnProgrammaticFocus(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_PreventKeyboardDisplayOnProgrammaticFocus(value: value);
+    }
+    public func get_IsColorFontEnabled() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_IsColorFontEnabled();
+    }
+    public func put_IsColorFontEnabled(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_IsColorFontEnabled(value: value);
+    }
+    public func get_SelectionHighlightColorWhenNotFocused() throws -> Optional<Microsoft.UI.Xaml.Media.SolidColorBrush> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.SolidColorBrush(plok: _ifc.get_SelectionHighlightColorWhenNotFocused());
+    }
+    public func put_SelectionHighlightColorWhenNotFocused(value : Optional<Microsoft.UI.Xaml.Media.SolidColorBrush>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_SelectionHighlightColorWhenNotFocused(value: value!.Interface());
+    }
+    public func get_HorizontalTextAlignment() throws -> Microsoft.UI.Xaml.TextAlignment {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_HorizontalTextAlignment();
+    }
+    public func put_HorizontalTextAlignment(value : Microsoft.UI.Xaml.TextAlignment) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_HorizontalTextAlignment(value: value);
+    }
+    public func get_CharacterCasing() throws -> Microsoft.UI.Xaml.Controls.CharacterCasing {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_CharacterCasing();
+    }
+    public func put_CharacterCasing(value : Microsoft.UI.Xaml.Controls.CharacterCasing) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_CharacterCasing(value: value);
+    }
+    public func get_PlaceholderForeground() throws -> Optional<Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_PlaceholderForeground());
+    }
+    public func put_PlaceholderForeground(value : Optional<Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_PlaceholderForeground(value: value!.Interface());
+    }
+    public func get_CanPasteClipboardContent() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_CanPasteClipboardContent();
+    }
+    public func get_CanUndo() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_CanUndo();
+    }
+    public func get_CanRedo() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_CanRedo();
+    }
+    public func get_SelectionFlyout() throws -> Optional<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.get_SelectionFlyout());
+    }
+    public func put_SelectionFlyout(value : Optional<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_SelectionFlyout(value: value!.Interface());
+    }
+    public func get_ProofingMenuFlyout() throws -> Optional<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.get_ProofingMenuFlyout());
+    }
+    public func get_Description() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_Description();
+    }
+    public func put_Description(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_Description(value: value!.GetInterface());
+    }
+    public func add_TextChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_TextChanged(handler: Microsoft.UI.Xaml.Controls.TextChangedEventHandler(cb: handler).Interface());
+    }
+    public func remove_TextChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_TextChanged(token: token);
+    }
+    public func add_SelectionChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_SelectionChanged(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+    }
+    public func remove_SelectionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_SelectionChanged(token: token);
+    }
+    public func add_ContextMenuOpening(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_ContextMenuOpening(handler: Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler(cb: handler).Interface());
+    }
+    public func remove_ContextMenuOpening(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_ContextMenuOpening(token: token);
+    }
+    public func add_Paste(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_Paste(handler: Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler(cb: handler).Interface());
+    }
+    public func remove_Paste(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_Paste(token: token);
+    }
+    public func add_TextCompositionStarted(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_TextCompositionStarted(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(cb: handler).Interface());
+    }
+    public func remove_TextCompositionStarted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_TextCompositionStarted(token: token);
+    }
+    public func add_TextCompositionChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_TextCompositionChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(cb: handler).Interface());
+    }
+    public func remove_TextCompositionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_TextCompositionChanged(token: token);
+    }
+    public func add_TextCompositionEnded(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_TextCompositionEnded(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(cb: handler).Interface());
+    }
+    public func remove_TextCompositionEnded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_TextCompositionEnded(token: token);
+    }
+    public func add_CopyingToClipboard(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_CopyingToClipboard(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(cb: handler).Interface());
+    }
+    public func remove_CopyingToClipboard(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_CopyingToClipboard(token: token);
+    }
+    public func add_CuttingToClipboard(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_CuttingToClipboard(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(cb: handler).Interface());
+    }
+    public func remove_CuttingToClipboard(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_CuttingToClipboard(token: token);
+    }
+    public func add_BeforeTextChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_BeforeTextChanging(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(cb: handler).Interface());
+    }
+    public func remove_BeforeTextChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_BeforeTextChanging(token: token);
+    }
+    public func add_SelectionChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_SelectionChanging(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(cb: handler).Interface());
+    }
+    public func remove_SelectionChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_SelectionChanging(token: token);
+    }
+    public func Select(start : Swift.Int32, length : Swift.Int32) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.Select(start: start, length: length);
+    }
+    public func SelectAll() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.SelectAll();
+    }
+    public func GetRectFromCharacterIndex(charIndex : Swift.Int32, trailingEdge : boolean) throws -> Windows.Foundation.Rect {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.GetRectFromCharacterIndex(charIndex: charIndex, trailingEdge: trailingEdge);
+    }
+    public func GetLinguisticAlternativesAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.GetLinguisticAlternativesAsync();
+    }
+    public func GetLinguisticAlternatives() async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.GetLinguisticAlternativesAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func Undo() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.Undo();
+    }
+    public func Redo() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.Redo();
+    }
+    public func PasteFromClipboard() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.PasteFromClipboard();
+    }
+    public func CopySelectionToClipboard() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.CopySelectionToClipboard();
+    }
+    public func CutSelectionToClipboard() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.CutSelectionToClipboard();
+    }
+    public func ClearUndoRedoHistory() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.ClearUndoRedoHistory();
+    }
+    public func get_TextReadingOrder() throws -> Microsoft.UI.Xaml.TextReadingOrder {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_TextReadingOrder();
+    }
+    public func put_TextReadingOrder(value : Microsoft.UI.Xaml.TextReadingOrder) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_TextReadingOrder(value: value);
+    }
+    public func get_DesiredCandidateWindowAlignment() throws -> Microsoft.UI.Xaml.Controls.CandidateWindowAlignment {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.get_DesiredCandidateWindowAlignment();
+    }
+    public func put_DesiredCandidateWindowAlignment(value : Microsoft.UI.Xaml.Controls.CandidateWindowAlignment) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.put_DesiredCandidateWindowAlignment(value: value);
+    }
+    public func add_CandidateWindowBoundsChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_CandidateWindowBoundsChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(cb: handler).Interface());
+    }
+    public func remove_CandidateWindowBoundsChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_CandidateWindowBoundsChanged(token: token);
+    }
+    public func add_TextChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.add_TextChanging(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(cb: handler).Interface());
+    }
+    public func remove_TextChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.remove_TextChanging(token: token);
+    }
+    public var AcceptsReturn : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.AcceptsReturn;
+        }
+    }
+    public var CanPasteClipboardContent : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.CanPasteClipboardContent;
+        }
+    }
+    public var CanRedo : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.CanRedo;
+        }
+    }
+    public var CanUndo : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.CanUndo;
+        }
+    }
+    public var CharacterCasing : Microsoft.UI.Xaml.Controls.CharacterCasing {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.CharacterCasing;
+        }
+    }
+    public var Description : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.Description;
+        }
+    }
+    public var DesiredCandidateWindowAlignment : Microsoft.UI.Xaml.Controls.CandidateWindowAlignment {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.DesiredCandidateWindowAlignment;
+        }
+    }
+    public var Header : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.Header;
+        }
+    }
+    public var HeaderTemplate : Optional<Microsoft.UI.Xaml.DataTemplate> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.HeaderTemplate);
+        }
+    }
+    public var HorizontalTextAlignment : Microsoft.UI.Xaml.TextAlignment {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.HorizontalTextAlignment;
+        }
+    }
+    public var InputScope : Optional<Microsoft.UI.Xaml.Input.InputScope> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Input.InputScope(plok: _ifc.InputScope);
+        }
+    }
+    public var IsColorFontEnabled : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.IsColorFontEnabled;
+        }
+    }
+    public var IsReadOnly : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.IsReadOnly;
+        }
+    }
+    public var IsSpellCheckEnabled : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.IsSpellCheckEnabled;
+        }
+    }
+    public var IsTextPredictionEnabled : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.IsTextPredictionEnabled;
+        }
+    }
+    public var MaxLength : Swift.Int32 {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.MaxLength;
+        }
+    }
+    public var PlaceholderForeground : Optional<Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.PlaceholderForeground);
+        }
+    }
+    public var PlaceholderText : Optional<Swift.String> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.PlaceholderText;
+        }
+    }
+    public var PreventKeyboardDisplayOnProgrammaticFocus : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.PreventKeyboardDisplayOnProgrammaticFocus;
+        }
+    }
+    public var ProofingMenuFlyout : Optional<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.ProofingMenuFlyout);
+        }
+    }
+    public var SelectedText : Optional<Swift.String> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.SelectedText;
+        }
+    }
+    public var SelectionFlyout : Optional<Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.Primitives.FlyoutBase(plok: _ifc.SelectionFlyout);
+        }
+    }
+    public var SelectionHighlightColor : Optional<Microsoft.UI.Xaml.Media.SolidColorBrush> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.SolidColorBrush(plok: _ifc.SelectionHighlightColor);
+        }
+    }
+    public var SelectionHighlightColorWhenNotFocused : Optional<Microsoft.UI.Xaml.Media.SolidColorBrush> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.SolidColorBrush(plok: _ifc.SelectionHighlightColorWhenNotFocused);
+        }
+    }
+    public var SelectionLength : Swift.Int32 {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.SelectionLength;
+        }
+    }
+    public var SelectionStart : Swift.Int32 {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.SelectionStart;
+        }
+    }
+    public var Text : Optional<Swift.String> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.Text;
+        }
+    }
+    public var TextAlignment : Microsoft.UI.Xaml.TextAlignment {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.TextAlignment;
+        }
+    }
+    public var TextReadingOrder : Microsoft.UI.Xaml.TextReadingOrder {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.TextReadingOrder;
+        }
+    }
+    public var TextWrapping : Microsoft.UI.Xaml.TextWrapping {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
+        return try _ifc.TextWrapping;
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs
+// runtime class
+public class TextBoxBeforeTextChangingEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextBoxBeforeTextChangingEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextBoxBeforeTextChangingEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextBoxBeforeTextChangingEventArgs { return _self; }
+    // method not needed: get_NewText
+    // method not needed: get_Cancel
+    // method not needed: put_Cancel
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs
+// runtime class
+public class TextBoxSelectionChangingEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextBoxSelectionChangingEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextBoxSelectionChangingEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextBoxSelectionChangingEventArgs { return _self; }
+    // method not needed: get_SelectionStart
+    // method not needed: get_SelectionLength
+    // method not needed: get_Cancel
+    // method not needed: put_Cancel
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs
+// runtime class
+public class TextBoxTextChangingEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextBoxTextChangingEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextBoxTextChangingEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextBoxTextChangingEventArgs { return _self; }
+    // method not needed: get_IsContentChanging
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextChangedEventArgs
+// runtime class
+public class TextChangedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextChangedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextChangedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextChangedEventArgs { return _self; }
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextChangedEventHandler
+// delegate type
+open class ITextChangedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x5d8ddcff, Data2: 0x45d8, Data3 : 0x5e7c, Data4 : (0x9b, 0x8b, 0xc4, 0x1d, 0x28, 0x93, 0xc6, 0xa1)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.TextChangedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<Microsoft.UI.Xaml.Controls.ITextChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class TextChangedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Microsoft.UI.Xaml.Controls.ITextChangedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs>>) in
+        guard let self = TextChangedEventHandler.from_TextChangedEventHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: Microsoft.UI.Xaml.Controls.TextChangedEventArgs(plok: Microsoft.UI.Xaml.Controls.ITextChangedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TextChangedEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_TextChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> TextChangedEventHandler? {
+        return pUnk?.bindMemory(to: TextChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, e)
+        }
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextChangedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Microsoft.UI.Xaml.Controls.ITextChangedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_TextChangedEventHandler
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextChangedEventHandler;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextChangedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextChangedEventHandler {
+        return _self
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs
+// runtime class
+public class TextCompositionChangedEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextCompositionChangedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextCompositionChangedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextCompositionChangedEventArgs { return _self; }
+    // method not needed: get_StartIndex
+    // method not needed: get_Length
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs
+// runtime class
+public class TextCompositionEndedEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextCompositionEndedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextCompositionEndedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextCompositionEndedEventArgs { return _self; }
+    // method not needed: get_StartIndex
+    // method not needed: get_Length
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs
+// runtime class
+public class TextCompositionStartedEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextCompositionStartedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextCompositionStartedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextCompositionStartedEventArgs { return _self; }
+    // method not needed: get_StartIndex
+    // method not needed: get_Length
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs
+// runtime class
+public class TextControlCopyingToClipboardEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextControlCopyingToClipboardEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextControlCopyingToClipboardEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextControlCopyingToClipboardEventArgs { return _self; }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs
+// runtime class
+public class TextControlCuttingToClipboardEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextControlCuttingToClipboardEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextControlCuttingToClipboardEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextControlCuttingToClipboardEventArgs { return _self; }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs
+// runtime class
+public class TextControlPasteEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextControlPasteEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextControlPasteEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextControlPasteEventArgs { return _self; }
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+}
+
+// type: Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler
+// delegate type
+open class ITextControlPasteEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xddf3a6c0, Data2: 0x5ab1, Data3 : 0x5d74, Data4 : (0x82, 0x89, 0x89, 0x2c, 0x06, 0x14, 0x65, 0x8f)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<Microsoft.UI.Xaml.Controls.ITextControlPasteEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class TextControlPasteEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs>>) in
+        guard let self = TextControlPasteEventHandler.from_TextControlPasteEventHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs(plok: Microsoft.UI.Xaml.Controls.ITextControlPasteEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TextControlPasteEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_TextControlPasteEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> TextControlPasteEventHandler? {
+        return pUnk?.bindMemory(to: TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, e)
+        }
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_TextControlPasteEventHandler
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler;
+    public init(plok: Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler {
+        return _self
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.UIElementCollection
 // runtime class
 public class UIElementCollection
@@ -8698,6 +11590,35 @@ extension Microsoft.UI.Xaml.Controls.BackgroundSizing {
     public static var OuterBorderEdge : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_OuterBorderEdge;
+        }
+    }
+}
+extension Microsoft.UI.Xaml.Controls.CandidateWindowAlignment {
+    public static var Default : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment_Default;
+        }
+    }
+    public static var BottomEdge : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowAlignment_BottomEdge;
+        }
+    }
+}
+extension Microsoft.UI.Xaml.Controls.CharacterCasing {
+    public static var Normal : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Normal;
+        }
+    }
+    public static var Lower : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Lower;
+        }
+    }
+    public static var Upper : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing_Upper;
         }
     }
 }

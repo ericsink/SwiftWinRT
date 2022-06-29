@@ -53,6 +53,70 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try btn.put_Content(value: TextBlock(text: "Click", fontSize: 32));
         try stack.Children!.Append(value: btn)
 
+#if not
+        // TODO crashes
+        let tf = try Microsoft.UI.Xaml.Controls.TextBox()
+        try tf.put_Width(value: 400)
+        try tf.put_Text(value: "")
+        try tf.put_Header(value: TextBlock(text: "Header", fontSize: 12));
+        try tf.put_Description(value: TextBlock(text: "Description", fontSize: 12));
+        //try tf.put_Header(value: "Notes")
+        try tf.put_PlaceholderText(value: "Type here")
+        print("\(#file) -- \(#line)")
+        try stack.Children!.Append(value: tf)
+        print("\(#file) -- \(#line)")
+#endif
+
+#if not
+        let rc = try Microsoft.UI.Xaml.Controls.RatingControl()
+        try rc.put_Caption(value: "chomp")
+        try rc.put_InitialSetValue(value: 2)
+        try rc.put_MaxRating(value: 5)
+        try rc.put_Value(value: 1)
+        _ = try rc.add_ValueChanged
+        {
+            (sender, e) in
+            print("CHOMP")
+        }
+        try stack.Children!.Append(value: rc)
+#endif
+
+#if not
+        let listview = try Microsoft.UI.Xaml.Controls.ListView()
+        try listview.Items!.Append(value: TextBlock(text: "one", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "two", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "three", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "four", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "five", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "six", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "seven", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "eight", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "nine", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "ten", fontSize: 24))
+        try listview.Items!.Append(value: TextBlock(text: "eleven", fontSize: 24))
+        try stack.Children!.Append(value: listview)
+#endif
+
+#if not
+        let cal = try Microsoft.UI.Xaml.Controls.CalendarDatePicker()
+        try stack.Children!.Append(value: cal)
+#endif
+
+#if not
+        let color = try Microsoft.UI.Xaml.Controls.ColorPicker()
+        try stack.Children!.Append(value: color)
+#endif
+
+#if not
+        let dpick = try Microsoft.UI.Xaml.Controls.DatePicker()
+        try stack.Children!.Append(value: dpick)
+#endif
+
+#if not
+        let rich = try Microsoft.UI.Xaml.Controls.RichEditBox()
+        try stack.Children!.Append(value: rich)
+#endif
+
         try w.put_Content(value: stack);
 
         try w.Activate();

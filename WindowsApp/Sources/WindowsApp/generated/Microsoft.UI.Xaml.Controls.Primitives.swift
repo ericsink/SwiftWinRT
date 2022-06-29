@@ -978,11 +978,11 @@ open class RangeBase
     }
     public init(plok: Microsoft.UI.Xaml.Controls.Primitives.IRangeBase?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IRangeBaseOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IRangeBaseOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable_IRangeBaseOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.Primitives.IRangeBase { return _self; }
     private static var vtable_IRangeBaseOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverridesVtbl = .init(

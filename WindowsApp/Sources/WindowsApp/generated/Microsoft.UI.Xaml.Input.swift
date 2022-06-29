@@ -517,6 +517,17 @@ open class IHoldingRoutedEventArgs
 } // IHoldingRoutedEventArgs
 
 
+// type: Microsoft.UI.Xaml.Input.IInputScope
+// interface type
+open class IInputScope
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x76ea58b1, Data2: 0xe910, Data3 : 0x5176, Data4 : (0x91, 0x47, 0x69, 0x5c, 0xc9, 0x5e, 0x7d, 0xa2)) }
+// method not needed: get_Names
+} // IInputScope
+
+
 // type: Microsoft.UI.Xaml.Input.IKeyRoutedEventArgs
 // interface type
 open class IKeyRoutedEventArgs
@@ -903,6 +914,25 @@ open class ITappedRoutedEventArgs
 // method not needed: GetPosition
 } // ITappedRoutedEventArgs
 
+
+// type: Microsoft.UI.Xaml.Input.InputScope
+// runtime class
+public class InputScope
+    :
+    Microsoft.UI.Xaml.DependencyObject
+{
+    private var _self : Microsoft.UI.Xaml.Input.IInputScope;
+    public init(plok: Microsoft.UI.Xaml.Input.IInputScope?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Input.IInputScope { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Input.InputScope")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Names
+}
 
 // type: Microsoft.UI.Xaml.Input.KeyEventHandler
 // delegate type

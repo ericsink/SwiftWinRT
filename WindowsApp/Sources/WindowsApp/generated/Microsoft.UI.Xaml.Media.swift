@@ -38,11 +38,11 @@ open class Brush
     }
     public init(plok: Microsoft.UI.Xaml.Media.IBrush?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IBrushOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable_IBrushOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Media.IBrush { return _self; }
     private static var vtable_IBrushOverrides: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverridesVtbl = .init(

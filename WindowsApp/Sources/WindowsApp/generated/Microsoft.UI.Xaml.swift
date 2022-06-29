@@ -30,11 +30,11 @@ open class Application
     }
     public init(plok: Microsoft.UI.Xaml.IApplication?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IApplicationOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IApplicationOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable_IApplicationOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.IApplication { return _self; }
     private static var vtable_IApplicationOverrides: _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl = .init(
@@ -1246,11 +1246,11 @@ open class FrameworkElement
     }
     public init(plok: Microsoft.UI.Xaml.IFrameworkElement?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IFrameworkElementOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IFrameworkElementOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable_IFrameworkElementOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.IFrameworkElement { return _self; }
     private static var vtable_IFrameworkElementOverrides: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverridesVtbl = .init(
@@ -9577,11 +9577,11 @@ open class UIElement
     }
     public init(plok: Microsoft.UI.Xaml.IUIElement?) throws {
         _self = plok!
-        self.instance = nil
-        try super.init(plok: _self.QueryInterface())
         let instance = UnsafeMutablePointer<WithTrailingObjects_IUIElementOverrides>.allocate(capacity: 1)
         instance.pointee = WithTrailingObjects_IUIElementOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides(lpVtbl: &Self.vtable_IUIElementOverrides), container: Unmanaged<Container>.passRetained(Container()))
         self.instance = instance
+        try super.init(plok: _self.QueryInterface())
+        instance.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.IUIElement { return _self; }
     private static var vtable_IUIElementOverrides: _q_CMicrosoft_CUI_CXaml_CIUIElementOverridesVtbl = .init(
