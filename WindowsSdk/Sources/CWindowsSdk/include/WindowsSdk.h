@@ -2249,9 +2249,13 @@ typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass _q_CWindo
 typedef struct _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory _q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClassFactory;
 typedef struct _q_CWindows_CGlobalization_CILanguage _q_CWindows_CGlobalization_CILanguage;
 typedef struct _q_CWindows_CGlobalization_CILanguageFactory _q_CWindows_CGlobalization_CILanguageFactory;
+typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice;
 typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface;
+typedef struct _q_CWindows_CGraphics_CEffects_CIGraphicsEffect _q_CWindows_CGraphics_CEffects_CIGraphicsEffect;
+typedef struct _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource;
 typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmap _q_CWindows_CGraphics_CImaging_CISoftwareBitmap;
 typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory;
+typedef struct _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore;
 typedef struct _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader;
 typedef struct _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader2 _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader2;
 typedef struct _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader3 _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloader3;
@@ -3527,6 +3531,9 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CF
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFoundation_CPoint _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFoundation_CPoint;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT;
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource;
 // definition of structs for value types
 struct _q_CWindows_CData_CText_CTextSegment
 {
@@ -5371,6 +5378,20 @@ struct _q_CWindows_CGlobalization_CILanguageFactory
 {
     _q_CWindows_CGlobalization_CILanguageFactoryVtbl* lpVtbl;
 };
+typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDeviceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Trim)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* pThis);
+} _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDeviceVtbl;
+struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice
+{
+    _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDeviceVtbl* lpVtbl;
+};
 typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurfaceVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface* This, REFIID riid, void** ppvObject);
@@ -5384,6 +5405,34 @@ typedef struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurfaceVtbl
 struct _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurface
 {
     _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DSurfaceVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CGraphics_CEffects_CIGraphicsEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Name)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Name)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffect* pThis, HSTRING name);
+} _q_CWindows_CGraphics_CEffects_CIGraphicsEffectVtbl;
+struct _q_CWindows_CGraphics_CEffects_CIGraphicsEffect
+{
+    _q_CWindows_CGraphics_CEffects_CIGraphicsEffectVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, TrustLevel* trustLevel);
+} _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl;
+struct _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource
+{
+    _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapVtbl
 {
@@ -5426,6 +5475,20 @@ typedef struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactoryVtbl
 struct _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactory
 {
     _q_CWindows_CGraphics_CImaging_CISoftwareBitmapFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore* This, TrustLevel* trustLevel);
+    void* unneeded_GetPageDescription;
+} _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl;
+struct _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore
+{
+    _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCoreVtbl* lpVtbl;
 };
 typedef struct _q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundDownloaderVtbl
 {
@@ -26103,4 +26166,60 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOATVtbl
 struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT
 {
     _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOATVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* This, TrustLevel* trustLevel);
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRectVtbl;
+struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect
+{
+    _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRectVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32 index, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetView)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* value, UINT32* index, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32 index, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32 index, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis);
+    HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32 startIndex, UINT32 itemsLength, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* pThis, UINT32 itemsLength, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** items);
+} _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSourceVtbl* lpVtbl;
 };

@@ -15,6 +15,25 @@ public typealias Direct3DMultisampleDescription = _q_CWindows_CGraphics_CDirectX
 // struct type
 public typealias Direct3DSurfaceDescription = _q_CWindows_CGraphics_CDirectX_CDirect3D11_CDirect3DSurfaceDescription;
 
+// type: Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice
+// interface type
+open class IDirect3DDevice
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa37624ab, Data2: 0x8d5f, Data3 : 0x4650, Data4 : (0x9d, 0x3e, 0x9e, 0xae, 0x3d, 0x9b, 0xc6, 0x70)) }
+    // void Trim()
+    private func _n_Trim() throws {
+        return try perform(as: _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Trim(pThis))
+        }
+    }
+    public func Trim() throws -> Void {
+        try self._n_Trim();
+    }
+} // IDirect3DDevice
+
+
 // type: Windows.Graphics.DirectX.Direct3D11.IDirect3DSurface
 // interface type
 open class IDirect3DSurface

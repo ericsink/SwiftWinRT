@@ -1031,6 +1031,149 @@ open class IDownloadProgressEventArgs
 } // IDownloadProgressEventArgs
 
 
+// type: Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource
+// interface type
+open class ISurfaceImageSource
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xac078d9c, Data2: 0xd0e0, Data3 : 0x5ff9, Data4 : (0xb7, 0x3e, 0x98, 0xe8, 0x2e, 0x4c, 0x8d, 0x36)) }
+} // ISurfaceImageSource
+
+
+// type: Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory
+// interface type
+// COMPOSITION INTERFACE
+open class ISurfaceImageSourceFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x09a26ed2, Data2: 0x11b3, Data3 : 0x5ef1, Data4 : (0xac, 0x56, 0x20, 0xd0, 0x64, 0xcc, 0xca, 0x34)) }
+    // Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource CreateInstanceWithDimensions(System.Int32, System.Int32, System.Object, ref System.Object)
+    private func _n_CreateInstanceWithDimensions(_ pixelWidth : INT32, _ pixelHeight : INT32, _ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithDimensions(pThis, pixelWidth, pixelHeight, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstanceWithDimensions(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstanceWithDimensions(pixelWidth, pixelHeight, RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource(consuming: __result);
+    }
+    // Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource CreateInstanceWithDimensionsAndOpacity(System.Int32, System.Int32, bool, System.Object, ref System.Object)
+    private func _n_CreateInstanceWithDimensionsAndOpacity(_ pixelWidth : INT32, _ pixelHeight : INT32, _ isOpaque : boolean, _ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithDimensionsAndOpacity(pThis, pixelWidth, pixelHeight, isOpaque, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstanceWithDimensionsAndOpacity(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32, isOpaque : boolean, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstanceWithDimensionsAndOpacity(pixelWidth, pixelHeight, isOpaque, RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource(consuming: __result);
+    }
+} // ISurfaceImageSourceFactory
+
+
+// type: Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource
+// interface type
+open class IVirtualSurfaceImageSource
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xe4ff96a6, Data2: 0xfede, Data3 : 0x589c, Data4 : (0xa0, 0x07, 0x41, 0x78, 0xb5, 0x3b, 0x67, 0x39)) }
+} // IVirtualSurfaceImageSource
+
+
+// type: Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSourceFactory
+// interface type
+// ACTIVATION INTERFACE
+open class IVirtualSurfaceImageSourceFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x08490f2c, Data2: 0x04a8, Data3 : 0x5031, Data4 : (0xb9, 0xc7, 0x70, 0x70, 0x60, 0xd7, 0xcd, 0x48)) }
+    // Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource CreateInstanceWithDimensions(System.Int32, System.Int32)
+    private func _n_CreateInstanceWithDimensions(_ pixelWidth : INT32, _ pixelHeight : INT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithDimensions(pThis, pixelWidth, pixelHeight, __presult))
+        }
+    }
+    public func CreateInstanceWithDimensions(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32) throws -> Optional<Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource>> = nil;
+        try self._n_CreateInstanceWithDimensions(pixelWidth, pixelHeight, &__result);
+        return Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource(consuming: __result);
+    }
+    // Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource CreateInstanceWithDimensionsAndOpacity(System.Int32, System.Int32, bool)
+    private func _n_CreateInstanceWithDimensionsAndOpacity(_ pixelWidth : INT32, _ pixelHeight : INT32, _ isOpaque : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithDimensionsAndOpacity(pThis, pixelWidth, pixelHeight, isOpaque, __presult))
+        }
+    }
+    public func CreateInstanceWithDimensionsAndOpacity(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32, isOpaque : boolean) throws -> Optional<Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource>> = nil;
+        try self._n_CreateInstanceWithDimensionsAndOpacity(pixelWidth, pixelHeight, isOpaque, &__result);
+        return Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource(consuming: __result);
+    }
+} // IVirtualSurfaceImageSourceFactory
+
+
+// type: Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource
+// runtime class
+open class SurfaceImageSource
+    :
+    Microsoft.UI.Xaml.Media.ImageSource
+{
+    private var _self : Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource;
+    public init(plok: Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSource { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Media.Imaging.ISurfaceImageSourceFactory
+    public init(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32) throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : ISurfaceImageSourceFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstanceWithDimensions(pixelWidth: pixelWidth, pixelHeight: pixelHeight, baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32, isOpaque : boolean) throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : ISurfaceImageSourceFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstanceWithDimensionsAndOpacity(pixelWidth: pixelWidth, pixelHeight: pixelHeight, isOpaque: isOpaque, baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+}
+
+// type: Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource
+// runtime class
+public class VirtualSurfaceImageSource
+    :
+    Microsoft.UI.Xaml.Media.Imaging.SurfaceImageSource
+{
+    private var _self : Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource;
+    public init(plok: Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Media.Imaging.IVirtualSurfaceImageSource { return _self; }
+    public override init(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32) throws {
+        let _af : IVirtualSurfaceImageSourceFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource");
+        _self = try _af.CreateInstanceWithDimensions(pixelWidth: pixelWidth, pixelHeight: pixelHeight)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public override init(pixelWidth : Swift.Int32, pixelHeight : Swift.Int32, isOpaque : boolean) throws {
+        let _af : IVirtualSurfaceImageSourceFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Imaging.VirtualSurfaceImageSource");
+        _self = try _af.CreateInstanceWithDimensionsAndOpacity(pixelWidth: pixelWidth, pixelHeight: pixelHeight, isOpaque: isOpaque)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+}
+
 }
 extension Microsoft.UI.Xaml.Media.Imaging.BitmapCreateOptions {
     public static var None : Self {

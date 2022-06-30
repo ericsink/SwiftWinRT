@@ -42,6 +42,47 @@ open class CompositionBrush
 // composable interface not needed: Microsoft.UI.Composition.ICompositionBrushFactory
 }
 
+// type: Microsoft.UI.Composition.CompositionDrawingSurface
+// runtime class
+open class CompositionDrawingSurface
+    :
+    Microsoft.UI.Composition.CompositionObject
+{
+    private var _self : Microsoft.UI.Composition.ICompositionDrawingSurface;
+    public init(plok: Microsoft.UI.Composition.ICompositionDrawingSurface?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Composition.ICompositionDrawingSurface { return _self; }
+    // COMPOSABLE: Microsoft.UI.Composition.ICompositionDrawingSurfaceFactory
+// composable interface not needed: Microsoft.UI.Composition.ICompositionDrawingSurfaceFactory
+    // method not needed: get_AlphaMode
+    // method not needed: get_PixelFormat
+    // method not needed: get_Size
+    // instance interface not needed: Microsoft.UI.Composition.ICompositionDrawingSurface2
+    // instance interface not needed: Microsoft.UI.Composition.ICompositionSurface
+}
+
+// type: Microsoft.UI.Composition.CompositionGraphicsDevice
+// runtime class
+public class CompositionGraphicsDevice
+    :
+    Microsoft.UI.Composition.CompositionObject
+{
+    private var _self : Microsoft.UI.Composition.ICompositionGraphicsDevice;
+    public init(plok: Microsoft.UI.Composition.ICompositionGraphicsDevice?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Composition.ICompositionGraphicsDevice { return _self; }
+    // method not needed: CreateDrawingSurface
+    // method not needed: add_RenderingDeviceReplaced
+    // method not needed: remove_RenderingDeviceReplaced
+    // instance interface not needed: Microsoft.UI.Composition.ICompositionGraphicsDevice2
+    // instance interface not needed: Microsoft.UI.Composition.ICompositionGraphicsDevice3
+    // instance interface not needed: Microsoft.UI.Composition.ICompositionGraphicsDevice4
+}
+
 // type: Microsoft.UI.Composition.CompositionObject
 // runtime class
 open class CompositionObject
@@ -182,6 +223,32 @@ open class ICompositionBrush
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x483924e7, Data2: 0x99a5, Data3 : 0x5377, Data4 : (0x96, 0x8b, 0xde, 0xc6, 0xd4, 0x0b, 0xbc, 0xcd)) }
 } // ICompositionBrush
+
+
+// type: Microsoft.UI.Composition.ICompositionDrawingSurface
+// interface type
+open class ICompositionDrawingSurface
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x216cab97, Data2: 0xa2ee, Data3 : 0x5a29, Data4 : (0xad, 0x6b, 0x0b, 0xc2, 0xdf, 0x4a, 0x15, 0x04)) }
+// method not needed: get_AlphaMode
+// method not needed: get_PixelFormat
+// method not needed: get_Size
+} // ICompositionDrawingSurface
+
+
+// type: Microsoft.UI.Composition.ICompositionGraphicsDevice
+// interface type
+open class ICompositionGraphicsDevice
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3d47e3f5, Data2: 0xf76c, Data3 : 0x5f1f, Data4 : (0x88, 0xc0, 0x54, 0xa5, 0xf2, 0xa0, 0x90, 0xd6)) }
+// method not needed: CreateDrawingSurface
+// method not needed: add_RenderingDeviceReplaced
+// method not needed: remove_RenderingDeviceReplaced
+} // ICompositionGraphicsDevice
 
 
 // type: Microsoft.UI.Composition.ICompositionObject

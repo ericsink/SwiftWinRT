@@ -204,4 +204,12 @@ public class IIterator_1__q_CWindows_CFoundation_CPoint
 // method not needed: MoveNext
 // method not needed: GetMany
 } // IIterator_1__q_CWindows_CFoundation_CPoint
+// closed interface type
+public class IReference_1__q_CWindows_CFoundation_CRect
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x80423f11, Data2: 0x054f, Data3 : 0x5eac, Data4 : (0xaf, 0xd3, 0x63, 0xb6, 0xce, 0x15, 0xe7, 0x7b)) }
+// method not needed: get_Value
+} // IReference_1__q_CWindows_CFoundation_CRect
 }

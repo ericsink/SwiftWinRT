@@ -39,6 +39,12 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision_Precision16Float = 3,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision_Precision32Float = 4,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace_Custom = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace_Srgb = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace_ScRgb = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite_SourceOver = 0,
@@ -55,12 +61,25 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite_BoundedCopy = 11,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite_MaskInvert = 12,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_Error = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_Warning = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_Information = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding_Floor = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding_Round = 1,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding_Ceiling = 2,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Clamp = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Wrap = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Mirror = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation_NearestNeighbor = 0,
@@ -76,6 +95,13 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions_InitializeFromBackground = 1,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions_IgnoreAlpha = 2,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_Horizontal = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_Vertical = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_Both = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteOptions
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteOptions_None = 0,
@@ -86,17 +112,301 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode_None = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode_Bitmap = 1,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_Rotate90 = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_Rotate180 = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_Rotate270 = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits
 {
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits_Dips = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits_Pixels = 1,
 } _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions_ReleaseSource = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions_CacheOnDemand = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Multiply = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Screen = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Darken = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Lighten = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Dissolve = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_ColorBurn = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_LinearBurn = 6,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_DarkerColor = 7,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_LighterColor = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_ColorDodge = 9,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_LinearDodge = 10,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Overlay = 11,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_SoftLight = 12,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_HardLight = 13,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_VividLight = 14,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_LinearLight = 15,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_PinLight = 16,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_HardMix = 17,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Difference = 18,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Exclusion = 19,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Hue = 20,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Saturation = 21,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Color = 22,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Luminosity = 23,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Subtract = 24,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode_Division = 25,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality_Proof = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality_Normal = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality_Best = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementGamma
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementGamma_G22 = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementGamma_G10 = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementGamma_G2084 = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementGamma;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType_Icc = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType_Simple = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType_Extended = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent_Perceptual = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent_RelativeColorimetric = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent_Saturation = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent_AbsoluteColorimetric = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEdgeDetectionEffectMode
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEdgeDetectionEffectMode_Sobel = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEdgeDetectionEffectMode_Prewitt = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEdgeDetectionEffectMode;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode_Soft = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode_Hard = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect_Red = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect_Green = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect_Blue = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect_Alpha = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace_Hsv = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace_Hsl = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization_Speed = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization_Balanced = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization_Quality = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_FullG22P709 = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_FullG10P709 = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_StudioG22P709 = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_StudioG22P2020 = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_FullG2084P2020 = 12,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_StudioG2084P2020 = 14,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_FullG22P2020 = 17,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace_Custom = -1,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMorphologyEffectMode
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMorphologyEffectMode_Erode = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMorphologyEffectMode_Dilate = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMorphologyEffectMode;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping_Unknown = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping_OneToOne = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping_Offset = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CEffects_CTurbulenceEffectNoise
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CTurbulenceEffectNoise_FractalSum = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CTurbulenceEffectNoise_Turbulence = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CTurbulenceEffectNoise;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasArcSize
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasArcSize_Small = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasArcSize_Large = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasArcSize;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle_Flat = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle_Square = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle_Round = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle_Triangle = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle_Solid = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle_Dash = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle_Dot = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle_DashDot = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle_DashDotDot = 4,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureFill
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureFill_Default = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureFill_DoesNotAffectFills = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureFill;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureLoop
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureLoop_Open = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureLoop_Closed = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureLoop;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureSegmentOptions
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureSegmentOptions_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureSegmentOptions_ForceUnstroked = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureSegmentOptions_ForceRoundLineJoin = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureSegmentOptions;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination_Alternate = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination_Winding = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine_Union = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine_Intersect = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine_Xor = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine_Exclude = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation_Disjoint = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation_Contained = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation_Contains = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation_Overlap = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometrySimplification
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometrySimplification_CubicsAndLines = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometrySimplification_Lines = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometrySimplification;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge
 {
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge_Aliased = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge_Antialiased = 1,
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge_AliasedAndInflated = 2,
 } _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin_Miter = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin_Bevel = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin_Round = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin_MiterOrBevel = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior_Normal = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior_Fixed = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior_Hairline = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasSweepDirection
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasSweepDirection_CounterClockwise = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasSweepDirection_Clockwise = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasSweepDirection;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMinYMin = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMidYMin = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMaxYMin = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMinYMid = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMidYMid = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMaxYMid = 6,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMinYMax = 7,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMidYMax = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_XMaxYMax = 9,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling_Meet = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling_Slice = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay_Inline = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay_None = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits_Number = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits_Percentage = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow_DoNotClipToViewport = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow_ClipToViewport = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_Color = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_CurrentColor = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_Uri = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_UriThenNone = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_UriThenColor = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType_UriThenCurrentColor = 6,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_ClosePath = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_MoveAbsolute = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_MoveRelative = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_LineAbsolute = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_LineRelative = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_CubicAbsolute = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_CubicRelative = 6,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_QuadraticAbsolute = 7,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_QuadraticRelative = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_ArcAbsolute = 9,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_ArcRelative = 10,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_HorizontalAbsolute = 11,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_HorizontalRelative = 12,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_VerticalAbsolute = 13,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_VerticalRelative = 14,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_CubicSmoothAbsolute = 15,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_CubicSmoothRelative = 16,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_QuadraticSmoothAbsolute = 17,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand_QuadraticSmoothRelative = 18,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits_UserSpaceOnUse = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits_ObjectBoundingBox = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility_Visible = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility_Hidden = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties_CanWrapLineAfter = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties_Whitespace = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties_Newline = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties_SoftHyphen = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties_RightToLeft = 16,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions_Default = 0,
@@ -104,6 +414,88 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions_Clip = 2,
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions_EnableColorFont = 4,
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_Cff = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_TrueType = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_TrueTypeCollection = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_Type1 = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_Vector = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_Bitmap = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_Unknown = 6,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType_RawCff = 7,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_CopyrightNotice = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_VersionStrings = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_Trademark = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_Manufacturer = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_Designer = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_DesignerUrl = 6,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_Description = 7,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_FontVendorUrl = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_LicenseDescription = 9,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_LicenseInfoUrl = 10,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_Win32FamilyNames = 11,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_Win32SubfamilyNames = 12,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_PreferredFamilyNames = 13,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_PreferredSubfamilyNames = 14,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_SampleText = 15,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_FullName = 16,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_PostscriptName = 17,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_PostscriptCidName = 18,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_WwsFamilyName = 19,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_DesignScriptLanguageTag = 20,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation_SupportedScriptLanguageTag = 21,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_FamilyName = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_PreferredFamilyName = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_FaceName = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_FullName = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_Win32FamilyName = 5,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_PostscriptName = 6,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_DesignScriptLanguageTag = 7,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_SupportedScriptLanguageTag = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_SemanticTag = 9,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_Weight = 10,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_Stretch = 11,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_Style = 12,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier_Total = 13,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontSimulations
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontSimulations_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontSimulations_Bold = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontSimulations_Oblique = 2,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontSimulations;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicBlank = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_Character = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_Blank = 4,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicNormal = 7,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicKashida = 8,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicAlef = 9,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicHa = 10,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicRa = 11,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicBa = 12,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicBara = 13,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicSeen = 14,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification_ArabicSeenM = 15,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation_Upright = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation_Clockwise90Degrees = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation_Clockwise180Degrees = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation_Clockwise270Degrees = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment_Left = 0,
@@ -111,17 +503,37 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment_Center = 2,
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment_Justified = 3,
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition_Neutral = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition_CanBreak = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition_CannotBreak = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition_MustBreak = 3,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode_Default = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode_Uniform = 1,
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode_Proportional = 2,
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod_FromCulture = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod_Contextual = 1,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod_Disabled = 2,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod_National = 3,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod_Traditional = 4,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment_Default = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment_NoSideBearings = 1,
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptShape
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptShape_Default = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptShape_NoVisual = 1,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptShape;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextAntialiasing
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextAntialiasing_Auto = 0,
@@ -174,6 +586,91 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign_None = 0,
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign_Ellipsis = 1,
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign;
+typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_None = 0,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Default = 1953261156,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_VerticalWriting = 1953654134,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_VerticalAlternatesAndRotation = 846492278,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_AlternativeFractions = 1668441697,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_PetiteCapitalsFromCapitals = 1668297315,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_SmallCapitalsFromCapitals = 1668493923,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ContextualAlternates = 1953259875,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_CaseSensitiveForms = 1702060387,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_GlyphCompositionDecomposition = 1886217059,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ContextualLigatures = 1734962275,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_CapitalSpacing = 1886613603,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ContextualSwash = 1752658787,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_CursivePositioning = 1936880995,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_DiscretionaryLigatures = 1734962276,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ExpertForms = 1953527909,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Fractions = 1667330662,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_FullWidth = 1684633446,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HalfForms = 1718378856,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HalantForms = 1852596584,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_AlternateHalfWidth = 1953259880,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HistoricalForms = 1953720680,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HorizontalKanaAlternates = 1634626408,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HistoricalLigatures = 1734962280,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HalfWidth = 1684633448,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_HojoKanjiForms = 1869246312,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Jis04Forms = 875589738,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Jis78Forms = 943157354,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Jis83Forms = 859336810,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Jis90Forms = 809070698,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Kerning = 1852990827,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StandardLigatures = 1634167148,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_LiningFigures = 1836412524,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_LocalizedForms = 1818455916,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_MarkPositioning = 1802658157,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_MathematicalGreek = 1802659693,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_MarkToMarkPositioning = 1802333037,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_AlternateAnnotationForms = 1953259886,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_NlcKanjiForms = 1801677934,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_OldStyleFigures = 1836412527,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Ordinals = 1852076655,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ProportionalAlternateWidth = 1953259888,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_PetiteCapitals = 1885430640,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ProportionalFigures = 1836412528,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ProportionalWidths = 1684633456,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_QuarterWidths = 1684633457,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_RequiredLigatures = 1734962290,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_RubyNotationForms = 2036495730,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticAlternates = 1953259891,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ScientificInferiors = 1718511987,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_SmallCapitals = 1885564275,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_SimplifiedForms = 1819307379,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet1 = 825258867,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet2 = 842036083,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet3 = 858813299,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet4 = 875590515,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet5 = 892367731,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet6 = 909144947,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet7 = 925922163,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet8 = 942699379,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet9 = 959476595,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet10 = 808547187,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet11 = 825324403,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet12 = 842101619,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet13 = 858878835,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet14 = 875656051,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet15 = 892433267,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet16 = 909210483,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet17 = 925987699,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet18 = 942764915,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet19 = 959542131,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_StylisticSet20 = 808612723,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Subscript = 1935832435,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Superscript = 1936749939,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Swash = 1752397683,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Titling = 1819568500,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_TraditionalNameForms = 1835101812,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_TabularFigures = 1836412532,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_TraditionalForms = 1684107892,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_ThirdWidths = 1684633460,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_Unicase = 1667853941,
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName_SlashedZero = 1869768058,
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName;
 typedef enum _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment_Top = 0,
@@ -200,47 +697,273 @@ typedef enum _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason
     _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason_DpiChanged = 2,
 } _q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesReason;
 // forward decls for value types
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMatrix5x4 _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMatrix5x4;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasTriangleVertices _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasTriangleVertices;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBreakpoint _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBreakpoint;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterMetrics _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterMetrics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphMetrics _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphMetrics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasJustificationOpportunity _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasJustificationOpportunity;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineMetrics _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineMetrics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptProperties _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptProperties;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeature _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeature;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasUnicodeRange _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasUnicodeRange;
 // forward decls for interfaces
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshFactory _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer _q_CMicrosoft_CGraphics_CCanvas_CICanvasActiveLayer;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactory _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasLock _q_CMicrosoft_CGraphics_CCanvas_CICanvasLock;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentFactory _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormatStatics _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormatStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutFactory _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersFactory _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics _q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgsFactory _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgsFactory;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs;
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgsFactory _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgsFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource;
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory;
 // forward decls for parameterized interfaces
-typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap;
 typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable;
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap;
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement;
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography;
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs;
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs;
 // definition of structs for value types
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop
+{
+    FLOAT Position;
+    _q_CWindows_CUI_CColor Color;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr
+{
+    FLOAT Position;
+    _q_CWindows_CFoundation_CNumerics_CVector4 Color;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile
+{
+    _q_CWindows_CFoundation_CNumerics_CVector2 RedPrimary;
+    _q_CWindows_CFoundation_CNumerics_CVector2 GreenPrimary;
+    _q_CWindows_CFoundation_CNumerics_CVector2 BluePrimary;
+    _q_CWindows_CFoundation_CNumerics_CVector2 WhitePointXZ;
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementGamma Gamma;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMatrix5x4
+{
+    FLOAT M11;
+    FLOAT M12;
+    FLOAT M13;
+    FLOAT M14;
+    FLOAT M21;
+    FLOAT M22;
+    FLOAT M23;
+    FLOAT M24;
+    FLOAT M31;
+    FLOAT M32;
+    FLOAT M33;
+    FLOAT M34;
+    FLOAT M41;
+    FLOAT M42;
+    FLOAT M43;
+    FLOAT M44;
+    FLOAT M51;
+    FLOAT M52;
+    FLOAT M53;
+    FLOAT M54;
+};
 struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch
 {
     _q_CWindows_CFoundation_CNumerics_CVector2 Point00;
@@ -268,12 +991,130 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge Edge33To30;
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge Edge30To00;
 };
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasTriangleVertices
+{
+    _q_CWindows_CFoundation_CNumerics_CVector2 Vertex1;
+    _q_CWindows_CFoundation_CNumerics_CVector2 Vertex2;
+    _q_CWindows_CFoundation_CNumerics_CVector2 Vertex3;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi
+{
+    UINT32 ExplicitLevel;
+    UINT32 ResolvedLevel;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBreakpoint
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition BreakBefore;
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineBreakCondition BreakAfter;
+    boolean IsWhitespace;
+    boolean IsSoftHyphen;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation GlyphOrientation;
+    UINT32 AdjustedBidiLevel;
+    boolean IsSideways;
+    boolean IsRightToLeft;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript
+{
+    INT32 ScriptIdentifier;
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptShape Shape;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange
+{
+    INT32 CharacterIndex;
+    INT32 CharacterCount;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterMetrics
+{
+    INT32 CharacterCount;
+    FLOAT Width;
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterProperties Properties;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier Identifier;
+    HSTRING Value;
+    HSTRING Locale;
+};
 struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph
 {
     INT32 Index;
     FLOAT Advance;
     FLOAT AdvanceOffset;
     FLOAT AscenderOffset;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphMetrics
+{
+    FLOAT LeftSideBearing;
+    FLOAT AdvanceWidth;
+    FLOAT RightSideBearing;
+    FLOAT TopSideBearing;
+    FLOAT AdvanceHeight;
+    FLOAT BottomSideBearing;
+    FLOAT VerticalOrigin;
+    _q_CWindows_CFoundation_CRect DrawBounds;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphJustification Justification;
+    boolean IsClusterStart;
+    boolean IsDiacritic;
+    boolean IsZeroWidthSpace;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasJustificationOpportunity
+{
+    FLOAT ExpansionMinimum;
+    FLOAT ExpansionMaximum;
+    FLOAT CompressionMaximum;
+    UINT8 ExpansionPriority;
+    UINT8 CompressionPriority;
+    boolean AllowResidualExpansion;
+    boolean AllowResidualCompression;
+    boolean ApplyToLeadingEdge;
+    boolean ApplyToTrailingEdge;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineMetrics
+{
+    INT32 CharacterCount;
+    INT32 TrailingWhitespaceCount;
+    INT32 TerminalNewlineCount;
+    FLOAT Height;
+    FLOAT Baseline;
+    boolean IsTrimmed;
+    FLOAT LeadingWhitespaceBefore;
+    FLOAT LeadingWhitespaceAfter;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptProperties
+{
+    HSTRING IsoScriptCode;
+    INT32 IsoScriptNumber;
+    INT32 ClusterLookahead;
+    HSTRING JustificationCharacter;
+    boolean RestrictCaretToClusters;
+    boolean UsesWordDividers;
+    boolean IsDiscreteWriting;
+    boolean IsBlockWriting;
+    boolean IsDistributedWithinCluster;
+    boolean IsConnectedWriting;
+    boolean IsCursiveWriting;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion
+{
+    INT32 CharacterIndex;
+    INT32 CharacterCount;
+    _q_CWindows_CFoundation_CRect LayoutBounds;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeature
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName Name;
+    UINT32 Parameter;
+};
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasUnicodeRange
+{
+    UINT32 First;
+    UINT32 Last;
 };
 // definitions for delegates
 // definitions for interface types
@@ -285,15 +1126,1826 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrushVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* This, TrustLevel* trustLevel);
-    void* unneeded_get_Opacity;
-    void* unneeded_put_Opacity;
-    void* unneeded_get_Transform;
-    void* unneeded_put_Transform;
-    void* unneeded_get_Device;
+    HRESULT (STDMETHODCALLTYPE* get_Opacity)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Opacity)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Transform)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Transform)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrushVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush
 {
     _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Image)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Image)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* value);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendX)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExtendX)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior value);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendY)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExtendY)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior value);
+    HRESULT (STDMETHODCALLTYPE* get_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect* value);
+    HRESULT (STDMETHODCALLTYPE* get_Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithImage)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* image, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasImageBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_StartPoint)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_StartPoint)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_EndPoint)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_EndPoint)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Stops)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_StopsHdr)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_EdgeBehavior)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PreInterpolationSpace)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PostInterpolationSpace)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BufferPrecision)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateSimple)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CUI_CColor startColor, _q_CWindows_CUI_CColor endColor, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithStops)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithEdgeBehaviorAndAlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithEdgeBehaviorAndInterpolationOptions)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace preInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace postInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision bufferPrecision, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrSimple)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CVector4 startColorHdr, _q_CWindows_CFoundation_CNumerics_CVector4 endColorHdr, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrWithStops)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsHdrLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr* gradientStopsHdr, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrWithEdgeBehaviorAndAlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsHdrLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr* gradientStopsHdr, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrWithEdgeBehaviorAndInterpolationOptions)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsHdrLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr* gradientStopsHdr, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace preInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace postInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision bufferPrecision, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateRainbow)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT eldritchness, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasLinearGradientBrushStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Center)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Center)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_OriginOffset)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OriginOffset)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_RadiusX)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RadiusX)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_RadiusY)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RadiusY)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Stops)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_StopsHdr)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_EdgeBehavior)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PreInterpolationSpace)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PostInterpolationSpace)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BufferPrecision)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateSimple)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CUI_CColor startColor, _q_CWindows_CUI_CColor endColor, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithStops)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithEdgeBehaviorAndAlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithEdgeBehaviorAndInterpolationOptions)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStop* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace preInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace postInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision bufferPrecision, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrSimple)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CVector4 startColorHdr, _q_CWindows_CFoundation_CNumerics_CVector4 endColorHdr, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrWithStops)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrWithEdgeBehaviorAndAlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateHdrWithEdgeBehaviorAndInterpolationOptions)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 gradientStopsLength, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CCanvasGradientStopHdr* gradientStops, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior edgeBehavior, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace preInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace postInterpolationSpace, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision bufferPrecision, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateRainbow)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT eldritchness, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasRadialGradientBrushStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Color)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Color)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CUI_CColor color, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateHdr)(_q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CVector4 colorHdr, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrush** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasSolidColorBrushStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMask)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaMask)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics* pThis, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAlphaMaskEffectStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_MultiplyAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MultiplyAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source1Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source2Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source2Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Offset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Offset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source1)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* get_Source2)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source2)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIArithmeticCompositeEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* pThis, _q_CWindows_CFoundation_CRect value);
+    HRESULT (STDMETHODCALLTYPE* get_PaddingRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_PaddingRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* pThis, _q_CWindows_CFoundation_CRect value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIAtlasEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CBlendEffectMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Background)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Background)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* get_Foreground)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Foreground)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBlendEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendX)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExtendX)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior value);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendY)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ExtendY)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBorderEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_WhitePoint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_WhitePoint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_BlackPoint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlackPoint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIBrightnessEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CacheOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CacheOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_BufferPrecision)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BufferPrecision)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* value);
+    HRESULT (STDMETHODCALLTYPE* InvalidateSourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, UINT32 sourceIndex, _q_CWindows_CFoundation_CRect invalidRectangle);
+    HRESULT (STDMETHODCALLTYPE* GetInvalidRectangles)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, UINT32* __pretLength, _q_CWindows_CFoundation_CRect** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetRequiredSourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, _q_CWindows_CFoundation_CRect outputRectangle, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* sourceEffect, UINT32 sourceIndex, _q_CWindows_CFoundation_CRect sourceBounds, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetRequiredSourceRectangles)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, _q_CWindows_CFoundation_CRect outputRectangle, UINT32 sourceEffectsLength, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect** sourceEffects, UINT32 sourceIndicesLength, UINT32* sourceIndices, UINT32 sourceBoundsLength, _q_CWindows_CFoundation_CRect* sourceBounds, UINT32* __pretLength, _q_CWindows_CFoundation_CRect** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICanvasEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_Tolerance)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Tolerance)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_InvertAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InvertAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Feather)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Feather)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIChromaKeyEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SourceColorProfile)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceColorProfile)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* value);
+    HRESULT (STDMETHODCALLTYPE* get_SourceRenderingIntent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceRenderingIntent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent value);
+    HRESULT (STDMETHODCALLTYPE* get_OutputColorProfile)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OutputColorProfile)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* value);
+    HRESULT (STDMETHODCALLTYPE* get_OutputRenderingIntent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OutputRenderingIntent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementRenderingIntent value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Quality)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Quality)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementEffectQuality value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* IsBestQualitySupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementEffectStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ColorSpace)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IccProfile)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* pThis, UINT32* __pretLength, UINT8** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Type)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SimpleProfile)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* pThis, _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ExtendedColorSpace)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace colorSpace, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateCustom)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* pThis, UINT32 iccProfileLength, UINT8* iccProfile, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateSimple)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile simpleProfile, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateExtended)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CExtendedColorSpace colorSpace, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfile** __pret);
+    HRESULT (STDMETHODCALLTYPE* IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementProfileType type, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorManagementProfileStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ColorMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMatrix5x4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColorMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMatrix5x4 value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorMatrixEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIColorSourceEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite value);
+    HRESULT (STDMETHODCALLTYPE* get_Sources)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICompositeEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Contrast)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Contrast)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampSource)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampSource)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIContrastEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_KernelScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_KernelScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_KernelWidth)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_KernelWidth)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_KernelHeight)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_KernelHeight)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_KernelMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_KernelMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_Divisor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Divisor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Offset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Offset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_KernelOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_KernelOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_PreserveAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_PreserveAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIConvolveMatrixEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* pThis, _q_CWindows_CFoundation_CRect value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICropEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CrossFade)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CrossFade)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source2)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source2)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* get_Source1)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics* pThis, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CICrossFadeEffectStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Optimization)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Optimization)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDirectionalBlurEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RedTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDiscreteTransferEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_XChannelSelect)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_XChannelSelect)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect value);
+    HRESULT (STDMETHODCALLTYPE* get_YChannelSelect)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_YChannelSelect)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* get_Displacement)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Displacement)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDisplacementMapEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Azimuth)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Azimuth)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Elevation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Elevation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_DiffuseAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DiffuseAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantDiffuseEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Azimuth)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Azimuth)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Elevation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Elevation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_SpecularExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SpecularExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_SpecularAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SpecularAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDistantSpecularEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_SourceDpi)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceDpi)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIDpiCompensationEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEdgeDetectionEffectMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEdgeDetectionEffectMode value);
+    HRESULT (STDMETHODCALLTYPE* get_OverlayEdges)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OverlayEdges)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEdgeDetectionEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateFromColors)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 colorsLength, _q_CWindows_CUI_CColor* colors, INT32 sizeB, INT32 sizeG, INT32 sizeR, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromBytes)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 bytesLength, UINT8* bytes, INT32 sizeB, INT32 sizeG, INT32 sizeR, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3DStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEmbossEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Exposure)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Exposure)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIExposureEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RedAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_RedExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_RedOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaAmplitude)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGammaTransferEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Optimization)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Optimization)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGaussianBlurEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIGrayscaleEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Highlights)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Highlights)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Shadows)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Shadows)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Clarity)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Clarity)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_MaskBlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaskBlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_SourceIsLinearGamma)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceIsLinearGamma)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHighlightsAndShadowsEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueRotationEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SourceColorSpace)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceColorSpace)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIHueToRgbEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIInvertEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RedOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_RedSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaSlope)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILinearTransferEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CILuminanceToAlphaEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMorphologyEffectMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Mode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CMorphologyEffectMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Width)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Width)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Height)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Height)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIMorphologyEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Opacity)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Opacity)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics* pThis, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityEffectStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_OpaqueRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OpaqueRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* pThis, _q_CWindows_CFoundation_CRect value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIOpacityMetadataEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Properties)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source1)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source2)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source3)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source4)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source5)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source6)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source7)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source8)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source2)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source3)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source4)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source5)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source6)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source7)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* put_Source8)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+    HRESULT (STDMETHODCALLTYPE* get_Source1Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source2Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source3Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source4Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source5Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source6Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source7Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source8Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source2Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source3Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source4Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source5Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source6Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source7Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* put_Source8Mapping)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CSamplerCoordinateMapping value);
+    HRESULT (STDMETHODCALLTYPE* get_Source1BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source2BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source3BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source4BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source5BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source6BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source7BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source8BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source2BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source3BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source4BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source5BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source6BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source7BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* put_Source8BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxSamplerOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaxSamplerOffset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source1Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source2Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source3Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source4Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source5Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source6Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source7Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Source8Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source1Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source2Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source3Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source4Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source5Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source6Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source7Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* put_Source8Interpolation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory* pThis, UINT32 shaderCodeLength, UINT8* shaderCode, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffect** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPixelShaderEffectFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3 value);
+    HRESULT (STDMETHODCALLTYPE* get_DiffuseAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DiffuseAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointDiffuseEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3 value);
+    HRESULT (STDMETHODCALLTYPE* get_SpecularExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SpecularExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_SpecularAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SpecularAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPointSpecularEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RedValueCount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedValueCount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenValueCount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenValueCount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueValueCount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueValueCount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPosterizeEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIPremultiplyEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_OutputColorSpace)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OutputColorSpace)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectHueColorSpace value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIRgbToHueEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Saturation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Saturation)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISaturationEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Scale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Scale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_CenterPoint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CenterPoint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Sharpness)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Sharpness)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIScaleEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Intensity)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Intensity)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISepiaEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlurAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_ShadowColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ShadowColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_Optimization)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Optimization)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectOptimization value);
+    HRESULT (STDMETHODCALLTYPE* get_ShadowColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ShadowColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIShadowEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Threshold)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Threshold)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISharpenEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3 value);
+    HRESULT (STDMETHODCALLTYPE* get_LightTarget)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightTarget)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3 value);
+    HRESULT (STDMETHODCALLTYPE* get_Focus)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Focus)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LimitingConeAngle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LimitingConeAngle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_DiffuseAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DiffuseAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotDiffuseEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightPosition)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3 value);
+    HRESULT (STDMETHODCALLTYPE* get_LightTarget)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightTarget)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector3 value);
+    HRESULT (STDMETHODCALLTYPE* get_Focus)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Focus)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LimitingConeAngle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LimitingConeAngle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_SpecularExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SpecularExponent)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_SpecularAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SpecularAmount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapScale)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColor)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapKernelSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HeightMapInterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LightColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CISpotSpecularEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Angle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_MaintainSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaintainSize)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIStraightenEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Table)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Table)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIEffectTransferTable3D* value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransfer3DEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_RedTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RedDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_GreenTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_GreenDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_BlueTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BlueDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaTable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_AlphaDisable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITableTransferEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Temperature)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Temperature)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Tint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Tint)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITemperatureAndTintEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* pThis, _q_CWindows_CFoundation_CRect value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITileEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ClampOutput)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics* pThis, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITintEffectStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_TransformMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TransformMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Sharpness)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Sharpness)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform2DEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_InterpolationMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderMode)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectBorderMode value);
+    HRESULT (STDMETHODCALLTYPE* get_TransformMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix4x4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TransformMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix4x4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITransform3DEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Offset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Offset)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Size)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Frequency)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Frequency)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 value);
+    HRESULT (STDMETHODCALLTYPE* get_Octaves)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Octaves)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Seed)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Seed)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_Noise)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CTurbulenceEffectNoise* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Noise)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CTurbulenceEffectNoise value);
+    HRESULT (STDMETHODCALLTYPE* get_Tileable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Tileable)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect* pThis, boolean value);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CITurbulenceEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIUnPremultiplyEffectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Color)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Amount)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_Curve)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Curve)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ColorHdr)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, _q_CWindows_CFoundation_CNumerics_CVector4 value);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Source)(_q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect* pThis, _q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource* source);
+} _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffectVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffect
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CEffects_CIVignetteEffectVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryVtbl
 {
@@ -303,11 +2955,29 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryV
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry* This, TrustLevel* trustLevel);
-    void* unneeded_get_Device;
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry
 {
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateFill)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* geometry, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFillWithFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* geometry, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateStroke)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* geometry, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateStrokeWithStrokeStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* geometry, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateStrokeWithStrokeStyleAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* geometry, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometry** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasCachedGeometryStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryVtbl
 {
@@ -317,43 +2987,73 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* This, TrustLevel* trustLevel);
-    void* unneeded_CombineWith;
-    void* unneeded_CombineWithUsingFlatteningTolerance;
-    void* unneeded_Stroke;
-    void* unneeded_StrokeWithStrokeStyle;
-    void* unneeded_StrokeWithAllOptions;
-    void* unneeded_Outline;
-    void* unneeded_OutlineWithTransformAndFlatteningTolerance;
-    void* unneeded_Simplify;
-    void* unneeded_SimplifyWithTransformAndFlatteningTolerance;
-    void* unneeded_Transform;
-    void* unneeded_CompareWith;
-    void* unneeded_CompareWithUsingTransformAndFlatteningTolerance;
-    void* unneeded_ComputeArea;
-    void* unneeded_ComputeAreaWithTransformAndFlatteningTolerance;
-    void* unneeded_ComputePathLength;
-    void* unneeded_ComputePathLengthWithTransformAndFlatteningTolerance;
-    void* unneeded_ComputePointOnPath;
-    void* unneeded_ComputePointOnPathWithTangent;
-    void* unneeded_ComputePointOnPathWithTransformAndFlatteningToleranceAndTangent;
-    void* unneeded_FillContainsPoint;
-    void* unneeded_FillContainsPointWithTransformAndFlatteningTolerance;
-    void* unneeded_ComputeBounds;
-    void* unneeded_ComputeBoundsWithTransform;
-    void* unneeded_ComputeStrokeBounds;
-    void* unneeded_ComputeStrokeBoundsWithStrokeStyle;
-    void* unneeded_ComputeStrokeBoundsWithAllOptions;
-    void* unneeded_StrokeContainsPoint;
-    void* unneeded_StrokeContainsPointWithStrokeStyle;
-    void* unneeded_StrokeContainsPointWithAllOptions;
-    void* unneeded_Tessellate;
-    void* unneeded_TessellateWithTransformAndFlatteningTolerance;
-    void* unneeded_SendPathTo;
-    void* unneeded_get_Device;
+    HRESULT (STDMETHODCALLTYPE* CombineWith)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* otherGeometry, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 otherGeometryTransform, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine combine, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CombineWithUsingFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* otherGeometry, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 otherGeometryTransform, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryCombine combine, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* Stroke)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* StrokeWithStrokeStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* StrokeWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* Outline)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* OutlineWithTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* Simplify)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometrySimplification simplification, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* SimplifyWithTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometrySimplification simplification, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* Transform)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CompareWith)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* otherGeometry, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation* __pret);
+    HRESULT (STDMETHODCALLTYPE* CompareWithUsingTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* otherGeometry, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 otherGeometryTransform, FLOAT flatteningTolerance, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGeometryRelation* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeArea)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeAreaWithTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputePathLength)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputePathLengthWithTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputePointOnPath)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT distance, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputePointOnPathWithTangent)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT distance, _q_CWindows_CFoundation_CNumerics_CVector2* tangent, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputePointOnPathWithTransformAndFlatteningToleranceAndTangent)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT length, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, _q_CWindows_CFoundation_CNumerics_CVector2* tangent, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* FillContainsPoint)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* FillContainsPointWithTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeBounds)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeBoundsWithTransform)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeStrokeBounds)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT strokeWidth, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeStrokeBoundsWithStrokeStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeStrokeBoundsWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* StrokeContainsPoint)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, FLOAT strokeWidth, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* StrokeContainsPointWithStrokeStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* StrokeContainsPointWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, FLOAT strokeWidth, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* strokeStyle, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* Tessellate)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasTriangleVertices** __pret);
+    HRESULT (STDMETHODCALLTYPE* TessellateWithTransformAndFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, FLOAT flatteningTolerance, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasTriangleVertices** __pret);
+    HRESULT (STDMETHODCALLTYPE* SendPathTo)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* streamReader);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry
 {
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CRect rect, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateRectangleAtCoords)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT x, FLOAT y, FLOAT w, FLOAT h, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateRoundedRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CRect rect, FLOAT radiusX, FLOAT radiusY, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateRoundedRectangleAtCoords)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT x, FLOAT y, FLOAT w, FLOAT h, FLOAT radiusX, FLOAT radiusY, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateEllipse)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CVector2 centerPoint, FLOAT radiusX, FLOAT radiusY, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateEllipseAtCoords)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT x, FLOAT y, FLOAT radiusX, FLOAT radiusY, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateCircle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CVector2 centerPoint, FLOAT radius, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateCircleAtCoords)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT x, FLOAT y, FLOAT radius, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePath)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pathBuilder, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePolygon)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 pointsLength, _q_CWindows_CFoundation_CNumerics_CVector2* points, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateGroup)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 geometriesLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** geometries, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateGroupWithFilledRegionDetermination)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, UINT32 geometriesLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** geometries, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination filledRegionDetermination, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateText)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* textLayout, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateGlyphRun)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CVector2 point, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, FLOAT fontSize, UINT32 glyphsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* glyphs, boolean isSideways, UINT32 bidiLevel, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode measuringMode, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation glyphOrientation, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry** __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, FLOAT dpi, FLOAT maximumZoomFactor, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeFlatteningToleranceWithTransform)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, FLOAT dpi, FLOAT maximumZoomFactor, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 expectedGeometryTransform, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultFlatteningTolerance)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics* pThis, FLOAT* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometryStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshVtbl
 {
@@ -363,10 +3063,10 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshVtb
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* This, TrustLevel* trustLevel);
-    void* unneeded_get_Patches;
-    void* unneeded_GetBounds;
-    void* unneeded_GetBoundsWithTransform;
-    void* unneeded_get_Device;
+    HRESULT (STDMETHODCALLTYPE* get_Patches)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBounds)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBoundsWithTransform)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMesh
 {
@@ -386,6 +3086,83 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshFactory
 {
     _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshFactoryVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateCoonsPatch)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* pThis, UINT32 pointsLength, _q_CWindows_CFoundation_CNumerics_CVector2* points, UINT32 colorsLength, _q_CWindows_CFoundation_CNumerics_CVector4* colors, UINT32 edgesLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge* edges, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch* __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateTensorPatch)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics* pThis, UINT32 pointsLength, _q_CWindows_CFoundation_CNumerics_CVector2* points, UINT32 colorsLength, _q_CWindows_CFoundation_CNumerics_CVector4* colors, UINT32 edgesLength, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatchEdge* edges, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasGradientMeshPatch* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGradientMeshStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* BeginFigureWithFigureFill)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 startPoint, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureFill figureFill);
+    HRESULT (STDMETHODCALLTYPE* BeginFigure)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 startPoint);
+    HRESULT (STDMETHODCALLTYPE* BeginFigureAtCoordsWithFigureFill)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, FLOAT startX, FLOAT startY, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureFill figureFill);
+    HRESULT (STDMETHODCALLTYPE* BeginFigureAtCoords)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, FLOAT startX, FLOAT startY);
+    HRESULT (STDMETHODCALLTYPE* AddArcToPoint)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 endPoint, FLOAT radiusX, FLOAT radiusY, FLOAT rotationAngle, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasSweepDirection sweepDirection, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasArcSize arcSize);
+    HRESULT (STDMETHODCALLTYPE* AddArcAroundEllipse)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 centerPoint, FLOAT radiusX, FLOAT radiusY, FLOAT startAngle, FLOAT sweepAngle);
+    HRESULT (STDMETHODCALLTYPE* AddCubicBezier)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 controlPoint1, _q_CWindows_CFoundation_CNumerics_CVector2 controlPoint2, _q_CWindows_CFoundation_CNumerics_CVector2 endPoint);
+    HRESULT (STDMETHODCALLTYPE* AddLine)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 endPoint);
+    HRESULT (STDMETHODCALLTYPE* AddLineWithCoords)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, FLOAT x, FLOAT y);
+    HRESULT (STDMETHODCALLTYPE* AddQuadraticBezier)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 controlPoint, _q_CWindows_CFoundation_CNumerics_CVector2 endPoint);
+    HRESULT (STDMETHODCALLTYPE* SetFilledRegionDetermination)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination filledRegionDetermination);
+    HRESULT (STDMETHODCALLTYPE* SetSegmentOptions)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureSegmentOptions figureSegmentOptions);
+    HRESULT (STDMETHODCALLTYPE* EndFigure)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFigureLoop figureLoop);
+    HRESULT (STDMETHODCALLTYPE* AddGeometry)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasGeometry* geometry);
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilder** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathBuilderFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiverVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver* This, TrustLevel* trustLevel);
+    void* unneeded_BeginFigure;
+    void* unneeded_AddArc;
+    void* unneeded_AddCubicBezier;
+    void* unneeded_AddLine;
+    void* unneeded_AddQuadraticBezier;
+    void* unneeded_SetFilledRegionDetermination;
+    void* unneeded_SetSegmentOptions;
+    void* unneeded_EndFigure;
+} _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiverVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiver
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasPathReceiverVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyleVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* This, REFIID riid, void** ppvObject);
@@ -394,24 +3171,24 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyleVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* This, TrustLevel* trustLevel);
-    void* unneeded_get_StartCap;
-    void* unneeded_put_StartCap;
-    void* unneeded_get_EndCap;
-    void* unneeded_put_EndCap;
-    void* unneeded_get_DashCap;
-    void* unneeded_put_DashCap;
-    void* unneeded_get_LineJoin;
-    void* unneeded_put_LineJoin;
-    void* unneeded_get_MiterLimit;
-    void* unneeded_put_MiterLimit;
-    void* unneeded_get_DashStyle;
-    void* unneeded_put_DashStyle;
-    void* unneeded_get_DashOffset;
-    void* unneeded_put_DashOffset;
-    void* unneeded_get_CustomDashStyle;
-    void* unneeded_put_CustomDashStyle;
-    void* unneeded_get_TransformBehavior;
-    void* unneeded_put_TransformBehavior;
+    HRESULT (STDMETHODCALLTYPE* get_StartCap)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_StartCap)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle value);
+    HRESULT (STDMETHODCALLTYPE* get_EndCap)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_EndCap)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle value);
+    HRESULT (STDMETHODCALLTYPE* get_DashCap)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DashCap)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle value);
+    HRESULT (STDMETHODCALLTYPE* get_LineJoin)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LineJoin)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin value);
+    HRESULT (STDMETHODCALLTYPE* get_MiterLimit)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MiterLimit)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_DashStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DashStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasDashStyle value);
+    HRESULT (STDMETHODCALLTYPE* get_DashOffset)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DashOffset)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_CustomDashStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CustomDashStyle)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, UINT32 valueElementsLength, FLOAT* valueElements);
+    HRESULT (STDMETHODCALLTYPE* get_TransformBehavior)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TransformBehavior)(_q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle* pThis, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasStrokeTransformBehavior value);
 } _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyleVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CICanvasStrokeStyle
 {
@@ -503,6 +3280,35 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStatics
 {
     _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmapStaticsVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactoryVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* This, REFIID riid, void** ppvObject);
@@ -511,19 +3317,19 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* This, TrustLevel* trustLevel);
-    void* unneeded_get_ForceSoftwareRenderer;
-    void* unneeded_get_MaximumBitmapSizeInPixels;
-    void* unneeded_IsPixelFormatSupported;
-    void* unneeded_IsBufferPrecisionSupported;
-    void* unneeded_get_MaximumCacheSize;
-    void* unneeded_put_MaximumCacheSize;
-    void* unneeded_get_LowPriority;
-    void* unneeded_put_LowPriority;
-    void* unneeded_add_DeviceLost;
-    void* unneeded_remove_DeviceLost;
-    void* unneeded_IsDeviceLost;
-    void* unneeded_RaiseDeviceLost;
-    void* unneeded_Lock;
+    HRESULT (STDMETHODCALLTYPE* get_ForceSoftwareRenderer)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaximumBitmapSizeInPixels)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* IsPixelFormatSupported)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat pixelFormat, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* IsBufferPrecisionSupported)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision bufferPrecision, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaximumCacheSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, UINT64* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaximumCacheSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, UINT64 value);
+    HRESULT (STDMETHODCALLTYPE* get_LowPriority)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LowPriority)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* add_DeviceLost)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_DeviceLost)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* IsDeviceLost)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, INT32 hresult, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* RaiseDeviceLost)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis);
+    HRESULT (STDMETHODCALLTYPE* Lock)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasLock** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice
 {
@@ -542,6 +3348,24 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactoryVtbl
 struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactory
 {
     _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateFromDirect3D11Device)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* pThis, _q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice* direct3DDevice, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetSharedDevice)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetSharedDeviceWithForceSoftwareRenderer)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* pThis, boolean forceSoftwareRenderer, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DebugLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel value);
+    HRESULT (STDMETHODCALLTYPE* get_DebugLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSessionVtbl
 {
@@ -756,6 +3580,84 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage
 {
     _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* SaveAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* image, _q_CWindows_CFoundation_CRect sourceRectangle, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveWithQualityAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* image, _q_CWindows_CFoundation_CRect sourceRectangle, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, FLOAT quality, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveWithQualityAndBufferPrecisionAsync)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* image, _q_CWindows_CFoundation_CRect sourceRectangle, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat fileFormat, FLOAT quality, _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision bufferPrecision, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* ComputeHistogram)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasImage* image, _q_CWindows_CFoundation_CRect sourceRectangle, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect channelSelect, INT32 numberOfBins, UINT32* __pretLength, FLOAT** __pret);
+    HRESULT (STDMETHODCALLTYPE* IsHistogramSupported)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasLockVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasLockVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasLock
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasLockVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateWithSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, _q_CWindows_CFoundation_CSize size, _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeight)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, FLOAT width, FLOAT height, _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpiAndFormatAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics* This, TrustLevel* trustLevel);
+    void* unneeded_CreateFromDirect3D11Surface;
+    void* unneeded_CreateFromDirect3D11SurfaceWithDpi;
+    void* unneeded_CreateFromDirect3D11SurfaceWithDpiAndAlpha;
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetStaticsVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* This, REFIID riid, void** ppvObject);
@@ -794,28 +3696,265 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* This, TrustLevel* trustLevel);
-    void* unneeded_DrawToRect;
-    void* unneeded_DrawAtOffset;
-    void* unneeded_DrawWithTransform;
-    void* unneeded_DrawToRectWithTint;
-    void* unneeded_DrawAtOffsetWithTint;
-    void* unneeded_DrawWithTransformAndTint;
-    void* unneeded_DrawToRectWithTintAndFlip;
-    void* unneeded_DrawWithTransformAndTintAndFlip;
-    void* unneeded_DrawAtOffsetWithTintAndTransform;
-    void* unneeded_DrawFromSpriteSheetToRect;
-    void* unneeded_DrawFromSpriteSheetAtOffset;
-    void* unneeded_DrawFromSpriteSheetWithTransform;
-    void* unneeded_DrawFromSpriteSheetToRectWithTint;
-    void* unneeded_DrawFromSpriteSheetAtOffsetWithTint;
-    void* unneeded_DrawFromSpriteSheetWithTransformAndTint;
-    void* unneeded_DrawFromSpriteSheetToRectWithTintAndFlip;
-    void* unneeded_DrawFromSpriteSheetWithTransformAndTintAndFlip;
-    void* unneeded_DrawFromSpriteSheetAtOffsetWithTintAndTransform;
+    HRESULT (STDMETHODCALLTYPE* DrawToRect)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CRect destRect);
+    HRESULT (STDMETHODCALLTYPE* DrawAtOffset)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CVector2 offset);
+    HRESULT (STDMETHODCALLTYPE* DrawWithTransform)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform);
+    HRESULT (STDMETHODCALLTYPE* DrawToRectWithTint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CRect destRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint);
+    HRESULT (STDMETHODCALLTYPE* DrawAtOffsetWithTint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CVector2 offset, _q_CWindows_CFoundation_CNumerics_CVector4 tint);
+    HRESULT (STDMETHODCALLTYPE* DrawWithTransformAndTint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CNumerics_CVector4 tint);
+    HRESULT (STDMETHODCALLTYPE* DrawToRectWithTintAndFlip)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CRect destRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip flip);
+    HRESULT (STDMETHODCALLTYPE* DrawWithTransformAndTintAndFlip)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CNumerics_CVector4 tint, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip flip);
+    HRESULT (STDMETHODCALLTYPE* DrawAtOffsetWithTintAndTransform)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CVector2 offset, _q_CWindows_CFoundation_CNumerics_CVector4 tint, _q_CWindows_CFoundation_CNumerics_CVector2 origin, FLOAT rotation, _q_CWindows_CFoundation_CNumerics_CVector2 scale, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip flip);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetToRect)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CRect destRect, _q_CWindows_CFoundation_CRect sourceRect);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetAtOffset)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CVector2 offset, _q_CWindows_CFoundation_CRect sourceRect);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetWithTransform)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CRect sourceRect);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetToRectWithTint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CRect destRect, _q_CWindows_CFoundation_CRect sourceRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetAtOffsetWithTint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CVector2 offset, _q_CWindows_CFoundation_CRect sourceRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetWithTransformAndTint)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CRect sourceRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetToRectWithTintAndFlip)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CRect destRect, _q_CWindows_CFoundation_CRect sourceRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip flip);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetWithTransformAndTintAndFlip)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, _q_CWindows_CFoundation_CRect sourceRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip flip);
+    HRESULT (STDMETHODCALLTYPE* DrawFromSpriteSheetAtOffsetWithTintAndTransform)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap* bitmap, _q_CWindows_CFoundation_CNumerics_CVector2 offset, _q_CWindows_CFoundation_CRect sourceRect, _q_CWindows_CFoundation_CNumerics_CVector4 tint, _q_CWindows_CFoundation_CNumerics_CVector2 origin, FLOAT rotation, _q_CWindows_CFoundation_CNumerics_CVector2 scale, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip flip);
 } _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch
 {
     _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Present)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis);
+    HRESULT (STDMETHODCALLTYPE* PresentWithSyncInterval)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, INT32 syncInterval);
+    HRESULT (STDMETHODCALLTYPE* ResizeBuffersWithSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CFoundation_CSize newSize);
+    HRESULT (STDMETHODCALLTYPE* ResizeBuffersWithWidthAndHeight)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, FLOAT newWidth, FLOAT newHeight);
+    HRESULT (STDMETHODCALLTYPE* ResizeBuffersWithWidthAndHeightAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, FLOAT newWidth, FLOAT newHeight, FLOAT newDpi);
+    HRESULT (STDMETHODCALLTYPE* ResizeBuffersWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, FLOAT newWidth, FLOAT newHeight, FLOAT newDpi, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat newFormat, INT32 bufferCount);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SizeInPixels)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CGraphics_CImaging_CBitmapSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Format)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BufferCount)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Rotation)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Rotation)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation value);
+    HRESULT (STDMETHODCALLTYPE* get_SourceSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_SourceSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CFoundation_CSize value);
+    HRESULT (STDMETHODCALLTYPE* get_TransformMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TransformMatrix)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 value);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis, _q_CWindows_CUI_CColor clearColor, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* WaitForVerticalBlank)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* pThis);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateWithSize)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, _q_CWindows_CFoundation_CSize size, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeight)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, FLOAT width, FLOAT height, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, INT32 bufferCount, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateForCoreWindowWithDpi)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CUI_CCore_CICoreWindow* coreWindow, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateForCoreWindowWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CUI_CCore_CICoreWindow* coreWindow, FLOAT width, FLOAT height, FLOAT dpi, _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat format, INT32 bufferCount, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsCachedOnDemand)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SizeInPixels)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* pThis, _q_CWindows_CGraphics_CImaging_CBitmapSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Bounds)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap* pThis, _q_CWindows_CFoundation_CRect* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromFileName)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING fileName, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromFileNameWithOptions)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING fileName, _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions options, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromFileNameWithOptionsAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING fileName, _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions options, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromUri)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromUriWithOptions)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions options, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromUriWithOptionsAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions options, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromStream)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromStreamWithOptions)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions options, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsyncFromStreamWithOptionsAndAlpha)(_q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions options, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alpha, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_PageNumber)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PrintTaskOptions)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* pThis, _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetDeferral)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferralVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Complete)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral* pThis);
+} _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferralVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferralVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* add_PrintTaskOptionsChanged)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_PrintTaskOptionsChanged)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Preview)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Preview)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* add_Print)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_Print)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* InvalidatePreview)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis);
+    HRESULT (STDMETHODCALLTYPE* SetPageCount)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, UINT32 count);
+    HRESULT (STDMETHODCALLTYPE* SetIntermediatePageCount)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* pThis, UINT32 count);
+} _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateWithDevice)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocumentFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_PrintTaskOptions)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* pThis, _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Dpi)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Dpi)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* GetDeferral)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CurrentPreviewPageNumber)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_NewPreviewPageNumber)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* pThis, UINT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_NewPreviewPageNumber)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetDeferral)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDeferral** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PrintTaskOptions)(_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* pThis, _q_CWindows_CGraphics_CPrinting_CIPrintTaskOptionsCore** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttributeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* This, TrustLevel* trustLevel);
+    void* unneeded_Clone;
+    void* unneeded_GetElement;
+    void* unneeded_get_Device;
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttributeVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttributeVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentVtbl
 {
@@ -825,22 +3964,22 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* This, TrustLevel* trustLevel);
-    void* unneeded_get_Device;
-    void* unneeded_GetXml;
-    void* unneeded_SaveAsync;
-    void* unneeded_put_Root;
-    void* unneeded_get_Root;
-    void* unneeded_FindElementById;
-    void* unneeded_CreatePaintAttributeWithDefaults;
-    void* unneeded_CreatePaintAttribute;
-    void* unneeded_CreatePathAttributeWithDefaults;
-    void* unneeded_CreatePathAttribute;
-    void* unneeded_CreatePointsAttributeWithDefaults;
-    void* unneeded_CreatePointsAttribute;
-    void* unneeded_CreateStrokeDashArrayAttributeWithDefaults;
-    void* unneeded_CreateStrokeDashArrayAttribute;
-    void* unneeded_LoadElementFromXml;
-    void* unneeded_LoadElementAsync;
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetXml)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* SaveAsync)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _q_CWindows_CFoundation_CIAsyncAction** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Root)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* value);
+    HRESULT (STDMETHODCALLTYPE* get_Root)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* FindElementById)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, HSTRING id, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePaintAttributeWithDefaults)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePaintAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPaintType paintType, _q_CWindows_CUI_CColor color, HSTRING id, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePathAttributeWithDefaults)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePathAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, UINT32 segmentDataLength, FLOAT* segmentData, UINT32 commandsLength, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgPathCommand* commands, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePointsAttributeWithDefaults)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreatePointsAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, UINT32 pointsLength, _q_CWindows_CFoundation_CNumerics_CVector2* points, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateStrokeDashArrayAttributeWithDefaults)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateStrokeDashArrayAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, UINT32 dashValuesLength, FLOAT* dashValues, UINT32 unitValuesLength, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits* unitValues, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadElementFromXml)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, HSTRING xmlString, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadElementAsync)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument* pThis, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument
 {
@@ -860,6 +3999,194 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentFactory
 {
     _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentFactoryVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* LoadFromXml)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, HSTRING xmlString, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* LoadAsync)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, _q_CWindows_CStorage_CStreams_CIRandomAccessStream* stream, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* IsSupported)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* device, boolean* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocumentStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_ContainingDocument)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Parent)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElementVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElementVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* AppendChild)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* child);
+    HRESULT (STDMETHODCALLTYPE* CreateAndAppendNamedChildElement)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING childName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateAndAppendTextChildElement)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING textContent, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FirstChild)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LastChild)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPreviousSibling)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* child, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetNextSibling)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* child, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SpecifiedAttributes)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, UINT32* __pretLength, HSTRING** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Tag)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HasChildren)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* InsertChildBefore)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* child, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* referenceChild);
+    HRESULT (STDMETHODCALLTYPE* IsAttributeSpecified)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* IsAttributeSpecifiedWithInherhited)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, boolean inherited, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* RemoveAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName);
+    HRESULT (STDMETHODCALLTYPE* RemoveChild)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* child);
+    HRESULT (STDMETHODCALLTYPE* ReplaceChild)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* newChild, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgElement* oldChild);
+    HRESULT (STDMETHODCALLTYPE* SetStringAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, HSTRING attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetStringAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute* attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute** __pret);
+    HRESULT (STDMETHODCALLTYPE* SetIdAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, HSTRING attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetIdAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetFloatAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, FLOAT attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetFloatAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetColorAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CWindows_CUI_CColor attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetColorAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetFilledRegionDeterminationAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetFilledRegionDeterminationAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetDisplayAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetDisplayAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetOverflowAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetOverflowAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetCapStyleAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetCapStyleAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetLineJoinAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetLineJoinAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetVisibilityAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetVisibilityAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetTransformAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetTransformAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CWindows_CFoundation_CNumerics_CMatrix3x2* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetUnitsAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetUnitsAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetEdgeBehaviorAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetEdgeBehaviorAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetRectangleAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CWindows_CFoundation_CRect attributeValue);
+    HRESULT (STDMETHODCALLTYPE* GetRectangleAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetLengthAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, FLOAT value, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits units);
+    HRESULT (STDMETHODCALLTYPE* GetLengthAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits* units, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAspectRatioAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment alignment, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling meetOrSlice);
+    HRESULT (STDMETHODCALLTYPE* GetAspectRatioAttribute)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement* pThis, HSTRING attributeName, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling* meetOrSlice, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElementVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElementVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttributeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute* This, TrustLevel* trustLevel);
+    void* unneeded_put_PaintType;
+    void* unneeded_get_PaintType;
+    void* unneeded_put_Color;
+    void* unneeded_get_Color;
+    void* unneeded_put_Id;
+    void* unneeded_get_Id;
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttributeVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttributeVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttributeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute* This, TrustLevel* trustLevel);
+    void* unneeded_CreatePathGeometry;
+    void* unneeded_CreatePathGeometryWithFill;
+    void* unneeded_get_Commands;
+    void* unneeded_GetCommands;
+    void* unneeded_get_SegmentData;
+    void* unneeded_GetSegmentData;
+    void* unneeded_RemoveCommandsAtEnd;
+    void* unneeded_RemoveSegmentDataAtEnd;
+    void* unneeded_SetCommands;
+    void* unneeded_SetSegmentData;
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttributeVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttribute
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPathAttributeVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttributeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute* This, TrustLevel* trustLevel);
+    void* unneeded_get_Points;
+    void* unneeded_GetPoints;
+    void* unneeded_RemovePointsAtEnd;
+    void* unneeded_SetPoints;
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttributeVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttribute
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPointsAttributeVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttributeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute* This, TrustLevel* trustLevel);
+    void* unneeded_GetDashes;
+    void* unneeded_GetDashesWithUnits;
+    void* unneeded_RemoveDashesAtEnd;
+    void* unneeded_SetDashes;
+    void* unneeded_SetDashesWithUnit;
+    void* unneeded_SetDashesWithUnits;
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttributeVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttribute
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgStrokeDashArrayAttributeVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Text)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_Text)(_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement* pThis, HSTRING* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElementVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElementVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFaceVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* This, REFIID riid, void** ppvObject);
@@ -868,56 +4195,212 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFaceVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* This, TrustLevel* trustLevel);
-    void* unneeded_GetRecommendedRenderingMode;
-    void* unneeded_GetRecommendedRenderingModeWithAllOptions;
-    void* unneeded_GetRecommendedGridFit;
-    void* unneeded_get_GlyphBox;
-    void* unneeded_get_SubscriptPosition;
-    void* unneeded_get_SubscriptSize;
-    void* unneeded_get_SuperscriptPosition;
-    void* unneeded_get_SuperscriptSize;
-    void* unneeded_get_HasTypographicMetrics;
-    void* unneeded_get_Ascent;
-    void* unneeded_get_Descent;
-    void* unneeded_get_LineGap;
-    void* unneeded_get_CapHeight;
-    void* unneeded_get_LowercaseLetterHeight;
-    void* unneeded_get_UnderlinePosition;
-    void* unneeded_get_UnderlineThickness;
-    void* unneeded_get_StrikethroughPosition;
-    void* unneeded_get_StrikethroughThickness;
-    void* unneeded_get_CaretSlopeRise;
-    void* unneeded_get_CaretSlopeRun;
-    void* unneeded_get_CaretOffset;
-    void* unneeded_get_UnicodeRanges;
-    void* unneeded_get_IsMonospaced;
-    void* unneeded_GetVerticalGlyphVariants;
-    void* unneeded_get_HasVerticalGlyphVariants;
-    void* unneeded_get_FileFormatType;
-    void* unneeded_get_Simulations;
-    void* unneeded_get_IsSymbolFont;
-    void* unneeded_get_GlyphCount;
-    void* unneeded_GetGlyphIndices;
-    void* unneeded_GetGlyphMetrics;
-    void* unneeded_GetGdiCompatibleGlyphMetrics;
-    void* unneeded_get_Weight;
-    void* unneeded_get_Stretch;
-    void* unneeded_get_Style;
-    void* unneeded_get_FamilyNames;
-    void* unneeded_get_FaceNames;
-    void* unneeded_GetInformationalStrings;
-    void* unneeded_HasCharacter;
-    void* unneeded_GetGlyphRunBounds;
-    void* unneeded_GetGlyphRunBoundsWithMeasuringMode;
-    void* unneeded_get_Panose;
-    void* unneeded_GetSupportedTypographicFeatureNames;
-    void* unneeded_GetSupportedTypographicFeatureNamesWithLocale;
-    void* unneeded_GetTypographicFeatureGlyphSupport;
-    void* unneeded_GetTypographicFeatureGlyphSupportWithLocale;
+    HRESULT (STDMETHODCALLTYPE* GetRecommendedRenderingMode)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT fontSize, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode measuringMode, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* renderingParameters, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextRenderingMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetRecommendedRenderingModeWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT fontSize, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode measuringMode, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* renderingParameters, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, boolean isSideways, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing outlineThreshold, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextRenderingMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetRecommendedGridFit)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT fontSize, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode measuringMode, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* renderingParameters, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, boolean isSideways, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAntialiasing outlineThreshold, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextGridFit* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_GlyphBox)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SubscriptPosition)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SubscriptSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SuperscriptPosition)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SuperscriptSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HasTypographicMetrics)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Ascent)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Descent)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LineGap)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CapHeight)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LowercaseLetterHeight)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_UnderlinePosition)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_UnderlineThickness)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_StrikethroughPosition)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_StrikethroughThickness)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CaretSlopeRise)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CaretSlopeRun)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CaretOffset)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_UnicodeRanges)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasUnicodeRange** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsMonospaced)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetVerticalGlyphVariants)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32 inputElementsLength, INT32* inputElements, UINT32* __pretLength, INT32** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_HasVerticalGlyphVariants)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FileFormatType)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFileFormatType* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Simulations)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontSimulations* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsSymbolFont)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_GlyphCount)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphIndices_)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32 inputElementsLength, UINT32* inputElements, UINT32* __pretLength, INT32** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphMetrics)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32 inputElementsLength, INT32* inputElements, boolean isSideways, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphMetrics** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGdiCompatibleGlyphMetrics)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, FLOAT fontSize, FLOAT dpi, _q_CWindows_CFoundation_CNumerics_CMatrix3x2 transform, boolean useGdiNatural, UINT32 inputElementsLength, INT32* inputElements, boolean isSideways, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphMetrics** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Weight)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CUI_CText_CFontWeight* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Stretch)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CUI_CText_CFontStretch* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Style)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CWindows_CUI_CText_CFontStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FamilyNames)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_HSTRING** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FaceNames)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_HSTRING** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetInformationalStrings)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontInformation fontInformation, _cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_HSTRING** __pret);
+    HRESULT (STDMETHODCALLTYPE* HasCharacter)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32 unicodeValue, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphRunBounds)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession* drawingSession, _q_CWindows_CFoundation_CNumerics_CVector2 point, FLOAT fontSize, UINT32 glyphsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* glyphs, boolean isSideways, UINT32 bidiLevel, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphRunBoundsWithMeasuringMode)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession* drawingSession, _q_CWindows_CFoundation_CNumerics_CVector2 point, FLOAT fontSize, UINT32 glyphsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* glyphs, boolean isSideways, UINT32 bidiLevel, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextMeasuringMode measuringMode, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Panose)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, UINT32* __pretLength, UINT8** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetSupportedTypographicFeatureNames)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetSupportedTypographicFeatureNamesWithLocale)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, HSTRING locale, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetTypographicFeatureGlyphSupport)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName typographicFeatureName, UINT32 glyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* glyphsElements, UINT32* __pretLength, boolean** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetTypographicFeatureGlyphSupportWithLocale)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName typographicFeatureName, UINT32 glyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* glyphsElements, HSTRING locale, UINT32* __pretLength, boolean** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFaceVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFaceVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Fonts)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace** __pret);
+    HRESULT (STDMETHODCALLTYPE* TryFindFontFace)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, INT32* index, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetMatchingFontsFromProperties)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, UINT32 propertyElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty* propertyElements, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetMatchingFontsFromWwsFamily)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, HSTRING familyName, _q_CWindows_CUI_CText_CFontWeight weight, _q_CWindows_CUI_CText_CFontStretch stretch, _q_CWindows_CUI_CText_CFontStyle style, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet** __pret);
+    HRESULT (STDMETHODCALLTYPE* CountFontsMatchingProperty)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty property, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPropertyValuesFromIndex)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, UINT32 fontIndex, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier propertyIdentifier, _cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_HSTRING** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPropertyValuesFromIdentifier)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier propertyIdentifier, HSTRING preferredLocaleNames, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPropertyValues)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontPropertyIdentifier propertyIdentifier, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory* pThis, _q_CWindows_CFoundation_CIUriRuntimeClass* uri, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetSystemFontSet)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSetStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod method, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithLocaleAndIgnoreOverrides)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionMethod method, HSTRING localeName, boolean ignoreEnvironmentOverrides, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitutionFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFontVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_FontFace)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ScaleFactor)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont* pThis, FLOAT* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFontVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFont
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasScaledFontVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetFontsUsingSystemFontSet)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat* textFormat, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetFonts)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormat* textFormat, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet* fontSet, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBidi)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBidiWithLocale)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, HSTRING locale, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBreakpoints)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBreakpoint** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBreakpointsWithLocale)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, HSTRING locale, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBreakpoint** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetNumberSubstitutions)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetScript)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetScriptWithLocale)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, HSTRING locale, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphOrientations)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphOrientationsWithLocale)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, HSTRING locale, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetScriptProperties)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript analyzedScript, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScriptProperties* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphs)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange characterRange, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, FLOAT fontSize, boolean isSideways, boolean isRightToLeft, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphsWithAllOptions)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange characterRange, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, FLOAT fontSize, boolean isSideways, boolean isRightToLeft, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, HSTRING locale, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* numberSubstitution, _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* typographyRanges, UINT32* clusterMapIndicesElementsLength, INT32** clusterMapIndicesElements, UINT32* isShapedAloneGlyphsElementsLength, boolean** isShapedAloneGlyphsElements, UINT32* glyphShapingResultsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping** glyphShapingResultsElements, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetJustificationOpportunities)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange characterRange, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, FLOAT fontSize, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, UINT32 clusterMapIndicesElementsLength, INT32* clusterMapIndicesElements, UINT32 glyphShapingResultsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping* glyphShapingResultsElements, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasJustificationOpportunity** __pret);
+    HRESULT (STDMETHODCALLTYPE* ApplyJustificationOpportunities)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, FLOAT lineWidth, UINT32 justificationOpportunitiesElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasJustificationOpportunity* justificationOpportunitiesElements, UINT32 sourceGlyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* sourceGlyphsElements, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph** __pret);
+    HRESULT (STDMETHODCALLTYPE* AddGlyphsAfterJustification)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, FLOAT fontSize, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, UINT32 clusterMapIndicesElementsLength, INT32* clusterMapIndicesElements, UINT32 originalGlyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* originalGlyphsElements, UINT32 justifiedGlyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* justifiedGlyphsElements, UINT32 glyphShapingResultsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping* glyphShapingResultsElements, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph** __pret);
+    HRESULT (STDMETHODCALLTYPE* AddGlyphsAfterJustificationWithClusterMap)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontFace* fontFace, FLOAT fontSize, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript script, UINT32 clusterMapIndicesElementsLength, INT32* clusterMapIndicesElements, UINT32 originalGlyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* originalGlyphsElements, UINT32 justifiedGlyphsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph* justifiedGlyphsElements, UINT32 glyphShapingResultsElementsLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping* glyphShapingResultsElements, UINT32* outputClusterMapIndicesElementsLength, INT32** outputClusterMapIndicesElements, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* Create)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* pThis, HSTRING text, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection textDirection, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithNumberSubstitutionAndVerticalGlyphOrientationAndBidiLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* pThis, HSTRING text, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection textDirection, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution* numberSubstitution, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation verticalGlyphOrientation, UINT32 bidiLevel, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithOptions)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory* pThis, HSTRING text, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection textDirection, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* options, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptionsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions* This, TrustLevel* trustLevel);
+    void* unneeded_GetLocaleName;
+    void* unneeded_GetNumberSubstitution;
+    void* unneeded_GetVerticalGlyphOrientation;
+    void* unneeded_GetBidiLevel;
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptionsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptions
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzerOptionsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextFormatVtbl
 {
@@ -1021,100 +4504,100 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* This, TrustLevel* trustLevel);
-    void* unneeded_GetFormatChangeIndices;
-    void* unneeded_get_Direction;
-    void* unneeded_put_Direction;
-    void* unneeded_get_DefaultFontFamily;
-    void* unneeded_get_DefaultFontSize;
-    void* unneeded_get_DefaultFontStretch;
-    void* unneeded_get_DefaultFontStyle;
-    void* unneeded_get_DefaultFontWeight;
-    void* unneeded_get_IncrementalTabStop;
-    void* unneeded_put_IncrementalTabStop;
-    void* unneeded_get_LineSpacing;
-    void* unneeded_put_LineSpacing;
-    void* unneeded_get_LineSpacingBaseline;
-    void* unneeded_put_LineSpacingBaseline;
-    void* unneeded_get_DefaultLocaleName;
-    void* unneeded_get_VerticalAlignment;
-    void* unneeded_put_VerticalAlignment;
-    void* unneeded_get_HorizontalAlignment;
-    void* unneeded_put_HorizontalAlignment;
-    void* unneeded_get_TrimmingGranularity;
-    void* unneeded_put_TrimmingGranularity;
-    void* unneeded_get_TrimmingDelimiter;
-    void* unneeded_put_TrimmingDelimiter;
-    void* unneeded_get_TrimmingDelimiterCount;
-    void* unneeded_put_TrimmingDelimiterCount;
-    void* unneeded_get_WordWrapping;
-    void* unneeded_put_WordWrapping;
-    void* unneeded_get_Options;
-    void* unneeded_put_Options;
-    void* unneeded_get_LineSpacingMode;
-    void* unneeded_put_LineSpacingMode;
-    void* unneeded_get_TrimmingSign;
-    void* unneeded_put_TrimmingSign;
-    void* unneeded_get_CustomTrimmingSign;
-    void* unneeded_put_CustomTrimmingSign;
-    void* unneeded_get_RequestedSize;
-    void* unneeded_put_RequestedSize;
-    void* unneeded_GetMinimumLineLength;
-    void* unneeded_GetBrush;
-    void* unneeded_GetCustomBrush;
-    void* unneeded_GetFontFamily;
-    void* unneeded_GetFontSize;
-    void* unneeded_GetFontStretch;
-    void* unneeded_GetFontStyle;
-    void* unneeded_GetFontWeight;
-    void* unneeded_GetLocaleName;
-    void* unneeded_GetStrikethrough;
-    void* unneeded_GetUnderline;
-    void* unneeded_GetInlineObject;
-    void* unneeded_SetColor;
-    void* unneeded_SetBrush;
-    void* unneeded_SetCustomBrush;
-    void* unneeded_SetFontFamily;
-    void* unneeded_SetFontSize;
-    void* unneeded_SetFontStretch;
-    void* unneeded_SetFontStyle;
-    void* unneeded_SetFontWeight;
-    void* unneeded_SetLocaleName;
-    void* unneeded_SetStrikethrough;
-    void* unneeded_SetUnderline;
-    void* unneeded_SetInlineObject;
-    void* unneeded_DrawToTextRenderer;
-    void* unneeded_DrawToTextRendererWithCoords;
-    void* unneeded_get_LineMetrics;
-    void* unneeded_get_ClusterMetrics;
-    void* unneeded_SetTypography;
-    void* unneeded_GetTypography;
-    void* unneeded_get_LayoutBounds;
-    void* unneeded_get_LayoutBoundsIncludingTrailingWhitespace;
-    void* unneeded_get_LineCount;
-    void* unneeded_get_MaximumBidiReorderingDepth;
-    void* unneeded_get_DrawBounds;
-    void* unneeded_HitTest;
-    void* unneeded_HitTestWithCoords;
-    void* unneeded_HitTestWithDescription;
-    void* unneeded_HitTestWithDescriptionAndCoords;
-    void* unneeded_HitTestWithDescriptionAndTrailingSide;
-    void* unneeded_HitTestWithDescriptionAndCoordsAndTrailingSide;
-    void* unneeded_GetCaretPosition;
-    void* unneeded_GetCaretPositionWithDescription;
-    void* unneeded_GetCharacterRegions;
-    void* unneeded_GetPairKerning;
-    void* unneeded_SetPairKerning;
-    void* unneeded_GetLeadingCharacterSpacing;
-    void* unneeded_GetTrailingCharacterSpacing;
-    void* unneeded_GetMinimumCharacterAdvance;
-    void* unneeded_SetCharacterSpacing;
-    void* unneeded_get_VerticalGlyphOrientation;
-    void* unneeded_put_VerticalGlyphOrientation;
-    void* unneeded_get_OpticalAlignment;
-    void* unneeded_put_OpticalAlignment;
-    void* unneeded_get_LastLineWrapping;
-    void* unneeded_put_LastLineWrapping;
-    void* unneeded_get_Device;
+    HRESULT (STDMETHODCALLTYPE* GetFormatChangeIndices)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, UINT32* __pretLength, INT32** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Direction)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Direction)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextDirection value);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultFontFamily)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultFontSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultFontStretch)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CUI_CText_CFontStretch* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultFontStyle)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CUI_CText_CFontStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultFontWeight)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CUI_CText_CFontWeight* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IncrementalTabStop)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_IncrementalTabStop)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LineSpacing)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LineSpacing)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_LineSpacingBaseline)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LineSpacingBaseline)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT value);
+    HRESULT (STDMETHODCALLTYPE* get_DefaultLocaleName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_VerticalAlignment)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_VerticalAlignment)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_HorizontalAlignment)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_HorizontalAlignment)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasHorizontalAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_TrimmingGranularity)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextTrimmingGranularity* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TrimmingGranularity)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextTrimmingGranularity value);
+    HRESULT (STDMETHODCALLTYPE* get_TrimmingDelimiter)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TrimmingDelimiter)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, HSTRING value);
+    HRESULT (STDMETHODCALLTYPE* get_TrimmingDelimiterCount)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TrimmingDelimiterCount)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 value);
+    HRESULT (STDMETHODCALLTYPE* get_WordWrapping)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasWordWrapping* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_WordWrapping)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasWordWrapping value);
+    HRESULT (STDMETHODCALLTYPE* get_Options)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Options)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasDrawTextOptions value);
+    HRESULT (STDMETHODCALLTYPE* get_LineSpacingMode)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LineSpacingMode)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineSpacingMode value);
+    HRESULT (STDMETHODCALLTYPE* get_TrimmingSign)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_TrimmingSign)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTrimmingSign value);
+    HRESULT (STDMETHODCALLTYPE* get_CustomTrimmingSign)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CustomTrimmingSign)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject* value);
+    HRESULT (STDMETHODCALLTYPE* get_RequestedSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_RequestedSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CSize value);
+    HRESULT (STDMETHODCALLTYPE* GetMinimumLineLength)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetBrush)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetCustomBrush)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetFontFamily)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetFontSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetFontStretch)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, _q_CWindows_CUI_CText_CFontStretch* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetFontStyle)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, _q_CWindows_CUI_CText_CFontStyle* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetFontWeight)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, _q_CWindows_CUI_CText_CFontWeight* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetLocaleName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetStrikethrough)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetUnderline)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetInlineObject)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject** __pret);
+    HRESULT (STDMETHODCALLTYPE* SetColor)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CWindows_CUI_CColor color);
+    HRESULT (STDMETHODCALLTYPE* SetBrush)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CMicrosoft_CGraphics_CCanvas_CBrushes_CICanvasBrush* brush);
+    HRESULT (STDMETHODCALLTYPE* SetCustomBrush)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, IInspectable* brush);
+    HRESULT (STDMETHODCALLTYPE* SetFontFamily)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, HSTRING fontFamily);
+    HRESULT (STDMETHODCALLTYPE* SetFontSize)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, FLOAT fontSize);
+    HRESULT (STDMETHODCALLTYPE* SetFontStretch)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CWindows_CUI_CText_CFontStretch fontStretch);
+    HRESULT (STDMETHODCALLTYPE* SetFontStyle)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CWindows_CUI_CText_CFontStyle fontStyle);
+    HRESULT (STDMETHODCALLTYPE* SetFontWeight)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CWindows_CUI_CText_CFontWeight fontWeight);
+    HRESULT (STDMETHODCALLTYPE* SetLocaleName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, HSTRING name);
+    HRESULT (STDMETHODCALLTYPE* SetStrikethrough)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, boolean hasStrikethrough);
+    HRESULT (STDMETHODCALLTYPE* SetUnderline)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, boolean hasUnderline);
+    HRESULT (STDMETHODCALLTYPE* SetInlineObject)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextInlineObject* inlineObject);
+    HRESULT (STDMETHODCALLTYPE* DrawToTextRenderer)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* textRenderer, _q_CWindows_CFoundation_CNumerics_CVector2 position);
+    HRESULT (STDMETHODCALLTYPE* DrawToTextRendererWithCoords)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* textRenderer, FLOAT x, FLOAT y);
+    HRESULT (STDMETHODCALLTYPE* get_LineMetrics)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasLineMetrics** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ClusterMetrics)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasClusterMetrics** __pret);
+    HRESULT (STDMETHODCALLTYPE* SetTypography)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* typography);
+    HRESULT (STDMETHODCALLTYPE* GetTypography)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LayoutBounds)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LayoutBoundsIncludingTrailingWhitespace)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_LineCount)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaximumBidiReorderingDepth)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_DrawBounds)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CRect* __pret);
+    HRESULT (STDMETHODCALLTYPE* HitTest)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* HitTestWithCoords)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT x, FLOAT y, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* HitTestWithDescription)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion* textLayoutRegion, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* HitTestWithDescriptionAndCoords)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT x, FLOAT y, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion* textLayoutRegion, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* HitTestWithDescriptionAndTrailingSide)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CWindows_CFoundation_CNumerics_CVector2 point, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion* textLayoutRegion, boolean* trailingSideOfCharacter, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* HitTestWithDescriptionAndCoordsAndTrailingSide)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, FLOAT x, FLOAT y, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion* textLayoutRegion, boolean* trailingSideOfCharacter, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetCaretPosition)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, boolean trailingSideOfCharacter, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetCaretPositionWithDescription)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, boolean trailingSideOfCharacter, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion* textLayoutRegion, _q_CWindows_CFoundation_CNumerics_CVector2* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetCharacterRegions)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextLayoutRegion** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetPairKerning)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetPairKerning)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, boolean hasPairKerning);
+    HRESULT (STDMETHODCALLTYPE* GetLeadingCharacterSpacing)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetTrailingCharacterSpacing)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetMinimumCharacterAdvance)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetCharacterSpacing)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, INT32 characterIndex, INT32 characterCount, FLOAT leadingSpacing, FLOAT trailingSpacing, FLOAT minimumAdvance);
+    HRESULT (STDMETHODCALLTYPE* get_VerticalGlyphOrientation)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_VerticalGlyphOrientation)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasVerticalGlyphOrientation value);
+    HRESULT (STDMETHODCALLTYPE* get_OpticalAlignment)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_OpticalAlignment)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasOpticalAlignment value);
+    HRESULT (STDMETHODCALLTYPE* get_LastLineWrapping)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_LastLineWrapping)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_Device)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout
 {
@@ -1134,6 +4617,40 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutFactory
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutFactoryVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetGlyphOrientationTransform)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphOrientation glyphOrientation, boolean isSideways, _q_CWindows_CFoundation_CNumerics_CVector2 position, _q_CWindows_CFoundation_CNumerics_CMatrix3x2* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayoutStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRendererVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer* This, TrustLevel* trustLevel);
+    void* unneeded_DrawGlyphRun;
+    void* unneeded_DrawStrikethrough;
+    void* unneeded_DrawUnderline;
+    void* unneeded_DrawInlineObject;
+    void* unneeded_get_PixelSnappingDisabled;
+    void* unneeded_get_Transform;
+    void* unneeded_get_Dpi;
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRendererVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderer
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRendererVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* This, REFIID riid, void** ppvObject);
@@ -1142,8 +4659,8 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParame
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* This, TrustLevel* trustLevel);
-    void* unneeded_get_RenderingMode;
-    void* unneeded_get_GridFit;
+    HRESULT (STDMETHODCALLTYPE* get_RenderingMode)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextRenderingMode* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_GridFit)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTextGridFit* __pret);
 } _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersVtbl;
 struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParameters
 {
@@ -1162,6 +4679,42 @@ typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParame
 struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersFactory
 {
     _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextRenderingParametersFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypographyVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* AddFeature)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeature feature);
+    HRESULT (STDMETHODCALLTYPE* AddFeatureWithNameAndParameter)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* pThis, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName name, UINT32 parameter);
+    HRESULT (STDMETHODCALLTYPE* GetFeatures)(_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography* pThis, UINT32* __pretLength, _q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeature** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypographyVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypography
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTypographyVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateCompositionGraphicsDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositor* compositor, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* canvasDevice, _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetCanvasDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* graphicsDevice, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* SetCanvasDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* graphicsDevice, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* canvasDevice);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* drawingSurface, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSessionWithUpdateRect)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* drawingSurface, _q_CWindows_CFoundation_CRect updateRect, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSessionWithUpdateRectAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* drawingSurface, _q_CWindows_CFoundation_CRect updateRectInPixels, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* Resize)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics* pThis, _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* drawingSurface, _q_CWindows_CFoundation_CSize sizeInPixels);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStaticsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStatics
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CComposition_CICanvasCompositionStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgsVtbl
 {
@@ -1252,21 +4805,155 @@ struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgsFactory
 {
     _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgsFactoryVtbl* lpVtbl;
 };
-// definitions for parameterized interfaces
-typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceVtbl
 {
-    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, REFIID riid, void** ppvObject);
-    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This);
-    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This);
-    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, ULONG* iidCount, IID** iids);
-    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, HSTRING* className);
-    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, TrustLevel* trustLevel);
-    void* unneeded_get_Value;
-} _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl;
-struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* pThis, _q_CWindows_CUI_CColor clearColor, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSessionWithUpdateRectangle)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* pThis, _q_CWindows_CUI_CColor clearColor, _q_CWindows_CFoundation_CRect updateRectangle, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* Recreate)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* value);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SizeInPixels)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* pThis, _q_CWindows_CGraphics_CImaging_CBitmapSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource
 {
-    _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl* lpVtbl;
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateWithSize)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, _q_CWindows_CFoundation_CSize size, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeight)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, FLOAT width, FLOAT height, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpiAndAlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSource** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasImageSourceFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_InvalidatedRegions)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* pThis, UINT32* __pretLength, _q_CWindows_CFoundation_CRect** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_VisibleRegion)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* pThis, _q_CWindows_CFoundation_CRect* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgsVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanelVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_SwapChain)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain* value);
+    HRESULT (STDMETHODCALLTYPE* get_SwapChain)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain** __pret);
+    HRESULT (STDMETHODCALLTYPE* RemoveFromVisualTree)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel* pThis);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanelVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanel
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasSwapChainPanelVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControlVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* add_CreateResources)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_CreateResources)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* get_ReadyToDraw)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_RegionsInvalidated)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_RegionsInvalidated)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* put_ClearColor)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CUI_CColor value);
+    HRESULT (STDMETHODCALLTYPE* get_ClearColor)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CUI_CColor* __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CFoundation_CRect updateRectangle, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* SuspendDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession* drawingSession);
+    HRESULT (STDMETHODCALLTYPE* ResumeDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession* drawingSession);
+    HRESULT (STDMETHODCALLTYPE* Invalidate)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis);
+    HRESULT (STDMETHODCALLTYPE* InvalidateRegion)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CFoundation_CRect region);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* RemoveFromVisualTree)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis);
+    HRESULT (STDMETHODCALLTYPE* get_UseSharedDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_UseSharedDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_ForceSoftwareRenderer)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ForceSoftwareRenderer)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, boolean value);
+    HRESULT (STDMETHODCALLTYPE* get_CustomDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CustomDevice)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* value);
+    HRESULT (STDMETHODCALLTYPE* get_DpiScale)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_DpiScale)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* pThis, FLOAT ratio);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControlVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControlVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_Source)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CWindows_CUI_CColor clearColor, _q_CWindows_CFoundation_CRect updateRectangle, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession** __pret);
+    HRESULT (STDMETHODCALLTYPE* SuspendDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession* drawingSession);
+    HRESULT (STDMETHODCALLTYPE* ResumeDrawingSession)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession* drawingSession);
+    HRESULT (STDMETHODCALLTYPE* Invalidate)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis);
+    HRESULT (STDMETHODCALLTYPE* InvalidateRegion)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CWindows_CFoundation_CRect region);
+    HRESULT (STDMETHODCALLTYPE* RaiseRegionsInvalidatedIfAny)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis);
+    HRESULT (STDMETHODCALLTYPE* add_RegionsInvalidated)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* value, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_RegionsInvalidated)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* ResizeWithSize)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CWindows_CFoundation_CSize size);
+    HRESULT (STDMETHODCALLTYPE* ResizeWithWidthAndHeight)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, FLOAT width, FLOAT height);
+    HRESULT (STDMETHODCALLTYPE* ResizeWithWidthAndHeightAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, FLOAT width, FLOAT height, FLOAT dpi);
+    HRESULT (STDMETHODCALLTYPE* Recreate)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CWindows_CFoundation_CSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_SizeInPixels)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CWindows_CGraphics_CImaging_CBitmapSize* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_AlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* pThis, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode* __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateWithSize)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, _q_CWindows_CFoundation_CSize size, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeight)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi* resourceCreator, FLOAT width, FLOAT height, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpi)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateWithWidthAndHeightAndDpiAndAlphaMode)(_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator* resourceCreator, FLOAT width, FLOAT height, FLOAT dpi, _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode alphaMode, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource** __pret);
+} _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactoryVtbl;
+struct _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactory
+{
+    _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSourceFactoryVtbl* lpVtbl;
+};
+// definitions for parameterized interfaces
 typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap* This, REFIID riid, void** ppvObject);
@@ -1294,6 +4981,368 @@ struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_
 {
     _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl* lpVtbl;
 };
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice* sender, IInspectable* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectableVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision* This, TrustLevel* trustLevel);
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl;
+struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision
+{
+    _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecisionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* pThis, _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap** __pret);
+} _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
+{
+    _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
+} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
+{
+    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfileVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile* This, TrustLevel* trustLevel);
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfileVtbl;
+struct _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfile
+{
+    _cg_CWindows_CFoundation_IReference_1__q_CMicrosoft_CGraphics_CCanvas_CEffects_CColorManagementSimpleProfileVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* sender, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* sender, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument* sender, _q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument** __pret);
+} _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
+{
+    _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
+} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
+{
+    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* put_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* handler);
+    HRESULT (STDMETHODCALLTYPE* get_Completed)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* pThis, _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetResults)(_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* pThis, _q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement** __pret);
+} _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
+{
+    _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* pThis, _cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement* asyncInfo, _q_CWindows_CFoundation_CAsyncStatus asyncStatus);
+} _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl;
+struct _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
+{
+    _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFaceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFaceVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFace
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontFaceVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFontVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFontVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFontVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFontVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFontVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFont
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasScaledFontVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidiVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidiVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidiVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidiVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidiVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidiVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitution
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasNumberSubstitutionVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScriptVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScriptVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScriptVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScriptVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScriptVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScriptVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientationVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientationVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientationVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientationVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientationVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientationVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography* This, TrustLevel* trustLevel);
+    void* unneeded_get_Key;
+    void* unneeded_get_Value;
+} _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography
+{
+    _cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyVtbl* lpVtbl;
+};
 typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgsVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs* This, REFIID riid, void** ppvObject);
@@ -1315,4 +5364,37 @@ typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGrap
 struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
 {
     _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* sender, _q_CMicrosoft_CGraphics_CCanvas_CUI_CICanvasCreateResourcesEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl* sender, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs* pThis, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource* sender, _q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl* lpVtbl;
 };

@@ -1555,4 +1555,109 @@ open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock_
         return _self
     }
 }
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x20ddc438, Data2: 0x23c6, Data3 : 0x50ec, Data4 : (0x9c, 0xa4, 0x26, 0x1a, 0xb7, 0x9e, 0xdb, 0xa7)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.SwapChainPanel, System.Object)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ISwapChainPanel>, args : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+// impl delegate type
+open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectableVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
+        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: Microsoft.UI.Xaml.Controls.SwapChainPanel(plok: Microsoft.UI.Xaml.Controls.ISwapChainPanel(sender)), args: WinRT.Object(plok: WinRT.IInspectable(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, Optional<WinRT.Object>) throws -> Void>
+    public init(cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, Optional<WinRT.Object>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable? {
+        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, args : Optional<WinRT.Object>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class foo_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, args : Optional<WinRT.Object>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.GetInterface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable {
+        return _self
+    }
+}
 }

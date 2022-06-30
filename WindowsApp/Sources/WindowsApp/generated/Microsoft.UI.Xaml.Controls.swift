@@ -5690,6 +5690,145 @@ open class IStackPanelStatics
 } // IStackPanelStatics
 
 
+// type: Microsoft.UI.Xaml.Controls.ISwapChainPanel
+// interface type
+open class ISwapChainPanel
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x08844f85, Data2: 0xaa1b, Data3 : 0x540d, Data4 : (0xbe, 0xf2, 0xb2, 0xbb, 0x7b, 0x25, 0x7f, 0x8c)) }
+    // [IsSpecialName] System.Single get_CompositionScaleX()
+    private func _n_get_CompositionScaleX(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CompositionScaleX(pThis, __presult))
+        }
+    }
+    public func get_CompositionScaleX() throws -> Swift.Float {
+        var __result : FLOAT = 0;
+        try self._n_get_CompositionScaleX(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.Single get_CompositionScaleY()
+    private func _n_get_CompositionScaleY(_ __presult: UnsafeMutablePointer<FLOAT>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CompositionScaleY(pThis, __presult))
+        }
+    }
+    public func get_CompositionScaleY() throws -> Swift.Float {
+        var __result : FLOAT = 0;
+        try self._n_get_CompositionScaleY(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_CompositionScaleChanged(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.SwapChainPanel,System.Object>)
+    private func _n_add_CompositionScaleChanged(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_CompositionScaleChanged(pThis, handler, __presult))
+        }
+    }
+    public func add_CompositionScaleChanged(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_CompositionScaleChanged(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_CompositionScaleChanged(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_CompositionScaleChanged(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_CompositionScaleChanged(pThis, token))
+        }
+    }
+    public func remove_CompositionScaleChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_CompositionScaleChanged(token);
+    }
+    // Microsoft.UI.Input.InputPointerSource CreateCoreIndependentInputSource(Microsoft.UI.Input.InputPointerSourceDeviceKinds)
+    private func _n_CreateCoreIndependentInputSource(_ deviceKinds : _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIInputPointerSource>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateCoreIndependentInputSource(pThis, deviceKinds, __presult))
+        }
+    }
+    public func CreateCoreIndependentInputSource(deviceKinds : Microsoft.UI.Input.InputPointerSourceDeviceKinds) throws -> Optional<Microsoft.UI.Input.IInputPointerSource> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CInput_CIInputPointerSource>> = nil;
+        try self._n_CreateCoreIndependentInputSource(deviceKinds, &__result);
+        return Microsoft.UI.Input.IInputPointerSource(consuming: __result);
+    }
+    public var CompositionScaleX : Swift.Float {
+        get throws {
+            return try get_CompositionScaleX();
+        }
+    }
+    public var CompositionScaleY : Swift.Float {
+        get throws {
+            return try get_CompositionScaleY();
+        }
+    }
+} // ISwapChainPanel
+
+
+// type: Microsoft.UI.Xaml.Controls.ISwapChainPanelFactory
+// interface type
+// COMPOSITION INTERFACE
+open class ISwapChainPanelFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x38d00b69, Data2: 0x5759, Data3 : 0x5f37, Data4 : (0x9e, 0x1c, 0x3a, 0xe0, 0xd4, 0x28, 0x8b, 0x26)) }
+    // Microsoft.UI.Xaml.Controls.SwapChainPanel CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.ISwapChainPanel> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.ISwapChainPanel(consuming: __result);
+    }
+} // ISwapChainPanelFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.ISwapChainPanelStatics
+// interface type
+open class ISwapChainPanelStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xd83b0621, Data2: 0xaaca, Data3 : 0x534b, Data4 : (0xaf, 0xde, 0x53, 0x70, 0x16, 0x71, 0x76, 0xb5)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CompositionScaleXProperty()
+    private func _n_get_CompositionScaleXProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CompositionScaleXProperty(pThis, __presult))
+        }
+    }
+    public func get_CompositionScaleXProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CompositionScaleXProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CompositionScaleYProperty()
+    private func _n_get_CompositionScaleYProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CompositionScaleYProperty(pThis, __presult))
+        }
+    }
+    public func get_CompositionScaleYProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CompositionScaleYProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var CompositionScaleXProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CompositionScaleXProperty();
+        }
+    }
+    public var CompositionScaleYProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CompositionScaleYProperty();
+        }
+    }
+} // ISwapChainPanelStatics
+
+
 // type: Microsoft.UI.Xaml.Controls.ITextBlock
 // interface type
 open class ITextBlock
@@ -9555,6 +9694,83 @@ open class StackPanel
             var _tmp_out_first: Swift.Int32 = 0;
             var _tmp_out_second: Swift.Int32 = 0;
         return try _ifc.GetInsertionIndexes(position: position, first: &_tmp_out_first, second: &_tmp_out_second);
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.SwapChainPanel
+// runtime class
+open class SwapChainPanel
+    :
+    Microsoft.UI.Xaml.Controls.Grid
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ISwapChainPanel;
+    public init(plok: Microsoft.UI.Xaml.Controls.ISwapChainPanel?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ISwapChainPanel { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.ISwapChainPanelFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : ISwapChainPanelFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SwapChainPanel");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _ISwapChainPanelStatics {
+        static var x : ISwapChainPanelStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SwapChainPanel")
+    }
+    public static var SwapChainPanelStatics : ISwapChainPanelStatics {
+        _ISwapChainPanelStatics.x
+    }
+    public static func get_CompositionScaleXProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: SwapChainPanelStatics.get_CompositionScaleXProperty());
+    }
+    public static func get_CompositionScaleYProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: SwapChainPanelStatics.get_CompositionScaleYProperty());
+    }
+    public static var CompositionScaleXProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: SwapChainPanelStatics.CompositionScaleXProperty);
+        }
+    }
+    public static var CompositionScaleYProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: SwapChainPanelStatics.CompositionScaleYProperty);
+        }
+    }
+    public func get_CompositionScaleX() throws -> Swift.Float {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try _ifc.get_CompositionScaleX();
+    }
+    public func get_CompositionScaleY() throws -> Swift.Float {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try _ifc.get_CompositionScaleY();
+    }
+    public func add_CompositionScaleChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try _ifc.add_CompositionScaleChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(cb: handler).Interface());
+    }
+    public func remove_CompositionScaleChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try _ifc.remove_CompositionScaleChanged(token: token);
+    }
+    public func CreateCoreIndependentInputSource(deviceKinds : Microsoft.UI.Input.InputPointerSourceDeviceKinds) throws -> Optional<Microsoft.UI.Input.InputPointerSource> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try Microsoft.UI.Input.InputPointerSource(plok: _ifc.CreateCoreIndependentInputSource(deviceKinds: deviceKinds));
+    }
+    public var CompositionScaleX : Swift.Float {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try _ifc.CompositionScaleX;
+        }
+    }
+    public var CompositionScaleY : Swift.Float {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
+        return try _ifc.CompositionScaleY;
+        }
     }
 }
 

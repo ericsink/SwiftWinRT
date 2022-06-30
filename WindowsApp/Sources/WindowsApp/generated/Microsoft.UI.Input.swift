@@ -19,6 +19,50 @@ open class IInputCursor
 } // IInputCursor
 
 
+// type: Microsoft.UI.Input.IInputObject
+// interface type
+open class IInputObject
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x42edbc88, Data2: 0xd386, Data3 : 0x544d, Data4 : (0xb1, 0xb8, 0x68, 0x61, 0x7f, 0xe6, 0x82, 0x82)) }
+// method not needed: get_DispatcherQueue
+} // IInputObject
+
+
+// type: Microsoft.UI.Input.IInputPointerSource
+// interface type
+open class IInputPointerSource
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6a6c2764, Data2: 0xc3f4, Data3 : 0x5be5, Data4 : (0x84, 0x47, 0xc9, 0xa9, 0x87, 0x66, 0xc2, 0x40)) }
+// method not needed: get_Cursor
+// method not needed: put_Cursor
+// method not needed: get_DeviceKinds
+// method not needed: add_PointerCaptureLost
+// method not needed: remove_PointerCaptureLost
+// method not needed: add_PointerEntered
+// method not needed: remove_PointerEntered
+// method not needed: add_PointerExited
+// method not needed: remove_PointerExited
+// method not needed: add_PointerMoved
+// method not needed: remove_PointerMoved
+// method not needed: add_PointerPressed
+// method not needed: remove_PointerPressed
+// method not needed: add_PointerReleased
+// method not needed: remove_PointerReleased
+// method not needed: add_PointerRoutedAway
+// method not needed: remove_PointerRoutedAway
+// method not needed: add_PointerRoutedReleased
+// method not needed: remove_PointerRoutedReleased
+// method not needed: add_PointerRoutedTo
+// method not needed: remove_PointerRoutedTo
+// method not needed: add_PointerWheelChanged
+// method not needed: remove_PointerWheelChanged
+} // IInputPointerSource
+
+
 // type: Microsoft.UI.Input.IPointerPoint
 // interface type
 open class IPointerPoint
@@ -58,6 +102,64 @@ open class InputCursor
     }
 }
 
+// type: Microsoft.UI.Input.InputObject
+// runtime class
+open class InputObject
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Input.IInputObject;
+    public init(plok: Microsoft.UI.Input.IInputObject?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Input.IInputObject { return _self; }
+    // COMPOSABLE: Microsoft.UI.Input.IInputObjectFactory
+// composable interface not needed: Microsoft.UI.Input.IInputObjectFactory
+    // method not needed: get_DispatcherQueue
+}
+
+// type: Microsoft.UI.Input.InputPointerSource
+// runtime class
+public class InputPointerSource
+    :
+    Microsoft.UI.Input.InputObject
+{
+    private var _self : Microsoft.UI.Input.IInputPointerSource;
+    public init(plok: Microsoft.UI.Input.IInputPointerSource?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Input.IInputPointerSource { return _self; }
+    // method not needed: get_Cursor
+    // method not needed: put_Cursor
+    // method not needed: get_DeviceKinds
+    // method not needed: add_PointerCaptureLost
+    // method not needed: remove_PointerCaptureLost
+    // method not needed: add_PointerEntered
+    // method not needed: remove_PointerEntered
+    // method not needed: add_PointerExited
+    // method not needed: remove_PointerExited
+    // method not needed: add_PointerMoved
+    // method not needed: remove_PointerMoved
+    // method not needed: add_PointerPressed
+    // method not needed: remove_PointerPressed
+    // method not needed: add_PointerReleased
+    // method not needed: remove_PointerReleased
+    // method not needed: add_PointerRoutedAway
+    // method not needed: remove_PointerRoutedAway
+    // method not needed: add_PointerRoutedReleased
+    // method not needed: remove_PointerRoutedReleased
+    // method not needed: add_PointerRoutedTo
+    // method not needed: remove_PointerRoutedTo
+    // method not needed: add_PointerWheelChanged
+    // method not needed: remove_PointerWheelChanged
+}
+
+// type: Microsoft.UI.Input.InputPointerSourceDeviceKinds
+// enum type
+public typealias InputPointerSourceDeviceKinds = _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds;
+
 // type: Microsoft.UI.Input.PointerPoint
 // runtime class
 public class PointerPoint
@@ -80,4 +182,26 @@ public class PointerPoint
     // method not needed: GetTransformedPoint
 }
 
+}
+extension Microsoft.UI.Input.InputPointerSourceDeviceKinds {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_None;
+        }
+    }
+    public static var Touch : Self {
+        get {
+            return _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_Touch;
+        }
+    }
+    public static var Pen : Self {
+        get {
+            return _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_Pen;
+        }
+    }
+    public static var Mouse : Self {
+        get {
+            return _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_Mouse;
+        }
+    }
 }

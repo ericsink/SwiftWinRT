@@ -430,7 +430,6 @@ open class CanvasBitmap
         let _ifc : Microsoft.Graphics.Canvas.ICanvasImage = try _self.QueryInterface();
         return try _ifc.GetBoundsWithTransform(resourceCreator: resourceCreator, transform: transform);
     }
-    // instance interface not needed: Windows.Graphics.Effects.IGraphicsEffectSource
 }
 
 // type: Microsoft.Graphics.Canvas.CanvasBitmapFileFormat
@@ -445,9 +444,62 @@ public typealias CanvasBlend = _q_CMicrosoft_CGraphics_CCanvas_CCanvasBlend;
 // enum type
 public typealias CanvasBufferPrecision = _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision;
 
+// type: Microsoft.Graphics.Canvas.CanvasColorSpace
+// enum type
+public typealias CanvasColorSpace = _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace;
+
+// type: Microsoft.Graphics.Canvas.CanvasCommandList
+// runtime class
+public class CanvasCommandList
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.Graphics.Canvas.ICanvasCommandList;
+    public init(plok: Microsoft.Graphics.Canvas.ICanvasCommandList?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.Graphics.Canvas.ICanvasCommandList { return _self; }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>) throws {
+        let _af : ICanvasCommandListFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasCommandList");
+        _self = try _af.Create(resourceCreator: resourceCreator)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func CreateDrawingSession() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDrawingSession> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasCommandList = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDrawingSession(plok: _ifc.CreateDrawingSession());
+    }
+    public func get_Device() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasCommandList = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.get_Device());
+    }
+    public var Device : Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasCommandList = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.Device);
+        }
+    }
+    public func GetBounds(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>) throws -> Windows.Foundation.Rect {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasImage = try _self.QueryInterface();
+        return try _ifc.GetBounds(resourceCreator: resourceCreator);
+    }
+    public func GetBounds(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, transform : Windows.Foundation.Numerics.Matrix3x2) throws -> Windows.Foundation.Rect {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasImage = try _self.QueryInterface();
+        return try _ifc.GetBoundsWithTransform(resourceCreator: resourceCreator, transform: transform);
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
 // type: Microsoft.Graphics.Canvas.CanvasComposite
 // enum type
 public typealias CanvasComposite = _q_CMicrosoft_CGraphics_CCanvas_CCanvasComposite;
+
+// type: Microsoft.Graphics.Canvas.CanvasDebugLevel
+// enum type
+public typealias CanvasDebugLevel = _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel;
 
 // type: Microsoft.Graphics.Canvas.CanvasDevice
 // runtime class
@@ -470,21 +522,113 @@ public class CanvasDevice
         _self = try RoActivateInstance("Microsoft.Graphics.Canvas.CanvasDevice")
         try super.init(plok: _self.QueryInterface())
     }
-    // static interface not needed: Microsoft.Graphics.Canvas.ICanvasDeviceStatics
-    // method not needed: get_ForceSoftwareRenderer
-    // method not needed: get_MaximumBitmapSizeInPixels
-    // method not needed: IsPixelFormatSupported
-    // method not needed: IsBufferPrecisionSupported
-    // method not needed: get_MaximumCacheSize
-    // method not needed: put_MaximumCacheSize
-    // method not needed: get_LowPriority
-    // method not needed: put_LowPriority
-    // method not needed: add_DeviceLost
-    // method not needed: remove_DeviceLost
-    // method not needed: IsDeviceLost
-    // method not needed: RaiseDeviceLost
-    // method not needed: Lock
-    // instance interface not needed: Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice
+    private struct _ICanvasDeviceStatics {
+        static var x : ICanvasDeviceStatics =
+            try! RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasDevice")
+    }
+    public static var CanvasDeviceStatics : ICanvasDeviceStatics {
+        _ICanvasDeviceStatics.x
+    }
+    public static func CreateFromDirect3D11Device(direct3DDevice : Optional<Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice>) throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: CanvasDeviceStatics.CreateFromDirect3D11Device(direct3DDevice: direct3DDevice));
+    }
+    public static func GetSharedDevice() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: CanvasDeviceStatics.GetSharedDevice());
+    }
+    public static func GetSharedDevice(forceSoftwareRenderer : boolean) throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: CanvasDeviceStatics.GetSharedDeviceWithForceSoftwareRenderer(forceSoftwareRenderer: forceSoftwareRenderer));
+    }
+    public static func put_DebugLevel(value : Microsoft.Graphics.Canvas.CanvasDebugLevel) throws -> Void {
+        return try CanvasDeviceStatics.put_DebugLevel(value: value);
+    }
+    public static func get_DebugLevel() throws -> Microsoft.Graphics.Canvas.CanvasDebugLevel {
+        return try CanvasDeviceStatics.get_DebugLevel();
+    }
+    public static var DebugLevel : Microsoft.Graphics.Canvas.CanvasDebugLevel {
+        get throws {
+        return try CanvasDeviceStatics.DebugLevel;
+        }
+    }
+    public func get_ForceSoftwareRenderer() throws -> boolean {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.get_ForceSoftwareRenderer();
+    }
+    public func get_MaximumBitmapSizeInPixels() throws -> Swift.Int32 {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.get_MaximumBitmapSizeInPixels();
+    }
+    public func IsPixelFormatSupported(pixelFormat : Windows.Graphics.DirectX.DirectXPixelFormat) throws -> boolean {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.IsPixelFormatSupported(pixelFormat: pixelFormat);
+    }
+    public func IsBufferPrecisionSupported(bufferPrecision : Microsoft.Graphics.Canvas.CanvasBufferPrecision) throws -> boolean {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.IsBufferPrecisionSupported(bufferPrecision: bufferPrecision);
+    }
+    public func get_MaximumCacheSize() throws -> Swift.UInt64 {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.get_MaximumCacheSize();
+    }
+    public func put_MaximumCacheSize(value : Swift.UInt64) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.put_MaximumCacheSize(value: value);
+    }
+    public func get_LowPriority() throws -> boolean {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.get_LowPriority();
+    }
+    public func put_LowPriority(value : boolean) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.put_LowPriority(value: value);
+    }
+    public func add_DeviceLost(value : @escaping (Optional<Microsoft.Graphics.Canvas.CanvasDevice>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.add_DeviceLost(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(cb: value).Interface());
+    }
+    public func remove_DeviceLost(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.remove_DeviceLost(token: token);
+    }
+    public func IsDeviceLost(hresult : Swift.Int32) throws -> boolean {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.IsDeviceLost(hresult: hresult);
+    }
+    public func RaiseDeviceLost() throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.RaiseDeviceLost();
+    }
+    public func Lock() throws -> Optional<Microsoft.Graphics.Canvas.CanvasLock> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasLock(plok: _ifc.Lock());
+    }
+    public var ForceSoftwareRenderer : boolean {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.ForceSoftwareRenderer;
+        }
+    }
+    public var LowPriority : boolean {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.LowPriority;
+        }
+    }
+    public var MaximumBitmapSizeInPixels : Swift.Int32 {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.MaximumBitmapSizeInPixels;
+        }
+    }
+    public var MaximumCacheSize : Swift.UInt64 {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
+        return try _ifc.MaximumCacheSize;
+        }
+    }
+    public func Trim() throws -> Void {
+        let _ifc : Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice = try _self.QueryInterface();
+        return try _ifc.Trim();
+    }
     public func Close() throws -> Void {
         let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
         return try _ifc.Close();
@@ -1339,6 +1483,65 @@ public class CanvasDrawingSession
     }
 }
 
+// type: Microsoft.Graphics.Canvas.CanvasEdgeBehavior
+// enum type
+public typealias CanvasEdgeBehavior = _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior;
+
+// type: Microsoft.Graphics.Canvas.CanvasImage
+// static class
+public class CanvasImage
+{
+    private struct _ICanvasImageStatics {
+        static var x : ICanvasImageStatics =
+            try! RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasImage")
+    }
+    public static var CanvasImageStatics : ICanvasImageStatics {
+        _ICanvasImageStatics.x
+    }
+    public static func SaveAsync(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        return try CanvasImageStatics.SaveAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat);
+    }
+    public static func Save(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.SaveAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func SaveAsync(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        return try CanvasImageStatics.SaveWithQualityAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat, quality: quality);
+    }
+    public static func Save(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.SaveAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat, quality: quality)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func SaveAsync(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float, bufferPrecision : Microsoft.Graphics.Canvas.CanvasBufferPrecision) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        return try CanvasImageStatics.SaveWithQualityAndBufferPrecisionAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat, quality: quality, bufferPrecision: bufferPrecision);
+    }
+    public static func Save(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float, bufferPrecision : Microsoft.Graphics.Canvas.CanvasBufferPrecision) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Self.SaveAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat, quality: quality, bufferPrecision: bufferPrecision)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func ComputeHistogram(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, channelSelect : Microsoft.Graphics.Canvas.Effects.EffectChannelSelect, numberOfBins : Swift.Int32) throws -> UINT32 {
+        return try CanvasImageStatics.ComputeHistogram(image: image, sourceRectangle: sourceRectangle, resourceCreator: resourceCreator, channelSelect: channelSelect, numberOfBins: numberOfBins);
+    }
+    public static func IsHistogramSupported(device : Optional<Microsoft.Graphics.Canvas.CanvasDevice>) throws -> boolean {
+        return try CanvasImageStatics.IsHistogramSupported(device: device!.Interface());
+    }
+}
+
 // type: Microsoft.Graphics.Canvas.CanvasImageInterpolation
 // enum type
 public typealias CanvasImageInterpolation = _q_CMicrosoft_CGraphics_CCanvas_CCanvasImageInterpolation;
@@ -1346,6 +1549,72 @@ public typealias CanvasImageInterpolation = _q_CMicrosoft_CGraphics_CCanvas_CCan
 // type: Microsoft.Graphics.Canvas.CanvasLayerOptions
 // enum type
 public typealias CanvasLayerOptions = _q_CMicrosoft_CGraphics_CCanvas_CCanvasLayerOptions;
+
+// type: Microsoft.Graphics.Canvas.CanvasLock
+// runtime class
+public class CanvasLock
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.Graphics.Canvas.ICanvasLock;
+    public init(plok: Microsoft.Graphics.Canvas.ICanvasLock?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.Graphics.Canvas.ICanvasLock { return _self; }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Microsoft.Graphics.Canvas.CanvasRenderTarget
+// runtime class
+public class CanvasRenderTarget
+    :
+    Microsoft.Graphics.Canvas.CanvasBitmap
+{
+    private var _self : Microsoft.Graphics.Canvas.ICanvasRenderTarget;
+    public init(plok: Microsoft.Graphics.Canvas.ICanvasRenderTarget?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.Graphics.Canvas.ICanvasRenderTarget { return _self; }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, size : Windows.Foundation.Size) throws {
+        let _af : ICanvasRenderTargetFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasRenderTarget");
+        _self = try _af.CreateWithSize(resourceCreator: resourceCreator, size: size)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, width : Swift.Float, height : Swift.Float) throws {
+        let _af : ICanvasRenderTargetFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasRenderTarget");
+        _self = try _af.CreateWithWidthAndHeight(resourceCreator: resourceCreator, width: width, height: height)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float) throws {
+        let _af : ICanvasRenderTargetFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasRenderTarget");
+        _self = try _af.CreateWithWidthAndHeightAndDpi(resourceCreator: resourceCreator, width: width, height: height, dpi: dpi)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float, format : Windows.Graphics.DirectX.DirectXPixelFormat, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws {
+        let _af : ICanvasRenderTargetFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasRenderTarget");
+        _self = try _af.CreateWithWidthAndHeightAndDpiAndFormatAndAlpha(resourceCreator: resourceCreator, width: width, height: height, dpi: dpi, format: format, alpha: alpha)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _ICanvasRenderTargetStatics {
+        static var x : ICanvasRenderTargetStatics =
+            try! RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasRenderTarget")
+    }
+    public static var CanvasRenderTargetStatics : ICanvasRenderTargetStatics {
+        _ICanvasRenderTargetStatics.x
+    }
+// method not needed: CreateFromDirect3D11Surface
+// method not needed: CreateFromDirect3D11Surface
+// method not needed: CreateFromDirect3D11Surface
+    public func CreateDrawingSession() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDrawingSession> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasRenderTarget = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDrawingSession(plok: _ifc.CreateDrawingSession());
+    }
+}
 
 // type: Microsoft.Graphics.Canvas.CanvasSpriteBatch
 // runtime class
@@ -1359,25 +1628,88 @@ public class CanvasSpriteBatch
         try super.init(plok: _self.QueryInterface())
     }
     public func Interface() -> Microsoft.Graphics.Canvas.ICanvasSpriteBatch { return _self; }
-    // static interface not needed: Microsoft.Graphics.Canvas.ICanvasSpriteBatchStatics
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: Draw
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
-    // method not needed: DrawFromSpriteSheet
+    private struct _ICanvasSpriteBatchStatics {
+        static var x : ICanvasSpriteBatchStatics =
+            try! RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasSpriteBatch")
+    }
+    public static var CanvasSpriteBatchStatics : ICanvasSpriteBatchStatics {
+        _ICanvasSpriteBatchStatics.x
+    }
+    public static func IsSupported(device : Optional<Microsoft.Graphics.Canvas.CanvasDevice>) throws -> boolean {
+        return try CanvasSpriteBatchStatics.IsSupported(device: device!.Interface());
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, destRect : Windows.Foundation.Rect) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawToRect(bitmap: bitmap!.Interface(), destRect: destRect);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawAtOffset(bitmap: bitmap!.Interface(), offset: offset);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawWithTransform(bitmap: bitmap!.Interface(), transform: transform);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, destRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawToRectWithTint(bitmap: bitmap!.Interface(), destRect: destRect, tint: tint);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawAtOffsetWithTint(bitmap: bitmap!.Interface(), offset: offset, tint: tint);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawWithTransformAndTint(bitmap: bitmap!.Interface(), transform: transform, tint: tint);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, destRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawToRectWithTintAndFlip(bitmap: bitmap!.Interface(), destRect: destRect, tint: tint, flip: flip);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawWithTransformAndTintAndFlip(bitmap: bitmap!.Interface(), transform: transform, tint: tint, flip: flip);
+    }
+    public func Draw(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, tint : Windows.Foundation.Numerics.Vector4, origin : Windows.Foundation.Numerics.Vector2, rotation : Swift.Float, scale : Windows.Foundation.Numerics.Vector2, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawAtOffsetWithTintAndTransform(bitmap: bitmap!.Interface(), offset: offset, tint: tint, origin: origin, rotation: rotation, scale: scale, flip: flip);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, destRect : Windows.Foundation.Rect, sourceRect : Windows.Foundation.Rect) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetToRect(bitmap: bitmap!.Interface(), destRect: destRect, sourceRect: sourceRect);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, sourceRect : Windows.Foundation.Rect) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetAtOffset(bitmap: bitmap!.Interface(), offset: offset, sourceRect: sourceRect);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, sourceRect : Windows.Foundation.Rect) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetWithTransform(bitmap: bitmap!.Interface(), transform: transform, sourceRect: sourceRect);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, destRect : Windows.Foundation.Rect, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetToRectWithTint(bitmap: bitmap!.Interface(), destRect: destRect, sourceRect: sourceRect, tint: tint);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetAtOffsetWithTint(bitmap: bitmap!.Interface(), offset: offset, sourceRect: sourceRect, tint: tint);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetWithTransformAndTint(bitmap: bitmap!.Interface(), transform: transform, sourceRect: sourceRect, tint: tint);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, destRect : Windows.Foundation.Rect, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetToRectWithTintAndFlip(bitmap: bitmap!.Interface(), destRect: destRect, sourceRect: sourceRect, tint: tint, flip: flip);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetWithTransformAndTintAndFlip(bitmap: bitmap!.Interface(), transform: transform, sourceRect: sourceRect, tint: tint, flip: flip);
+    }
+    public func DrawFromSpriteSheet(bitmap : Optional<Microsoft.Graphics.Canvas.CanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, origin : Windows.Foundation.Numerics.Vector2, rotation : Swift.Float, scale : Windows.Foundation.Numerics.Vector2, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSpriteBatch = try _self.QueryInterface();
+        return try _ifc.DrawFromSpriteSheetAtOffsetWithTintAndTransform(bitmap: bitmap!.Interface(), offset: offset, sourceRect: sourceRect, tint: tint, origin: origin, rotation: rotation, scale: scale, flip: flip);
+    }
     public func get_Dpi() throws -> Swift.Float {
         let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi = try _self.QueryInterface();
         return try _ifc.get_Dpi();
@@ -1412,6 +1744,10 @@ public class CanvasSpriteBatch
     }
 }
 
+// type: Microsoft.Graphics.Canvas.CanvasSpriteFlip
+// enum type
+public typealias CanvasSpriteFlip = _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip;
+
 // type: Microsoft.Graphics.Canvas.CanvasSpriteOptions
 // enum type
 public typealias CanvasSpriteOptions = _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteOptions;
@@ -1420,9 +1756,411 @@ public typealias CanvasSpriteOptions = _q_CMicrosoft_CGraphics_CCanvas_CCanvasSp
 // enum type
 public typealias CanvasSpriteSortMode = _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteSortMode;
 
+// type: Microsoft.Graphics.Canvas.CanvasSwapChain
+// runtime class
+public class CanvasSwapChain
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.Graphics.Canvas.ICanvasSwapChain;
+    public init(plok: Microsoft.Graphics.Canvas.ICanvasSwapChain?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.Graphics.Canvas.ICanvasSwapChain { return _self; }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, size : Windows.Foundation.Size) throws {
+        let _af : ICanvasSwapChainFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasSwapChain");
+        _self = try _af.CreateWithSize(resourceCreator: resourceCreator, size: size)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, width : Swift.Float, height : Swift.Float) throws {
+        let _af : ICanvasSwapChainFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasSwapChain");
+        _self = try _af.CreateWithWidthAndHeight(resourceCreator: resourceCreator, width: width, height: height)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float) throws {
+        let _af : ICanvasSwapChainFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasSwapChain");
+        _self = try _af.CreateWithWidthAndHeightAndDpi(resourceCreator: resourceCreator, width: width, height: height, dpi: dpi)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    public init(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float, format : Windows.Graphics.DirectX.DirectXPixelFormat, bufferCount : Swift.Int32, alphaMode : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws {
+        let _af : ICanvasSwapChainFactory = try RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasSwapChain");
+        _self = try _af.CreateWithAllOptions(resourceCreator: resourceCreator, width: width, height: height, dpi: dpi, format: format, bufferCount: bufferCount, alphaMode: alphaMode)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _ICanvasSwapChainStatics {
+        static var x : ICanvasSwapChainStatics =
+            try! RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasSwapChain")
+    }
+    public static var CanvasSwapChainStatics : ICanvasSwapChainStatics {
+        _ICanvasSwapChainStatics.x
+    }
+    public static func CreateForCoreWindow(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, coreWindow : Optional<Windows.UI.Core.CoreWindow>, dpi : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.CanvasSwapChain> {
+        return try Microsoft.Graphics.Canvas.CanvasSwapChain(plok: CanvasSwapChainStatics.CreateForCoreWindowWithDpi(resourceCreator: resourceCreator, coreWindow: coreWindow!.Interface(), dpi: dpi));
+    }
+    public static func CreateForCoreWindow(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, coreWindow : Optional<Windows.UI.Core.CoreWindow>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float, format : Windows.Graphics.DirectX.DirectXPixelFormat, bufferCount : Swift.Int32) throws -> Optional<Microsoft.Graphics.Canvas.CanvasSwapChain> {
+        return try Microsoft.Graphics.Canvas.CanvasSwapChain(plok: CanvasSwapChainStatics.CreateForCoreWindowWithAllOptions(resourceCreator: resourceCreator, coreWindow: coreWindow!.Interface(), width: width, height: height, dpi: dpi, format: format, bufferCount: bufferCount));
+    }
+    public func Present() throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.Present();
+    }
+    public func Present(syncInterval : Swift.Int32) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.PresentWithSyncInterval(syncInterval: syncInterval);
+    }
+    public func ResizeBuffers(newSize : Windows.Foundation.Size) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.ResizeBuffersWithSize(newSize: newSize);
+    }
+    public func ResizeBuffers(newWidth : Swift.Float, newHeight : Swift.Float) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.ResizeBuffersWithWidthAndHeight(newWidth: newWidth, newHeight: newHeight);
+    }
+    public func ResizeBuffers(newWidth : Swift.Float, newHeight : Swift.Float, newDpi : Swift.Float) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.ResizeBuffersWithWidthAndHeightAndDpi(newWidth: newWidth, newHeight: newHeight, newDpi: newDpi);
+    }
+    public func ResizeBuffers(newWidth : Swift.Float, newHeight : Swift.Float, newDpi : Swift.Float, newFormat : Windows.Graphics.DirectX.DirectXPixelFormat, bufferCount : Swift.Int32) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.ResizeBuffersWithAllOptions(newWidth: newWidth, newHeight: newHeight, newDpi: newDpi, newFormat: newFormat, bufferCount: bufferCount);
+    }
+    public func get_Size() throws -> Windows.Foundation.Size {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func get_SizeInPixels() throws -> Windows.Graphics.Imaging.BitmapSize {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_SizeInPixels();
+    }
+    public func get_Format() throws -> Windows.Graphics.DirectX.DirectXPixelFormat {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_Format();
+    }
+    public func get_BufferCount() throws -> Swift.Int32 {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_BufferCount();
+    }
+    public func get_AlphaMode() throws -> Microsoft.Graphics.Canvas.CanvasAlphaMode {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_AlphaMode();
+    }
+    public func get_Rotation() throws -> Microsoft.Graphics.Canvas.CanvasSwapChainRotation {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_Rotation();
+    }
+    public func put_Rotation(value : Microsoft.Graphics.Canvas.CanvasSwapChainRotation) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.put_Rotation(value: value);
+    }
+    public func get_SourceSize() throws -> Windows.Foundation.Size {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_SourceSize();
+    }
+    public func put_SourceSize(value : Windows.Foundation.Size) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.put_SourceSize(value: value);
+    }
+    public func get_TransformMatrix() throws -> Windows.Foundation.Numerics.Matrix3x2 {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.get_TransformMatrix();
+    }
+    public func put_TransformMatrix(value : Windows.Foundation.Numerics.Matrix3x2) throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.put_TransformMatrix(value: value);
+    }
+    public func CreateDrawingSession(clearColor : Windows.UI.Color) throws -> Optional<Microsoft.Graphics.Canvas.CanvasDrawingSession> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDrawingSession(plok: _ifc.CreateDrawingSession(clearColor: clearColor));
+    }
+    public func WaitForVerticalBlank() throws -> Void {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.WaitForVerticalBlank();
+    }
+    public var AlphaMode : Microsoft.Graphics.Canvas.CanvasAlphaMode {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.AlphaMode;
+        }
+    }
+    public var BufferCount : Swift.Int32 {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.BufferCount;
+        }
+    }
+    public var Format : Windows.Graphics.DirectX.DirectXPixelFormat {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.Format;
+        }
+    }
+    public var Rotation : Microsoft.Graphics.Canvas.CanvasSwapChainRotation {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.Rotation;
+        }
+    }
+    public var Size : Windows.Foundation.Size {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.Size;
+        }
+    }
+    public var SizeInPixels : Windows.Graphics.Imaging.BitmapSize {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.SizeInPixels;
+        }
+    }
+    public var SourceSize : Windows.Foundation.Size {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.SourceSize;
+        }
+    }
+    public var TransformMatrix : Windows.Foundation.Numerics.Matrix3x2 {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasSwapChain = try _self.QueryInterface();
+        return try _ifc.TransformMatrix;
+        }
+    }
+    public func get_Dpi() throws -> Swift.Float {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi = try _self.QueryInterface();
+        return try _ifc.get_Dpi();
+    }
+    public func ConvertPixelsToDips(pixels : Swift.Int32) throws -> Swift.Float {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi = try _self.QueryInterface();
+        return try _ifc.ConvertPixelsToDips(pixels: pixels);
+    }
+    public func ConvertDipsToPixels(dips : Swift.Float, dpiRounding : Microsoft.Graphics.Canvas.CanvasDpiRounding) throws -> Swift.Int32 {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi = try _self.QueryInterface();
+        return try _ifc.ConvertDipsToPixels(dips: dips, dpiRounding: dpiRounding);
+    }
+    public var Dpi : Swift.Float {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi = try _self.QueryInterface();
+        return try _ifc.Dpi;
+        }
+    }
+    public func get_Device() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreator = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.get_Device());
+    }
+    public var Device : Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasResourceCreator = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.Device);
+        }
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Microsoft.Graphics.Canvas.CanvasSwapChainRotation
+// enum type
+public typealias CanvasSwapChainRotation = _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation;
+
 // type: Microsoft.Graphics.Canvas.CanvasUnits
 // enum type
 public typealias CanvasUnits = _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits;
+
+// type: Microsoft.Graphics.Canvas.CanvasVirtualBitmap
+// runtime class
+public class CanvasVirtualBitmap
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap;
+    public init(plok: Microsoft.Graphics.Canvas.ICanvasVirtualBitmap?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.Graphics.Canvas.ICanvasVirtualBitmap { return _self; }
+    private struct _ICanvasVirtualBitmapStatics {
+        static var x : ICanvasVirtualBitmapStatics =
+            try! RoGetActivationFactory("Microsoft.Graphics.Canvas.CanvasVirtualBitmap")
+    }
+    public static var CanvasVirtualBitmapStatics : ICanvasVirtualBitmapStatics {
+        _ICanvasVirtualBitmapStatics.x
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromFileName(resourceCreator: resourceCreator, fileName: fileName);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, fileName: fileName)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromFileNameWithOptions(resourceCreator: resourceCreator, fileName: fileName, options: options);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, fileName: fileName, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator: resourceCreator, fileName: fileName, options: options, alpha: alpha);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, fileName: fileName, options: options, alpha: alpha)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.Uri>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromUri(resourceCreator: resourceCreator, uri: uri!.Interface());
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.Uri>) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, uri: uri)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.Uri>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromUriWithOptions(resourceCreator: resourceCreator, uri: uri!.Interface(), options: options);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.Uri>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, uri: uri, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.Uri>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromUriWithOptionsAndAlpha(resourceCreator: resourceCreator, uri: uri!.Interface(), options: options, alpha: alpha);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.Uri>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, uri: uri, options: options, alpha: alpha)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromStream(resourceCreator: resourceCreator, stream: stream);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, stream: stream)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromStreamWithOptions(resourceCreator: resourceCreator, stream: stream, options: options);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, stream: stream, options: options)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public static func LoadAsync(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        return try CanvasVirtualBitmapStatics.LoadAsyncFromStreamWithOptionsAndAlpha(resourceCreator: resourceCreator, stream: stream, options: options, alpha: alpha);
+    }
+    public static func Load(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: Microsoft.Graphics.Canvas.CanvasVirtualBitmap(plok: Self.LoadAsync(resourceCreator: resourceCreator, stream: stream, options: options, alpha: alpha)!.get()))
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func get_Device() throws -> Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.get_Device());
+    }
+    public func get_IsCachedOnDemand() throws -> boolean {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.get_IsCachedOnDemand();
+    }
+    public func get_SizeInPixels() throws -> Windows.Graphics.Imaging.BitmapSize {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.get_SizeInPixels();
+    }
+    public func get_Size() throws -> Windows.Foundation.Size {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func get_Bounds() throws -> Windows.Foundation.Rect {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.get_Bounds();
+    }
+    public var Bounds : Windows.Foundation.Rect {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.Bounds;
+        }
+    }
+    public var Device : Optional<Microsoft.Graphics.Canvas.CanvasDevice> {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try Microsoft.Graphics.Canvas.CanvasDevice(plok: _ifc.Device);
+        }
+    }
+    public var IsCachedOnDemand : boolean {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.IsCachedOnDemand;
+        }
+    }
+    public var Size : Windows.Foundation.Size {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.Size;
+        }
+    }
+    public var SizeInPixels : Windows.Graphics.Imaging.BitmapSize {
+        get throws {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasVirtualBitmap = try _self.QueryInterface();
+        return try _ifc.SizeInPixels;
+        }
+    }
+    public func GetBounds(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>) throws -> Windows.Foundation.Rect {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasImage = try _self.QueryInterface();
+        return try _ifc.GetBounds(resourceCreator: resourceCreator);
+    }
+    public func GetBounds(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, transform : Windows.Foundation.Numerics.Matrix3x2) throws -> Windows.Foundation.Rect {
+        let _ifc : Microsoft.Graphics.Canvas.ICanvasImage = try _self.QueryInterface();
+        return try _ifc.GetBoundsWithTransform(resourceCreator: resourceCreator, transform: transform);
+    }
+    public func Close() throws -> Void {
+        let _ifc : Windows.Foundation.IClosable = try _self.QueryInterface();
+        return try _ifc.Close();
+    }
+}
+
+// type: Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions
+// enum type
+public typealias CanvasVirtualBitmapOptions = _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions;
 
 // type: Microsoft.Graphics.Canvas.ICanvasActiveLayer
 // interface type
@@ -2122,6 +2860,65 @@ open class ICanvasBitmapStatics
 } // ICanvasBitmapStatics
 
 
+// type: Microsoft.Graphics.Canvas.ICanvasCommandList
+// interface type
+open class ICanvasCommandList
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb71e73cf, Data2: 0x2fe7, Data3 : 0x4d3a, Data4 : (0xbb, 0xb8, 0x19, 0xf0, 0x16, 0xf5, 0xbe, 0x1b)) }
+    // Microsoft.Graphics.Canvas.CanvasDrawingSession CreateDrawingSession()
+    private func _n_CreateDrawingSession(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateDrawingSession(pThis, __presult))
+        }
+    }
+    public func CreateDrawingSession() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDrawingSession> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>> = nil;
+        try self._n_CreateDrawingSession(&__result);
+        return Microsoft.Graphics.Canvas.ICanvasDrawingSession(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasDevice get_Device()
+    private func _n_get_Device(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Device(pThis, __presult))
+        }
+    }
+    public func get_Device() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>> = nil;
+        try self._n_get_Device(&__result);
+        return Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
+    }
+    public var Device : Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        get throws {
+            return try get_Device();
+        }
+    }
+} // ICanvasCommandList
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasCommandListFactory
+// interface type
+// ACTIVATION INTERFACE
+open class ICanvasCommandListFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3d44e68, Data2: 0xd931, Data3 : 0x4b5b, Data4 : (0xb9, 0x57, 0x08, 0x88, 0x98, 0x0a, 0x7d, 0x50)) }
+    // Microsoft.Graphics.Canvas.CanvasCommandList Create(Microsoft.Graphics.Canvas.ICanvasResourceCreator)
+    private func _n_Create(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandListFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, resourceCreator, __presult))
+        }
+    }
+    public func Create(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasCommandList> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasCommandList>> = nil;
+        try self._n_Create(RawPointer(resourceCreator), &__result);
+        return Microsoft.Graphics.Canvas.ICanvasCommandList(consuming: __result);
+    }
+} // ICanvasCommandListFactory
+
+
 // type: Microsoft.Graphics.Canvas.ICanvasDevice
 // interface type
 open class ICanvasDevice
@@ -2129,19 +2926,161 @@ open class ICanvasDevice
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa27f0b5d, Data2: 0xec2c, Data3 : 0x4d4f, Data4 : (0x94, 0x8f, 0x0a, 0xa1, 0xe9, 0x5e, 0x33, 0xe6)) }
-// method not needed: get_ForceSoftwareRenderer
-// method not needed: get_MaximumBitmapSizeInPixels
-// method not needed: IsPixelFormatSupported
-// method not needed: IsBufferPrecisionSupported
-// method not needed: get_MaximumCacheSize
-// method not needed: put_MaximumCacheSize
-// method not needed: get_LowPriority
-// method not needed: put_LowPriority
-// method not needed: add_DeviceLost
-// method not needed: remove_DeviceLost
-// method not needed: IsDeviceLost
-// method not needed: RaiseDeviceLost
-// method not needed: Lock
+    // [IsSpecialName] bool get_ForceSoftwareRenderer()
+    private func _n_get_ForceSoftwareRenderer(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ForceSoftwareRenderer(pThis, __presult))
+        }
+    }
+    public func get_ForceSoftwareRenderer() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_ForceSoftwareRenderer(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.Int32 get_MaximumBitmapSizeInPixels()
+    private func _n_get_MaximumBitmapSizeInPixels(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumBitmapSizeInPixels(pThis, __presult))
+        }
+    }
+    public func get_MaximumBitmapSizeInPixels() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_MaximumBitmapSizeInPixels(&__result);
+        return __result;
+    }
+    // bool IsPixelFormatSupported(Windows.Graphics.DirectX.DirectXPixelFormat)
+    private func _n_IsPixelFormatSupported(_ pixelFormat : _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsPixelFormatSupported(pThis, pixelFormat, __presult))
+        }
+    }
+    public func IsPixelFormatSupported(pixelFormat : Windows.Graphics.DirectX.DirectXPixelFormat) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsPixelFormatSupported(pixelFormat, &__result);
+        return __result;
+    }
+    // bool IsBufferPrecisionSupported(Microsoft.Graphics.Canvas.CanvasBufferPrecision)
+    private func _n_IsBufferPrecisionSupported(_ bufferPrecision : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsBufferPrecisionSupported(pThis, bufferPrecision, __presult))
+        }
+    }
+    public func IsBufferPrecisionSupported(bufferPrecision : Microsoft.Graphics.Canvas.CanvasBufferPrecision) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsBufferPrecisionSupported(bufferPrecision, &__result);
+        return __result;
+    }
+    // [IsSpecialName] System.UInt64 get_MaximumCacheSize()
+    private func _n_get_MaximumCacheSize(_ __presult: UnsafeMutablePointer<UINT64>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaximumCacheSize(pThis, __presult))
+        }
+    }
+    public func get_MaximumCacheSize() throws -> Swift.UInt64 {
+        var __result : UINT64 = 0;
+        try self._n_get_MaximumCacheSize(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaximumCacheSize(System.UInt64)
+    private func _n_put_MaximumCacheSize(_ value : UINT64) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaximumCacheSize(pThis, value))
+        }
+    }
+    public func put_MaximumCacheSize(value : Swift.UInt64) throws -> Void {
+        try self._n_put_MaximumCacheSize(value);
+    }
+    // [IsSpecialName] bool get_LowPriority()
+    private func _n_get_LowPriority(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_LowPriority(pThis, __presult))
+        }
+    }
+    public func get_LowPriority() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_LowPriority(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_LowPriority(bool)
+    private func _n_put_LowPriority(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_LowPriority(pThis, value))
+        }
+    }
+    public func put_LowPriority(value : boolean) throws -> Void {
+        try self._n_put_LowPriority(value);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DeviceLost(Windows.Foundation.TypedEventHandler<Microsoft.Graphics.Canvas.CanvasDevice,System.Object>)
+    private func _n_add_DeviceLost(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_DeviceLost(pThis, value, __presult))
+        }
+    }
+    public func add_DeviceLost(value : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_DeviceLost(RawPointer(value), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_DeviceLost(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_DeviceLost(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DeviceLost(pThis, token))
+        }
+    }
+    public func remove_DeviceLost(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_DeviceLost(token);
+    }
+    // bool IsDeviceLost(System.Int32)
+    private func _n_IsDeviceLost(_ hresult : INT32, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsDeviceLost(pThis, hresult, __presult))
+        }
+    }
+    public func IsDeviceLost(hresult : Swift.Int32) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsDeviceLost(hresult, &__result);
+        return __result;
+    }
+    // void RaiseDeviceLost()
+    private func _n_RaiseDeviceLost() throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RaiseDeviceLost(pThis))
+        }
+    }
+    public func RaiseDeviceLost() throws -> Void {
+        try self._n_RaiseDeviceLost();
+    }
+    // Microsoft.Graphics.Canvas.CanvasLock Lock()
+    private func _n_Lock(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Lock(pThis, __presult))
+        }
+    }
+    public func Lock() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasLock> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasLock>> = nil;
+        try self._n_Lock(&__result);
+        return Microsoft.Graphics.Canvas.ICanvasLock(consuming: __result);
+    }
+    public var ForceSoftwareRenderer : boolean {
+        get throws {
+            return try get_ForceSoftwareRenderer();
+        }
+    }
+    public var LowPriority : boolean {
+        get throws {
+            return try get_LowPriority();
+        }
+    }
+    public var MaximumBitmapSizeInPixels : Swift.Int32 {
+        get throws {
+            return try get_MaximumBitmapSizeInPixels();
+        }
+    }
+    public var MaximumCacheSize : Swift.UInt64 {
+        get throws {
+            return try get_MaximumCacheSize();
+        }
+    }
 } // ICanvasDevice
 
 
@@ -2165,6 +3104,74 @@ open class ICanvasDeviceFactory
         return Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
     }
 } // ICanvasDeviceFactory
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasDeviceStatics
+// interface type
+open class ICanvasDeviceStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9b6e2b27, Data2: 0xcd07, Data3 : 0x421a, Data4 : (0x8f, 0x69, 0x0a, 0xe8, 0xa7, 0x87, 0xfe, 0x8c)) }
+    // Microsoft.Graphics.Canvas.CanvasDevice CreateFromDirect3D11Device(Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice)
+    private func _n_CreateFromDirect3D11Device(_ direct3DDevice : Optional<UnsafeMutablePointer<_q_CWindows_CGraphics_CDirectX_CDirect3D11_CIDirect3DDevice>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromDirect3D11Device(pThis, direct3DDevice, __presult))
+        }
+    }
+    public func CreateFromDirect3D11Device(direct3DDevice : Optional<Windows.Graphics.DirectX.Direct3D11.IDirect3DDevice>) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>> = nil;
+        try self._n_CreateFromDirect3D11Device(RawPointer(direct3DDevice), &__result);
+        return Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasDevice GetSharedDevice()
+    private func _n_GetSharedDevice(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetSharedDevice(pThis, __presult))
+        }
+    }
+    public func GetSharedDevice() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>> = nil;
+        try self._n_GetSharedDevice(&__result);
+        return Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasDevice GetSharedDevice(bool)
+    private func _n_GetSharedDeviceWithForceSoftwareRenderer(_ forceSoftwareRenderer : boolean, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetSharedDeviceWithForceSoftwareRenderer(pThis, forceSoftwareRenderer, __presult))
+        }
+    }
+    public func GetSharedDeviceWithForceSoftwareRenderer(forceSoftwareRenderer : boolean) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>> = nil;
+        try self._n_GetSharedDeviceWithForceSoftwareRenderer(forceSoftwareRenderer, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
+    }
+    // [IsSpecialName] void put_DebugLevel(Microsoft.Graphics.Canvas.CanvasDebugLevel)
+    private func _n_put_DebugLevel(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DebugLevel(pThis, value))
+        }
+    }
+    public func put_DebugLevel(value : Microsoft.Graphics.Canvas.CanvasDebugLevel) throws -> Void {
+        try self._n_put_DebugLevel(value);
+    }
+    // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasDebugLevel get_DebugLevel()
+    private func _n_get_DebugLevel(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasDeviceStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DebugLevel(pThis, __presult))
+        }
+    }
+    public func get_DebugLevel() throws -> Microsoft.Graphics.Canvas.CanvasDebugLevel {
+        var __result : _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel = _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_None;
+        try self._n_get_DebugLevel(&__result);
+        return __result;
+    }
+    public var DebugLevel : Microsoft.Graphics.Canvas.CanvasDebugLevel {
+        get throws {
+            return try get_DebugLevel();
+        }
+    }
+} // ICanvasDeviceStatics
 
 
 // type: Microsoft.Graphics.Canvas.ICanvasDrawingSession
@@ -3992,6 +4999,198 @@ open class ICanvasImage
 } // ICanvasImage
 
 
+// type: Microsoft.Graphics.Canvas.ICanvasImageStatics
+// interface type
+open class ICanvasImageStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc54eea15, Data2: 0x5a14, Data3 : 0x489a, Data4 : (0x8f, 0xa0, 0x6e, 0x84, 0x54, 0x1f, 0x92, 0x2d)) }
+    // Windows.Foundation.IAsyncAction SaveAsync(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Storage.Streams.IRandomAccessStream, Microsoft.Graphics.Canvas.CanvasBitmapFileFormat)
+    private func _n_SaveAsync(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ dpi : FLOAT, _ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ fileFormat : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SaveAsync(pThis, image, sourceRectangle, dpi, resourceCreator, stream, fileFormat, __presult))
+        }
+    }
+    public func SaveAsync(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SaveAsync(RawPointer(image), sourceRectangle, dpi, RawPointer(resourceCreator), RawPointer(stream), fileFormat, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func Save(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SaveAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction SaveAsync(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Storage.Streams.IRandomAccessStream, Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, System.Single)
+    private func _n_SaveWithQualityAsync(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ dpi : FLOAT, _ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ fileFormat : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat, _ quality : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SaveWithQualityAsync(pThis, image, sourceRectangle, dpi, resourceCreator, stream, fileFormat, quality, __presult))
+        }
+    }
+    public func SaveWithQualityAsync(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SaveWithQualityAsync(RawPointer(image), sourceRectangle, dpi, RawPointer(resourceCreator), RawPointer(stream), fileFormat, quality, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func SaveWithQuality(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SaveWithQualityAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat, quality: quality)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncAction SaveAsync(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, System.Single, Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Storage.Streams.IRandomAccessStream, Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, System.Single, Microsoft.Graphics.Canvas.CanvasBufferPrecision)
+    private func _n_SaveWithQualityAndBufferPrecisionAsync(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ dpi : FLOAT, _ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ fileFormat : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapFileFormat, _ quality : FLOAT, _ bufferPrecision : _q_CMicrosoft_CGraphics_CCanvas_CCanvasBufferPrecision, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SaveWithQualityAndBufferPrecisionAsync(pThis, image, sourceRectangle, dpi, resourceCreator, stream, fileFormat, quality, bufferPrecision, __presult))
+        }
+    }
+    public func SaveWithQualityAndBufferPrecisionAsync(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float, bufferPrecision : Microsoft.Graphics.Canvas.CanvasBufferPrecision) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
+        try self._n_SaveWithQualityAndBufferPrecisionAsync(RawPointer(image), sourceRectangle, dpi, RawPointer(resourceCreator), RawPointer(stream), fileFormat, quality, bufferPrecision, &__result);
+        return Windows.Foundation.IAsyncAction(consuming: __result);
+    }
+    public func SaveWithQualityAndBufferPrecision(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, dpi : Swift.Float, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float, bufferPrecision : Microsoft.Graphics.Canvas.CanvasBufferPrecision) async throws -> Void {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.SaveWithQualityAndBufferPrecisionAsync(image: image, sourceRectangle: sourceRectangle, dpi: dpi, resourceCreator: resourceCreator, stream: stream, fileFormat: fileFormat, quality: quality, bufferPrecision: bufferPrecision)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // System.Single[] ComputeHistogram(Microsoft.Graphics.Canvas.ICanvasImage, Windows.Foundation.Rect, Microsoft.Graphics.Canvas.ICanvasResourceCreator, Microsoft.Graphics.Canvas.Effects.EffectChannelSelect, System.Int32)
+    private func _n_ComputeHistogram(_ image : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasImage>>, _ sourceRectangle : _q_CWindows_CFoundation_CRect, _ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ channelSelect : _q_CMicrosoft_CGraphics_CCanvas_CEffects_CEffectChannelSelect, _ numberOfBins : INT32, _ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<FLOAT>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ComputeHistogram(pThis, image, sourceRectangle, resourceCreator, channelSelect, numberOfBins, __presultLength, __presult))
+        }
+    }
+    public func ComputeHistogram(image : Optional<Microsoft.Graphics.Canvas.ICanvasImage>, sourceRectangle : Windows.Foundation.Rect, resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, channelSelect : Microsoft.Graphics.Canvas.Effects.EffectChannelSelect, numberOfBins : Swift.Int32) throws -> UINT32 {
+        var __resultLength : UINT32 = 0;
+        var __result : Optional<UnsafeMutablePointer<FLOAT>> = nil;
+        try self._n_ComputeHistogram(RawPointer(image), sourceRectangle, RawPointer(resourceCreator), channelSelect, numberOfBins, &__resultLength, &__result);
+        return __resultLength;
+    }
+    // bool IsHistogramSupported(Microsoft.Graphics.Canvas.CanvasDevice)
+    private func _n_IsHistogramSupported(_ device : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasImageStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsHistogramSupported(pThis, device, __presult))
+        }
+    }
+    public func IsHistogramSupported(device : Optional<Microsoft.Graphics.Canvas.ICanvasDevice>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsHistogramSupported(RawPointer(device), &__result);
+        return __result;
+    }
+} // ICanvasImageStatics
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasLock
+// interface type
+open class ICanvasLock
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7a0e8498, Data2: 0xfba9, Data3 : 0x4fb0, Data4 : (0xaa, 0x8c, 0x6a, 0x48, 0xb5, 0xee, 0x3e, 0x4f)) }
+} // ICanvasLock
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasRenderTarget
+// interface type
+open class ICanvasRenderTarget
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2d4c7349, Data2: 0x9a32, Data3 : 0x41b9, Data4 : (0xb3, 0xcc, 0xca, 0xf1, 0xb7, 0xe1, 0x09, 0x9b)) }
+    // Microsoft.Graphics.Canvas.CanvasDrawingSession CreateDrawingSession()
+    private func _n_CreateDrawingSession(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateDrawingSession(pThis, __presult))
+        }
+    }
+    public func CreateDrawingSession() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDrawingSession> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>> = nil;
+        try self._n_CreateDrawingSession(&__result);
+        return Microsoft.Graphics.Canvas.ICanvasDrawingSession(consuming: __result);
+    }
+} // ICanvasRenderTarget
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasRenderTargetFactory
+// interface type
+// ACTIVATION INTERFACE
+open class ICanvasRenderTargetFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x620dfdbb, Data2: 0x9d08, Data3 : 0x406c, Data4 : (0xbf, 0xe6, 0xd9, 0xb8, 0x1e, 0x6d, 0xf8, 0xe7)) }
+    // Microsoft.Graphics.Canvas.CanvasRenderTarget CreateWithSize(Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi, Windows.Foundation.Size)
+    private func _n_CreateWithSize(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi>>, _ size : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithSize(pThis, resourceCreator, size, __presult))
+        }
+    }
+    public func CreateWithSize(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, size : Windows.Foundation.Size) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasRenderTarget> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>> = nil;
+        try self._n_CreateWithSize(RawPointer(resourceCreator), size, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasRenderTarget(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasRenderTarget CreateWithWidthAndHeight(Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi, System.Single, System.Single)
+    private func _n_CreateWithWidthAndHeight(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi>>, _ width : FLOAT, _ height : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithWidthAndHeight(pThis, resourceCreator, width, height, __presult))
+        }
+    }
+    public func CreateWithWidthAndHeight(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, width : Swift.Float, height : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasRenderTarget> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>> = nil;
+        try self._n_CreateWithWidthAndHeight(RawPointer(resourceCreator), width, height, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasRenderTarget(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasRenderTarget CreateWithWidthAndHeightAndDpi(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.Single, System.Single, System.Single)
+    private func _n_CreateWithWidthAndHeightAndDpi(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ width : FLOAT, _ height : FLOAT, _ dpi : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithWidthAndHeightAndDpi(pThis, resourceCreator, width, height, dpi, __presult))
+        }
+    }
+    public func CreateWithWidthAndHeightAndDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasRenderTarget> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>> = nil;
+        try self._n_CreateWithWidthAndHeightAndDpi(RawPointer(resourceCreator), width, height, dpi, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasRenderTarget(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasRenderTarget CreateWithWidthAndHeightAndDpiAndFormatAndAlpha(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.Single, System.Single, System.Single, Windows.Graphics.DirectX.DirectXPixelFormat, Microsoft.Graphics.Canvas.CanvasAlphaMode)
+    private func _n_CreateWithWidthAndHeightAndDpiAndFormatAndAlpha(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ width : FLOAT, _ height : FLOAT, _ dpi : FLOAT, _ format : _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat, _ alpha : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTargetFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithWidthAndHeightAndDpiAndFormatAndAlpha(pThis, resourceCreator, width, height, dpi, format, alpha, __presult))
+        }
+    }
+    public func CreateWithWidthAndHeightAndDpiAndFormatAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float, format : Windows.Graphics.DirectX.DirectXPixelFormat, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasRenderTarget> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasRenderTarget>> = nil;
+        try self._n_CreateWithWidthAndHeightAndDpiAndFormatAndAlpha(RawPointer(resourceCreator), width, height, dpi, format, alpha, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasRenderTarget(consuming: __result);
+    }
+} // ICanvasRenderTargetFactory
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasRenderTargetStatics
+// interface type
+open class ICanvasRenderTargetStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc7d1fe37, Data2: 0xdd57, Data3 : 0x45d7, Data4 : (0xbc, 0xc1, 0x15, 0x62, 0x5a, 0x21, 0xe8, 0xd5)) }
+// method not needed: CreateFromDirect3D11Surface
+// method not needed: CreateFromDirect3D11SurfaceWithDpi
+// method not needed: CreateFromDirect3D11SurfaceWithDpiAndAlpha
+} // ICanvasRenderTargetStatics
+
+
 // type: Microsoft.Graphics.Canvas.ICanvasResourceCreator
 // interface type
 open class ICanvasResourceCreator
@@ -4073,25 +5272,805 @@ open class ICanvasSpriteBatch
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa065dce4, Data2: 0xa7f2, Data3 : 0x4df4, Data4 : (0x84, 0x05, 0xea, 0x9e, 0x3a, 0x21, 0x5b, 0xf8)) }
-// method not needed: DrawToRect
-// method not needed: DrawAtOffset
-// method not needed: DrawWithTransform
-// method not needed: DrawToRectWithTint
-// method not needed: DrawAtOffsetWithTint
-// method not needed: DrawWithTransformAndTint
-// method not needed: DrawToRectWithTintAndFlip
-// method not needed: DrawWithTransformAndTintAndFlip
-// method not needed: DrawAtOffsetWithTintAndTransform
-// method not needed: DrawFromSpriteSheetToRect
-// method not needed: DrawFromSpriteSheetAtOffset
-// method not needed: DrawFromSpriteSheetWithTransform
-// method not needed: DrawFromSpriteSheetToRectWithTint
-// method not needed: DrawFromSpriteSheetAtOffsetWithTint
-// method not needed: DrawFromSpriteSheetWithTransformAndTint
-// method not needed: DrawFromSpriteSheetToRectWithTintAndFlip
-// method not needed: DrawFromSpriteSheetWithTransformAndTintAndFlip
-// method not needed: DrawFromSpriteSheetAtOffsetWithTintAndTransform
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect)
+    private func _n_DrawToRect(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destRect : _q_CWindows_CFoundation_CRect) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawToRect(pThis, bitmap, destRect))
+        }
+    }
+    public func DrawToRect(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, destRect : Windows.Foundation.Rect) throws -> Void {
+        try self._n_DrawToRect(RawPointer(bitmap), destRect);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2)
+    private func _n_DrawAtOffset(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawAtOffset(pThis, bitmap, offset))
+        }
+    }
+    public func DrawAtOffset(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2) throws -> Void {
+        try self._n_DrawAtOffset(RawPointer(bitmap), offset);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Matrix3x2)
+    private func _n_DrawWithTransform(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ transform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawWithTransform(pThis, bitmap, transform))
+        }
+    }
+    public func DrawWithTransform(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2) throws -> Void {
+        try self._n_DrawWithTransform(RawPointer(bitmap), transform);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4)
+    private func _n_DrawToRectWithTint(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawToRectWithTint(pThis, bitmap, destRect, tint))
+        }
+    }
+    public func DrawToRectWithTint(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, destRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        try self._n_DrawToRectWithTint(RawPointer(bitmap), destRect, tint);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector4)
+    private func _n_DrawAtOffsetWithTint(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawAtOffsetWithTint(pThis, bitmap, offset, tint))
+        }
+    }
+    public func DrawAtOffsetWithTint(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        try self._n_DrawAtOffsetWithTint(RawPointer(bitmap), offset, tint);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Matrix3x2, Windows.Foundation.Numerics.Vector4)
+    private func _n_DrawWithTransformAndTint(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ transform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawWithTransformAndTint(pThis, bitmap, transform, tint))
+        }
+    }
+    public func DrawWithTransformAndTint(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        try self._n_DrawWithTransformAndTint(RawPointer(bitmap), transform, tint);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4, Microsoft.Graphics.Canvas.CanvasSpriteFlip)
+    private func _n_DrawToRectWithTintAndFlip(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4, _ flip : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawToRectWithTintAndFlip(pThis, bitmap, destRect, tint, flip))
+        }
+    }
+    public func DrawToRectWithTintAndFlip(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, destRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        try self._n_DrawToRectWithTintAndFlip(RawPointer(bitmap), destRect, tint, flip);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Matrix3x2, Windows.Foundation.Numerics.Vector4, Microsoft.Graphics.Canvas.CanvasSpriteFlip)
+    private func _n_DrawWithTransformAndTintAndFlip(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ transform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4, _ flip : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawWithTransformAndTintAndFlip(pThis, bitmap, transform, tint, flip))
+        }
+    }
+    public func DrawWithTransformAndTintAndFlip(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        try self._n_DrawWithTransformAndTintAndFlip(RawPointer(bitmap), transform, tint, flip);
+    }
+    // void Draw(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Numerics.Vector4, Windows.Foundation.Numerics.Vector2, System.Single, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.CanvasSpriteFlip)
+    private func _n_DrawAtOffsetWithTintAndTransform(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4, _ origin : _q_CWindows_CFoundation_CNumerics_CVector2, _ rotation : FLOAT, _ scale : _q_CWindows_CFoundation_CNumerics_CVector2, _ flip : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawAtOffsetWithTintAndTransform(pThis, bitmap, offset, tint, origin, rotation, scale, flip))
+        }
+    }
+    public func DrawAtOffsetWithTintAndTransform(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, tint : Windows.Foundation.Numerics.Vector4, origin : Windows.Foundation.Numerics.Vector2, rotation : Swift.Float, scale : Windows.Foundation.Numerics.Vector2, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        try self._n_DrawAtOffsetWithTintAndTransform(RawPointer(bitmap), offset, tint, origin, rotation, scale, flip);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect, Windows.Foundation.Rect)
+    private func _n_DrawFromSpriteSheetToRect(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destRect : _q_CWindows_CFoundation_CRect, _ sourceRect : _q_CWindows_CFoundation_CRect) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetToRect(pThis, bitmap, destRect, sourceRect))
+        }
+    }
+    public func DrawFromSpriteSheetToRect(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, destRect : Windows.Foundation.Rect, sourceRect : Windows.Foundation.Rect) throws -> Void {
+        try self._n_DrawFromSpriteSheetToRect(RawPointer(bitmap), destRect, sourceRect);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect)
+    private func _n_DrawFromSpriteSheetAtOffset(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRect : _q_CWindows_CFoundation_CRect) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetAtOffset(pThis, bitmap, offset, sourceRect))
+        }
+    }
+    public func DrawFromSpriteSheetAtOffset(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, sourceRect : Windows.Foundation.Rect) throws -> Void {
+        try self._n_DrawFromSpriteSheetAtOffset(RawPointer(bitmap), offset, sourceRect);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Matrix3x2, Windows.Foundation.Rect)
+    private func _n_DrawFromSpriteSheetWithTransform(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ transform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ sourceRect : _q_CWindows_CFoundation_CRect) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetWithTransform(pThis, bitmap, transform, sourceRect))
+        }
+    }
+    public func DrawFromSpriteSheetWithTransform(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, sourceRect : Windows.Foundation.Rect) throws -> Void {
+        try self._n_DrawFromSpriteSheetWithTransform(RawPointer(bitmap), transform, sourceRect);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4)
+    private func _n_DrawFromSpriteSheetToRectWithTint(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destRect : _q_CWindows_CFoundation_CRect, _ sourceRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetToRectWithTint(pThis, bitmap, destRect, sourceRect, tint))
+        }
+    }
+    public func DrawFromSpriteSheetToRectWithTint(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, destRect : Windows.Foundation.Rect, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        try self._n_DrawFromSpriteSheetToRectWithTint(RawPointer(bitmap), destRect, sourceRect, tint);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4)
+    private func _n_DrawFromSpriteSheetAtOffsetWithTint(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetAtOffsetWithTint(pThis, bitmap, offset, sourceRect, tint))
+        }
+    }
+    public func DrawFromSpriteSheetAtOffsetWithTint(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        try self._n_DrawFromSpriteSheetAtOffsetWithTint(RawPointer(bitmap), offset, sourceRect, tint);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Matrix3x2, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4)
+    private func _n_DrawFromSpriteSheetWithTransformAndTint(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ transform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ sourceRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetWithTransformAndTint(pThis, bitmap, transform, sourceRect, tint))
+        }
+    }
+    public func DrawFromSpriteSheetWithTransformAndTint(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4) throws -> Void {
+        try self._n_DrawFromSpriteSheetWithTransformAndTint(RawPointer(bitmap), transform, sourceRect, tint);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Rect, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4, Microsoft.Graphics.Canvas.CanvasSpriteFlip)
+    private func _n_DrawFromSpriteSheetToRectWithTintAndFlip(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ destRect : _q_CWindows_CFoundation_CRect, _ sourceRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4, _ flip : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetToRectWithTintAndFlip(pThis, bitmap, destRect, sourceRect, tint, flip))
+        }
+    }
+    public func DrawFromSpriteSheetToRectWithTintAndFlip(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, destRect : Windows.Foundation.Rect, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        try self._n_DrawFromSpriteSheetToRectWithTintAndFlip(RawPointer(bitmap), destRect, sourceRect, tint, flip);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Matrix3x2, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4, Microsoft.Graphics.Canvas.CanvasSpriteFlip)
+    private func _n_DrawFromSpriteSheetWithTransformAndTintAndFlip(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ transform : _q_CWindows_CFoundation_CNumerics_CMatrix3x2, _ sourceRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4, _ flip : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetWithTransformAndTintAndFlip(pThis, bitmap, transform, sourceRect, tint, flip))
+        }
+    }
+    public func DrawFromSpriteSheetWithTransformAndTintAndFlip(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, transform : Windows.Foundation.Numerics.Matrix3x2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        try self._n_DrawFromSpriteSheetWithTransformAndTintAndFlip(RawPointer(bitmap), transform, sourceRect, tint, flip);
+    }
+    // void DrawFromSpriteSheet(Microsoft.Graphics.Canvas.CanvasBitmap, Windows.Foundation.Numerics.Vector2, Windows.Foundation.Rect, Windows.Foundation.Numerics.Vector4, Windows.Foundation.Numerics.Vector2, System.Single, Windows.Foundation.Numerics.Vector2, Microsoft.Graphics.Canvas.CanvasSpriteFlip)
+    private func _n_DrawFromSpriteSheetAtOffsetWithTintAndTransform(_ bitmap : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasBitmap>>, _ offset : _q_CWindows_CFoundation_CNumerics_CVector2, _ sourceRect : _q_CWindows_CFoundation_CRect, _ tint : _q_CWindows_CFoundation_CNumerics_CVector4, _ origin : _q_CWindows_CFoundation_CNumerics_CVector2, _ rotation : FLOAT, _ scale : _q_CWindows_CFoundation_CNumerics_CVector2, _ flip : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatch.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DrawFromSpriteSheetAtOffsetWithTintAndTransform(pThis, bitmap, offset, sourceRect, tint, origin, rotation, scale, flip))
+        }
+    }
+    public func DrawFromSpriteSheetAtOffsetWithTintAndTransform(bitmap : Optional<Microsoft.Graphics.Canvas.ICanvasBitmap>, offset : Windows.Foundation.Numerics.Vector2, sourceRect : Windows.Foundation.Rect, tint : Windows.Foundation.Numerics.Vector4, origin : Windows.Foundation.Numerics.Vector2, rotation : Swift.Float, scale : Windows.Foundation.Numerics.Vector2, flip : Microsoft.Graphics.Canvas.CanvasSpriteFlip) throws -> Void {
+        try self._n_DrawFromSpriteSheetAtOffsetWithTintAndTransform(RawPointer(bitmap), offset, sourceRect, tint, origin, rotation, scale, flip);
+    }
 } // ICanvasSpriteBatch
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasSpriteBatchStatics
+// interface type
+open class ICanvasSpriteBatchStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x851eb08d, Data2: 0x9d01, Data3 : 0x4b57, Data4 : (0x9e, 0x94, 0x24, 0x11, 0x31, 0x51, 0xb7, 0x4b)) }
+    // bool IsSupported(Microsoft.Graphics.Canvas.CanvasDevice)
+    private func _n_IsSupported(_ device : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSpriteBatchStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsSupported(pThis, device, __presult))
+        }
+    }
+    public func IsSupported(device : Optional<Microsoft.Graphics.Canvas.ICanvasDevice>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsSupported(RawPointer(device), &__result);
+        return __result;
+    }
+} // ICanvasSpriteBatchStatics
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasSwapChain
+// interface type
+open class ICanvasSwapChain
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x882e3c3a, Data2: 0x5725, Data3 : 0x409c, Data4 : (0x9e, 0x76, 0xf8, 0x0b, 0x3b, 0xac, 0xf1, 0xb4)) }
+    // void Present()
+    private func _n_Present() throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Present(pThis))
+        }
+    }
+    public func Present() throws -> Void {
+        try self._n_Present();
+    }
+    // void Present(System.Int32)
+    private func _n_PresentWithSyncInterval(_ syncInterval : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.PresentWithSyncInterval(pThis, syncInterval))
+        }
+    }
+    public func PresentWithSyncInterval(syncInterval : Swift.Int32) throws -> Void {
+        try self._n_PresentWithSyncInterval(syncInterval);
+    }
+    // void ResizeBuffers(Windows.Foundation.Size)
+    private func _n_ResizeBuffersWithSize(_ newSize : _q_CWindows_CFoundation_CSize) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ResizeBuffersWithSize(pThis, newSize))
+        }
+    }
+    public func ResizeBuffersWithSize(newSize : Windows.Foundation.Size) throws -> Void {
+        try self._n_ResizeBuffersWithSize(newSize);
+    }
+    // void ResizeBuffers(System.Single, System.Single)
+    private func _n_ResizeBuffersWithWidthAndHeight(_ newWidth : FLOAT, _ newHeight : FLOAT) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ResizeBuffersWithWidthAndHeight(pThis, newWidth, newHeight))
+        }
+    }
+    public func ResizeBuffersWithWidthAndHeight(newWidth : Swift.Float, newHeight : Swift.Float) throws -> Void {
+        try self._n_ResizeBuffersWithWidthAndHeight(newWidth, newHeight);
+    }
+    // void ResizeBuffers(System.Single, System.Single, System.Single)
+    private func _n_ResizeBuffersWithWidthAndHeightAndDpi(_ newWidth : FLOAT, _ newHeight : FLOAT, _ newDpi : FLOAT) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ResizeBuffersWithWidthAndHeightAndDpi(pThis, newWidth, newHeight, newDpi))
+        }
+    }
+    public func ResizeBuffersWithWidthAndHeightAndDpi(newWidth : Swift.Float, newHeight : Swift.Float, newDpi : Swift.Float) throws -> Void {
+        try self._n_ResizeBuffersWithWidthAndHeightAndDpi(newWidth, newHeight, newDpi);
+    }
+    // void ResizeBuffers(System.Single, System.Single, System.Single, Windows.Graphics.DirectX.DirectXPixelFormat, System.Int32)
+    private func _n_ResizeBuffersWithAllOptions(_ newWidth : FLOAT, _ newHeight : FLOAT, _ newDpi : FLOAT, _ newFormat : _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat, _ bufferCount : INT32) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ResizeBuffersWithAllOptions(pThis, newWidth, newHeight, newDpi, newFormat, bufferCount))
+        }
+    }
+    public func ResizeBuffersWithAllOptions(newWidth : Swift.Float, newHeight : Swift.Float, newDpi : Swift.Float, newFormat : Windows.Graphics.DirectX.DirectXPixelFormat, bufferCount : Swift.Int32) throws -> Void {
+        try self._n_ResizeBuffersWithAllOptions(newWidth, newHeight, newDpi, newFormat, bufferCount);
+    }
+    // [IsSpecialName] Windows.Foundation.Size get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Windows.Foundation.Size {
+        var __result : _q_CWindows_CFoundation_CSize = _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Graphics.Imaging.BitmapSize get_SizeInPixels()
+    private func _n_get_SizeInPixels(_ __presult: UnsafeMutablePointer<_q_CWindows_CGraphics_CImaging_CBitmapSize>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SizeInPixels(pThis, __presult))
+        }
+    }
+    public func get_SizeInPixels() throws -> Windows.Graphics.Imaging.BitmapSize {
+        var __result : _q_CWindows_CGraphics_CImaging_CBitmapSize = _q_CWindows_CGraphics_CImaging_CBitmapSize(Width: 0, Height: 0);
+        try self._n_get_SizeInPixels(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Graphics.DirectX.DirectXPixelFormat get_Format()
+    private func _n_get_Format(_ __presult: UnsafeMutablePointer<_q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Format(pThis, __presult))
+        }
+    }
+    public func get_Format() throws -> Windows.Graphics.DirectX.DirectXPixelFormat {
+        var __result : _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat = _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat_Unknown;
+        try self._n_get_Format(&__result);
+        return __result;
+    }
+    // [IsSpecialName] System.Int32 get_BufferCount()
+    private func _n_get_BufferCount(_ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BufferCount(pThis, __presult))
+        }
+    }
+    public func get_BufferCount() throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_get_BufferCount(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasAlphaMode get_AlphaMode()
+    private func _n_get_AlphaMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_AlphaMode(pThis, __presult))
+        }
+    }
+    public func get_AlphaMode() throws -> Microsoft.Graphics.Canvas.CanvasAlphaMode {
+        var __result : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode = _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode_Premultiplied;
+        try self._n_get_AlphaMode(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasSwapChainRotation get_Rotation()
+    private func _n_get_Rotation(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Rotation(pThis, __presult))
+        }
+    }
+    public func get_Rotation() throws -> Microsoft.Graphics.Canvas.CanvasSwapChainRotation {
+        var __result : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation = _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_None;
+        try self._n_get_Rotation(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Rotation(Microsoft.Graphics.Canvas.CanvasSwapChainRotation)
+    private func _n_put_Rotation(_ value : _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Rotation(pThis, value))
+        }
+    }
+    public func put_Rotation(value : Microsoft.Graphics.Canvas.CanvasSwapChainRotation) throws -> Void {
+        try self._n_put_Rotation(value);
+    }
+    // [IsSpecialName] Windows.Foundation.Size get_SourceSize()
+    private func _n_get_SourceSize(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SourceSize(pThis, __presult))
+        }
+    }
+    public func get_SourceSize() throws -> Windows.Foundation.Size {
+        var __result : _q_CWindows_CFoundation_CSize = _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+        try self._n_get_SourceSize(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SourceSize(Windows.Foundation.Size)
+    private func _n_put_SourceSize(_ value : _q_CWindows_CFoundation_CSize) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SourceSize(pThis, value))
+        }
+    }
+    public func put_SourceSize(value : Windows.Foundation.Size) throws -> Void {
+        try self._n_put_SourceSize(value);
+    }
+    // [IsSpecialName] Windows.Foundation.Numerics.Matrix3x2 get_TransformMatrix()
+    private func _n_get_TransformMatrix(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CNumerics_CMatrix3x2>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_TransformMatrix(pThis, __presult))
+        }
+    }
+    public func get_TransformMatrix() throws -> Windows.Foundation.Numerics.Matrix3x2 {
+        var __result : _q_CWindows_CFoundation_CNumerics_CMatrix3x2 = _q_CWindows_CFoundation_CNumerics_CMatrix3x2(M11: 0, M12: 0, M21: 0, M22: 0, M31: 0, M32: 0);
+        try self._n_get_TransformMatrix(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_TransformMatrix(Windows.Foundation.Numerics.Matrix3x2)
+    private func _n_put_TransformMatrix(_ value : _q_CWindows_CFoundation_CNumerics_CMatrix3x2) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_TransformMatrix(pThis, value))
+        }
+    }
+    public func put_TransformMatrix(value : Windows.Foundation.Numerics.Matrix3x2) throws -> Void {
+        try self._n_put_TransformMatrix(value);
+    }
+    // Microsoft.Graphics.Canvas.CanvasDrawingSession CreateDrawingSession(Windows.UI.Color)
+    private func _n_CreateDrawingSession(_ clearColor : _q_CWindows_CUI_CColor, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateDrawingSession(pThis, clearColor, __presult))
+        }
+    }
+    public func CreateDrawingSession(clearColor : Windows.UI.Color) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDrawingSession> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDrawingSession>> = nil;
+        try self._n_CreateDrawingSession(clearColor, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasDrawingSession(consuming: __result);
+    }
+    // void WaitForVerticalBlank()
+    private func _n_WaitForVerticalBlank() throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.WaitForVerticalBlank(pThis))
+        }
+    }
+    public func WaitForVerticalBlank() throws -> Void {
+        try self._n_WaitForVerticalBlank();
+    }
+    public var AlphaMode : Microsoft.Graphics.Canvas.CanvasAlphaMode {
+        get throws {
+            return try get_AlphaMode();
+        }
+    }
+    public var BufferCount : Swift.Int32 {
+        get throws {
+            return try get_BufferCount();
+        }
+    }
+    public var Format : Windows.Graphics.DirectX.DirectXPixelFormat {
+        get throws {
+            return try get_Format();
+        }
+    }
+    public var Rotation : Microsoft.Graphics.Canvas.CanvasSwapChainRotation {
+        get throws {
+            return try get_Rotation();
+        }
+    }
+    public var Size : Windows.Foundation.Size {
+        get throws {
+            return try get_Size();
+        }
+    }
+    public var SizeInPixels : Windows.Graphics.Imaging.BitmapSize {
+        get throws {
+            return try get_SizeInPixels();
+        }
+    }
+    public var SourceSize : Windows.Foundation.Size {
+        get throws {
+            return try get_SourceSize();
+        }
+    }
+    public var TransformMatrix : Windows.Foundation.Numerics.Matrix3x2 {
+        get throws {
+            return try get_TransformMatrix();
+        }
+    }
+} // ICanvasSwapChain
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasSwapChainFactory
+// interface type
+// ACTIVATION INTERFACE
+open class ICanvasSwapChainFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x133c25cb, Data2: 0xed3c, Data3 : 0x492b, Data4 : (0xbf, 0xfe, 0x75, 0x09, 0xb5, 0x21, 0x84, 0x2b)) }
+    // Microsoft.Graphics.Canvas.CanvasSwapChain CreateWithSize(Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi, Windows.Foundation.Size)
+    private func _n_CreateWithSize(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi>>, _ size : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithSize(pThis, resourceCreator, size, __presult))
+        }
+    }
+    public func CreateWithSize(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, size : Windows.Foundation.Size) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasSwapChain> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>> = nil;
+        try self._n_CreateWithSize(RawPointer(resourceCreator), size, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasSwapChain(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasSwapChain CreateWithWidthAndHeight(Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi, System.Single, System.Single)
+    private func _n_CreateWithWidthAndHeight(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreatorWithDpi>>, _ width : FLOAT, _ height : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithWidthAndHeight(pThis, resourceCreator, width, height, __presult))
+        }
+    }
+    public func CreateWithWidthAndHeight(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreatorWithDpi>, width : Swift.Float, height : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasSwapChain> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>> = nil;
+        try self._n_CreateWithWidthAndHeight(RawPointer(resourceCreator), width, height, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasSwapChain(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasSwapChain CreateWithWidthAndHeightAndDpi(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.Single, System.Single, System.Single)
+    private func _n_CreateWithWidthAndHeightAndDpi(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ width : FLOAT, _ height : FLOAT, _ dpi : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithWidthAndHeightAndDpi(pThis, resourceCreator, width, height, dpi, __presult))
+        }
+    }
+    public func CreateWithWidthAndHeightAndDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasSwapChain> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>> = nil;
+        try self._n_CreateWithWidthAndHeightAndDpi(RawPointer(resourceCreator), width, height, dpi, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasSwapChain(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasSwapChain CreateWithAllOptions(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.Single, System.Single, System.Single, Windows.Graphics.DirectX.DirectXPixelFormat, System.Int32, Microsoft.Graphics.Canvas.CanvasAlphaMode)
+    private func _n_CreateWithAllOptions(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ width : FLOAT, _ height : FLOAT, _ dpi : FLOAT, _ format : _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat, _ bufferCount : INT32, _ alphaMode : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithAllOptions(pThis, resourceCreator, width, height, dpi, format, bufferCount, alphaMode, __presult))
+        }
+    }
+    public func CreateWithAllOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float, format : Windows.Graphics.DirectX.DirectXPixelFormat, bufferCount : Swift.Int32, alphaMode : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasSwapChain> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>> = nil;
+        try self._n_CreateWithAllOptions(RawPointer(resourceCreator), width, height, dpi, format, bufferCount, alphaMode, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasSwapChain(consuming: __result);
+    }
+} // ICanvasSwapChainFactory
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasSwapChainStatics
+// interface type
+open class ICanvasSwapChainStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x05376d8f, Data2: 0x3e8d, Data3 : 0x4a82, Data4 : (0x98, 0x38, 0x69, 0x16, 0x80, 0xd3, 0x2a, 0x52)) }
+    // Microsoft.Graphics.Canvas.CanvasSwapChain CreateForCoreWindow(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.UI.Core.CoreWindow, System.Single)
+    private func _n_CreateForCoreWindowWithDpi(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ coreWindow : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreWindow>>, _ dpi : FLOAT, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateForCoreWindowWithDpi(pThis, resourceCreator, coreWindow, dpi, __presult))
+        }
+    }
+    public func CreateForCoreWindowWithDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, coreWindow : Optional<Windows.UI.Core.ICoreWindow>, dpi : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasSwapChain> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>> = nil;
+        try self._n_CreateForCoreWindowWithDpi(RawPointer(resourceCreator), RawPointer(coreWindow), dpi, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasSwapChain(consuming: __result);
+    }
+    // Microsoft.Graphics.Canvas.CanvasSwapChain CreateForCoreWindow(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.UI.Core.CoreWindow, System.Single, System.Single, System.Single, Windows.Graphics.DirectX.DirectXPixelFormat, System.Int32)
+    private func _n_CreateForCoreWindowWithAllOptions(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ coreWindow : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CCore_CICoreWindow>>, _ width : FLOAT, _ height : FLOAT, _ dpi : FLOAT, _ format : _q_CWindows_CGraphics_CDirectX_CDirectXPixelFormat, _ bufferCount : INT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChainStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateForCoreWindowWithAllOptions(pThis, resourceCreator, coreWindow, width, height, dpi, format, bufferCount, __presult))
+        }
+    }
+    public func CreateForCoreWindowWithAllOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, coreWindow : Optional<Windows.UI.Core.ICoreWindow>, width : Swift.Float, height : Swift.Float, dpi : Swift.Float, format : Windows.Graphics.DirectX.DirectXPixelFormat, bufferCount : Swift.Int32) throws -> Optional<Microsoft.Graphics.Canvas.ICanvasSwapChain> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasSwapChain>> = nil;
+        try self._n_CreateForCoreWindowWithAllOptions(RawPointer(resourceCreator), RawPointer(coreWindow), width, height, dpi, format, bufferCount, &__result);
+        return Microsoft.Graphics.Canvas.ICanvasSwapChain(consuming: __result);
+    }
+} // ICanvasSwapChainStatics
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasVirtualBitmap
+// interface type
+open class ICanvasVirtualBitmap
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x707d8bb0, Data2: 0x05f9, Data3 : 0x484c, Data4 : (0x9e, 0xe2, 0x17, 0x9e, 0x06, 0x81, 0xc8, 0xa7)) }
+    // [IsSpecialName] Microsoft.Graphics.Canvas.CanvasDevice get_Device()
+    private func _n_get_Device(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Device(pThis, __presult))
+        }
+    }
+    public func get_Device() throws -> Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>> = nil;
+        try self._n_get_Device(&__result);
+        return Microsoft.Graphics.Canvas.ICanvasDevice(consuming: __result);
+    }
+    // [IsSpecialName] bool get_IsCachedOnDemand()
+    private func _n_get_IsCachedOnDemand(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsCachedOnDemand(pThis, __presult))
+        }
+    }
+    public func get_IsCachedOnDemand() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsCachedOnDemand(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Graphics.Imaging.BitmapSize get_SizeInPixels()
+    private func _n_get_SizeInPixels(_ __presult: UnsafeMutablePointer<_q_CWindows_CGraphics_CImaging_CBitmapSize>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SizeInPixels(pThis, __presult))
+        }
+    }
+    public func get_SizeInPixels() throws -> Windows.Graphics.Imaging.BitmapSize {
+        var __result : _q_CWindows_CGraphics_CImaging_CBitmapSize = _q_CWindows_CGraphics_CImaging_CBitmapSize(Width: 0, Height: 0);
+        try self._n_get_SizeInPixels(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.Size get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Windows.Foundation.Size {
+        var __result : _q_CWindows_CFoundation_CSize = _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // [IsSpecialName] Windows.Foundation.Rect get_Bounds()
+    private func _n_get_Bounds(_ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CRect>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmap.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Bounds(pThis, __presult))
+        }
+    }
+    public func get_Bounds() throws -> Windows.Foundation.Rect {
+        var __result : _q_CWindows_CFoundation_CRect = _q_CWindows_CFoundation_CRect(X: 0, Y: 0, Width: 0, Height: 0);
+        try self._n_get_Bounds(&__result);
+        return __result;
+    }
+    public var Bounds : Windows.Foundation.Rect {
+        get throws {
+            return try get_Bounds();
+        }
+    }
+    public var Device : Optional<Microsoft.Graphics.Canvas.ICanvasDevice> {
+        get throws {
+            return try get_Device();
+        }
+    }
+    public var IsCachedOnDemand : boolean {
+        get throws {
+            return try get_IsCachedOnDemand();
+        }
+    }
+    public var Size : Windows.Foundation.Size {
+        get throws {
+            return try get_Size();
+        }
+    }
+    public var SizeInPixels : Windows.Graphics.Imaging.BitmapSize {
+        get throws {
+            return try get_SizeInPixels();
+        }
+    }
+} // ICanvasVirtualBitmap
+
+
+// type: Microsoft.Graphics.Canvas.ICanvasVirtualBitmapStatics
+// interface type
+open class ICanvasVirtualBitmapStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb2f1f8e9, Data2: 0x0770, Data3 : 0x4dd4, Data4 : (0x95, 0x6d, 0x78, 0xd9, 0x11, 0x39, 0x09, 0x57)) }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.String)
+    private func _n_LoadAsyncFromFileName(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ fileName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromFileName(pThis, resourceCreator, fileName, __presult))
+        }
+    }
+    public func LoadAsyncFromFileName(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        let __hstr_fileName = try HString(fileName);
+        return try withExtendedLifetime(__hstr_fileName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromFileName(RawPointer(resourceCreator), __hstr_fileName.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+        }
+    }
+    public func LoadAsyncFromFileName(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromFileName(resourceCreator: resourceCreator, fileName: fileName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.String, Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions)
+    private func _n_LoadAsyncFromFileNameWithOptions(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ fileName : Optional<HSTRING>, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromFileNameWithOptions(pThis, resourceCreator, fileName, options, __presult))
+        }
+    }
+    public func LoadAsyncFromFileNameWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        let __hstr_fileName = try HString(fileName);
+        return try withExtendedLifetime(__hstr_fileName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromFileNameWithOptions(RawPointer(resourceCreator), __hstr_fileName.Raw(), options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+        }
+    }
+    public func LoadAsyncFromFileNameWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromFileNameWithOptions(resourceCreator: resourceCreator, fileName: fileName, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, System.String, Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, Microsoft.Graphics.Canvas.CanvasAlphaMode)
+    private func _n_LoadAsyncFromFileNameWithOptionsAndAlpha(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ fileName : Optional<HSTRING>, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions, _ alpha : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromFileNameWithOptionsAndAlpha(pThis, resourceCreator, fileName, options, alpha, __presult))
+        }
+    }
+    public func LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        let __hstr_fileName = try HString(fileName);
+        return try withExtendedLifetime(__hstr_fileName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromFileNameWithOptionsAndAlpha(RawPointer(resourceCreator), __hstr_fileName.Raw(), options, alpha, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+        }
+    }
+    public func LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator: resourceCreator, fileName: fileName, options: options, alpha: alpha)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Foundation.Uri)
+    private func _n_LoadAsyncFromUri(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromUri(pThis, resourceCreator, uri, __presult))
+        }
+    }
+    public func LoadAsyncFromUri(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromUri(RawPointer(resourceCreator), RawPointer(uri), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+    }
+    public func LoadAsyncFromUri(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.IUriRuntimeClass>) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromUri(resourceCreator: resourceCreator, uri: uri)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Foundation.Uri, Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions)
+    private func _n_LoadAsyncFromUriWithOptions(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromUriWithOptions(pThis, resourceCreator, uri, options, __presult))
+        }
+    }
+    public func LoadAsyncFromUriWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromUriWithOptions(RawPointer(resourceCreator), RawPointer(uri), options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+    }
+    public func LoadAsyncFromUriWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromUriWithOptions(resourceCreator: resourceCreator, uri: uri, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Foundation.Uri, Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, Microsoft.Graphics.Canvas.CanvasAlphaMode)
+    private func _n_LoadAsyncFromUriWithOptionsAndAlpha(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ uri : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>>, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions, _ alpha : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromUriWithOptionsAndAlpha(pThis, resourceCreator, uri, options, alpha, __presult))
+        }
+    }
+    public func LoadAsyncFromUriWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromUriWithOptionsAndAlpha(RawPointer(resourceCreator), RawPointer(uri), options, alpha, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+    }
+    public func LoadAsyncFromUriWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromUriWithOptionsAndAlpha(resourceCreator: resourceCreator, uri: uri, options: options, alpha: alpha)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Storage.Streams.IRandomAccessStream)
+    private func _n_LoadAsyncFromStream(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromStream(pThis, resourceCreator, stream, __presult))
+        }
+    }
+    public func LoadAsyncFromStream(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromStream(RawPointer(resourceCreator), RawPointer(stream), &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+    }
+    public func LoadAsyncFromStream(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromStream(resourceCreator: resourceCreator, stream: stream)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Storage.Streams.IRandomAccessStream, Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions)
+    private func _n_LoadAsyncFromStreamWithOptions(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromStreamWithOptions(pThis, resourceCreator, stream, options, __presult))
+        }
+    }
+    public func LoadAsyncFromStreamWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromStreamWithOptions(RawPointer(resourceCreator), RawPointer(stream), options, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+    }
+    public func LoadAsyncFromStreamWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromStreamWithOptions(resourceCreator: resourceCreator, stream: stream, options: options)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.Graphics.Canvas.CanvasVirtualBitmap> LoadAsync(Microsoft.Graphics.Canvas.ICanvasResourceCreator, Windows.Storage.Streams.IRandomAccessStream, Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, Microsoft.Graphics.Canvas.CanvasAlphaMode)
+    private func _n_LoadAsyncFromStreamWithOptionsAndAlpha(_ resourceCreator : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasResourceCreator>>, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ options : _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions, _ alpha : _q_CMicrosoft_CGraphics_CCanvas_CCanvasAlphaMode, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CGraphics_CCanvas_CICanvasVirtualBitmapStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromStreamWithOptionsAndAlpha(pThis, resourceCreator, stream, options, alpha, __presult))
+        }
+    }
+    public func LoadAsyncFromStreamWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
+        try self._n_LoadAsyncFromStreamWithOptionsAndAlpha(RawPointer(resourceCreator), RawPointer(stream), options, alpha, &__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
+    }
+    public func LoadAsyncFromStreamWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, stream : Optional<Windows.Storage.Streams.IRandomAccessStream>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadAsyncFromStreamWithOptionsAndAlpha(resourceCreator: resourceCreator, stream: stream, options: options, alpha: alpha)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+} // ICanvasVirtualBitmapStatics
 
 
 }
@@ -4210,6 +6189,23 @@ extension Microsoft.Graphics.Canvas.CanvasBufferPrecision {
         }
     }
 }
+extension Microsoft.Graphics.Canvas.CanvasColorSpace {
+    public static var Custom : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace_Custom;
+        }
+    }
+    public static var Srgb : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace_Srgb;
+        }
+    }
+    public static var ScRgb : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasColorSpace_ScRgb;
+        }
+    }
+}
 extension Microsoft.Graphics.Canvas.CanvasComposite {
     public static var SourceOver : Self {
         get {
@@ -4277,6 +6273,28 @@ extension Microsoft.Graphics.Canvas.CanvasComposite {
         }
     }
 }
+extension Microsoft.Graphics.Canvas.CanvasDebugLevel {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_None;
+        }
+    }
+    public static var Error : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_Error;
+        }
+    }
+    public static var Warning : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_Warning;
+        }
+    }
+    public static var Information : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasDebugLevel_Information;
+        }
+    }
+}
 extension Microsoft.Graphics.Canvas.CanvasDpiRounding {
     public static var Floor : Self {
         get {
@@ -4291,6 +6309,23 @@ extension Microsoft.Graphics.Canvas.CanvasDpiRounding {
     public static var Ceiling : Self {
         get {
             return _q_CMicrosoft_CGraphics_CCanvas_CCanvasDpiRounding_Ceiling;
+        }
+    }
+}
+extension Microsoft.Graphics.Canvas.CanvasEdgeBehavior {
+    public static var Clamp : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Clamp;
+        }
+    }
+    public static var Wrap : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Wrap;
+        }
+    }
+    public static var Mirror : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Mirror;
         }
     }
 }
@@ -4343,6 +6378,28 @@ extension Microsoft.Graphics.Canvas.CanvasLayerOptions {
         }
     }
 }
+extension Microsoft.Graphics.Canvas.CanvasSpriteFlip {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_None;
+        }
+    }
+    public static var Horizontal : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_Horizontal;
+        }
+    }
+    public static var Vertical : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_Vertical;
+        }
+    }
+    public static var Both : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSpriteFlip_Both;
+        }
+    }
+}
 extension Microsoft.Graphics.Canvas.CanvasSpriteOptions {
     public static var None : Self {
         get {
@@ -4367,6 +6424,28 @@ extension Microsoft.Graphics.Canvas.CanvasSpriteSortMode {
         }
     }
 }
+extension Microsoft.Graphics.Canvas.CanvasSwapChainRotation {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_None;
+        }
+    }
+    public static var Rotate90 : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_Rotate90;
+        }
+    }
+    public static var Rotate180 : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_Rotate180;
+        }
+    }
+    public static var Rotate270 : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasSwapChainRotation_Rotate270;
+        }
+    }
+}
 extension Microsoft.Graphics.Canvas.CanvasUnits {
     public static var Dips : Self {
         get {
@@ -4376,6 +6455,23 @@ extension Microsoft.Graphics.Canvas.CanvasUnits {
     public static var Pixels : Self {
         get {
             return _q_CMicrosoft_CGraphics_CCanvas_CCanvasUnits_Pixels;
+        }
+    }
+}
+extension Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions_None;
+        }
+    }
+    public static var ReleaseSource : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions_ReleaseSource;
+        }
+    }
+    public static var CacheOnDemand : Self {
+        get {
+            return _q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapOptions_CacheOnDemand;
         }
     }
 }

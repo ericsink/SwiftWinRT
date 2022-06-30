@@ -21,6 +21,11 @@ let SwiftWinRT = Package(
     .package(name: "Win2D", path: "../Win2D"),
     ],
   targets: [
+    .target(name : "Chipmunk2D",
+            cSettings: [
+              .unsafeFlags(["-I", "Sources/Chipmunk2D"]),
+            ]
+        ),
     .target(name: "Power", dependencies: ["WindowsApp", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
@@ -33,6 +38,20 @@ let SwiftWinRT = Package(
             ),
     .target(name: "XamlApp", 
             dependencies: ["WindowsApp", "WindowsSdk", "WinRT"],
+            swiftSettings: [
+              .unsafeFlags(["-parse-as-library"]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+            ]
+            ),
+    .target(name: "Physics", 
+            dependencies: ["WindowsApp", "Win2D", "WindowsSdk", "WinRT", "Chipmunk2D"],
+            cSettings: [
+              .unsafeFlags(["-I", "Sources/Chipmunk2D"]),
+            ],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],

@@ -27,6 +27,13 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler _q_CMicrosoft_CUI_CX
 typedef struct _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler;
 // enums
+typedef enum _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds
+{
+    _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_None = 0,
+    _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_Touch = 1,
+    _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_Pen = 2,
+    _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds_Mouse = 4,
+} _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds;
 typedef enum _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment
 {
     _q_CMicrosoft_CUI_CXaml_CApplicationHighContrastAdjustment_None = 0,
@@ -357,6 +364,8 @@ typedef struct _q_CMicrosoft_CUI_CComposition_CIAnimationObject _q_CMicrosoft_CU
 typedef struct _q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo _q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo;
 typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionAnimationBase _q_CMicrosoft_CUI_CComposition_CICompositionAnimationBase;
 typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionBrush _q_CMicrosoft_CUI_CComposition_CICompositionBrush;
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface;
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice;
 typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionObject _q_CMicrosoft_CUI_CComposition_CICompositionObject;
 typedef struct _q_CMicrosoft_CUI_CComposition_CICompositor _q_CMicrosoft_CUI_CComposition_CICompositor;
 typedef struct _q_CMicrosoft_CUI_CComposition_CIVisual _q_CMicrosoft_CUI_CComposition_CIVisual;
@@ -365,6 +374,8 @@ typedef struct _q_CMicrosoft_CUI_CDispatching_CIDispatcherQueue _q_CMicrosoft_CU
 typedef struct _q_CMicrosoft_CUI_CIColors _q_CMicrosoft_CUI_CIColors;
 typedef struct _q_CMicrosoft_CUI_CIColorsStatics _q_CMicrosoft_CUI_CIColorsStatics;
 typedef struct _q_CMicrosoft_CUI_CInput_CIInputCursor _q_CMicrosoft_CUI_CInput_CIInputCursor;
+typedef struct _q_CMicrosoft_CUI_CInput_CIInputObject _q_CMicrosoft_CUI_CInput_CIInputObject;
+typedef struct _q_CMicrosoft_CUI_CInput_CIInputPointerSource _q_CMicrosoft_CUI_CInput_CIInputPointerSource;
 typedef struct _q_CMicrosoft_CUI_CInput_CIPointerPoint _q_CMicrosoft_CUI_CInput_CIPointerPoint;
 typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer;
 typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactory _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactory;
@@ -403,6 +414,9 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISliderStatics _q_CMicrosoft_C
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanel;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelFactory _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock _q_CMicrosoft_CUI_CXaml_CControls_CITextBlock;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBox _q_CMicrosoft_CUI_CXaml_CControls_CITextBox;
@@ -559,6 +573,10 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSource _q_CMicros
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIBitmapSourceStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIProjection _q_CMicrosoft_CUI_CXaml_CMedia_CIProjection;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionFactory _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry _q_CMicrosoft_CUI_CXaml_CMedia_CIRectangleGeometry;
@@ -638,6 +656,7 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_C
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CMedia_CGradientStop;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CUIElement;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement;
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable;
 // definition of structs for value types
 struct _q_CMicrosoft_CUI_CXaml_CCornerRadius
 {
@@ -974,6 +993,38 @@ struct _q_CMicrosoft_CUI_CComposition_CICompositionBrush
 {
     _q_CMicrosoft_CUI_CComposition_CICompositionBrushVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurfaceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface* This, TrustLevel* trustLevel);
+    void* unneeded_get_AlphaMode;
+    void* unneeded_get_PixelFormat;
+    void* unneeded_get_Size;
+} _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurfaceVtbl;
+struct _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurface
+{
+    _q_CMicrosoft_CUI_CComposition_CICompositionDrawingSurfaceVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDeviceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice* This, TrustLevel* trustLevel);
+    void* unneeded_CreateDrawingSurface;
+    void* unneeded_add_RenderingDeviceReplaced;
+    void* unneeded_remove_RenderingDeviceReplaced;
+} _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDeviceVtbl;
+struct _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDevice
+{
+    _q_CMicrosoft_CUI_CComposition_CICompositionGraphicsDeviceVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CUI_CComposition_CICompositionObjectVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CComposition_CICompositionObject* This, REFIID riid, void** ppvObject);
@@ -1286,6 +1337,56 @@ typedef struct _q_CMicrosoft_CUI_CInput_CIInputCursorVtbl
 struct _q_CMicrosoft_CUI_CInput_CIInputCursor
 {
     _q_CMicrosoft_CUI_CInput_CIInputCursorVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CInput_CIInputObjectVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CInput_CIInputObject* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CInput_CIInputObject* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CInput_CIInputObject* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CInput_CIInputObject* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CInput_CIInputObject* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CInput_CIInputObject* This, TrustLevel* trustLevel);
+    void* unneeded_get_DispatcherQueue;
+} _q_CMicrosoft_CUI_CInput_CIInputObjectVtbl;
+struct _q_CMicrosoft_CUI_CInput_CIInputObject
+{
+    _q_CMicrosoft_CUI_CInput_CIInputObjectVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CInput_CIInputPointerSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CInput_CIInputPointerSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CInput_CIInputPointerSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CInput_CIInputPointerSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CInput_CIInputPointerSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CInput_CIInputPointerSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CInput_CIInputPointerSource* This, TrustLevel* trustLevel);
+    void* unneeded_get_Cursor;
+    void* unneeded_put_Cursor;
+    void* unneeded_get_DeviceKinds;
+    void* unneeded_add_PointerCaptureLost;
+    void* unneeded_remove_PointerCaptureLost;
+    void* unneeded_add_PointerEntered;
+    void* unneeded_remove_PointerEntered;
+    void* unneeded_add_PointerExited;
+    void* unneeded_remove_PointerExited;
+    void* unneeded_add_PointerMoved;
+    void* unneeded_remove_PointerMoved;
+    void* unneeded_add_PointerPressed;
+    void* unneeded_remove_PointerPressed;
+    void* unneeded_add_PointerReleased;
+    void* unneeded_remove_PointerReleased;
+    void* unneeded_add_PointerRoutedAway;
+    void* unneeded_remove_PointerRoutedAway;
+    void* unneeded_add_PointerRoutedReleased;
+    void* unneeded_remove_PointerRoutedReleased;
+    void* unneeded_add_PointerRoutedTo;
+    void* unneeded_remove_PointerRoutedTo;
+    void* unneeded_add_PointerWheelChanged;
+    void* unneeded_remove_PointerWheelChanged;
+} _q_CMicrosoft_CUI_CInput_CIInputPointerSourceVtbl;
+struct _q_CMicrosoft_CUI_CInput_CIInputPointerSource
+{
+    _q_CMicrosoft_CUI_CInput_CIInputPointerSourceVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CInput_CIPointerPointVtbl
 {
@@ -2117,6 +2218,53 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStaticsVtbl
 struct _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStatics
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIStackPanelStaticsVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CompositionScaleX)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CompositionScaleY)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* pThis, FLOAT* __pret);
+    HRESULT (STDMETHODCALLTYPE* add_CompositionScaleChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* pThis, _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable* handler, _q_CWindows_CFoundation_CEventRegistrationToken* __pret);
+    HRESULT (STDMETHODCALLTYPE* remove_CompositionScaleChanged)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* pThis, _q_CWindows_CFoundation_CEventRegistrationToken token);
+    HRESULT (STDMETHODCALLTYPE* CreateCoreIndependentInputSource)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* pThis, _q_CMicrosoft_CUI_CInput_CInputPointerSourceDeviceKinds deviceKinds, _q_CMicrosoft_CUI_CInput_CIInputPointerSource** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstance)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory* pThis, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_CompositionScaleXProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CompositionScaleYProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanelStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CITextBlockVtbl
 {
@@ -5386,6 +5534,62 @@ struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs
 {
     _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgsVtbl* lpVtbl;
 };
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithDimensions)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* pThis, INT32 pixelWidth, INT32 pixelHeight, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithDimensionsAndOpacity)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory* pThis, INT32 pixelWidth, INT32 pixelHeight, boolean isOpaque, IInspectable* baseInterface, IInspectable** innerInterface, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSource** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CISurfaceImageSourceFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource* This, TrustLevel* trustLevel);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactoryVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithDimensions)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* pThis, INT32 pixelWidth, INT32 pixelHeight, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateInstanceWithDimensionsAndOpacity)(_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory* pThis, INT32 pixelWidth, INT32 pixelHeight, boolean isOpaque, _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSource** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactoryVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactory
+{
+    _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIVirtualSurfaceImageSourceFactoryVtbl* lpVtbl;
+};
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIProjectionVtbl
 {
     HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMedia_CIProjection* This, REFIID riid, void** ppvObject);
@@ -6568,4 +6772,15 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_C
 struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElement
 {
     _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CMicrosoft_CUI_CXaml_CUIElementVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel* sender, IInspectable* args);
+} _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+{
+    _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectableVtbl* lpVtbl;
 };
