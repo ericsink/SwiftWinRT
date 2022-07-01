@@ -28,8 +28,8 @@ class MyApp : Microsoft.UI.Xaml.Application {
     var Timer : DispatcherTimer
 
     var space : UnsafeMutablePointer<cpSpace>? = nil
-    var body : UnsafeMutablePointer<cpBody>? = nil
-    var shape : UnsafeMutablePointer<cpShape>? = nil
+    var body1 : UnsafeMutablePointer<cpBody>? = nil
+    var body2 : UnsafeMutablePointer<cpBody>? = nil
     let ballRadius = 20.0
 
     struct Seg {
@@ -39,8 +39,8 @@ class MyApp : Microsoft.UI.Xaml.Application {
     }
 
     let barrier = [
-        Seg(p0: cpVect(x:   0, y:  50), p1: cpVect(x:   0, y: 400), e: 0.5), // left wall
-        Seg(p0: cpVect(x:   0, y: 400), p1: cpVect(x: 300, y: 450), e: 1.0), // slope
+        Seg(p0: cpVect(x:   0, y:  50), p1: cpVect(x:  50, y: 400), e: 0.5), // left wall
+        Seg(p0: cpVect(x:  50, y: 400), p1: cpVect(x: 300, y: 450), e: 1.0), // slope
         Seg(p0: cpVect(x: 300, y: 450), p1: cpVect(x: 300, y: 500), e: 1.0), // down
         Seg(p0: cpVect(x: 300, y: 500), p1: cpVect(x: 500, y: 500), e: 3.0), // horiz, bouncy
         Seg(p0: cpVect(x: 500, y: 500), p1: cpVect(x: 600, y:   0), e: 2.0), // slope up
@@ -55,8 +55,12 @@ class MyApp : Microsoft.UI.Xaml.Application {
         cpSpaceStep(space, ms_to_s(ms: 30))
 
         // then draw the bouncing ball at its current position
-        let pos = cpBodyGetPosition(body)
-        try args!.DrawingSession!.FillCircle(x: Float(pos.x), y: Float(pos.y), radius: Float(ballRadius), color: Microsoft.UI.Colors.Orange);
+        let pos1 = cpBodyGetPosition(body1)
+        try args!.DrawingSession!.FillCircle(x: Float(pos1.x), y: Float(pos1.y), radius: Float(ballRadius), color: Microsoft.UI.Colors.Orange);
+
+        // and the other ball too
+        let pos2 = cpBodyGetPosition(body2)
+        try args!.DrawingSession!.FillCircle(x: Float(pos2.x), y: Float(pos2.y), radius: Float(ballRadius), color: Microsoft.UI.Colors.LightBlue);
 
         // and the barrier
         for s in barrier {
@@ -91,15 +95,27 @@ class MyApp : Microsoft.UI.Xaml.Application {
         self.space = cpSpaceNew()
         cpSpaceSetGravity(self.space, cpVect(x: 0, y: 100))
 
-        self.body = cpBodyNew(10, cpMomentForCircle(10, 0, ballRadius, cpvzero))
-        cpSpaceAddBody(self.space, self.body)
-        cpBodySetPosition(self.body, cpVect(x: 100, y: 100))
+        // ball 1
+        self.body1 = cpBodyNew(10, cpMomentForCircle(10, 0, ballRadius, cpvzero))
+        cpSpaceAddBody(self.space, self.body1)
+        cpBodySetPosition(self.body1, cpVect(x: 100, y: 100))
 
-        self.shape = cpCircleShapeNew(self.body, ballRadius, cpVect(x: 0, y: 0))
-        cpShapeSetElasticity(self.shape, 0.7)
-        cpShapeSetFriction(self.shape, 0.7)
-        cpSpaceAddShape(self.space, self.shape)
+        let shape1 = cpCircleShapeNew(self.body1, ballRadius, cpVect(x: 0, y: 0))
+        cpShapeSetElasticity(shape1, 0.7)
+        cpShapeSetFriction(shape1, 0.7)
+        cpSpaceAddShape(self.space, shape1)
 
+        // ball 2
+        self.body2 = cpBodyNew(10, cpMomentForCircle(10, 0, ballRadius, cpvzero))
+        cpSpaceAddBody(self.space, self.body2)
+        cpBodySetPosition(self.body2, cpVect(x: 300, y: 100))
+
+        let shape2 = cpCircleShapeNew(self.body2, ballRadius, cpVect(x: 0, y: 0))
+        cpShapeSetElasticity(shape2, 0.7)
+        cpShapeSetFriction(shape2, 0.7)
+        cpSpaceAddShape(self.space, shape2)
+
+        // setup a barrier so the balls don't leave the screen
         let barrierBody = cpBodyNewStatic();
         cpSpaceAddBody(self.space, barrierBody)
 
