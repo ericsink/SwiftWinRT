@@ -27,22 +27,21 @@ open class Brush
     private class Container {
         public var self_ref: Brush? = nil
     }
+    private var _inner: Optional<WinRT.IInspectable> = nil
     private struct WithTrailingObjects_IBrushOverrides {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides
         public var container: Unmanaged<Container>
     }
-    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>>
-    private var _inner: Optional<WinRT.IInspectable> = nil
+    private var instance_IBrushOverrides: UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>
     private static func from_IBrushOverrides(_ pUnk: UnsafeMutableRawPointer?) -> Brush? {
         return pUnk?.bindMemory(to: Brush.WithTrailingObjects_IBrushOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     public init(plok: Microsoft.UI.Xaml.Media.IBrush?) throws {
         _self = plok!
-        let instance = UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>.allocate(capacity: 1)
-        instance.pointee = WithTrailingObjects_IBrushOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable_IBrushOverrides), container: Unmanaged<Container>.passRetained(Container()))
-        self.instance = instance
+        self.instance_IBrushOverrides = UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>.allocate(capacity: 1)
+        self.instance_IBrushOverrides.pointee = WithTrailingObjects_IBrushOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable_IBrushOverrides), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IBrushOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Media.IBrush { return _self; }
     private static var vtable_IBrushOverrides: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverridesVtbl = .init(
@@ -56,8 +55,18 @@ open class Brush
             ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
             return S_OK
         default:
-            ppvObject.pointee = nil
-            return E_NOINTERFACE
+            guard let self = Brush.from_IBrushOverrides(pUnk) else {
+                return E_INVALIDARG
+            }
+        do {
+            try self._inner!.QueryInterface($1!, $2)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
         }
     },
     AddRef: {
@@ -75,6 +84,7 @@ open class Brush
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
+        // TODO need to call _inner.GetIids and include those too
         pLen.pointee = 1
         var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
         (mem + 0).pointee = Microsoft.UI.Xaml.Media.IBrushOverrides.IID
@@ -120,16 +130,15 @@ open class Brush
     )
     // COMPOSABLE: Microsoft.UI.Xaml.Media.IBrushFactory
     public override init() throws {
-        let instance = UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>.allocate(capacity: 1)
-        self.instance = instance
-        instance.pointee = WithTrailingObjects_IBrushOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable_IBrushOverrides), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance_IBrushOverrides = UnsafeMutablePointer<WithTrailingObjects_IBrushOverrides>.allocate(capacity: 1)
+        self.instance_IBrushOverrides.pointee = WithTrailingObjects_IBrushOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushOverrides(lpVtbl: &Self.vtable_IBrushOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IBrushFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Media.Brush");
-        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IBrushOverrides))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IBrushOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IBrushStatics {
         static var x : IBrushStatics =
@@ -205,6 +214,7 @@ open class Brush
         }
     }
     open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         let _ifc : Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();

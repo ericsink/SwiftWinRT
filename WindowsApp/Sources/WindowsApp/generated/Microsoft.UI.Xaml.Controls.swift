@@ -197,22 +197,21 @@ open class ContentControl
     private class Container {
         public var self_ref: ContentControl? = nil
     }
+    private var _inner: Optional<WinRT.IInspectable> = nil
     private struct WithTrailingObjects_IContentControlOverrides {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides
         public var container: Unmanaged<Container>
     }
-    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>>
-    private var _inner: Optional<WinRT.IInspectable> = nil
+    private var instance_IContentControlOverrides: UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>
     private static func from_IContentControlOverrides(_ pUnk: UnsafeMutableRawPointer?) -> ContentControl? {
         return pUnk?.bindMemory(to: ContentControl.WithTrailingObjects_IContentControlOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     public init(plok: Microsoft.UI.Xaml.Controls.IContentControl?) throws {
         _self = plok!
-        let instance = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
-        instance.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
-        self.instance = instance
+        self.instance_IContentControlOverrides = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
+        self.instance_IContentControlOverrides.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IContentControlOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.IContentControl { return _self; }
     private static var vtable_IContentControlOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverridesVtbl = .init(
@@ -226,8 +225,18 @@ open class ContentControl
             ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
             return S_OK
         default:
-            ppvObject.pointee = nil
-            return E_NOINTERFACE
+            guard let self = ContentControl.from_IContentControlOverrides(pUnk) else {
+                return E_INVALIDARG
+            }
+        do {
+            try self._inner!.QueryInterface($1!, $2)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
         }
     },
     AddRef: {
@@ -245,6 +254,7 @@ open class ContentControl
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
+        // TODO need to call _inner.GetIids and include those too
         pLen.pointee = 1
         var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
         (mem + 0).pointee = Microsoft.UI.Xaml.Controls.IContentControlOverrides.IID
@@ -320,16 +330,15 @@ open class ContentControl
     )
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IContentControlFactory
     public override init() throws {
-        let instance = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
-        self.instance = instance
-        instance.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance_IContentControlOverrides = UnsafeMutablePointer<WithTrailingObjects_IContentControlOverrides>.allocate(capacity: 1)
+        self.instance_IContentControlOverrides.pointee = WithTrailingObjects_IContentControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlOverrides(lpVtbl: &Self.vtable_IContentControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IContentControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ContentControl");
-        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IContentControlOverrides))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IContentControlOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IContentControlStatics {
         static var x : IContentControlStatics =
@@ -437,10 +446,13 @@ open class ContentControl
         }
     }
     open func OnContentChanged(oldContent : Optional<WinRT.Object>, newContent : Optional<WinRT.Object>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnContentTemplateChanged(oldContentTemplate : Optional<Microsoft.UI.Xaml.DataTemplate>, newContentTemplate : Optional<Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnContentTemplateSelectorChanged(oldContentTemplateSelector : Optional<Microsoft.UI.Xaml.Controls.DataTemplateSelector>, newContentTemplateSelector : Optional<Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
 }
 
@@ -579,22 +591,21 @@ open class Control
     private class Container {
         public var self_ref: Control? = nil
     }
+    private var _inner: Optional<WinRT.IInspectable> = nil
     private struct WithTrailingObjects_IControlOverrides {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides
         public var container: Unmanaged<Container>
     }
-    private var instance: Optional<UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>>
-    private var _inner: Optional<WinRT.IInspectable> = nil
+    private var instance_IControlOverrides: UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>
     private static func from_IControlOverrides(_ pUnk: UnsafeMutableRawPointer?) -> Control? {
         return pUnk?.bindMemory(to: Control.WithTrailingObjects_IControlOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
     public init(plok: Microsoft.UI.Xaml.Controls.IControl?) throws {
         _self = plok!
-        let instance = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
-        instance.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
-        self.instance = instance
+        self.instance_IControlOverrides = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
+        self.instance_IControlOverrides.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IControlOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.IControl { return _self; }
     private static var vtable_IControlOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverridesVtbl = .init(
@@ -608,8 +619,18 @@ open class Control
             ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
             return S_OK
         default:
-            ppvObject.pointee = nil
-            return E_NOINTERFACE
+            guard let self = Control.from_IControlOverrides(pUnk) else {
+                return E_INVALIDARG
+            }
+        do {
+            try self._inner!.QueryInterface($1!, $2)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
         }
     },
     AddRef: {
@@ -627,6 +648,7 @@ open class Control
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
+        // TODO need to call _inner.GetIids and include those too
         pLen.pointee = 1
         var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
         (mem + 0).pointee = Microsoft.UI.Xaml.Controls.IControlOverrides.IID
@@ -1077,16 +1099,15 @@ open class Control
     )
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.IControlFactory
     public override init() throws {
-        let instance = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
-        self.instance = instance
-        instance.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance_IControlOverrides = UnsafeMutablePointer<WithTrailingObjects_IControlOverrides>.allocate(capacity: 1)
+        self.instance_IControlOverrides.pointee = WithTrailingObjects_IControlOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIControlOverrides(lpVtbl: &Self.vtable_IControlOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Control");
-        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance))
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IControlOverrides))
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
         _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        instance.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IControlOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IControlStatics {
         static var x : IControlStatics =
@@ -1710,60 +1731,88 @@ open class Control
         }
     }
     open func OnPointerEntered(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerPressed(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerMoved(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerReleased(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerExited(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerCaptureLost(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerCanceled(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPointerWheelChanged(e : Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnTapped(e : Optional<Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnDoubleTapped(e : Optional<Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnHolding(e : Optional<Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnRightTapped(e : Optional<Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnManipulationStarting(e : Optional<Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnManipulationInertiaStarting(e : Optional<Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnManipulationStarted(e : Optional<Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnManipulationDelta(e : Optional<Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnManipulationCompleted(e : Optional<Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnKeyUp(e : Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnKeyDown(e : Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPreviewKeyDown(e : Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnPreviewKeyUp(e : Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnGotFocus(e : Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnLostFocus(e : Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnCharacterReceived(e : Optional<Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnDragEnter(e : Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnDragLeave(e : Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnDragOver(e : Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func OnDrop(e : Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
 }
 

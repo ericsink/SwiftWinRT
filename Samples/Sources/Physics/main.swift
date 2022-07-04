@@ -52,7 +52,11 @@ class MyApp : Microsoft.UI.Xaml.Application {
         // The screen is cleared, so we need to redraw everything
 
         // call chipmunk to update
-        cpSpaceStep(space, ms_to_s(ms: 30))
+        // TODO doing multiple Step calls here prevents things going too fast
+        // and passing through a static body.
+        for x in 0..<10 {
+            cpSpaceStep(space, ms_to_s(ms: 3))
+        }
 
         // then draw the bouncing ball at its current position
         let pos1 = cpBodyGetPosition(body1)
@@ -93,7 +97,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try w.put_Content(value: grid);
 
         self.space = cpSpaceNew()
-        cpSpaceSetGravity(self.space, cpVect(x: 0, y: 100))
+        cpSpaceSetGravity(self.space, cpVect(x: 0, y: 300))
 
         // ball 1
         self.body1 = cpBodyNew(10, cpMomentForCircle(10, 0, ballRadius, cpvzero))

@@ -358,6 +358,7 @@ typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus
 } _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus;
 // forward decls for value types
 typedef struct _q_CMicrosoft_CUI_CXaml_CCornerRadius _q_CMicrosoft_CUI_CXaml_CCornerRadius;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition;
 typedef struct _q_CMicrosoft_CUI_CXaml_CThickness _q_CMicrosoft_CUI_CXaml_CThickness;
 // forward decls for interfaces
 typedef struct _q_CMicrosoft_CUI_CComposition_CIAnimationObject _q_CMicrosoft_CUI_CComposition_CIAnimationObject;
@@ -543,6 +544,9 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowSizeChangedEventArgs _q_CMicrosof
 typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowStatics _q_CMicrosoft_CUI_CXaml_CIWindowStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs _q_CMicrosoft_CUI_CXaml_CIWindowVisibilityChangedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CIXamlRoot _q_CMicrosoft_CUI_CXaml_CIXamlRoot;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider;
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransition;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory _q_CMicrosoft_CUI_CXaml_CMedia_CIBrushFactory;
@@ -664,6 +668,11 @@ struct _q_CMicrosoft_CUI_CXaml_CCornerRadius
     DOUBLE TopRight;
     DOUBLE BottomRight;
     DOUBLE BottomLeft;
+};
+struct _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition
+{
+    HSTRING XmlNamespace;
+    HSTRING Namespace;
 };
 struct _q_CMicrosoft_CUI_CXaml_CThickness
 {
@@ -5048,6 +5057,75 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CIXamlRootVtbl
 struct _q_CMicrosoft_CUI_CXaml_CIXamlRoot
 {
     _q_CMicrosoft_CUI_CXaml_CIXamlRootVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMemberVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_IsAttachable)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsDependencyProperty)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsReadOnly)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Name)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_TargetType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Type)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetValue)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, IInspectable* instance, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* SetValue)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember* pThis, IInspectable* instance, IInspectable* value);
+} _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMemberVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember
+{
+    _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMemberVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProviderVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetXamlType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* pThis, _q_CWindows_CUI_CXaml_CInterop_CTypeName type, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetXamlTypeByFullName)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* pThis, HSTRING fullName, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetXmlnsDefinitions)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider* pThis, UINT32* __pretLength, _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition** __pret);
+} _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProviderVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider
+{
+    _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProviderVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlTypeVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BaseType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ContentProperty)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_FullName)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, HSTRING* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsArray)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsCollection)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsConstructible)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsDictionary)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsMarkupExtension)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_IsBindable)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ItemType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_KeyType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BoxedType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_UnderlyingType)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, _q_CWindows_CUI_CXaml_CInterop_CTypeName* __pret);
+    HRESULT (STDMETHODCALLTYPE* ActivateInstance)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* CreateFromString)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, HSTRING value, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* GetMember)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, HSTRING name, _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember** __pret);
+    HRESULT (STDMETHODCALLTYPE* AddToVector)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, IInspectable* instance, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* AddToMap)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis, IInspectable* instance, IInspectable* key, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* RunInitializer)(_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType* pThis);
+} _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlTypeVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType
+{
+    _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlTypeVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CITransitionVtbl
 {

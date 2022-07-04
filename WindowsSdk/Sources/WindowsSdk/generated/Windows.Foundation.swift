@@ -520,7 +520,7 @@ open class AsyncAction
             ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
             return S_OK
         case Windows.Foundation.IAsyncInfo.IID:
-            guard let self = AsyncAction.from_IAsyncInfo(pUnk) else {
+            guard let self = AsyncAction.from_IAsyncAction(pUnk) else {
                 return E_INVALIDARG
             }
             let p =
@@ -632,24 +632,32 @@ open class AsyncAction
         self.instance_IAsyncAction.container.takeUnretainedValue().self_ref = self
     }
     open func get_Id() throws -> Swift.UInt32 {
+    print("\(#file) \(#line) \(#function)")
     return 0;
     }
     open func get_Status() throws -> Windows.Foundation.AsyncStatus {
+    print("\(#file) \(#line) \(#function)")
     return _q_CWindows_CFoundation_CAsyncStatus_Canceled;
     }
     open func get_ErrorCode() throws -> Windows.Foundation.HResult {
+    print("\(#file) \(#line) \(#function)")
     return _q_CWindows_CFoundation_CHResult(Value: 0);
     }
     open func Cancel() throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func Close() throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func put_Completed(handler : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler>) throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     open func get_Completed() throws -> Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> {
+    print("\(#file) \(#line) \(#function)")
     return nil;
     }
     open func GetResults() throws -> Void {
+    print("\(#file) \(#line) \(#function)")
     }
     public func to_IAsyncInfo() -> Windows.Foundation.IAsyncInfo {
         return withUnsafeMutablePointer(to: &self.instance_IAsyncInfo.interface_struct) {

@@ -44,6 +44,9 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try stack.Children!.Append(value: slider)
 
         let btn = try Microsoft.UI.Xaml.Controls.Button();
+        let q : Microsoft.UI.Xaml.IFrameworkElement = try btn.QueryInterface()
+        let btn_iids = try btn.GetInterface().GetIids()
+        //print("\(btn_iids)")
         _ = try btn.add_Click
         {
             (sender, e) in
@@ -62,9 +65,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try tf.put_Description(value: TextBlock(text: "Description", fontSize: 12));
         //try tf.put_Header(value: "Notes")
         try tf.put_PlaceholderText(value: "Type here")
-        print("\(#file) -- \(#line)")
         try stack.Children!.Append(value: tf)
-        print("\(#file) -- \(#line)")
 #endif
 
 #if not
