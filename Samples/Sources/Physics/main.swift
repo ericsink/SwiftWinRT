@@ -30,6 +30,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
     var space : UnsafeMutablePointer<cpSpace>? = nil
     var body1 : UnsafeMutablePointer<cpBody>? = nil
     var body2 : UnsafeMutablePointer<cpBody>? = nil
+    var body3 : UnsafeMutablePointer<cpBody>? = nil
     let ballRadius = 20.0
 
     struct Seg {
@@ -52,9 +53,9 @@ class MyApp : Microsoft.UI.Xaml.Application {
         // The screen is cleared, so we need to redraw everything
 
         // call chipmunk to update
-        // TODO doing multiple Step calls here prevents things going too fast
-        // and passing through a static body.
-        for x in 0..<10 {
+        // doing multiple Step calls here prevents things going too fast
+        // and passing through the static body barrier lines.
+        for _ in 0..<10 {
             cpSpaceStep(space, ms_to_s(ms: 3))
         }
 
@@ -65,6 +66,10 @@ class MyApp : Microsoft.UI.Xaml.Application {
         // and the other ball too
         let pos2 = cpBodyGetPosition(body2)
         try args!.DrawingSession!.FillCircle(x: Float(pos2.x), y: Float(pos2.y), radius: Float(ballRadius), color: Microsoft.UI.Colors.LightBlue);
+
+        // and the third ball too
+        let pos3 = cpBodyGetPosition(body3)
+        try args!.DrawingSession!.FillCircle(x: Float(pos3.x), y: Float(pos3.y), radius: Float(ballRadius), color: Microsoft.UI.Colors.Red);
 
         // and the barrier
         for s in barrier {
@@ -110,7 +115,7 @@ class MyApp : Microsoft.UI.Xaml.Application {
         cpSpaceAddShape(self.space, shape1)
 
         // ball 2
-        self.body2 = cpBodyNew(10, cpMomentForCircle(10, 0, ballRadius, cpvzero))
+        self.body2 = cpBodyNew(20, cpMomentForCircle(20, 0, ballRadius, cpvzero))
         cpSpaceAddBody(self.space, self.body2)
         cpBodySetPosition(self.body2, cpVect(x: 300, y: 100))
 
@@ -118,6 +123,16 @@ class MyApp : Microsoft.UI.Xaml.Application {
         cpShapeSetElasticity(shape2, 0.7)
         cpShapeSetFriction(shape2, 0.7)
         cpSpaceAddShape(self.space, shape2)
+
+        // ball 3
+        self.body3 = cpBodyNew(1, cpMomentForCircle(1, 0, ballRadius, cpvzero))
+        cpSpaceAddBody(self.space, self.body3)
+        cpBodySetPosition(self.body3, cpVect(x: 200, y: 100))
+
+        let shape3 = cpCircleShapeNew(self.body3, ballRadius, cpVect(x: 0, y: 0))
+        cpShapeSetElasticity(shape3, 0.7)
+        cpShapeSetFriction(shape3, 0.7)
+        cpSpaceAddShape(self.space, shape3)
 
         // setup a barrier so the balls don't leave the screen
         let barrierBody = cpBodyNewStatic();
