@@ -1,5 +1,6 @@
 
-import WinRT
+// TODO need _spi for RawPointer for passing back to C++
+@_spi(IUnknown) import WinRT; 
 import WindowsSdk
 import WindowsApp
 
@@ -22,9 +23,36 @@ extension Microsoft.UI.Xaml.Controls.TextBlock {
     }
 }
 
+#if not
 class MyApp : Microsoft.UI.Xaml.Application {
     override func OnLaunched(args : Optional<Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
+        // etc
+    }
+}
+#endif
+
+// TODO this code used to be an override for the Application
+// launched event.  now it is a C function that constructs
+// a Window and returns a pointer to the IWindow interface.
+// the C++ bootstrap/host code wraps it and sets it as the
+// Windows for the Application instance which is constructed
+// and managed there.
+// cp .build/debug/*.dll into the output directory of the
+// C++ app.
+
+// in : void App::OnLaunched(LaunchActivatedEventArgs const&)
+// C++ code is roughly:
+
+// HMODULE h = LoadLibraryW(L"XamlApp.dll");
+// void* (*pfn)(void) = (void* (*)(void)) GetProcAddress(h, "make_window");
+// void* pw = pfn();
+// window = winrt::Microsoft::UI::Xaml::Window(pw, winrt::take_ownership_from_abi_t());
+// window.Activate();
+
+@_cdecl("make_window")
+public func make_window() -> UnsafeMutableRawPointer? {
+    do {
         let w = try Microsoft.UI.Xaml.Window();
         try w.put_Title(value: "Hello from Swift");
 
@@ -36,17 +64,19 @@ class MyApp : Microsoft.UI.Xaml.Application {
         let br = try Microsoft.UI.Xaml.Media.LinearGradientBrush(gradientStopCollection: stops, angle: 45);
         try stack.put_Background(value: br);
 
-        try stack.Children!.Append(value: TextBlock(text: "Swift Demo", fontSize: 128))
-        try stack.Children!.Append(value: TextBlock(text: "WinUI 3", fontSize: 96))
-        try stack.Children!.Append(value: TextBlock(text: "Windows App SDK 1.1", fontSize: 96))
+        try stack.Children!.Append(value: TextBlock(text: "Swift Demo", fontSize: 96))
+        try stack.Children!.Append(value: TextBlock(text: "WinUI 3", fontSize: 64))
+        try stack.Children!.Append(value: TextBlock(text: "Windows App SDK 1.1", fontSize: 64))
 
         let slider = try Microsoft.UI.Xaml.Controls.Slider()
         try stack.Children!.Append(value: slider)
 
         let btn = try Microsoft.UI.Xaml.Controls.Button();
+#if not
         let q : Microsoft.UI.Xaml.IFrameworkElement = try btn.QueryInterface()
         let btn_iids = try btn.GetInterface().GetIids()
-        //print("\(btn_iids)")
+        print("\(btn_iids)")
+#endif
         _ = try btn.add_Click
         {
             (sender, e) in
@@ -56,17 +86,13 @@ class MyApp : Microsoft.UI.Xaml.Application {
         try btn.put_Content(value: TextBlock(text: "Click", fontSize: 32));
         try stack.Children!.Append(value: btn)
 
-#if not
-        // TODO crashes
         let tf = try Microsoft.UI.Xaml.Controls.TextBox()
         try tf.put_Width(value: 400)
         try tf.put_Text(value: "")
         try tf.put_Header(value: TextBlock(text: "Header", fontSize: 12));
         try tf.put_Description(value: TextBlock(text: "Description", fontSize: 12));
-        //try tf.put_Header(value: "Notes")
         try tf.put_PlaceholderText(value: "Type here")
         try stack.Children!.Append(value: tf)
-#endif
 
 #if not
         let rc = try Microsoft.UI.Xaml.Controls.RatingControl()
@@ -120,10 +146,16 @@ class MyApp : Microsoft.UI.Xaml.Application {
 
         try w.put_Content(value: stack);
 
-        try w.Activate();
+        let b = w.Interface() // get the IWindow
+        _ = b.AddRef(); // need one extra refcount
+        return UnsafeMutableRawPointer(RawPointer(b))
+    } catch {
+        print("\(error)")
+        return nil
     }
 }
 
+#if not
 @main
 class App {
     public static func main() async throws {
@@ -137,4 +169,5 @@ class App {
         }
     }
 }
+#endif
 

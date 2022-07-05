@@ -10,7 +10,7 @@ let SwiftWinRT = Package(
     .executable(name: "Toast", targets: ["Toast"]),
     .executable(name: "Power", targets: ["Power"]),
     .executable(name: "HttpClient", targets: ["HttpClient"]),
-    .executable(name: "XamlApp", targets: ["XamlApp"]),
+    .library(name: "XamlApp", type: .dynamic, targets: ["XamlApp"]),
     .executable(name: "Canvas", targets: ["Canvas"]),
     .executable(name: "MazeGame", targets: ["MazeGame"]),
   ],
