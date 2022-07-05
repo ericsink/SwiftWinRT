@@ -964,151 +964,18 @@ open class RangeBase
     Microsoft.UI.Xaml.Controls.Control
 {
     private var _self : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase;
-    private class Container {
-        public var self_ref: RangeBase? = nil
-    }
-    private var _inner: Optional<WinRT.IInspectable> = nil
-    private struct WithTrailingObjects_IRangeBaseOverrides {
-        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides
-        public var container: Unmanaged<Container>
-    }
-    private var instance_IRangeBaseOverrides: UnsafeMutablePointer<WithTrailingObjects_IRangeBaseOverrides>
-    private static func from_IRangeBaseOverrides(_ pUnk: UnsafeMutableRawPointer?) -> RangeBase? {
-        return pUnk?.bindMemory(to: RangeBase.WithTrailingObjects_IRangeBaseOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
-    }
     public init(plok: Microsoft.UI.Xaml.Controls.Primitives.IRangeBase?) throws {
         _self = plok!
-        self.instance_IRangeBaseOverrides = UnsafeMutablePointer<WithTrailingObjects_IRangeBaseOverrides>.allocate(capacity: 1)
-        self.instance_IRangeBaseOverrides.pointee = WithTrailingObjects_IRangeBaseOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable_IRangeBaseOverrides), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        self.instance_IRangeBaseOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.Primitives.IRangeBase { return _self; }
-    private static var vtable_IRangeBaseOverrides: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverridesVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        default:
-            guard let self = RangeBase.from_IRangeBaseOverrides(pUnk) else {
-                return E_INVALIDARG
-            }
-        do {
-            try self._inner!.QueryInterface($1!, $2)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-        }
-    },
-    AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBase.WithTrailingObjects_IRangeBaseOverrides.self, capacity: 1)
-        _ = pinstance.pointee.container.retain()
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBase.WithTrailingObjects_IRangeBaseOverrides.self, capacity: 1)
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
-        return __res;
-    },
-    GetIids: {
-        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
-            return E_INVALIDARG
-        }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 1
-        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
-        (mem + 0).pointee = Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides.IID
-        ppItems.pointee = mem
-        return S_OK;
-    },
-    GetRuntimeClassName: {
-        guard let pThis = $0, let pstr = $1 else {
-            return E_INVALIDARG
-        }
-        do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseOverrides").Raw()
-            return S_OK;
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetTrustLevel: {
-        guard let pThis = $0, let presult = $1 else {
-            return E_INVALIDARG
-        }
-        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
-        return S_OK;
-    },
-    OnMinimumChanged: {
-        (pThis, _ oldMinimum : DOUBLE, _ newMinimum : DOUBLE) in
-        guard let self = RangeBase.from_IRangeBaseOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnMinimumChanged(oldMinimum: oldMinimum, newMinimum: newMinimum)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnMaximumChanged: {
-        (pThis, _ oldMaximum : DOUBLE, _ newMaximum : DOUBLE) in
-        guard let self = RangeBase.from_IRangeBaseOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnMaximumChanged(oldMaximum: oldMaximum, newMaximum: newMaximum)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnValueChanged: {
-        (pThis, _ oldValue : DOUBLE, _ newValue : DOUBLE) in
-        guard let self = RangeBase.from_IRangeBaseOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnValueChanged(oldValue: oldValue, newValue: newValue)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
     // COMPOSABLE: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseFactory
     public override init() throws {
-        self.instance_IRangeBaseOverrides = UnsafeMutablePointer<WithTrailingObjects_IRangeBaseOverrides>.allocate(capacity: 1)
-        self.instance_IRangeBaseOverrides.pointee = WithTrailingObjects_IRangeBaseOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseOverrides(lpVtbl: &Self.vtable_IRangeBaseOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IRangeBaseFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Primitives.RangeBase");
-        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IRangeBaseOverrides))
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
-        _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        self.instance_IRangeBaseOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IRangeBaseStatics {
         static var x : IRangeBaseStatics =
@@ -1235,15 +1102,9 @@ open class RangeBase
         return try _ifc.Value;
         }
     }
-    open func OnMinimumChanged(oldMinimum : Swift.Double, newMinimum : Swift.Double) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func OnMaximumChanged(oldMaximum : Swift.Double, newMaximum : Swift.Double) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func OnValueChanged(oldValue : Swift.Double, newValue : Swift.Double) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
+    // overridable method skipped: OnMinimumChanged
+    // overridable method skipped: OnMaximumChanged
+    // overridable method skipped: OnValueChanged
 }
 
 // type: Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs

@@ -11,7 +11,7 @@ public typealias CanvasDrawEventArgs = Microsoft.Graphics.Canvas.UI.Xaml.CanvasD
 public typealias CanvasBitmap = Microsoft.Graphics.Canvas.CanvasBitmap
 public typealias Colors = Microsoft.UI.Colors
 
-class MyApp : Microsoft.UI.Xaml.Application {
+class MyApp : Microsoft.UI.Xaml.impl_Application {
     public override init() throws {
         self.Timer = try DispatcherTimer();
         try super.init()

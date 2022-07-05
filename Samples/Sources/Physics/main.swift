@@ -19,7 +19,7 @@ func ms_to_s(ms: Int) -> Double {
     return Double(ms) / 1000.0
 }
 
-class MyApp : Microsoft.UI.Xaml.Application {
+class MyApp : Microsoft.UI.Xaml.impl_Application {
     public override init() throws {
         self.Timer = try DispatcherTimer();
         try super.init()

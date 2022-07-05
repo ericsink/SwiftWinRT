@@ -16,276 +16,18 @@ open class Application
     WinRT.Object
 {
     private var _self : Microsoft.UI.Xaml.IApplication;
-    private class Container {
-        public var self_ref: Application? = nil
-    }
-    private var _inner: Optional<WinRT.IInspectable> = nil
-    private struct WithTrailingObjects_IApplicationOverrides {
-        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
-        public var container: Unmanaged<Container>
-    }
-    private var instance_IApplicationOverrides: UnsafeMutablePointer<WithTrailingObjects_IApplicationOverrides>
-    private static func from_IApplicationOverrides(_ pUnk: UnsafeMutableRawPointer?) -> Application? {
-        return pUnk?.bindMemory(to: Application.WithTrailingObjects_IApplicationOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
-    }
-    private struct WithTrailingObjects_IXamlMetadataProvider {
-        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider
-        public var container: Unmanaged<Container>
-    }
-    private var instance_IXamlMetadataProvider: UnsafeMutablePointer<WithTrailingObjects_IXamlMetadataProvider>
-    private static func from_IXamlMetadataProvider(_ pUnk: UnsafeMutableRawPointer?) -> Application? {
-        return pUnk?.bindMemory(to: Application.WithTrailingObjects_IXamlMetadataProvider.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
-    }
     public init(plok: Microsoft.UI.Xaml.IApplication?) throws {
         _self = plok!
-        self.instance_IApplicationOverrides = UnsafeMutablePointer<WithTrailingObjects_IApplicationOverrides>.allocate(capacity: 1)
-        self.instance_IApplicationOverrides.pointee = WithTrailingObjects_IApplicationOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable_IApplicationOverrides), container: Unmanaged<Container>.passRetained(Container()))
-        self.instance_IXamlMetadataProvider = UnsafeMutablePointer<WithTrailingObjects_IXamlMetadataProvider>.allocate(capacity: 1)
-        self.instance_IXamlMetadataProvider.pointee = WithTrailingObjects_IXamlMetadataProvider(interface_struct: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider(lpVtbl: &Self.vtable_IXamlMetadataProvider), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        self.instance_IApplicationOverrides.pointee.container.takeUnretainedValue().self_ref = self
-        self.instance_IXamlMetadataProvider.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.IApplication { return _self; }
-    private static var vtable_IApplicationOverrides: _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.IApplicationOverrides.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        case Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID:
-            guard let self = Application.from_IApplicationOverrides(pUnk) else {
-                return E_INVALIDARG
-            }
-            let p =
-                withUnsafeMutablePointer(to: &self.instance_IXamlMetadataProvider.pointee.interface_struct) {
-                    return UnsafeMutableRawPointer($0).bindMemory(to: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider.self, capacity: 1)
-                }
-            _ = p.pointee.lpVtbl.pointee.AddRef(p)
-            ppvObject.pointee = UnsafeMutableRawPointer(p)
-            return S_OK
-        default:
-            guard let self = Application.from_IApplicationOverrides(pUnk) else {
-                return E_INVALIDARG
-            }
-        do {
-            try self._inner!.QueryInterface($1!, $2)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-        }
-    },
-    AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects_IApplicationOverrides.self, capacity: 1)
-        _ = pinstance.pointee.container.retain()
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects_IApplicationOverrides.self, capacity: 1)
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
-        return __res;
-    },
-    GetIids: {
-        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
-            return E_INVALIDARG
-        }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 2
-        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
-        (mem + 0).pointee = Microsoft.UI.Xaml.IApplicationOverrides.IID
-        (mem + 1).pointee = Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID
-        ppItems.pointee = mem
-        return S_OK;
-    },
-    GetRuntimeClassName: {
-        guard let pThis = $0, let pstr = $1 else {
-            return E_INVALIDARG
-        }
-        do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.IApplicationOverrides").Raw()
-            return S_OK;
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetTrustLevel: {
-        guard let pThis = $0, let presult = $1 else {
-            return E_INVALIDARG
-        }
-        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
-        return S_OK;
-    },
-    OnLaunched: {
-        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) in
-        guard let self = Application.from_IApplicationOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnLaunched(args: Microsoft.UI.Xaml.LaunchActivatedEventArgs(plok: Microsoft.UI.Xaml.ILaunchActivatedEventArgs(args)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
-    private static var vtable_IXamlMetadataProvider: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProviderVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        case Microsoft.UI.Xaml.IApplicationOverrides.IID:
-            guard let self = Application.from_IXamlMetadataProvider(pUnk) else {
-                return E_INVALIDARG
-            }
-            let p =
-                withUnsafeMutablePointer(to: &self.instance_IApplicationOverrides.pointee.interface_struct) {
-                    return UnsafeMutableRawPointer($0).bindMemory(to: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides.self, capacity: 1)
-                }
-            _ = p.pointee.lpVtbl.pointee.AddRef(p)
-            ppvObject.pointee = UnsafeMutableRawPointer(p)
-            return S_OK
-        default:
-            guard let self = Application.from_IXamlMetadataProvider(pUnk) else {
-                return E_INVALIDARG
-            }
-        do {
-            try self._inner!.QueryInterface($1!, $2)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-        }
-    },
-    AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects_IXamlMetadataProvider.self, capacity: 1)
-        _ = pinstance.pointee.container.retain()
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: Application.WithTrailingObjects_IXamlMetadataProvider.self, capacity: 1)
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
-        return __res;
-    },
-    GetIids: {
-        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
-            return E_INVALIDARG
-        }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 2
-        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
-        (mem + 0).pointee = Microsoft.UI.Xaml.IApplicationOverrides.IID
-        (mem + 1).pointee = Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID
-        ppItems.pointee = mem
-        return S_OK;
-    },
-    GetRuntimeClassName: {
-        guard let pThis = $0, let pstr = $1 else {
-            return E_INVALIDARG
-        }
-        do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.IXamlMetadataProvider").Raw()
-            return S_OK;
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetTrustLevel: {
-        guard let pThis = $0, let presult = $1 else {
-            return E_INVALIDARG
-        }
-        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
-        return S_OK;
-    },
-    GetXamlType: {
-        (pThis, _ type : _q_CWindows_CUI_CXaml_CInterop_CTypeName, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType>>>?) in
-        guard let self = Application.from_IXamlMetadataProvider(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Optional<Microsoft.UI.Xaml.Markup.IXamlType> = try self.GetXamlType(type: type)
-            __presult!.pointee = nil;
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetXamlTypeByFullName: {
-        (pThis, _ fullName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType>>>?) in
-        guard let self = Application.from_IXamlMetadataProvider(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Optional<Microsoft.UI.Xaml.Markup.IXamlType> = try self.GetXamlTypeByFullName(fullName: Swift.String(from: fullName))
-            __presult!.pointee = nil;
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetXmlnsDefinitions: {
-        (pThis, _ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition>>>?) in
-        guard let self = Application.from_IXamlMetadataProvider(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : UINT32 = try self.GetXmlnsDefinitions()
-            // TODO return array
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
     // COMPOSABLE: Microsoft.UI.Xaml.IApplicationFactory
     public init() throws {
-        self.instance_IApplicationOverrides = UnsafeMutablePointer<WithTrailingObjects_IApplicationOverrides>.allocate(capacity: 1)
-        self.instance_IApplicationOverrides.pointee = WithTrailingObjects_IApplicationOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable_IApplicationOverrides), container: Unmanaged<Container>.passRetained(Container()))
-        self.instance_IXamlMetadataProvider = UnsafeMutablePointer<WithTrailingObjects_IXamlMetadataProvider>.allocate(capacity: 1)
-        self.instance_IXamlMetadataProvider.pointee = WithTrailingObjects_IXamlMetadataProvider(interface_struct: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider(lpVtbl: &Self.vtable_IXamlMetadataProvider), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IApplicationFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Application");
-        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IApplicationOverrides))
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
-        _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        self.instance_IApplicationOverrides.pointee.container.takeUnretainedValue().self_ref = self
-        self.instance_IXamlMetadataProvider.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IApplicationStatics {
         static var x : IApplicationStatics =
@@ -310,18 +52,6 @@ open class Application
         get throws {
         return try Microsoft.UI.Xaml.Application(plok: ApplicationStatics.Current);
         }
-    }
-    open func GetXamlType(type : Windows.UI.Xaml.Interop.TypeName) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlType> {
-    print("\(#file) \(#line) \(#function)")
-    return nil;
-    }
-    open func GetXamlTypeByFullName(fullName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlType> {
-    print("\(#file) \(#line) \(#function)")
-    return nil;
-    }
-    open func GetXmlnsDefinitions() throws -> UINT32 {
-    print("\(#file) \(#line) \(#function)")
-    return 0;
     }
     public func get_Resources() throws -> Optional<Microsoft.UI.Xaml.ResourceDictionary> {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
@@ -400,6 +130,286 @@ open class Application
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
         return try Microsoft.UI.Xaml.ResourceDictionary(plok: _ifc.Resources);
         }
+    }
+    // overridable method skipped: OnLaunched
+}
+// composing class
+open class impl_Application
+    :
+    Microsoft.UI.Xaml.Application
+{
+    private var _self : Microsoft.UI.Xaml.IApplication;
+    private class Container {
+        public var self_ref: impl_Application? = nil
+    }
+    private var _inner: WinRT.IInspectable
+    private struct WithTrailingObjects_IApplicationOverrides {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides
+        public var container: Unmanaged<Container>
+    }
+    private var instance_IApplicationOverrides: UnsafeMutablePointer<WithTrailingObjects_IApplicationOverrides>
+    private static func from_IApplicationOverrides(_ pUnk: UnsafeMutableRawPointer?) -> impl_Application? {
+        return pUnk?.bindMemory(to: impl_Application.WithTrailingObjects_IApplicationOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+    private struct WithTrailingObjects_IXamlMetadataProvider {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider
+        public var container: Unmanaged<Container>
+    }
+    private var instance_IXamlMetadataProvider: UnsafeMutablePointer<WithTrailingObjects_IXamlMetadataProvider>
+    private static func from_IXamlMetadataProvider(_ pUnk: UnsafeMutableRawPointer?) -> impl_Application? {
+        return pUnk?.bindMemory(to: impl_Application.WithTrailingObjects_IXamlMetadataProvider.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+    private static var vtable_IApplicationOverrides: _q_CMicrosoft_CUI_CXaml_CIApplicationOverridesVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.IApplicationOverrides.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        case Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID:
+            guard let self = impl_Application.from_IApplicationOverrides(pUnk) else {
+                return E_INVALIDARG
+            }
+            let p =
+                withUnsafeMutablePointer(to: &self.instance_IXamlMetadataProvider.pointee.interface_struct) {
+                    return UnsafeMutableRawPointer($0).bindMemory(to: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider.self, capacity: 1)
+                }
+            _ = p.pointee.lpVtbl.pointee.AddRef(p)
+            ppvObject.pointee = UnsafeMutableRawPointer(p)
+            return S_OK
+        default:
+            guard let self = impl_Application.from_IApplicationOverrides(pUnk) else {
+                return E_INVALIDARG
+            }
+        do {
+            try self._inner.QueryInterface($1!, $2)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_Application.WithTrailingObjects_IApplicationOverrides.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_Application.WithTrailingObjects_IApplicationOverrides.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        // TODO need to call _inner.GetIids and include those too
+        pLen.pointee = 2
+        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
+        (mem + 0).pointee = Microsoft.UI.Xaml.IApplicationOverrides.IID
+        (mem + 1).pointee = Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID
+        ppItems.pointee = mem
+        return S_OK;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        do {
+            pstr.pointee = try HString("Microsoft.UI.Xaml.IApplicationOverrides").Raw()
+            return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
+        return S_OK;
+    },
+    OnLaunched: {
+        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CILaunchActivatedEventArgs>>) in
+        guard let self = impl_Application.from_IApplicationOverrides(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.OnLaunched(args: Microsoft.UI.Xaml.LaunchActivatedEventArgs(plok: Microsoft.UI.Xaml.ILaunchActivatedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private static var vtable_IXamlMetadataProvider: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProviderVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        case Microsoft.UI.Xaml.IApplicationOverrides.IID:
+            guard let self = impl_Application.from_IXamlMetadataProvider(pUnk) else {
+                return E_INVALIDARG
+            }
+            let p =
+                withUnsafeMutablePointer(to: &self.instance_IApplicationOverrides.pointee.interface_struct) {
+                    return UnsafeMutableRawPointer($0).bindMemory(to: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides.self, capacity: 1)
+                }
+            _ = p.pointee.lpVtbl.pointee.AddRef(p)
+            ppvObject.pointee = UnsafeMutableRawPointer(p)
+            return S_OK
+        default:
+            guard let self = impl_Application.from_IXamlMetadataProvider(pUnk) else {
+                return E_INVALIDARG
+            }
+        do {
+            try self._inner.QueryInterface($1!, $2)
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_Application.WithTrailingObjects_IXamlMetadataProvider.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_Application.WithTrailingObjects_IXamlMetadataProvider.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    GetIids: {
+        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
+            return E_INVALIDARG
+        }
+        // TODO need to call _inner.GetIids and include those too
+        pLen.pointee = 2
+        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
+        (mem + 0).pointee = Microsoft.UI.Xaml.IApplicationOverrides.IID
+        (mem + 1).pointee = Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID
+        ppItems.pointee = mem
+        return S_OK;
+    },
+    GetRuntimeClassName: {
+        guard let pThis = $0, let pstr = $1 else {
+            return E_INVALIDARG
+        }
+        do {
+            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.IXamlMetadataProvider").Raw()
+            return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetTrustLevel: {
+        guard let pThis = $0, let presult = $1 else {
+            return E_INVALIDARG
+        }
+        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
+        return S_OK;
+    },
+    GetXamlType: {
+        (pThis, _ type : _q_CWindows_CUI_CXaml_CInterop_CTypeName, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType>>>?) in
+        guard let self = impl_Application.from_IXamlMetadataProvider(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Optional<Microsoft.UI.Xaml.Markup.IXamlType> = try self.GetXamlType(type: type)
+            __presult!.pointee = nil;
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetXamlTypeByFullName: {
+        (pThis, _ fullName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType>>>?) in
+        guard let self = impl_Application.from_IXamlMetadataProvider(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Optional<Microsoft.UI.Xaml.Markup.IXamlType> = try self.GetXamlTypeByFullName(fullName: Swift.String(from: fullName))
+            __presult!.pointee = nil;
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    },
+    GetXmlnsDefinitions: {
+        (pThis, _ __presultLength: UnsafeMutablePointer<UINT32>?, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition>>>?) in
+        guard let self = impl_Application.from_IXamlMetadataProvider(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : UINT32 = try self.GetXmlnsDefinitions()
+            // TODO return array
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    // COMPOSABLE: Microsoft.UI.Xaml.IApplicationFactory
+    public override init() throws {
+        self.instance_IApplicationOverrides = UnsafeMutablePointer<WithTrailingObjects_IApplicationOverrides>.allocate(capacity: 1)
+        self.instance_IApplicationOverrides.pointee = WithTrailingObjects_IApplicationOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationOverrides(lpVtbl: &Self.vtable_IApplicationOverrides), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance_IXamlMetadataProvider = UnsafeMutablePointer<WithTrailingObjects_IXamlMetadataProvider>.allocate(capacity: 1)
+        self.instance_IXamlMetadataProvider.pointee = WithTrailingObjects_IXamlMetadataProvider(interface_struct: _q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMetadataProvider(lpVtbl: &Self.vtable_IXamlMetadataProvider), container: Unmanaged<Container>.passRetained(Container()))
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IApplicationFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Application");
+        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IApplicationOverrides))
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        _inner = _inn!;
+        try super.init(plok: _inner.QueryInterface())
+        self.instance_IApplicationOverrides.pointee.container.takeUnretainedValue().self_ref = self
+        self.instance_IXamlMetadataProvider.pointee.container.takeUnretainedValue().self_ref = self
+    }
+    open func GetXamlType(type : Windows.UI.Xaml.Interop.TypeName) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlType> {
+    print("\(#file) \(#line) \(#function)")
+    return nil;
+    }
+    open func GetXamlTypeByFullName(fullName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlType> {
+    print("\(#file) \(#line) \(#function)")
+    return nil;
+    }
+    open func GetXmlnsDefinitions() throws -> UINT32 {
+    print("\(#file) \(#line) \(#function)")
+    return 0;
     }
     open func OnLaunched(args : Optional<Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void {
     print("\(#file) \(#line) \(#function)")
@@ -1409,169 +1419,18 @@ open class FrameworkElement
     Microsoft.UI.Xaml.UIElement
 {
     private var _self : Microsoft.UI.Xaml.IFrameworkElement;
-    private class Container {
-        public var self_ref: FrameworkElement? = nil
-    }
-    private var _inner: Optional<WinRT.IInspectable> = nil
-    private struct WithTrailingObjects_IFrameworkElementOverrides {
-        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides
-        public var container: Unmanaged<Container>
-    }
-    private var instance_IFrameworkElementOverrides: UnsafeMutablePointer<WithTrailingObjects_IFrameworkElementOverrides>
-    private static func from_IFrameworkElementOverrides(_ pUnk: UnsafeMutableRawPointer?) -> FrameworkElement? {
-        return pUnk?.bindMemory(to: FrameworkElement.WithTrailingObjects_IFrameworkElementOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
-    }
     public init(plok: Microsoft.UI.Xaml.IFrameworkElement?) throws {
         _self = plok!
-        self.instance_IFrameworkElementOverrides = UnsafeMutablePointer<WithTrailingObjects_IFrameworkElementOverrides>.allocate(capacity: 1)
-        self.instance_IFrameworkElementOverrides.pointee = WithTrailingObjects_IFrameworkElementOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable_IFrameworkElementOverrides), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        self.instance_IFrameworkElementOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.IFrameworkElement { return _self; }
-    private static var vtable_IFrameworkElementOverrides: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverridesVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.IFrameworkElementOverrides.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        default:
-            guard let self = FrameworkElement.from_IFrameworkElementOverrides(pUnk) else {
-                return E_INVALIDARG
-            }
-        do {
-            try self._inner!.QueryInterface($1!, $2)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-        }
-    },
-    AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: FrameworkElement.WithTrailingObjects_IFrameworkElementOverrides.self, capacity: 1)
-        _ = pinstance.pointee.container.retain()
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: FrameworkElement.WithTrailingObjects_IFrameworkElementOverrides.self, capacity: 1)
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
-        return __res;
-    },
-    GetIids: {
-        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
-            return E_INVALIDARG
-        }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 1
-        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
-        (mem + 0).pointee = Microsoft.UI.Xaml.IFrameworkElementOverrides.IID
-        ppItems.pointee = mem
-        return S_OK;
-    },
-    GetRuntimeClassName: {
-        guard let pThis = $0, let pstr = $1 else {
-            return E_INVALIDARG
-        }
-        do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.IFrameworkElementOverrides").Raw()
-            return S_OK;
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetTrustLevel: {
-        guard let pThis = $0, let presult = $1 else {
-            return E_INVALIDARG
-        }
-        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
-        return S_OK;
-    },
-    MeasureOverride: {
-        (pThis, _ availableSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) in
-        guard let self = FrameworkElement.from_IFrameworkElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Windows.Foundation.Size = try self.MeasureOverride(availableSize: availableSize)
-            __presult!.pointee = _ret;
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    ArrangeOverride: {
-        (pThis, _ finalSize : _q_CWindows_CFoundation_CSize, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CSize>?) in
-        guard let self = FrameworkElement.from_IFrameworkElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Windows.Foundation.Size = try self.ArrangeOverride(finalSize: finalSize)
-            __presult!.pointee = _ret;
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnApplyTemplate: {
-        (pThis) in
-        guard let self = FrameworkElement.from_IFrameworkElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnApplyTemplate()
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GoToElementStateCore: {
-        (pThis, _ stateName : Optional<HSTRING>, _ useTransitions : boolean, _ __presult: UnsafeMutablePointer<boolean>?) in
-        guard let self = FrameworkElement.from_IFrameworkElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : boolean = try self.GoToElementStateCore(stateName: Swift.String(from: stateName), useTransitions: useTransitions)
-            __presult!.pointee = _ret;
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
     // COMPOSABLE: Microsoft.UI.Xaml.IFrameworkElementFactory
     public init() throws {
-        self.instance_IFrameworkElementOverrides = UnsafeMutablePointer<WithTrailingObjects_IFrameworkElementOverrides>.allocate(capacity: 1)
-        self.instance_IFrameworkElementOverrides.pointee = WithTrailingObjects_IFrameworkElementOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIFrameworkElementOverrides(lpVtbl: &Self.vtable_IFrameworkElementOverrides), container: Unmanaged<Container>.passRetained(Container()))
         var _inn : Optional<WinRT.IInspectable> = nil
         let _af : IFrameworkElementFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.FrameworkElement");
-        let baseInterface = WinRT.IInspectable(UnsafeMutableRawPointer(instance_IFrameworkElementOverrides))
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
         _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
-        _inner = _inn;
         try super.init(plok: _self.QueryInterface())
-        self.instance_IFrameworkElementOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     private struct _IFrameworkElementStatics {
         static var x : IFrameworkElementStatics =
@@ -2277,21 +2136,10 @@ open class FrameworkElement
         let _ifc : Microsoft.UI.Xaml.IFrameworkElementProtected = try _self.QueryInterface();
         return try _ifc.InvalidateViewport();
     }
-    open func MeasureOverride(availableSize : Windows.Foundation.Size) throws -> Windows.Foundation.Size {
-    print("\(#file) \(#line) \(#function)")
-    return _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
-    }
-    open func ArrangeOverride(finalSize : Windows.Foundation.Size) throws -> Windows.Foundation.Size {
-    print("\(#file) \(#line) \(#function)")
-    return _q_CWindows_CFoundation_CSize(Width: 0, Height: 0);
-    }
-    open func OnApplyTemplate() throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func GoToElementStateCore(stateName : Swift.String, useTransitions : boolean) throws -> boolean {
-    print("\(#file) \(#line) \(#function)")
-    return 0;
-    }
+    // overridable method skipped: MeasureOverride
+    // overridable method skipped: ArrangeOverride
+    // overridable method skipped: OnApplyTemplate
+    // overridable method skipped: GoToElementStateCore
 }
 
 // type: Microsoft.UI.Xaml.FrameworkTemplate
@@ -9753,218 +9601,11 @@ open class UIElement
     Microsoft.UI.Xaml.DependencyObject
 {
     private var _self : Microsoft.UI.Xaml.IUIElement;
-    private class Container {
-        public var self_ref: UIElement? = nil
-    }
-    private var _inner: Optional<WinRT.IInspectable> = nil
-    private struct WithTrailingObjects_IUIElementOverrides {
-        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides
-        public var container: Unmanaged<Container>
-    }
-    private var instance_IUIElementOverrides: UnsafeMutablePointer<WithTrailingObjects_IUIElementOverrides>
-    private static func from_IUIElementOverrides(_ pUnk: UnsafeMutableRawPointer?) -> UIElement? {
-        return pUnk?.bindMemory(to: UIElement.WithTrailingObjects_IUIElementOverrides.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
-    }
     public init(plok: Microsoft.UI.Xaml.IUIElement?) throws {
         _self = plok!
-        self.instance_IUIElementOverrides = UnsafeMutablePointer<WithTrailingObjects_IUIElementOverrides>.allocate(capacity: 1)
-        self.instance_IUIElementOverrides.pointee = WithTrailingObjects_IUIElementOverrides(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUIElementOverrides(lpVtbl: &Self.vtable_IUIElementOverrides), container: Unmanaged<Container>.passRetained(Container()))
         try super.init(plok: _self.QueryInterface())
-        self.instance_IUIElementOverrides.pointee.container.takeUnretainedValue().self_ref = self
     }
     public func Interface() -> Microsoft.UI.Xaml.IUIElement { return _self; }
-    private static var vtable_IUIElementOverrides: _q_CMicrosoft_CUI_CXaml_CIUIElementOverridesVtbl = .init(
-    QueryInterface: {
-        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
-            return E_INVALIDARG
-        }
-        switch riid.pointee {
-        case IUnknown.IID, IInspectable.IID, Microsoft.UI.Xaml.IUIElementOverrides.IID:
-            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
-            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
-            return S_OK
-        default:
-            guard let self = UIElement.from_IUIElementOverrides(pUnk) else {
-                return E_INVALIDARG
-            }
-        do {
-            try self._inner!.QueryInterface($1!, $2)
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-        }
-    },
-    AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UIElement.WithTrailingObjects_IUIElementOverrides.self, capacity: 1)
-        _ = pinstance.pointee.container.retain()
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
-        return __res;
-    },
-    Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UIElement.WithTrailingObjects_IUIElementOverrides.self, capacity: 1)
-        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
-        return __res;
-    },
-    GetIids: {
-        guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
-            return E_INVALIDARG
-        }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 1
-        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
-        (mem + 0).pointee = Microsoft.UI.Xaml.IUIElementOverrides.IID
-        ppItems.pointee = mem
-        return S_OK;
-    },
-    GetRuntimeClassName: {
-        guard let pThis = $0, let pstr = $1 else {
-            return E_INVALIDARG
-        }
-        do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.IUIElementOverrides").Raw()
-            return S_OK;
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetTrustLevel: {
-        guard let pThis = $0, let presult = $1 else {
-            return E_INVALIDARG
-        }
-        presult.pointee = CWinRT.TrustLevel(rawValue: 2);
-        return S_OK;
-    },
-    OnCreateAutomationPeer: {
-        (pThis, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer>>>?) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Optional<Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> = try self.OnCreateAutomationPeer()
-            __presult!.pointee = nil;
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnDisconnectVisualChildren: {
-        (pThis) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnDisconnectVisualChildren()
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    FindSubElementsForTouchTargeting: {
-        (pThis, _ point : _q_CWindows_CFoundation_CPoint, _ boundingRect : _q_CWindows_CFoundation_CRect, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint>>>?) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Optional<ClosedGenerics.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> = try self.FindSubElementsForTouchTargeting(point: point, boundingRect: boundingRect)
-            __presult!.pointee = RawPointer(_ret);
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    GetChildrenInTabFocusOrder: {
-        (pThis, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject>>>?) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Optional<ClosedGenerics.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> = try self.GetChildrenInTabFocusOrder()
-            __presult!.pointee = RawPointer(_ret);
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnKeyboardAcceleratorInvoked: {
-        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIKeyboardAcceleratorInvokedEventArgs>>) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnKeyboardAcceleratorInvoked(args: Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs(plok: Microsoft.UI.Xaml.Input.IKeyboardAcceleratorInvokedEventArgs(args)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnProcessKeyboardAccelerators: {
-        (pThis, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CInput_CIProcessKeyboardAcceleratorEventArgs>>) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnProcessKeyboardAccelerators(args: Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs(plok: Microsoft.UI.Xaml.Input.IProcessKeyboardAcceleratorEventArgs(args)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    OnBringIntoViewRequested: {
-        (pThis, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBringIntoViewRequestedEventArgs>>) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.OnBringIntoViewRequested(e: Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs(plok: Microsoft.UI.Xaml.IBringIntoViewRequestedEventArgs(e)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    },
-    PopulatePropertyInfoOverride: {
-        (pThis, _ propertyName : Optional<HSTRING>, _ animationPropertyInfo : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CComposition_CIAnimationPropertyInfo>>) in
-        guard let self = UIElement.from_IUIElementOverrides(pThis) else {
-            return E_INVALIDARG
-        }
-        do {
-            let _ret : Void = try self.PopulatePropertyInfoOverride(propertyName: Swift.String(from: propertyName), animationPropertyInfo: Microsoft.UI.Composition.AnimationPropertyInfo(plok: Microsoft.UI.Composition.IAnimationPropertyInfo(animationPropertyInfo)))
-            return S_OK
-        }
-        catch let _e as WinRT.Error {
-            return _e.hr;
-        } catch {
-            return E_FAIL
-        }
-    }
-    )
     // COMPOSABLE: Microsoft.UI.Xaml.IUIElementFactory
 // composable interface not needed: Microsoft.UI.Xaml.IUIElementFactory
     private struct _IUIElementStatics {
@@ -11931,33 +11572,14 @@ open class UIElement
         return try Microsoft.UI.Input.InputCursor(plok: _ifc.ProtectedCursor);
         }
     }
-    open func OnCreateAutomationPeer() throws -> Optional<Microsoft.UI.Xaml.Automation.Peers.AutomationPeer> {
-    print("\(#file) \(#line) \(#function)")
-    return nil;
-    }
-    open func OnDisconnectVisualChildren() throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func FindSubElementsForTouchTargeting(point : Windows.Foundation.Point, boundingRect : Windows.Foundation.Rect) throws -> Optional<ClosedGenerics.IIterable_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint> {
-    print("\(#file) \(#line) \(#function)")
-    return nil;
-    }
-    open func GetChildrenInTabFocusOrder() throws -> Optional<ClosedGenerics.IIterable_1__q_CMicrosoft_CUI_CXaml_CDependencyObject> {
-    print("\(#file) \(#line) \(#function)")
-    return nil;
-    }
-    open func OnKeyboardAcceleratorInvoked(args : Optional<Microsoft.UI.Xaml.Input.KeyboardAcceleratorInvokedEventArgs>) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func OnProcessKeyboardAccelerators(args : Optional<Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func OnBringIntoViewRequested(e : Optional<Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
-    open func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
-    print("\(#file) \(#line) \(#function)")
-    }
+    // overridable method skipped: OnCreateAutomationPeer
+    // overridable method skipped: OnDisconnectVisualChildren
+    // overridable method skipped: FindSubElementsForTouchTargeting
+    // overridable method skipped: GetChildrenInTabFocusOrder
+    // overridable method skipped: OnKeyboardAcceleratorInvoked
+    // overridable method skipped: OnProcessKeyboardAccelerators
+    // overridable method skipped: OnBringIntoViewRequested
+    // overridable method skipped: PopulatePropertyInfoOverride
     public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<Microsoft.UI.Composition.AnimationPropertyInfo>) throws -> Void {
         let _ifc : Microsoft.UI.Composition.IAnimationObject = try _self.QueryInterface();
         return try _ifc.PopulatePropertyInfo(propertyName: propertyName, propertyInfo: propertyInfo!.Interface());

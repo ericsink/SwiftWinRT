@@ -4,7 +4,7 @@ import WindowsSdk
 import WindowsApp
 import Win2D
 
-class MyApp : Microsoft.UI.Xaml.Application {
+class MyApp : Microsoft.UI.Xaml.impl_Application {
     override func OnLaunched(args : Optional<Microsoft.UI.Xaml.LaunchActivatedEventArgs>) throws -> Void 
     {
         let w = try Microsoft.UI.Xaml.Window();
