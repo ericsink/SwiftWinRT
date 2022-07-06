@@ -223,7 +223,7 @@ open class impl_Application
             return E_INVALIDARG
         }
         do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.IApplicationOverrides").Raw()
+            pstr.pointee = try HString("Microsoft.UI.Xaml.impl_Application").Raw()
             return S_OK;
         }
         catch let _e as WinRT.Error {
@@ -319,7 +319,7 @@ open class impl_Application
             return E_INVALIDARG
         }
         do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.IXamlMetadataProvider").Raw()
+            pstr.pointee = try HString("Microsoft.UI.Xaml.impl_Application").Raw()
             return S_OK;
         }
         catch let _e as WinRT.Error {

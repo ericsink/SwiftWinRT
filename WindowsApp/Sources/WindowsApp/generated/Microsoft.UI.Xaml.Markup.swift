@@ -189,7 +189,7 @@ open class XamlMember
             return E_INVALIDARG
         }
         do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.IXamlMember").Raw()
+            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.XamlMember").Raw()
             return S_OK;
         }
         catch let _e as WinRT.Error {
@@ -760,7 +760,7 @@ open class XamlType
             return E_INVALIDARG
         }
         do {
-            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.IXamlType").Raw()
+            pstr.pointee = try HString("Microsoft.UI.Xaml.Markup.XamlType").Raw()
             return S_OK;
         }
         catch let _e as WinRT.Error {

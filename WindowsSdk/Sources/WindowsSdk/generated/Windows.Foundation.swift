@@ -406,7 +406,7 @@ open class AsyncAction
             return E_INVALIDARG
         }
         do {
-            pstr.pointee = try HString("Windows.Foundation.IAsyncInfo").Raw()
+            pstr.pointee = try HString("Windows.Foundation.AsyncAction").Raw()
             return S_OK;
         }
         catch let _e as WinRT.Error {
@@ -562,7 +562,7 @@ open class AsyncAction
             return E_INVALIDARG
         }
         do {
-            pstr.pointee = try HString("Windows.Foundation.IAsyncAction").Raw()
+            pstr.pointee = try HString("Windows.Foundation.AsyncAction").Raw()
             return S_OK;
         }
         catch let _e as WinRT.Error {
