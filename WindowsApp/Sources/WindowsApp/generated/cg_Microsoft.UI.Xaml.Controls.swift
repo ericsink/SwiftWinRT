@@ -1450,6 +1450,540 @@ open class wrap_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__
         return _self
     }
 }
+// closed interface type
+public class IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x80dae4e3, Data2: 0x4fce, Data3 : 0x5788, Data4 : (0x92, 0x3b, 0xc1, 0xb7, 0x5b, 0x82, 0xa6, 0x11)) }
+// method not needed: add_VectorChanged
+// method not needed: remove_VectorChanged
+} // IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+// closed generic delegate type
+public class IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x936af50f, Data2: 0xc851, Data3 : 0x51cd, Data4 : (0xb0, 0x7c, 0xa2, 0xac, 0x10, 0xf0, 0x84, 0xa3)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.Collections.IObservableVector<Microsoft.UI.Xaml.Controls.GroupStyle>, Windows.Foundation.Collections.IVectorChangedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>>, _ event : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, event))
+        }
+    }
+    public func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(event));
+    }
+} // IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+// impl delegate type
+open class impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+{
+    private static var vtable: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyleVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>>, _ event : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs>>) in
+        guard let self = impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle.from_impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle(sender), event: Windows.Foundation.Collections.IVectorChangedEventArgs(event))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>, Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>, Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle(_ pUnk: UnsafeMutableRawPointer?) -> impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle? {
+        return pUnk?.bindMemory(to: impl_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, event)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_VectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle
+{
+    private var _self : ClosedGenerics.IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle;
+    public init(plok: ClosedGenerics.IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender, event: event);
+    }
+    public func Interface() -> ClosedGenerics.IVectorChangedEventHandler_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle {
+        return _self
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x444371a2, Data2: 0x4e78, Data3 : 0x5d30, Data4 : (0xbb, 0x5c, 0xb3, 0x58, 0xc2, 0x8a, 0xbd, 0x72)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.ListViewBase, Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsCompletedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.IListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.IDragItemsCompletedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs
+// impl delegate type
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsCompletedEventArgs>>) in
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: Microsoft.UI.Xaml.Controls.ListViewBase(plok: Microsoft.UI.Xaml.Controls.IListViewBase(sender)), args: Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs(plok: Microsoft.UI.Xaml.Controls.IDragItemsCompletedEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs {
+        return _self
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa6f1a151, Data2: 0x7a50, Data3 : 0x5f54, Data4 : (0x98, 0x8d, 0x97, 0xca, 0xd5, 0x57, 0xde, 0x3b)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.ListViewBase, Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContainerContentChangingEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.IListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs
+// impl delegate type
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContainerContentChangingEventArgs>>) in
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: Microsoft.UI.Xaml.Controls.ListViewBase(plok: Microsoft.UI.Xaml.Controls.IListViewBase(sender)), args: Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs(plok: Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs {
+        return _self
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x02d018bf, Data2: 0xab83, Data3 : 0x51d0, Data4 : (0x94, 0xd9, 0x61, 0x16, 0x6d, 0x8c, 0xc9, 0x29)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.ListViewBase, Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIChoosingItemContainerEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.IListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.IChoosingItemContainerEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs
+// impl delegate type
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIChoosingItemContainerEventArgs>>) in
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: Microsoft.UI.Xaml.Controls.ListViewBase(plok: Microsoft.UI.Xaml.Controls.IListViewBase(sender)), args: Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs(plok: Microsoft.UI.Xaml.Controls.IChoosingItemContainerEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs {
+        return _self
+    }
+}
+// closed generic delegate type
+public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xae81621c, Data2: 0xc974, Data3 : 0x53dd, Data4 : (0x9e, 0x7e, 0x60, 0x2c, 0x6b, 0xa0, 0x74, 0x26)) }
+    // [IsSpecialName] void Invoke(Microsoft.UI.Xaml.Controls.ListViewBase, Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIChoosingGroupHeaderContainerEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, args))
+        }
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.IListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(args));
+    }
+} // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs
+// impl delegate type
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs
+{
+    private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgsVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIChoosingGroupHeaderContainerEventArgs>>) in
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: Microsoft.UI.Xaml.Controls.ListViewBase(plok: Microsoft.UI.Xaml.Controls.IListViewBase(sender)), args: Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs(plok: Microsoft.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs(args)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, args)
+        }
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs
+{
+    private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs;
+    public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, args : Optional<Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.Interface(), args: args!.Interface());
+    }
+    public func Interface() -> ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs {
+        return _self
+    }
+}
 // closed generic delegate type
 public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
     :

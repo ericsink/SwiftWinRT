@@ -11,6 +11,7 @@ let SwiftWinRT = Package(
     .executable(name: "Power", targets: ["Power"]),
     .executable(name: "HttpClient", targets: ["HttpClient"]),
     .library(name: "XamlApp", type: .dynamic, targets: ["XamlApp"]),
+    .library(name: "Calc", type: .dynamic, targets: ["Calc"]),
     .executable(name: "Canvas", targets: ["Canvas"]),
     .executable(name: "MazeGame", targets: ["MazeGame"]),
   ],
@@ -27,6 +28,17 @@ let SwiftWinRT = Package(
             ]
         ),
     .target(name: "Power", dependencies: ["WindowsApp", "WinRT"],
+            swiftSettings: [
+              .unsafeFlags(["-parse-as-library"]),
+            ],
+            linkerSettings: [
+              // need /MANIFEST:embed for bootstrap Windows App SDK to work
+              .unsafeFlags(["-Xlinker"]),
+              .unsafeFlags(["/MANIFEST:embed"]),
+            ]
+            ),
+    .target(name: "Calc", 
+            dependencies: ["WindowsApp", "WindowsSdk", "WinRT"],
             swiftSettings: [
               .unsafeFlags(["-parse-as-library"]),
             ],

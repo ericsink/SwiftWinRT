@@ -9,6 +9,50 @@ import WindowsSdk;
 import CWindowsSdk;
 
 extension Microsoft.UI.Xaml.Media.Animation {
+// type: Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation
+// runtime class
+public class ConnectedAnimation
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation;
+    public init(plok: Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation { return _self; }
+    // method not needed: get_IsScaleAnimationEnabled
+    // method not needed: put_IsScaleAnimationEnabled
+    // method not needed: get_Configuration
+    // method not needed: put_Configuration
+    // method not needed: add_Completed
+    // method not needed: remove_Completed
+    // method not needed: TryStart
+    // method not needed: TryStart
+    // method not needed: Cancel
+    // method not needed: SetAnimationComponent
+}
+
+// type: Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation
+// interface type
+open class IConnectedAnimation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa9c1c6ad, Data2: 0x7670, Data3 : 0x589c, Data4 : (0xa6, 0x08, 0x9b, 0x5c, 0x01, 0xce, 0xc7, 0x1f)) }
+// method not needed: get_IsScaleAnimationEnabled
+// method not needed: put_IsScaleAnimationEnabled
+// method not needed: get_Configuration
+// method not needed: put_Configuration
+// method not needed: add_Completed
+// method not needed: remove_Completed
+// method not needed: TryStart
+// method not needed: TryStartWithCoordinatedElements
+// method not needed: Cancel
+// method not needed: SetAnimationComponent
+} // IConnectedAnimation
+
+
 // type: Microsoft.UI.Xaml.Media.Animation.ITransition
 // interface type
 open class ITransition

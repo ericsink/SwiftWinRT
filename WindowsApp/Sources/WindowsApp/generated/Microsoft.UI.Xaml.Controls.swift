@@ -87,6 +87,52 @@ public class CandidateWindowBoundsChangedEventArgs
 // enum type
 public typealias CharacterCasing = _q_CMicrosoft_CUI_CXaml_CControls_CCharacterCasing;
 
+// type: Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs
+// runtime class
+public class ChoosingGroupHeaderContainerEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_GroupHeaderContainer
+    // method not needed: put_GroupHeaderContainer
+    // method not needed: get_GroupIndex
+    // method not needed: get_Group
+}
+
+// type: Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs
+// runtime class
+public class ChoosingItemContainerEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IChoosingItemContainerEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.IChoosingItemContainerEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IChoosingItemContainerEventArgs { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_ItemIndex
+    // method not needed: get_Item
+    // method not needed: get_ItemContainer
+    // method not needed: put_ItemContainer
+    // method not needed: get_IsContainerPrepared
+    // method not needed: put_IsContainerPrepared
+}
+
 // type: Microsoft.UI.Xaml.Controls.ClickMode
 // enum type
 public typealias ClickMode = _q_CMicrosoft_CUI_CXaml_CControls_CClickMode;
@@ -185,6 +231,33 @@ public class ColumnDefinitionCollection
         }
     }
     // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.Controls.ColumnDefinition, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+}
+
+// type: Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs
+// runtime class
+public class ContainerContentChangingEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_ItemContainer
+    // method not needed: get_InRecycleQueue
+    // method not needed: get_ItemIndex
+    // method not needed: get_Item
+    // method not needed: get_Phase
+    // method not needed: get_Handled
+    // method not needed: put_Handled
+    // method not needed: RegisterUpdateCallback
+    // method not needed: RegisterUpdateCallback
 }
 
 // type: Microsoft.UI.Xaml.Controls.ContentControl
@@ -1159,6 +1232,151 @@ open class DataTemplateSelector
     // instance interface not needed: Microsoft.UI.Xaml.IElementFactory
 }
 
+// type: Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs
+// runtime class
+public class DragItemsCompletedEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IDragItemsCompletedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.IDragItemsCompletedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IDragItemsCompletedEventArgs { return _self; }
+    // method not needed: get_Items
+    // method not needed: get_DropResult
+}
+
+// type: Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs
+// runtime class
+public class DragItemsStartingEventArgs
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IDragItemsStartingEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.IDragItemsStartingEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IDragItemsStartingEventArgs { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Cancel
+    // method not needed: put_Cancel
+    // method not needed: get_Items
+    // method not needed: get_Data
+}
+
+// type: Microsoft.UI.Xaml.Controls.DragItemsStartingEventHandler
+// delegate type
+open class IDragItemsStartingEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x55532800, Data2: 0x7617, Data3 : 0x5d67, Data4 : (0x80, 0xbf, 0xb9, 0x8c, 0x0a, 0x41, 0xb9, 0xd6)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<Microsoft.UI.Xaml.Controls.IDragItemsStartingEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class impl_DragItemsStartingEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DragItemsStartingEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DragItemsStartingEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventArgs>>) in
+        guard let self = impl_DragItemsStartingEventHandler.from_impl_DragItemsStartingEventHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs(plok: Microsoft.UI.Xaml.Controls.IDragItemsStartingEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_DragItemsStartingEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_DragItemsStartingEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DragItemsStartingEventHandler? {
+        return pUnk?.bindMemory(to: impl_DragItemsStartingEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, e)
+        }
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_DragItemsStartingEventHandler
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler;
+    public init(plok: Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler {
+        return _self
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs
 // runtime class
 public class FocusDisengagedEventArgs
@@ -1448,6 +1666,30 @@ open class Grid
     }
 }
 
+// type: Microsoft.UI.Xaml.Controls.GroupStyleSelector
+// runtime class
+open class GroupStyleSelector
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IGroupStyleSelector;
+    public init(plok: Microsoft.UI.Xaml.Controls.IGroupStyleSelector?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IGroupStyleSelector { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IGroupStyleSelectorFactory
+    public init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IGroupStyleSelectorFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.GroupStyleSelector");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: SelectGroupStyle
+    // instance interface not needed: Microsoft.UI.Xaml.Controls.IGroupStyleSelectorOverrides
+}
+
 // type: Microsoft.UI.Xaml.Controls.IButton
 // interface type
 open class IButton
@@ -1544,6 +1786,36 @@ open class ICandidateWindowBoundsChangedEventArgs
 } // ICandidateWindowBoundsChangedEventArgs
 
 
+// type: Microsoft.UI.Xaml.Controls.IChoosingGroupHeaderContainerEventArgs
+// interface type
+open class IChoosingGroupHeaderContainerEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2db1b0b0, Data2: 0xaee9, Data3 : 0x55fa, Data4 : (0x8c, 0x30, 0xc9, 0x8f, 0x00, 0x64, 0x3d, 0x00)) }
+// method not needed: get_GroupHeaderContainer
+// method not needed: put_GroupHeaderContainer
+// method not needed: get_GroupIndex
+// method not needed: get_Group
+} // IChoosingGroupHeaderContainerEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IChoosingItemContainerEventArgs
+// interface type
+open class IChoosingItemContainerEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb479b9d2, Data2: 0xa63f, Data3 : 0x5638, Data4 : (0x94, 0x86, 0x8c, 0xcc, 0x1f, 0x40, 0x25, 0x1e)) }
+// method not needed: get_ItemIndex
+// method not needed: get_Item
+// method not needed: get_ItemContainer
+// method not needed: put_ItemContainer
+// method not needed: get_IsContainerPrepared
+// method not needed: put_IsContainerPrepared
+} // IChoosingItemContainerEventArgs
+
+
 // type: Microsoft.UI.Xaml.Controls.IColumnDefinition
 // interface type
 open class IColumnDefinition
@@ -1559,6 +1831,25 @@ open class IColumnDefinition
 // method not needed: put_MinWidth
 // method not needed: get_ActualWidth
 } // IColumnDefinition
+
+
+// type: Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs
+// interface type
+open class IContainerContentChangingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf4c8c937, Data2: 0xb070, Data3 : 0x53ce, Data4 : (0xa7, 0x6c, 0x07, 0x4e, 0xe5, 0x75, 0x0a, 0x71)) }
+// method not needed: get_ItemContainer
+// method not needed: get_InRecycleQueue
+// method not needed: get_ItemIndex
+// method not needed: get_Item
+// method not needed: get_Phase
+// method not needed: get_Handled
+// method not needed: put_Handled
+// method not needed: RegisterUpdateCallback
+// method not needed: RegisterUpdateCallbackWithPhase
+} // IContainerContentChangingEventArgs
 
 
 // type: Microsoft.UI.Xaml.Controls.IContentControl
@@ -3391,6 +3682,32 @@ open class IDataTemplateSelectorFactory
 } // IDataTemplateSelectorFactory
 
 
+// type: Microsoft.UI.Xaml.Controls.IDragItemsCompletedEventArgs
+// interface type
+open class IDragItemsCompletedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc0138552, Data2: 0xf467, Data3 : 0x5c3e, Data4 : (0x8a, 0xf4, 0x59, 0x36, 0x07, 0x76, 0x28, 0x44)) }
+// method not needed: get_Items
+// method not needed: get_DropResult
+} // IDragItemsCompletedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IDragItemsStartingEventArgs
+// interface type
+open class IDragItemsStartingEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa6938886, Data2: 0x20df, Data3 : 0x558e, Data4 : (0xac, 0x74, 0xbb, 0x5b, 0x7f, 0x2f, 0x7e, 0x90)) }
+// method not needed: get_Cancel
+// method not needed: put_Cancel
+// method not needed: get_Items
+// method not needed: get_Data
+} // IDragItemsStartingEventArgs
+
+
 // type: Microsoft.UI.Xaml.Controls.IFocusDisengagedEventArgs
 // interface type
 open class IFocusDisengagedEventArgs
@@ -3920,6 +4237,41 @@ open class IGridStatics
 } // IGridStatics
 
 
+// type: Microsoft.UI.Xaml.Controls.IGroupStyleSelector
+// interface type
+open class IGroupStyleSelector
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x524f5086, Data2: 0x3e02, Data3 : 0x5b71, Data4 : (0xbe, 0x7c, 0x8a, 0x8f, 0xa0, 0xfe, 0xaa, 0x2c)) }
+// method not needed: SelectGroupStyle
+} // IGroupStyleSelector
+
+
+// type: Microsoft.UI.Xaml.Controls.IGroupStyleSelectorFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IGroupStyleSelectorFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0e0699be, Data2: 0x50c2, Data3 : 0x5c15, Data4 : (0xae, 0xd3, 0xe7, 0xbd, 0x66, 0x3e, 0x5f, 0xad)) }
+    // Microsoft.UI.Xaml.Controls.GroupStyleSelector CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelectorFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.IGroupStyleSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.IGroupStyleSelector(consuming: __result);
+    }
+} // IGroupStyleSelectorFactory
+
+
 // type: Microsoft.UI.Xaml.Controls.IInsertionPanel
 // interface type
 open class IInsertionPanel
@@ -3951,6 +4303,1897 @@ open class IIsTextTrimmedChangedEventArgs
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x3c709b2f, Data2: 0x16ba, Data3 : 0x55d2, Data4 : (0xb6, 0xf6, 0xdf, 0xc5, 0x4a, 0x1e, 0xd0, 0x21)) }
 } // IIsTextTrimmedChangedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemClickEventArgs
+// interface type
+open class IItemClickEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1cf87a70, Data2: 0x6348, Data3 : 0x57ec, Data4 : (0x9e, 0xac, 0xfa, 0x05, 0x65, 0xad, 0xc6, 0x0f)) }
+// method not needed: get_ClickedItem
+} // IItemClickEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemContainerGenerator
+// interface type
+open class IItemContainerGenerator
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xc4c5d5ae, Data2: 0xed98, Data3 : 0x510f, Data4 : (0xaf, 0xae, 0x8a, 0x0a, 0xc6, 0x06, 0x7a, 0x3b)) }
+// method not needed: add_ItemsChanged
+// method not needed: remove_ItemsChanged
+// method not needed: ItemFromContainer
+// method not needed: ContainerFromItem
+// method not needed: IndexFromContainer
+// method not needed: ContainerFromIndex
+// method not needed: GetItemContainerGeneratorForPanel
+// method not needed: StartAt
+// method not needed: Stop
+// method not needed: GenerateNext
+// method not needed: PrepareItemContainer
+// method not needed: RemoveAll
+// method not needed: Remove
+// method not needed: GeneratorPositionFromIndex
+// method not needed: IndexFromGeneratorPosition
+// method not needed: Recycle
+} // IItemContainerGenerator
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemContainerMapping
+// interface type
+open class IItemContainerMapping
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb3e03a32, Data2: 0xea83, Data3 : 0x5626, Data4 : (0xbf, 0xda, 0xd3, 0x27, 0xa1, 0xc7, 0x55, 0x0c)) }
+    // System.Object ItemFromContainer(Microsoft.UI.Xaml.DependencyObject)
+    private func _n_ItemFromContainer(_ container : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemContainerMapping.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ItemFromContainer(pThis, container, __presult))
+        }
+    }
+    public func ItemFromContainer(container : Optional<Microsoft.UI.Xaml.IDependencyObject>) throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_ItemFromContainer(RawPointer(container), &__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // Microsoft.UI.Xaml.DependencyObject ContainerFromItem(System.Object)
+    private func _n_ContainerFromItem(_ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemContainerMapping.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ContainerFromItem(pThis, item, __presult))
+        }
+    }
+    public func ContainerFromItem(item : Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.IDependencyObject> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>> = nil;
+        try self._n_ContainerFromItem(RawPointer(item), &__result);
+        return Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
+    }
+    // System.Int32 IndexFromContainer(Microsoft.UI.Xaml.DependencyObject)
+    private func _n_IndexFromContainer(_ container : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ __presult: UnsafeMutablePointer<INT32>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemContainerMapping.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexFromContainer(pThis, container, __presult))
+        }
+    }
+    public func IndexFromContainer(container : Optional<Microsoft.UI.Xaml.IDependencyObject>) throws -> Swift.Int32 {
+        var __result : INT32 = 0;
+        try self._n_IndexFromContainer(RawPointer(container), &__result);
+        return __result;
+    }
+    // Microsoft.UI.Xaml.DependencyObject ContainerFromIndex(System.Int32)
+    private func _n_ContainerFromIndex(_ index : INT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemContainerMapping.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ContainerFromIndex(pThis, index, __presult))
+        }
+    }
+    public func ContainerFromIndex(index : Swift.Int32) throws -> Optional<Microsoft.UI.Xaml.IDependencyObject> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>> = nil;
+        try self._n_ContainerFromIndex(index, &__result);
+        return Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
+    }
+} // IItemContainerMapping
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemsControl
+// interface type
+open class IItemsControl
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xbf1ccb54, Data2: 0x83e2, Data3 : 0x5b98, Data4 : (0xac, 0xbc, 0x73, 0x6f, 0x87, 0x6c, 0x3d, 0x35)) }
+    // [IsSpecialName] System.Object get_ItemsSource()
+    private func _n_get_ItemsSource(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemsSource(pThis, __presult))
+        }
+    }
+    public func get_ItemsSource() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_ItemsSource(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemsSource(System.Object)
+    private func _n_put_ItemsSource(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemsSource(pThis, value))
+        }
+    }
+    public func put_ItemsSource(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_ItemsSource(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ItemCollection get_Items()
+    private func _n_get_Items(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Items(pThis, __presult))
+        }
+    }
+    public func get_Items() throws -> Optional<ClosedGenerics.IObservableVector_1_IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable>> = nil;
+        try self._n_get_Items(&__result);
+        return ClosedGenerics.IObservableVector_1_IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DataTemplate get_ItemTemplate()
+    private func _n_get_ItemTemplate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemTemplate(pThis, __presult))
+        }
+    }
+    public func get_ItemTemplate() throws -> Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+        try self._n_get_ItemTemplate(&__result);
+        return Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemTemplate(Microsoft.UI.Xaml.DataTemplate)
+    private func _n_put_ItemTemplate(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemTemplate(pThis, value))
+        }
+    }
+    public func put_ItemTemplate(value : Optional<Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_put_ItemTemplate(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.DataTemplateSelector get_ItemTemplateSelector()
+    private func _n_get_ItemTemplateSelector(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemTemplateSelector(pThis, __presult))
+        }
+    }
+    public func get_ItemTemplateSelector() throws -> Optional<Microsoft.UI.Xaml.Controls.IDataTemplateSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>> = nil;
+        try self._n_get_ItemTemplateSelector(&__result);
+        return Microsoft.UI.Xaml.Controls.IDataTemplateSelector(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemTemplateSelector(Microsoft.UI.Xaml.Controls.DataTemplateSelector)
+    private func _n_put_ItemTemplateSelector(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemTemplateSelector(pThis, value))
+        }
+    }
+    public func put_ItemTemplateSelector(value : Optional<Microsoft.UI.Xaml.Controls.IDataTemplateSelector>) throws -> Void {
+        try self._n_put_ItemTemplateSelector(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ItemsPanelTemplate get_ItemsPanel()
+    private func _n_get_ItemsPanel(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsPanelTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemsPanel(pThis, __presult))
+        }
+    }
+    public func get_ItemsPanel() throws -> Optional<Microsoft.UI.Xaml.Controls.IItemsPanelTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsPanelTemplate>> = nil;
+        try self._n_get_ItemsPanel(&__result);
+        return Microsoft.UI.Xaml.Controls.IItemsPanelTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemsPanel(Microsoft.UI.Xaml.Controls.ItemsPanelTemplate)
+    private func _n_put_ItemsPanel(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsPanelTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemsPanel(pThis, value))
+        }
+    }
+    public func put_ItemsPanel(value : Optional<Microsoft.UI.Xaml.Controls.IItemsPanelTemplate>) throws -> Void {
+        try self._n_put_ItemsPanel(RawPointer(value));
+    }
+    // [IsSpecialName] System.String get_DisplayMemberPath()
+    private func _n_get_DisplayMemberPath(_ __presult: UnsafeMutablePointer<Optional<HSTRING>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayMemberPath(pThis, __presult))
+        }
+    }
+    public func get_DisplayMemberPath() throws -> Swift.String {
+        var __result : Optional<HSTRING> = nil;
+        try self._n_get_DisplayMemberPath(&__result);
+        return Swift.String(from: __result);
+    }
+    // [IsSpecialName] void put_DisplayMemberPath(System.String)
+    private func _n_put_DisplayMemberPath(_ value : Optional<HSTRING>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayMemberPath(pThis, value))
+        }
+    }
+    public func put_DisplayMemberPath(value : Swift.String) throws -> Void {
+        let __hstr_value = try HString(value);
+        return try withExtendedLifetime(__hstr_value) {
+        try self._n_put_DisplayMemberPath(__hstr_value.Raw());
+        }
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.Panel get_ItemsPanelRoot()
+    private func _n_get_ItemsPanelRoot(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIPanel>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemsPanelRoot(pThis, __presult))
+        }
+    }
+    public func get_ItemsPanelRoot() throws -> Optional<Microsoft.UI.Xaml.Controls.IPanel> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIPanel>> = nil;
+        try self._n_get_ItemsPanelRoot(&__result);
+        return Microsoft.UI.Xaml.Controls.IPanel(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Style get_ItemContainerStyle()
+    private func _n_get_ItemContainerStyle(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerStyle(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerStyle() throws -> Optional<Microsoft.UI.Xaml.IStyle> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>> = nil;
+        try self._n_get_ItemContainerStyle(&__result);
+        return Microsoft.UI.Xaml.IStyle(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemContainerStyle(Microsoft.UI.Xaml.Style)
+    private func _n_put_ItemContainerStyle(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemContainerStyle(pThis, value))
+        }
+    }
+    public func put_ItemContainerStyle(value : Optional<Microsoft.UI.Xaml.IStyle>) throws -> Void {
+        try self._n_put_ItemContainerStyle(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.StyleSelector get_ItemContainerStyleSelector()
+    private func _n_get_ItemContainerStyleSelector(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerStyleSelector(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerStyleSelector() throws -> Optional<Microsoft.UI.Xaml.Controls.IStyleSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>> = nil;
+        try self._n_get_ItemContainerStyleSelector(&__result);
+        return Microsoft.UI.Xaml.Controls.IStyleSelector(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemContainerStyleSelector(Microsoft.UI.Xaml.Controls.StyleSelector)
+    private func _n_put_ItemContainerStyleSelector(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemContainerStyleSelector(pThis, value))
+        }
+    }
+    public func put_ItemContainerStyleSelector(value : Optional<Microsoft.UI.Xaml.Controls.IStyleSelector>) throws -> Void {
+        try self._n_put_ItemContainerStyleSelector(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ItemContainerGenerator get_ItemContainerGenerator()
+    private func _n_get_ItemContainerGenerator(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemContainerGenerator>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerGenerator(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerGenerator() throws -> Optional<Microsoft.UI.Xaml.Controls.IItemContainerGenerator> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemContainerGenerator>> = nil;
+        try self._n_get_ItemContainerGenerator(&__result);
+        return Microsoft.UI.Xaml.Controls.IItemContainerGenerator(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_ItemContainerTransitions()
+    private func _n_get_ItemContainerTransitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerTransitions(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerTransitions() throws -> Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
+        try self._n_get_ItemContainerTransitions(&__result);
+        return ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+    }
+    // [IsSpecialName] void put_ItemContainerTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
+    private func _n_put_ItemContainerTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ItemContainerTransitions(pThis, value))
+        }
+    }
+    public func put_ItemContainerTransitions(value : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+        try self._n_put_ItemContainerTransitions(RawPointer(value));
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IObservableVector<Microsoft.UI.Xaml.Controls.GroupStyle> get_GroupStyle()
+    private func _n_get_GroupStyle(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_GroupStyle(pThis, __presult))
+        }
+    }
+    public func get_GroupStyle() throws -> Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle>> = nil;
+        try self._n_get_GroupStyle(&__result);
+        return ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.GroupStyleSelector get_GroupStyleSelector()
+    private func _n_get_GroupStyleSelector(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_GroupStyleSelector(pThis, __presult))
+        }
+    }
+    public func get_GroupStyleSelector() throws -> Optional<Microsoft.UI.Xaml.Controls.IGroupStyleSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>> = nil;
+        try self._n_get_GroupStyleSelector(&__result);
+        return Microsoft.UI.Xaml.Controls.IGroupStyleSelector(consuming: __result);
+    }
+    // [IsSpecialName] void put_GroupStyleSelector(Microsoft.UI.Xaml.Controls.GroupStyleSelector)
+    private func _n_put_GroupStyleSelector(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_GroupStyleSelector(pThis, value))
+        }
+    }
+    public func put_GroupStyleSelector(value : Optional<Microsoft.UI.Xaml.Controls.IGroupStyleSelector>) throws -> Void {
+        try self._n_put_GroupStyleSelector(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_IsGrouping()
+    private func _n_get_IsGrouping(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsGrouping(pThis, __presult))
+        }
+    }
+    public func get_IsGrouping() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsGrouping(&__result);
+        return __result;
+    }
+    // Microsoft.UI.Xaml.DependencyObject GroupHeaderContainerFromItemContainer(Microsoft.UI.Xaml.DependencyObject)
+    private func _n_GroupHeaderContainerFromItemContainer(_ itemContainer : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GroupHeaderContainerFromItemContainer(pThis, itemContainer, __presult))
+        }
+    }
+    public func GroupHeaderContainerFromItemContainer(itemContainer : Optional<Microsoft.UI.Xaml.IDependencyObject>) throws -> Optional<Microsoft.UI.Xaml.IDependencyObject> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>> = nil;
+        try self._n_GroupHeaderContainerFromItemContainer(RawPointer(itemContainer), &__result);
+        return Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
+    }
+    public var DisplayMemberPath : Swift.String {
+        get throws {
+            return try get_DisplayMemberPath();
+        }
+    }
+    public var GroupStyle : Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle> {
+        get throws {
+            return try get_GroupStyle();
+        }
+    }
+    public var GroupStyleSelector : Optional<Microsoft.UI.Xaml.Controls.IGroupStyleSelector> {
+        get throws {
+            return try get_GroupStyleSelector();
+        }
+    }
+    public var IsGrouping : boolean {
+        get throws {
+            return try get_IsGrouping();
+        }
+    }
+    public var ItemContainerGenerator : Optional<Microsoft.UI.Xaml.Controls.IItemContainerGenerator> {
+        get throws {
+            return try get_ItemContainerGenerator();
+        }
+    }
+    public var ItemContainerStyle : Optional<Microsoft.UI.Xaml.IStyle> {
+        get throws {
+            return try get_ItemContainerStyle();
+        }
+    }
+    public var ItemContainerStyleSelector : Optional<Microsoft.UI.Xaml.Controls.IStyleSelector> {
+        get throws {
+            return try get_ItemContainerStyleSelector();
+        }
+    }
+    public var ItemContainerTransitions : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        get throws {
+            return try get_ItemContainerTransitions();
+        }
+    }
+    public var ItemTemplate : Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        get throws {
+            return try get_ItemTemplate();
+        }
+    }
+    public var ItemTemplateSelector : Optional<Microsoft.UI.Xaml.Controls.IDataTemplateSelector> {
+        get throws {
+            return try get_ItemTemplateSelector();
+        }
+    }
+    public var Items : Optional<ClosedGenerics.IObservableVector_1_IInspectable> {
+        get throws {
+            return try get_Items();
+        }
+    }
+    public var ItemsPanel : Optional<Microsoft.UI.Xaml.Controls.IItemsPanelTemplate> {
+        get throws {
+            return try get_ItemsPanel();
+        }
+    }
+    public var ItemsPanelRoot : Optional<Microsoft.UI.Xaml.Controls.IPanel> {
+        get throws {
+            return try get_ItemsPanelRoot();
+        }
+    }
+    public var ItemsSource : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_ItemsSource();
+        }
+    }
+} // IItemsControl
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemsControlFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IItemsControlFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb2686273, Data2: 0x2dd3, Data3 : 0x5454, Data4 : (0x9f, 0x25, 0x24, 0x7e, 0x66, 0x27, 0x03, 0x36)) }
+    // Microsoft.UI.Xaml.Controls.ItemsControl CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.IItemsControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.IItemsControl(consuming: __result);
+    }
+} // IItemsControlFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemsControlOverrides
+// interface type
+open class IItemsControlOverrides
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x285c215f, Data2: 0x64b2, Data3 : 0x5f7d, Data4 : (0x88, 0xd2, 0x56, 0xc6, 0x65, 0x8f, 0x73, 0xee)) }
+    // bool IsItemItsOwnContainerOverride(System.Object)
+    private func _n_IsItemItsOwnContainerOverride(_ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsItemItsOwnContainerOverride(pThis, item, __presult))
+        }
+    }
+    public func IsItemItsOwnContainerOverride(item : Optional<WinRT.IInspectable>) throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsItemItsOwnContainerOverride(RawPointer(item), &__result);
+        return __result;
+    }
+    // Microsoft.UI.Xaml.DependencyObject GetContainerForItemOverride()
+    private func _n_GetContainerForItemOverride(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetContainerForItemOverride(pThis, __presult))
+        }
+    }
+    public func GetContainerForItemOverride() throws -> Optional<Microsoft.UI.Xaml.IDependencyObject> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>> = nil;
+        try self._n_GetContainerForItemOverride(&__result);
+        return Microsoft.UI.Xaml.IDependencyObject(consuming: __result);
+    }
+    // void ClearContainerForItemOverride(Microsoft.UI.Xaml.DependencyObject, System.Object)
+    private func _n_ClearContainerForItemOverride(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ClearContainerForItemOverride(pThis, element, item))
+        }
+    }
+    public func ClearContainerForItemOverride(element : Optional<Microsoft.UI.Xaml.IDependencyObject>, item : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_ClearContainerForItemOverride(RawPointer(element), RawPointer(item));
+    }
+    // void PrepareContainerForItemOverride(Microsoft.UI.Xaml.DependencyObject, System.Object)
+    private func _n_PrepareContainerForItemOverride(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.PrepareContainerForItemOverride(pThis, element, item))
+        }
+    }
+    public func PrepareContainerForItemOverride(element : Optional<Microsoft.UI.Xaml.IDependencyObject>, item : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_PrepareContainerForItemOverride(RawPointer(element), RawPointer(item));
+    }
+    // void OnItemsChanged(System.Object)
+    private func _n_OnItemsChanged(_ e : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnItemsChanged(pThis, e))
+        }
+    }
+    public func OnItemsChanged(e : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_OnItemsChanged(RawPointer(e));
+    }
+    // void OnItemContainerStyleChanged(Microsoft.UI.Xaml.Style, Microsoft.UI.Xaml.Style)
+    private func _n_OnItemContainerStyleChanged(_ oldItemContainerStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>, _ newItemContainerStyle : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIStyle>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnItemContainerStyleChanged(pThis, oldItemContainerStyle, newItemContainerStyle))
+        }
+    }
+    public func OnItemContainerStyleChanged(oldItemContainerStyle : Optional<Microsoft.UI.Xaml.IStyle>, newItemContainerStyle : Optional<Microsoft.UI.Xaml.IStyle>) throws -> Void {
+        try self._n_OnItemContainerStyleChanged(RawPointer(oldItemContainerStyle), RawPointer(newItemContainerStyle));
+    }
+    // void OnItemContainerStyleSelectorChanged(Microsoft.UI.Xaml.Controls.StyleSelector, Microsoft.UI.Xaml.Controls.StyleSelector)
+    private func _n_OnItemContainerStyleSelectorChanged(_ oldItemContainerStyleSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>>, _ newItemContainerStyleSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnItemContainerStyleSelectorChanged(pThis, oldItemContainerStyleSelector, newItemContainerStyleSelector))
+        }
+    }
+    public func OnItemContainerStyleSelectorChanged(oldItemContainerStyleSelector : Optional<Microsoft.UI.Xaml.Controls.IStyleSelector>, newItemContainerStyleSelector : Optional<Microsoft.UI.Xaml.Controls.IStyleSelector>) throws -> Void {
+        try self._n_OnItemContainerStyleSelectorChanged(RawPointer(oldItemContainerStyleSelector), RawPointer(newItemContainerStyleSelector));
+    }
+    // void OnItemTemplateChanged(Microsoft.UI.Xaml.DataTemplate, Microsoft.UI.Xaml.DataTemplate)
+    private func _n_OnItemTemplateChanged(_ oldItemTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>, _ newItemTemplate : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnItemTemplateChanged(pThis, oldItemTemplate, newItemTemplate))
+        }
+    }
+    public func OnItemTemplateChanged(oldItemTemplate : Optional<Microsoft.UI.Xaml.IDataTemplate>, newItemTemplate : Optional<Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_OnItemTemplateChanged(RawPointer(oldItemTemplate), RawPointer(newItemTemplate));
+    }
+    // void OnItemTemplateSelectorChanged(Microsoft.UI.Xaml.Controls.DataTemplateSelector, Microsoft.UI.Xaml.Controls.DataTemplateSelector)
+    private func _n_OnItemTemplateSelectorChanged(_ oldItemTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>, _ newItemTemplateSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDataTemplateSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnItemTemplateSelectorChanged(pThis, oldItemTemplateSelector, newItemTemplateSelector))
+        }
+    }
+    public func OnItemTemplateSelectorChanged(oldItemTemplateSelector : Optional<Microsoft.UI.Xaml.Controls.IDataTemplateSelector>, newItemTemplateSelector : Optional<Microsoft.UI.Xaml.Controls.IDataTemplateSelector>) throws -> Void {
+        try self._n_OnItemTemplateSelectorChanged(RawPointer(oldItemTemplateSelector), RawPointer(newItemTemplateSelector));
+    }
+    // void OnGroupStyleSelectorChanged(Microsoft.UI.Xaml.Controls.GroupStyleSelector, Microsoft.UI.Xaml.Controls.GroupStyleSelector)
+    private func _n_OnGroupStyleSelectorChanged(_ oldGroupStyleSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>>, _ newGroupStyleSelector : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIGroupStyleSelector>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlOverrides.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.OnGroupStyleSelectorChanged(pThis, oldGroupStyleSelector, newGroupStyleSelector))
+        }
+    }
+    public func OnGroupStyleSelectorChanged(oldGroupStyleSelector : Optional<Microsoft.UI.Xaml.Controls.IGroupStyleSelector>, newGroupStyleSelector : Optional<Microsoft.UI.Xaml.Controls.IGroupStyleSelector>) throws -> Void {
+        try self._n_OnGroupStyleSelectorChanged(RawPointer(oldGroupStyleSelector), RawPointer(newGroupStyleSelector));
+    }
+} // IItemsControlOverrides
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemsControlStatics
+// interface type
+open class IItemsControlStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x4fb961e1, Data2: 0x5f91, Data3 : 0x5585, Data4 : (0xa6, 0x92, 0x68, 0x25, 0xcd, 0xe3, 0xed, 0x1e)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemsSourceProperty()
+    private func _n_get_ItemsSourceProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemsSourceProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemsSourceProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemsSourceProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemTemplateProperty()
+    private func _n_get_ItemTemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemTemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemTemplateProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemTemplateSelectorProperty()
+    private func _n_get_ItemTemplateSelectorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemTemplateSelectorProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemTemplateSelectorProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemTemplateSelectorProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemsPanelProperty()
+    private func _n_get_ItemsPanelProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemsPanelProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemsPanelProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemsPanelProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DisplayMemberPathProperty()
+    private func _n_get_DisplayMemberPathProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DisplayMemberPathProperty(pThis, __presult))
+        }
+    }
+    public func get_DisplayMemberPathProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_DisplayMemberPathProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemContainerStyleProperty()
+    private func _n_get_ItemContainerStyleProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerStyleProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerStyleProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemContainerStyleProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemContainerStyleSelectorProperty()
+    private func _n_get_ItemContainerStyleSelectorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerStyleSelectorProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerStyleSelectorProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemContainerStyleSelectorProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ItemContainerTransitionsProperty()
+    private func _n_get_ItemContainerTransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ItemContainerTransitionsProperty(pThis, __presult))
+        }
+    }
+    public func get_ItemContainerTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ItemContainerTransitionsProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_GroupStyleSelectorProperty()
+    private func _n_get_GroupStyleSelectorProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_GroupStyleSelectorProperty(pThis, __presult))
+        }
+    }
+    public func get_GroupStyleSelectorProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_GroupStyleSelectorProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsGroupingProperty()
+    private func _n_get_IsGroupingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsGroupingProperty(pThis, __presult))
+        }
+    }
+    public func get_IsGroupingProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsGroupingProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // Microsoft.UI.Xaml.Controls.ItemsControl GetItemsOwner(Microsoft.UI.Xaml.DependencyObject)
+    private func _n_GetItemsOwner(_ element : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetItemsOwner(pThis, element, __presult))
+        }
+    }
+    public func GetItemsOwner(element : Optional<Microsoft.UI.Xaml.IDependencyObject>) throws -> Optional<Microsoft.UI.Xaml.Controls.IItemsControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl>> = nil;
+        try self._n_GetItemsOwner(RawPointer(element), &__result);
+        return Microsoft.UI.Xaml.Controls.IItemsControl(consuming: __result);
+    }
+    // Microsoft.UI.Xaml.Controls.ItemsControl ItemsControlFromItemContainer(Microsoft.UI.Xaml.DependencyObject)
+    private func _n_ItemsControlFromItemContainer(_ container : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemsControlStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ItemsControlFromItemContainer(pThis, container, __presult))
+        }
+    }
+    public func ItemsControlFromItemContainer(container : Optional<Microsoft.UI.Xaml.IDependencyObject>) throws -> Optional<Microsoft.UI.Xaml.Controls.IItemsControl> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemsControl>> = nil;
+        try self._n_ItemsControlFromItemContainer(RawPointer(container), &__result);
+        return Microsoft.UI.Xaml.Controls.IItemsControl(consuming: __result);
+    }
+    public var DisplayMemberPathProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_DisplayMemberPathProperty();
+        }
+    }
+    public var GroupStyleSelectorProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_GroupStyleSelectorProperty();
+        }
+    }
+    public var IsGroupingProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsGroupingProperty();
+        }
+    }
+    public var ItemContainerStyleProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemContainerStyleProperty();
+        }
+    }
+    public var ItemContainerStyleSelectorProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemContainerStyleSelectorProperty();
+        }
+    }
+    public var ItemContainerTransitionsProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemContainerTransitionsProperty();
+        }
+    }
+    public var ItemTemplateProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemTemplateProperty();
+        }
+    }
+    public var ItemTemplateSelectorProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemTemplateSelectorProperty();
+        }
+    }
+    public var ItemsPanelProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemsPanelProperty();
+        }
+    }
+    public var ItemsSourceProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ItemsSourceProperty();
+        }
+    }
+} // IItemsControlStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IItemsPanelTemplate
+// interface type
+open class IItemsPanelTemplate
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x6153af2f, Data2: 0xf095, Data3 : 0x5e8c, Data4 : (0x89, 0xd4, 0x9e, 0x03, 0x20, 0x3b, 0x9c, 0xc2)) }
+} // IItemsPanelTemplate
+
+
+// type: Microsoft.UI.Xaml.Controls.IListView
+// interface type
+open class IListView
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xf6015db1, Data2: 0xdf63, Data3 : 0x52fd, Data4 : (0xa1, 0x64, 0x0d, 0xf4, 0x47, 0x15, 0xee, 0x0a)) }
+} // IListView
+
+
+// type: Microsoft.UI.Xaml.Controls.IListViewBase
+// interface type
+open class IListViewBase
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x775c57ac, Data2: 0xabce, Data3 : 0x5beb, Data4 : (0x8e, 0x34, 0x3b, 0x81, 0x58, 0xae, 0xdd, 0x80)) }
+    // [IsSpecialName] Windows.Foundation.Collections.IVector<System.Object> get_SelectedItems()
+    private func _n_get_SelectedItems(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectedItems(pThis, __presult))
+        }
+    }
+    public func get_SelectedItems() throws -> Optional<ClosedGenerics.IVector_1_IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable>> = nil;
+        try self._n_get_SelectedItems(&__result);
+        return ClosedGenerics.IVector_1_IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ListViewSelectionMode get_SelectionMode()
+    private func _n_get_SelectionMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionMode(pThis, __presult))
+        }
+    }
+    public func get_SelectionMode() throws -> Microsoft.UI.Xaml.Controls.ListViewSelectionMode {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode = _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode_None;
+        try self._n_get_SelectionMode(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SelectionMode(Microsoft.UI.Xaml.Controls.ListViewSelectionMode)
+    private func _n_put_SelectionMode(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectionMode(pThis, value))
+        }
+    }
+    public func put_SelectionMode(value : Microsoft.UI.Xaml.Controls.ListViewSelectionMode) throws -> Void {
+        try self._n_put_SelectionMode(value);
+    }
+    // [IsSpecialName] bool get_IsSwipeEnabled()
+    private func _n_get_IsSwipeEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsSwipeEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsSwipeEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsSwipeEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsSwipeEnabled(bool)
+    private func _n_put_IsSwipeEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsSwipeEnabled(pThis, value))
+        }
+    }
+    public func put_IsSwipeEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsSwipeEnabled(value);
+    }
+    // [IsSpecialName] bool get_CanDragItems()
+    private func _n_get_CanDragItems(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanDragItems(pThis, __presult))
+        }
+    }
+    public func get_CanDragItems() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanDragItems(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CanDragItems(bool)
+    private func _n_put_CanDragItems(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CanDragItems(pThis, value))
+        }
+    }
+    public func put_CanDragItems(value : boolean) throws -> Void {
+        try self._n_put_CanDragItems(value);
+    }
+    // [IsSpecialName] bool get_CanReorderItems()
+    private func _n_get_CanReorderItems(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanReorderItems(pThis, __presult))
+        }
+    }
+    public func get_CanReorderItems() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_CanReorderItems(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CanReorderItems(bool)
+    private func _n_put_CanReorderItems(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CanReorderItems(pThis, value))
+        }
+    }
+    public func put_CanReorderItems(value : boolean) throws -> Void {
+        try self._n_put_CanReorderItems(value);
+    }
+    // [IsSpecialName] bool get_IsItemClickEnabled()
+    private func _n_get_IsItemClickEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsItemClickEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsItemClickEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsItemClickEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsItemClickEnabled(bool)
+    private func _n_put_IsItemClickEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsItemClickEnabled(pThis, value))
+        }
+    }
+    public func put_IsItemClickEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsItemClickEnabled(value);
+    }
+    // [IsSpecialName] System.Double get_DataFetchSize()
+    private func _n_get_DataFetchSize(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DataFetchSize(pThis, __presult))
+        }
+    }
+    public func get_DataFetchSize() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_DataFetchSize(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_DataFetchSize(System.Double)
+    private func _n_put_DataFetchSize(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_DataFetchSize(pThis, value))
+        }
+    }
+    public func put_DataFetchSize(value : Swift.Double) throws -> Void {
+        try self._n_put_DataFetchSize(value);
+    }
+    // [IsSpecialName] System.Double get_IncrementalLoadingThreshold()
+    private func _n_get_IncrementalLoadingThreshold(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IncrementalLoadingThreshold(pThis, __presult))
+        }
+    }
+    public func get_IncrementalLoadingThreshold() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_IncrementalLoadingThreshold(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IncrementalLoadingThreshold(System.Double)
+    private func _n_put_IncrementalLoadingThreshold(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IncrementalLoadingThreshold(pThis, value))
+        }
+    }
+    public func put_IncrementalLoadingThreshold(value : Swift.Double) throws -> Void {
+        try self._n_put_IncrementalLoadingThreshold(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger get_IncrementalLoadingTrigger()
+    private func _n_get_IncrementalLoadingTrigger(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IncrementalLoadingTrigger(pThis, __presult))
+        }
+    }
+    public func get_IncrementalLoadingTrigger() throws -> Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger = _q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger_None;
+        try self._n_get_IncrementalLoadingTrigger(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IncrementalLoadingTrigger(Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger)
+    private func _n_put_IncrementalLoadingTrigger(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IncrementalLoadingTrigger(pThis, value))
+        }
+    }
+    public func put_IncrementalLoadingTrigger(value : Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger) throws -> Void {
+        try self._n_put_IncrementalLoadingTrigger(value);
+    }
+    // [IsSpecialName] bool get_ShowsScrollingPlaceholders()
+    private func _n_get_ShowsScrollingPlaceholders(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ShowsScrollingPlaceholders(pThis, __presult))
+        }
+    }
+    public func get_ShowsScrollingPlaceholders() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_ShowsScrollingPlaceholders(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ShowsScrollingPlaceholders(bool)
+    private func _n_put_ShowsScrollingPlaceholders(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ShowsScrollingPlaceholders(pThis, value))
+        }
+    }
+    public func put_ShowsScrollingPlaceholders(value : boolean) throws -> Void {
+        try self._n_put_ShowsScrollingPlaceholders(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.ListViewReorderMode get_ReorderMode()
+    private func _n_get_ReorderMode(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ReorderMode(pThis, __presult))
+        }
+    }
+    public func get_ReorderMode() throws -> Microsoft.UI.Xaml.Controls.ListViewReorderMode {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode = _q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode_Disabled;
+        try self._n_get_ReorderMode(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_ReorderMode(Microsoft.UI.Xaml.Controls.ListViewReorderMode)
+    private func _n_put_ReorderMode(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ReorderMode(pThis, value))
+        }
+    }
+    public func put_ReorderMode(value : Microsoft.UI.Xaml.Controls.ListViewReorderMode) throws -> Void {
+        try self._n_put_ReorderMode(value);
+    }
+    // [IsSpecialName] Windows.Foundation.Collections.IVectorView<Microsoft.UI.Xaml.Data.ItemIndexRange> get_SelectedRanges()
+    private func _n_get_SelectedRanges(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectedRanges(pThis, __presult))
+        }
+    }
+    public func get_SelectedRanges() throws -> Optional<ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange>> = nil;
+        try self._n_get_SelectedRanges(&__result);
+        return ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange(consuming: __result);
+    }
+    // [IsSpecialName] bool get_IsMultiSelectCheckBoxEnabled()
+    private func _n_get_IsMultiSelectCheckBoxEnabled(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsMultiSelectCheckBoxEnabled(pThis, __presult))
+        }
+    }
+    public func get_IsMultiSelectCheckBoxEnabled() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsMultiSelectCheckBoxEnabled(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsMultiSelectCheckBoxEnabled(bool)
+    private func _n_put_IsMultiSelectCheckBoxEnabled(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsMultiSelectCheckBoxEnabled(pThis, value))
+        }
+    }
+    public func put_IsMultiSelectCheckBoxEnabled(value : boolean) throws -> Void {
+        try self._n_put_IsMultiSelectCheckBoxEnabled(value);
+    }
+    // [IsSpecialName] bool get_SingleSelectionFollowsFocus()
+    private func _n_get_SingleSelectionFollowsFocus(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SingleSelectionFollowsFocus(pThis, __presult))
+        }
+    }
+    public func get_SingleSelectionFollowsFocus() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_SingleSelectionFollowsFocus(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_SingleSelectionFollowsFocus(bool)
+    private func _n_put_SingleSelectionFollowsFocus(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SingleSelectionFollowsFocus(pThis, value))
+        }
+    }
+    public func put_SingleSelectionFollowsFocus(value : boolean) throws -> Void {
+        try self._n_put_SingleSelectionFollowsFocus(value);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ItemClick(Microsoft.UI.Xaml.Controls.ItemClickEventHandler)
+    private func _n_add_ItemClick(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ItemClick(pThis, handler, __presult))
+        }
+    }
+    public func add_ItemClick(handler : Optional<Microsoft.UI.Xaml.Controls.IItemClickEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ItemClick(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ItemClick(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ItemClick(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ItemClick(pThis, token))
+        }
+    }
+    public func remove_ItemClick(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ItemClick(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DragItemsStarting(Microsoft.UI.Xaml.Controls.DragItemsStartingEventHandler)
+    private func _n_add_DragItemsStarting(_ handler : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIDragItemsStartingEventHandler>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragItemsStarting(pThis, handler, __presult))
+        }
+    }
+    public func add_DragItemsStarting(handler : Optional<Microsoft.UI.Xaml.Controls.IDragItemsStartingEventHandler>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_DragItemsStarting(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_DragItemsStarting(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_DragItemsStarting(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DragItemsStarting(pThis, token))
+        }
+    }
+    public func remove_DragItemsStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_DragItemsStarting(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_DragItemsCompleted(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs>)
+    private func _n_add_DragItemsCompleted(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_DragItemsCompleted(pThis, handler, __presult))
+        }
+    }
+    public func add_DragItemsCompleted(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_DragItemsCompleted(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_DragItemsCompleted(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_DragItemsCompleted(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_DragItemsCompleted(pThis, token))
+        }
+    }
+    public func remove_DragItemsCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_DragItemsCompleted(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ContainerContentChanging(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>)
+    private func _n_add_ContainerContentChanging(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ContainerContentChanging(pThis, handler, __presult))
+        }
+    }
+    public func add_ContainerContentChanging(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ContainerContentChanging(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ContainerContentChanging(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ContainerContentChanging(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ContainerContentChanging(pThis, token))
+        }
+    }
+    public func remove_ContainerContentChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ContainerContentChanging(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ChoosingItemContainer(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs>)
+    private func _n_add_ChoosingItemContainer(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ChoosingItemContainer(pThis, handler, __presult))
+        }
+    }
+    public func add_ChoosingItemContainer(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ChoosingItemContainer(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ChoosingItemContainer(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ChoosingItemContainer(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ChoosingItemContainer(pThis, token))
+        }
+    }
+    public func remove_ChoosingItemContainer(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ChoosingItemContainer(token);
+    }
+    // [IsSpecialName] Windows.Foundation.EventRegistrationToken add_ChoosingGroupHeaderContainer(Windows.Foundation.TypedEventHandler<Microsoft.UI.Xaml.Controls.ListViewBase,Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>)
+    private func _n_add_ChoosingGroupHeaderContainer(_ handler : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs>>, _ __presult: UnsafeMutablePointer<_q_CWindows_CFoundation_CEventRegistrationToken>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.add_ChoosingGroupHeaderContainer(pThis, handler, __presult))
+        }
+    }
+    public func add_ChoosingGroupHeaderContainer(handler : Optional<ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs>) throws -> Windows.Foundation.EventRegistrationToken {
+        var __result : _q_CWindows_CFoundation_CEventRegistrationToken = _q_CWindows_CFoundation_CEventRegistrationToken(Value: 0);
+        try self._n_add_ChoosingGroupHeaderContainer(RawPointer(handler), &__result);
+        return __result;
+    }
+    // [IsSpecialName] void remove_ChoosingGroupHeaderContainer(Windows.Foundation.EventRegistrationToken)
+    private func _n_remove_ChoosingGroupHeaderContainer(_ token : _q_CWindows_CFoundation_CEventRegistrationToken) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.remove_ChoosingGroupHeaderContainer(pThis, token))
+        }
+    }
+    public func remove_ChoosingGroupHeaderContainer(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        try self._n_remove_ChoosingGroupHeaderContainer(token);
+    }
+    // void ScrollIntoView(System.Object)
+    private func _n_ScrollIntoView(_ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ScrollIntoView(pThis, item))
+        }
+    }
+    public func ScrollIntoView(item : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_ScrollIntoView(RawPointer(item));
+    }
+    // void SelectAll()
+    private func _n_SelectAll() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SelectAll(pThis))
+        }
+    }
+    public func SelectAll() throws -> Void {
+        try self._n_SelectAll();
+    }
+    // Windows.Foundation.IAsyncOperation<Microsoft.UI.Xaml.Data.LoadMoreItemsResult> LoadMoreItemsAsync()
+    private func _n_LoadMoreItemsAsync(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.LoadMoreItemsAsync(pThis, __presult))
+        }
+    }
+    public func LoadMoreItemsAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult>> = nil;
+        try self._n_LoadMoreItemsAsync(&__result);
+        return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult(consuming: __result);
+    }
+    public func LoadMoreItems() async throws -> Microsoft.UI.Xaml.Data.LoadMoreItemsResult {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadMoreItemsAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // void ScrollIntoView(System.Object, Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment)
+    private func _n_ScrollIntoViewWithAlignment(_ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ alignment : _q_CMicrosoft_CUI_CXaml_CControls_CScrollIntoViewAlignment) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ScrollIntoViewWithAlignment(pThis, item, alignment))
+        }
+    }
+    public func ScrollIntoViewWithAlignment(item : Optional<WinRT.IInspectable>, alignment : Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment) throws -> Void {
+        try self._n_ScrollIntoViewWithAlignment(RawPointer(item), alignment);
+    }
+    // void SetDesiredContainerUpdateDuration(Windows.Foundation.TimeSpan)
+    private func _n_SetDesiredContainerUpdateDuration(_ duration : _q_CWindows_CFoundation_CTimeSpan) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetDesiredContainerUpdateDuration(pThis, duration))
+        }
+    }
+    public func SetDesiredContainerUpdateDuration(duration : Windows.Foundation.TimeSpan) throws -> Void {
+        try self._n_SetDesiredContainerUpdateDuration(duration);
+    }
+    // void SelectRange(Microsoft.UI.Xaml.Data.ItemIndexRange)
+    private func _n_SelectRange(_ itemIndexRange : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIItemIndexRange>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SelectRange(pThis, itemIndexRange))
+        }
+    }
+    public func SelectRange(itemIndexRange : Optional<Microsoft.UI.Xaml.Data.IItemIndexRange>) throws -> Void {
+        try self._n_SelectRange(RawPointer(itemIndexRange));
+    }
+    // void DeselectRange(Microsoft.UI.Xaml.Data.ItemIndexRange)
+    private func _n_DeselectRange(_ itemIndexRange : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIItemIndexRange>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.DeselectRange(pThis, itemIndexRange))
+        }
+    }
+    public func DeselectRange(itemIndexRange : Optional<Microsoft.UI.Xaml.Data.IItemIndexRange>) throws -> Void {
+        try self._n_DeselectRange(RawPointer(itemIndexRange));
+    }
+    // bool IsDragSource()
+    private func _n_IsDragSource(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IsDragSource(pThis, __presult))
+        }
+    }
+    public func IsDragSource() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_IsDragSource(&__result);
+        return __result;
+    }
+    // Windows.Foundation.IAsyncOperation<bool> TryStartConnectedAnimationAsync(Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation, System.Object, System.String)
+    private func _n_TryStartConnectedAnimationAsync(_ animation : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation>>, _ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ elementName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.TryStartConnectedAnimationAsync(pThis, animation, item, elementName, __presult))
+        }
+    }
+    public func TryStartConnectedAnimationAsync(animation : Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation>, item : Optional<WinRT.IInspectable>, elementName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let __hstr_elementName = try HString(elementName);
+        return try withExtendedLifetime(__hstr_elementName) {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
+        try self._n_TryStartConnectedAnimationAsync(RawPointer(animation), RawPointer(item), __hstr_elementName.Raw(), &__result);
+        return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
+        }
+    }
+    public func TryStartConnectedAnimation(animation : Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation>, item : Optional<WinRT.IInspectable>, elementName : Swift.String) async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.TryStartConnectedAnimationAsync(animation: animation, item: item, elementName: elementName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    // Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation PrepareConnectedAnimation(System.String, System.Object, System.String)
+    private func _n_PrepareConnectedAnimation(_ key : Optional<HSTRING>, _ item : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ elementName : Optional<HSTRING>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.PrepareConnectedAnimation(pThis, key, item, elementName, __presult))
+        }
+    }
+    public func PrepareConnectedAnimation(key : Swift.String, item : Optional<WinRT.IInspectable>, elementName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation> {
+        let __hstr_key = try HString(key);
+        return try withExtendedLifetime(__hstr_key) {
+        let __hstr_elementName = try HString(elementName);
+        return try withExtendedLifetime(__hstr_elementName) {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation>> = nil;
+        try self._n_PrepareConnectedAnimation(__hstr_key.Raw(), RawPointer(item), __hstr_elementName.Raw(), &__result);
+        return Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation(consuming: __result);
+        }
+        }
+    }
+    // [IsSpecialName] System.Object get_Header()
+    private func _n_get_Header(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Header(pThis, __presult))
+        }
+    }
+    public func get_Header() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_Header(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_Header(System.Object)
+    private func _n_put_Header(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Header(pThis, value))
+        }
+    }
+    public func put_Header(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_Header(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DataTemplate get_HeaderTemplate()
+    private func _n_get_HeaderTemplate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTemplate(pThis, __presult))
+        }
+    }
+    public func get_HeaderTemplate() throws -> Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+        try self._n_get_HeaderTemplate(&__result);
+        return Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_HeaderTemplate(Microsoft.UI.Xaml.DataTemplate)
+    private func _n_put_HeaderTemplate(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_HeaderTemplate(pThis, value))
+        }
+    }
+    public func put_HeaderTemplate(value : Optional<Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_put_HeaderTemplate(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_HeaderTransitions()
+    private func _n_get_HeaderTransitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTransitions(pThis, __presult))
+        }
+    }
+    public func get_HeaderTransitions() throws -> Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
+        try self._n_get_HeaderTransitions(&__result);
+        return ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+    }
+    // [IsSpecialName] void put_HeaderTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
+    private func _n_put_HeaderTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_HeaderTransitions(pThis, value))
+        }
+    }
+    public func put_HeaderTransitions(value : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+        try self._n_put_HeaderTransitions(RawPointer(value));
+    }
+    // [IsSpecialName] System.Object get_Footer()
+    private func _n_get_Footer(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Footer(pThis, __presult))
+        }
+    }
+    public func get_Footer() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_Footer(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] void put_Footer(System.Object)
+    private func _n_put_Footer(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Footer(pThis, value))
+        }
+    }
+    public func put_Footer(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_put_Footer(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DataTemplate get_FooterTemplate()
+    private func _n_get_FooterTemplate(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FooterTemplate(pThis, __presult))
+        }
+    }
+    public func get_FooterTemplate() throws -> Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>> = nil;
+        try self._n_get_FooterTemplate(&__result);
+        return Microsoft.UI.Xaml.IDataTemplate(consuming: __result);
+    }
+    // [IsSpecialName] void put_FooterTemplate(Microsoft.UI.Xaml.DataTemplate)
+    private func _n_put_FooterTemplate(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDataTemplate>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FooterTemplate(pThis, value))
+        }
+    }
+    public func put_FooterTemplate(value : Optional<Microsoft.UI.Xaml.IDataTemplate>) throws -> Void {
+        try self._n_put_FooterTemplate(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_FooterTransitions()
+    private func _n_get_FooterTransitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FooterTransitions(pThis, __presult))
+        }
+    }
+    public func get_FooterTransitions() throws -> Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
+        try self._n_get_FooterTransitions(&__result);
+        return ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+    }
+    // [IsSpecialName] void put_FooterTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
+    private func _n_put_FooterTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_FooterTransitions(pThis, value))
+        }
+    }
+    public func put_FooterTransitions(value : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+        try self._n_put_FooterTransitions(RawPointer(value));
+    }
+    public var CanDragItems : boolean {
+        get throws {
+            return try get_CanDragItems();
+        }
+    }
+    public var CanReorderItems : boolean {
+        get throws {
+            return try get_CanReorderItems();
+        }
+    }
+    public var DataFetchSize : Swift.Double {
+        get throws {
+            return try get_DataFetchSize();
+        }
+    }
+    public var Footer : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Footer();
+        }
+    }
+    public var FooterTemplate : Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        get throws {
+            return try get_FooterTemplate();
+        }
+    }
+    public var FooterTransitions : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        get throws {
+            return try get_FooterTransitions();
+        }
+    }
+    public var Header : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_Header();
+        }
+    }
+    public var HeaderTemplate : Optional<Microsoft.UI.Xaml.IDataTemplate> {
+        get throws {
+            return try get_HeaderTemplate();
+        }
+    }
+    public var HeaderTransitions : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        get throws {
+            return try get_HeaderTransitions();
+        }
+    }
+    public var IncrementalLoadingThreshold : Swift.Double {
+        get throws {
+            return try get_IncrementalLoadingThreshold();
+        }
+    }
+    public var IncrementalLoadingTrigger : Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger {
+        get throws {
+            return try get_IncrementalLoadingTrigger();
+        }
+    }
+    public var IsItemClickEnabled : boolean {
+        get throws {
+            return try get_IsItemClickEnabled();
+        }
+    }
+    public var IsMultiSelectCheckBoxEnabled : boolean {
+        get throws {
+            return try get_IsMultiSelectCheckBoxEnabled();
+        }
+    }
+    public var IsSwipeEnabled : boolean {
+        get throws {
+            return try get_IsSwipeEnabled();
+        }
+    }
+    public var ReorderMode : Microsoft.UI.Xaml.Controls.ListViewReorderMode {
+        get throws {
+            return try get_ReorderMode();
+        }
+    }
+    public var SelectedItems : Optional<ClosedGenerics.IVector_1_IInspectable> {
+        get throws {
+            return try get_SelectedItems();
+        }
+    }
+    public var SelectedRanges : Optional<ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange> {
+        get throws {
+            return try get_SelectedRanges();
+        }
+    }
+    public var SelectionMode : Microsoft.UI.Xaml.Controls.ListViewSelectionMode {
+        get throws {
+            return try get_SelectionMode();
+        }
+    }
+    public var ShowsScrollingPlaceholders : boolean {
+        get throws {
+            return try get_ShowsScrollingPlaceholders();
+        }
+    }
+    public var SingleSelectionFollowsFocus : boolean {
+        get throws {
+            return try get_SingleSelectionFollowsFocus();
+        }
+    }
+} // IListViewBase
+
+
+// type: Microsoft.UI.Xaml.Controls.IListViewBaseFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IListViewBaseFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x44092863, Data2: 0xc09e, Data3 : 0x551e, Data4 : (0x85, 0xbf, 0x95, 0x1b, 0x55, 0x29, 0x50, 0xc8)) }
+    // Microsoft.UI.Xaml.Controls.ListViewBase CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.IListViewBase> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListViewBase>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.IListViewBase(consuming: __result);
+    }
+} // IListViewBaseFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.IListViewBaseStatics
+// interface type
+open class IListViewBaseStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb8487e94, Data2: 0x010f, Data3 : 0x56d4, Data4 : (0x9f, 0x76, 0x94, 0xbf, 0x8c, 0x46, 0x27, 0x45)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SelectionModeProperty()
+    private func _n_get_SelectionModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SelectionModeProperty(pThis, __presult))
+        }
+    }
+    public func get_SelectionModeProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SelectionModeProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsSwipeEnabledProperty()
+    private func _n_get_IsSwipeEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsSwipeEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsSwipeEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsSwipeEnabledProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanDragItemsProperty()
+    private func _n_get_CanDragItemsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanDragItemsProperty(pThis, __presult))
+        }
+    }
+    public func get_CanDragItemsProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CanDragItemsProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CanReorderItemsProperty()
+    private func _n_get_CanReorderItemsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CanReorderItemsProperty(pThis, __presult))
+        }
+    }
+    public func get_CanReorderItemsProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CanReorderItemsProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsItemClickEnabledProperty()
+    private func _n_get_IsItemClickEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsItemClickEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsItemClickEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsItemClickEnabledProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_DataFetchSizeProperty()
+    private func _n_get_DataFetchSizeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_DataFetchSizeProperty(pThis, __presult))
+        }
+    }
+    public func get_DataFetchSizeProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_DataFetchSizeProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IncrementalLoadingThresholdProperty()
+    private func _n_get_IncrementalLoadingThresholdProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IncrementalLoadingThresholdProperty(pThis, __presult))
+        }
+    }
+    public func get_IncrementalLoadingThresholdProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IncrementalLoadingThresholdProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IncrementalLoadingTriggerProperty()
+    private func _n_get_IncrementalLoadingTriggerProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IncrementalLoadingTriggerProperty(pThis, __presult))
+        }
+    }
+    public func get_IncrementalLoadingTriggerProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IncrementalLoadingTriggerProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ShowsScrollingPlaceholdersProperty()
+    private func _n_get_ShowsScrollingPlaceholdersProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ShowsScrollingPlaceholdersProperty(pThis, __presult))
+        }
+    }
+    public func get_ShowsScrollingPlaceholdersProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ShowsScrollingPlaceholdersProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ReorderModeProperty()
+    private func _n_get_ReorderModeProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ReorderModeProperty(pThis, __presult))
+        }
+    }
+    public func get_ReorderModeProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ReorderModeProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsMultiSelectCheckBoxEnabledProperty()
+    private func _n_get_IsMultiSelectCheckBoxEnabledProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsMultiSelectCheckBoxEnabledProperty(pThis, __presult))
+        }
+    }
+    public func get_IsMultiSelectCheckBoxEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsMultiSelectCheckBoxEnabledProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SingleSelectionFollowsFocusProperty()
+    private func _n_get_SingleSelectionFollowsFocusProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SingleSelectionFollowsFocusProperty(pThis, __presult))
+        }
+    }
+    public func get_SingleSelectionFollowsFocusProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SingleSelectionFollowsFocusProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_SemanticZoomOwnerProperty()
+    private func _n_get_SemanticZoomOwnerProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SemanticZoomOwnerProperty(pThis, __presult))
+        }
+    }
+    public func get_SemanticZoomOwnerProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_SemanticZoomOwnerProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsActiveViewProperty()
+    private func _n_get_IsActiveViewProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsActiveViewProperty(pThis, __presult))
+        }
+    }
+    public func get_IsActiveViewProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsActiveViewProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_IsZoomedInViewProperty()
+    private func _n_get_IsZoomedInViewProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsZoomedInViewProperty(pThis, __presult))
+        }
+    }
+    public func get_IsZoomedInViewProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_IsZoomedInViewProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderProperty()
+    private func _n_get_HeaderProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderTemplateProperty()
+    private func _n_get_HeaderTemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderTemplateProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeaderTransitionsProperty()
+    private func _n_get_HeaderTransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeaderTransitionsProperty(pThis, __presult))
+        }
+    }
+    public func get_HeaderTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeaderTransitionsProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FooterProperty()
+    private func _n_get_FooterProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FooterProperty(pThis, __presult))
+        }
+    }
+    public func get_FooterProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FooterProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FooterTemplateProperty()
+    private func _n_get_FooterTemplateProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FooterTemplateProperty(pThis, __presult))
+        }
+    }
+    public func get_FooterTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FooterTemplateProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_FooterTransitionsProperty()
+    private func _n_get_FooterTransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewBaseStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_FooterTransitionsProperty(pThis, __presult))
+        }
+    }
+    public func get_FooterTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_FooterTransitionsProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var CanDragItemsProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CanDragItemsProperty();
+        }
+    }
+    public var CanReorderItemsProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CanReorderItemsProperty();
+        }
+    }
+    public var DataFetchSizeProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_DataFetchSizeProperty();
+        }
+    }
+    public var FooterProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FooterProperty();
+        }
+    }
+    public var FooterTemplateProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FooterTemplateProperty();
+        }
+    }
+    public var FooterTransitionsProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_FooterTransitionsProperty();
+        }
+    }
+    public var HeaderProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderProperty();
+        }
+    }
+    public var HeaderTemplateProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderTemplateProperty();
+        }
+    }
+    public var HeaderTransitionsProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeaderTransitionsProperty();
+        }
+    }
+    public var IncrementalLoadingThresholdProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IncrementalLoadingThresholdProperty();
+        }
+    }
+    public var IncrementalLoadingTriggerProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IncrementalLoadingTriggerProperty();
+        }
+    }
+    public var IsActiveViewProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsActiveViewProperty();
+        }
+    }
+    public var IsItemClickEnabledProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsItemClickEnabledProperty();
+        }
+    }
+    public var IsMultiSelectCheckBoxEnabledProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsMultiSelectCheckBoxEnabledProperty();
+        }
+    }
+    public var IsSwipeEnabledProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsSwipeEnabledProperty();
+        }
+    }
+    public var IsZoomedInViewProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_IsZoomedInViewProperty();
+        }
+    }
+    public var ReorderModeProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ReorderModeProperty();
+        }
+    }
+    public var SelectionModeProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SelectionModeProperty();
+        }
+    }
+    public var SemanticZoomOwnerProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SemanticZoomOwnerProperty();
+        }
+    }
+    public var ShowsScrollingPlaceholdersProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ShowsScrollingPlaceholdersProperty();
+        }
+    }
+    public var SingleSelectionFollowsFocusProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_SingleSelectionFollowsFocusProperty();
+        }
+    }
+} // IListViewBaseStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IListViewFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IListViewFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x03ebefb8, Data2: 0xf64a, Data3 : 0x5bf9, Data4 : (0x95, 0x70, 0xcb, 0x09, 0xee, 0xea, 0x23, 0x35)) }
+    // Microsoft.UI.Xaml.Controls.ListView CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListView>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIListViewFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.IListView> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIListView>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.IListView(consuming: __result);
+    }
+} // IListViewFactory
 
 
 // type: Microsoft.UI.Xaml.Controls.IPanel
@@ -4167,6 +6410,229 @@ open class IRowDefinition
 // method not needed: put_MinHeight
 // method not needed: get_ActualHeight
 } // IRowDefinition
+
+
+// type: Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs
+// interface type
+open class ISelectionChangedEventArgs
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb6c18076, Data2: 0x4b76, Data3 : 0x5416, Data4 : (0xad, 0x29, 0xe2, 0xdc, 0x20, 0xc4, 0x62, 0x46)) }
+// method not needed: get_AddedItems
+// method not needed: get_RemovedItems
+} // ISelectionChangedEventArgs
+
+
+// type: Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgsFactory
+// interface type
+// COMPOSITION INTERFACE
+open class ISelectionChangedEventArgsFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x0fcd041d, Data2: 0x465f, Data3 : 0x5745, Data4 : (0x98, 0x82, 0x0c, 0x83, 0x48, 0xe4, 0x13, 0x5d)) }
+    // Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs CreateInstanceWithRemovedItemsAndAddedItems(Windows.Foundation.Collections.IVector<System.Object>, Windows.Foundation.Collections.IVector<System.Object>, System.Object, ref System.Object)
+    private func _n_CreateInstanceWithRemovedItemsAndAddedItems(_ removedItems : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable>>, _ addedItems : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable>>, _ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgsFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithRemovedItemsAndAddedItems(pThis, removedItems, addedItems, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstanceWithRemovedItemsAndAddedItems(removedItems : Optional<ClosedGenerics.IVector_1_IInspectable>, addedItems : Optional<ClosedGenerics.IVector_1_IInspectable>, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstanceWithRemovedItemsAndAddedItems(RawPointer(removedItems), RawPointer(addedItems), RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs(consuming: __result);
+    }
+} // ISelectionChangedEventArgsFactory
+
+
+// type: Microsoft.UI.Xaml.Controls.ISemanticZoom
+// interface type
+open class ISemanticZoom
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7e14616d, Data2: 0x55ef, Data3 : 0x548c, Data4 : (0xa9, 0x97, 0xc9, 0x23, 0xe3, 0x02, 0x71, 0x8f)) }
+// method not needed: get_ZoomedInView
+// method not needed: put_ZoomedInView
+// method not needed: get_ZoomedOutView
+// method not needed: put_ZoomedOutView
+// method not needed: get_IsZoomedInViewActive
+// method not needed: put_IsZoomedInViewActive
+// method not needed: get_CanChangeViews
+// method not needed: put_CanChangeViews
+// method not needed: add_ViewChangeStarted
+// method not needed: remove_ViewChangeStarted
+// method not needed: add_ViewChangeCompleted
+// method not needed: remove_ViewChangeCompleted
+// method not needed: ToggleActiveView
+// method not needed: get_IsZoomOutButtonEnabled
+// method not needed: put_IsZoomOutButtonEnabled
+} // ISemanticZoom
+
+
+// type: Microsoft.UI.Xaml.Controls.ISemanticZoomInformation
+// interface type
+open class ISemanticZoomInformation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x12d62b04, Data2: 0xbb13, Data3 : 0x50f2, Data4 : (0x9d, 0x8b, 0xe5, 0x7c, 0x02, 0xb4, 0xbd, 0xe4)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.SemanticZoom get_SemanticZoomOwner()
+    private func _n_get_SemanticZoomOwner(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoom>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_SemanticZoomOwner(pThis, __presult))
+        }
+    }
+    public func get_SemanticZoomOwner() throws -> Optional<Microsoft.UI.Xaml.Controls.ISemanticZoom> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoom>> = nil;
+        try self._n_get_SemanticZoomOwner(&__result);
+        return Microsoft.UI.Xaml.Controls.ISemanticZoom(consuming: __result);
+    }
+    // [IsSpecialName] void put_SemanticZoomOwner(Microsoft.UI.Xaml.Controls.SemanticZoom)
+    private func _n_put_SemanticZoomOwner(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoom>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_SemanticZoomOwner(pThis, value))
+        }
+    }
+    public func put_SemanticZoomOwner(value : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoom>) throws -> Void {
+        try self._n_put_SemanticZoomOwner(RawPointer(value));
+    }
+    // [IsSpecialName] bool get_IsActiveView()
+    private func _n_get_IsActiveView(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsActiveView(pThis, __presult))
+        }
+    }
+    public func get_IsActiveView() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsActiveView(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsActiveView(bool)
+    private func _n_put_IsActiveView(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsActiveView(pThis, value))
+        }
+    }
+    public func put_IsActiveView(value : boolean) throws -> Void {
+        try self._n_put_IsActiveView(value);
+    }
+    // [IsSpecialName] bool get_IsZoomedInView()
+    private func _n_get_IsZoomedInView(_ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_IsZoomedInView(pThis, __presult))
+        }
+    }
+    public func get_IsZoomedInView() throws -> boolean {
+        var __result : boolean = 0;
+        try self._n_get_IsZoomedInView(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_IsZoomedInView(bool)
+    private func _n_put_IsZoomedInView(_ value : boolean) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_IsZoomedInView(pThis, value))
+        }
+    }
+    public func put_IsZoomedInView(value : boolean) throws -> Void {
+        try self._n_put_IsZoomedInView(value);
+    }
+    // void InitializeViewChange()
+    private func _n_InitializeViewChange() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InitializeViewChange(pThis))
+        }
+    }
+    public func InitializeViewChange() throws -> Void {
+        try self._n_InitializeViewChange();
+    }
+    // void CompleteViewChange()
+    private func _n_CompleteViewChange() throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CompleteViewChange(pThis))
+        }
+    }
+    public func CompleteViewChange() throws -> Void {
+        try self._n_CompleteViewChange();
+    }
+    // void MakeVisible(Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    private func _n_MakeVisible(_ item : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.MakeVisible(pThis, item))
+        }
+    }
+    public func MakeVisible(item : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>) throws -> Void {
+        try self._n_MakeVisible(RawPointer(item));
+    }
+    // void StartViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation, Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    private func _n_StartViewChangeFrom(_ source : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>, _ destination : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.StartViewChangeFrom(pThis, source, destination))
+        }
+    }
+    public func StartViewChangeFrom(source : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>) throws -> Void {
+        try self._n_StartViewChangeFrom(RawPointer(source), RawPointer(destination));
+    }
+    // void StartViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation, Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    private func _n_StartViewChangeTo(_ source : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>, _ destination : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.StartViewChangeTo(pThis, source, destination))
+        }
+    }
+    public func StartViewChangeTo(source : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>) throws -> Void {
+        try self._n_StartViewChangeTo(RawPointer(source), RawPointer(destination));
+    }
+    // void CompleteViewChangeFrom(Microsoft.UI.Xaml.Controls.SemanticZoomLocation, Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    private func _n_CompleteViewChangeFrom(_ source : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>, _ destination : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CompleteViewChangeFrom(pThis, source, destination))
+        }
+    }
+    public func CompleteViewChangeFrom(source : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>) throws -> Void {
+        try self._n_CompleteViewChangeFrom(RawPointer(source), RawPointer(destination));
+    }
+    // void CompleteViewChangeTo(Microsoft.UI.Xaml.Controls.SemanticZoomLocation, Microsoft.UI.Xaml.Controls.SemanticZoomLocation)
+    private func _n_CompleteViewChangeTo(_ source : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>, _ destination : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomLocation>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoomInformation.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CompleteViewChangeTo(pThis, source, destination))
+        }
+    }
+    public func CompleteViewChangeTo(source : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoomLocation>) throws -> Void {
+        try self._n_CompleteViewChangeTo(RawPointer(source), RawPointer(destination));
+    }
+    public var IsActiveView : boolean {
+        get throws {
+            return try get_IsActiveView();
+        }
+    }
+    public var IsZoomedInView : boolean {
+        get throws {
+            return try get_IsZoomedInView();
+        }
+    }
+    public var SemanticZoomOwner : Optional<Microsoft.UI.Xaml.Controls.ISemanticZoom> {
+        get throws {
+            return try get_SemanticZoomOwner();
+        }
+    }
+} // ISemanticZoomInformation
+
+
+// type: Microsoft.UI.Xaml.Controls.ISemanticZoomLocation
+// interface type
+open class ISemanticZoomLocation
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x41c1dec7, Data2: 0xf34f, Data3 : 0x51db, Data4 : (0x95, 0x25, 0x5c, 0x14, 0x9b, 0x05, 0xa5, 0x27)) }
+// method not needed: get_Item
+// method not needed: put_Item
+// method not needed: get_Bounds
+// method not needed: put_Bounds
+} // ISemanticZoomLocation
 
 
 // type: Microsoft.UI.Xaml.Controls.ISlider
@@ -5034,6 +7500,41 @@ open class IStackPanelStatics
         }
     }
 } // IStackPanelStatics
+
+
+// type: Microsoft.UI.Xaml.Controls.IStyleSelector
+// interface type
+open class IStyleSelector
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7f9cf759, Data2: 0x785b, Data3 : 0x5ef9, Data4 : (0x9e, 0xa7, 0x15, 0x55, 0x67, 0x3a, 0x47, 0x5a)) }
+// method not needed: SelectStyle
+} // IStyleSelector
+
+
+// type: Microsoft.UI.Xaml.Controls.IStyleSelectorFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IStyleSelectorFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x2a033206, Data2: 0xa4fb, Data3 : 0x5f11, Data4 : (0x8c, 0x2d, 0x61, 0xe1, 0xdf, 0x78, 0xfb, 0xc3)) }
+    // Microsoft.UI.Xaml.Controls.StyleSelector CreateInstance(System.Object, ref System.Object)
+    private func _n_CreateInstance(_ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelectorFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Controls.IStyleSelector> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIStyleSelector>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Controls.IStyleSelector(consuming: __result);
+    }
+} // IStyleSelectorFactory
 
 
 // type: Microsoft.UI.Xaml.Controls.ISwapChainPanel
@@ -8283,6 +10784,10 @@ open class IUserControlStatics
 } // IUserControlStatics
 
 
+// type: Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger
+// enum type
+public typealias IncrementalLoadingTrigger = _q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger;
+
 // type: Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs
 // runtime class
 public class IsTextTrimmedChangedEventArgs
@@ -8296,6 +10801,1248 @@ public class IsTextTrimmedChangedEventArgs
     }
     public func Interface() -> Microsoft.UI.Xaml.Controls.IIsTextTrimmedChangedEventArgs { return _self; }
 }
+
+// type: Microsoft.UI.Xaml.Controls.ItemClickEventArgs
+// runtime class
+public class ItemClickEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IItemClickEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.IItemClickEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IItemClickEventArgs { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ItemClickEventArgs")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_ClickedItem
+}
+
+// type: Microsoft.UI.Xaml.Controls.ItemClickEventHandler
+// delegate type
+open class IItemClickEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa3903624, Data2: 0x3393, Data3 : 0x566c, Data4 : (0xa6, 0xb9, 0xa6, 0xb4, 0xb3, 0xe3, 0x01, 0xc3)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.ItemClickEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<Microsoft.UI.Xaml.Controls.IItemClickEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class impl_ItemClickEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Microsoft.UI.Xaml.Controls.IItemClickEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ItemClickEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ItemClickEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs>>) in
+        guard let self = impl_ItemClickEventHandler.from_impl_ItemClickEventHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: Microsoft.UI.Xaml.Controls.ItemClickEventArgs(plok: Microsoft.UI.Xaml.Controls.IItemClickEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_ItemClickEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.ItemClickEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.ItemClickEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_ItemClickEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_ItemClickEventHandler? {
+        return pUnk?.bindMemory(to: impl_ItemClickEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.ItemClickEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, e)
+        }
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IItemClickEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Microsoft.UI.Xaml.Controls.IItemClickEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_ItemClickEventHandler
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IItemClickEventHandler;
+    public init(plok: Microsoft.UI.Xaml.Controls.IItemClickEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.ItemClickEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IItemClickEventHandler {
+        return _self
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ItemCollection
+// runtime class
+public class ItemCollection
+    :
+    WinRT.Object
+{
+    private var _self : ClosedGenerics.IObservableVector_1_IInspectable;
+    public init(plok: ClosedGenerics.IObservableVector_1_IInspectable?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> ClosedGenerics.IObservableVector_1_IInspectable { return _self; }
+    // method not needed: add_VectorChanged
+    // method not needed: remove_VectorChanged
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.IInspectable> {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.GetAt(index: index);
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.get_Size();
+    }
+    public func GetView() throws -> Optional<ClosedGenerics.IVectorView_1_IInspectable> {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.GetView();
+    }
+    public func IndexOf(value : Optional<WinRT.Object>, index : inout Swift.UInt32) throws -> boolean {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+            var _tmp_out_index: Swift.UInt32 = 0;
+        return try _ifc.IndexOf(value: value!.GetInterface(), index: &_tmp_out_index);
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.SetAt(index: index, value: value!.GetInterface());
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.InsertAt(index: index, value: value!.GetInterface());
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.RemoveAt(index: index);
+    }
+    public func Append(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.Append(value: value!.GetInterface());
+    }
+    public func RemoveAtEnd() throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.RemoveAtEnd();
+    }
+    public func Clear() throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.Clear();
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>>) throws -> Swift.UInt32 {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.GetMany(startIndex: startIndex, itemsLength: itemsLength, items: items);
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>>) throws -> Void {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.ReplaceAll(itemsLength: itemsLength, items: items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+        let _ifc : ClosedGenerics.IVector_1_IInspectable = try _self.QueryInterface();
+        return try _ifc.Size;
+        }
+    }
+    // method not needed: First
+}
+
+// type: Microsoft.UI.Xaml.Controls.ItemContainerGenerator
+// runtime class
+public class ItemContainerGenerator
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IItemContainerGenerator;
+    public init(plok: Microsoft.UI.Xaml.Controls.IItemContainerGenerator?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IItemContainerGenerator { return _self; }
+    // method not needed: add_ItemsChanged
+    // method not needed: remove_ItemsChanged
+    // method not needed: ItemFromContainer
+    // method not needed: ContainerFromItem
+    // method not needed: IndexFromContainer
+    // method not needed: ContainerFromIndex
+    // method not needed: GetItemContainerGeneratorForPanel
+    // method not needed: StartAt
+    // method not needed: Stop
+    // method not needed: GenerateNext
+    // method not needed: PrepareItemContainer
+    // method not needed: RemoveAll
+    // method not needed: Remove
+    // method not needed: GeneratorPositionFromIndex
+    // method not needed: IndexFromGeneratorPosition
+    // method not needed: Recycle
+}
+
+// type: Microsoft.UI.Xaml.Controls.ItemsControl
+// runtime class
+open class ItemsControl
+    :
+    Microsoft.UI.Xaml.Controls.Control
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IItemsControl;
+    public init(plok: Microsoft.UI.Xaml.Controls.IItemsControl?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IItemsControl { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IItemsControlFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IItemsControlFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ItemsControl");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IItemsControlStatics {
+        static var x : IItemsControlStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ItemsControl")
+    }
+    public static var ItemsControlStatics : IItemsControlStatics {
+        _IItemsControlStatics.x
+    }
+    public static func get_ItemsSourceProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemsSourceProperty());
+    }
+    public static func get_ItemTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemTemplateProperty());
+    }
+    public static func get_ItemTemplateSelectorProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemTemplateSelectorProperty());
+    }
+    public static func get_ItemsPanelProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemsPanelProperty());
+    }
+    public static func get_DisplayMemberPathProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_DisplayMemberPathProperty());
+    }
+    public static func get_ItemContainerStyleProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemContainerStyleProperty());
+    }
+    public static func get_ItemContainerStyleSelectorProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemContainerStyleSelectorProperty());
+    }
+    public static func get_ItemContainerTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_ItemContainerTransitionsProperty());
+    }
+    public static func get_GroupStyleSelectorProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_GroupStyleSelectorProperty());
+    }
+    public static func get_IsGroupingProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.get_IsGroupingProperty());
+    }
+    public static func GetItemsOwner(element : Optional<Microsoft.UI.Xaml.DependencyObject>) throws -> Optional<Microsoft.UI.Xaml.Controls.ItemsControl> {
+        return try Microsoft.UI.Xaml.Controls.ItemsControl(plok: ItemsControlStatics.GetItemsOwner(element: element!.Interface()));
+    }
+    public static func ItemsControlFromItemContainer(container : Optional<Microsoft.UI.Xaml.DependencyObject>) throws -> Optional<Microsoft.UI.Xaml.Controls.ItemsControl> {
+        return try Microsoft.UI.Xaml.Controls.ItemsControl(plok: ItemsControlStatics.ItemsControlFromItemContainer(container: container!.Interface()));
+    }
+    public static var DisplayMemberPathProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.DisplayMemberPathProperty);
+        }
+    }
+    public static var GroupStyleSelectorProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.GroupStyleSelectorProperty);
+        }
+    }
+    public static var IsGroupingProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.IsGroupingProperty);
+        }
+    }
+    public static var ItemContainerStyleProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemContainerStyleProperty);
+        }
+    }
+    public static var ItemContainerStyleSelectorProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemContainerStyleSelectorProperty);
+        }
+    }
+    public static var ItemContainerTransitionsProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemContainerTransitionsProperty);
+        }
+    }
+    public static var ItemTemplateProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemTemplateProperty);
+        }
+    }
+    public static var ItemTemplateSelectorProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemTemplateSelectorProperty);
+        }
+    }
+    public static var ItemsPanelProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemsPanelProperty);
+        }
+    }
+    public static var ItemsSourceProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ItemsControlStatics.ItemsSourceProperty);
+        }
+    }
+    public func get_ItemsSource() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.get_ItemsSource();
+    }
+    public func put_ItemsSource(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemsSource(value: value!.GetInterface());
+    }
+    public func get_Items() throws -> Optional<Microsoft.UI.Xaml.Controls.ItemCollection> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.ItemCollection(plok: _ifc.get_Items());
+    }
+    public func get_ItemTemplate() throws -> Optional<Microsoft.UI.Xaml.DataTemplate> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.get_ItemTemplate());
+    }
+    public func put_ItemTemplate(value : Optional<Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemTemplate(value: value!.Interface());
+    }
+    public func get_ItemTemplateSelector() throws -> Optional<Microsoft.UI.Xaml.Controls.DataTemplateSelector> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.DataTemplateSelector(plok: _ifc.get_ItemTemplateSelector());
+    }
+    public func put_ItemTemplateSelector(value : Optional<Microsoft.UI.Xaml.Controls.DataTemplateSelector>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemTemplateSelector(value: value!.Interface());
+    }
+    public func get_ItemsPanel() throws -> Optional<Microsoft.UI.Xaml.Controls.ItemsPanelTemplate> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.ItemsPanelTemplate(plok: _ifc.get_ItemsPanel());
+    }
+    public func put_ItemsPanel(value : Optional<Microsoft.UI.Xaml.Controls.ItemsPanelTemplate>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemsPanel(value: value!.Interface());
+    }
+    public func get_DisplayMemberPath() throws -> Optional<Swift.String> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.get_DisplayMemberPath();
+    }
+    public func put_DisplayMemberPath(value : Swift.String) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_DisplayMemberPath(value: value);
+    }
+    public func get_ItemsPanelRoot() throws -> Optional<Microsoft.UI.Xaml.Controls.Panel> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.Panel(plok: _ifc.get_ItemsPanelRoot());
+    }
+    public func get_ItemContainerStyle() throws -> Optional<Microsoft.UI.Xaml.Style> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Style(plok: _ifc.get_ItemContainerStyle());
+    }
+    public func put_ItemContainerStyle(value : Optional<Microsoft.UI.Xaml.Style>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemContainerStyle(value: value!.Interface());
+    }
+    public func get_ItemContainerStyleSelector() throws -> Optional<Microsoft.UI.Xaml.Controls.StyleSelector> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.StyleSelector(plok: _ifc.get_ItemContainerStyleSelector());
+    }
+    public func put_ItemContainerStyleSelector(value : Optional<Microsoft.UI.Xaml.Controls.StyleSelector>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemContainerStyleSelector(value: value!.Interface());
+    }
+    public func get_ItemContainerGenerator() throws -> Optional<Microsoft.UI.Xaml.Controls.ItemContainerGenerator> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.ItemContainerGenerator(plok: _ifc.get_ItemContainerGenerator());
+    }
+    public func get_ItemContainerTransitions() throws -> Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.get_ItemContainerTransitions());
+    }
+    public func put_ItemContainerTransitions(value : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_ItemContainerTransitions(value: value!.Interface());
+    }
+    public func get_GroupStyle() throws -> Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.get_GroupStyle();
+    }
+    public func get_GroupStyleSelector() throws -> Optional<Microsoft.UI.Xaml.Controls.GroupStyleSelector> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.GroupStyleSelector(plok: _ifc.get_GroupStyleSelector());
+    }
+    public func put_GroupStyleSelector(value : Optional<Microsoft.UI.Xaml.Controls.GroupStyleSelector>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.put_GroupStyleSelector(value: value!.Interface());
+    }
+    public func get_IsGrouping() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.get_IsGrouping();
+    }
+    public func GroupHeaderContainerFromItemContainer(itemContainer : Optional<Microsoft.UI.Xaml.DependencyObject>) throws -> Optional<Microsoft.UI.Xaml.DependencyObject> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.GroupHeaderContainerFromItemContainer(itemContainer: itemContainer!.Interface()));
+    }
+    public var DisplayMemberPath : Optional<Swift.String> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.DisplayMemberPath;
+        }
+    }
+    public var GroupStyle : Optional<ClosedGenerics.IObservableVector_1__q_CMicrosoft_CUI_CXaml_CControls_CGroupStyle> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.GroupStyle;
+        }
+    }
+    public var GroupStyleSelector : Optional<Microsoft.UI.Xaml.Controls.GroupStyleSelector> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.GroupStyleSelector(plok: _ifc.GroupStyleSelector);
+        }
+    }
+    public var IsGrouping : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.IsGrouping;
+        }
+    }
+    public var ItemContainerGenerator : Optional<Microsoft.UI.Xaml.Controls.ItemContainerGenerator> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.ItemContainerGenerator(plok: _ifc.ItemContainerGenerator);
+        }
+    }
+    public var ItemContainerStyle : Optional<Microsoft.UI.Xaml.Style> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Style(plok: _ifc.ItemContainerStyle);
+        }
+    }
+    public var ItemContainerStyleSelector : Optional<Microsoft.UI.Xaml.Controls.StyleSelector> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.StyleSelector(plok: _ifc.ItemContainerStyleSelector);
+        }
+    }
+    public var ItemContainerTransitions : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.ItemContainerTransitions);
+        }
+    }
+    public var ItemTemplate : Optional<Microsoft.UI.Xaml.DataTemplate> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.ItemTemplate);
+        }
+    }
+    public var ItemTemplateSelector : Optional<Microsoft.UI.Xaml.Controls.DataTemplateSelector> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.DataTemplateSelector(plok: _ifc.ItemTemplateSelector);
+        }
+    }
+    public var Items : Optional<Microsoft.UI.Xaml.Controls.ItemCollection> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.ItemCollection(plok: _ifc.Items);
+        }
+    }
+    public var ItemsPanel : Optional<Microsoft.UI.Xaml.Controls.ItemsPanelTemplate> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.ItemsPanelTemplate(plok: _ifc.ItemsPanel);
+        }
+    }
+    public var ItemsPanelRoot : Optional<Microsoft.UI.Xaml.Controls.Panel> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.Panel(plok: _ifc.ItemsPanelRoot);
+        }
+    }
+    public var ItemsSource : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemsControl = try _self.QueryInterface();
+        return try _ifc.ItemsSource;
+        }
+    }
+    // overridable method skipped: IsItemItsOwnContainerOverride
+    // overridable method skipped: GetContainerForItemOverride
+    // overridable method skipped: ClearContainerForItemOverride
+    // overridable method skipped: PrepareContainerForItemOverride
+    // overridable method skipped: OnItemsChanged
+    // overridable method skipped: OnItemContainerStyleChanged
+    // overridable method skipped: OnItemContainerStyleSelectorChanged
+    // overridable method skipped: OnItemTemplateChanged
+    // overridable method skipped: OnItemTemplateSelectorChanged
+    // overridable method skipped: OnGroupStyleSelectorChanged
+    public func ItemFromContainer(container : Optional<Microsoft.UI.Xaml.DependencyObject>) throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemContainerMapping = try _self.QueryInterface();
+        return try _ifc.ItemFromContainer(container: container!.Interface());
+    }
+    public func ContainerFromItem(item : Optional<WinRT.Object>) throws -> Optional<Microsoft.UI.Xaml.DependencyObject> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemContainerMapping = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.ContainerFromItem(item: item!.GetInterface()));
+    }
+    public func IndexFromContainer(container : Optional<Microsoft.UI.Xaml.DependencyObject>) throws -> Swift.Int32 {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemContainerMapping = try _self.QueryInterface();
+        return try _ifc.IndexFromContainer(container: container!.Interface());
+    }
+    public func ContainerFromIndex(index : Swift.Int32) throws -> Optional<Microsoft.UI.Xaml.DependencyObject> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemContainerMapping = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DependencyObject(plok: _ifc.ContainerFromIndex(index: index));
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ItemsPanelTemplate
+// runtime class
+public class ItemsPanelTemplate
+    :
+    Microsoft.UI.Xaml.FrameworkTemplate
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IItemsPanelTemplate;
+    public init(plok: Microsoft.UI.Xaml.Controls.IItemsPanelTemplate?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IItemsPanelTemplate { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ItemsPanelTemplate")
+        try super.init(plok: _self.QueryInterface())
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ListView
+// runtime class
+open class ListView
+    :
+    Microsoft.UI.Xaml.Controls.ListViewBase
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IListView;
+    public init(plok: Microsoft.UI.Xaml.Controls.IListView?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IListView { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IListViewFactory
+    public override init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IListViewFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ListView");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ListViewBase
+// runtime class
+open class ListViewBase
+    :
+    Microsoft.UI.Xaml.Controls.Primitives.Selector
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IListViewBase;
+    public init(plok: Microsoft.UI.Xaml.Controls.IListViewBase?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IListViewBase { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IListViewBaseFactory
+    public init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IListViewBaseFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ListViewBase");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IListViewBaseStatics {
+        static var x : IListViewBaseStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ListViewBase")
+    }
+    public static var ListViewBaseStatics : IListViewBaseStatics {
+        _IListViewBaseStatics.x
+    }
+    public static func get_SelectionModeProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_SelectionModeProperty());
+    }
+    public static func get_IsSwipeEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IsSwipeEnabledProperty());
+    }
+    public static func get_CanDragItemsProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_CanDragItemsProperty());
+    }
+    public static func get_CanReorderItemsProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_CanReorderItemsProperty());
+    }
+    public static func get_IsItemClickEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IsItemClickEnabledProperty());
+    }
+    public static func get_DataFetchSizeProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_DataFetchSizeProperty());
+    }
+    public static func get_IncrementalLoadingThresholdProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IncrementalLoadingThresholdProperty());
+    }
+    public static func get_IncrementalLoadingTriggerProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IncrementalLoadingTriggerProperty());
+    }
+    public static func get_ShowsScrollingPlaceholdersProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_ShowsScrollingPlaceholdersProperty());
+    }
+    public static func get_ReorderModeProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_ReorderModeProperty());
+    }
+    public static func get_IsMultiSelectCheckBoxEnabledProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IsMultiSelectCheckBoxEnabledProperty());
+    }
+    public static func get_SingleSelectionFollowsFocusProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_SingleSelectionFollowsFocusProperty());
+    }
+    public static func get_SemanticZoomOwnerProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_SemanticZoomOwnerProperty());
+    }
+    public static func get_IsActiveViewProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IsActiveViewProperty());
+    }
+    public static func get_IsZoomedInViewProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_IsZoomedInViewProperty());
+    }
+    public static func get_HeaderProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_HeaderProperty());
+    }
+    public static func get_HeaderTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_HeaderTemplateProperty());
+    }
+    public static func get_HeaderTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_HeaderTransitionsProperty());
+    }
+    public static func get_FooterProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_FooterProperty());
+    }
+    public static func get_FooterTemplateProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_FooterTemplateProperty());
+    }
+    public static func get_FooterTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.get_FooterTransitionsProperty());
+    }
+    public static var CanDragItemsProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.CanDragItemsProperty);
+        }
+    }
+    public static var CanReorderItemsProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.CanReorderItemsProperty);
+        }
+    }
+    public static var DataFetchSizeProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.DataFetchSizeProperty);
+        }
+    }
+    public static var FooterProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.FooterProperty);
+        }
+    }
+    public static var FooterTemplateProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.FooterTemplateProperty);
+        }
+    }
+    public static var FooterTransitionsProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.FooterTransitionsProperty);
+        }
+    }
+    public static var HeaderProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.HeaderProperty);
+        }
+    }
+    public static var HeaderTemplateProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.HeaderTemplateProperty);
+        }
+    }
+    public static var HeaderTransitionsProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.HeaderTransitionsProperty);
+        }
+    }
+    public static var IncrementalLoadingThresholdProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IncrementalLoadingThresholdProperty);
+        }
+    }
+    public static var IncrementalLoadingTriggerProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IncrementalLoadingTriggerProperty);
+        }
+    }
+    public static var IsActiveViewProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IsActiveViewProperty);
+        }
+    }
+    public static var IsItemClickEnabledProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IsItemClickEnabledProperty);
+        }
+    }
+    public static var IsMultiSelectCheckBoxEnabledProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IsMultiSelectCheckBoxEnabledProperty);
+        }
+    }
+    public static var IsSwipeEnabledProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IsSwipeEnabledProperty);
+        }
+    }
+    public static var IsZoomedInViewProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.IsZoomedInViewProperty);
+        }
+    }
+    public static var ReorderModeProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.ReorderModeProperty);
+        }
+    }
+    public static var SelectionModeProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.SelectionModeProperty);
+        }
+    }
+    public static var SemanticZoomOwnerProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.SemanticZoomOwnerProperty);
+        }
+    }
+    public static var ShowsScrollingPlaceholdersProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.ShowsScrollingPlaceholdersProperty);
+        }
+    }
+    public static var SingleSelectionFollowsFocusProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ListViewBaseStatics.SingleSelectionFollowsFocusProperty);
+        }
+    }
+    public func get_SelectedItems() throws -> Optional<ClosedGenerics.IVector_1_IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_SelectedItems();
+    }
+    public func get_SelectionMode() throws -> Microsoft.UI.Xaml.Controls.ListViewSelectionMode {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_SelectionMode();
+    }
+    public func put_SelectionMode(value : Microsoft.UI.Xaml.Controls.ListViewSelectionMode) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_SelectionMode(value: value);
+    }
+    public func get_IsSwipeEnabled() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_IsSwipeEnabled();
+    }
+    public func put_IsSwipeEnabled(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_IsSwipeEnabled(value: value);
+    }
+    public func get_CanDragItems() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_CanDragItems();
+    }
+    public func put_CanDragItems(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_CanDragItems(value: value);
+    }
+    public func get_CanReorderItems() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_CanReorderItems();
+    }
+    public func put_CanReorderItems(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_CanReorderItems(value: value);
+    }
+    public func get_IsItemClickEnabled() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_IsItemClickEnabled();
+    }
+    public func put_IsItemClickEnabled(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_IsItemClickEnabled(value: value);
+    }
+    public func get_DataFetchSize() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_DataFetchSize();
+    }
+    public func put_DataFetchSize(value : Swift.Double) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_DataFetchSize(value: value);
+    }
+    public func get_IncrementalLoadingThreshold() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_IncrementalLoadingThreshold();
+    }
+    public func put_IncrementalLoadingThreshold(value : Swift.Double) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_IncrementalLoadingThreshold(value: value);
+    }
+    public func get_IncrementalLoadingTrigger() throws -> Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_IncrementalLoadingTrigger();
+    }
+    public func put_IncrementalLoadingTrigger(value : Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_IncrementalLoadingTrigger(value: value);
+    }
+    public func get_ShowsScrollingPlaceholders() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_ShowsScrollingPlaceholders();
+    }
+    public func put_ShowsScrollingPlaceholders(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_ShowsScrollingPlaceholders(value: value);
+    }
+    public func get_ReorderMode() throws -> Microsoft.UI.Xaml.Controls.ListViewReorderMode {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_ReorderMode();
+    }
+    public func put_ReorderMode(value : Microsoft.UI.Xaml.Controls.ListViewReorderMode) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_ReorderMode(value: value);
+    }
+    public func get_SelectedRanges() throws -> Optional<ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_SelectedRanges();
+    }
+    public func get_IsMultiSelectCheckBoxEnabled() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_IsMultiSelectCheckBoxEnabled();
+    }
+    public func put_IsMultiSelectCheckBoxEnabled(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_IsMultiSelectCheckBoxEnabled(value: value);
+    }
+    public func get_SingleSelectionFollowsFocus() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_SingleSelectionFollowsFocus();
+    }
+    public func put_SingleSelectionFollowsFocus(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_SingleSelectionFollowsFocus(value: value);
+    }
+    public func add_ItemClick(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.ItemClickEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.add_ItemClick(handler: Microsoft.UI.Xaml.Controls.impl_ItemClickEventHandler(cb: handler).Interface());
+    }
+    public func remove_ItemClick(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.remove_ItemClick(token: token);
+    }
+    public func add_DragItemsStarting(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.DragItemsStartingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.add_DragItemsStarting(handler: Microsoft.UI.Xaml.Controls.impl_DragItemsStartingEventHandler(cb: handler).Interface());
+    }
+    public func remove_DragItemsStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.remove_DragItemsStarting(token: token);
+    }
+    public func add_DragItemsCompleted(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.DragItemsCompletedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.add_DragItemsCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CDragItemsCompletedEventArgs(cb: handler).Interface());
+    }
+    public func remove_DragItemsCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.remove_DragItemsCompleted(token: token);
+    }
+    public func add_ContainerContentChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ContainerContentChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.add_ContainerContentChanging(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CContainerContentChangingEventArgs(cb: handler).Interface());
+    }
+    public func remove_ContainerContentChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.remove_ContainerContentChanging(token: token);
+    }
+    public func add_ChoosingItemContainer(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ChoosingItemContainerEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.add_ChoosingItemContainer(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingItemContainerEventArgs(cb: handler).Interface());
+    }
+    public func remove_ChoosingItemContainer(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.remove_ChoosingItemContainer(token: token);
+    }
+    public func add_ChoosingGroupHeaderContainer(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.ListViewBase>, Optional<Microsoft.UI.Xaml.Controls.ChoosingGroupHeaderContainerEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.add_ChoosingGroupHeaderContainer(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CListViewBase__q_CMicrosoft_CUI_CXaml_CControls_CChoosingGroupHeaderContainerEventArgs(cb: handler).Interface());
+    }
+    public func remove_ChoosingGroupHeaderContainer(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.remove_ChoosingGroupHeaderContainer(token: token);
+    }
+    public func ScrollIntoView(item : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.ScrollIntoView(item: item!.GetInterface());
+    }
+    public func SelectAll() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SelectAll();
+    }
+    public func LoadMoreItemsAsync() throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.LoadMoreItemsAsync();
+    }
+    public func LoadMoreItems() async throws -> Microsoft.UI.Xaml.Data.LoadMoreItemsResult {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.LoadMoreItemsAsync()!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func ScrollIntoView(item : Optional<WinRT.Object>, alignment : Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.ScrollIntoViewWithAlignment(item: item!.GetInterface(), alignment: alignment);
+    }
+    public func SetDesiredContainerUpdateDuration(duration : Windows.Foundation.TimeSpan) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SetDesiredContainerUpdateDuration(duration: duration);
+    }
+    public func SelectRange(itemIndexRange : Optional<Microsoft.UI.Xaml.Data.ItemIndexRange>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SelectRange(itemIndexRange: itemIndexRange!.Interface());
+    }
+    public func DeselectRange(itemIndexRange : Optional<Microsoft.UI.Xaml.Data.ItemIndexRange>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.DeselectRange(itemIndexRange: itemIndexRange!.Interface());
+    }
+    public func IsDragSource() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.IsDragSource();
+    }
+    public func TryStartConnectedAnimationAsync(animation : Optional<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation>, item : Optional<WinRT.Object>, elementName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.TryStartConnectedAnimationAsync(animation: animation!.Interface(), item: item!.GetInterface(), elementName: elementName);
+    }
+    public func TryStartConnectedAnimation(animation : Optional<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation>, item : Optional<WinRT.Object>, elementName : Swift.String) async throws -> boolean {
+        return try await withUnsafeThrowingContinuation { continuation in
+            do {
+                return try continuation.resume(returning: self.TryStartConnectedAnimationAsync(animation: animation, item: item, elementName: elementName)!.get())
+            } catch let error {
+                return continuation.resume(throwing: error)
+            }
+        }
+    }
+    public func PrepareConnectedAnimation(key : Swift.String, item : Optional<WinRT.Object>, elementName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.ConnectedAnimation(plok: _ifc.PrepareConnectedAnimation(key: key, item: item!.GetInterface(), elementName: elementName));
+    }
+    public func get_Header() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_Header();
+    }
+    public func put_Header(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_Header(value: value!.GetInterface());
+    }
+    public func get_HeaderTemplate() throws -> Optional<Microsoft.UI.Xaml.DataTemplate> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.get_HeaderTemplate());
+    }
+    public func put_HeaderTemplate(value : Optional<Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_HeaderTemplate(value: value!.Interface());
+    }
+    public func get_HeaderTransitions() throws -> Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.get_HeaderTransitions());
+    }
+    public func put_HeaderTransitions(value : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_HeaderTransitions(value: value!.Interface());
+    }
+    public func get_Footer() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.get_Footer();
+    }
+    public func put_Footer(value : Optional<WinRT.Object>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_Footer(value: value!.GetInterface());
+    }
+    public func get_FooterTemplate() throws -> Optional<Microsoft.UI.Xaml.DataTemplate> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.get_FooterTemplate());
+    }
+    public func put_FooterTemplate(value : Optional<Microsoft.UI.Xaml.DataTemplate>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_FooterTemplate(value: value!.Interface());
+    }
+    public func get_FooterTransitions() throws -> Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.get_FooterTransitions());
+    }
+    public func put_FooterTransitions(value : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.put_FooterTransitions(value: value!.Interface());
+    }
+    public var CanDragItems : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.CanDragItems;
+        }
+    }
+    public var CanReorderItems : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.CanReorderItems;
+        }
+    }
+    public var DataFetchSize : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.DataFetchSize;
+        }
+    }
+    public var Footer : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.Footer;
+        }
+    }
+    public var FooterTemplate : Optional<Microsoft.UI.Xaml.DataTemplate> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.FooterTemplate);
+        }
+    }
+    public var FooterTransitions : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.FooterTransitions);
+        }
+    }
+    public var Header : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.Header;
+        }
+    }
+    public var HeaderTemplate : Optional<Microsoft.UI.Xaml.DataTemplate> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.DataTemplate(plok: _ifc.HeaderTemplate);
+        }
+    }
+    public var HeaderTransitions : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.HeaderTransitions);
+        }
+    }
+    public var IncrementalLoadingThreshold : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.IncrementalLoadingThreshold;
+        }
+    }
+    public var IncrementalLoadingTrigger : Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.IncrementalLoadingTrigger;
+        }
+    }
+    public var IsItemClickEnabled : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.IsItemClickEnabled;
+        }
+    }
+    public var IsMultiSelectCheckBoxEnabled : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.IsMultiSelectCheckBoxEnabled;
+        }
+    }
+    public var IsSwipeEnabled : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.IsSwipeEnabled;
+        }
+    }
+    public var ReorderMode : Microsoft.UI.Xaml.Controls.ListViewReorderMode {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.ReorderMode;
+        }
+    }
+    public var SelectedItems : Optional<ClosedGenerics.IVector_1_IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SelectedItems;
+        }
+    }
+    public var SelectedRanges : Optional<ClosedGenerics.IVectorView_1__q_CMicrosoft_CUI_CXaml_CData_CItemIndexRange> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SelectedRanges;
+        }
+    }
+    public var SelectionMode : Microsoft.UI.Xaml.Controls.ListViewSelectionMode {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SelectionMode;
+        }
+    }
+    public var ShowsScrollingPlaceholders : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.ShowsScrollingPlaceholders;
+        }
+    }
+    public var SingleSelectionFollowsFocus : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IListViewBase = try _self.QueryInterface();
+        return try _ifc.SingleSelectionFollowsFocus;
+        }
+    }
+    public func get_SemanticZoomOwner() throws -> Optional<Microsoft.UI.Xaml.Controls.SemanticZoom> {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.SemanticZoom(plok: _ifc.get_SemanticZoomOwner());
+    }
+    public func put_SemanticZoomOwner(value : Optional<Microsoft.UI.Xaml.Controls.SemanticZoom>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.put_SemanticZoomOwner(value: value!.Interface());
+    }
+    public func get_IsActiveView() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.get_IsActiveView();
+    }
+    public func put_IsActiveView(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.put_IsActiveView(value: value);
+    }
+    public func get_IsZoomedInView() throws -> boolean {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.get_IsZoomedInView();
+    }
+    public func put_IsZoomedInView(value : boolean) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.put_IsZoomedInView(value: value);
+    }
+    public func InitializeViewChange() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.InitializeViewChange();
+    }
+    public func CompleteViewChange() throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.CompleteViewChange();
+    }
+    public func MakeVisible(item : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.MakeVisible(item: item!.Interface());
+    }
+    public func StartViewChangeFrom(source : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.StartViewChangeFrom(source: source!.Interface(), destination: destination!.Interface());
+    }
+    public func StartViewChangeTo(source : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.StartViewChangeTo(source: source!.Interface(), destination: destination!.Interface());
+    }
+    public func CompleteViewChangeFrom(source : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.CompleteViewChangeFrom(source: source!.Interface(), destination: destination!.Interface());
+    }
+    public func CompleteViewChangeTo(source : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>, destination : Optional<Microsoft.UI.Xaml.Controls.SemanticZoomLocation>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.CompleteViewChangeTo(source: source!.Interface(), destination: destination!.Interface());
+    }
+    public var IsActiveView : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.IsActiveView;
+        }
+    }
+    public var IsZoomedInView : boolean {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try _ifc.IsZoomedInView;
+        }
+    }
+    public var SemanticZoomOwner : Optional<Microsoft.UI.Xaml.Controls.SemanticZoom> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.ISemanticZoomInformation = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Controls.SemanticZoom(plok: _ifc.SemanticZoomOwner);
+        }
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.ListViewReorderMode
+// enum type
+public typealias ListViewReorderMode = _q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode;
+
+// type: Microsoft.UI.Xaml.Controls.ListViewSelectionMode
+// enum type
+public typealias ListViewSelectionMode = _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode;
 
 // type: Microsoft.UI.Xaml.Controls.Orientation
 // enum type
@@ -8514,6 +12261,197 @@ public class RowDefinitionCollection
         }
     }
     // instance interface not needed: Windows.Foundation.Collections.IIterable`1[[Microsoft.UI.Xaml.Controls.RowDefinition, Microsoft, Version=255.255.255.255, Culture=neutral, PublicKeyToken=null, ContentType=WindowsRuntime]]
+}
+
+// type: Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment
+// enum type
+public typealias ScrollIntoViewAlignment = _q_CMicrosoft_CUI_CXaml_CControls_CScrollIntoViewAlignment;
+
+// type: Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs
+// runtime class
+open class SelectionChangedEventArgs
+    :
+    Microsoft.UI.Xaml.RoutedEventArgs
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs;
+    public init(plok: Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgsFactory
+    public init(removedItems : Optional<ClosedGenerics.IVector_1_IInspectable>, addedItems : Optional<ClosedGenerics.IVector_1_IInspectable>) throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : ISelectionChangedEventArgsFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstanceWithRemovedItemsAndAddedItems(removedItems: removedItems, addedItems: addedItems, baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_AddedItems
+    // method not needed: get_RemovedItems
+}
+
+// type: Microsoft.UI.Xaml.Controls.SelectionChangedEventHandler
+// delegate type
+open class ISelectionChangedEventHandler
+    :
+    WinRT.IUnknown
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa232390d, Data2: 0x0e34, Data3 : 0x595e, Data4 : (0x89, 0x31, 0xfa, 0x92, 0x8a, 0x99, 0x09, 0xf4)) }
+    // [IsSpecialName] void Invoke(System.Object, Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventHandler.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, e))
+        }
+    }
+    public func Invoke(sender : Optional<WinRT.IInspectable>, e : Optional<Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(e));
+    }
+}
+// impl delegate type
+open class impl_SelectionChangedEventHandler
+{
+    private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventHandlerVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, Microsoft.UI.Xaml.Controls.ISelectionChangedEventHandler.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_SelectionChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_SelectionChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs>>) in
+        guard let self = impl_SelectionChangedEventHandler.from_impl_SelectionChangedEventHandler(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: WinRT.Object(plok: WinRT.IInspectable(sender)), e: Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs(plok: Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs(e)))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_SelectionChangedEventHandler? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventHandler
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_SelectionChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_SelectionChangedEventHandler? {
+        return pUnk?.bindMemory(to: impl_SelectionChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, e)
+        }
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ISelectionChangedEventHandler {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            Microsoft.UI.Xaml.Controls.ISelectionChangedEventHandler(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_SelectionChangedEventHandler
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ISelectionChangedEventHandler;
+    public init(plok: Microsoft.UI.Xaml.Controls.ISelectionChangedEventHandler?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.SelectionChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender!.GetInterface(), e: e!.Interface());
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ISelectionChangedEventHandler {
+        return _self
+    }
+}
+
+// type: Microsoft.UI.Xaml.Controls.SemanticZoom
+// runtime class
+public class SemanticZoom
+    :
+    Microsoft.UI.Xaml.Controls.Control
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ISemanticZoom;
+    public init(plok: Microsoft.UI.Xaml.Controls.ISemanticZoom?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ISemanticZoom { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.SemanticZoom")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // static interface not needed: Microsoft.UI.Xaml.Controls.ISemanticZoomStatics
+    // method not needed: get_ZoomedInView
+    // method not needed: put_ZoomedInView
+    // method not needed: get_ZoomedOutView
+    // method not needed: put_ZoomedOutView
+    // method not needed: get_IsZoomedInViewActive
+    // method not needed: put_IsZoomedInViewActive
+    // method not needed: get_CanChangeViews
+    // method not needed: put_CanChangeViews
+    // method not needed: add_ViewChangeStarted
+    // method not needed: remove_ViewChangeStarted
+    // method not needed: add_ViewChangeCompleted
+    // method not needed: remove_ViewChangeCompleted
+    // method not needed: ToggleActiveView
+    // method not needed: get_IsZoomOutButtonEnabled
+    // method not needed: put_IsZoomOutButtonEnabled
+}
+
+// type: Microsoft.UI.Xaml.Controls.SemanticZoomLocation
+// runtime class
+public class SemanticZoomLocation
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.ISemanticZoomLocation;
+    public init(plok: Microsoft.UI.Xaml.Controls.ISemanticZoomLocation?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.ISemanticZoomLocation { return _self; }
+    public init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.SemanticZoomLocation")
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_Item
+    // method not needed: put_Item
+    // method not needed: get_Bounds
+    // method not needed: put_Bounds
 }
 
 // type: Microsoft.UI.Xaml.Controls.Slider
@@ -9041,6 +12979,30 @@ open class StackPanel
             var _tmp_out_second: Swift.Int32 = 0;
         return try _ifc.GetInsertionIndexes(position: position, first: &_tmp_out_first, second: &_tmp_out_second);
     }
+}
+
+// type: Microsoft.UI.Xaml.Controls.StyleSelector
+// runtime class
+open class StyleSelector
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IStyleSelector;
+    public init(plok: Microsoft.UI.Xaml.Controls.IStyleSelector?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IStyleSelector { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Controls.IStyleSelectorFactory
+    public init() throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IStyleSelectorFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Controls.StyleSelector");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: SelectStyle
+    // instance interface not needed: Microsoft.UI.Xaml.Controls.IStyleSelectorOverrides
 }
 
 // type: Microsoft.UI.Xaml.Controls.SwapChainPanel
@@ -11201,6 +15163,52 @@ extension Microsoft.UI.Xaml.Controls.ClickMode {
         }
     }
 }
+extension Microsoft.UI.Xaml.Controls.IncrementalLoadingTrigger {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger_None;
+        }
+    }
+    public static var Edge : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CIncrementalLoadingTrigger_Edge;
+        }
+    }
+}
+extension Microsoft.UI.Xaml.Controls.ListViewReorderMode {
+    public static var Disabled : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode_Disabled;
+        }
+    }
+    public static var Enabled : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CListViewReorderMode_Enabled;
+        }
+    }
+}
+extension Microsoft.UI.Xaml.Controls.ListViewSelectionMode {
+    public static var None : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode_None;
+        }
+    }
+    public static var Single : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode_Single;
+        }
+    }
+    public static var Multiple : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode_Multiple;
+        }
+    }
+    public static var Extended : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CListViewSelectionMode_Extended;
+        }
+    }
+}
 extension Microsoft.UI.Xaml.Controls.Orientation {
     public static var Vertical : Self {
         get {
@@ -11227,6 +15235,18 @@ extension Microsoft.UI.Xaml.Controls.RequiresPointer {
     public static var WhenFocused : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CControls_CRequiresPointer_WhenFocused;
+        }
+    }
+}
+extension Microsoft.UI.Xaml.Controls.ScrollIntoViewAlignment {
+    public static var Default : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CScrollIntoViewAlignment_Default;
+        }
+    }
+    public static var Leading : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CControls_CScrollIntoViewAlignment_Leading;
         }
     }
 }

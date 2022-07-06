@@ -123,6 +123,43 @@ open class IBindingExpressionBase
 } // IBindingExpressionBase
 
 
+// type: Microsoft.UI.Xaml.Data.IItemIndexRange
+// interface type
+open class IItemIndexRange
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xeba09846, Data2: 0x2554, Data3 : 0x5b86, Data4 : (0xac, 0x17, 0x61, 0x4f, 0x05, 0x10, 0x5f, 0xa2)) }
+// method not needed: get_FirstIndex
+// method not needed: get_Length
+// method not needed: get_LastIndex
+} // IItemIndexRange
+
+
+// type: Microsoft.UI.Xaml.Data.IItemIndexRangeFactory
+// interface type
+// COMPOSITION INTERFACE
+open class IItemIndexRangeFactory
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9fc73213, Data2: 0xeda0, Data3 : 0x5238, Data4 : (0xaa, 0x2c, 0x40, 0x1c, 0x99, 0x21, 0xf0, 0xf9)) }
+    // Microsoft.UI.Xaml.Data.ItemIndexRange CreateInstance(System.Int32, System.UInt32, System.Object, ref System.Object)
+    private func _n_CreateInstance(_ firstIndex : INT32, _ length : UINT32, _ baseInterface : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ innerInterface : UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIItemIndexRange>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CData_CIItemIndexRangeFactory.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, firstIndex, length, baseInterface, innerInterface, __presult))
+        }
+    }
+    public func CreateInstance(firstIndex : Swift.Int32, length : Swift.UInt32, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Data.IItemIndexRange> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CData_CIItemIndexRange>> = nil;
+            var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_CreateInstance(firstIndex, length, RawPointer(baseInterface), &_tmp_out_innerInterface, &__result);
+            innerInterface = WinRT.IInspectable(consuming: _tmp_out_innerInterface);
+        return Microsoft.UI.Xaml.Data.IItemIndexRange(consuming: __result);
+    }
+} // IItemIndexRangeFactory
+
+
 // type: Microsoft.UI.Xaml.Data.IValueConverter
 // interface type
 open class IValueConverter
@@ -134,5 +171,34 @@ open class IValueConverter
 // method not needed: ConvertBack
 } // IValueConverter
 
+
+// type: Microsoft.UI.Xaml.Data.ItemIndexRange
+// runtime class
+open class ItemIndexRange
+    :
+    WinRT.Object
+{
+    private var _self : Microsoft.UI.Xaml.Data.IItemIndexRange;
+    public init(plok: Microsoft.UI.Xaml.Data.IItemIndexRange?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Data.IItemIndexRange { return _self; }
+    // COMPOSABLE: Microsoft.UI.Xaml.Data.IItemIndexRangeFactory
+    public init(firstIndex : Swift.Int32, length : Swift.UInt32) throws {
+        var _inn : Optional<WinRT.IInspectable> = nil
+        let _af : IItemIndexRangeFactory = try RoGetActivationFactory("Microsoft.UI.Xaml.Data.ItemIndexRange");
+        let baseInterface : Optional<WinRT.IInspectable> = nil;
+        _self = try _af.CreateInstance(firstIndex: firstIndex, length: length, baseInterface: baseInterface, innerInterface: &_inn)!;
+        try super.init(plok: _self.QueryInterface())
+    }
+    // method not needed: get_FirstIndex
+    // method not needed: get_Length
+    // method not needed: get_LastIndex
+}
+
+// type: Microsoft.UI.Xaml.Data.LoadMoreItemsResult
+// struct type
+public typealias LoadMoreItemsResult = _q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult;
 
 }

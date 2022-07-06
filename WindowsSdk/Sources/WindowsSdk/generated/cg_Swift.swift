@@ -2714,6 +2714,263 @@ open class wrap_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
 }
 // closed interface type
+public class IObservableVector_1_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7b81c56a, Data2: 0x0985, Data3 : 0x518d, Data4 : (0xba, 0xa9, 0x0d, 0xa9, 0xae, 0x00, 0x9f, 0x65)) }
+// method not needed: add_VectorChanged
+// method not needed: remove_VectorChanged
+} // IObservableVector_1_IInspectable
+// closed generic delegate type
+public class IVectorChangedEventHandler_1_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb423a801, Data2: 0xd35e, Data3 : 0x56b9, Data4 : (0x81, 0x3b, 0x00, 0x88, 0x95, 0x36, 0xcb, 0x98)) }
+    // [IsSpecialName] void Invoke(Windows.Foundation.Collections.IObservableVector<System.Object>, Windows.Foundation.Collections.IVectorChangedEventArgs)
+    private func _n_Invoke(_ sender : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable>>, _ event : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Invoke(pThis, sender, event))
+        }
+    }
+    public func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1_IInspectable>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
+        try self._n_Invoke(RawPointer(sender), RawPointer(event));
+    }
+} // IVectorChangedEventHandler_1_IInspectable
+// impl delegate type
+open class impl_VectorChangedEventHandler_1_IInspectable
+{
+    private static var vtable: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectableVtbl = .init(
+    QueryInterface: {
+        guard let pUnk = $0, let riid = $1, let ppvObject = $2 else {
+            return E_INVALIDARG
+        }
+        switch riid.pointee {
+        case IUnknown.IID, ClosedGenerics.IVectorChangedEventHandler_1_IInspectable.IID:
+            _ = pUnk.pointee.lpVtbl.pointee.AddRef(pUnk)
+            ppvObject.pointee = UnsafeMutableRawPointer(pUnk)
+            return S_OK
+        default:
+            ppvObject.pointee = nil
+            return E_NOINTERFACE
+        }
+    },
+    AddRef: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_VectorChangedEventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
+        _ = pinstance.pointee.container.retain()
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
+        return __res;
+    },
+    Release: {
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_VectorChangedEventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
+        return __res;
+    },
+    Invoke: {
+        (pThis, _ sender : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable>>, _ event : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs>>) in
+        guard let self = impl_VectorChangedEventHandler_1_IInspectable.from_impl_VectorChangedEventHandler_1_IInspectable(pThis) else {
+            return E_INVALIDARG
+        }
+        do {
+            let _ret : Void = try self.Invoke(sender: ClosedGenerics.IObservableVector_1_IInspectable(sender), event: Windows.Foundation.Collections.IVectorChangedEventArgs(event))
+            return S_OK
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
+    }
+    )
+    private class Container {
+        public var self_ref: impl_VectorChangedEventHandler_1_IInspectable? = nil
+    }
+    private struct WithTrailingObjects {
+        public var interface_struct: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable
+        public var container: Unmanaged<Container>
+    }
+    private var instance: WithTrailingObjects
+
+    private var _cb : Optional<(Optional<ClosedGenerics.IObservableVector_1_IInspectable>, Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void>
+    public init(cb : Optional<(Optional<ClosedGenerics.IObservableVector_1_IInspectable>, Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void> = nil) {
+        _cb = cb
+        self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
+        self.instance.container.takeUnretainedValue().self_ref = self
+    }
+    private static func from_impl_VectorChangedEventHandler_1_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_VectorChangedEventHandler_1_IInspectable? {
+        return pUnk?.bindMemory(to: impl_VectorChangedEventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    }
+
+    open func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1_IInspectable>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
+        if let cb = _cb {
+            return try cb(sender, event)
+        }
+    }
+    public func Interface() -> ClosedGenerics.IVectorChangedEventHandler_1_IInspectable {
+        return withUnsafeMutablePointer(to: &self.instance.interface_struct) {
+            ClosedGenerics.IVectorChangedEventHandler_1_IInspectable(UnsafeMutableRawPointer($0))
+        }
+    }
+}
+// wrap delegate type
+open class wrap_VectorChangedEventHandler_1_IInspectable
+{
+    private var _self : ClosedGenerics.IVectorChangedEventHandler_1_IInspectable;
+    public init(plok: ClosedGenerics.IVectorChangedEventHandler_1_IInspectable?) throws {
+        _self = plok!
+    }
+    public func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1_IInspectable>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
+        return try _self.Invoke(sender: sender, event: event);
+    }
+    public func Interface() -> ClosedGenerics.IVectorChangedEventHandler_1_IInspectable {
+        return _self
+    }
+}
+// closed interface type
+public class IVector_1_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xb32bdca4, Data2: 0x5e52, Data3 : 0x5b27, Data4 : (0xbc, 0x5d, 0xd6, 0x6a, 0x1a, 0x26, 0x8c, 0x2a)) }
+    // System.Object GetAt(System.UInt32)
+    private func _n_GetAt(_ index : UINT32, _ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetAt(pThis, index, __presult))
+        }
+    }
+    public func GetAt(index : Swift.UInt32) throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_GetAt(index, &__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    // [IsSpecialName] System.UInt32 get_Size()
+    private func _n_get_Size(_ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Size(pThis, __presult))
+        }
+    }
+    public func get_Size() throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_get_Size(&__result);
+        return __result;
+    }
+    // Windows.Foundation.Collections.IVectorView<System.Object> GetView()
+    private func _n_GetView(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable>>>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetView(pThis, __presult))
+        }
+    }
+    public func GetView() throws -> Optional<ClosedGenerics.IVectorView_1_IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable>> = nil;
+        try self._n_GetView(&__result);
+        return ClosedGenerics.IVectorView_1_IInspectable(consuming: __result);
+    }
+    // bool IndexOf(System.Object, ref System.UInt32)
+    private func _n_IndexOf(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ index : UnsafeMutablePointer<UINT32>, _ __presult: UnsafeMutablePointer<boolean>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
+        }
+    }
+    public func IndexOf(value : Optional<WinRT.IInspectable>, index : inout Swift.UInt32) throws -> boolean {
+        var __result : boolean = 0;
+            var _tmp_out_index: UINT32 = 0;
+        try self._n_IndexOf(RawPointer(value), &_tmp_out_index, &__result);
+            index = _tmp_out_index;
+        return __result;
+    }
+    // void SetAt(System.UInt32, System.Object)
+    private func _n_SetAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
+        }
+    }
+    public func SetAt(index : Swift.UInt32, value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_SetAt(index, RawPointer(value));
+    }
+    // void InsertAt(System.UInt32, System.Object)
+    private func _n_InsertAt(_ index : UINT32, _ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
+        }
+    }
+    public func InsertAt(index : Swift.UInt32, value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_InsertAt(index, RawPointer(value));
+    }
+    // void RemoveAt(System.UInt32)
+    private func _n_RemoveAt(_ index : UINT32) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAt(pThis, index))
+        }
+    }
+    public func RemoveAt(index : Swift.UInt32) throws -> Void {
+        try self._n_RemoveAt(index);
+    }
+    // void Append(System.Object)
+    private func _n_Append(_ value : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
+        }
+    }
+    public func Append(value : Optional<WinRT.IInspectable>) throws -> Void {
+        try self._n_Append(RawPointer(value));
+    }
+    // void RemoveAtEnd()
+    private func _n_RemoveAtEnd() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAtEnd(pThis))
+        }
+    }
+    public func RemoveAtEnd() throws -> Void {
+        try self._n_RemoveAtEnd();
+    }
+    // void Clear()
+    private func _n_Clear() throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.Clear(pThis))
+        }
+    }
+    public func Clear() throws -> Void {
+        try self._n_Clear();
+    }
+    // System.UInt32 GetMany(System.UInt32, System.Object[])
+    private func _n_GetMany(_ startIndex : UINT32, _ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>>, _ __presult: UnsafeMutablePointer<UINT32>?) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.GetMany(pThis, startIndex, itemsLength, items, __presult))
+        }
+    }
+    public func GetMany(startIndex : Swift.UInt32, itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>>) throws -> Swift.UInt32 {
+        var __result : UINT32 = 0;
+        try self._n_GetMany(startIndex, itemsLength, items, &__result);
+        return __result;
+    }
+    // void ReplaceAll(System.Object[])
+    private func _n_ReplaceAll(_ itemsLength : UINT32, _ items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>>) throws {
+        return try perform(as: _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceAll(pThis, itemsLength, items))
+        }
+    }
+    public func ReplaceAll(itemsLength : UINT32, items : Optional<UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>>) throws -> Void {
+        try self._n_ReplaceAll(itemsLength, items);
+    }
+    public var Size : Swift.UInt32 {
+        get throws {
+            return try get_Size();
+        }
+    }
+} // IVector_1_IInspectable
+// closed interface type
+public class IVectorView_1_IInspectable
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xa6487363, Data2: 0xb074, Data3 : 0x5c60, Data4 : (0xab, 0x16, 0x86, 0x6d, 0xce, 0x4e, 0xe5, 0x4d)) }
+// method not needed: GetAt
+// method not needed: get_Size
+// method not needed: IndexOf
+// method not needed: GetMany
+} // IVectorView_1_IInspectable
+// closed interface type
 public class IVectorView_1_FLOAT
     :
     WinRT.IInspectable

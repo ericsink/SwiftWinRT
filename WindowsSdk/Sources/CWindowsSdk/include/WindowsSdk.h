@@ -3530,6 +3530,10 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__cg_CWindows_CF
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint _cg_CWindows_CFoundation_CCollections_IIterator_1__cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint _cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CFoundation_CPoint;
 typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFoundation_CPoint _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFoundation_CPoint;
+typedef struct _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable;
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOAT;
 typedef struct _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect _cg_CWindows_CFoundation_IReference_1__q_CWindows_CFoundation_CRect;
 typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource _cg_CWindows_CFoundation_CCollections_IVector_1__q_CWindows_CGraphics_CEffects_CIGraphicsEffectSource;
@@ -26149,6 +26153,74 @@ typedef struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFo
 struct _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFoundation_CPoint
 {
     _cg_CWindows_CFoundation_CCollections_IIterator_1__q_CWindows_CFoundation_CPointVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* This, TrustLevel* trustLevel);
+    void* unneeded_add_VectorChanged;
+    void* unneeded_remove_VectorChanged;
+} _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable
+{
+    _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectableVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* Invoke)(_cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable* pThis, _cg_CWindows_CFoundation_CCollections_IObservableVector_1_IInspectable* sender, _q_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs* event);
+} _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectable
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1_IInspectableVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* GetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32 index, IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_Size)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* GetView)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable** __pret);
+    HRESULT (STDMETHODCALLTYPE* IndexOf)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, IInspectable* value, UINT32* index, boolean* __pret);
+    HRESULT (STDMETHODCALLTYPE* SetAt)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32 index, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* InsertAt)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32 index, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAt)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32 index);
+    HRESULT (STDMETHODCALLTYPE* Append)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, IInspectable* value);
+    HRESULT (STDMETHODCALLTYPE* RemoveAtEnd)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis);
+    HRESULT (STDMETHODCALLTYPE* Clear)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis);
+    HRESULT (STDMETHODCALLTYPE* GetMany)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32 startIndex, UINT32 itemsLength, IInspectable** items, UINT32* __pret);
+    HRESULT (STDMETHODCALLTYPE* ReplaceAll)(_cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable* pThis, UINT32 itemsLength, IInspectable** items);
+} _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectable
+{
+    _cg_CWindows_CFoundation_CCollections_IVector_1_IInspectableVtbl* lpVtbl;
+};
+typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectableVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable* This, TrustLevel* trustLevel);
+    void* unneeded_GetAt;
+    void* unneeded_get_Size;
+    void* unneeded_IndexOf;
+    void* unneeded_GetMany;
+} _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectableVtbl;
+struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectable
+{
+    _cg_CWindows_CFoundation_CCollections_IVectorView_1_IInspectableVtbl* lpVtbl;
 };
 typedef struct _cg_CWindows_CFoundation_CCollections_IVectorView_1_FLOATVtbl
 {
