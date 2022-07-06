@@ -19,6 +19,28 @@ func ms_to_s(ms: Int) -> Double {
     return Double(ms) / 1000.0
 }
 
+func mkv(x : Double, y : Double) -> cpVect {
+    return cpVect(x : x + 20, y : y + 20)
+}
+
+let x0 : Double = 467
+let x1 : Double = 315
+let x2 : Double = 125
+let x3 : Double = 9
+let x4 : Double = 33
+let x5 : Double = 185
+let x6 : Double = 375
+let x7 : Double = 491
+
+let y0 : Double = 125
+let y1 : Double = 9
+let y2 : Double = 33
+let y3 : Double = 185
+let y4 : Double = 375
+let y5 : Double = 491
+let y6 : Double = 467
+let y7 : Double = 315
+
 class MyApp : Microsoft.UI.Xaml.impl_Application {
     public override init() throws {
         self.Timer = try DispatcherTimer();
@@ -40,12 +62,14 @@ class MyApp : Microsoft.UI.Xaml.impl_Application {
     }
 
     let barrier = [
-        Seg(p0: cpVect(x:   0, y:  50), p1: cpVect(x:  50, y: 400), e: 0.5), // left wall
-        Seg(p0: cpVect(x:  50, y: 400), p1: cpVect(x: 300, y: 450), e: 1.0), // slope
-        Seg(p0: cpVect(x: 300, y: 450), p1: cpVect(x: 300, y: 500), e: 1.0), // down
-        Seg(p0: cpVect(x: 300, y: 500), p1: cpVect(x: 500, y: 500), e: 3.0), // horiz, bouncy
-        Seg(p0: cpVect(x: 500, y: 500), p1: cpVect(x: 600, y:   0), e: 2.0), // slope up
-        Seg(p0: cpVect(x: 600, y:   0), p1: cpVect(x:   0, y:  50), e: 0.5), // slope down back to beginning
+        Seg(p0: mkv(x: x0, y: y0), p1: mkv(x: x1, y: y1), e: 0.5),
+        Seg(p0: mkv(x: x1, y: y1), p1: mkv(x: x2, y: y2), e: 0.5),
+        Seg(p0: mkv(x: x2, y: y2), p1: mkv(x: x3, y: y3), e: 0.5),
+        Seg(p0: mkv(x: x3, y: y3), p1: mkv(x: x4, y: y4), e: 1.0),
+        Seg(p0: mkv(x: x4, y: y4), p1: mkv(x: x5, y: y5), e: 2.0),
+        Seg(p0: mkv(x: x5, y: y5), p1: mkv(x: x6, y: y6), e: 2.0),
+        Seg(p0: mkv(x: x6, y: y6), p1: mkv(x: x7, y: y7), e: 3.0),
+        Seg(p0: mkv(x: x7, y: y7), p1: mkv(x: x0, y: y0), e: 1.0),
     ]
 
     func canvasControl_Draw(sender : CanvasControl?, args: CanvasDrawEventArgs?) throws
@@ -75,7 +99,14 @@ class MyApp : Microsoft.UI.Xaml.impl_Application {
         for s in barrier {
             let p0 = Windows.Foundation.Numerics.Vector2(X: Float(s.p0.x), Y: Float(s.p0.y))
             let p1 = Windows.Foundation.Numerics.Vector2(X: Float(s.p1.x), Y: Float(s.p1.y))
-            try args!.DrawingSession!.DrawLine(point0: p0, point1: p1, color: Microsoft.UI.Colors.White, strokeWidth: 2);
+            var color : Windows.UI.Color = try Microsoft.UI.Colors.White
+            if s.e > 1 {
+                color = try Microsoft.UI.Colors.Red
+            }
+            else if s.e < 1 {
+                color = try Microsoft.UI.Colors.Yellow
+            }
+            try args!.DrawingSession!.DrawLine(point0: p0, point1: p1, color: color, strokeWidth: 4);
         }
     }
 
@@ -107,7 +138,7 @@ class MyApp : Microsoft.UI.Xaml.impl_Application {
         // ball 1
         self.body1 = cpBodyNew(10, cpMomentForCircle(10, 0, ballRadius, cpvzero))
         cpSpaceAddBody(self.space, self.body1)
-        cpBodySetPosition(self.body1, cpVect(x: 100, y: 100))
+        cpBodySetPosition(self.body1, mkv(x: 180, y: 250))
 
         let shape1 = cpCircleShapeNew(self.body1, ballRadius, cpVect(x: 0, y: 0))
         cpShapeSetElasticity(shape1, 0.7)
@@ -117,7 +148,7 @@ class MyApp : Microsoft.UI.Xaml.impl_Application {
         // ball 2
         self.body2 = cpBodyNew(20, cpMomentForCircle(20, 0, ballRadius, cpvzero))
         cpSpaceAddBody(self.space, self.body2)
-        cpBodySetPosition(self.body2, cpVect(x: 300, y: 100))
+        cpBodySetPosition(self.body2, mkv(x: 250, y: 250))
 
         let shape2 = cpCircleShapeNew(self.body2, ballRadius, cpVect(x: 0, y: 0))
         cpShapeSetElasticity(shape2, 0.7)
@@ -127,7 +158,7 @@ class MyApp : Microsoft.UI.Xaml.impl_Application {
         // ball 3
         self.body3 = cpBodyNew(1, cpMomentForCircle(1, 0, ballRadius, cpvzero))
         cpSpaceAddBody(self.space, self.body3)
-        cpBodySetPosition(self.body3, cpVect(x: 200, y: 100))
+        cpBodySetPosition(self.body3, mkv(x: 320, y: 250))
 
         let shape3 = cpCircleShapeNew(self.body3, ballRadius, cpVect(x: 0, y: 0))
         cpShapeSetElasticity(shape3, 0.7)
