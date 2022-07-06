@@ -210,13 +210,27 @@ open class impl_Application
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 2
-        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
+        do {
+            guard let self = impl_Application.from_IApplicationOverrides(pThis) else {
+                return E_INVALIDARG
+            }
+        let from_basetype = try self._inner.GetIids()
+        let num_interfaces = 2 + from_basetype.count
+        pLen.pointee = ULONG(num_interfaces)
+        var mem = CoTaskMemAlloc(UInt64(16 * num_interfaces)).bindMemory(to: IID.self, capacity: num_interfaces)
         (mem + 0).pointee = Microsoft.UI.Xaml.IApplicationOverrides.IID
         (mem + 1).pointee = Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID
+        for i in 0..<(from_basetype.count) {
+            (mem + i + 2).pointee = from_basetype[i]
+        }
         ppItems.pointee = mem
         return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     },
     GetRuntimeClassName: {
         guard let pThis = $0, let pstr = $1 else {
@@ -306,13 +320,27 @@ open class impl_Application
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
-        // TODO need to call _inner.GetIids and include those too
-        pLen.pointee = 2
-        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
+        do {
+            guard let self = impl_Application.from_IXamlMetadataProvider(pThis) else {
+                return E_INVALIDARG
+            }
+        let from_basetype = try self._inner.GetIids()
+        let num_interfaces = 2 + from_basetype.count
+        pLen.pointee = ULONG(num_interfaces)
+        var mem = CoTaskMemAlloc(UInt64(16 * num_interfaces)).bindMemory(to: IID.self, capacity: num_interfaces)
         (mem + 0).pointee = Microsoft.UI.Xaml.IApplicationOverrides.IID
         (mem + 1).pointee = Microsoft.UI.Xaml.Markup.IXamlMetadataProvider.IID
+        for i in 0..<(from_basetype.count) {
+            (mem + i + 2).pointee = from_basetype[i]
+        }
         ppItems.pointee = mem
         return S_OK;
+        }
+        catch let _e as WinRT.Error {
+            return _e.hr;
+        } catch {
+            return E_FAIL
+        }
     },
     GetRuntimeClassName: {
         guard let pThis = $0, let pstr = $1 else {

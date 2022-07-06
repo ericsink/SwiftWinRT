@@ -394,8 +394,9 @@ open class AsyncAction
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
-        pLen.pointee = 2
-        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
+        let num_interfaces = 2
+        pLen.pointee = ULONG(num_interfaces)
+        var mem = CoTaskMemAlloc(UInt64(16 * num_interfaces)).bindMemory(to: IID.self, capacity: num_interfaces)
         (mem + 0).pointee = Windows.Foundation.IAsyncInfo.IID
         (mem + 1).pointee = Windows.Foundation.IAsyncAction.IID
         ppItems.pointee = mem
@@ -550,8 +551,9 @@ open class AsyncAction
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
-        pLen.pointee = 2
-        var mem = CoTaskMemAlloc(32).bindMemory(to: IID.self, capacity: 2)
+        let num_interfaces = 2
+        pLen.pointee = ULONG(num_interfaces)
+        var mem = CoTaskMemAlloc(UInt64(16 * num_interfaces)).bindMemory(to: IID.self, capacity: num_interfaces)
         (mem + 0).pointee = Windows.Foundation.IAsyncInfo.IID
         (mem + 1).pointee = Windows.Foundation.IAsyncAction.IID
         ppItems.pointee = mem

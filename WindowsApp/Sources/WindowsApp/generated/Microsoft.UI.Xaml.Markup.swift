@@ -178,8 +178,9 @@ open class XamlMember
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
-        pLen.pointee = 1
-        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
+        let num_interfaces = 1
+        pLen.pointee = ULONG(num_interfaces)
+        var mem = CoTaskMemAlloc(UInt64(16 * num_interfaces)).bindMemory(to: IID.self, capacity: num_interfaces)
         (mem + 0).pointee = Microsoft.UI.Xaml.Markup.IXamlMember.IID
         ppItems.pointee = mem
         return S_OK;
@@ -749,8 +750,9 @@ open class XamlType
         guard let pThis = $0, let pLen = $1, let ppItems = $2 else {
             return E_INVALIDARG
         }
-        pLen.pointee = 1
-        var mem = CoTaskMemAlloc(16).bindMemory(to: IID.self, capacity: 1)
+        let num_interfaces = 1
+        pLen.pointee = ULONG(num_interfaces)
+        var mem = CoTaskMemAlloc(UInt64(16 * num_interfaces)).bindMemory(to: IID.self, capacity: num_interfaces)
         (mem + 0).pointee = Microsoft.UI.Xaml.Markup.IXamlType.IID
         ppItems.pointee = mem
         return S_OK;
