@@ -23,12 +23,12 @@ open class MyAsyncAction : Windows.Foundation.AsyncAction {
         // TODO what calls this?
         _del = nil
     }
-    private var _del : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> = nil
-    open override func put_Completed(handler : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler>) throws -> Void {
+    private var _del : Optional<Windows.Foundation.wrap_AsyncActionCompletedHandler> = nil
+    open override func put_Completed(handler : Optional<Windows.Foundation.wrap_AsyncActionCompletedHandler>) throws -> Void {
         //print("MyActionAction.put_Completed")
         _del = handler;
     }
-    open override func get_Completed() throws -> Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> {
+    open override func get_Completed() throws -> Optional<Windows.Foundation.wrap_AsyncActionCompletedHandler> {
         //print("MyActionAction.get_Completed")
         return nil;
     }

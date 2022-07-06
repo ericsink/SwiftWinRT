@@ -428,7 +428,7 @@ open class ContextMenuOpeningEventHandler
     }
 }
 // wrap delegate type
-open class foo_ContextMenuOpeningEventHandler
+open class wrap_ContextMenuOpeningEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler;
     public init(plok: Microsoft.UI.Xaml.Controls.IContextMenuOpeningEventHandler?) throws {
@@ -10800,7 +10800,7 @@ open class TextChangedEventHandler
     }
 }
 // wrap delegate type
-open class foo_TextChangedEventHandler
+open class wrap_TextChangedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Controls.ITextChangedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Controls.ITextChangedEventHandler?) throws {
@@ -11003,7 +11003,7 @@ open class TextControlPasteEventHandler
     }
 }
 // wrap delegate type
-open class foo_TextControlPasteEventHandler
+open class wrap_TextControlPasteEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler;
     public init(plok: Microsoft.UI.Xaml.Controls.ITextControlPasteEventHandler?) throws {

@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CBasicProperties
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CBasicProperties
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CBasicProperties;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CBasicProperties?) throws {
@@ -290,7 +290,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CStorageItemThumbnail?) throws {
@@ -438,7 +438,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CMusicProperties
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CMusicProperties
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CMusicProperties;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CMusicProperties?) throws {
@@ -586,7 +586,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CVideoProperties
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CVideoProperties
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CVideoProperties;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CVideoProperties?) throws {
@@ -734,7 +734,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CImageProperties
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CImageProperties
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CImageProperties;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CImageProperties?) throws {
@@ -882,7 +882,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CDocumentProperties
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CDocumentProperties
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CDocumentProperties;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CFileProperties_CDocumentProperties?) throws {

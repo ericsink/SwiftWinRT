@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument?) throws {

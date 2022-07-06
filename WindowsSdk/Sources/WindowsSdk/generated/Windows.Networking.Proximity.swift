@@ -124,7 +124,7 @@ open class DeviceArrivedEventHandler
     }
 }
 // wrap delegate type
-open class foo_DeviceArrivedEventHandler
+open class wrap_DeviceArrivedEventHandler
 {
     private var _self : Windows.Networking.Proximity.IDeviceArrivedEventHandler;
     public init(plok: Windows.Networking.Proximity.IDeviceArrivedEventHandler?) throws {
@@ -231,7 +231,7 @@ open class DeviceDepartedEventHandler
     }
 }
 // wrap delegate type
-open class foo_DeviceDepartedEventHandler
+open class wrap_DeviceDepartedEventHandler
 {
     private var _self : Windows.Networking.Proximity.IDeviceDepartedEventHandler;
     public init(plok: Windows.Networking.Proximity.IDeviceDepartedEventHandler?) throws {
@@ -1336,7 +1336,7 @@ open class MessageReceivedHandler
     }
 }
 // wrap delegate type
-open class foo_MessageReceivedHandler
+open class wrap_MessageReceivedHandler
 {
     private var _self : Windows.Networking.Proximity.IMessageReceivedHandler;
     public init(plok: Windows.Networking.Proximity.IMessageReceivedHandler?) throws {
@@ -1443,7 +1443,7 @@ open class MessageTransmittedHandler
     }
 }
 // wrap delegate type
-open class foo_MessageTransmittedHandler
+open class wrap_MessageTransmittedHandler
 {
     private var _self : Windows.Networking.Proximity.IMessageTransmittedHandler;
     public init(plok: Windows.Networking.Proximity.IMessageTransmittedHandler?) throws {

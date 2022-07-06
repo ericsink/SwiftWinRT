@@ -135,7 +135,7 @@ open class AsyncActionCompletedHandler
     }
 }
 // wrap delegate type
-open class foo_AsyncActionCompletedHandler
+open class wrap_AsyncActionCompletedHandler
 {
     private var _self : Windows.Foundation.IAsyncActionCompletedHandler;
     public init(plok: Windows.Foundation.IAsyncActionCompletedHandler?) throws {
@@ -274,7 +274,7 @@ open class DeferralCompletedHandler
     }
 }
 // wrap delegate type
-open class foo_DeferralCompletedHandler
+open class wrap_DeferralCompletedHandler
 {
     private var _self : Windows.Foundation.IDeferralCompletedHandler;
     public init(plok: Windows.Foundation.IDeferralCompletedHandler?) throws {
@@ -586,7 +586,7 @@ open class AsyncAction
             return E_INVALIDARG
         }
         do {
-            let _ret : Void = try self.put_Completed(handler: Windows.Foundation.foo_AsyncActionCompletedHandler(plok: Windows.Foundation.IAsyncActionCompletedHandler(handler)))
+            let _ret : Void = try self.put_Completed(handler: Windows.Foundation.wrap_AsyncActionCompletedHandler(plok: Windows.Foundation.IAsyncActionCompletedHandler(handler)))
             return S_OK
         }
         catch let _e as WinRT.Error {
@@ -601,7 +601,7 @@ open class AsyncAction
             return E_INVALIDARG
         }
         do {
-            let _ret : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> = try self.get_Completed()
+            let _ret : Optional<Windows.Foundation.wrap_AsyncActionCompletedHandler> = try self.get_Completed()
             __presult!.pointee = nil;
             return S_OK
         }
@@ -651,10 +651,10 @@ open class AsyncAction
     open func Close() throws -> Void {
     print("\(#file) \(#line) \(#function)")
     }
-    open func put_Completed(handler : Optional<Windows.Foundation.foo_AsyncActionCompletedHandler>) throws -> Void {
+    open func put_Completed(handler : Optional<Windows.Foundation.wrap_AsyncActionCompletedHandler>) throws -> Void {
     print("\(#file) \(#line) \(#function)")
     }
-    open func get_Completed() throws -> Optional<Windows.Foundation.foo_AsyncActionCompletedHandler> {
+    open func get_Completed() throws -> Optional<Windows.Foundation.wrap_AsyncActionCompletedHandler> {
     print("\(#file) \(#line) \(#function)")
     return nil;
     }

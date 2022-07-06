@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem?) throws {
@@ -290,7 +290,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile?) throws {
@@ -438,7 +438,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder?) throws {
@@ -586,7 +586,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationDat
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData?) throws {
@@ -691,7 +691,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectabl
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable?) throws {
@@ -850,7 +850,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamT
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction?) throws {
@@ -998,7 +998,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile?) throws {
@@ -1157,7 +1157,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder?) throws {
@@ -1316,7 +1316,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem?) throws {
@@ -1494,7 +1494,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary?) throws {
@@ -1608,7 +1608,7 @@ open class VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
     }
 }
 // wrap delegate type
-open class foo_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
+open class wrap_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
 {
     private var _self : ClosedGenerics.IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder;
     public init(plok: ClosedGenerics.IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder?) throws {
@@ -1713,7 +1713,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable?) throws {
@@ -1861,7 +1861,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange?) throws {
@@ -2020,7 +2020,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAc
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus?) throws {

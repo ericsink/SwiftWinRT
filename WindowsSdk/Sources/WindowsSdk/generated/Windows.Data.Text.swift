@@ -1273,7 +1273,7 @@ open class SelectableWordSegmentsTokenizingHandler
     }
 }
 // wrap delegate type
-open class foo_SelectableWordSegmentsTokenizingHandler
+open class wrap_SelectableWordSegmentsTokenizingHandler
 {
     private var _self : Windows.Data.Text.ISelectableWordSegmentsTokenizingHandler;
     public init(plok: Windows.Data.Text.ISelectableWordSegmentsTokenizingHandler?) throws {
@@ -1848,7 +1848,7 @@ open class WordSegmentsTokenizingHandler
     }
 }
 // wrap delegate type
-open class foo_WordSegmentsTokenizingHandler
+open class wrap_WordSegmentsTokenizingHandler
 {
     private var _self : Windows.Data.Text.IWordSegmentsTokenizingHandler;
     public init(plok: Windows.Data.Text.IWordSegmentsTokenizingHandler?) throws {

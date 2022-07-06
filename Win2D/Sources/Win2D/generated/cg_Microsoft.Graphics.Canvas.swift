@@ -146,7 +146,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
+open class wrap_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap?) throws {
@@ -251,7 +251,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IIn
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
+open class wrap_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable?) throws {
@@ -407,7 +407,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
+open class wrap_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap?) throws {

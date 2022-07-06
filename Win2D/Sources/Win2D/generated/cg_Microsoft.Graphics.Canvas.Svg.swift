@@ -146,7 +146,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
+open class wrap_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument?) throws {
@@ -294,7 +294,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
+open class wrap_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement?) throws {

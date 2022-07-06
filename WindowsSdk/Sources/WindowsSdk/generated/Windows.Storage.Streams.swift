@@ -244,18 +244,18 @@ public class DataReaderLoadOperation
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
         return try _ifc.put_Completed(handler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
     }
-    public func get_Completed() throws -> Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+    public func get_Completed() throws -> Optional<ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32> {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
-        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.get_Completed());
+        return try ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.get_Completed());
     }
     public func GetResults() throws -> Swift.UInt32 {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
         return try _ifc.GetResults();
     }
-    public var Completed : Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+    public var Completed : Optional<ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32> {
         get throws {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
-        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.Completed);
+        return try ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.Completed);
         }
     }
     public func get_Id() throws -> Swift.UInt32 {
@@ -476,18 +476,18 @@ public class DataWriterStoreOperation
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
         return try _ifc.put_Completed(handler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
     }
-    public func get_Completed() throws -> Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+    public func get_Completed() throws -> Optional<ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32> {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
-        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.get_Completed());
+        return try ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.get_Completed());
     }
     public func GetResults() throws -> Swift.UInt32 {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
         return try _ifc.GetResults();
     }
-    public var Completed : Optional<ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32> {
+    public var Completed : Optional<ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32> {
         get throws {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
-        return try ClosedGenerics.foo_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.Completed);
+        return try ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32(plok: _ifc.Completed);
         }
     }
     public func get_Id() throws -> Swift.UInt32 {

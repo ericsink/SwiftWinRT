@@ -99,7 +99,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs
+open class wrap_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs?) throws {
@@ -204,7 +204,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable?) throws {
@@ -668,7 +668,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFile
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus?) throws {

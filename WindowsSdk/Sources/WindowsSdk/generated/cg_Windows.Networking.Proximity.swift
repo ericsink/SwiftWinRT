@@ -99,7 +99,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation
+open class wrap_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation?) throws {
@@ -204,7 +204,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_I
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable?) throws {
@@ -309,7 +309,7 @@ open class TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_C
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
+open class wrap_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs?) throws {
@@ -414,7 +414,7 @@ open class TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_C
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
+open class wrap_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs?) throws {
@@ -562,7 +562,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CProximity_CPeerInformation?) throws {

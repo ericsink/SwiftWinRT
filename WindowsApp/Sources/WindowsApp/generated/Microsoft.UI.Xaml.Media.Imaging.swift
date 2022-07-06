@@ -438,7 +438,7 @@ open class DownloadProgressEventHandler
     }
 }
 // wrap delegate type
-open class foo_DownloadProgressEventHandler
+open class wrap_DownloadProgressEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler;
     public init(plok: Microsoft.UI.Xaml.Media.Imaging.IDownloadProgressEventHandler?) throws {

@@ -99,7 +99,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlMoveFocusRequestedEventArgs
+open class wrap_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlMoveFocusRequestedEventArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlMoveFocusRequestedEventArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlMoveFocusRequestedEventArgs?) throws {
@@ -204,7 +204,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlAcceleratorKeyPressedEventArgs
+open class wrap_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlAcceleratorKeyPressedEventArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlAcceleratorKeyPressedEventArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlAcceleratorKeyPressedEventArgs?) throws {
@@ -309,7 +309,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IIn
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable?) throws {
@@ -457,7 +457,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CWeb_CUI_CInterop_CWebVi
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CWeb_CUI_CInterop_CWebViewControl
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CWeb_CUI_CInterop_CWebViewControl
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CWeb_CUI_CInterop_CWebViewControl;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CWeb_CUI_CInterop_CWebViewControl?) throws {
@@ -573,7 +573,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProc
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProcess_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProcess_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProcess_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProcess_IInspectable?) throws {

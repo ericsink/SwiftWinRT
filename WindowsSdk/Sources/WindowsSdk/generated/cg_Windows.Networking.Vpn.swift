@@ -99,7 +99,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs
+open class wrap_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs?) throws {
@@ -215,7 +215,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs
+open class wrap_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs?) throws {
@@ -374,7 +374,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCre
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential?) throws {
@@ -665,7 +665,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnMan
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus?) throws {
@@ -813,7 +813,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile?) throws {

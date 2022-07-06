@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutp
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream?) throws {
@@ -290,7 +290,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream?) throws {
@@ -438,7 +438,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInpu
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream?) throws {
@@ -586,7 +586,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType?) throws {
@@ -759,7 +759,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
+open class wrap_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32?) throws {
@@ -864,7 +864,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
+open class wrap_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32?) throws {
@@ -1012,7 +1012,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuff
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer?) throws {
@@ -1185,7 +1185,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
+open class wrap_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress?) throws {
@@ -1290,7 +1290,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
+open class wrap_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress?) throws {
@@ -1463,7 +1463,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
+open class wrap_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64?) throws {
@@ -1568,7 +1568,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
+open class wrap_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64?) throws {
@@ -1741,7 +1741,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
+open class wrap_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64?) throws {
@@ -1846,7 +1846,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
+open class wrap_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64?) throws {

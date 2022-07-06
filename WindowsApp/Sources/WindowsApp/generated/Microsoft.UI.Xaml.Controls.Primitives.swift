@@ -1216,7 +1216,7 @@ open class RangeBaseValueChangedEventHandler
     }
 }
 // wrap delegate type
-open class foo_RangeBaseValueChangedEventHandler
+open class wrap_RangeBaseValueChangedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Controls.Primitives.IRangeBaseValueChangedEventHandler?) throws {

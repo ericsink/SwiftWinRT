@@ -541,7 +541,7 @@ open class ApplicationInitializationCallback
     }
 }
 // wrap delegate type
-open class foo_ApplicationInitializationCallback
+open class wrap_ApplicationInitializationCallback
 {
     private var _self : Microsoft.UI.Xaml.IApplicationInitializationCallback;
     public init(plok: Microsoft.UI.Xaml.IApplicationInitializationCallback?) throws {
@@ -904,7 +904,7 @@ open class DependencyPropertyChangedCallback
     }
 }
 // wrap delegate type
-open class foo_DependencyPropertyChangedCallback
+open class wrap_DependencyPropertyChangedCallback
 {
     private var _self : Microsoft.UI.Xaml.IDependencyPropertyChangedCallback;
     public init(plok: Microsoft.UI.Xaml.IDependencyPropertyChangedCallback?) throws {
@@ -1028,7 +1028,7 @@ open class DependencyPropertyChangedEventHandler
     }
 }
 // wrap delegate type
-open class foo_DependencyPropertyChangedEventHandler
+open class wrap_DependencyPropertyChangedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler;
     public init(plok: Microsoft.UI.Xaml.IDependencyPropertyChangedEventHandler?) throws {
@@ -1223,7 +1223,7 @@ open class DragEventHandler
     }
 }
 // wrap delegate type
-open class foo_DragEventHandler
+open class wrap_DragEventHandler
 {
     private var _self : Microsoft.UI.Xaml.IDragEventHandler;
     public init(plok: Microsoft.UI.Xaml.IDragEventHandler?) throws {
@@ -1414,7 +1414,7 @@ open class ExceptionRoutedEventHandler
     }
 }
 // wrap delegate type
-open class foo_ExceptionRoutedEventHandler
+open class wrap_ExceptionRoutedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.IExceptionRoutedEventHandler;
     public init(plok: Microsoft.UI.Xaml.IExceptionRoutedEventHandler?) throws {
@@ -9321,7 +9321,7 @@ open class RoutedEventHandler
     }
 }
 // wrap delegate type
-open class foo_RoutedEventHandler
+open class wrap_RoutedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.IRoutedEventHandler;
     public init(plok: Microsoft.UI.Xaml.IRoutedEventHandler?) throws {
@@ -9468,7 +9468,7 @@ open class SizeChangedEventHandler
     }
 }
 // wrap delegate type
-open class foo_SizeChangedEventHandler
+open class wrap_SizeChangedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.ISizeChangedEventHandler;
     public init(plok: Microsoft.UI.Xaml.ISizeChangedEventHandler?) throws {
@@ -11730,7 +11730,7 @@ open class UnhandledExceptionEventHandler
     }
 }
 // wrap delegate type
-open class foo_UnhandledExceptionEventHandler
+open class wrap_UnhandledExceptionEventHandler
 {
     private var _self : Microsoft.UI.Xaml.IUnhandledExceptionEventHandler;
     public init(plok: Microsoft.UI.Xaml.IUnhandledExceptionEventHandler?) throws {

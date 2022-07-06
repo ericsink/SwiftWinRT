@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CDevices_CGeolocation_CG
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CDevices_CGeolocation_CGeopoint
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CDevices_CGeolocation_CGeopoint
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CDevices_CGeolocation_CGeopoint;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CDevices_CGeolocation_CGeopoint?) throws {

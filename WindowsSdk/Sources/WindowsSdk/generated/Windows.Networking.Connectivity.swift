@@ -3714,7 +3714,7 @@ open class NetworkStatusChangedEventHandler
     }
 }
 // wrap delegate type
-open class foo_NetworkStatusChangedEventHandler
+open class wrap_NetworkStatusChangedEventHandler
 {
     private var _self : Windows.Networking.Connectivity.INetworkStatusChangedEventHandler;
     public init(plok: Windows.Networking.Connectivity.INetworkStatusChangedEventHandler?) throws {

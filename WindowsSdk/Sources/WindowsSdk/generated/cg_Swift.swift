@@ -242,7 +242,7 @@ open class AsyncOperationCompletedHandler_1_boolean
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1_boolean
+open class wrap_AsyncOperationCompletedHandler_1_boolean
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1_boolean;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1_boolean?) throws {
@@ -448,7 +448,7 @@ open class AsyncOperationProgressHandler_2_UINT32_UINT32
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2_UINT32_UINT32
+open class wrap_AsyncOperationProgressHandler_2_UINT32_UINT32
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2_UINT32_UINT32;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2_UINT32_UINT32?) throws {
@@ -553,7 +553,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
+open class wrap_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32?) throws {
@@ -821,7 +821,7 @@ open class EventHandler_1_IInspectable
     }
 }
 // wrap delegate type
-open class foo_EventHandler_1_IInspectable
+open class wrap_EventHandler_1_IInspectable
 {
     private var _self : ClosedGenerics.IEventHandler_1_IInspectable;
     public init(plok: ClosedGenerics.IEventHandler_1_IInspectable?) throws {
@@ -969,7 +969,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING?) throws {
@@ -1136,7 +1136,7 @@ open class AsyncOperationCompletedHandler_1_HSTRING
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1_HSTRING
+open class wrap_AsyncOperationCompletedHandler_1_HSTRING
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1_HSTRING;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1_HSTRING?) throws {
@@ -1250,7 +1250,7 @@ open class MapChangedEventHandler_2_HSTRING_IInspectable
     }
 }
 // wrap delegate type
-open class foo_MapChangedEventHandler_2_HSTRING_IInspectable
+open class wrap_MapChangedEventHandler_2_HSTRING_IInspectable
 {
     private var _self : ClosedGenerics.IMapChangedEventHandler_2_HSTRING_IInspectable;
     public init(plok: ClosedGenerics.IMapChangedEventHandler_2_HSTRING_IInspectable?) throws {
@@ -1460,7 +1460,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable?) throws {
@@ -1661,7 +1661,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable?) throws {
@@ -1809,7 +1809,7 @@ open class AsyncOperationCompletedHandler_1_UINT32
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1_UINT32
+open class wrap_AsyncOperationCompletedHandler_1_UINT32
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1_UINT32;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1_UINT32?) throws {
@@ -1957,7 +1957,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable?) throws {
@@ -2116,7 +2116,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING?) throws {
@@ -2289,7 +2289,7 @@ open class AsyncOperationProgressHandler_2_UINT64_UINT64
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2_UINT64_UINT64
+open class wrap_AsyncOperationProgressHandler_2_UINT64_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2_UINT64_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2_UINT64_UINT64?) throws {
@@ -2394,7 +2394,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
+open class wrap_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64?) throws {
@@ -2595,7 +2595,7 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationProgressHandler_2_HSTRING_UINT64
+open class wrap_AsyncOperationProgressHandler_2_HSTRING_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationProgressHandler_2_HSTRING_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationProgressHandler_2_HSTRING_UINT64?) throws {
@@ -2700,7 +2700,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
+open class wrap_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 {
     private var _self : ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64;
     public init(plok: ClosedGenerics.IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64?) throws {

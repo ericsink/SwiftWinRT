@@ -553,7 +553,7 @@ open class ApplicationDataSetVersionHandler
     }
 }
 // wrap delegate type
-open class foo_ApplicationDataSetVersionHandler
+open class wrap_ApplicationDataSetVersionHandler
 {
     private var _self : Windows.Storage.IApplicationDataSetVersionHandler;
     public init(plok: Windows.Storage.IApplicationDataSetVersionHandler?) throws {
@@ -8475,7 +8475,7 @@ open class StreamedFileDataRequestedHandler
     }
 }
 // wrap delegate type
-open class foo_StreamedFileDataRequestedHandler
+open class wrap_StreamedFileDataRequestedHandler
 {
     private var _self : Windows.Storage.IStreamedFileDataRequestedHandler;
     public init(plok: Windows.Storage.IStreamedFileDataRequestedHandler?) throws {

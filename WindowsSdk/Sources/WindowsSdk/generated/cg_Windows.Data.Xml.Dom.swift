@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument?) throws {

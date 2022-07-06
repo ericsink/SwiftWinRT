@@ -142,7 +142,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexe
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState
+open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState?) throws {
@@ -309,7 +309,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
 }
 // wrap delegate type
-open class foo_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent
+open class wrap_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent
 {
     private var _self : ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent;
     public init(plok: ClosedGenerics.IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent?) throws {
@@ -568,7 +568,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResult
     }
 }
 // wrap delegate type
-open class foo_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable
+open class wrap_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable
 {
     private var _self : ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable;
     public init(plok: ClosedGenerics.ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable?) throws {

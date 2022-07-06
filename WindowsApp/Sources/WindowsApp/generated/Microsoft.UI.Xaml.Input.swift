@@ -198,7 +198,7 @@ open class DoubleTappedEventHandler
     }
 }
 // wrap delegate type
-open class foo_DoubleTappedEventHandler
+open class wrap_DoubleTappedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IDoubleTappedEventHandler?) throws {
@@ -354,7 +354,7 @@ open class HoldingEventHandler
     }
 }
 // wrap delegate type
-open class foo_HoldingEventHandler
+open class wrap_HoldingEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IHoldingEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IHoldingEventHandler?) throws {
@@ -1027,7 +1027,7 @@ open class KeyEventHandler
     }
 }
 // wrap delegate type
-open class foo_KeyEventHandler
+open class wrap_KeyEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IKeyEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IKeyEventHandler?) throws {
@@ -1292,7 +1292,7 @@ open class ManipulationCompletedEventHandler
     }
 }
 // wrap delegate type
-open class foo_ManipulationCompletedEventHandler
+open class wrap_ManipulationCompletedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IManipulationCompletedEventHandler?) throws {
@@ -1425,7 +1425,7 @@ open class ManipulationDeltaEventHandler
     }
 }
 // wrap delegate type
-open class foo_ManipulationDeltaEventHandler
+open class wrap_ManipulationDeltaEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IManipulationDeltaEventHandler?) throws {
@@ -1560,7 +1560,7 @@ open class ManipulationInertiaStartingEventHandler
     }
 }
 // wrap delegate type
-open class foo_ManipulationInertiaStartingEventHandler
+open class wrap_ManipulationInertiaStartingEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IManipulationInertiaStartingEventHandler?) throws {
@@ -1702,7 +1702,7 @@ open class ManipulationStartedEventHandler
     }
 }
 // wrap delegate type
-open class foo_ManipulationStartedEventHandler
+open class wrap_ManipulationStartedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IManipulationStartedEventHandler?) throws {
@@ -1838,7 +1838,7 @@ open class ManipulationStartingEventHandler
     }
 }
 // wrap delegate type
-open class foo_ManipulationStartingEventHandler
+open class wrap_ManipulationStartingEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IManipulationStartingEventHandler?) throws {
@@ -2007,7 +2007,7 @@ open class PointerEventHandler
     }
 }
 // wrap delegate type
-open class foo_PointerEventHandler
+open class wrap_PointerEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IPointerEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IPointerEventHandler?) throws {
@@ -2153,7 +2153,7 @@ open class RightTappedEventHandler
     }
 }
 // wrap delegate type
-open class foo_RightTappedEventHandler
+open class wrap_RightTappedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.IRightTappedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.IRightTappedEventHandler?) throws {
@@ -2282,7 +2282,7 @@ open class TappedEventHandler
     }
 }
 // wrap delegate type
-open class foo_TappedEventHandler
+open class wrap_TappedEventHandler
 {
     private var _self : Microsoft.UI.Xaml.Input.ITappedEventHandler;
     public init(plok: Microsoft.UI.Xaml.Input.ITappedEventHandler?) throws {
