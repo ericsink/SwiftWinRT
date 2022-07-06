@@ -583,7 +583,7 @@ public class CanvasDevice
     }
     public func add_DeviceLost(value : @escaping (Optional<Microsoft.Graphics.Canvas.CanvasDevice>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();
-        return try _ifc.add_DeviceLost(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(cb: value).Interface());
+        return try _ifc.add_DeviceLost(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(cb: value).Interface());
     }
     public func remove_DeviceLost(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.ICanvasDevice = try _self.QueryInterface();

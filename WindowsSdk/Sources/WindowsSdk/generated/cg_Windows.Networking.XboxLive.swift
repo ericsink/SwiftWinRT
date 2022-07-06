@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDev
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectableVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDevice
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDevice
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDevice
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.XboxLive.XboxLiveDeviceAddress>, args : Optional<WinRT.Object>) throws -> Void {
@@ -129,7 +129,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEnd
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -147,19 +147,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpoi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairStateChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -174,7 +174,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpoi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs
@@ -188,8 +188,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpoi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.XboxLive.XboxLiveEndpointPair>, args : Optional<Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs>) throws -> Void {
@@ -245,7 +245,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEnd
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgsVtbl = .init(
     QueryInterface: {
@@ -263,19 +263,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpoi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveInboundEndpointPairCreatedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -290,7 +290,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpoi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs
@@ -304,8 +304,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpoi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate>, args : Optional<Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs>) throws -> Void {
@@ -393,7 +393,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResultVtbl = .init(
     QueryInterface: {
@@ -411,19 +411,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CX
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -438,7 +438,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CX
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult
@@ -452,8 +452,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CX
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -802,7 +802,7 @@ public class IVectorView_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveQualityOfS
 } // IVectorView_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveQualityOfServicePrivatePayloadResult
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -820,7 +820,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXb
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

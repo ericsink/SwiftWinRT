@@ -1734,7 +1734,7 @@ public class ImageBrush
     }
     public func add_ImageFailed(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
-        return try _ifc.add_ImageFailed(handler: Microsoft.UI.Xaml.ExceptionRoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ImageFailed(handler: Microsoft.UI.Xaml.impl_ExceptionRoutedEventHandler(cb: handler).Interface());
     }
     public func remove_ImageFailed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
@@ -1742,7 +1742,7 @@ public class ImageBrush
     }
     public func add_ImageOpened(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();
-        return try _ifc.add_ImageOpened(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ImageOpened(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_ImageOpened(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Media.IImageBrush = try _self.QueryInterface();

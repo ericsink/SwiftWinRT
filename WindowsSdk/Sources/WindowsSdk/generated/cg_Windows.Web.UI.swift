@@ -35,7 +35,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgsVtbl = .init(
     QueryInterface: {
@@ -53,19 +53,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlNavigationStartingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -80,7 +80,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs
@@ -94,8 +94,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlNavigationStartingEventArgs>) throws -> Void {
@@ -140,7 +140,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgsVtbl = .init(
     QueryInterface: {
@@ -158,19 +158,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlContentLoadingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -185,7 +185,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs
@@ -199,8 +199,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlContentLoadingEventArgs>) throws -> Void {
@@ -245,7 +245,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgsVtbl = .init(
     QueryInterface: {
@@ -263,19 +263,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlDOMContentLoadedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -290,7 +290,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs
@@ -304,8 +304,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs>) throws -> Void {
@@ -350,7 +350,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgsVtbl = .init(
     QueryInterface: {
@@ -368,19 +368,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlNavigationCompletedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -395,7 +395,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs
@@ -409,8 +409,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlNavigationCompletedEventArgs>) throws -> Void {
@@ -455,7 +455,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgsVtbl = .init(
     QueryInterface: {
@@ -473,19 +473,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlScriptNotifyEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -500,7 +500,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs
@@ -514,8 +514,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlScriptNotifyEventArgs>) throws -> Void {
@@ -560,7 +560,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgsVtbl = .init(
     QueryInterface: {
@@ -578,19 +578,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlLongRunningScriptDetectedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -605,7 +605,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs
@@ -619,8 +619,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs>) throws -> Void {
@@ -665,7 +665,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspect
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectableVtbl = .init(
     QueryInterface: {
@@ -683,19 +683,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectabl
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -710,7 +710,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectabl
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable
@@ -724,8 +724,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectabl
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<WinRT.Object>) throws -> Void {
@@ -770,7 +770,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgsVtbl = .init(
     QueryInterface: {
@@ -788,19 +788,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlUnviewableContentIdentifiedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -815,7 +815,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs
@@ -829,8 +829,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs>) throws -> Void {
@@ -875,7 +875,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -893,19 +893,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlPermissionRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -920,7 +920,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs
@@ -934,8 +934,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlPermissionRequestedEventArgs>) throws -> Void {
@@ -980,7 +980,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgsVtbl = .init(
     QueryInterface: {
@@ -998,19 +998,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlUnsupportedUriSchemeIdentifiedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1025,7 +1025,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs
@@ -1039,8 +1039,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>) throws -> Void {
@@ -1085,7 +1085,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1103,19 +1103,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlNewWindowRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1130,7 +1130,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs
@@ -1144,8 +1144,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs>) throws -> Void {
@@ -1190,7 +1190,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWind
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1208,19 +1208,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControl>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CUI_CIWebViewControlWebResourceRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1235,7 +1235,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs
@@ -1249,8 +1249,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.UI.IWebViewControl>, args : Optional<Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs>) throws -> Void {

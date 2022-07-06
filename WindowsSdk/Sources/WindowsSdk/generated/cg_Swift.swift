@@ -167,7 +167,7 @@ public class IAsyncOperationCompletedHandler_1_boolean
     }
 } // IAsyncOperationCompletedHandler_1_boolean
 // impl delegate type
-open class AsyncOperationCompletedHandler_1_boolean
+open class impl_AsyncOperationCompletedHandler_1_boolean
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_booleanVtbl = .init(
     QueryInterface: {
@@ -185,19 +185,19 @@ open class AsyncOperationCompletedHandler_1_boolean
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1_boolean.from_AsyncOperationCompletedHandler_1_boolean(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1_boolean.from_impl_AsyncOperationCompletedHandler_1_boolean(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -212,7 +212,7 @@ open class AsyncOperationCompletedHandler_1_boolean
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1_boolean? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1_boolean? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean
@@ -226,8 +226,8 @@ open class AsyncOperationCompletedHandler_1_boolean
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_boolean(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1_boolean(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1_boolean? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1_boolean(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1_boolean? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1_boolean.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1_boolean>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -373,7 +373,7 @@ public class IAsyncOperationProgressHandler_2_UINT32_UINT32
     }
 } // IAsyncOperationProgressHandler_2_UINT32_UINT32
 // impl delegate type
-open class AsyncOperationProgressHandler_2_UINT32_UINT32
+open class impl_AsyncOperationProgressHandler_2_UINT32_UINT32
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_UINT32_UINT32Vtbl = .init(
     QueryInterface: {
@@ -391,19 +391,19 @@ open class AsyncOperationProgressHandler_2_UINT32_UINT32
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT32_UINT32>>, _ progressInfo : UINT32) in
-        guard let self = AsyncOperationProgressHandler_2_UINT32_UINT32.from_AsyncOperationProgressHandler_2_UINT32_UINT32(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2_UINT32_UINT32.from_impl_AsyncOperationProgressHandler_2_UINT32_UINT32(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -418,7 +418,7 @@ open class AsyncOperationProgressHandler_2_UINT32_UINT32
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2_UINT32_UINT32? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2_UINT32_UINT32? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_UINT32_UINT32
@@ -432,8 +432,8 @@ open class AsyncOperationProgressHandler_2_UINT32_UINT32
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_UINT32_UINT32(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2_UINT32_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2_UINT32_UINT32? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2_UINT32_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2_UINT32_UINT32? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32>, progressInfo : Swift.UInt32) throws -> Void {
@@ -478,7 +478,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
+open class impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32Vtbl = .init(
     QueryInterface: {
@@ -496,19 +496,19 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT32_UINT32>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.from_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.from_impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -523,7 +523,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
@@ -537,8 +537,8 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -746,7 +746,7 @@ public class IEventHandler_1_IInspectable
     }
 } // IEventHandler_1_IInspectable
 // impl delegate type
-open class EventHandler_1_IInspectable
+open class impl_EventHandler_1_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1_IInspectableVtbl = .init(
     QueryInterface: {
@@ -764,19 +764,19 @@ open class EventHandler_1_IInspectable
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = EventHandler_1_IInspectable.from_EventHandler_1_IInspectable(pThis) else {
+        guard let self = impl_EventHandler_1_IInspectable.from_impl_EventHandler_1_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -791,7 +791,7 @@ open class EventHandler_1_IInspectable
     }
     )
     private class Container {
-        public var self_ref: EventHandler_1_IInspectable? = nil
+        public var self_ref: impl_EventHandler_1_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable
@@ -805,8 +805,8 @@ open class EventHandler_1_IInspectable
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IEventHandler_1_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_EventHandler_1_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> EventHandler_1_IInspectable? {
-        return pUnk?.bindMemory(to: EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_EventHandler_1_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_EventHandler_1_IInspectable? {
+        return pUnk?.bindMemory(to: impl_EventHandler_1_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<WinRT.Object>) throws -> Void {
@@ -894,7 +894,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRINGVtbl = .init(
     QueryInterface: {
@@ -912,19 +912,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -939,7 +939,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING
@@ -953,8 +953,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1061,7 +1061,7 @@ public class IAsyncOperationCompletedHandler_1_HSTRING
     }
 } // IAsyncOperationCompletedHandler_1_HSTRING
 // impl delegate type
-open class AsyncOperationCompletedHandler_1_HSTRING
+open class impl_AsyncOperationCompletedHandler_1_HSTRING
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_HSTRINGVtbl = .init(
     QueryInterface: {
@@ -1079,19 +1079,19 @@ open class AsyncOperationCompletedHandler_1_HSTRING
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1_HSTRING.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1_HSTRING.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_HSTRING>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1_HSTRING.from_AsyncOperationCompletedHandler_1_HSTRING(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1_HSTRING.from_impl_AsyncOperationCompletedHandler_1_HSTRING(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1106,7 +1106,7 @@ open class AsyncOperationCompletedHandler_1_HSTRING
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1_HSTRING? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1_HSTRING? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_HSTRING
@@ -1120,8 +1120,8 @@ open class AsyncOperationCompletedHandler_1_HSTRING
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_HSTRING(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1_HSTRING? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1_HSTRING? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1_HSTRING>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1175,7 +1175,7 @@ public class IMapChangedEventHandler_2_HSTRING_IInspectable
     }
 } // IMapChangedEventHandler_2_HSTRING_IInspectable
 // impl delegate type
-open class MapChangedEventHandler_2_HSTRING_IInspectable
+open class impl_MapChangedEventHandler_2_HSTRING_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_CCollections_IMapChangedEventHandler_2_HSTRING_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1193,19 +1193,19 @@ open class MapChangedEventHandler_2_HSTRING_IInspectable
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: MapChangedEventHandler_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_MapChangedEventHandler_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: MapChangedEventHandler_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_MapChangedEventHandler_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableMap_2_HSTRING_IInspectable>>, _ event : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IMapChangedEventArgs_1_HSTRING>>) in
-        guard let self = MapChangedEventHandler_2_HSTRING_IInspectable.from_MapChangedEventHandler_2_HSTRING_IInspectable(pThis) else {
+        guard let self = impl_MapChangedEventHandler_2_HSTRING_IInspectable.from_impl_MapChangedEventHandler_2_HSTRING_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1220,7 +1220,7 @@ open class MapChangedEventHandler_2_HSTRING_IInspectable
     }
     )
     private class Container {
-        public var self_ref: MapChangedEventHandler_2_HSTRING_IInspectable? = nil
+        public var self_ref: impl_MapChangedEventHandler_2_HSTRING_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_CCollections_IMapChangedEventHandler_2_HSTRING_IInspectable
@@ -1234,8 +1234,8 @@ open class MapChangedEventHandler_2_HSTRING_IInspectable
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_CCollections_IMapChangedEventHandler_2_HSTRING_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_MapChangedEventHandler_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> MapChangedEventHandler_2_HSTRING_IInspectable? {
-        return pUnk?.bindMemory(to: MapChangedEventHandler_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_MapChangedEventHandler_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_MapChangedEventHandler_2_HSTRING_IInspectable? {
+        return pUnk?.bindMemory(to: impl_MapChangedEventHandler_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<ClosedGenerics.IObservableMap_2_HSTRING_IInspectable>, event : Optional<ClosedGenerics.IMapChangedEventArgs_1_HSTRING>) throws -> Void {
@@ -1385,7 +1385,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1403,19 +1403,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1430,7 +1430,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable
@@ -1444,8 +1444,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1586,7 +1586,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1604,19 +1604,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1631,7 +1631,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
@@ -1645,8 +1645,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1734,7 +1734,7 @@ public class IAsyncOperationCompletedHandler_1_UINT32
     }
 } // IAsyncOperationCompletedHandler_1_UINT32
 // impl delegate type
-open class AsyncOperationCompletedHandler_1_UINT32
+open class impl_AsyncOperationCompletedHandler_1_UINT32
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_UINT32Vtbl = .init(
     QueryInterface: {
@@ -1752,19 +1752,19 @@ open class AsyncOperationCompletedHandler_1_UINT32
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1_UINT32.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1_UINT32.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_UINT32>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1_UINT32.from_AsyncOperationCompletedHandler_1_UINT32(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1_UINT32.from_impl_AsyncOperationCompletedHandler_1_UINT32(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1779,7 +1779,7 @@ open class AsyncOperationCompletedHandler_1_UINT32
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1_UINT32? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1_UINT32? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_UINT32
@@ -1793,8 +1793,8 @@ open class AsyncOperationCompletedHandler_1_UINT32
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1_UINT32(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1_UINT32? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1_UINT32? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1_UINT32>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1882,7 +1882,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1900,19 +1900,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1927,7 +1927,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable
@@ -1941,8 +1941,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2041,7 +2041,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRINGVtbl = .init(
     QueryInterface: {
@@ -2059,19 +2059,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2086,7 +2086,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING
@@ -2100,8 +2100,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2214,7 +2214,7 @@ public class IAsyncOperationProgressHandler_2_UINT64_UINT64
     }
 } // IAsyncOperationProgressHandler_2_UINT64_UINT64
 // impl delegate type
-open class AsyncOperationProgressHandler_2_UINT64_UINT64
+open class impl_AsyncOperationProgressHandler_2_UINT64_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_UINT64_UINT64Vtbl = .init(
     QueryInterface: {
@@ -2232,19 +2232,19 @@ open class AsyncOperationProgressHandler_2_UINT64_UINT64
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>>, _ progressInfo : UINT64) in
-        guard let self = AsyncOperationProgressHandler_2_UINT64_UINT64.from_AsyncOperationProgressHandler_2_UINT64_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2_UINT64_UINT64.from_impl_AsyncOperationProgressHandler_2_UINT64_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2259,7 +2259,7 @@ open class AsyncOperationProgressHandler_2_UINT64_UINT64
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2_UINT64_UINT64? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2_UINT64_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_UINT64_UINT64
@@ -2273,8 +2273,8 @@ open class AsyncOperationProgressHandler_2_UINT64_UINT64
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_UINT64_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2_UINT64_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2_UINT64_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2_UINT64_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2_UINT64_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
@@ -2319,7 +2319,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
+open class impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64Vtbl = .init(
     QueryInterface: {
@@ -2337,19 +2337,19 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_UINT64_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.from_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.from_impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2364,7 +2364,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
@@ -2378,8 +2378,8 @@ open class AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2520,7 +2520,7 @@ public class IAsyncOperationProgressHandler_2_HSTRING_UINT64
     }
 } // IAsyncOperationProgressHandler_2_HSTRING_UINT64
 // impl delegate type
-open class AsyncOperationProgressHandler_2_HSTRING_UINT64
+open class impl_AsyncOperationProgressHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
@@ -2538,19 +2538,19 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ progressInfo : UINT64) in
-        guard let self = AsyncOperationProgressHandler_2_HSTRING_UINT64.from_AsyncOperationProgressHandler_2_HSTRING_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2_HSTRING_UINT64.from_impl_AsyncOperationProgressHandler_2_HSTRING_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2565,7 +2565,7 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2_HSTRING_UINT64? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2_HSTRING_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64
@@ -2579,8 +2579,8 @@ open class AsyncOperationProgressHandler_2_HSTRING_UINT64
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2_HSTRING_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2_HSTRING_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2_HSTRING_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2_HSTRING_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
@@ -2625,7 +2625,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
+open class impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64Vtbl = .init(
     QueryInterface: {
@@ -2643,19 +2643,19 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.from_impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2670,7 +2670,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
@@ -2684,8 +2684,8 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2726,7 +2726,7 @@ public class IVectorView_1_FLOAT
 } // IVectorView_1_FLOAT
 }
 extension ClosedGenerics.IAsyncOperation_1_boolean : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1_boolean {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_boolean {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2744,7 +2744,7 @@ extension ClosedGenerics.IAsyncOperation_1_boolean : WinRT.Future {
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1_boolean =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_boolean =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2755,7 +2755,7 @@ extension ClosedGenerics.IAsyncOperation_1_boolean : WinRT.Future {
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2773,7 +2773,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32 : WinRT.Fut
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_UINT32_UINT32 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2784,7 +2784,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_UINT32_UINT32 : WinRT.Fut
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2802,7 +2802,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2813,7 +2813,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1_HSTRING : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1_HSTRING {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_HSTRING {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2831,7 +2831,7 @@ extension ClosedGenerics.IAsyncOperation_1_HSTRING : WinRT.Future {
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1_HSTRING =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_HSTRING =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2842,7 +2842,7 @@ extension ClosedGenerics.IAsyncOperation_1_HSTRING : WinRT.Future {
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2860,7 +2860,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMap_2_HSTRING_IInspectable =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2871,7 +2871,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2889,7 +2889,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2900,7 +2900,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1_UINT32 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_UINT32 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2918,7 +2918,7 @@ extension ClosedGenerics.IAsyncOperation_1_UINT32 : WinRT.Future {
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32 =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_UINT32 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2929,7 +2929,7 @@ extension ClosedGenerics.IAsyncOperation_1_UINT32 : WinRT.Future {
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2947,7 +2947,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2958,7 +2958,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2976,7 +2976,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2987,7 +2987,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -3005,7 +3005,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64 : WinRT.Fut
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_UINT64_UINT64 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -3016,7 +3016,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_UINT64_UINT64 : WinRT.Fut
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -3034,7 +3034,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING_UINT64 : WinRT.Fu
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING_UINT64 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

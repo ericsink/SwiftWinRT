@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlD
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocumentVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.from_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocu
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -187,7 +187,7 @@ public class IIterator_1__q_CWindows_CData_CXml_CDom_CIXmlNode
 } // IIterator_1__q_CWindows_CData_CXml_CDom_CIXmlNode
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocument : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -205,7 +205,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CXml_CDom_CXmlDocum
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CXml_CDom_CXmlDocument =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

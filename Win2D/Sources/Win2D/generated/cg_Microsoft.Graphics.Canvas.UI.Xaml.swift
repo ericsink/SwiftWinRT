@@ -28,7 +28,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCan
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgsVtbl = .init(
     QueryInterface: {
@@ -46,19 +46,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasDrawEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -73,7 +73,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs
@@ -87,8 +87,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, args : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void {
@@ -133,7 +133,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCan
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl = .init(
     QueryInterface: {
@@ -151,19 +151,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -178,7 +178,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
@@ -192,8 +192,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasVirtualControl>, args : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasRegionsInvalidatedEventArgs>) throws -> Void {
@@ -238,7 +238,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCan
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgsVtbl = .init(
     QueryInterface: {
@@ -256,19 +256,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasVirtualImageSource>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CICanvasRegionsInvalidatedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -283,7 +283,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs
@@ -297,8 +297,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvas
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasVirtualImageSource>, args : Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasRegionsInvalidatedEventArgs>) throws -> Void {

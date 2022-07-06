@@ -1382,7 +1382,7 @@ public class XboxLiveDeviceAddress
     }
     public func add_SnapshotChanged(handler : @escaping (Optional<Windows.Networking.XboxLive.XboxLiveDeviceAddress>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.XboxLive.IXboxLiveDeviceAddress = try _self.QueryInterface();
-        return try _ifc.add_SnapshotChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(cb: handler).Interface());
+        return try _ifc.add_SnapshotChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveDeviceAddress_IInspectable(cb: handler).Interface());
     }
     public func remove_SnapshotChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.XboxLive.IXboxLiveDeviceAddress = try _self.QueryInterface();
@@ -1464,7 +1464,7 @@ public class XboxLiveEndpointPair
     }
     public func add_StateChanged(handler : @escaping (Optional<Windows.Networking.XboxLive.XboxLiveEndpointPair>, Optional<Windows.Networking.XboxLive.XboxLiveEndpointPairStateChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.XboxLive.IXboxLiveEndpointPair = try _self.QueryInterface();
-        return try _ifc.add_StateChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_StateChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPair__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairStateChangedEventArgs(cb: handler).Interface());
     }
     public func remove_StateChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.XboxLive.IXboxLiveEndpointPair = try _self.QueryInterface();
@@ -1695,7 +1695,7 @@ public class XboxLiveEndpointPairTemplate
     }
     public func add_InboundEndpointPairCreated(handler : @escaping (Optional<Windows.Networking.XboxLive.XboxLiveEndpointPairTemplate>, Optional<Windows.Networking.XboxLive.XboxLiveInboundEndpointPairCreatedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate = try _self.QueryInterface();
-        return try _ifc.add_InboundEndpointPairCreated(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(cb: handler).Interface());
+        return try _ifc.add_InboundEndpointPairCreated(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairTemplate__q_CWindows_CNetworking_CXboxLive_CXboxLiveInboundEndpointPairCreatedEventArgs(cb: handler).Interface());
     }
     public func remove_InboundEndpointPairCreated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate = try _self.QueryInterface();

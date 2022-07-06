@@ -92,7 +92,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRespon
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -110,19 +110,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -137,7 +137,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -151,8 +151,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseM
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -197,7 +197,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -215,19 +215,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -242,7 +242,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -256,8 +256,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -532,7 +532,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBu
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -550,19 +550,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -577,7 +577,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -591,8 +591,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -637,7 +637,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -655,19 +655,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -682,7 +682,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -696,8 +696,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -810,7 +810,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIIn
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -828,19 +828,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -855,7 +855,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -869,8 +869,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -915,7 +915,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -933,19 +933,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -960,7 +960,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -974,8 +974,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1088,7 +1088,7 @@ public class IAsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHt
     }
 } // IAsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1106,19 +1106,19 @@ open class AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpP
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1133,7 +1133,7 @@ open class AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpP
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1147,8 +1147,8 @@ open class AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpP
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -1193,7 +1193,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_C
     }
 } // IAsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1211,19 +1211,19 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1238,7 +1238,7 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1252,8 +1252,8 @@ open class AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1366,7 +1366,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpReques
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1384,19 +1384,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestRe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1411,7 +1411,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestRe
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1425,8 +1425,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestRe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -1471,7 +1471,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1489,19 +1489,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1516,7 +1516,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1530,8 +1530,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1644,7 +1644,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBuf
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1662,19 +1662,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBuffer
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1689,7 +1689,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBuffer
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1703,8 +1703,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBuffer
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -1749,7 +1749,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1767,19 +1767,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1794,7 +1794,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1808,8 +1808,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1922,7 +1922,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInp
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -1940,19 +1940,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputS
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1967,7 +1967,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputS
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -1981,8 +1981,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputS
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -2027,7 +2027,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -2045,19 +2045,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2072,7 +2072,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -2086,8 +2086,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2200,7 +2200,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStr
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -2218,19 +2218,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetString
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ progressInfo : _q_CWindows_CWeb_CHttp_CHttpProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2245,7 +2245,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetString
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -2259,8 +2259,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetString
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress>, progressInfo : Windows.Web.Http.HttpProgress) throws -> Void {
@@ -2305,7 +2305,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHtt
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgressVtbl = .init(
     QueryInterface: {
@@ -2323,19 +2323,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2350,7 +2350,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress
@@ -2364,8 +2364,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2444,7 +2444,7 @@ public class IIterator_1__q_CWindows_CWeb_CHttp_CIHttpContent
 } // IIterator_1__q_CWindows_CWeb_CHttp_CIHttpContent
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2462,7 +2462,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpResponseMessage__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2473,7 +2473,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2491,7 +2491,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2502,7 +2502,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2520,7 +2520,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2531,7 +2531,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2549,7 +2549,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2_HSTRING__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2560,7 +2560,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2_HSTRING__q_CWindows_CWeb_
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2578,7 +2578,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpRequestResult__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2589,7 +2589,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2607,7 +2607,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetBufferResult__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2618,7 +2618,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2636,7 +2636,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetInputStreamResult__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2647,7 +2647,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2665,7 +2665,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CHttp_CH
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CHttp_CHttpGetStringResult__q_CWindows_CWeb_CHttp_CHttpProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

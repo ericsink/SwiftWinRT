@@ -78,7 +78,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResultVtbl = .init(
     QueryInterface: {
@@ -96,19 +96,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -123,7 +123,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult
@@ -137,8 +137,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -226,7 +226,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResultVtbl = .init(
     QueryInterface: {
@@ -244,19 +244,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -271,7 +271,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult
@@ -285,8 +285,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -331,7 +331,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESi
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectableVtbl = .init(
     QueryInterface: {
@@ -349,19 +349,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_I
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESim>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -376,7 +376,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_I
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable
@@ -390,8 +390,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_I
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.ESim>, args : Optional<WinRT.Object>) throws -> Void {
@@ -479,7 +479,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResultVtbl = .init(
     QueryInterface: {
@@ -497,19 +497,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -524,7 +524,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult
@@ -538,8 +538,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -663,7 +663,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOp
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgressVtbl = .init(
     QueryInterface: {
@@ -681,19 +681,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOpera
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress>>, _ progressInfo : _q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -708,7 +708,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOpera
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
@@ -722,8 +722,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOpera
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress>, progressInfo : Windows.Networking.NetworkOperators.ESimProfileInstallProgress) throws -> Void {
@@ -768,7 +768,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworki
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgressVtbl = .init(
     QueryInterface: {
@@ -786,19 +786,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -813,7 +813,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress
@@ -827,8 +827,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -873,7 +873,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESi
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectableVtbl = .init(
     QueryInterface: {
@@ -891,19 +891,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimPr
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimProfileMetadata>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -918,7 +918,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimPr
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable
@@ -932,8 +932,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimPr
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.ESimProfileMetadata>, args : Optional<WinRT.Object>) throws -> Void {
@@ -978,7 +978,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESi
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgsVtbl = .init(
     QueryInterface: {
@@ -996,19 +996,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimWatcher>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimAddedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1023,7 +1023,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs
@@ -1037,8 +1037,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.ESimWatcher>, args : Optional<Windows.Networking.NetworkOperators.ESimAddedEventArgs>) throws -> Void {
@@ -1083,7 +1083,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESi
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1101,19 +1101,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimWatcher>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1128,7 +1128,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable
@@ -1142,8 +1142,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.ESimWatcher>, args : Optional<WinRT.Object>) throws -> Void {
@@ -1188,7 +1188,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESi
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1206,19 +1206,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimWatcher>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimRemovedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1233,7 +1233,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs
@@ -1247,8 +1247,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.ESimWatcher>, args : Optional<Windows.Networking.NetworkOperators.ESimRemovedEventArgs>) throws -> Void {
@@ -1293,7 +1293,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESi
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1311,19 +1311,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimWatcher>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimUpdatedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1338,7 +1338,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs
@@ -1352,8 +1352,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWa
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.ESimWatcher>, args : Optional<Windows.Networking.NetworkOperators.ESimUpdatedEventArgs>) throws -> Void {
@@ -1441,7 +1441,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResultVtbl = .init(
     QueryInterface: {
@@ -1459,19 +1459,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1486,7 +1486,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult
@@ -1500,8 +1500,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1546,7 +1546,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgsVtbl = .init(
     QueryInterface: {
@@ -1564,19 +1564,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandAccountWatcher>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandAccountEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1591,7 +1591,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs
@@ -1605,8 +1605,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, args : Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs>) throws -> Void {
@@ -1651,7 +1651,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1669,19 +1669,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandAccountWatcher>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandAccountUpdatedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1696,7 +1696,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs
@@ -1710,8 +1710,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, args : Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs>) throws -> Void {
@@ -1756,7 +1756,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1774,19 +1774,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandAccountWatcher>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1801,7 +1801,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable
@@ -1815,8 +1815,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, args : Optional<WinRT.Object>) throws -> Void {
@@ -1970,7 +1970,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResultVtbl = .init(
     QueryInterface: {
@@ -1988,19 +1988,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2015,7 +2015,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult
@@ -2029,8 +2029,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2075,7 +2075,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -2093,19 +2093,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceDataSession>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandDeviceServiceDataReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2120,7 +2120,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs
@@ -2134,8 +2134,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession>, args : Optional<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs>) throws -> Void {
@@ -2234,7 +2234,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfigurationVtbl = .init(
     QueryInterface: {
@@ -2252,19 +2252,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2279,7 +2279,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration
@@ -2293,8 +2293,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2382,7 +2382,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatusVtbl = .init(
     QueryInterface: {
@@ -2400,19 +2400,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2427,7 +2427,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus
@@ -2441,8 +2441,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2530,7 +2530,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPcoVtbl = .init(
     QueryInterface: {
@@ -2548,19 +2548,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2575,7 +2575,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco
@@ -2589,8 +2589,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2635,7 +2635,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectableVtbl = .init(
     QueryInterface: {
@@ -2653,19 +2653,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2680,7 +2680,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable
@@ -2694,8 +2694,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandModem>, args : Optional<WinRT.Object>) throws -> Void {
@@ -2794,7 +2794,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfoVtbl = .init(
     QueryInterface: {
@@ -2812,19 +2812,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2839,7 +2839,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo
@@ -2853,8 +2853,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2953,7 +2953,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResultVtbl = .init(
     QueryInterface: {
@@ -2971,19 +2971,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -2998,7 +2998,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult
@@ -3012,8 +3012,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -3102,7 +3102,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -3120,19 +3120,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandSarManager>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandTransmissionStateChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3147,7 +3147,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs
@@ -3161,8 +3161,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandSarManager>, args : Optional<Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs>) throws -> Void {
@@ -3237,7 +3237,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -3255,19 +3255,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandSlotManager>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandSlotInfoChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3282,7 +3282,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs
@@ -3296,8 +3296,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandSlotManager>, args : Optional<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs>) throws -> Void {
@@ -3342,7 +3342,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMob
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -3360,19 +3360,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandSlotManager>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandCurrentSlotIndexChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3387,7 +3387,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs
@@ -3401,8 +3401,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.NetworkOperators.MobileBroadbandSlotManager>, args : Optional<Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs>) throws -> Void {
@@ -3490,7 +3490,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResultVtbl = .init(
     QueryInterface: {
@@ -3508,19 +3508,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3535,7 +3535,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult
@@ -3549,8 +3549,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -3638,7 +3638,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResultVtbl = .init(
     QueryInterface: {
@@ -3656,19 +3656,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3683,7 +3683,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult
@@ -3697,8 +3697,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -3786,7 +3786,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResultVtbl = .init(
     QueryInterface: {
@@ -3804,19 +3804,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3831,7 +3831,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult
@@ -3845,8 +3845,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -3934,7 +3934,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResultVtbl = .init(
     QueryInterface: {
@@ -3952,19 +3952,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3979,7 +3979,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult
@@ -3993,8 +3993,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -4093,7 +4093,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResultsVtbl = .init(
     QueryInterface: {
@@ -4111,19 +4111,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -4138,7 +4138,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults
@@ -4152,8 +4152,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -4241,7 +4241,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReplyVtbl = .init(
     QueryInterface: {
@@ -4259,19 +4259,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -4286,7 +4286,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply
@@ -4300,8 +4300,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOper
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -4331,7 +4331,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetwor
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4349,7 +4349,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4360,7 +4360,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4378,7 +4378,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4389,7 +4389,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4407,7 +4407,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4418,7 +4418,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4436,7 +4436,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_C
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4447,7 +4447,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_C
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4465,7 +4465,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4476,7 +4476,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4494,7 +4494,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceCommandResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4505,7 +4505,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4523,7 +4523,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemConfiguration =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4534,7 +4534,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4552,7 +4552,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModemStatus =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4563,7 +4563,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4581,7 +4581,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPco =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4592,7 +4592,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4610,7 +4610,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCellsInfo =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4621,7 +4621,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4639,7 +4639,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4650,7 +4650,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4668,7 +4668,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppsResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4679,7 +4679,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4697,7 +4697,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppRecordDetailsResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4708,7 +4708,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4726,7 +4726,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandUiccAppReadRecordResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4737,7 +4737,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4755,7 +4755,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CNetworkOperatorTetheringOperationResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4766,7 +4766,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4784,7 +4784,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -4795,7 +4795,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -4813,7 +4813,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOpera
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CNetworkOperators_CUssdReply =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

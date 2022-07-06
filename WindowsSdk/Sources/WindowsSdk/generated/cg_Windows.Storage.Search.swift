@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CInd
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedStateVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CSearch_CIndexedState>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexe
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CSearch_CIndexedState>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -234,7 +234,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContentVtbl = .init(
     QueryInterface: {
@@ -252,19 +252,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -279,7 +279,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent
@@ -293,8 +293,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -493,7 +493,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryRes
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectableVtbl = .init(
     QueryInterface: {
@@ -511,19 +511,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResult
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CSearch_CIStorageQueryResultBase>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.from_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -538,7 +538,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResult
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable
@@ -552,8 +552,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResult
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Search.IStorageQueryResultBase>, args : Optional<WinRT.Object>) throws -> Void {
@@ -583,7 +583,7 @@ open class wrap_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryR
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CSearch_CIndexedState : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -601,7 +601,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CSearch_CIndexed
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CSearch_CIndexedState =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -612,7 +612,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CSearch_CIndexed
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -630,7 +630,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CSearch_CIIndexableContent =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

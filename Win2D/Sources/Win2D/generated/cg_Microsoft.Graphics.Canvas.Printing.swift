@@ -28,7 +28,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCan
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -46,19 +46,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintTaskOptionsChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -73,7 +73,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs
@@ -87,8 +87,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintDocument>, args : Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintTaskOptionsChangedEventArgs>) throws -> Void {
@@ -133,7 +133,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCan
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgsVtbl = .init(
     QueryInterface: {
@@ -151,19 +151,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPreviewEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -178,7 +178,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs
@@ -192,8 +192,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintDocument>, args : Optional<Microsoft.Graphics.Canvas.Printing.CanvasPreviewEventArgs>) throws -> Void {
@@ -238,7 +238,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCan
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgsVtbl = .init(
     QueryInterface: {
@@ -256,19 +256,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintDocument>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CPrinting_CICanvasPrintEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -283,7 +283,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs
@@ -297,8 +297,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvas
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintDocument>, args : Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintEventArgs>) throws -> Void {

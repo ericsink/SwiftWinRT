@@ -49,7 +49,7 @@ open class IDeviceArrivedEventHandler
     }
 }
 // impl delegate type
-open class DeviceArrivedEventHandler
+open class impl_DeviceArrivedEventHandler
 {
     private static var vtable: _q_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -67,19 +67,19 @@ open class DeviceArrivedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeviceArrivedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DeviceArrivedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeviceArrivedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DeviceArrivedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIProximityDevice>>) in
-        guard let self = DeviceArrivedEventHandler.from_DeviceArrivedEventHandler(pThis) else {
+        guard let self = impl_DeviceArrivedEventHandler.from_impl_DeviceArrivedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -94,7 +94,7 @@ open class DeviceArrivedEventHandler
     }
     )
     private class Container {
-        public var self_ref: DeviceArrivedEventHandler? = nil
+        public var self_ref: impl_DeviceArrivedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandler
@@ -108,8 +108,8 @@ open class DeviceArrivedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CNetworking_CProximity_CIDeviceArrivedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DeviceArrivedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DeviceArrivedEventHandler? {
-        return pUnk?.bindMemory(to: DeviceArrivedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DeviceArrivedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DeviceArrivedEventHandler? {
+        return pUnk?.bindMemory(to: impl_DeviceArrivedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Proximity.ProximityDevice>) throws -> Void {
@@ -156,7 +156,7 @@ open class IDeviceDepartedEventHandler
     }
 }
 // impl delegate type
-open class DeviceDepartedEventHandler
+open class impl_DeviceDepartedEventHandler
 {
     private static var vtable: _q_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -174,19 +174,19 @@ open class DeviceDepartedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeviceDepartedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DeviceDepartedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeviceDepartedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DeviceDepartedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIProximityDevice>>) in
-        guard let self = DeviceDepartedEventHandler.from_DeviceDepartedEventHandler(pThis) else {
+        guard let self = impl_DeviceDepartedEventHandler.from_impl_DeviceDepartedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -201,7 +201,7 @@ open class DeviceDepartedEventHandler
     }
     )
     private class Container {
-        public var self_ref: DeviceDepartedEventHandler? = nil
+        public var self_ref: impl_DeviceDepartedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandler
@@ -215,8 +215,8 @@ open class DeviceDepartedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CNetworking_CProximity_CIDeviceDepartedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DeviceDepartedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DeviceDepartedEventHandler? {
-        return pUnk?.bindMemory(to: DeviceDepartedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DeviceDepartedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DeviceDepartedEventHandler? {
+        return pUnk?.bindMemory(to: impl_DeviceDepartedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Proximity.ProximityDevice>) throws -> Void {
@@ -1261,7 +1261,7 @@ open class IMessageReceivedHandler
     }
 }
 // impl delegate type
-open class MessageReceivedHandler
+open class impl_MessageReceivedHandler
 {
     private static var vtable: _q_CWindows_CNetworking_CProximity_CIMessageReceivedHandlerVtbl = .init(
     QueryInterface: {
@@ -1279,19 +1279,19 @@ open class MessageReceivedHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: MessageReceivedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_MessageReceivedHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: MessageReceivedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_MessageReceivedHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIProximityDevice>>, _ message : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIProximityMessage>>) in
-        guard let self = MessageReceivedHandler.from_MessageReceivedHandler(pThis) else {
+        guard let self = impl_MessageReceivedHandler.from_impl_MessageReceivedHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1306,7 +1306,7 @@ open class MessageReceivedHandler
     }
     )
     private class Container {
-        public var self_ref: MessageReceivedHandler? = nil
+        public var self_ref: impl_MessageReceivedHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CNetworking_CProximity_CIMessageReceivedHandler
@@ -1320,8 +1320,8 @@ open class MessageReceivedHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CNetworking_CProximity_CIMessageReceivedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_MessageReceivedHandler(_ pUnk: UnsafeMutableRawPointer?) -> MessageReceivedHandler? {
-        return pUnk?.bindMemory(to: MessageReceivedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_MessageReceivedHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_MessageReceivedHandler? {
+        return pUnk?.bindMemory(to: impl_MessageReceivedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Proximity.ProximityDevice>, message : Optional<Windows.Networking.Proximity.ProximityMessage>) throws -> Void {
@@ -1368,7 +1368,7 @@ open class IMessageTransmittedHandler
     }
 }
 // impl delegate type
-open class MessageTransmittedHandler
+open class impl_MessageTransmittedHandler
 {
     private static var vtable: _q_CWindows_CNetworking_CProximity_CIMessageTransmittedHandlerVtbl = .init(
     QueryInterface: {
@@ -1386,19 +1386,19 @@ open class MessageTransmittedHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: MessageTransmittedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_MessageTransmittedHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: MessageTransmittedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_MessageTransmittedHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIProximityDevice>>, _ messageId : INT64) in
-        guard let self = MessageTransmittedHandler.from_MessageTransmittedHandler(pThis) else {
+        guard let self = impl_MessageTransmittedHandler.from_impl_MessageTransmittedHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1413,7 +1413,7 @@ open class MessageTransmittedHandler
     }
     )
     private class Container {
-        public var self_ref: MessageTransmittedHandler? = nil
+        public var self_ref: impl_MessageTransmittedHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CNetworking_CProximity_CIMessageTransmittedHandler
@@ -1427,8 +1427,8 @@ open class MessageTransmittedHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CNetworking_CProximity_CIMessageTransmittedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_MessageTransmittedHandler(_ pUnk: UnsafeMutableRawPointer?) -> MessageTransmittedHandler? {
-        return pUnk?.bindMemory(to: MessageTransmittedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_MessageTransmittedHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_MessageTransmittedHandler? {
+        return pUnk?.bindMemory(to: impl_MessageTransmittedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Proximity.ProximityDevice>, messageId : Swift.Int64) throws -> Void {
@@ -1512,13 +1512,13 @@ public class PeerFinder
         return try PeerFinderStatics.Stop();
     }
     public static func add_TriggeredConnectionStateChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.TriggeredConnectionStateChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PeerFinderStatics.add_TriggeredConnectionStateChanged(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(cb: handler).Interface());
+        return try PeerFinderStatics.add_TriggeredConnectionStateChanged(handler: ClosedGenerics.impl_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CTriggeredConnectionStateChangedEventArgs(cb: handler).Interface());
     }
     public static func remove_TriggeredConnectionStateChanged(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PeerFinderStatics.remove_TriggeredConnectionStateChanged(cookie: cookie);
     }
     public static func add_ConnectionRequested(handler : @escaping (Optional<WinRT.Object>, Optional<Windows.Networking.Proximity.ConnectionRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PeerFinderStatics.add_ConnectionRequested(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(cb: handler).Interface());
+        return try PeerFinderStatics.add_ConnectionRequested(handler: ClosedGenerics.impl_TypedEventHandler_2_IInspectable__q_CWindows_CNetworking_CProximity_CConnectionRequestedEventArgs(cb: handler).Interface());
     }
     public static func remove_ConnectionRequested(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PeerFinderStatics.remove_ConnectionRequested(cookie: cookie);
@@ -1693,7 +1693,7 @@ public class PeerWatcher
     public func Interface() -> Windows.Networking.Proximity.IPeerWatcher { return _self; }
     public func add_Added(handler : @escaping (Optional<Windows.Networking.Proximity.PeerWatcher>, Optional<Windows.Networking.Proximity.PeerInformation>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
-        return try _ifc.add_Added(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation(cb: handler).Interface());
+        return try _ifc.add_Added(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation(cb: handler).Interface());
     }
     public func remove_Added(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
@@ -1701,7 +1701,7 @@ public class PeerWatcher
     }
     public func add_Removed(handler : @escaping (Optional<Windows.Networking.Proximity.PeerWatcher>, Optional<Windows.Networking.Proximity.PeerInformation>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
-        return try _ifc.add_Removed(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation(cb: handler).Interface());
+        return try _ifc.add_Removed(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation(cb: handler).Interface());
     }
     public func remove_Removed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
@@ -1709,7 +1709,7 @@ public class PeerWatcher
     }
     public func add_Updated(handler : @escaping (Optional<Windows.Networking.Proximity.PeerWatcher>, Optional<Windows.Networking.Proximity.PeerInformation>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
-        return try _ifc.add_Updated(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation(cb: handler).Interface());
+        return try _ifc.add_Updated(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher__q_CWindows_CNetworking_CProximity_CPeerInformation(cb: handler).Interface());
     }
     public func remove_Updated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
@@ -1717,7 +1717,7 @@ public class PeerWatcher
     }
     public func add_EnumerationCompleted(handler : @escaping (Optional<Windows.Networking.Proximity.PeerWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
-        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_EnumerationCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
@@ -1725,7 +1725,7 @@ public class PeerWatcher
     }
     public func add_Stopped(handler : @escaping (Optional<Windows.Networking.Proximity.PeerWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
-        return try _ifc.add_Stopped(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Stopped(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CProximity_CPeerWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_Stopped(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IPeerWatcher = try _self.QueryInterface();
@@ -1785,7 +1785,7 @@ public class ProximityDevice
     }
     public func SubscribeForMessage(messageType : Swift.String, messageReceivedHandler : @escaping (Optional<Windows.Networking.Proximity.ProximityDevice>, Optional<Windows.Networking.Proximity.ProximityMessage>) throws -> Void) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
-        return try _ifc.SubscribeForMessage(messageType: messageType, messageReceivedHandler: Windows.Networking.Proximity.MessageReceivedHandler(cb: messageReceivedHandler).Interface());
+        return try _ifc.SubscribeForMessage(messageType: messageType, messageReceivedHandler: Windows.Networking.Proximity.impl_MessageReceivedHandler(cb: messageReceivedHandler).Interface());
     }
     public func PublishMessage(messageType : Swift.String, message : Swift.String) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
@@ -1793,7 +1793,7 @@ public class ProximityDevice
     }
     public func PublishMessage(messageType : Swift.String, message : Swift.String, messageTransmittedHandler : @escaping (Optional<Windows.Networking.Proximity.ProximityDevice>, Swift.Int64) throws -> Void) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
-        return try _ifc.PublishMessageWithCallback(messageType: messageType, message: message, messageTransmittedHandler: Windows.Networking.Proximity.MessageTransmittedHandler(cb: messageTransmittedHandler).Interface());
+        return try _ifc.PublishMessageWithCallback(messageType: messageType, message: message, messageTransmittedHandler: Windows.Networking.Proximity.impl_MessageTransmittedHandler(cb: messageTransmittedHandler).Interface());
     }
     public func PublishBinaryMessage(messageType : Swift.String, message : Optional<Windows.Storage.Streams.IBuffer>) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
@@ -1801,7 +1801,7 @@ public class ProximityDevice
     }
     public func PublishBinaryMessage(messageType : Swift.String, message : Optional<Windows.Storage.Streams.IBuffer>, messageTransmittedHandler : @escaping (Optional<Windows.Networking.Proximity.ProximityDevice>, Swift.Int64) throws -> Void) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
-        return try _ifc.PublishBinaryMessageWithCallback(messageType: messageType, message: message, messageTransmittedHandler: Windows.Networking.Proximity.MessageTransmittedHandler(cb: messageTransmittedHandler).Interface());
+        return try _ifc.PublishBinaryMessageWithCallback(messageType: messageType, message: message, messageTransmittedHandler: Windows.Networking.Proximity.impl_MessageTransmittedHandler(cb: messageTransmittedHandler).Interface());
     }
     public func PublishUriMessage(message : Optional<Windows.Foundation.Uri>) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
@@ -1809,7 +1809,7 @@ public class ProximityDevice
     }
     public func PublishUriMessage(message : Optional<Windows.Foundation.Uri>, messageTransmittedHandler : @escaping (Optional<Windows.Networking.Proximity.ProximityDevice>, Swift.Int64) throws -> Void) throws -> Swift.Int64 {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
-        return try _ifc.PublishUriMessageWithCallback(message: message!.Interface(), messageTransmittedHandler: Windows.Networking.Proximity.MessageTransmittedHandler(cb: messageTransmittedHandler).Interface());
+        return try _ifc.PublishUriMessageWithCallback(message: message!.Interface(), messageTransmittedHandler: Windows.Networking.Proximity.impl_MessageTransmittedHandler(cb: messageTransmittedHandler).Interface());
     }
     public func StopSubscribingForMessage(subscriptionId : Swift.Int64) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
@@ -1821,7 +1821,7 @@ public class ProximityDevice
     }
     public func add_DeviceArrived(arrivedHandler : @escaping (Optional<Windows.Networking.Proximity.ProximityDevice>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
-        return try _ifc.add_DeviceArrived(arrivedHandler: Windows.Networking.Proximity.DeviceArrivedEventHandler(cb: arrivedHandler).Interface());
+        return try _ifc.add_DeviceArrived(arrivedHandler: Windows.Networking.Proximity.impl_DeviceArrivedEventHandler(cb: arrivedHandler).Interface());
     }
     public func remove_DeviceArrived(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
@@ -1829,7 +1829,7 @@ public class ProximityDevice
     }
     public func add_DeviceDeparted(departedHandler : @escaping (Optional<Windows.Networking.Proximity.ProximityDevice>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();
-        return try _ifc.add_DeviceDeparted(departedHandler: Windows.Networking.Proximity.DeviceDepartedEventHandler(cb: departedHandler).Interface());
+        return try _ifc.add_DeviceDeparted(departedHandler: Windows.Networking.Proximity.impl_DeviceDepartedEventHandler(cb: departedHandler).Interface());
     }
     public func remove_DeviceDeparted(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Proximity.IProximityDevice = try _self.QueryInterface();

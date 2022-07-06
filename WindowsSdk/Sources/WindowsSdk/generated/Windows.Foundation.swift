@@ -8,7 +8,7 @@ import CWindowsSdk;
 
 
 extension Windows.Foundation.IAsyncAction: WinRT.Future {
-  private final class CompletedHandler: Windows.Foundation.AsyncActionCompletedHandler {
+  private final class CompletedHandler: Windows.Foundation.impl_AsyncActionCompletedHandler {
     private var hEvent: HANDLE
 
     public init(signal event: HANDLE) {
@@ -30,7 +30,7 @@ extension Windows.Foundation.IAsyncAction: WinRT.Future {
       // TODO(compnerd) validate event
       defer { _ = CloseHandle(event) }
 
-      let completion: Windows.Foundation.AsyncActionCompletedHandler =
+      let completion: Windows.Foundation.impl_AsyncActionCompletedHandler =
           Windows.Foundation.IAsyncAction.CompletedHandler(signal: event)
       try withExtendedLifetime(completion) {
         try self.put_Completed(handler: completion.Interface())
@@ -60,7 +60,7 @@ open class IAsyncActionCompletedHandler
     }
 }
 // impl delegate type
-open class AsyncActionCompletedHandler
+open class impl_AsyncActionCompletedHandler
 {
     private static var vtable: _q_CWindows_CFoundation_CIAsyncActionCompletedHandlerVtbl = .init(
     QueryInterface: {
@@ -78,19 +78,19 @@ open class AsyncActionCompletedHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncActionCompletedHandler.from_AsyncActionCompletedHandler(pThis) else {
+        guard let self = impl_AsyncActionCompletedHandler.from_impl_AsyncActionCompletedHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -105,7 +105,7 @@ open class AsyncActionCompletedHandler
     }
     )
     private class Container {
-        public var self_ref: AsyncActionCompletedHandler? = nil
+        public var self_ref: impl_AsyncActionCompletedHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler
@@ -119,8 +119,8 @@ open class AsyncActionCompletedHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CFoundation_CIAsyncActionCompletedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncActionCompletedHandler(_ pUnk: UnsafeMutableRawPointer?) -> AsyncActionCompletedHandler? {
-        return pUnk?.bindMemory(to: AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncActionCompletedHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncActionCompletedHandler? {
+        return pUnk?.bindMemory(to: impl_AsyncActionCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<Windows.Foundation.IAsyncAction>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -171,7 +171,7 @@ public class Deferral
     public func Interface() -> Windows.Foundation.IDeferral { return _self; }
     public init(handler : @escaping () throws -> Void) throws {
         let _af : IDeferralFactory = try RoGetActivationFactory("Windows.Foundation.Deferral");
-        _self = try _af.Create(handler: Windows.Foundation.DeferralCompletedHandler(cb: handler).Interface())!;
+        _self = try _af.Create(handler: Windows.Foundation.impl_DeferralCompletedHandler(cb: handler).Interface())!;
         try super.init(plok: _self.QueryInterface())
     }
     // method not needed: Complete
@@ -199,7 +199,7 @@ open class IDeferralCompletedHandler
     }
 }
 // impl delegate type
-open class DeferralCompletedHandler
+open class impl_DeferralCompletedHandler
 {
     private static var vtable: _q_CWindows_CFoundation_CIDeferralCompletedHandlerVtbl = .init(
     QueryInterface: {
@@ -217,19 +217,19 @@ open class DeferralCompletedHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis) in
-        guard let self = DeferralCompletedHandler.from_DeferralCompletedHandler(pThis) else {
+        guard let self = impl_DeferralCompletedHandler.from_impl_DeferralCompletedHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -244,7 +244,7 @@ open class DeferralCompletedHandler
     }
     )
     private class Container {
-        public var self_ref: DeferralCompletedHandler? = nil
+        public var self_ref: impl_DeferralCompletedHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CFoundation_CIDeferralCompletedHandler
@@ -258,8 +258,8 @@ open class DeferralCompletedHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CFoundation_CIDeferralCompletedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DeferralCompletedHandler(_ pUnk: UnsafeMutableRawPointer?) -> DeferralCompletedHandler? {
-        return pUnk?.bindMemory(to: DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DeferralCompletedHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DeferralCompletedHandler? {
+        return pUnk?.bindMemory(to: impl_DeferralCompletedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke() throws -> Void {

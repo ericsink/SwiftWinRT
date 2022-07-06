@@ -709,7 +709,7 @@ public class StorageItemMostRecentlyUsedList
     public func Interface() -> Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList { return _self; }
     public func add_ItemRemoved(handler : @escaping (Optional<Windows.Storage.AccessCache.StorageItemMostRecentlyUsedList>, Optional<Windows.Storage.AccessCache.ItemRemovedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList = try _self.QueryInterface();
-        return try _ifc.add_ItemRemoved(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CAccessCache_CStorageItemMostRecentlyUsedList__q_CWindows_CStorage_CAccessCache_CItemRemovedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ItemRemoved(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CAccessCache_CStorageItemMostRecentlyUsedList__q_CWindows_CStorage_CAccessCache_CItemRemovedEventArgs(cb: handler).Interface());
     }
     public func remove_ItemRemoved(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.AccessCache.IStorageItemMostRecentlyUsedList = try _self.QueryInterface();

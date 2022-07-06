@@ -100,7 +100,7 @@ public class CanvasPrintDocument
     }
     public func add_PrintTaskOptionsChanged(value : @escaping (Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintDocument>, Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintTaskOptionsChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.Printing.ICanvasPrintDocument = try _self.QueryInterface();
-        return try _ifc.add_PrintTaskOptionsChanged(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(cb: value).Interface());
+        return try _ifc.add_PrintTaskOptionsChanged(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintTaskOptionsChangedEventArgs(cb: value).Interface());
     }
     public func remove_PrintTaskOptionsChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.Printing.ICanvasPrintDocument = try _self.QueryInterface();
@@ -108,7 +108,7 @@ public class CanvasPrintDocument
     }
     public func add_Preview(value : @escaping (Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintDocument>, Optional<Microsoft.Graphics.Canvas.Printing.CanvasPreviewEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.Printing.ICanvasPrintDocument = try _self.QueryInterface();
-        return try _ifc.add_Preview(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(cb: value).Interface());
+        return try _ifc.add_Preview(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPreviewEventArgs(cb: value).Interface());
     }
     public func remove_Preview(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.Printing.ICanvasPrintDocument = try _self.QueryInterface();
@@ -116,7 +116,7 @@ public class CanvasPrintDocument
     }
     public func add_Print(value : @escaping (Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintDocument>, Optional<Microsoft.Graphics.Canvas.Printing.CanvasPrintEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.Printing.ICanvasPrintDocument = try _self.QueryInterface();
-        return try _ifc.add_Print(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(cb: value).Interface());
+        return try _ifc.add_Print(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintDocument__q_CMicrosoft_CGraphics_CCanvas_CPrinting_CCanvasPrintEventArgs(cb: value).Interface());
     }
     public func remove_Print(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.Printing.ICanvasPrintDocument = try _self.QueryInterface();

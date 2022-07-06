@@ -176,7 +176,7 @@ public class ApplicationData
     }
     public func SetVersionAsync(desiredVersion : Swift.UInt32, handler : @escaping (Optional<Windows.Storage.SetVersionRequest>) throws -> Void) throws -> Optional<Windows.Foundation.IAsyncAction> {
         let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
-        return try _ifc.SetVersionAsync(desiredVersion: desiredVersion, handler: Windows.Storage.ApplicationDataSetVersionHandler(cb: handler).Interface());
+        return try _ifc.SetVersionAsync(desiredVersion: desiredVersion, handler: Windows.Storage.impl_ApplicationDataSetVersionHandler(cb: handler).Interface());
     }
     public func SetVersion(desiredVersion : Swift.UInt32, handler : @escaping (Optional<Windows.Storage.SetVersionRequest>) throws -> Void) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -235,7 +235,7 @@ public class ApplicationData
     }
     public func add_DataChanged(handler : @escaping (Optional<Windows.Storage.ApplicationData>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
-        return try _ifc.add_DataChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(cb: handler).Interface());
+        return try _ifc.add_DataChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(cb: handler).Interface());
     }
     public func remove_DataChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.IApplicationData = try _self.QueryInterface();
@@ -478,7 +478,7 @@ open class IApplicationDataSetVersionHandler
     }
 }
 // impl delegate type
-open class ApplicationDataSetVersionHandler
+open class impl_ApplicationDataSetVersionHandler
 {
     private static var vtable: _q_CWindows_CStorage_CIApplicationDataSetVersionHandlerVtbl = .init(
     QueryInterface: {
@@ -496,19 +496,19 @@ open class ApplicationDataSetVersionHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ setVersionRequest : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CISetVersionRequest>>) in
-        guard let self = ApplicationDataSetVersionHandler.from_ApplicationDataSetVersionHandler(pThis) else {
+        guard let self = impl_ApplicationDataSetVersionHandler.from_impl_ApplicationDataSetVersionHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -523,7 +523,7 @@ open class ApplicationDataSetVersionHandler
     }
     )
     private class Container {
-        public var self_ref: ApplicationDataSetVersionHandler? = nil
+        public var self_ref: impl_ApplicationDataSetVersionHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CStorage_CIApplicationDataSetVersionHandler
@@ -537,8 +537,8 @@ open class ApplicationDataSetVersionHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CStorage_CIApplicationDataSetVersionHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_ApplicationDataSetVersionHandler(_ pUnk: UnsafeMutableRawPointer?) -> ApplicationDataSetVersionHandler? {
-        return pUnk?.bindMemory(to: ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_ApplicationDataSetVersionHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_ApplicationDataSetVersionHandler? {
+        return pUnk?.bindMemory(to: impl_ApplicationDataSetVersionHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(setVersionRequest : Optional<Windows.Storage.SetVersionRequest>) throws -> Void {
@@ -6796,7 +6796,7 @@ public class StorageFile
         }
     }
     public static func CreateStreamedFileAsync(displayNameWithExtension : Swift.String, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        return try StorageFileStatics.CreateStreamedFileAsync(displayNameWithExtension: displayNameWithExtension, dataRequested: Windows.Storage.StreamedFileDataRequestedHandler(cb: dataRequested).Interface(), thumbnail: thumbnail);
+        return try StorageFileStatics.CreateStreamedFileAsync(displayNameWithExtension: displayNameWithExtension, dataRequested: Windows.Storage.impl_StreamedFileDataRequestedHandler(cb: dataRequested).Interface(), thumbnail: thumbnail);
     }
     public static func CreateStreamedFile(displayNameWithExtension : Swift.String, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.StorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -6808,7 +6808,7 @@ public class StorageFile
         }
     }
     public static func ReplaceWithStreamedFileAsync(fileToReplace : Optional<Windows.Storage.IStorageFile>, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        return try StorageFileStatics.ReplaceWithStreamedFileAsync(fileToReplace: fileToReplace, dataRequested: Windows.Storage.StreamedFileDataRequestedHandler(cb: dataRequested).Interface(), thumbnail: thumbnail);
+        return try StorageFileStatics.ReplaceWithStreamedFileAsync(fileToReplace: fileToReplace, dataRequested: Windows.Storage.impl_StreamedFileDataRequestedHandler(cb: dataRequested).Interface(), thumbnail: thumbnail);
     }
     public static func ReplaceWithStreamedFile(fileToReplace : Optional<Windows.Storage.IStorageFile>, dataRequested : @escaping (Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.StorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
@@ -7995,7 +7995,7 @@ public class StorageLibrary
     }
     public func add_DefinitionChanged(handler : @escaping (Optional<Windows.Storage.StorageLibrary>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
-        return try _ifc.add_DefinitionChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(cb: handler).Interface());
+        return try _ifc.add_DefinitionChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(cb: handler).Interface());
     }
     public func remove_DefinitionChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.IStorageLibrary = try _self.QueryInterface();
@@ -8400,7 +8400,7 @@ open class IStreamedFileDataRequestedHandler
     }
 }
 // impl delegate type
-open class StreamedFileDataRequestedHandler
+open class impl_StreamedFileDataRequestedHandler
 {
     private static var vtable: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandlerVtbl = .init(
     QueryInterface: {
@@ -8418,19 +8418,19 @@ open class StreamedFileDataRequestedHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ stream : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIOutputStream>>) in
-        guard let self = StreamedFileDataRequestedHandler.from_StreamedFileDataRequestedHandler(pThis) else {
+        guard let self = impl_StreamedFileDataRequestedHandler.from_impl_StreamedFileDataRequestedHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -8445,7 +8445,7 @@ open class StreamedFileDataRequestedHandler
     }
     )
     private class Container {
-        public var self_ref: StreamedFileDataRequestedHandler? = nil
+        public var self_ref: impl_StreamedFileDataRequestedHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandler
@@ -8459,8 +8459,8 @@ open class StreamedFileDataRequestedHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CStorage_CIStreamedFileDataRequestedHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_StreamedFileDataRequestedHandler(_ pUnk: UnsafeMutableRawPointer?) -> StreamedFileDataRequestedHandler? {
-        return pUnk?.bindMemory(to: StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_StreamedFileDataRequestedHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_StreamedFileDataRequestedHandler? {
+        return pUnk?.bindMemory(to: impl_StreamedFileDataRequestedHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(stream : Optional<Windows.Storage.StreamedFileDataRequest>) throws -> Void {

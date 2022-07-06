@@ -2085,7 +2085,7 @@ public class StorageFileQueryResult
     }
     public func add_ContentsChanged(handler : @escaping (Optional<Windows.Storage.Search.IStorageQueryResultBase>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
-        return try _ifc.add_ContentsChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ContentsChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: handler).Interface());
     }
     public func remove_ContentsChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
@@ -2093,7 +2093,7 @@ public class StorageFileQueryResult
     }
     public func add_OptionsChanged(changedHandler : @escaping (Optional<Windows.Storage.Search.IStorageQueryResultBase>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
-        return try _ifc.add_OptionsChanged(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_OptionsChanged(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_OptionsChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
@@ -2189,7 +2189,7 @@ public class StorageFolderQueryResult
     }
     public func add_ContentsChanged(handler : @escaping (Optional<Windows.Storage.Search.IStorageQueryResultBase>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
-        return try _ifc.add_ContentsChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ContentsChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: handler).Interface());
     }
     public func remove_ContentsChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
@@ -2197,7 +2197,7 @@ public class StorageFolderQueryResult
     }
     public func add_OptionsChanged(changedHandler : @escaping (Optional<Windows.Storage.Search.IStorageQueryResultBase>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
-        return try _ifc.add_OptionsChanged(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_OptionsChanged(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_OptionsChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
@@ -2289,7 +2289,7 @@ public class StorageItemQueryResult
     }
     public func add_ContentsChanged(handler : @escaping (Optional<Windows.Storage.Search.IStorageQueryResultBase>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
-        return try _ifc.add_ContentsChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ContentsChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: handler).Interface());
     }
     public func remove_ContentsChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
@@ -2297,7 +2297,7 @@ public class StorageItemQueryResult
     }
     public func add_OptionsChanged(changedHandler : @escaping (Optional<Windows.Storage.Search.IStorageQueryResultBase>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();
-        return try _ifc.add_OptionsChanged(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_OptionsChanged(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CSearch_CIStorageQueryResultBase_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_OptionsChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Search.IStorageQueryResultBase = try _self.QueryInterface();

@@ -92,7 +92,7 @@ public class ESim
     }
     public func add_ProfileChanged(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESim>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESim = try _self.QueryInterface();
-        return try _ifc.add_ProfileChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ProfileChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESim_IInspectable(cb: handler).Interface());
     }
     public func remove_ProfileChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESim = try _self.QueryInterface();
@@ -342,7 +342,7 @@ public class ESimManager
         return try Windows.Networking.NetworkOperators.ESimWatcher(plok: ESimManagerStatics.TryCreateESimWatcher());
     }
     public static func add_ServiceInfoChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try ESimManagerStatics.add_ServiceInfoChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try ESimManagerStatics.add_ServiceInfoChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_ServiceInfoChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try ESimManagerStatics.remove_ServiceInfoChanged(token: token);
@@ -641,7 +641,7 @@ public class ESimProfileMetadata
     }
     public func add_StateChanged(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESimProfileMetadata>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESimProfileMetadata = try _self.QueryInterface();
-        return try _ifc.add_StateChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(cb: handler).Interface());
+        return try _ifc.add_StateChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimProfileMetadata_IInspectable(cb: handler).Interface());
     }
     public func remove_StateChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESimProfileMetadata = try _self.QueryInterface();
@@ -855,7 +855,7 @@ public class ESimWatcher
     }
     public func add_Added(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESimWatcher>, Optional<Windows.Networking.NetworkOperators.ESimAddedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
-        return try _ifc.add_Added(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Added(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimAddedEventArgs(cb: handler).Interface());
     }
     public func remove_Added(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
@@ -863,7 +863,7 @@ public class ESimWatcher
     }
     public func add_EnumerationCompleted(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESimWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
-        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_EnumerationCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
@@ -871,7 +871,7 @@ public class ESimWatcher
     }
     public func add_Removed(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESimWatcher>, Optional<Windows.Networking.NetworkOperators.ESimRemovedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
-        return try _ifc.add_Removed(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Removed(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimRemovedEventArgs(cb: handler).Interface());
     }
     public func remove_Removed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
@@ -879,7 +879,7 @@ public class ESimWatcher
     }
     public func add_Stopped(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESimWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
-        return try _ifc.add_Stopped(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Stopped(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_Stopped(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
@@ -887,7 +887,7 @@ public class ESimWatcher
     }
     public func add_Updated(handler : @escaping (Optional<Windows.Networking.NetworkOperators.ESimWatcher>, Optional<Windows.Networking.NetworkOperators.ESimUpdatedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
-        return try _ifc.add_Updated(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Updated(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CESimWatcher__q_CWindows_CNetworking_CNetworkOperators_CESimUpdatedEventArgs(cb: handler).Interface());
     }
     public func remove_Updated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IESimWatcher = try _self.QueryInterface();
@@ -8870,7 +8870,7 @@ public class MobileBroadbandAccountWatcher
     }
     public func add_AccountAdded(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
-        return try _ifc.add_AccountAdded(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccountAdded(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(cb: handler).Interface());
     }
     public func remove_AccountAdded(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
@@ -8878,7 +8878,7 @@ public class MobileBroadbandAccountWatcher
     }
     public func add_AccountUpdated(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountUpdatedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
-        return try _ifc.add_AccountUpdated(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccountUpdated(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountUpdatedEventArgs(cb: handler).Interface());
     }
     public func remove_AccountUpdated(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
@@ -8886,7 +8886,7 @@ public class MobileBroadbandAccountWatcher
     }
     public func add_AccountRemoved(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
-        return try _ifc.add_AccountRemoved(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccountRemoved(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountEventArgs(cb: handler).Interface());
     }
     public func remove_AccountRemoved(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
@@ -8894,7 +8894,7 @@ public class MobileBroadbandAccountWatcher
     }
     public func add_EnumerationCompleted(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
-        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_EnumerationCompleted(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
@@ -8902,7 +8902,7 @@ public class MobileBroadbandAccountWatcher
     }
     public func add_Stopped(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandAccountWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
-        return try _ifc.add_Stopped(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Stopped(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandAccountWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_Stopped(cookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandAccountWatcher = try _self.QueryInterface();
@@ -10092,7 +10092,7 @@ public class MobileBroadbandDeviceServiceDataSession
     }
     public func add_DataReceived(eventHandler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataSession>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandDeviceServiceDataReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession = try _self.QueryInterface();
-        return try _ifc.add_DataReceived(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_DataReceived(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataSession__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandDeviceServiceDataReceivedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_DataReceived(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandDeviceServiceDataSession = try _self.QueryInterface();
@@ -10365,7 +10365,7 @@ public class MobileBroadbandModem
     }
     public func add_IsInEmergencyCallModeChanged(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandModem>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandModem3 = try _self.QueryInterface();
-        return try _ifc.add_IsInEmergencyCallModeChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(cb: handler).Interface());
+        return try _ifc.add_IsInEmergencyCallModeChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandModem_IInspectable(cb: handler).Interface());
     }
     public func remove_IsInEmergencyCallModeChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandModem3 = try _self.QueryInterface();
@@ -11147,7 +11147,7 @@ public class MobileBroadbandSarManager
     }
     public func add_TransmissionStateChanged(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandSarManager>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandTransmissionStateChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandSarManager = try _self.QueryInterface();
-        return try _ifc.add_TransmissionStateChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_TransmissionStateChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSarManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandTransmissionStateChangedEventArgs(cb: handler).Interface());
     }
     public func remove_TransmissionStateChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandSarManager = try _self.QueryInterface();
@@ -11368,7 +11368,7 @@ public class MobileBroadbandSlotManager
     }
     public func add_SlotInfoChanged(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandSlotManager>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandSlotInfoChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager = try _self.QueryInterface();
-        return try _ifc.add_SlotInfoChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_SlotInfoChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotInfoChangedEventArgs(cb: handler).Interface());
     }
     public func remove_SlotInfoChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager = try _self.QueryInterface();
@@ -11376,7 +11376,7 @@ public class MobileBroadbandSlotManager
     }
     public func add_CurrentSlotIndexChanged(handler : @escaping (Optional<Windows.Networking.NetworkOperators.MobileBroadbandSlotManager>, Optional<Windows.Networking.NetworkOperators.MobileBroadbandCurrentSlotIndexChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager = try _self.QueryInterface();
-        return try _ifc.add_CurrentSlotIndexChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_CurrentSlotIndexChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandSlotManager__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandCurrentSlotIndexChangedEventArgs(cb: handler).Interface());
     }
     public func remove_CurrentSlotIndexChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.NetworkOperators.IMobileBroadbandSlotManager = try _self.QueryInterface();

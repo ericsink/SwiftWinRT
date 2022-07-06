@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpda
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CICachedFileUpdaterUI>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIFileUpdateRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Provider.CachedFileUpdaterUI>, args : Optional<Windows.Storage.Provider.FileUpdateRequestedEventArgs>) throws -> Void {
@@ -129,7 +129,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpda
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectableVtbl = .init(
     QueryInterface: {
@@ -147,19 +147,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CICachedFileUpdaterUI>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.from_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -174,7 +174,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable
@@ -188,8 +188,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdater
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Provider.CachedFileUpdaterUI>, args : Optional<WinRT.Object>) throws -> Void {
@@ -593,7 +593,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CF
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatusVtbl = .init(
     QueryInterface: {
@@ -611,19 +611,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -638,7 +638,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFile
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus
@@ -652,8 +652,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -713,7 +713,7 @@ public class IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRo
 } // IVectorView_1__q_CWindows_CStorage_CProvider_CStorageProviderSyncRootInfo
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -731,7 +731,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CProvider_CFileU
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CProvider_CFileUpdateStatus =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

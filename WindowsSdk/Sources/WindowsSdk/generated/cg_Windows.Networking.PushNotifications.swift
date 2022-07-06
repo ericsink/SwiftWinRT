@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPu
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushN
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannel>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushN
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushN
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.PushNotifications.PushNotificationChannel>, args : Optional<Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs>) throws -> Void {
@@ -172,7 +172,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNoti
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelVtbl = .init(
     QueryInterface: {
@@ -190,19 +190,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotific
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -217,7 +217,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotific
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel
@@ -231,8 +231,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotific
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -277,7 +277,7 @@ public class IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNot
     }
 } // IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
 // impl delegate type
-open class EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
+open class impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgsVtbl = .init(
     QueryInterface: {
@@ -295,19 +295,19 @@ open class EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotifi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CPushNotifications_CIPushNotificationChannelsRevokedEventArgs>>) in
-        guard let self = EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.from_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(pThis) else {
+        guard let self = impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.from_impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -322,7 +322,7 @@ open class EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotifi
     }
     )
     private class Container {
-        public var self_ref: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs? = nil
+        public var self_ref: impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs
@@ -336,8 +336,8 @@ open class EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotifi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IEventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs? {
-        return pUnk?.bindMemory(to: EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs? {
+        return pUnk?.bindMemory(to: impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, args : Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void {
@@ -367,7 +367,7 @@ open class wrap_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushN
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -385,7 +385,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifica
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

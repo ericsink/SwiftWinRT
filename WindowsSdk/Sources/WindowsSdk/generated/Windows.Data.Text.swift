@@ -1198,7 +1198,7 @@ open class ISelectableWordSegmentsTokenizingHandler
     }
 }
 // impl delegate type
-open class SelectableWordSegmentsTokenizingHandler
+open class impl_SelectableWordSegmentsTokenizingHandler
 {
     private static var vtable: _q_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandlerVtbl = .init(
     QueryInterface: {
@@ -1216,19 +1216,19 @@ open class SelectableWordSegmentsTokenizingHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: SelectableWordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_SelectableWordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: SelectableWordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_SelectableWordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ precedingWords : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CData_CText_CSelectableWordSegment>>, _ words : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CData_CText_CSelectableWordSegment>>) in
-        guard let self = SelectableWordSegmentsTokenizingHandler.from_SelectableWordSegmentsTokenizingHandler(pThis) else {
+        guard let self = impl_SelectableWordSegmentsTokenizingHandler.from_impl_SelectableWordSegmentsTokenizingHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1243,7 +1243,7 @@ open class SelectableWordSegmentsTokenizingHandler
     }
     )
     private class Container {
-        public var self_ref: SelectableWordSegmentsTokenizingHandler? = nil
+        public var self_ref: impl_SelectableWordSegmentsTokenizingHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandler
@@ -1257,8 +1257,8 @@ open class SelectableWordSegmentsTokenizingHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CData_CText_CISelectableWordSegmentsTokenizingHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_SelectableWordSegmentsTokenizingHandler(_ pUnk: UnsafeMutableRawPointer?) -> SelectableWordSegmentsTokenizingHandler? {
-        return pUnk?.bindMemory(to: SelectableWordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_SelectableWordSegmentsTokenizingHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_SelectableWordSegmentsTokenizingHandler? {
+        return pUnk?.bindMemory(to: impl_SelectableWordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(precedingWords : Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CSelectableWordSegment>, words : Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CSelectableWordSegment>) throws -> Void {
@@ -1318,7 +1318,7 @@ public class SelectableWordsSegmenter
     }
     public func Tokenize(text : Swift.String, startIndex : Swift.UInt32, handler : @escaping (Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CSelectableWordSegment>, Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CSelectableWordSegment>) throws -> Void) throws -> Void {
         let _ifc : Windows.Data.Text.ISelectableWordsSegmenter = try _self.QueryInterface();
-        return try _ifc.Tokenize(text: text, startIndex: startIndex, handler: Windows.Data.Text.SelectableWordSegmentsTokenizingHandler(cb: handler).Interface());
+        return try _ifc.Tokenize(text: text, startIndex: startIndex, handler: Windows.Data.Text.impl_SelectableWordSegmentsTokenizingHandler(cb: handler).Interface());
     }
     public var ResolvedLanguage : Optional<Swift.String> {
         get throws {
@@ -1773,7 +1773,7 @@ open class IWordSegmentsTokenizingHandler
     }
 }
 // impl delegate type
-open class WordSegmentsTokenizingHandler
+open class impl_WordSegmentsTokenizingHandler
 {
     private static var vtable: _q_CWindows_CData_CText_CIWordSegmentsTokenizingHandlerVtbl = .init(
     QueryInterface: {
@@ -1791,19 +1791,19 @@ open class WordSegmentsTokenizingHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: WordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_WordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: WordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_WordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ precedingWords : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CData_CText_CWordSegment>>, _ words : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IIterable_1__q_CWindows_CData_CText_CWordSegment>>) in
-        guard let self = WordSegmentsTokenizingHandler.from_WordSegmentsTokenizingHandler(pThis) else {
+        guard let self = impl_WordSegmentsTokenizingHandler.from_impl_WordSegmentsTokenizingHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1818,7 +1818,7 @@ open class WordSegmentsTokenizingHandler
     }
     )
     private class Container {
-        public var self_ref: WordSegmentsTokenizingHandler? = nil
+        public var self_ref: impl_WordSegmentsTokenizingHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CData_CText_CIWordSegmentsTokenizingHandler
@@ -1832,8 +1832,8 @@ open class WordSegmentsTokenizingHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CData_CText_CIWordSegmentsTokenizingHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_WordSegmentsTokenizingHandler(_ pUnk: UnsafeMutableRawPointer?) -> WordSegmentsTokenizingHandler? {
-        return pUnk?.bindMemory(to: WordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_WordSegmentsTokenizingHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_WordSegmentsTokenizingHandler? {
+        return pUnk?.bindMemory(to: impl_WordSegmentsTokenizingHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(precedingWords : Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CWordSegment>, words : Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CWordSegment>) throws -> Void {
@@ -1893,7 +1893,7 @@ public class WordsSegmenter
     }
     public func Tokenize(text : Swift.String, startIndex : Swift.UInt32, handler : @escaping (Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CWordSegment>, Optional<ClosedGenerics.IIterable_1__q_CWindows_CData_CText_CWordSegment>) throws -> Void) throws -> Void {
         let _ifc : Windows.Data.Text.IWordsSegmenter = try _self.QueryInterface();
-        return try _ifc.Tokenize(text: text, startIndex: startIndex, handler: Windows.Data.Text.WordSegmentsTokenizingHandler(cb: handler).Interface());
+        return try _ifc.Tokenize(text: text, startIndex: startIndex, handler: Windows.Data.Text.impl_WordSegmentsTokenizingHandler(cb: handler).Interface());
     }
     public var ResolvedLanguage : Optional<Swift.String> {
         get throws {

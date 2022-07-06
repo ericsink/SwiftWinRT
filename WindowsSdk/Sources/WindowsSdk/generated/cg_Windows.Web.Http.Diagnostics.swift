@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagn
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestSentEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider>, args : Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs>) throws -> Void {
@@ -129,7 +129,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagn
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -147,19 +147,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderResponseReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -174,7 +174,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs
@@ -188,8 +188,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider>, args : Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs>) throws -> Void {
@@ -234,7 +234,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagn
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgsVtbl = .init(
     QueryInterface: {
@@ -252,19 +252,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProvider>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CDiagnostics_CIHttpDiagnosticProviderRequestResponseCompletedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -279,7 +279,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs
@@ -293,8 +293,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnost
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider>, args : Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs>) throws -> Void {

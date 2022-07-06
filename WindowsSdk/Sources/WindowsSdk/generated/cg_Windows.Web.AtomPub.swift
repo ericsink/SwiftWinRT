@@ -92,7 +92,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CService
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgressVtbl = .init(
     QueryInterface: {
@@ -110,19 +110,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDoc
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress>>, _ progressInfo : _q_CWindows_CWeb_CSyndication_CRetrievalProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -137,7 +137,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDoc
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
@@ -151,8 +151,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDoc
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress>, progressInfo : Windows.Web.Syndication.RetrievalProgress) throws -> Void {
@@ -197,7 +197,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAto
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgressVtbl = .init(
     QueryInterface: {
@@ -215,19 +215,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPu
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -242,7 +242,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPu
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress
@@ -256,8 +256,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPu
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -309,7 +309,7 @@ public class IVectorView_1__q_CWindows_CWeb_CAtomPub_CResourceCollection
 } // IVectorView_1__q_CWindows_CWeb_CAtomPub_CResourceCollection
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -327,7 +327,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CAtomPub
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CWeb_CAtomPub_CServiceDocument__q_CWindows_CWeb_CSyndication_CRetrievalProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

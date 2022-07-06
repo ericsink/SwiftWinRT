@@ -110,7 +110,7 @@ open class ButtonBase
     }
     public func add_Click(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
-        return try _ifc.add_Click(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_Click(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_Click(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IButtonBase = try _self.QueryInterface();
@@ -1066,7 +1066,7 @@ open class RangeBase
     }
     public func add_ValueChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
-        return try _ifc.add_ValueChanged(handler: Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ValueChanged(handler: Microsoft.UI.Xaml.Controls.Primitives.impl_RangeBaseValueChangedEventHandler(cb: handler).Interface());
     }
     public func remove_ValueChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IRangeBase = try _self.QueryInterface();
@@ -1141,7 +1141,7 @@ open class IRangeBaseValueChangedEventHandler
     }
 }
 // impl delegate type
-open class RangeBaseValueChangedEventHandler
+open class impl_RangeBaseValueChangedEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -1159,19 +1159,19 @@ open class RangeBaseValueChangedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventArgs>>) in
-        guard let self = RangeBaseValueChangedEventHandler.from_RangeBaseValueChangedEventHandler(pThis) else {
+        guard let self = impl_RangeBaseValueChangedEventHandler.from_impl_RangeBaseValueChangedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1186,7 +1186,7 @@ open class RangeBaseValueChangedEventHandler
     }
     )
     private class Container {
-        public var self_ref: RangeBaseValueChangedEventHandler? = nil
+        public var self_ref: impl_RangeBaseValueChangedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler
@@ -1200,8 +1200,8 @@ open class RangeBaseValueChangedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CPrimitives_CIRangeBaseValueChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_RangeBaseValueChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> RangeBaseValueChangedEventHandler? {
-        return pUnk?.bindMemory(to: RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_RangeBaseValueChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_RangeBaseValueChangedEventHandler? {
+        return pUnk?.bindMemory(to: impl_RangeBaseValueChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.Primitives.RangeBaseValueChangedEventArgs>) throws -> Void {

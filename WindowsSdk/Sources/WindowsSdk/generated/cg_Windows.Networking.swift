@@ -78,7 +78,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPairVtbl = .init(
     QueryInterface: {
@@ -96,19 +96,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -123,7 +123,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair
@@ -137,8 +137,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -349,7 +349,7 @@ public class IIterator_1__q_CWindows_CNetworking_CEndpointPair
 } // IIterator_1__q_CWindows_CNetworking_CEndpointPair
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -367,7 +367,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

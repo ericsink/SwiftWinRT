@@ -3551,7 +3551,7 @@ public class VpnChannel
     }
     public func add_ActivityChange(handler : @escaping (Optional<Windows.Networking.Vpn.VpnChannel>, Optional<Windows.Networking.Vpn.VpnChannelActivityEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Vpn.IVpnChannel = try _self.QueryInterface();
-        return try _ifc.add_ActivityChange(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(cb: handler).Interface());
+        return try _ifc.add_ActivityChange(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(cb: handler).Interface());
     }
     public func remove_ActivityChange(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Vpn.IVpnChannel = try _self.QueryInterface();
@@ -3615,7 +3615,7 @@ public class VpnChannel
     }
     public func add_ActivityStateChange(handler : @escaping (Optional<Windows.Networking.Vpn.VpnChannel>, Optional<Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Vpn.IVpnChannel2 = try _self.QueryInterface();
-        return try _ifc.add_ActivityStateChange(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(cb: handler).Interface());
+        return try _ifc.add_ActivityStateChange(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(cb: handler).Interface());
     }
     public func remove_ActivityStateChange(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Vpn.IVpnChannel2 = try _self.QueryInterface();

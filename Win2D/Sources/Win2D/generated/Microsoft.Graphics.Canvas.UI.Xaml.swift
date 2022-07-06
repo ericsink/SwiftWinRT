@@ -29,7 +29,7 @@ public class CanvasControl
     }
     public func add_CreateResources(value : @escaping (Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-        return try _ifc.add_CreateResources(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
+        return try _ifc.add_CreateResources(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
     }
     public func remove_CreateResources(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
@@ -41,7 +41,7 @@ public class CanvasControl
     }
     public func add_Draw(value : @escaping (Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl>, Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
-        return try _ifc.add_Draw(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: value).Interface());
+        return try _ifc.add_Draw(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasDrawEventArgs(cb: value).Interface());
     }
     public func remove_Draw(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasControl = try _self.QueryInterface();
@@ -392,7 +392,7 @@ public class CanvasVirtualControl
     }
     public func add_CreateResources(value : @escaping (Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasVirtualControl>, Optional<Microsoft.Graphics.Canvas.UI.CanvasCreateResourcesEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasVirtualControl = try _self.QueryInterface();
-        return try _ifc.add_CreateResources(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
+        return try _ifc.add_CreateResources(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CCanvasCreateResourcesEventArgs(cb: value).Interface());
     }
     public func remove_CreateResources(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasVirtualControl = try _self.QueryInterface();
@@ -404,7 +404,7 @@ public class CanvasVirtualControl
     }
     public func add_RegionsInvalidated(value : @escaping (Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasVirtualControl>, Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasRegionsInvalidatedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasVirtualControl = try _self.QueryInterface();
-        return try _ifc.add_RegionsInvalidated(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(cb: value).Interface());
+        return try _ifc.add_RegionsInvalidated(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualControl__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(cb: value).Interface());
     }
     public func remove_RegionsInvalidated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasVirtualControl = try _self.QueryInterface();
@@ -612,7 +612,7 @@ public class CanvasVirtualImageSource
     }
     public func add_RegionsInvalidated(value : @escaping (Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasVirtualImageSource>, Optional<Microsoft.Graphics.Canvas.UI.Xaml.CanvasRegionsInvalidatedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasVirtualImageSource = try _self.QueryInterface();
-        return try _ifc.add_RegionsInvalidated(value: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(cb: value).Interface());
+        return try _ifc.add_RegionsInvalidated(value: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasVirtualImageSource__q_CMicrosoft_CGraphics_CCanvas_CUI_CXaml_CCanvasRegionsInvalidatedEventArgs(cb: value).Interface());
     }
     public func remove_RegionsInvalidated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.Graphics.Canvas.UI.Xaml.ICanvasVirtualImageSource = try _self.QueryInterface();

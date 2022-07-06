@@ -1091,7 +1091,7 @@ public class ToastNotification
     }
     public func add_Dismissed(handler : @escaping (Optional<Windows.UI.Notifications.ToastNotification>, Optional<Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-        return try _ifc.add_Dismissed(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Dismissed(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(cb: handler).Interface());
     }
     public func remove_Dismissed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
@@ -1099,7 +1099,7 @@ public class ToastNotification
     }
     public func add_Activated(handler : @escaping (Optional<Windows.UI.Notifications.ToastNotification>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-        return try _ifc.add_Activated(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Activated(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(cb: handler).Interface());
     }
     public func remove_Activated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
@@ -1107,7 +1107,7 @@ public class ToastNotification
     }
     public func add_Failed(handler : @escaping (Optional<Windows.UI.Notifications.ToastNotification>, Optional<Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
-        return try _ifc.add_Failed(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Failed(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(cb: handler).Interface());
     }
     public func remove_Failed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.UI.Notifications.IToastNotification = try _self.QueryInterface();
@@ -1396,7 +1396,7 @@ public class ToastNotifier
     }
     public func add_ScheduledToastNotificationShowing(handler : @escaping (Optional<Windows.UI.Notifications.ToastNotifier>, Optional<Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.UI.Notifications.IToastNotifier3 = try _self.QueryInterface();
-        return try _ifc.add_ScheduledToastNotificationShowing(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(cb: handler).Interface());
+        return try _ifc.add_ScheduledToastNotificationShowing(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(cb: handler).Interface());
     }
     public func remove_ScheduledToastNotificationShowing(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.UI.Notifications.IToastNotifier3 = try _self.QueryInterface();

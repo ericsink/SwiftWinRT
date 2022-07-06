@@ -61,7 +61,7 @@ public class FileOpenPickerUI
     }
     public func add_FileRemoved(handler : @escaping (Optional<Windows.Storage.Pickers.Provider.FileOpenPickerUI>, Optional<Windows.Storage.Pickers.Provider.FileRemovedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Pickers.Provider.IFileOpenPickerUI = try _self.QueryInterface();
-        return try _ifc.add_FileRemoved(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FileRemoved(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(cb: handler).Interface());
     }
     public func remove_FileRemoved(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Pickers.Provider.IFileOpenPickerUI = try _self.QueryInterface();
@@ -69,7 +69,7 @@ public class FileOpenPickerUI
     }
     public func add_Closing(handler : @escaping (Optional<Windows.Storage.Pickers.Provider.FileOpenPickerUI>, Optional<Windows.Storage.Pickers.Provider.PickerClosingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Pickers.Provider.IFileOpenPickerUI = try _self.QueryInterface();
-        return try _ifc.add_Closing(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(cb: handler).Interface());
+        return try _ifc.add_Closing(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(cb: handler).Interface());
     }
     public func remove_Closing(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Pickers.Provider.IFileOpenPickerUI = try _self.QueryInterface();
@@ -163,7 +163,7 @@ public class FileSavePickerUI
     }
     public func add_FileNameChanged(handler : @escaping (Optional<Windows.Storage.Pickers.Provider.FileSavePickerUI>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Pickers.Provider.IFileSavePickerUI = try _self.QueryInterface();
-        return try _ifc.add_FileNameChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(cb: handler).Interface());
+        return try _ifc.add_FileNameChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(cb: handler).Interface());
     }
     public func remove_FileNameChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Pickers.Provider.IFileSavePickerUI = try _self.QueryInterface();
@@ -171,7 +171,7 @@ public class FileSavePickerUI
     }
     public func add_TargetFileRequested(handler : @escaping (Optional<Windows.Storage.Pickers.Provider.FileSavePickerUI>, Optional<Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Pickers.Provider.IFileSavePickerUI = try _self.QueryInterface();
-        return try _ifc.add_TargetFileRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_TargetFileRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_TargetFileRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Pickers.Provider.IFileSavePickerUI = try _self.QueryInterface();

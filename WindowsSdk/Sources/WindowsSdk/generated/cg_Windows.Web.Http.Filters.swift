@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProto
     }
 } // ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocol
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpBaseProtocolFilter>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CFilters_CIHttpServerCustomValidationRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocol
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocol
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Web.Http.Filters.HttpBaseProtocolFilter>, args : Optional<Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs>) throws -> Void {

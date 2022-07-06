@@ -242,7 +242,7 @@ public class DataReaderLoadOperation
     public func Interface() -> ClosedGenerics.IAsyncOperation_1_UINT32 { return _self; }
     public func put_Completed(handler : @escaping (Optional<ClosedGenerics.IAsyncOperation_1_UINT32>, Windows.Foundation.AsyncStatus) throws -> Void) throws -> Void {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
-        return try _ifc.put_Completed(handler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
+        return try _ifc.put_Completed(handler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
     }
     public func get_Completed() throws -> Optional<ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32> {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
@@ -474,7 +474,7 @@ public class DataWriterStoreOperation
     public func Interface() -> ClosedGenerics.IAsyncOperation_1_UINT32 { return _self; }
     public func put_Completed(handler : @escaping (Optional<ClosedGenerics.IAsyncOperation_1_UINT32>, Windows.Foundation.AsyncStatus) throws -> Void) throws -> Void {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();
-        return try _ifc.put_Completed(handler: ClosedGenerics.AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
+        return try _ifc.put_Completed(handler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1_UINT32(cb: handler).Interface());
     }
     public func get_Completed() throws -> Optional<ClosedGenerics.wrap_AsyncOperationCompletedHandler_1_UINT32> {
         let _ifc : ClosedGenerics.IAsyncOperation_1_UINT32 = try _self.QueryInterface();

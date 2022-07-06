@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIO
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStreamVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutp
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutp
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutp
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -215,7 +215,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIR
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamVtbl = .init(
     QueryInterface: {
@@ -233,19 +233,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -260,7 +260,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream
@@ -274,8 +274,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -363,7 +363,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CII
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStreamVtbl = .init(
     QueryInterface: {
@@ -381,19 +381,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInpu
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -408,7 +408,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInpu
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream
@@ -422,8 +422,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInpu
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -511,7 +511,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIR
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentTypeVtbl = .init(
     QueryInterface: {
@@ -529,19 +529,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -556,7 +556,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType
@@ -570,8 +570,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRand
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -684,7 +684,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBu
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32Vtbl = .init(
     QueryInterface: {
@@ -702,19 +702,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32>>, _ progressInfo : UINT32) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -729,7 +729,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
@@ -743,8 +743,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32>, progressInfo : Swift.UInt32) throws -> Void {
@@ -789,7 +789,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32Vtbl = .init(
     QueryInterface: {
@@ -807,19 +807,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -834,7 +834,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32
@@ -848,8 +848,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -937,7 +937,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIB
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBufferVtbl = .init(
     QueryInterface: {
@@ -955,19 +955,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuff
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -982,7 +982,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuff
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer
@@ -996,8 +996,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuff
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1110,7 +1110,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIIn
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgressVtbl = .init(
     QueryInterface: {
@@ -1128,19 +1128,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress>>, _ progressInfo : _q_CWindows_CWeb_CSyndication_CRetrievalProgress) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1155,7 +1155,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
@@ -1169,8 +1169,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress>, progressInfo : Windows.Web.Syndication.RetrievalProgress) throws -> Void {
@@ -1215,7 +1215,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgressVtbl = .init(
     QueryInterface: {
@@ -1233,19 +1233,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1260,7 +1260,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress
@@ -1274,8 +1274,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1388,7 +1388,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBu
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64Vtbl = .init(
     QueryInterface: {
@@ -1406,19 +1406,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64>>, _ progressInfo : UINT64) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1433,7 +1433,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
@@ -1447,8 +1447,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
@@ -1493,7 +1493,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64Vtbl = .init(
     QueryInterface: {
@@ -1511,19 +1511,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1538,7 +1538,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64
@@ -1552,8 +1552,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1666,7 +1666,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIIn
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64Vtbl = .init(
     QueryInterface: {
@@ -1684,19 +1684,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64>>, _ progressInfo : UINT64) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1711,7 +1711,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
@@ -1725,8 +1725,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInput
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64>, progressInfo : Swift.UInt64) throws -> Void {
@@ -1771,7 +1771,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64Vtbl = .init(
     QueryInterface: {
@@ -1789,19 +1789,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1816,7 +1816,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64
@@ -1830,8 +1830,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1861,7 +1861,7 @@ open class wrap_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorag
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1879,7 +1879,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutpu
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIOutputStream =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1890,7 +1890,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutpu
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1908,7 +1908,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRando
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1919,7 +1919,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRando
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInputStream : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1937,7 +1937,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInput
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIInputStream =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1948,7 +1948,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIInput
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1966,7 +1966,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRando
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIRandomAccessStreamWithContentType =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1977,7 +1977,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRando
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1995,7 +1995,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32 =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT32 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2006,7 +2006,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2024,7 +2024,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffe
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStreams_CIBuffer =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2035,7 +2035,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffe
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2053,7 +2053,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream__q_CWindows_CWeb_CSyndication_CRetrievalProgress =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2064,7 +2064,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2082,7 +2082,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64 =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIBuffer_UINT64 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2093,7 +2093,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64 : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64 {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64 {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2111,7 +2111,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CStorage_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64 =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CStorage_CStreams_CIInputStream_UINT64 =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

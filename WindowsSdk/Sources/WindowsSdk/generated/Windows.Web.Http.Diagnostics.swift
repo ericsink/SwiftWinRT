@@ -39,7 +39,7 @@ public class HttpDiagnosticProvider
     }
     public func add_RequestSent(handler : @escaping (Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider>, Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestSentEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider = try _self.QueryInterface();
-        return try _ifc.add_RequestSent(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(cb: handler).Interface());
+        return try _ifc.add_RequestSent(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestSentEventArgs(cb: handler).Interface());
     }
     public func remove_RequestSent(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider = try _self.QueryInterface();
@@ -47,7 +47,7 @@ public class HttpDiagnosticProvider
     }
     public func add_ResponseReceived(handler : @escaping (Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider>, Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProviderResponseReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider = try _self.QueryInterface();
-        return try _ifc.add_ResponseReceived(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ResponseReceived(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderResponseReceivedEventArgs(cb: handler).Interface());
     }
     public func remove_ResponseReceived(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider = try _self.QueryInterface();
@@ -55,7 +55,7 @@ public class HttpDiagnosticProvider
     }
     public func add_RequestResponseCompleted(handler : @escaping (Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProvider>, Optional<Windows.Web.Http.Diagnostics.HttpDiagnosticProviderRequestResponseCompletedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider = try _self.QueryInterface();
-        return try _ifc.add_RequestResponseCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(cb: handler).Interface());
+        return try _ifc.add_RequestResponseCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProvider__q_CWindows_CWeb_CHttp_CDiagnostics_CHttpDiagnosticProviderRequestResponseCompletedEventArgs(cb: handler).Interface());
     }
     public func remove_RequestResponseCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.Http.Diagnostics.IHttpDiagnosticProvider = try _self.QueryInterface();

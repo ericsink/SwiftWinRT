@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDa
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.from_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -215,7 +215,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDa
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperationVtbl = .init(
     QueryInterface: {
@@ -233,19 +233,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.from_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -260,7 +260,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation
@@ -274,8 +274,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataT
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -305,7 +305,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_C
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -323,7 +323,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackage =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -334,7 +334,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTr
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -352,7 +352,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CApplicationModel_CDataTr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CApplicationModel_CDataTransfer_CDataPackageOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

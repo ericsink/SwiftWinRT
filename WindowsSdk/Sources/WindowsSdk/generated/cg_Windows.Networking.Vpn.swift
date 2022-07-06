@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CW
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnChannel>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnChannelActivityEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Vpn.VpnChannel>, args : Optional<Windows.Networking.Vpn.VpnChannelActivityEventArgs>) throws -> Void {
@@ -140,7 +140,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CW
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgsVtbl = .init(
     QueryInterface: {
@@ -158,19 +158,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnChannel>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnChannelActivityStateChangedArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -185,7 +185,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs
@@ -199,8 +199,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWind
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CVpn_CVpnChannel__q_CWindows_CNetworking_CVpn_CVpnChannelActivityStateChangedArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Vpn.VpnChannel>, args : Optional<Windows.Networking.Vpn.VpnChannelActivityStateChangedArgs>) throws -> Void {
@@ -299,7 +299,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpn
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredentialVtbl = .init(
     QueryInterface: {
@@ -317,19 +317,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCre
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnCredential>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -344,7 +344,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCre
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential
@@ -358,8 +358,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCre
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnCredential>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -590,7 +590,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpn
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatusVtbl = .init(
     QueryInterface: {
@@ -608,19 +608,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnMan
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -635,7 +635,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnMan
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus
@@ -649,8 +649,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnMan
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -738,7 +738,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfileVtbl = .init(
     QueryInterface: {
@@ -756,19 +756,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -783,7 +783,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile
@@ -797,8 +797,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1430,7 +1430,7 @@ public class IIterator_1__q_CWindows_CNetworking_CVpn_CVpnPacketBuffer
 } // IIterator_1__q_CWindows_CNetworking_CVpn_CVpnPacketBuffer
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnCredential : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1448,7 +1448,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnCred
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnCredential =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1459,7 +1459,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnCred
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1477,7 +1477,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnMana
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1488,7 +1488,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnMana
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1506,7 +1506,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CVpn_CIVpnProfile =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

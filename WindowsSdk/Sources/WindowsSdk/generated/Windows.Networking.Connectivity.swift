@@ -3439,7 +3439,7 @@ public class NetworkInformation
         return try NetworkInformationStatics.GetSortedEndpointPairs(destinationList: destinationList, sortOptions: sortOptions);
     }
     public static func add_NetworkStatusChanged(networkStatusHandler : @escaping (Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try NetworkInformationStatics.add_NetworkStatusChanged(networkStatusHandler: Windows.Networking.Connectivity.NetworkStatusChangedEventHandler(cb: networkStatusHandler).Interface());
+        return try NetworkInformationStatics.add_NetworkStatusChanged(networkStatusHandler: Windows.Networking.Connectivity.impl_NetworkStatusChangedEventHandler(cb: networkStatusHandler).Interface());
     }
     public static func remove_NetworkStatusChanged(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try NetworkInformationStatics.remove_NetworkStatusChanged(eventCookie: eventCookie);
@@ -3639,7 +3639,7 @@ open class INetworkStatusChangedEventHandler
     }
 }
 // impl delegate type
-open class NetworkStatusChangedEventHandler
+open class impl_NetworkStatusChangedEventHandler
 {
     private static var vtable: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -3657,19 +3657,19 @@ open class NetworkStatusChangedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = NetworkStatusChangedEventHandler.from_NetworkStatusChangedEventHandler(pThis) else {
+        guard let self = impl_NetworkStatusChangedEventHandler.from_impl_NetworkStatusChangedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -3684,7 +3684,7 @@ open class NetworkStatusChangedEventHandler
     }
     )
     private class Container {
-        public var self_ref: NetworkStatusChangedEventHandler? = nil
+        public var self_ref: impl_NetworkStatusChangedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandler
@@ -3698,8 +3698,8 @@ open class NetworkStatusChangedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CWindows_CNetworking_CConnectivity_CINetworkStatusChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_NetworkStatusChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> NetworkStatusChangedEventHandler? {
-        return pUnk?.bindMemory(to: NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_NetworkStatusChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_NetworkStatusChangedEventHandler? {
+        return pUnk?.bindMemory(to: impl_NetworkStatusChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>) throws -> Void {

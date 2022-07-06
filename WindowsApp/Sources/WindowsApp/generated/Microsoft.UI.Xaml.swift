@@ -40,7 +40,7 @@ open class Application
         return try Microsoft.UI.Xaml.Application(plok: ApplicationStatics.get_Current());
     }
     public static func Start(callback : @escaping (Optional<Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void) throws -> Void {
-        return try ApplicationStatics.Start(callback: Microsoft.UI.Xaml.ApplicationInitializationCallback(cb: callback).Interface());
+        return try ApplicationStatics.Start(callback: Microsoft.UI.Xaml.impl_ApplicationInitializationCallback(cb: callback).Interface());
     }
     public static func LoadComponent(component : Optional<WinRT.Object>, resourceLocator : Optional<Windows.Foundation.Uri>) throws -> Void {
         return try ApplicationStatics.LoadComponent(component: component!.GetInterface(), resourceLocator: resourceLocator!.Interface());
@@ -91,7 +91,7 @@ open class Application
     }
     public func add_UnhandledException(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
-        return try _ifc.add_UnhandledException(handler: Microsoft.UI.Xaml.UnhandledExceptionEventHandler(cb: handler).Interface());
+        return try _ifc.add_UnhandledException(handler: Microsoft.UI.Xaml.impl_UnhandledExceptionEventHandler(cb: handler).Interface());
     }
     public func remove_UnhandledException(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IApplication = try _self.QueryInterface();
@@ -466,7 +466,7 @@ open class IApplicationInitializationCallback
     }
 }
 // impl delegate type
-open class ApplicationInitializationCallback
+open class impl_ApplicationInitializationCallback
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackVtbl = .init(
     QueryInterface: {
@@ -484,19 +484,19 @@ open class ApplicationInitializationCallback
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ p : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallbackParams>>) in
-        guard let self = ApplicationInitializationCallback.from_ApplicationInitializationCallback(pThis) else {
+        guard let self = impl_ApplicationInitializationCallback.from_impl_ApplicationInitializationCallback(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -511,7 +511,7 @@ open class ApplicationInitializationCallback
     }
     )
     private class Container {
-        public var self_ref: ApplicationInitializationCallback? = nil
+        public var self_ref: impl_ApplicationInitializationCallback? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback
@@ -525,8 +525,8 @@ open class ApplicationInitializationCallback
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIApplicationInitializationCallback(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_ApplicationInitializationCallback(_ pUnk: UnsafeMutableRawPointer?) -> ApplicationInitializationCallback? {
-        return pUnk?.bindMemory(to: ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_ApplicationInitializationCallback(_ pUnk: UnsafeMutableRawPointer?) -> impl_ApplicationInitializationCallback? {
+        return pUnk?.bindMemory(to: impl_ApplicationInitializationCallback.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(p : Optional<Microsoft.UI.Xaml.ApplicationInitializationCallbackParams>) throws -> Void {
@@ -767,7 +767,7 @@ open class DependencyObject
     }
     public func RegisterPropertyChangedCallback(dp : Optional<Microsoft.UI.Xaml.DependencyProperty>, callback : @escaping (Optional<Microsoft.UI.Xaml.DependencyObject>, Optional<Microsoft.UI.Xaml.DependencyProperty>) throws -> Void) throws -> Swift.Int64 {
         let _ifc : Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
-        return try _ifc.RegisterPropertyChangedCallback(dp: dp!.Interface(), callback: Microsoft.UI.Xaml.DependencyPropertyChangedCallback(cb: callback).Interface());
+        return try _ifc.RegisterPropertyChangedCallback(dp: dp!.Interface(), callback: Microsoft.UI.Xaml.impl_DependencyPropertyChangedCallback(cb: callback).Interface());
     }
     public func UnregisterPropertyChangedCallback(dp : Optional<Microsoft.UI.Xaml.DependencyProperty>, token : Swift.Int64) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IDependencyObject = try _self.QueryInterface();
@@ -829,7 +829,7 @@ open class IDependencyPropertyChangedCallback
     }
 }
 // impl delegate type
-open class DependencyPropertyChangedCallback
+open class impl_DependencyPropertyChangedCallback
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallbackVtbl = .init(
     QueryInterface: {
@@ -847,19 +847,19 @@ open class DependencyPropertyChangedCallback
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>>, _ dp : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>) in
-        guard let self = DependencyPropertyChangedCallback.from_DependencyPropertyChangedCallback(pThis) else {
+        guard let self = impl_DependencyPropertyChangedCallback.from_impl_DependencyPropertyChangedCallback(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -874,7 +874,7 @@ open class DependencyPropertyChangedCallback
     }
     )
     private class Container {
-        public var self_ref: DependencyPropertyChangedCallback? = nil
+        public var self_ref: impl_DependencyPropertyChangedCallback? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback
@@ -888,8 +888,8 @@ open class DependencyPropertyChangedCallback
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedCallback(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DependencyPropertyChangedCallback(_ pUnk: UnsafeMutableRawPointer?) -> DependencyPropertyChangedCallback? {
-        return pUnk?.bindMemory(to: DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DependencyPropertyChangedCallback(_ pUnk: UnsafeMutableRawPointer?) -> impl_DependencyPropertyChangedCallback? {
+        return pUnk?.bindMemory(to: impl_DependencyPropertyChangedCallback.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.DependencyObject>, dp : Optional<Microsoft.UI.Xaml.DependencyProperty>) throws -> Void {
@@ -953,7 +953,7 @@ open class IDependencyPropertyChangedEventHandler
     }
 }
 // impl delegate type
-open class DependencyPropertyChangedEventHandler
+open class impl_DependencyPropertyChangedEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -971,19 +971,19 @@ open class DependencyPropertyChangedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventArgs>>) in
-        guard let self = DependencyPropertyChangedEventHandler.from_DependencyPropertyChangedEventHandler(pThis) else {
+        guard let self = impl_DependencyPropertyChangedEventHandler.from_impl_DependencyPropertyChangedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -998,7 +998,7 @@ open class DependencyPropertyChangedEventHandler
     }
     )
     private class Container {
-        public var self_ref: DependencyPropertyChangedEventHandler? = nil
+        public var self_ref: impl_DependencyPropertyChangedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler
@@ -1012,8 +1012,8 @@ open class DependencyPropertyChangedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDependencyPropertyChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DependencyPropertyChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DependencyPropertyChangedEventHandler? {
-        return pUnk?.bindMemory(to: DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DependencyPropertyChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DependencyPropertyChangedEventHandler? {
+        return pUnk?.bindMemory(to: impl_DependencyPropertyChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void {
@@ -1076,7 +1076,7 @@ open class DispatcherTimer
     }
     public func add_Tick(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
-        return try _ifc.add_Tick(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Tick(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_Tick(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IDispatcherTimer = try _self.QueryInterface();
@@ -1148,7 +1148,7 @@ open class IDragEventHandler
     }
 }
 // impl delegate type
-open class DragEventHandler
+open class impl_DragEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIDragEventHandlerVtbl = .init(
     QueryInterface: {
@@ -1166,19 +1166,19 @@ open class DragEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DragEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DragEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDragEventArgs>>) in
-        guard let self = DragEventHandler.from_DragEventHandler(pThis) else {
+        guard let self = impl_DragEventHandler.from_impl_DragEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1193,7 +1193,7 @@ open class DragEventHandler
     }
     )
     private class Container {
-        public var self_ref: DragEventHandler? = nil
+        public var self_ref: impl_DragEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler
@@ -1207,8 +1207,8 @@ open class DragEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIDragEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DragEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DragEventHandler? {
-        return pUnk?.bindMemory(to: DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DragEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DragEventHandler? {
+        return pUnk?.bindMemory(to: impl_DragEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void {
@@ -1339,7 +1339,7 @@ open class IExceptionRoutedEventHandler
     }
 }
 // impl delegate type
-open class ExceptionRoutedEventHandler
+open class impl_ExceptionRoutedEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -1357,19 +1357,19 @@ open class ExceptionRoutedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventArgs>>) in
-        guard let self = ExceptionRoutedEventHandler.from_ExceptionRoutedEventHandler(pThis) else {
+        guard let self = impl_ExceptionRoutedEventHandler.from_impl_ExceptionRoutedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1384,7 +1384,7 @@ open class ExceptionRoutedEventHandler
     }
     )
     private class Container {
-        public var self_ref: ExceptionRoutedEventHandler? = nil
+        public var self_ref: impl_ExceptionRoutedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler
@@ -1398,8 +1398,8 @@ open class ExceptionRoutedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIExceptionRoutedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_ExceptionRoutedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ExceptionRoutedEventHandler? {
-        return pUnk?.bindMemory(to: ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_ExceptionRoutedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_ExceptionRoutedEventHandler? {
+        return pUnk?.bindMemory(to: impl_ExceptionRoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void {
@@ -1900,7 +1900,7 @@ open class FrameworkElement
     }
     public func add_Loaded(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Loaded(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_Loaded(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_Loaded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1908,7 +1908,7 @@ open class FrameworkElement
     }
     public func add_Unloaded(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Unloaded(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_Unloaded(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_Unloaded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1916,7 +1916,7 @@ open class FrameworkElement
     }
     public func add_DataContextChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.FrameworkElement>, Optional<Microsoft.UI.Xaml.DataContextChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_DataContextChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_DataContextChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CDataContextChangedEventArgs(cb: handler).Interface());
     }
     public func remove_DataContextChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1924,7 +1924,7 @@ open class FrameworkElement
     }
     public func add_SizeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_SizeChanged(handler: Microsoft.UI.Xaml.SizeChangedEventHandler(cb: handler).Interface());
+        return try _ifc.add_SizeChanged(handler: Microsoft.UI.Xaml.impl_SizeChangedEventHandler(cb: handler).Interface());
     }
     public func remove_SizeChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1932,7 +1932,7 @@ open class FrameworkElement
     }
     public func add_LayoutUpdated(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_LayoutUpdated(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_LayoutUpdated(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_LayoutUpdated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1940,7 +1940,7 @@ open class FrameworkElement
     }
     public func add_Loading(handler : @escaping (Optional<Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_Loading(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Loading(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
     }
     public func remove_Loading(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1948,7 +1948,7 @@ open class FrameworkElement
     }
     public func add_ActualThemeChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.FrameworkElement>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_ActualThemeChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ActualThemeChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement_IInspectable(cb: handler).Interface());
     }
     public func remove_ActualThemeChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -1956,7 +1956,7 @@ open class FrameworkElement
     }
     public func add_EffectiveViewportChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.FrameworkElement>, Optional<Microsoft.UI.Xaml.EffectiveViewportChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
-        return try _ifc.add_EffectiveViewportChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_EffectiveViewportChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CFrameworkElement__q_CMicrosoft_CUI_CXaml_CEffectiveViewportChangedEventArgs(cb: handler).Interface());
     }
     public func remove_EffectiveViewportChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IFrameworkElement = try _self.QueryInterface();
@@ -9246,7 +9246,7 @@ open class IRoutedEventHandler
     }
 }
 // impl delegate type
-open class RoutedEventHandler
+open class impl_RoutedEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -9264,19 +9264,19 @@ open class RoutedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_RoutedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_RoutedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIRoutedEventArgs>>) in
-        guard let self = RoutedEventHandler.from_RoutedEventHandler(pThis) else {
+        guard let self = impl_RoutedEventHandler.from_impl_RoutedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9291,7 +9291,7 @@ open class RoutedEventHandler
     }
     )
     private class Container {
-        public var self_ref: RoutedEventHandler? = nil
+        public var self_ref: impl_RoutedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler
@@ -9305,8 +9305,8 @@ open class RoutedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIRoutedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_RoutedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> RoutedEventHandler? {
-        return pUnk?.bindMemory(to: RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_RoutedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_RoutedEventHandler? {
+        return pUnk?.bindMemory(to: impl_RoutedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void {
@@ -9393,7 +9393,7 @@ open class ISizeChangedEventHandler
     }
 }
 // impl delegate type
-open class SizeChangedEventHandler
+open class impl_SizeChangedEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -9411,19 +9411,19 @@ open class SizeChangedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CISizeChangedEventArgs>>) in
-        guard let self = SizeChangedEventHandler.from_SizeChangedEventHandler(pThis) else {
+        guard let self = impl_SizeChangedEventHandler.from_impl_SizeChangedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -9438,7 +9438,7 @@ open class SizeChangedEventHandler
     }
     )
     private class Container {
-        public var self_ref: SizeChangedEventHandler? = nil
+        public var self_ref: impl_SizeChangedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler
@@ -9452,8 +9452,8 @@ open class SizeChangedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CISizeChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_SizeChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> SizeChangedEventHandler? {
-        return pUnk?.bindMemory(to: SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_SizeChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_SizeChangedEventHandler? {
+        return pUnk?.bindMemory(to: impl_SizeChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.SizeChangedEventArgs>) throws -> Void {
@@ -10787,7 +10787,7 @@ open class UIElement
     }
     public func add_KeyUp(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_KeyUp(handler: Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
+        return try _ifc.add_KeyUp(handler: Microsoft.UI.Xaml.Input.impl_KeyEventHandler(cb: handler).Interface());
     }
     public func remove_KeyUp(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10795,7 +10795,7 @@ open class UIElement
     }
     public func add_KeyDown(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_KeyDown(handler: Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
+        return try _ifc.add_KeyDown(handler: Microsoft.UI.Xaml.Input.impl_KeyEventHandler(cb: handler).Interface());
     }
     public func remove_KeyDown(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10803,7 +10803,7 @@ open class UIElement
     }
     public func add_GotFocus(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_GotFocus(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_GotFocus(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_GotFocus(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10811,7 +10811,7 @@ open class UIElement
     }
     public func add_LostFocus(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_LostFocus(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_LostFocus(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_LostFocus(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10819,7 +10819,7 @@ open class UIElement
     }
     public func add_DragStarting(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.DragStartingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragStarting(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(cb: handler).Interface());
+        return try _ifc.add_DragStarting(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDragStartingEventArgs(cb: handler).Interface());
     }
     public func remove_DragStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10827,7 +10827,7 @@ open class UIElement
     }
     public func add_DropCompleted(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.DropCompletedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DropCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(cb: handler).Interface());
+        return try _ifc.add_DropCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CDropCompletedEventArgs(cb: handler).Interface());
     }
     public func remove_DropCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10835,7 +10835,7 @@ open class UIElement
     }
     public func add_CharacterReceived(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.CharacterReceivedRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_CharacterReceived(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(cb: handler).Interface());
+        return try _ifc.add_CharacterReceived(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CCharacterReceivedRoutedEventArgs(cb: handler).Interface());
     }
     public func remove_CharacterReceived(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10843,7 +10843,7 @@ open class UIElement
     }
     public func add_DragEnter(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragEnter(handler: Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
+        return try _ifc.add_DragEnter(handler: Microsoft.UI.Xaml.impl_DragEventHandler(cb: handler).Interface());
     }
     public func remove_DragEnter(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10851,7 +10851,7 @@ open class UIElement
     }
     public func add_DragLeave(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragLeave(handler: Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
+        return try _ifc.add_DragLeave(handler: Microsoft.UI.Xaml.impl_DragEventHandler(cb: handler).Interface());
     }
     public func remove_DragLeave(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10859,7 +10859,7 @@ open class UIElement
     }
     public func add_DragOver(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DragOver(handler: Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
+        return try _ifc.add_DragOver(handler: Microsoft.UI.Xaml.impl_DragEventHandler(cb: handler).Interface());
     }
     public func remove_DragOver(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10867,7 +10867,7 @@ open class UIElement
     }
     public func add_Drop(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.DragEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_Drop(handler: Microsoft.UI.Xaml.DragEventHandler(cb: handler).Interface());
+        return try _ifc.add_Drop(handler: Microsoft.UI.Xaml.impl_DragEventHandler(cb: handler).Interface());
     }
     public func remove_Drop(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10875,7 +10875,7 @@ open class UIElement
     }
     public func add_PointerPressed(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerPressed(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerPressed(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerPressed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10883,7 +10883,7 @@ open class UIElement
     }
     public func add_PointerMoved(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerMoved(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerMoved(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerMoved(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10891,7 +10891,7 @@ open class UIElement
     }
     public func add_PointerReleased(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerReleased(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerReleased(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerReleased(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10899,7 +10899,7 @@ open class UIElement
     }
     public func add_PointerEntered(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerEntered(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerEntered(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerEntered(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10907,7 +10907,7 @@ open class UIElement
     }
     public func add_PointerExited(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerExited(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerExited(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerExited(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10915,7 +10915,7 @@ open class UIElement
     }
     public func add_PointerCaptureLost(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerCaptureLost(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerCaptureLost(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerCaptureLost(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10923,7 +10923,7 @@ open class UIElement
     }
     public func add_PointerCanceled(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerCanceled(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerCanceled(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerCanceled(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10931,7 +10931,7 @@ open class UIElement
     }
     public func add_PointerWheelChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.PointerRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PointerWheelChanged(handler: Microsoft.UI.Xaml.Input.PointerEventHandler(cb: handler).Interface());
+        return try _ifc.add_PointerWheelChanged(handler: Microsoft.UI.Xaml.Input.impl_PointerEventHandler(cb: handler).Interface());
     }
     public func remove_PointerWheelChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10939,7 +10939,7 @@ open class UIElement
     }
     public func add_Tapped(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.TappedRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_Tapped(handler: Microsoft.UI.Xaml.Input.TappedEventHandler(cb: handler).Interface());
+        return try _ifc.add_Tapped(handler: Microsoft.UI.Xaml.Input.impl_TappedEventHandler(cb: handler).Interface());
     }
     public func remove_Tapped(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10947,7 +10947,7 @@ open class UIElement
     }
     public func add_DoubleTapped(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_DoubleTapped(handler: Microsoft.UI.Xaml.Input.DoubleTappedEventHandler(cb: handler).Interface());
+        return try _ifc.add_DoubleTapped(handler: Microsoft.UI.Xaml.Input.impl_DoubleTappedEventHandler(cb: handler).Interface());
     }
     public func remove_DoubleTapped(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10955,7 +10955,7 @@ open class UIElement
     }
     public func add_Holding(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.HoldingRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_Holding(handler: Microsoft.UI.Xaml.Input.HoldingEventHandler(cb: handler).Interface());
+        return try _ifc.add_Holding(handler: Microsoft.UI.Xaml.Input.impl_HoldingEventHandler(cb: handler).Interface());
     }
     public func remove_Holding(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10963,7 +10963,7 @@ open class UIElement
     }
     public func add_ContextRequested(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.ContextRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ContextRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ContextRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CContextRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_ContextRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10971,7 +10971,7 @@ open class UIElement
     }
     public func add_ContextCanceled(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ContextCanceled(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ContextCanceled(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CRoutedEventArgs(cb: handler).Interface());
     }
     public func remove_ContextCanceled(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10979,7 +10979,7 @@ open class UIElement
     }
     public func add_RightTapped(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_RightTapped(handler: Microsoft.UI.Xaml.Input.RightTappedEventHandler(cb: handler).Interface());
+        return try _ifc.add_RightTapped(handler: Microsoft.UI.Xaml.Input.impl_RightTappedEventHandler(cb: handler).Interface());
     }
     public func remove_RightTapped(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10987,7 +10987,7 @@ open class UIElement
     }
     public func add_ManipulationStarting(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.ManipulationStartingRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationStarting(handler: Microsoft.UI.Xaml.Input.ManipulationStartingEventHandler(cb: handler).Interface());
+        return try _ifc.add_ManipulationStarting(handler: Microsoft.UI.Xaml.Input.impl_ManipulationStartingEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -10995,7 +10995,7 @@ open class UIElement
     }
     public func add_ManipulationInertiaStarting(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.ManipulationInertiaStartingRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationInertiaStarting(handler: Microsoft.UI.Xaml.Input.ManipulationInertiaStartingEventHandler(cb: handler).Interface());
+        return try _ifc.add_ManipulationInertiaStarting(handler: Microsoft.UI.Xaml.Input.impl_ManipulationInertiaStartingEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationInertiaStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11003,7 +11003,7 @@ open class UIElement
     }
     public func add_ManipulationStarted(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.ManipulationStartedRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationStarted(handler: Microsoft.UI.Xaml.Input.ManipulationStartedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ManipulationStarted(handler: Microsoft.UI.Xaml.Input.impl_ManipulationStartedEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationStarted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11011,7 +11011,7 @@ open class UIElement
     }
     public func add_ManipulationDelta(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.ManipulationDeltaRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationDelta(handler: Microsoft.UI.Xaml.Input.ManipulationDeltaEventHandler(cb: handler).Interface());
+        return try _ifc.add_ManipulationDelta(handler: Microsoft.UI.Xaml.Input.impl_ManipulationDeltaEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationDelta(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11019,7 +11019,7 @@ open class UIElement
     }
     public func add_ManipulationCompleted(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.ManipulationCompletedRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ManipulationCompleted(handler: Microsoft.UI.Xaml.Input.ManipulationCompletedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ManipulationCompleted(handler: Microsoft.UI.Xaml.Input.impl_ManipulationCompletedEventHandler(cb: handler).Interface());
     }
     public func remove_ManipulationCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11027,7 +11027,7 @@ open class UIElement
     }
     public func add_AccessKeyDisplayRequested(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.AccessKeyDisplayRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyDisplayRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccessKeyDisplayRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyDisplayRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11035,7 +11035,7 @@ open class UIElement
     }
     public func add_AccessKeyDisplayDismissed(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.AccessKeyDisplayDismissedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyDisplayDismissed(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccessKeyDisplayDismissed(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyDisplayDismissedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyDisplayDismissed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11043,7 +11043,7 @@ open class UIElement
     }
     public func add_AccessKeyInvoked(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.AccessKeyInvokedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_AccessKeyInvoked(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AccessKeyInvoked(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CAccessKeyInvokedEventArgs(cb: handler).Interface());
     }
     public func remove_AccessKeyInvoked(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11051,7 +11051,7 @@ open class UIElement
     }
     public func add_ProcessKeyboardAccelerators(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.ProcessKeyboardAcceleratorEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_ProcessKeyboardAccelerators(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(cb: handler).Interface());
+        return try _ifc.add_ProcessKeyboardAccelerators(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CProcessKeyboardAcceleratorEventArgs(cb: handler).Interface());
     }
     public func remove_ProcessKeyboardAccelerators(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11059,7 +11059,7 @@ open class UIElement
     }
     public func add_GettingFocus(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.GettingFocusEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_GettingFocus(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(cb: handler).Interface());
+        return try _ifc.add_GettingFocus(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CGettingFocusEventArgs(cb: handler).Interface());
     }
     public func remove_GettingFocus(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11067,7 +11067,7 @@ open class UIElement
     }
     public func add_LosingFocus(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.LosingFocusEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_LosingFocus(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(cb: handler).Interface());
+        return try _ifc.add_LosingFocus(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CLosingFocusEventArgs(cb: handler).Interface());
     }
     public func remove_LosingFocus(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11075,7 +11075,7 @@ open class UIElement
     }
     public func add_NoFocusCandidateFound(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.Input.NoFocusCandidateFoundEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_NoFocusCandidateFound(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(cb: handler).Interface());
+        return try _ifc.add_NoFocusCandidateFound(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CInput_CNoFocusCandidateFoundEventArgs(cb: handler).Interface());
     }
     public func remove_NoFocusCandidateFound(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11083,7 +11083,7 @@ open class UIElement
     }
     public func add_PreviewKeyDown(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PreviewKeyDown(handler: Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
+        return try _ifc.add_PreviewKeyDown(handler: Microsoft.UI.Xaml.Input.impl_KeyEventHandler(cb: handler).Interface());
     }
     public func remove_PreviewKeyDown(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11091,7 +11091,7 @@ open class UIElement
     }
     public func add_PreviewKeyUp(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Input.KeyRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_PreviewKeyUp(handler: Microsoft.UI.Xaml.Input.KeyEventHandler(cb: handler).Interface());
+        return try _ifc.add_PreviewKeyUp(handler: Microsoft.UI.Xaml.Input.impl_KeyEventHandler(cb: handler).Interface());
     }
     public func remove_PreviewKeyUp(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11099,7 +11099,7 @@ open class UIElement
     }
     public func add_BringIntoViewRequested(handler : @escaping (Optional<Microsoft.UI.Xaml.UIElement>, Optional<Microsoft.UI.Xaml.BringIntoViewRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
-        return try _ifc.add_BringIntoViewRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_BringIntoViewRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CUIElement__q_CMicrosoft_CUI_CXaml_CBringIntoViewRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_BringIntoViewRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IUIElement = try _self.QueryInterface();
@@ -11655,7 +11655,7 @@ open class IUnhandledExceptionEventHandler
     }
 }
 // impl delegate type
-open class UnhandledExceptionEventHandler
+open class impl_UnhandledExceptionEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandlerVtbl = .init(
     QueryInterface: {
@@ -11673,19 +11673,19 @@ open class UnhandledExceptionEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventArgs>>) in
-        guard let self = UnhandledExceptionEventHandler.from_UnhandledExceptionEventHandler(pThis) else {
+        guard let self = impl_UnhandledExceptionEventHandler.from_impl_UnhandledExceptionEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -11700,7 +11700,7 @@ open class UnhandledExceptionEventHandler
     }
     )
     private class Container {
-        public var self_ref: UnhandledExceptionEventHandler? = nil
+        public var self_ref: impl_UnhandledExceptionEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler
@@ -11714,8 +11714,8 @@ open class UnhandledExceptionEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CIUnhandledExceptionEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_UnhandledExceptionEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> UnhandledExceptionEventHandler? {
-        return pUnk?.bindMemory(to: UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_UnhandledExceptionEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_UnhandledExceptionEventHandler? {
+        return pUnk?.bindMemory(to: impl_UnhandledExceptionEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.UnhandledExceptionEventArgs>) throws -> Void {
@@ -11863,7 +11863,7 @@ open class Window
     }
     public func add_Activated(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.WindowActivatedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_Activated(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(cb: handler).Interface());
+        return try _ifc.add_Activated(handler: ClosedGenerics.impl_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowActivatedEventArgs(cb: handler).Interface());
     }
     public func remove_Activated(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
@@ -11871,7 +11871,7 @@ open class Window
     }
     public func add_Closed(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.WindowEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_Closed(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(cb: handler).Interface());
+        return try _ifc.add_Closed(handler: ClosedGenerics.impl_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowEventArgs(cb: handler).Interface());
     }
     public func remove_Closed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
@@ -11879,7 +11879,7 @@ open class Window
     }
     public func add_SizeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.WindowSizeChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_SizeChanged(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_SizeChanged(handler: ClosedGenerics.impl_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowSizeChangedEventArgs(cb: handler).Interface());
     }
     public func remove_SizeChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
@@ -11887,7 +11887,7 @@ open class Window
     }
     public func add_VisibilityChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.WindowVisibilityChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();
-        return try _ifc.add_VisibilityChanged(handler: ClosedGenerics.TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_VisibilityChanged(handler: ClosedGenerics.impl_TypedEventHandler_2_IInspectable__q_CMicrosoft_CUI_CXaml_CWindowVisibilityChangedEventArgs(cb: handler).Interface());
     }
     public func remove_VisibilityChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.IWindow = try _self.QueryInterface();

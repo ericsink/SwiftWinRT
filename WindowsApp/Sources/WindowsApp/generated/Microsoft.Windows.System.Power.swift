@@ -465,7 +465,7 @@ public class PowerManager
         return try PowerManagerStatics.get_EnergySaverStatus();
     }
     public static func add_EnergySaverStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_EnergySaverStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_EnergySaverStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_EnergySaverStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_EnergySaverStatusChanged(token: token);
@@ -474,7 +474,7 @@ public class PowerManager
         return try PowerManagerStatics.get_BatteryStatus();
     }
     public static func add_BatteryStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_BatteryStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_BatteryStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_BatteryStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_BatteryStatusChanged(token: token);
@@ -483,7 +483,7 @@ public class PowerManager
         return try PowerManagerStatics.get_PowerSupplyStatus();
     }
     public static func add_PowerSupplyStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_PowerSupplyStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_PowerSupplyStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_PowerSupplyStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_PowerSupplyStatusChanged(token: token);
@@ -492,7 +492,7 @@ public class PowerManager
         return try PowerManagerStatics.get_RemainingChargePercent();
     }
     public static func add_RemainingChargePercentChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_RemainingChargePercentChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_RemainingChargePercentChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_RemainingChargePercentChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_RemainingChargePercentChanged(token: token);
@@ -501,7 +501,7 @@ public class PowerManager
         return try PowerManagerStatics.get_RemainingDischargeTime();
     }
     public static func add_RemainingDischargeTimeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_RemainingDischargeTimeChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_RemainingDischargeTimeChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_RemainingDischargeTimeChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_RemainingDischargeTimeChanged(token: token);
@@ -510,7 +510,7 @@ public class PowerManager
         return try PowerManagerStatics.get_PowerSourceKind();
     }
     public static func add_PowerSourceKindChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_PowerSourceKindChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_PowerSourceKindChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_PowerSourceKindChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_PowerSourceKindChanged(token: token);
@@ -519,13 +519,13 @@ public class PowerManager
         return try PowerManagerStatics.get_DisplayStatus();
     }
     public static func add_DisplayStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_DisplayStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_DisplayStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_DisplayStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_DisplayStatusChanged(token: token);
     }
     public static func add_SystemIdleStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_SystemIdleStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_SystemIdleStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_SystemIdleStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_SystemIdleStatusChanged(token: token);
@@ -543,7 +543,7 @@ public class PowerManager
         }
     }
     public static func add_EffectivePowerModeChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_EffectivePowerModeChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_EffectivePowerModeChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_EffectivePowerModeChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_EffectivePowerModeChanged(token: token);
@@ -552,7 +552,7 @@ public class PowerManager
         return try PowerManagerStatics.get_UserPresenceStatus();
     }
     public static func add_UserPresenceStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_UserPresenceStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_UserPresenceStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_UserPresenceStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_UserPresenceStatusChanged(token: token);
@@ -561,7 +561,7 @@ public class PowerManager
         return try PowerManagerStatics.get_SystemSuspendStatus();
     }
     public static func add_SystemSuspendStatusChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PowerManagerStatics.add_SystemSuspendStatusChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try PowerManagerStatics.add_SystemSuspendStatusChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public static func remove_SystemSuspendStatusChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PowerManagerStatics.remove_SystemSuspendStatusChanged(token: token);

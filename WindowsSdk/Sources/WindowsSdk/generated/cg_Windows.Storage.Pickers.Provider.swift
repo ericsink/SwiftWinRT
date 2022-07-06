@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileO
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpen
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CIFileRemovedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpen
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpen
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CFileRemovedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Pickers.Provider.FileOpenPickerUI>, args : Optional<Windows.Storage.Pickers.Provider.FileRemovedEventArgs>) throws -> Void {
@@ -129,7 +129,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileO
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgsVtbl = .init(
     QueryInterface: {
@@ -147,19 +147,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpen
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CIFileOpenPickerUI>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CIPickerClosingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -174,7 +174,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpen
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs
@@ -188,8 +188,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpen
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileOpenPickerUI__q_CWindows_CStorage_CPickers_CProvider_CPickerClosingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Pickers.Provider.FileOpenPickerUI>, args : Optional<Windows.Storage.Pickers.Provider.PickerClosingEventArgs>) throws -> Void {
@@ -234,7 +234,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileS
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectableVtbl = .init(
     QueryInterface: {
@@ -252,19 +252,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSave
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -279,7 +279,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSave
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable
@@ -293,8 +293,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSave
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Pickers.Provider.FileSavePickerUI>, args : Optional<WinRT.Object>) throws -> Void {
@@ -339,7 +339,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileS
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -357,19 +357,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSave
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CIFileSavePickerUI>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CPickers_CProvider_CITargetFileRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -384,7 +384,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSave
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs
@@ -398,8 +398,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSave
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CPickers_CProvider_CFileSavePickerUI__q_CWindows_CStorage_CPickers_CProvider_CTargetFileRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.Pickers.Provider.FileSavePickerUI>, args : Optional<Windows.Storage.Pickers.Provider.TargetFileRequestedEventArgs>) throws -> Void {

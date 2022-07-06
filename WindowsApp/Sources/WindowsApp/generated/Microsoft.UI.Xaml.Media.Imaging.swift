@@ -163,7 +163,7 @@ public class BitmapImage
     }
     public func add_DownloadProgress(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-        return try _ifc.add_DownloadProgress(handler: Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventHandler(cb: handler).Interface());
+        return try _ifc.add_DownloadProgress(handler: Microsoft.UI.Xaml.Media.Imaging.impl_DownloadProgressEventHandler(cb: handler).Interface());
     }
     public func remove_DownloadProgress(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
@@ -171,7 +171,7 @@ public class BitmapImage
     }
     public func add_ImageOpened(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-        return try _ifc.add_ImageOpened(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ImageOpened(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_ImageOpened(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
@@ -179,7 +179,7 @@ public class BitmapImage
     }
     public func add_ImageFailed(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.ExceptionRoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
-        return try _ifc.add_ImageFailed(handler: Microsoft.UI.Xaml.ExceptionRoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_ImageFailed(handler: Microsoft.UI.Xaml.impl_ExceptionRoutedEventHandler(cb: handler).Interface());
     }
     public func remove_ImageFailed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Media.Imaging.IBitmapImage = try _self.QueryInterface();
@@ -363,7 +363,7 @@ open class IDownloadProgressEventHandler
     }
 }
 // impl delegate type
-open class DownloadProgressEventHandler
+open class impl_DownloadProgressEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandlerVtbl = .init(
     QueryInterface: {
@@ -381,19 +381,19 @@ open class DownloadProgressEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventArgs>>) in
-        guard let self = DownloadProgressEventHandler.from_DownloadProgressEventHandler(pThis) else {
+        guard let self = impl_DownloadProgressEventHandler.from_impl_DownloadProgressEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -408,7 +408,7 @@ open class DownloadProgressEventHandler
     }
     )
     private class Container {
-        public var self_ref: DownloadProgressEventHandler? = nil
+        public var self_ref: impl_DownloadProgressEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler
@@ -422,8 +422,8 @@ open class DownloadProgressEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CMedia_CImaging_CIDownloadProgressEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_DownloadProgressEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> DownloadProgressEventHandler? {
-        return pUnk?.bindMemory(to: DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_DownloadProgressEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_DownloadProgressEventHandler? {
+        return pUnk?.bindMemory(to: impl_DownloadProgressEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Media.Imaging.DownloadProgressEventArgs>) throws -> Void {

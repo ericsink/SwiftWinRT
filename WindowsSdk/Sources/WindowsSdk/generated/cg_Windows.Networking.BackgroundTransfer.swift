@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperationVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -245,7 +245,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgrou
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResultVtbl = .init(
     QueryInterface: {
@@ -263,19 +263,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -290,7 +290,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult
@@ -304,8 +304,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -393,7 +393,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgrou
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperationVtbl = .init(
     QueryInterface: {
@@ -411,19 +411,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -438,7 +438,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
@@ -452,8 +452,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -695,7 +695,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperationVtbl = .init(
     QueryInterface: {
@@ -713,19 +713,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -740,7 +740,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
@@ -754,8 +754,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -862,7 +862,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgrou
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperationVtbl = .init(
     QueryInterface: {
@@ -880,19 +880,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -907,7 +907,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
@@ -921,8 +921,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundT
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1054,7 +1054,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroun
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperationVtbl = .init(
     QueryInterface: {
@@ -1072,19 +1072,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTr
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>>, _ progressInfo : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation>>) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1099,7 +1099,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTr
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
@@ -1113,8 +1113,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTr
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>, progressInfo : Optional<Windows.Networking.BackgroundTransfer.DownloadOperation>) throws -> Void {
@@ -1159,7 +1159,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworki
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperationVtbl = .init(
     QueryInterface: {
@@ -1177,19 +1177,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1204,7 +1204,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation
@@ -1218,8 +1218,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1264,7 +1264,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CD
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1282,19 +1282,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDown
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIDownloadOperation>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferRangesDownloadedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1309,7 +1309,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDown
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs
@@ -1323,8 +1323,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDown
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.BackgroundTransfer.DownloadOperation>, args : Optional<Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs>) throws -> Void {
@@ -1437,7 +1437,7 @@ public class IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroun
     }
 } // IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 // impl delegate type
-open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
+open class impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperationVtbl = .init(
     QueryInterface: {
@@ -1455,19 +1455,19 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTr
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>>, _ progressInfo : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIUploadOperation>>) in
-        guard let self = AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
+        guard let self = impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1482,7 +1482,7 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTr
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
+        public var self_ref: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
@@ -1496,8 +1496,8 @@ open class AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTr
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationProgressHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>, progressInfo : Optional<Windows.Networking.BackgroundTransfer.UploadOperation>) throws -> Void {
@@ -1542,7 +1542,7 @@ public class IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworki
     }
 } // IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 // impl delegate type
-open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
+open class impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperationVtbl = .init(
     QueryInterface: {
@@ -1560,19 +1560,19 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
+        guard let self = impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1587,7 +1587,7 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
+        public var self_ref: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation
@@ -1601,8 +1601,8 @@ open class AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
-        return pUnk?.bindMemory(to: AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1632,7 +1632,7 @@ open class wrap_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetwor
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1650,7 +1650,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1661,7 +1661,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1679,7 +1679,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUnconstrainedTransferRequestResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1690,7 +1690,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTr
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1708,7 +1708,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1719,7 +1719,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTr
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1737,7 +1737,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1748,7 +1748,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1766,7 +1766,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1777,7 +1777,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTr
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1795,7 +1795,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_C
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -1806,7 +1806,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_C
         }
 }
 extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1824,7 +1824,7 @@ extension ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_C
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation =
+            let completion: ClosedGenerics.impl_AsyncOperationWithProgressCompletedHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

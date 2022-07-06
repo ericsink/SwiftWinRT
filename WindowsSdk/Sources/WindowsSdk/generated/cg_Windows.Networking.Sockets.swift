@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSock
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIDatagramSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIDatagramSocketMessageReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket_
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.DatagramSocket>, args : Optional<Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs>) throws -> Void {
@@ -129,7 +129,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSo
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -147,19 +147,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocke
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIMessageWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -174,7 +174,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocke
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
@@ -188,8 +188,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocke
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.MessageWebSocket>, args : Optional<Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs>) throws -> Void {
@@ -234,7 +234,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgsVtbl = .init(
     QueryInterface: {
@@ -252,19 +252,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -279,7 +279,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_C
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
@@ -293,8 +293,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.IWebSocket>, args : Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void {
@@ -339,7 +339,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSo
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -357,19 +357,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocke
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIMessageWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -384,7 +384,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocke
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
@@ -398,8 +398,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocke
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.MessageWebSocket>, args : Optional<Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs>) throws -> Void {
@@ -444,7 +444,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessag
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -462,19 +462,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIServerMessageWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIMessageWebSocketMessageReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -489,7 +489,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWe
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs
@@ -503,8 +503,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.ServerMessageWebSocket>, args : Optional<Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs>) throws -> Void {
@@ -549,7 +549,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessag
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgsVtbl = .init(
     QueryInterface: {
@@ -567,19 +567,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWe
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIServerMessageWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -594,7 +594,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWe
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
@@ -608,8 +608,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWe
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.ServerMessageWebSocket>, args : Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void {
@@ -654,7 +654,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStream
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgsVtbl = .init(
     QueryInterface: {
@@ -672,19 +672,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWeb
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIServerStreamWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIWebSocketClosedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -699,7 +699,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWeb
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs
@@ -713,8 +713,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWeb
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.ServerStreamWebSocket>, args : Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void {
@@ -770,7 +770,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocket
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgsVtbl = .init(
     QueryInterface: {
@@ -788,19 +788,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketLis
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIStreamSocketListener>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIStreamSocketListenerConnectionReceivedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -815,7 +815,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketLis
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs
@@ -829,8 +829,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketLis
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.StreamSocketListener>, args : Optional<Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs>) throws -> Void {
@@ -875,7 +875,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSoc
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgsVtbl = .init(
     QueryInterface: {
@@ -893,19 +893,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIStreamWebSocket>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIWebSocketServerCustomValidationRequestedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -920,7 +920,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs
@@ -934,8 +934,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.Sockets.StreamWebSocket>, args : Optional<Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs>) throws -> Void {
@@ -1023,7 +1023,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocketVtbl = .init(
     QueryInterface: {
@@ -1041,19 +1041,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CSt
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1068,7 +1068,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CSt
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket
@@ -1082,8 +1082,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CSt
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1113,7 +1113,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSocket
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStreamSocket : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -1131,7 +1131,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CSockets_CStr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CSockets_CStreamSocket =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

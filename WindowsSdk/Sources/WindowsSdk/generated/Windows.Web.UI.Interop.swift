@@ -678,7 +678,7 @@ public class WebViewControl
     }
     public func add_NavigationStarting(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlNavigationStartingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_NavigationStarting(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(cb: handler).Interface());
+        return try _ifc.add_NavigationStarting(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(cb: handler).Interface());
     }
     public func remove_NavigationStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -686,7 +686,7 @@ public class WebViewControl
     }
     public func add_ContentLoading(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlContentLoadingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_ContentLoading(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(cb: handler).Interface());
+        return try _ifc.add_ContentLoading(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(cb: handler).Interface());
     }
     public func remove_ContentLoading(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -694,7 +694,7 @@ public class WebViewControl
     }
     public func add_DOMContentLoaded(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_DOMContentLoaded(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(cb: handler).Interface());
+        return try _ifc.add_DOMContentLoaded(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(cb: handler).Interface());
     }
     public func remove_DOMContentLoaded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -702,7 +702,7 @@ public class WebViewControl
     }
     public func add_NavigationCompleted(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlNavigationCompletedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_NavigationCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(cb: handler).Interface());
+        return try _ifc.add_NavigationCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(cb: handler).Interface());
     }
     public func remove_NavigationCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -710,7 +710,7 @@ public class WebViewControl
     }
     public func add_FrameNavigationStarting(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlNavigationStartingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_FrameNavigationStarting(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(cb: handler).Interface());
+        return try _ifc.add_FrameNavigationStarting(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationStartingEventArgs(cb: handler).Interface());
     }
     public func remove_FrameNavigationStarting(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -718,7 +718,7 @@ public class WebViewControl
     }
     public func add_FrameContentLoading(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlContentLoadingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_FrameContentLoading(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(cb: handler).Interface());
+        return try _ifc.add_FrameContentLoading(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlContentLoadingEventArgs(cb: handler).Interface());
     }
     public func remove_FrameContentLoading(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -726,7 +726,7 @@ public class WebViewControl
     }
     public func add_FrameDOMContentLoaded(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlDOMContentLoadedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_FrameDOMContentLoaded(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FrameDOMContentLoaded(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlDOMContentLoadedEventArgs(cb: handler).Interface());
     }
     public func remove_FrameDOMContentLoaded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -734,7 +734,7 @@ public class WebViewControl
     }
     public func add_FrameNavigationCompleted(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlNavigationCompletedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_FrameNavigationCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FrameNavigationCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNavigationCompletedEventArgs(cb: handler).Interface());
     }
     public func remove_FrameNavigationCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -742,7 +742,7 @@ public class WebViewControl
     }
     public func add_ScriptNotify(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlScriptNotifyEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_ScriptNotify(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(cb: handler).Interface());
+        return try _ifc.add_ScriptNotify(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlScriptNotifyEventArgs(cb: handler).Interface());
     }
     public func remove_ScriptNotify(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -750,7 +750,7 @@ public class WebViewControl
     }
     public func add_LongRunningScriptDetected(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlLongRunningScriptDetectedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_LongRunningScriptDetected(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(cb: handler).Interface());
+        return try _ifc.add_LongRunningScriptDetected(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlLongRunningScriptDetectedEventArgs(cb: handler).Interface());
     }
     public func remove_LongRunningScriptDetected(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -758,7 +758,7 @@ public class WebViewControl
     }
     public func add_UnsafeContentWarningDisplaying(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_UnsafeContentWarningDisplaying(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(cb: handler).Interface());
+        return try _ifc.add_UnsafeContentWarningDisplaying(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(cb: handler).Interface());
     }
     public func remove_UnsafeContentWarningDisplaying(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -766,7 +766,7 @@ public class WebViewControl
     }
     public func add_UnviewableContentIdentified(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlUnviewableContentIdentifiedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_UnviewableContentIdentified(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(cb: handler).Interface());
+        return try _ifc.add_UnviewableContentIdentified(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnviewableContentIdentifiedEventArgs(cb: handler).Interface());
     }
     public func remove_UnviewableContentIdentified(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -774,7 +774,7 @@ public class WebViewControl
     }
     public func add_PermissionRequested(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlPermissionRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_PermissionRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_PermissionRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlPermissionRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_PermissionRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -782,7 +782,7 @@ public class WebViewControl
     }
     public func add_UnsupportedUriSchemeIdentified(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlUnsupportedUriSchemeIdentifiedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_UnsupportedUriSchemeIdentified(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(cb: handler).Interface());
+        return try _ifc.add_UnsupportedUriSchemeIdentified(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlUnsupportedUriSchemeIdentifiedEventArgs(cb: handler).Interface());
     }
     public func remove_UnsupportedUriSchemeIdentified(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -790,7 +790,7 @@ public class WebViewControl
     }
     public func add_NewWindowRequested(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlNewWindowRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_NewWindowRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_NewWindowRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlNewWindowRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_NewWindowRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -798,7 +798,7 @@ public class WebViewControl
     }
     public func add_ContainsFullScreenElementChanged(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_ContainsFullScreenElementChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ContainsFullScreenElementChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl_IInspectable(cb: handler).Interface());
     }
     public func remove_ContainsFullScreenElementChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -806,7 +806,7 @@ public class WebViewControl
     }
     public func add_WebResourceRequested(handler : @escaping (Optional<Windows.Web.UI.IWebViewControl>, Optional<Windows.Web.UI.WebViewControlWebResourceRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
-        return try _ifc.add_WebResourceRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_WebResourceRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CIWebViewControl__q_CWindows_CWeb_CUI_CWebViewControlWebResourceRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_WebResourceRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.IWebViewControl = try _self.QueryInterface();
@@ -898,7 +898,7 @@ public class WebViewControl
     }
     public func add_MoveFocusRequested(handler : @escaping (Optional<Windows.Web.UI.Interop.WebViewControl>, Optional<Windows.Web.UI.Interop.WebViewControlMoveFocusRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite = try _self.QueryInterface();
-        return try _ifc.add_MoveFocusRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlMoveFocusRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_MoveFocusRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlMoveFocusRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_MoveFocusRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite = try _self.QueryInterface();
@@ -906,7 +906,7 @@ public class WebViewControl
     }
     public func add_AcceleratorKeyPressed(handler : @escaping (Optional<Windows.Web.UI.Interop.WebViewControl>, Optional<Windows.Web.UI.Interop.WebViewControlAcceleratorKeyPressedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite = try _self.QueryInterface();
-        return try _ifc.add_AcceleratorKeyPressed(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlAcceleratorKeyPressedEventArgs(cb: handler).Interface());
+        return try _ifc.add_AcceleratorKeyPressed(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl__q_CWindows_CWeb_CUI_CInterop_CWebViewControlAcceleratorKeyPressedEventArgs(cb: handler).Interface());
     }
     public func remove_AcceleratorKeyPressed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite = try _self.QueryInterface();
@@ -942,7 +942,7 @@ public class WebViewControl
     }
     public func add_GotFocus(handler : @escaping (Optional<Windows.Web.UI.Interop.WebViewControl>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite2 = try _self.QueryInterface();
-        return try _ifc.add_GotFocus(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable(cb: handler).Interface());
+        return try _ifc.add_GotFocus(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable(cb: handler).Interface());
     }
     public func remove_GotFocus(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite2 = try _self.QueryInterface();
@@ -950,7 +950,7 @@ public class WebViewControl
     }
     public func add_LostFocus(handler : @escaping (Optional<Windows.Web.UI.Interop.WebViewControl>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite2 = try _self.QueryInterface();
-        return try _ifc.add_LostFocus(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable(cb: handler).Interface());
+        return try _ifc.add_LostFocus(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControl_IInspectable(cb: handler).Interface());
     }
     public func remove_LostFocus(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlSite2 = try _self.QueryInterface();
@@ -1114,7 +1114,7 @@ public class WebViewControlProcess
     }
     public func add_ProcessExited(handler : @escaping (Optional<Windows.Web.UI.Interop.WebViewControlProcess>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlProcess = try _self.QueryInterface();
-        return try _ifc.add_ProcessExited(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProcess_IInspectable(cb: handler).Interface());
+        return try _ifc.add_ProcessExited(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CUI_CInterop_CWebViewControlProcess_IInspectable(cb: handler).Interface());
     }
     public func remove_ProcessExited(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.UI.Interop.IWebViewControlProcess = try _self.QueryInterface();

@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageIte
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItemVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -215,7 +215,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFileVtbl = .init(
     QueryInterface: {
@@ -233,19 +233,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -260,7 +260,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
@@ -274,8 +274,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -363,7 +363,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFold
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolderVtbl = .init(
     QueryInterface: {
@@ -381,19 +381,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -408,7 +408,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
@@ -422,8 +422,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -511,7 +511,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplication
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationDataVtbl = .init(
     QueryInterface: {
@@ -529,19 +529,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationDat
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CApplicationData>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -556,7 +556,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationDat
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData
@@ -570,8 +570,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationDat
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -616,7 +616,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspect
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectableVtbl = .init(
     QueryInterface: {
@@ -634,19 +634,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectabl
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationData>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.from_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -661,7 +661,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectabl
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable
@@ -675,8 +675,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectabl
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CApplicationData_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.ApplicationData>, args : Optional<WinRT.Object>) throws -> Void {
@@ -775,7 +775,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStre
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransactionVtbl = .init(
     QueryInterface: {
@@ -793,19 +793,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamT
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -820,7 +820,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamT
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction
@@ -834,8 +834,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamT
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -923,7 +923,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFileVtbl = .init(
     QueryInterface: {
@@ -941,19 +941,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -968,7 +968,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile
@@ -982,8 +982,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1082,7 +1082,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolderVtbl = .init(
     QueryInterface: {
@@ -1100,19 +1100,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1127,7 +1127,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder
@@ -1141,8 +1141,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1241,7 +1241,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItemVtbl = .init(
     QueryInterface: {
@@ -1259,19 +1259,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1286,7 +1286,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem
@@ -1300,8 +1300,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1419,7 +1419,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibr
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibraryVtbl = .init(
     QueryInterface: {
@@ -1437,19 +1437,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1464,7 +1464,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
@@ -1478,8 +1478,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1533,7 +1533,7 @@ public class IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
     }
 } // IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
 // impl delegate type
-open class VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
+open class impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
 {
     private static var vtable: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolderVtbl = .init(
     QueryInterface: {
@@ -1551,19 +1551,19 @@ open class VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IObservableVector_1__q_CWindows_CStorage_CStorageFolder>>, _ event : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIVectorChangedEventArgs>>) in
-        guard let self = VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.from_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder(pThis) else {
+        guard let self = impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.from_impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1578,7 +1578,7 @@ open class VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
     }
     )
     private class Container {
-        public var self_ref: VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder? = nil
+        public var self_ref: impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
@@ -1592,8 +1592,8 @@ open class VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_CCollections_IVectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder(_ pUnk: UnsafeMutableRawPointer?) -> VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder? {
-        return pUnk?.bindMemory(to: VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder(_ pUnk: UnsafeMutableRawPointer?) -> impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder? {
+        return pUnk?.bindMemory(to: impl_VectorChangedEventHandler_1__q_CWindows_CStorage_CStorageFolder.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<ClosedGenerics.IObservableVector_1__q_CWindows_CStorage_CStorageFolder>, event : Optional<Windows.Foundation.Collections.IVectorChangedEventArgs>) throws -> Void {
@@ -1638,7 +1638,7 @@ public class ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspecta
     }
 } // ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1656,19 +1656,19 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageLibrary>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.from_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1683,7 +1683,7 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
@@ -1697,8 +1697,8 @@ open class TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CStorage_CStorageLibrary_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Storage.StorageLibrary>, args : Optional<WinRT.Object>) throws -> Void {
@@ -1786,7 +1786,7 @@ public class IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollect
     }
 } // IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
+open class impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChangeVtbl = .init(
     QueryInterface: {
@@ -1804,19 +1804,19 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1831,7 +1831,7 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange
@@ -1845,8 +1845,8 @@ open class AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollection
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -1945,7 +1945,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFolder
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatusVtbl = .init(
     QueryInterface: {
@@ -1963,19 +1963,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAc
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1990,7 +1990,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAc
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus
@@ -2004,8 +2004,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAc
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -2035,7 +2035,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFold
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2053,7 +2053,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem : 
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CIStorageItem =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2064,7 +2064,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem : 
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2082,7 +2082,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile : W
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFile =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2093,7 +2093,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile : W
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2111,7 +2111,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder :
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageFolder =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2122,7 +2122,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder :
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2140,7 +2140,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CApplicationData =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2151,7 +2151,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CApplicationData
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2169,7 +2169,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTr
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageStreamTransaction =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2180,7 +2180,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTr
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2198,7 +2198,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFile =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2209,7 +2209,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2227,7 +2227,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageFolder =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2238,7 +2238,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2256,7 +2256,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CIStorageItem =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2267,7 +2267,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2285,7 +2285,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary 
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CStorageLibrary =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2296,7 +2296,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageLibrary 
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2314,7 +2314,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CStorage_CStorageLibraryChange =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -2325,7 +2325,7 @@ extension ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAccessStatus : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -2343,7 +2343,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CKnownFoldersAcc
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CStorage_CKnownFoldersAccessStatus =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

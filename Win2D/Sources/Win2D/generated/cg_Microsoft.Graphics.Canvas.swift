@@ -71,7 +71,7 @@ public class IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_C
     }
 } // IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
+open class impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmapVtbl = .init(
     QueryInterface: {
@@ -89,19 +89,19 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -116,7 +116,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap
@@ -130,8 +130,8 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -176,7 +176,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
+open class impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectableVtbl = .init(
     QueryInterface: {
@@ -194,19 +194,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IIn
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CICanvasDevice>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -221,7 +221,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IIn
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable
@@ -235,8 +235,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IIn
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CGraphics_CCanvas_CCanvasDevice_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.Graphics.Canvas.CanvasDevice>, args : Optional<WinRT.Object>) throws -> Void {
@@ -332,7 +332,7 @@ public class IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_C
     }
 } // IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
+open class impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmapVtbl = .init(
     QueryInterface: {
@@ -350,19 +350,19 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -377,7 +377,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap
@@ -391,8 +391,8 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCan
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -422,7 +422,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -440,7 +440,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanv
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -451,7 +451,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanv
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -469,7 +469,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanv
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

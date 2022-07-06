@@ -45,7 +45,7 @@ public class FileInformation
     }
     public func add_ThumbnailUpdated(changedHandler : @escaping (Optional<Windows.Storage.BulkAccess.IStorageItemInformation>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
-        return try _ifc.add_ThumbnailUpdated(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_ThumbnailUpdated(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_ThumbnailUpdated(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
@@ -53,7 +53,7 @@ public class FileInformation
     }
     public func add_PropertiesUpdated(changedHandler : @escaping (Optional<Windows.Storage.BulkAccess.IStorageItemInformation>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
-        return try _ifc.add_PropertiesUpdated(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_PropertiesUpdated(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_PropertiesUpdated(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
@@ -686,7 +686,7 @@ public class FolderInformation
     }
     public func add_ThumbnailUpdated(changedHandler : @escaping (Optional<Windows.Storage.BulkAccess.IStorageItemInformation>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
-        return try _ifc.add_ThumbnailUpdated(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_ThumbnailUpdated(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_ThumbnailUpdated(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
@@ -694,7 +694,7 @@ public class FolderInformation
     }
     public func add_PropertiesUpdated(changedHandler : @escaping (Optional<Windows.Storage.BulkAccess.IStorageItemInformation>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();
-        return try _ifc.add_PropertiesUpdated(changedHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
+        return try _ifc.add_PropertiesUpdated(changedHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CBulkAccess_CIStorageItemInformation_IInspectable(cb: changedHandler).Interface());
     }
     public func remove_PropertiesUpdated(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.BulkAccess.IStorageItemInformation = try _self.QueryInterface();

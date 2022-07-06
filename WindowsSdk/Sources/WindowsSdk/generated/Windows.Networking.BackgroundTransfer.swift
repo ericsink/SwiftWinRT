@@ -1039,7 +1039,7 @@ public class DownloadOperation
     }
     public func add_RangesDownloaded(eventHandler : @escaping (Optional<Windows.Networking.BackgroundTransfer.DownloadOperation>, Optional<Windows.Networking.BackgroundTransfer.BackgroundTransferRangesDownloadedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.BackgroundTransfer.IDownloadOperation3 = try _self.QueryInterface();
-        return try _ifc.add_RangesDownloaded(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_RangesDownloaded(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferRangesDownloadedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_RangesDownloaded(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.BackgroundTransfer.IDownloadOperation3 = try _self.QueryInterface();

@@ -205,7 +205,7 @@ public class HttpBaseProtocolFilter
     }
     public func add_ServerCustomValidationRequested(handler : @escaping (Optional<Windows.Web.Http.Filters.HttpBaseProtocolFilter>, Optional<Windows.Web.Http.Filters.HttpServerCustomValidationRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 = try _self.QueryInterface();
-        return try _ifc.add_ServerCustomValidationRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_ServerCustomValidationRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CWeb_CHttp_CFilters_CHttpBaseProtocolFilter__q_CWindows_CWeb_CHttp_CFilters_CHttpServerCustomValidationRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_ServerCustomValidationRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Web.Http.Filters.IHttpBaseProtocolFilter4 = try _self.QueryInterface();

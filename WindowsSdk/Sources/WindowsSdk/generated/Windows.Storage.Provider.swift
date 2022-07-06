@@ -57,7 +57,7 @@ public class CachedFileUpdaterUI
     }
     public func add_FileUpdateRequested(handler : @escaping (Optional<Windows.Storage.Provider.CachedFileUpdaterUI>, Optional<Windows.Storage.Provider.FileUpdateRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Provider.ICachedFileUpdaterUI = try _self.QueryInterface();
-        return try _ifc.add_FileUpdateRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FileUpdateRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI__q_CWindows_CStorage_CProvider_CFileUpdateRequestedEventArgs(cb: handler).Interface());
     }
     public func remove_FileUpdateRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Provider.ICachedFileUpdaterUI = try _self.QueryInterface();
@@ -65,7 +65,7 @@ public class CachedFileUpdaterUI
     }
     public func add_UIRequested(handler : @escaping (Optional<Windows.Storage.Provider.CachedFileUpdaterUI>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Storage.Provider.ICachedFileUpdaterUI = try _self.QueryInterface();
-        return try _ifc.add_UIRequested(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(cb: handler).Interface());
+        return try _ifc.add_UIRequested(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CStorage_CProvider_CCachedFileUpdaterUI_IInspectable(cb: handler).Interface());
     }
     public func remove_UIRequested(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Storage.Provider.ICachedFileUpdaterUI = try _self.QueryInterface();

@@ -24,7 +24,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotificat
     }
 } // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgsVtbl = .init(
     QueryInterface: {
@@ -42,19 +42,19 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastDismissedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -69,7 +69,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs
@@ -83,8 +83,8 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastDismissedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<Windows.UI.Notifications.ToastDismissedEventArgs>) throws -> Void {
@@ -129,7 +129,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotificat
     }
 } // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectableVtbl = .init(
     QueryInterface: {
@@ -147,19 +147,19 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -174,7 +174,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable
@@ -188,8 +188,8 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<WinRT.Object>) throws -> Void {
@@ -234,7 +234,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotificat
     }
 } // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgsVtbl = .init(
     QueryInterface: {
@@ -252,19 +252,19 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotification>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastFailedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -279,7 +279,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs
@@ -293,8 +293,8 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotification__q_CWindows_CUI_CNotifications_CToastFailedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotification>, args : Optional<Windows.UI.Notifications.ToastFailedEventArgs>) throws -> Void {
@@ -350,7 +350,7 @@ public class ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier_
     }
 } // ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
+open class impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgsVtbl = .init(
     QueryInterface: {
@@ -368,19 +368,19 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIScheduledToastNotificationShowingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -395,7 +395,7 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs
@@ -409,8 +409,8 @@ open class TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CUI_CNotifications_CToastNotifier__q_CWindows_CUI_CNotifications_CScheduledToastNotificationShowingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.UI.Notifications.ToastNotifier>, args : Optional<Windows.UI.Notifications.ScheduledToastNotificationShowingEventArgs>) throws -> Void {

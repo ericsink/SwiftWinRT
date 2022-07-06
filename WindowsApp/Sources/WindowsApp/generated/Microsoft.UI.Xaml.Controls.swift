@@ -353,7 +353,7 @@ open class IContextMenuOpeningEventHandler
     }
 }
 // impl delegate type
-open class ContextMenuOpeningEventHandler
+open class impl_ContextMenuOpeningEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandlerVtbl = .init(
     QueryInterface: {
@@ -371,19 +371,19 @@ open class ContextMenuOpeningEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuEventArgs>>) in
-        guard let self = ContextMenuOpeningEventHandler.from_ContextMenuOpeningEventHandler(pThis) else {
+        guard let self = impl_ContextMenuOpeningEventHandler.from_impl_ContextMenuOpeningEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -398,7 +398,7 @@ open class ContextMenuOpeningEventHandler
     }
     )
     private class Container {
-        public var self_ref: ContextMenuOpeningEventHandler? = nil
+        public var self_ref: impl_ContextMenuOpeningEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler
@@ -412,8 +412,8 @@ open class ContextMenuOpeningEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CIContextMenuOpeningEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_ContextMenuOpeningEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> ContextMenuOpeningEventHandler? {
-        return pUnk?.bindMemory(to: ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_ContextMenuOpeningEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_ContextMenuOpeningEventHandler? {
+        return pUnk?.bindMemory(to: impl_ContextMenuOpeningEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void {
@@ -891,7 +891,7 @@ open class Control
     }
     public func add_FocusEngaged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.Control>, Optional<Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusEngaged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FocusEngaged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(cb: handler).Interface());
     }
     public func remove_FocusEngaged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -899,7 +899,7 @@ open class Control
     }
     public func add_FocusDisengaged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.Control>, Optional<Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_FocusDisengaged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(cb: handler).Interface());
+        return try _ifc.add_FocusDisengaged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(cb: handler).Interface());
     }
     public func remove_FocusDisengaged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -907,7 +907,7 @@ open class Control
     }
     public func add_IsEnabledChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.DependencyPropertyChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
-        return try _ifc.add_IsEnabledChanged(handler: Microsoft.UI.Xaml.DependencyPropertyChangedEventHandler(cb: handler).Interface());
+        return try _ifc.add_IsEnabledChanged(handler: Microsoft.UI.Xaml.impl_DependencyPropertyChangedEventHandler(cb: handler).Interface());
     }
     public func remove_IsEnabledChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.IControl = try _self.QueryInterface();
@@ -9000,7 +9000,7 @@ open class StackPanel
     }
     public func add_HorizontalSnapPointsChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_HorizontalSnapPointsChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_HorizontalSnapPointsChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_HorizontalSnapPointsChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
@@ -9008,7 +9008,7 @@ open class StackPanel
     }
     public func add_VerticalSnapPointsChanged(handler : @escaping (Optional<WinRT.Object>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
-        return try _ifc.add_VerticalSnapPointsChanged(handler: ClosedGenerics.EventHandler_1_IInspectable(cb: handler).Interface());
+        return try _ifc.add_VerticalSnapPointsChanged(handler: ClosedGenerics.impl_EventHandler_1_IInspectable(cb: handler).Interface());
     }
     public func remove_VerticalSnapPointsChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.Primitives.IScrollSnapPointsInfo = try _self.QueryInterface();
@@ -9096,7 +9096,7 @@ open class SwapChainPanel
     }
     public func add_CompositionScaleChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
-        return try _ifc.add_CompositionScaleChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(cb: handler).Interface());
+        return try _ifc.add_CompositionScaleChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(cb: handler).Interface());
     }
     public func remove_CompositionScaleChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ISwapChainPanel = try _self.QueryInterface();
@@ -9597,7 +9597,7 @@ public class TextBlock
     }
     public func add_SelectionChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_SelectionChanged(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_SelectionChanged(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_SelectionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
@@ -9605,7 +9605,7 @@ public class TextBlock
     }
     public func add_ContextMenuOpening(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_ContextMenuOpening(handler: Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler(cb: handler).Interface());
+        return try _ifc.add_ContextMenuOpening(handler: Microsoft.UI.Xaml.Controls.impl_ContextMenuOpeningEventHandler(cb: handler).Interface());
     }
     public func remove_ContextMenuOpening(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
@@ -9613,7 +9613,7 @@ public class TextBlock
     }
     public func add_IsTextTrimmedChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBlock>, Optional<Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
-        return try _ifc.add_IsTextTrimmedChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_IsTextTrimmedChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(cb: handler).Interface());
     }
     public func remove_IsTextTrimmedChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBlock = try _self.QueryInterface();
@@ -10294,7 +10294,7 @@ open class TextBox
     }
     public func add_TextChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_TextChanged(handler: Microsoft.UI.Xaml.Controls.TextChangedEventHandler(cb: handler).Interface());
+        return try _ifc.add_TextChanged(handler: Microsoft.UI.Xaml.Controls.impl_TextChangedEventHandler(cb: handler).Interface());
     }
     public func remove_TextChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10302,7 +10302,7 @@ open class TextBox
     }
     public func add_SelectionChanged(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.RoutedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_SelectionChanged(handler: Microsoft.UI.Xaml.RoutedEventHandler(cb: handler).Interface());
+        return try _ifc.add_SelectionChanged(handler: Microsoft.UI.Xaml.impl_RoutedEventHandler(cb: handler).Interface());
     }
     public func remove_SelectionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10310,7 +10310,7 @@ open class TextBox
     }
     public func add_ContextMenuOpening(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.ContextMenuEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_ContextMenuOpening(handler: Microsoft.UI.Xaml.Controls.ContextMenuOpeningEventHandler(cb: handler).Interface());
+        return try _ifc.add_ContextMenuOpening(handler: Microsoft.UI.Xaml.Controls.impl_ContextMenuOpeningEventHandler(cb: handler).Interface());
     }
     public func remove_ContextMenuOpening(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10318,7 +10318,7 @@ open class TextBox
     }
     public func add_Paste(handler : @escaping (Optional<WinRT.Object>, Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_Paste(handler: Microsoft.UI.Xaml.Controls.TextControlPasteEventHandler(cb: handler).Interface());
+        return try _ifc.add_Paste(handler: Microsoft.UI.Xaml.Controls.impl_TextControlPasteEventHandler(cb: handler).Interface());
     }
     public func remove_Paste(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10326,7 +10326,7 @@ open class TextBox
     }
     public func add_TextCompositionStarted(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_TextCompositionStarted(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(cb: handler).Interface());
+        return try _ifc.add_TextCompositionStarted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(cb: handler).Interface());
     }
     public func remove_TextCompositionStarted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10334,7 +10334,7 @@ open class TextBox
     }
     public func add_TextCompositionChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_TextCompositionChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_TextCompositionChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(cb: handler).Interface());
     }
     public func remove_TextCompositionChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10342,7 +10342,7 @@ open class TextBox
     }
     public func add_TextCompositionEnded(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_TextCompositionEnded(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(cb: handler).Interface());
+        return try _ifc.add_TextCompositionEnded(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(cb: handler).Interface());
     }
     public func remove_TextCompositionEnded(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10350,7 +10350,7 @@ open class TextBox
     }
     public func add_CopyingToClipboard(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_CopyingToClipboard(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(cb: handler).Interface());
+        return try _ifc.add_CopyingToClipboard(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(cb: handler).Interface());
     }
     public func remove_CopyingToClipboard(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10358,7 +10358,7 @@ open class TextBox
     }
     public func add_CuttingToClipboard(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_CuttingToClipboard(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(cb: handler).Interface());
+        return try _ifc.add_CuttingToClipboard(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(cb: handler).Interface());
     }
     public func remove_CuttingToClipboard(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10366,7 +10366,7 @@ open class TextBox
     }
     public func add_BeforeTextChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_BeforeTextChanging(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(cb: handler).Interface());
+        return try _ifc.add_BeforeTextChanging(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(cb: handler).Interface());
     }
     public func remove_BeforeTextChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10374,7 +10374,7 @@ open class TextBox
     }
     public func add_SelectionChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_SelectionChanging(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(cb: handler).Interface());
+        return try _ifc.add_SelectionChanging(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(cb: handler).Interface());
     }
     public func remove_SelectionChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10447,7 +10447,7 @@ open class TextBox
     }
     public func add_CandidateWindowBoundsChanged(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_CandidateWindowBoundsChanged(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(cb: handler).Interface());
+        return try _ifc.add_CandidateWindowBoundsChanged(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(cb: handler).Interface());
     }
     public func remove_CandidateWindowBoundsChanged(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10455,7 +10455,7 @@ open class TextBox
     }
     public func add_TextChanging(handler : @escaping (Optional<Microsoft.UI.Xaml.Controls.TextBox>, Optional<Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
-        return try _ifc.add_TextChanging(handler: ClosedGenerics.TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(cb: handler).Interface());
+        return try _ifc.add_TextChanging(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(cb: handler).Interface());
     }
     public func remove_TextChanging(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Microsoft.UI.Xaml.Controls.ITextBox = try _self.QueryInterface();
@@ -10725,7 +10725,7 @@ open class ITextChangedEventHandler
     }
 }
 // impl delegate type
-open class TextChangedEventHandler
+open class impl_TextChangedEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandlerVtbl = .init(
     QueryInterface: {
@@ -10743,19 +10743,19 @@ open class TextChangedEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TextChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextChangedEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TextChangedEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventArgs>>) in
-        guard let self = TextChangedEventHandler.from_TextChangedEventHandler(pThis) else {
+        guard let self = impl_TextChangedEventHandler.from_impl_TextChangedEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -10770,7 +10770,7 @@ open class TextChangedEventHandler
     }
     )
     private class Container {
-        public var self_ref: TextChangedEventHandler? = nil
+        public var self_ref: impl_TextChangedEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler
@@ -10784,8 +10784,8 @@ open class TextChangedEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextChangedEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TextChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> TextChangedEventHandler? {
-        return pUnk?.bindMemory(to: TextChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TextChangedEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_TextChangedEventHandler? {
+        return pUnk?.bindMemory(to: impl_TextChangedEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.TextChangedEventArgs>) throws -> Void {
@@ -10928,7 +10928,7 @@ open class ITextControlPasteEventHandler
     }
 }
 // impl delegate type
-open class TextControlPasteEventHandler
+open class impl_TextControlPasteEventHandler
 {
     private static var vtable: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandlerVtbl = .init(
     QueryInterface: {
@@ -10946,19 +10946,19 @@ open class TextControlPasteEventHandler
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>, _ e : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventArgs>>) in
-        guard let self = TextControlPasteEventHandler.from_TextControlPasteEventHandler(pThis) else {
+        guard let self = impl_TextControlPasteEventHandler.from_impl_TextControlPasteEventHandler(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -10973,7 +10973,7 @@ open class TextControlPasteEventHandler
     }
     )
     private class Container {
-        public var self_ref: TextControlPasteEventHandler? = nil
+        public var self_ref: impl_TextControlPasteEventHandler? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler
@@ -10987,8 +10987,8 @@ open class TextControlPasteEventHandler
         self.instance = WithTrailingObjects(interface_struct: _q_CMicrosoft_CUI_CXaml_CControls_CITextControlPasteEventHandler(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TextControlPasteEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> TextControlPasteEventHandler? {
-        return pUnk?.bindMemory(to: TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TextControlPasteEventHandler(_ pUnk: UnsafeMutableRawPointer?) -> impl_TextControlPasteEventHandler? {
+        return pUnk?.bindMemory(to: impl_TextControlPasteEventHandler.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<WinRT.Object>, e : Optional<Microsoft.UI.Xaml.Controls.TextControlPasteEventArgs>) throws -> Void {

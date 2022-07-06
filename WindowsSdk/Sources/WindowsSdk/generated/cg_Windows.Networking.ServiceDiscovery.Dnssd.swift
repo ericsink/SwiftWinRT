@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceD
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResultVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDisc
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDisc
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDisc
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -202,7 +202,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDns
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstanceVtbl = .init(
     QueryInterface: {
@@ -220,19 +220,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher>>, _ args : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.from_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -247,7 +247,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance
@@ -261,8 +261,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher>, args : Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>) throws -> Void {
@@ -307,7 +307,7 @@ public class ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDns
     }
 } // ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable
+open class impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectableVtbl = .init(
     QueryInterface: {
@@ -325,19 +325,19 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceWatcher>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.from_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -352,7 +352,7 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable
@@ -366,8 +366,8 @@ open class TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher>, args : Optional<WinRT.Object>) throws -> Void {
@@ -397,7 +397,7 @@ open class wrap_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CD
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -415,7 +415,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CServiceDisco
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdRegistrationResult =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

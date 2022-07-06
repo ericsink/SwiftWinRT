@@ -280,7 +280,7 @@ public class DatagramSocket
     }
     public func add_MessageReceived(eventHandler : @escaping (Optional<Windows.Networking.Sockets.DatagramSocket>, Optional<Windows.Networking.Sockets.DatagramSocketMessageReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IDatagramSocket = try _self.QueryInterface();
-        return try _ifc.add_MessageReceived(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_MessageReceived(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CDatagramSocket__q_CWindows_CNetworking_CSockets_CDatagramSocketMessageReceivedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_MessageReceived(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IDatagramSocket = try _self.QueryInterface();
@@ -4472,7 +4472,7 @@ public class MessageWebSocket
     }
     public func add_MessageReceived(eventHandler : @escaping (Optional<Windows.Networking.Sockets.MessageWebSocket>, Optional<Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IMessageWebSocket = try _self.QueryInterface();
-        return try _ifc.add_MessageReceived(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_MessageReceived(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_MessageReceived(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IMessageWebSocket = try _self.QueryInterface();
@@ -4513,7 +4513,7 @@ public class MessageWebSocket
     }
     public func add_Closed(eventHandler : @escaping (Optional<Windows.Networking.Sockets.IWebSocket>, Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IWebSocket = try _self.QueryInterface();
-        return try _ifc.add_Closed(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_Closed(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_Closed(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IWebSocket = try _self.QueryInterface();
@@ -4535,7 +4535,7 @@ public class MessageWebSocket
     }
     public func add_ServerCustomValidationRequested(eventHandler : @escaping (Optional<Windows.Networking.Sockets.MessageWebSocket>, Optional<Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IMessageWebSocket2 = try _self.QueryInterface();
-        return try _ifc.add_ServerCustomValidationRequested(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_ServerCustomValidationRequested(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_ServerCustomValidationRequested(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IMessageWebSocket2 = try _self.QueryInterface();
@@ -4873,7 +4873,7 @@ public class ServerMessageWebSocket
     public func Interface() -> Windows.Networking.Sockets.IServerMessageWebSocket { return _self; }
     public func add_MessageReceived(value : @escaping (Optional<Windows.Networking.Sockets.ServerMessageWebSocket>, Optional<Windows.Networking.Sockets.MessageWebSocketMessageReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IServerMessageWebSocket = try _self.QueryInterface();
-        return try _ifc.add_MessageReceived(value: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(cb: value).Interface());
+        return try _ifc.add_MessageReceived(value: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CMessageWebSocketMessageReceivedEventArgs(cb: value).Interface());
     }
     public func remove_MessageReceived(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IServerMessageWebSocket = try _self.QueryInterface();
@@ -4893,7 +4893,7 @@ public class ServerMessageWebSocket
     }
     public func add_Closed(value : @escaping (Optional<Windows.Networking.Sockets.ServerMessageWebSocket>, Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IServerMessageWebSocket = try _self.QueryInterface();
-        return try _ifc.add_Closed(value: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: value).Interface());
+        return try _ifc.add_Closed(value: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerMessageWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: value).Interface());
     }
     public func remove_Closed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IServerMessageWebSocket = try _self.QueryInterface();
@@ -5025,7 +5025,7 @@ public class ServerStreamWebSocket
     }
     public func add_Closed(value : @escaping (Optional<Windows.Networking.Sockets.ServerStreamWebSocket>, Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IServerStreamWebSocket = try _self.QueryInterface();
-        return try _ifc.add_Closed(value: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: value).Interface());
+        return try _ifc.add_Closed(value: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CServerStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: value).Interface());
     }
     public func remove_Closed(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IServerStreamWebSocket = try _self.QueryInterface();
@@ -5859,7 +5859,7 @@ public class StreamSocketListener
     }
     public func add_ConnectionReceived(eventHandler : @escaping (Optional<Windows.Networking.Sockets.StreamSocketListener>, Optional<Windows.Networking.Sockets.StreamSocketListenerConnectionReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IStreamSocketListener = try _self.QueryInterface();
-        return try _ifc.add_ConnectionReceived(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_ConnectionReceived(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamSocketListener__q_CWindows_CNetworking_CSockets_CStreamSocketListenerConnectionReceivedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_ConnectionReceived(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IStreamSocketListener = try _self.QueryInterface();
@@ -6139,7 +6139,7 @@ public class StreamWebSocket
     }
     public func add_Closed(eventHandler : @escaping (Optional<Windows.Networking.Sockets.IWebSocket>, Optional<Windows.Networking.Sockets.WebSocketClosedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IWebSocket = try _self.QueryInterface();
-        return try _ifc.add_Closed(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_Closed(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CIWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketClosedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_Closed(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IWebSocket = try _self.QueryInterface();
@@ -6161,7 +6161,7 @@ public class StreamWebSocket
     }
     public func add_ServerCustomValidationRequested(eventHandler : @escaping (Optional<Windows.Networking.Sockets.StreamWebSocket>, Optional<Windows.Networking.Sockets.WebSocketServerCustomValidationRequestedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.Sockets.IStreamWebSocket2 = try _self.QueryInterface();
-        return try _ifc.add_ServerCustomValidationRequested(eventHandler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(cb: eventHandler).Interface());
+        return try _ifc.add_ServerCustomValidationRequested(eventHandler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CSockets_CStreamWebSocket__q_CWindows_CNetworking_CSockets_CWebSocketServerCustomValidationRequestedEventArgs(cb: eventHandler).Interface());
     }
     public func remove_ServerCustomValidationRequested(eventCookie : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.Sockets.IStreamWebSocket2 = try _self.QueryInterface();

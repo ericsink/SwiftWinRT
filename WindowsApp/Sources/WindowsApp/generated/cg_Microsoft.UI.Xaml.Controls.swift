@@ -312,7 +312,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgsVtbl = .init(
     QueryInterface: {
@@ -330,19 +330,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusEngagedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -357,7 +357,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs
@@ -371,8 +371,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusEngagedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.Control>, args : Optional<Microsoft.UI.Xaml.Controls.FocusEngagedEventArgs>) throws -> Void {
@@ -417,7 +417,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgsVtbl = .init(
     QueryInterface: {
@@ -435,19 +435,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIControl>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIFocusDisengagedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -462,7 +462,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs
@@ -476,8 +476,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CControl__q_CMicrosoft_CUI_CXaml_CControls_CFocusDisengagedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.Control>, args : Optional<Microsoft.UI.Xaml.Controls.FocusDisengagedEventArgs>) throws -> Void {
@@ -522,7 +522,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgsVtbl = .init(
     QueryInterface: {
@@ -540,19 +540,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionStartedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -567,7 +567,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs
@@ -581,8 +581,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionStartedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextCompositionStartedEventArgs>) throws -> Void {
@@ -627,7 +627,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -645,19 +645,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -672,7 +672,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs
@@ -686,8 +686,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextCompositionChangedEventArgs>) throws -> Void {
@@ -732,7 +732,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgsVtbl = .init(
     QueryInterface: {
@@ -750,19 +750,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextCompositionEndedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -777,7 +777,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs
@@ -791,8 +791,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextCompositionEndedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextCompositionEndedEventArgs>) throws -> Void {
@@ -837,7 +837,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgsVtbl = .init(
     QueryInterface: {
@@ -855,19 +855,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCopyingToClipboardEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -882,7 +882,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs
@@ -896,8 +896,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCopyingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextControlCopyingToClipboardEventArgs>) throws -> Void {
@@ -942,7 +942,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgsVtbl = .init(
     QueryInterface: {
@@ -960,19 +960,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextControlCuttingToClipboardEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -987,7 +987,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs
@@ -1001,8 +1001,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextControlCuttingToClipboardEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextControlCuttingToClipboardEventArgs>) throws -> Void {
@@ -1047,7 +1047,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgsVtbl = .init(
     QueryInterface: {
@@ -1065,19 +1065,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxBeforeTextChangingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1092,7 +1092,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs
@@ -1106,8 +1106,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxBeforeTextChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextBoxBeforeTextChangingEventArgs>) throws -> Void {
@@ -1152,7 +1152,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgsVtbl = .init(
     QueryInterface: {
@@ -1170,19 +1170,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxSelectionChangingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1197,7 +1197,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs
@@ -1211,8 +1211,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxSelectionChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextBoxSelectionChangingEventArgs>) throws -> Void {
@@ -1257,7 +1257,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1275,19 +1275,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1302,7 +1302,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs
@@ -1316,8 +1316,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CCandidateWindowBoundsChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.CandidateWindowBoundsChangedEventArgs>) throws -> Void {
@@ -1362,7 +1362,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgsVtbl = .init(
     QueryInterface: {
@@ -1380,19 +1380,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBox>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBoxTextChangingEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1407,7 +1407,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs
@@ -1421,8 +1421,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMi
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBox__q_CMicrosoft_CUI_CXaml_CControls_CTextBoxTextChangingEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBox>, args : Optional<Microsoft.UI.Xaml.Controls.TextBoxTextChangingEventArgs>) throws -> Void {
@@ -1467,7 +1467,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgsVtbl = .init(
     QueryInterface: {
@@ -1485,19 +1485,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CITextBlock>>, _ args : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CIIsTextTrimmedChangedEventArgs>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1512,7 +1512,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs
@@ -1526,8 +1526,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_C
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CTextBlock__q_CMicrosoft_CUI_CXaml_CControls_CIsTextTrimmedChangedEventArgs.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.TextBlock>, args : Optional<Microsoft.UI.Xaml.Controls.IsTextTrimmedChangedEventArgs>) throws -> Void {
@@ -1572,7 +1572,7 @@ public class ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPa
     }
 } // ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
 // impl delegate type
-open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
+open class impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
 {
     private static var vtable: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectableVtbl = .init(
     QueryInterface: {
@@ -1590,19 +1590,19 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ sender : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CISwapChainPanel>>, _ args : Optional<UnsafeMutablePointer<CWinRT.IInspectable>>) in
-        guard let self = TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(pThis) else {
+        guard let self = impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -1617,7 +1617,7 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel
     }
     )
     private class Container {
-        public var self_ref: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable? = nil
+        public var self_ref: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable
@@ -1631,8 +1631,8 @@ open class TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_ITypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable? {
-        return pUnk?.bindMemory(to: TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable(_ pUnk: UnsafeMutableRawPointer?) -> impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable? {
+        return pUnk?.bindMemory(to: impl_TypedEventHandler_2__q_CMicrosoft_CUI_CXaml_CControls_CSwapChainPanel_IInspectable.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(sender : Optional<Microsoft.UI.Xaml.Controls.SwapChainPanel>, args : Optional<WinRT.Object>) throws -> Void {

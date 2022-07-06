@@ -251,7 +251,7 @@ public class DnssdServiceWatcher
     public func Interface() -> Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher { return _self; }
     public func add_Added(handler : @escaping (Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher>, Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceInstance>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher = try _self.QueryInterface();
-        return try _ifc.add_Added(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(cb: handler).Interface());
+        return try _ifc.add_Added(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceInstance(cb: handler).Interface());
     }
     public func remove_Added(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher = try _self.QueryInterface();
@@ -259,7 +259,7 @@ public class DnssdServiceWatcher
     }
     public func add_EnumerationCompleted(handler : @escaping (Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher = try _self.QueryInterface();
-        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_EnumerationCompleted(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_EnumerationCompleted(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher = try _self.QueryInterface();
@@ -267,7 +267,7 @@ public class DnssdServiceWatcher
     }
     public func add_Stopped(handler : @escaping (Optional<Windows.Networking.ServiceDiscovery.Dnssd.DnssdServiceWatcher>, Optional<WinRT.Object>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher = try _self.QueryInterface();
-        return try _ifc.add_Stopped(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(cb: handler).Interface());
+        return try _ifc.add_Stopped(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CDnssdServiceWatcher_IInspectable(cb: handler).Interface());
     }
     public func remove_Stopped(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceWatcher = try _self.QueryInterface();

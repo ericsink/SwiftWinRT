@@ -67,7 +67,7 @@ public class IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocume
     }
 } // IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
+open class impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocumentVtbl = .init(
     QueryInterface: {
@@ -85,19 +85,19 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.from_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -112,7 +112,7 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
@@ -126,8 +126,8 @@ open class AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -157,7 +157,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocu
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -175,7 +175,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument :
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CWindows_CData_CPdf_CPdfDocument =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())

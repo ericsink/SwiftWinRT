@@ -622,7 +622,7 @@ public class PushNotificationChannel
     }
     public func add_PushNotificationReceived(handler : @escaping (Optional<Windows.Networking.PushNotifications.PushNotificationChannel>, Optional<Windows.Networking.PushNotifications.PushNotificationReceivedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
         let _ifc : Windows.Networking.PushNotifications.IPushNotificationChannel = try _self.QueryInterface();
-        return try _ifc.add_PushNotificationReceived(handler: ClosedGenerics.TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(cb: handler).Interface());
+        return try _ifc.add_PushNotificationReceived(handler: ClosedGenerics.impl_TypedEventHandler_2__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel__q_CWindows_CNetworking_CPushNotifications_CPushNotificationReceivedEventArgs(cb: handler).Interface());
     }
     public func remove_PushNotificationReceived(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         let _ifc : Windows.Networking.PushNotifications.IPushNotificationChannel = try _self.QueryInterface();
@@ -664,7 +664,7 @@ public class PushNotificationChannelManager
         _IPushNotificationChannelManagerStatics4.x
     }
     public static func add_ChannelsRevoked(handler : @escaping (Optional<WinRT.Object>, Optional<Windows.Networking.PushNotifications.PushNotificationChannelsRevokedEventArgs>) throws -> Void) throws -> Windows.Foundation.EventRegistrationToken {
-        return try PushNotificationChannelManagerStatics4.add_ChannelsRevoked(handler: ClosedGenerics.EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(cb: handler).Interface());
+        return try PushNotificationChannelManagerStatics4.add_ChannelsRevoked(handler: ClosedGenerics.impl_EventHandler_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannelsRevokedEventArgs(cb: handler).Interface());
     }
     public static func remove_ChannelsRevoked(token : Windows.Foundation.EventRegistrationToken) throws -> Void {
         return try PushNotificationChannelManagerStatics4.remove_ChannelsRevoked(token: token);

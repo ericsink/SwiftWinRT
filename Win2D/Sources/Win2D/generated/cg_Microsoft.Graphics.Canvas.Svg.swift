@@ -71,7 +71,7 @@ public class IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_C
     }
 } // IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
+open class impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocumentVtbl = .init(
     QueryInterface: {
@@ -89,19 +89,19 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -116,7 +116,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument
@@ -130,8 +130,8 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -219,7 +219,7 @@ public class IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_C
     }
 } // IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
 // impl delegate type
-open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
+open class impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
 {
     private static var vtable: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElementVtbl = .init(
     QueryInterface: {
@@ -237,19 +237,19 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
         }
     },
     AddRef: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.WithTrailingObjects.self, capacity: 1)
         _ = pinstance.pointee.container.retain()
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeUnretainedValue()))
         return __res;
     },
     Release: {
-        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.WithTrailingObjects.self, capacity: 1)
+        let pinstance = UnsafeMutableRawPointer($0!).bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.WithTrailingObjects.self, capacity: 1)
         let __res = ULONG(_getRetainCount(pinstance.pointee.container.takeRetainedValue()))
         return __res;
     },
     Invoke: {
         (pThis, _ asyncInfo : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement>>, _ asyncStatus : _q_CWindows_CFoundation_CAsyncStatus) in
-        guard let self = AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement(pThis) else {
+        guard let self = impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement(pThis) else {
             return E_INVALIDARG
         }
         do {
@@ -264,7 +264,7 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
     }
     )
     private class Container {
-        public var self_ref: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement? = nil
+        public var self_ref: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement? = nil
     }
     private struct WithTrailingObjects {
         public var interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement
@@ -278,8 +278,8 @@ open class AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg
         self.instance = WithTrailingObjects(interface_struct: _cg_CWindows_CFoundation_IAsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement(lpVtbl: &Self.vtable), container: Unmanaged<Container>.passRetained(Container()))
         self.instance.container.takeUnretainedValue().self_ref = self
     }
-    private static func from_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement(_ pUnk: UnsafeMutableRawPointer?) -> AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement? {
-        return pUnk?.bindMemory(to: AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
+    private static func from_impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement(_ pUnk: UnsafeMutableRawPointer?) -> impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement? {
+        return pUnk?.bindMemory(to: impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement.WithTrailingObjects.self, capacity: 1).pointee.container.takeUnretainedValue().self_ref
     }
 
     open func Invoke(asyncInfo : Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement>, asyncStatus : Windows.Foundation.AsyncStatus) throws -> Void {
@@ -309,7 +309,7 @@ open class wrap_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas
 }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -327,7 +327,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDocument =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
@@ -338,7 +338,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_
         }
 }
 extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement : WinRT.Future {
-    private final class MyCompletedHandler: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement {
+    private final class MyCompletedHandler: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement {
         private var hEvent: HANDLE
         public init(signal event: HANDLE) {
             self.hEvent = event
@@ -356,7 +356,7 @@ extension ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_
             CreateEventW(nil, /*bManualReset=*/true, /*DefaultValue=*/false, nil)
             // TODO(compnerd) validate event
             defer { _ = CloseHandle(event) }
-            let completion: ClosedGenerics.AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement =
+            let completion: ClosedGenerics.impl_AsyncOperationCompletedHandler_1__q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgNamedElement =
             MyCompletedHandler(signal: event)
             try withExtendedLifetime(completion) {
             try self.put_Completed(handler: completion.Interface())
