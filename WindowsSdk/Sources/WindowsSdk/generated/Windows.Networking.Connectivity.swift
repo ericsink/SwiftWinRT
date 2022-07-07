@@ -971,8 +971,8 @@ open class ICellularApnContext
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProviderId(pThis, value))
         }
     }
-    public func put_ProviderId(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ProviderId(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ProviderId(__hstr_value.Raw());
         }
@@ -994,8 +994,8 @@ open class ICellularApnContext
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AccessPointName(pThis, value))
         }
     }
-    public func put_AccessPointName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_AccessPointName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_AccessPointName(__hstr_value.Raw());
         }
@@ -1017,8 +1017,8 @@ open class ICellularApnContext
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_UserName(pThis, value))
         }
     }
-    public func put_UserName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_UserName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_UserName(__hstr_value.Raw());
         }
@@ -1040,8 +1040,8 @@ open class ICellularApnContext
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Password(pThis, value))
         }
     }
-    public func put_Password(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Password(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Password(__hstr_value.Raw());
         }
@@ -1143,8 +1143,8 @@ open class ICellularApnContext2
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProfileName(pThis, value))
         }
     }
-    public func put_ProfileName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ProfileName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ProfileName(__hstr_value.Raw());
         }

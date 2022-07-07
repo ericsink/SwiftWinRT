@@ -2972,8 +2972,8 @@ open class IHttpCacheDirectiveHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -2984,8 +2984,8 @@ open class IHttpCacheDirectiveHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -3086,8 +3086,8 @@ open class IHttpChallengeHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -3098,8 +3098,8 @@ open class IHttpChallengeHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -3123,8 +3123,8 @@ open class IHttpChallengeHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromScheme(pThis, scheme, __presult))
         }
     }
-    public func CreateFromScheme(scheme : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue> {
-        let __hstr_scheme = try HString(scheme);
+    public func CreateFromScheme(scheme : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue> {
+        let __hstr_scheme = try HString(scheme!);
         return try withExtendedLifetime(__hstr_scheme) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue>> = nil;
         try self._n_CreateFromScheme(__hstr_scheme.Raw(), &__result);
@@ -3137,10 +3137,10 @@ open class IHttpChallengeHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromSchemeWithToken(pThis, scheme, token, __presult))
         }
     }
-    public func CreateFromSchemeWithToken(scheme : Swift.String, token : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue> {
-        let __hstr_scheme = try HString(scheme);
+    public func CreateFromSchemeWithToken(scheme : Optional<Swift.String>, token : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue> {
+        let __hstr_scheme = try HString(scheme!);
         return try withExtendedLifetime(__hstr_scheme) {
-        let __hstr_token = try HString(token);
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue>> = nil;
         try self._n_CreateFromSchemeWithToken(__hstr_scheme.Raw(), __hstr_token.Raw(), &__result);
@@ -3164,8 +3164,8 @@ open class IHttpChallengeHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -3178,8 +3178,8 @@ open class IHttpChallengeHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, challengeHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, challengeHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, challengeHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpChallengeHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_challengeHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpChallengeHeaderValue>> = nil;
@@ -3230,8 +3230,8 @@ open class IHttpConnectionOptionHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -3242,8 +3242,8 @@ open class IHttpConnectionOptionHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -3267,8 +3267,8 @@ open class IHttpConnectionOptionHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, token, __presult))
         }
     }
-    public func Create(token : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue> {
-        let __hstr_token = try HString(token);
+    public func Create(token : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue>> = nil;
         try self._n_Create(__hstr_token.Raw(), &__result);
@@ -3291,8 +3291,8 @@ open class IHttpConnectionOptionHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -3305,8 +3305,8 @@ open class IHttpConnectionOptionHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, connectionOptionHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, connectionOptionHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, connectionOptionHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpConnectionOptionHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_connectionOptionHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpConnectionOptionHeaderValue>> = nil;
@@ -3357,8 +3357,8 @@ open class IHttpContentCodingHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -3369,8 +3369,8 @@ open class IHttpContentCodingHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -3394,8 +3394,8 @@ open class IHttpContentCodingHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, contentCoding, __presult))
         }
     }
-    public func Create(contentCoding : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingHeaderValue> {
-        let __hstr_contentCoding = try HString(contentCoding);
+    public func Create(contentCoding : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingHeaderValue> {
+        let __hstr_contentCoding = try HString(contentCoding!);
         return try withExtendedLifetime(__hstr_contentCoding) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue>> = nil;
         try self._n_Create(__hstr_contentCoding.Raw(), &__result);
@@ -3418,8 +3418,8 @@ open class IHttpContentCodingHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -3432,8 +3432,8 @@ open class IHttpContentCodingHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, contentCodingHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, contentCodingHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentCodingHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, contentCodingHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentCodingHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_contentCodingHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingHeaderValue>> = nil;
@@ -3500,8 +3500,8 @@ open class IHttpContentCodingWithQualityHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -3512,8 +3512,8 @@ open class IHttpContentCodingWithQualityHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -3537,8 +3537,8 @@ open class IHttpContentCodingWithQualityHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromValue(pThis, contentCoding, __presult))
         }
     }
-    public func CreateFromValue(contentCoding : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue> {
-        let __hstr_contentCoding = try HString(contentCoding);
+    public func CreateFromValue(contentCoding : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue> {
+        let __hstr_contentCoding = try HString(contentCoding!);
         return try withExtendedLifetime(__hstr_contentCoding) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue>> = nil;
         try self._n_CreateFromValue(__hstr_contentCoding.Raw(), &__result);
@@ -3551,8 +3551,8 @@ open class IHttpContentCodingWithQualityHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromValueWithQuality(pThis, contentCoding, quality, __presult))
         }
     }
-    public func CreateFromValueWithQuality(contentCoding : Swift.String, quality : Swift.Double) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue> {
-        let __hstr_contentCoding = try HString(contentCoding);
+    public func CreateFromValueWithQuality(contentCoding : Optional<Swift.String>, quality : Swift.Double) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue> {
+        let __hstr_contentCoding = try HString(contentCoding!);
         return try withExtendedLifetime(__hstr_contentCoding) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue>> = nil;
         try self._n_CreateFromValueWithQuality(__hstr_contentCoding.Raw(), quality, &__result);
@@ -3575,8 +3575,8 @@ open class IHttpContentCodingWithQualityHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -3589,8 +3589,8 @@ open class IHttpContentCodingWithQualityHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, contentCodingWithQualityHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, contentCodingWithQualityHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, contentCodingWithQualityHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentCodingWithQualityHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_contentCodingWithQualityHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentCodingWithQualityHeaderValue>> = nil;
@@ -3626,8 +3626,8 @@ open class IHttpContentDispositionHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DispositionType(pThis, value))
         }
     }
-    public func put_DispositionType(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DispositionType(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DispositionType(__hstr_value.Raw());
         }
@@ -3649,8 +3649,8 @@ open class IHttpContentDispositionHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FileName(pThis, value))
         }
     }
-    public func put_FileName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_FileName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_FileName(__hstr_value.Raw());
         }
@@ -3672,8 +3672,8 @@ open class IHttpContentDispositionHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FileNameStar(pThis, value))
         }
     }
-    public func put_FileNameStar(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_FileNameStar(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_FileNameStar(__hstr_value.Raw());
         }
@@ -3695,8 +3695,8 @@ open class IHttpContentDispositionHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Name(pThis, value))
         }
     }
-    public func put_Name(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Name(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Name(__hstr_value.Raw());
         }
@@ -3779,8 +3779,8 @@ open class IHttpContentDispositionHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, dispositionType, __presult))
         }
     }
-    public func Create(dispositionType : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue> {
-        let __hstr_dispositionType = try HString(dispositionType);
+    public func Create(dispositionType : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue> {
+        let __hstr_dispositionType = try HString(dispositionType!);
         return try withExtendedLifetime(__hstr_dispositionType) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue>> = nil;
         try self._n_Create(__hstr_dispositionType.Raw(), &__result);
@@ -3803,8 +3803,8 @@ open class IHttpContentDispositionHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -3817,8 +3817,8 @@ open class IHttpContentDispositionHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, contentDispositionHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, contentDispositionHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, contentDispositionHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentDispositionHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_contentDispositionHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentDispositionHeaderValue>> = nil;
@@ -4025,10 +4025,10 @@ open class IHttpContentHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, name, value))
         }
     }
-    public func Append(name : Swift.String, value : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func Append(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_Append(__hstr_name.Raw(), __hstr_value.Raw());
         }
@@ -4040,10 +4040,10 @@ open class IHttpContentHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryAppendWithoutValidation(pThis, name, value, __presult))
         }
     }
-    public func TryAppendWithoutValidation(name : Swift.String, value : Swift.String) throws -> boolean {
-        let __hstr_name = try HString(name);
+    public func TryAppendWithoutValidation(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> boolean {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : boolean = 0;
         try self._n_TryAppendWithoutValidation(__hstr_name.Raw(), __hstr_value.Raw(), &__result);
@@ -4161,8 +4161,8 @@ open class IHttpContentRangeHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Unit(pThis, value))
         }
     }
-    public func put_Unit(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Unit(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Unit(__hstr_value.Raw());
         }
@@ -4247,8 +4247,8 @@ open class IHttpContentRangeHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpContentRangeHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpContentRangeHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -4261,8 +4261,8 @@ open class IHttpContentRangeHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, contentRangeHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, contentRangeHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentRangeHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, contentRangeHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpContentRangeHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_contentRangeHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpContentRangeHeaderValue>> = nil;
@@ -4309,8 +4309,8 @@ open class IHttpCookiePairHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
     }
-    public func put_Value(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Value(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Value(__hstr_value.Raw());
         }
@@ -4341,8 +4341,8 @@ open class IHttpCookiePairHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -4353,8 +4353,8 @@ open class IHttpCookiePairHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -4378,8 +4378,8 @@ open class IHttpCookiePairHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromName(pThis, name, __presult))
         }
     }
-    public func CreateFromName(name : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue> {
-        let __hstr_name = try HString(name);
+    public func CreateFromName(name : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue>> = nil;
         try self._n_CreateFromName(__hstr_name.Raw(), &__result);
@@ -4392,10 +4392,10 @@ open class IHttpCookiePairHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNameWithValue(pThis, name, value, __presult))
         }
     }
-    public func CreateFromNameWithValue(name : Swift.String, value : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue> {
-        let __hstr_name = try HString(name);
+    public func CreateFromNameWithValue(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue>> = nil;
         try self._n_CreateFromNameWithValue(__hstr_name.Raw(), __hstr_value.Raw(), &__result);
@@ -4419,8 +4419,8 @@ open class IHttpCookiePairHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -4433,8 +4433,8 @@ open class IHttpCookiePairHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, cookiePairHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, cookiePairHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, cookiePairHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpCookiePairHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_cookiePairHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCookiePairHeaderValue>> = nil;
@@ -4518,8 +4518,8 @@ open class IHttpCredentialsHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromScheme(pThis, scheme, __presult))
         }
     }
-    public func CreateFromScheme(scheme : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue> {
-        let __hstr_scheme = try HString(scheme);
+    public func CreateFromScheme(scheme : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue> {
+        let __hstr_scheme = try HString(scheme!);
         return try withExtendedLifetime(__hstr_scheme) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue>> = nil;
         try self._n_CreateFromScheme(__hstr_scheme.Raw(), &__result);
@@ -4532,10 +4532,10 @@ open class IHttpCredentialsHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromSchemeWithToken(pThis, scheme, token, __presult))
         }
     }
-    public func CreateFromSchemeWithToken(scheme : Swift.String, token : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue> {
-        let __hstr_scheme = try HString(scheme);
+    public func CreateFromSchemeWithToken(scheme : Optional<Swift.String>, token : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue> {
+        let __hstr_scheme = try HString(scheme!);
         return try withExtendedLifetime(__hstr_scheme) {
-        let __hstr_token = try HString(token);
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue>> = nil;
         try self._n_CreateFromSchemeWithToken(__hstr_scheme.Raw(), __hstr_token.Raw(), &__result);
@@ -4559,8 +4559,8 @@ open class IHttpCredentialsHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -4573,8 +4573,8 @@ open class IHttpCredentialsHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, credentialsHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, credentialsHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, credentialsHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpCredentialsHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_credentialsHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpCredentialsHeaderValue>> = nil;
@@ -4641,8 +4641,8 @@ open class IHttpDateOrDeltaHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -4655,8 +4655,8 @@ open class IHttpDateOrDeltaHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, dateOrDeltaHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, dateOrDeltaHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, dateOrDeltaHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpDateOrDeltaHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_dateOrDeltaHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpDateOrDeltaHeaderValue>> = nil;
@@ -4703,8 +4703,8 @@ open class IHttpExpectationHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
     }
-    public func put_Value(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Value(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Value(__hstr_value.Raw());
         }
@@ -4751,8 +4751,8 @@ open class IHttpExpectationHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -4763,8 +4763,8 @@ open class IHttpExpectationHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -4788,8 +4788,8 @@ open class IHttpExpectationHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromName(pThis, name, __presult))
         }
     }
-    public func CreateFromName(name : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue> {
-        let __hstr_name = try HString(name);
+    public func CreateFromName(name : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue>> = nil;
         try self._n_CreateFromName(__hstr_name.Raw(), &__result);
@@ -4802,10 +4802,10 @@ open class IHttpExpectationHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNameWithValue(pThis, name, value, __presult))
         }
     }
-    public func CreateFromNameWithValue(name : Swift.String, value : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue> {
-        let __hstr_name = try HString(name);
+    public func CreateFromNameWithValue(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue>> = nil;
         try self._n_CreateFromNameWithValue(__hstr_name.Raw(), __hstr_value.Raw(), &__result);
@@ -4829,8 +4829,8 @@ open class IHttpExpectationHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -4843,8 +4843,8 @@ open class IHttpExpectationHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, expectationHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, expectationHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, expectationHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpExpectationHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_expectationHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpExpectationHeaderValue>> = nil;
@@ -4869,8 +4869,8 @@ open class IHttpLanguageHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -4881,8 +4881,8 @@ open class IHttpLanguageHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -4947,8 +4947,8 @@ open class IHttpLanguageRangeWithQualityHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -4959,8 +4959,8 @@ open class IHttpLanguageRangeWithQualityHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -4984,8 +4984,8 @@ open class IHttpLanguageRangeWithQualityHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromLanguageRange(pThis, languageRange, __presult))
         }
     }
-    public func CreateFromLanguageRange(languageRange : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue> {
-        let __hstr_languageRange = try HString(languageRange);
+    public func CreateFromLanguageRange(languageRange : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue> {
+        let __hstr_languageRange = try HString(languageRange!);
         return try withExtendedLifetime(__hstr_languageRange) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue>> = nil;
         try self._n_CreateFromLanguageRange(__hstr_languageRange.Raw(), &__result);
@@ -4998,8 +4998,8 @@ open class IHttpLanguageRangeWithQualityHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromLanguageRangeWithQuality(pThis, languageRange, quality, __presult))
         }
     }
-    public func CreateFromLanguageRangeWithQuality(languageRange : Swift.String, quality : Swift.Double) throws -> Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue> {
-        let __hstr_languageRange = try HString(languageRange);
+    public func CreateFromLanguageRangeWithQuality(languageRange : Optional<Swift.String>, quality : Swift.Double) throws -> Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue> {
+        let __hstr_languageRange = try HString(languageRange!);
         return try withExtendedLifetime(__hstr_languageRange) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue>> = nil;
         try self._n_CreateFromLanguageRangeWithQuality(__hstr_languageRange.Raw(), quality, &__result);
@@ -5022,8 +5022,8 @@ open class IHttpLanguageRangeWithQualityHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -5036,8 +5036,8 @@ open class IHttpLanguageRangeWithQualityHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, languageRangeWithQualityHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, languageRangeWithQualityHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, languageRangeWithQualityHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpLanguageRangeWithQualityHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_languageRangeWithQualityHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpLanguageRangeWithQualityHeaderValue>> = nil;
@@ -5073,8 +5073,8 @@ open class IHttpMediaTypeHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CharSet(pThis, value))
         }
     }
-    public func put_CharSet(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CharSet(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CharSet(__hstr_value.Raw());
         }
@@ -5096,8 +5096,8 @@ open class IHttpMediaTypeHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MediaType(pThis, value))
         }
     }
-    public func put_MediaType(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_MediaType(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_MediaType(__hstr_value.Raw());
         }
@@ -5145,8 +5145,8 @@ open class IHttpMediaTypeHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, mediaType, __presult))
         }
     }
-    public func Create(mediaType : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue> {
-        let __hstr_mediaType = try HString(mediaType);
+    public func Create(mediaType : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue> {
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue>> = nil;
         try self._n_Create(__hstr_mediaType.Raw(), &__result);
@@ -5169,8 +5169,8 @@ open class IHttpMediaTypeHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -5183,8 +5183,8 @@ open class IHttpMediaTypeHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, mediaTypeHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, mediaTypeHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, mediaTypeHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpMediaTypeHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_mediaTypeHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeHeaderValue>> = nil;
@@ -5220,8 +5220,8 @@ open class IHttpMediaTypeWithQualityHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CharSet(pThis, value))
         }
     }
-    public func put_CharSet(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CharSet(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CharSet(__hstr_value.Raw());
         }
@@ -5243,8 +5243,8 @@ open class IHttpMediaTypeWithQualityHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MediaType(pThis, value))
         }
     }
-    public func put_MediaType(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_MediaType(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_MediaType(__hstr_value.Raw());
         }
@@ -5316,8 +5316,8 @@ open class IHttpMediaTypeWithQualityHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -5328,8 +5328,8 @@ open class IHttpMediaTypeWithQualityHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -5353,8 +5353,8 @@ open class IHttpMediaTypeWithQualityHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromMediaType(pThis, mediaType, __presult))
         }
     }
-    public func CreateFromMediaType(mediaType : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue> {
-        let __hstr_mediaType = try HString(mediaType);
+    public func CreateFromMediaType(mediaType : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue> {
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue>> = nil;
         try self._n_CreateFromMediaType(__hstr_mediaType.Raw(), &__result);
@@ -5367,8 +5367,8 @@ open class IHttpMediaTypeWithQualityHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromMediaTypeWithQuality(pThis, mediaType, quality, __presult))
         }
     }
-    public func CreateFromMediaTypeWithQuality(mediaType : Swift.String, quality : Swift.Double) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue> {
-        let __hstr_mediaType = try HString(mediaType);
+    public func CreateFromMediaTypeWithQuality(mediaType : Optional<Swift.String>, quality : Swift.Double) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue> {
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue>> = nil;
         try self._n_CreateFromMediaTypeWithQuality(__hstr_mediaType.Raw(), quality, &__result);
@@ -5391,8 +5391,8 @@ open class IHttpMediaTypeWithQualityHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -5405,8 +5405,8 @@ open class IHttpMediaTypeWithQualityHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, mediaTypeWithQualityHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, mediaTypeWithQualityHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, mediaTypeWithQualityHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpMediaTypeWithQualityHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_mediaTypeWithQualityHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpMediaTypeWithQualityHeaderValue>> = nil;
@@ -5431,8 +5431,8 @@ open class IHttpMethodHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -5443,8 +5443,8 @@ open class IHttpMethodHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -5489,8 +5489,8 @@ open class IHttpNameValueHeaderValue
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
     }
-    public func put_Value(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Value(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Value(__hstr_value.Raw());
         }
@@ -5522,8 +5522,8 @@ open class IHttpNameValueHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromName(pThis, name, __presult))
         }
     }
-    public func CreateFromName(name : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue> {
-        let __hstr_name = try HString(name);
+    public func CreateFromName(name : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue>> = nil;
         try self._n_CreateFromName(__hstr_name.Raw(), &__result);
@@ -5536,10 +5536,10 @@ open class IHttpNameValueHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNameWithValue(pThis, name, value, __presult))
         }
     }
-    public func CreateFromNameWithValue(name : Swift.String, value : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue> {
-        let __hstr_name = try HString(name);
+    public func CreateFromNameWithValue(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue>> = nil;
         try self._n_CreateFromNameWithValue(__hstr_name.Raw(), __hstr_value.Raw(), &__result);
@@ -5563,8 +5563,8 @@ open class IHttpNameValueHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -5577,8 +5577,8 @@ open class IHttpNameValueHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, nameValueHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, nameValueHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, nameValueHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpNameValueHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_nameValueHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpNameValueHeaderValue>> = nil;
@@ -5646,8 +5646,8 @@ open class IHttpProductHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromName(pThis, productName, __presult))
         }
     }
-    public func CreateFromName(productName : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue> {
-        let __hstr_productName = try HString(productName);
+    public func CreateFromName(productName : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue> {
+        let __hstr_productName = try HString(productName!);
         return try withExtendedLifetime(__hstr_productName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue>> = nil;
         try self._n_CreateFromName(__hstr_productName.Raw(), &__result);
@@ -5660,10 +5660,10 @@ open class IHttpProductHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNameWithVersion(pThis, productName, productVersion, __presult))
         }
     }
-    public func CreateFromNameWithVersion(productName : Swift.String, productVersion : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue> {
-        let __hstr_productName = try HString(productName);
+    public func CreateFromNameWithVersion(productName : Optional<Swift.String>, productVersion : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue> {
+        let __hstr_productName = try HString(productName!);
         return try withExtendedLifetime(__hstr_productName) {
-        let __hstr_productVersion = try HString(productVersion);
+        let __hstr_productVersion = try HString(productVersion!);
         return try withExtendedLifetime(__hstr_productVersion) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue>> = nil;
         try self._n_CreateFromNameWithVersion(__hstr_productName.Raw(), __hstr_productVersion.Raw(), &__result);
@@ -5687,8 +5687,8 @@ open class IHttpProductHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -5701,8 +5701,8 @@ open class IHttpProductHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, productHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, productHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, productHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpProductHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_productHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductHeaderValue>> = nil;
@@ -5769,8 +5769,8 @@ open class IHttpProductInfoHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -5781,8 +5781,8 @@ open class IHttpProductInfoHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -5806,8 +5806,8 @@ open class IHttpProductInfoHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromComment(pThis, productComment, __presult))
         }
     }
-    public func CreateFromComment(productComment : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue> {
-        let __hstr_productComment = try HString(productComment);
+    public func CreateFromComment(productComment : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue> {
+        let __hstr_productComment = try HString(productComment!);
         return try withExtendedLifetime(__hstr_productComment) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue>> = nil;
         try self._n_CreateFromComment(__hstr_productComment.Raw(), &__result);
@@ -5820,10 +5820,10 @@ open class IHttpProductInfoHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNameWithVersion(pThis, productName, productVersion, __presult))
         }
     }
-    public func CreateFromNameWithVersion(productName : Swift.String, productVersion : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue> {
-        let __hstr_productName = try HString(productName);
+    public func CreateFromNameWithVersion(productName : Optional<Swift.String>, productVersion : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue> {
+        let __hstr_productName = try HString(productName!);
         return try withExtendedLifetime(__hstr_productName) {
-        let __hstr_productVersion = try HString(productVersion);
+        let __hstr_productVersion = try HString(productVersion!);
         return try withExtendedLifetime(__hstr_productVersion) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue>> = nil;
         try self._n_CreateFromNameWithVersion(__hstr_productName.Raw(), __hstr_productVersion.Raw(), &__result);
@@ -5847,8 +5847,8 @@ open class IHttpProductInfoHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -5861,8 +5861,8 @@ open class IHttpProductInfoHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, productInfoHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, productInfoHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, productInfoHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpProductInfoHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_productInfoHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpProductInfoHeaderValue>> = nil;
@@ -6015,8 +6015,8 @@ open class IHttpRequestHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_From(pThis, value))
         }
     }
-    public func put_From(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_From(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_From(__hstr_value.Raw());
         }
@@ -6169,10 +6169,10 @@ open class IHttpRequestHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, name, value))
         }
     }
-    public func Append(name : Swift.String, value : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func Append(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_Append(__hstr_name.Raw(), __hstr_value.Raw());
         }
@@ -6184,10 +6184,10 @@ open class IHttpRequestHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryAppendWithoutValidation(pThis, name, value, __presult))
         }
     }
-    public func TryAppendWithoutValidation(name : Swift.String, value : Swift.String) throws -> boolean {
-        let __hstr_name = try HString(name);
+    public func TryAppendWithoutValidation(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> boolean {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : boolean = 0;
         try self._n_TryAppendWithoutValidation(__hstr_name.Raw(), __hstr_value.Raw(), &__result);
@@ -6447,10 +6447,10 @@ open class IHttpResponseHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, name, value))
         }
     }
-    public func Append(name : Swift.String, value : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func Append(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_Append(__hstr_name.Raw(), __hstr_value.Raw());
         }
@@ -6462,10 +6462,10 @@ open class IHttpResponseHeaderCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryAppendWithoutValidation(pThis, name, value, __presult))
         }
     }
-    public func TryAppendWithoutValidation(name : Swift.String, value : Swift.String) throws -> boolean {
-        let __hstr_name = try HString(name);
+    public func TryAppendWithoutValidation(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> boolean {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : boolean = 0;
         try self._n_TryAppendWithoutValidation(__hstr_name.Raw(), __hstr_value.Raw(), &__result);
@@ -6581,8 +6581,8 @@ open class IHttpTransferCodingHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.ParseAdd(pThis, input))
         }
     }
-    public func ParseAdd(input : Swift.String) throws -> Void {
-        let __hstr_input = try HString(input);
+    public func ParseAdd(input : Optional<Swift.String>) throws -> Void {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         try self._n_ParseAdd(__hstr_input.Raw());
         }
@@ -6593,8 +6593,8 @@ open class IHttpTransferCodingHeaderValueCollection
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParseAdd(pThis, input, __presult))
         }
     }
-    public func TryParseAdd(input : Swift.String) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParseAdd(input : Optional<Swift.String>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
         try self._n_TryParseAdd(__hstr_input.Raw(), &__result);
@@ -6618,8 +6618,8 @@ open class IHttpTransferCodingHeaderValueFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, input, __presult))
         }
     }
-    public func Create(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Create(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue>> = nil;
         try self._n_Create(__hstr_input.Raw(), &__result);
@@ -6642,8 +6642,8 @@ open class IHttpTransferCodingHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -6656,8 +6656,8 @@ open class IHttpTransferCodingHeaderValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, transferCodingHeaderValue, __presult))
         }
     }
-    public func TryParse(input : Swift.String, transferCodingHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, transferCodingHeaderValue : inout Optional<Windows.Web.Http.Headers.IHttpTransferCodingHeaderValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_transferCodingHeaderValue: Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CHeaders_CIHttpTransferCodingHeaderValue>> = nil;

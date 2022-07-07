@@ -2599,8 +2599,8 @@ open class IHttpCookie
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
     }
-    public func put_Value(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Value(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Value(__hstr_value.Raw());
         }
@@ -2657,12 +2657,12 @@ open class IHttpCookieFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, name, domain, path, __presult))
         }
     }
-    public func Create(name : Swift.String, domain : Swift.String, path : Swift.String) throws -> Optional<Windows.Web.Http.IHttpCookie> {
-        let __hstr_name = try HString(name);
+    public func Create(name : Optional<Swift.String>, domain : Optional<Swift.String>, path : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpCookie> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_domain = try HString(domain);
+        let __hstr_domain = try HString(domain!);
         return try withExtendedLifetime(__hstr_domain) {
-        let __hstr_path = try HString(path);
+        let __hstr_path = try HString(path!);
         return try withExtendedLifetime(__hstr_path) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpCookie>> = nil;
         try self._n_Create(__hstr_name.Raw(), __hstr_domain.Raw(), __hstr_path.Raw(), &__result);
@@ -3058,8 +3058,8 @@ open class IHttpMethodFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, method, __presult))
         }
     }
-    public func Create(method : Swift.String) throws -> Optional<Windows.Web.Http.IHttpMethod> {
-        let __hstr_method = try HString(method);
+    public func Create(method : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpMethod> {
+        let __hstr_method = try HString(method!);
         return try withExtendedLifetime(__hstr_method) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpMethod>> = nil;
         try self._n_Create(__hstr_method.Raw(), &__result);
@@ -3224,8 +3224,8 @@ open class IHttpMultipartContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithSubtype(pThis, subtype, __presult))
         }
     }
-    public func CreateWithSubtype(subtype : Swift.String) throws -> Optional<Windows.Web.Http.IHttpContent> {
-        let __hstr_subtype = try HString(subtype);
+    public func CreateWithSubtype(subtype : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpContent> {
+        let __hstr_subtype = try HString(subtype!);
         return try withExtendedLifetime(__hstr_subtype) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>> = nil;
         try self._n_CreateWithSubtype(__hstr_subtype.Raw(), &__result);
@@ -3238,10 +3238,10 @@ open class IHttpMultipartContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithSubtypeAndBoundary(pThis, subtype, boundary, __presult))
         }
     }
-    public func CreateWithSubtypeAndBoundary(subtype : Swift.String, boundary : Swift.String) throws -> Optional<Windows.Web.Http.IHttpContent> {
-        let __hstr_subtype = try HString(subtype);
+    public func CreateWithSubtypeAndBoundary(subtype : Optional<Swift.String>, boundary : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpContent> {
+        let __hstr_subtype = try HString(subtype!);
         return try withExtendedLifetime(__hstr_subtype) {
-        let __hstr_boundary = try HString(boundary);
+        let __hstr_boundary = try HString(boundary!);
         return try withExtendedLifetime(__hstr_boundary) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>> = nil;
         try self._n_CreateWithSubtypeAndBoundary(__hstr_subtype.Raw(), __hstr_boundary.Raw(), &__result);
@@ -3274,8 +3274,8 @@ open class IHttpMultipartFormDataContent
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddWithName(pThis, content, name))
         }
     }
-    public func AddWithName(content : Optional<Windows.Web.Http.IHttpContent>, name : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func AddWithName(content : Optional<Windows.Web.Http.IHttpContent>, name : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         try self._n_AddWithName(RawPointer(content), __hstr_name.Raw());
         }
@@ -3286,10 +3286,10 @@ open class IHttpMultipartFormDataContent
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddWithNameAndFileName(pThis, content, name, fileName))
         }
     }
-    public func AddWithNameAndFileName(content : Optional<Windows.Web.Http.IHttpContent>, name : Swift.String, fileName : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func AddWithNameAndFileName(content : Optional<Windows.Web.Http.IHttpContent>, name : Optional<Swift.String>, fileName : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_fileName = try HString(fileName);
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         try self._n_AddWithNameAndFileName(RawPointer(content), __hstr_name.Raw(), __hstr_fileName.Raw());
         }
@@ -3312,8 +3312,8 @@ open class IHttpMultipartFormDataContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithBoundary(pThis, boundary, __presult))
         }
     }
-    public func CreateWithBoundary(boundary : Swift.String) throws -> Optional<Windows.Web.Http.IHttpContent> {
-        let __hstr_boundary = try HString(boundary);
+    public func CreateWithBoundary(boundary : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpContent> {
+        let __hstr_boundary = try HString(boundary!);
         return try withExtendedLifetime(__hstr_boundary) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>> = nil;
         try self._n_CreateWithBoundary(__hstr_boundary.Raw(), &__result);
@@ -3618,8 +3618,8 @@ open class IHttpResponseMessage
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ReasonPhrase(pThis, value))
         }
     }
-    public func put_ReasonPhrase(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ReasonPhrase(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ReasonPhrase(__hstr_value.Raw());
         }
@@ -3816,8 +3816,8 @@ open class IHttpStringContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromString(pThis, content, __presult))
         }
     }
-    public func CreateFromString(content : Swift.String) throws -> Optional<Windows.Web.Http.IHttpContent> {
-        let __hstr_content = try HString(content);
+    public func CreateFromString(content : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpContent> {
+        let __hstr_content = try HString(content!);
         return try withExtendedLifetime(__hstr_content) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>> = nil;
         try self._n_CreateFromString(__hstr_content.Raw(), &__result);
@@ -3830,8 +3830,8 @@ open class IHttpStringContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromStringWithEncoding(pThis, content, encoding, __presult))
         }
     }
-    public func CreateFromStringWithEncoding(content : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Web.Http.IHttpContent> {
-        let __hstr_content = try HString(content);
+    public func CreateFromStringWithEncoding(content : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Web.Http.IHttpContent> {
+        let __hstr_content = try HString(content!);
         return try withExtendedLifetime(__hstr_content) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>> = nil;
         try self._n_CreateFromStringWithEncoding(__hstr_content.Raw(), encoding, &__result);
@@ -3844,10 +3844,10 @@ open class IHttpStringContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromStringWithEncodingAndMediaType(pThis, content, encoding, mediaType, __presult))
         }
     }
-    public func CreateFromStringWithEncodingAndMediaType(content : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding, mediaType : Swift.String) throws -> Optional<Windows.Web.Http.IHttpContent> {
-        let __hstr_content = try HString(content);
+    public func CreateFromStringWithEncodingAndMediaType(content : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding, mediaType : Optional<Swift.String>) throws -> Optional<Windows.Web.Http.IHttpContent> {
+        let __hstr_content = try HString(content!);
         return try withExtendedLifetime(__hstr_content) {
-        let __hstr_mediaType = try HString(mediaType);
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CHttp_CIHttpContent>> = nil;
         try self._n_CreateFromStringWithEncodingAndMediaType(__hstr_content.Raw(), encoding, __hstr_mediaType.Raw(), &__result);

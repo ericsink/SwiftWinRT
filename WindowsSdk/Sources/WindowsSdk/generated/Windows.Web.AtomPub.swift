@@ -279,15 +279,15 @@ open class IAtomPubClient
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateResourceAsync(pThis, uri, description, item, __presult))
         }
     }
-    public func CreateResourceAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, description : Swift.String, item : Optional<Windows.Web.Syndication.ISyndicationItem>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress> {
-        let __hstr_description = try HString(description);
+    public func CreateResourceAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, description : Optional<Swift.String>, item : Optional<Windows.Web.Syndication.ISyndicationItem>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress> {
+        let __hstr_description = try HString(description!);
         return try withExtendedLifetime(__hstr_description) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress>> = nil;
         try self._n_CreateResourceAsync(RawPointer(uri), __hstr_description.Raw(), RawPointer(item), &__result);
         return ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress(consuming: __result);
         }
     }
-    public func CreateResource(uri : Optional<Windows.Foundation.IUriRuntimeClass>, description : Swift.String, item : Optional<Windows.Web.Syndication.ISyndicationItem>) async throws -> Optional<Windows.Web.Syndication.ISyndicationItem> {
+    public func CreateResource(uri : Optional<Windows.Foundation.IUriRuntimeClass>, description : Optional<Swift.String>, item : Optional<Windows.Web.Syndication.ISyndicationItem>) async throws -> Optional<Windows.Web.Syndication.ISyndicationItem> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateResourceAsync(uri: uri, description: description, item: item)!.get())
@@ -302,10 +302,10 @@ open class IAtomPubClient
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateMediaResourceAsync(pThis, uri, mediaType, description, mediaStream, __presult))
         }
     }
-    public func CreateMediaResourceAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, mediaType : Swift.String, description : Swift.String, mediaStream : Optional<Windows.Storage.Streams.IInputStream>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress> {
-        let __hstr_mediaType = try HString(mediaType);
+    public func CreateMediaResourceAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, mediaType : Optional<Swift.String>, description : Optional<Swift.String>, mediaStream : Optional<Windows.Storage.Streams.IInputStream>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress> {
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
-        let __hstr_description = try HString(description);
+        let __hstr_description = try HString(description!);
         return try withExtendedLifetime(__hstr_description) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CWeb_CSyndication_CSyndicationItem__q_CWindows_CWeb_CSyndication_CTransferProgress>> = nil;
         try self._n_CreateMediaResourceAsync(RawPointer(uri), __hstr_mediaType.Raw(), __hstr_description.Raw(), RawPointer(mediaStream), &__result);
@@ -313,7 +313,7 @@ open class IAtomPubClient
         }
         }
     }
-    public func CreateMediaResource(uri : Optional<Windows.Foundation.IUriRuntimeClass>, mediaType : Swift.String, description : Swift.String, mediaStream : Optional<Windows.Storage.Streams.IInputStream>) async throws -> Optional<Windows.Web.Syndication.ISyndicationItem> {
+    public func CreateMediaResource(uri : Optional<Windows.Foundation.IUriRuntimeClass>, mediaType : Optional<Swift.String>, description : Optional<Swift.String>, mediaStream : Optional<Windows.Storage.Streams.IInputStream>) async throws -> Optional<Windows.Web.Syndication.ISyndicationItem> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateMediaResourceAsync(uri: uri, mediaType: mediaType, description: description, mediaStream: mediaStream)!.get())
@@ -328,8 +328,8 @@ open class IAtomPubClient
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateMediaResourceAsync(pThis, uri, mediaType, mediaStream, __presult))
         }
     }
-    public func UpdateMediaResourceAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, mediaType : Swift.String, mediaStream : Optional<Windows.Storage.Streams.IInputStream>) throws -> Optional<ClosedGenerics.IAsyncActionWithProgress_1__q_CWindows_CWeb_CSyndication_CTransferProgress> {
-        let __hstr_mediaType = try HString(mediaType);
+    public func UpdateMediaResourceAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, mediaType : Optional<Swift.String>, mediaStream : Optional<Windows.Storage.Streams.IInputStream>) throws -> Optional<ClosedGenerics.IAsyncActionWithProgress_1__q_CWindows_CWeb_CSyndication_CTransferProgress> {
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncActionWithProgress_1__q_CWindows_CWeb_CSyndication_CTransferProgress>> = nil;
         try self._n_UpdateMediaResourceAsync(RawPointer(uri), __hstr_mediaType.Raw(), RawPointer(mediaStream), &__result);

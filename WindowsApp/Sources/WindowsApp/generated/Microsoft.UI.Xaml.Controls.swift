@@ -153,14 +153,89 @@ public class ColumnDefinition
         _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ColumnDefinition")
         try super.init(plok: _self.QueryInterface())
     }
-    // static interface not needed: Microsoft.UI.Xaml.Controls.IColumnDefinitionStatics
-    // method not needed: get_Width
-    // method not needed: put_Width
-    // method not needed: get_MaxWidth
-    // method not needed: put_MaxWidth
-    // method not needed: get_MinWidth
-    // method not needed: put_MinWidth
-    // method not needed: get_ActualWidth
+    private struct _IColumnDefinitionStatics {
+        static var x : IColumnDefinitionStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.ColumnDefinition")
+    }
+    public static var ColumnDefinitionStatics : IColumnDefinitionStatics {
+        _IColumnDefinitionStatics.x
+    }
+    public static func get_WidthProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ColumnDefinitionStatics.get_WidthProperty());
+    }
+    public static func get_MaxWidthProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ColumnDefinitionStatics.get_MaxWidthProperty());
+    }
+    public static func get_MinWidthProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ColumnDefinitionStatics.get_MinWidthProperty());
+    }
+    public static var MaxWidthProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ColumnDefinitionStatics.MaxWidthProperty);
+        }
+    }
+    public static var MinWidthProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ColumnDefinitionStatics.MinWidthProperty);
+        }
+    }
+    public static var WidthProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: ColumnDefinitionStatics.WidthProperty);
+        }
+    }
+    public func get_Width() throws -> Microsoft.UI.Xaml.GridLength {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.get_Width();
+    }
+    public func put_Width(value : Microsoft.UI.Xaml.GridLength) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.put_Width(value: value);
+    }
+    public func get_MaxWidth() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.get_MaxWidth();
+    }
+    public func put_MaxWidth(value : Swift.Double) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.put_MaxWidth(value: value);
+    }
+    public func get_MinWidth() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.get_MinWidth();
+    }
+    public func put_MinWidth(value : Swift.Double) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.put_MinWidth(value: value);
+    }
+    public func get_ActualWidth() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.get_ActualWidth();
+    }
+    public var ActualWidth : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.ActualWidth;
+        }
+    }
+    public var MaxWidth : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.MaxWidth;
+        }
+    }
+    public var MinWidth : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.MinWidth;
+        }
+    }
+    public var Width : Microsoft.UI.Xaml.GridLength {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IColumnDefinition = try _self.QueryInterface();
+        return try _ifc.Width;
+        }
+    }
 }
 
 // type: Microsoft.UI.Xaml.Controls.ColumnDefinitionCollection
@@ -1823,14 +1898,156 @@ open class IColumnDefinition
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x454cea14, Data2: 0x87ec, Data3 : 0x5890, Data4 : (0xbb, 0x62, 0xf1, 0xd8, 0x2a, 0x94, 0x75, 0x8e)) }
-// method not needed: get_Width
-// method not needed: put_Width
-// method not needed: get_MaxWidth
-// method not needed: put_MaxWidth
-// method not needed: get_MinWidth
-// method not needed: put_MinWidth
-// method not needed: get_ActualWidth
+    // [IsSpecialName] Microsoft.UI.Xaml.GridLength get_Width()
+    private func _n_get_Width(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CGridLength>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Width(pThis, __presult))
+        }
+    }
+    public func get_Width() throws -> Microsoft.UI.Xaml.GridLength {
+        var __result : _q_CMicrosoft_CUI_CXaml_CGridLength = _q_CMicrosoft_CUI_CXaml_CGridLength(Value: 0, GridUnitType: _q_CMicrosoft_CUI_CXaml_CGridUnitType_Auto);
+        try self._n_get_Width(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Width(Microsoft.UI.Xaml.GridLength)
+    private func _n_put_Width(_ value : _q_CMicrosoft_CUI_CXaml_CGridLength) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Width(pThis, value))
+        }
+    }
+    public func put_Width(value : Microsoft.UI.Xaml.GridLength) throws -> Void {
+        try self._n_put_Width(value);
+    }
+    // [IsSpecialName] System.Double get_MaxWidth()
+    private func _n_get_MaxWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxWidth(pThis, __presult))
+        }
+    }
+    public func get_MaxWidth() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_MaxWidth(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaxWidth(System.Double)
+    private func _n_put_MaxWidth(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxWidth(pThis, value))
+        }
+    }
+    public func put_MaxWidth(value : Swift.Double) throws -> Void {
+        try self._n_put_MaxWidth(value);
+    }
+    // [IsSpecialName] System.Double get_MinWidth()
+    private func _n_get_MinWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinWidth(pThis, __presult))
+        }
+    }
+    public func get_MinWidth() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_MinWidth(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MinWidth(System.Double)
+    private func _n_put_MinWidth(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MinWidth(pThis, value))
+        }
+    }
+    public func put_MinWidth(value : Swift.Double) throws -> Void {
+        try self._n_put_MinWidth(value);
+    }
+    // [IsSpecialName] System.Double get_ActualWidth()
+    private func _n_get_ActualWidth(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualWidth(pThis, __presult))
+        }
+    }
+    public func get_ActualWidth() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_ActualWidth(&__result);
+        return __result;
+    }
+    public var ActualWidth : Swift.Double {
+        get throws {
+            return try get_ActualWidth();
+        }
+    }
+    public var MaxWidth : Swift.Double {
+        get throws {
+            return try get_MaxWidth();
+        }
+    }
+    public var MinWidth : Swift.Double {
+        get throws {
+            return try get_MinWidth();
+        }
+    }
+    public var Width : Microsoft.UI.Xaml.GridLength {
+        get throws {
+            return try get_Width();
+        }
+    }
 } // IColumnDefinition
+
+
+// type: Microsoft.UI.Xaml.Controls.IColumnDefinitionStatics
+// interface type
+open class IColumnDefinitionStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xaba4b755, Data2: 0xca63, Data3 : 0x5ed7, Data4 : (0xae, 0x31, 0x45, 0xf9, 0xf9, 0x19, 0x20, 0xb0)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_WidthProperty()
+    private func _n_get_WidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_WidthProperty(pThis, __presult))
+        }
+    }
+    public func get_WidthProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_WidthProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaxWidthProperty()
+    private func _n_get_MaxWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxWidthProperty(pThis, __presult))
+        }
+    }
+    public func get_MaxWidthProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MaxWidthProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MinWidthProperty()
+    private func _n_get_MinWidthProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinWidthProperty(pThis, __presult))
+        }
+    }
+    public func get_MinWidthProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MinWidthProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var MaxWidthProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MaxWidthProperty();
+        }
+    }
+    public var MinWidthProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MinWidthProperty();
+        }
+    }
+    public var WidthProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_WidthProperty();
+        }
+    }
+} // IColumnDefinitionStatics
 
 
 // type: Microsoft.UI.Xaml.Controls.IContainerContentChangingEventArgs
@@ -3136,8 +3353,8 @@ open class IControlProtected
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTemplateChild(pThis, childName, __presult))
         }
     }
-    public func GetTemplateChild(childName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.IDependencyObject> {
-        let __hstr_childName = try HString(childName);
+    public func GetTemplateChild(childName : Optional<Swift.String>) throws -> Optional<Microsoft.UI.Xaml.IDependencyObject> {
+        let __hstr_childName = try HString(childName!);
         return try withExtendedLifetime(__hstr_childName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyObject>> = nil;
         try self._n_GetTemplateChild(__hstr_childName.Raw(), &__result);
@@ -4511,8 +4728,8 @@ open class IItemsControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayMemberPath(pThis, value))
         }
     }
-    public func put_DisplayMemberPath(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DisplayMemberPath(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DisplayMemberPath(__hstr_value.Raw());
         }
@@ -5545,15 +5762,15 @@ open class IListViewBase
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryStartConnectedAnimationAsync(pThis, animation, item, elementName, __presult))
         }
     }
-    public func TryStartConnectedAnimationAsync(animation : Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation>, item : Optional<WinRT.IInspectable>, elementName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
-        let __hstr_elementName = try HString(elementName);
+    public func TryStartConnectedAnimationAsync(animation : Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation>, item : Optional<WinRT.IInspectable>, elementName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let __hstr_elementName = try HString(elementName!);
         return try withExtendedLifetime(__hstr_elementName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
         try self._n_TryStartConnectedAnimationAsync(RawPointer(animation), RawPointer(item), __hstr_elementName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
         }
     }
-    public func TryStartConnectedAnimation(animation : Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation>, item : Optional<WinRT.IInspectable>, elementName : Swift.String) async throws -> boolean {
+    public func TryStartConnectedAnimation(animation : Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation>, item : Optional<WinRT.IInspectable>, elementName : Optional<Swift.String>) async throws -> boolean {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.TryStartConnectedAnimationAsync(animation: animation, item: item, elementName: elementName)!.get())
@@ -5568,10 +5785,10 @@ open class IListViewBase
             try CHECKED(pThis.pointee.lpVtbl.pointee.PrepareConnectedAnimation(pThis, key, item, elementName, __presult))
         }
     }
-    public func PrepareConnectedAnimation(key : Swift.String, item : Optional<WinRT.IInspectable>, elementName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation> {
-        let __hstr_key = try HString(key);
+    public func PrepareConnectedAnimation(key : Optional<Swift.String>, item : Optional<WinRT.IInspectable>, elementName : Optional<Swift.String>) throws -> Optional<Microsoft.UI.Xaml.Media.Animation.IConnectedAnimation> {
+        let __hstr_key = try HString(key!);
         return try withExtendedLifetime(__hstr_key) {
-        let __hstr_elementName = try HString(elementName);
+        let __hstr_elementName = try HString(elementName!);
         return try withExtendedLifetime(__hstr_elementName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CIConnectedAnimation>> = nil;
         try self._n_PrepareConnectedAnimation(__hstr_key.Raw(), RawPointer(item), __hstr_elementName.Raw(), &__result);
@@ -6402,14 +6619,156 @@ open class IRowDefinition
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0xfe870f2f, Data2: 0x89ef, Data3 : 0x5dac, Data4 : (0x9f, 0x33, 0x96, 0x8d, 0x0d, 0xc5, 0x77, 0xc3)) }
-// method not needed: get_Height
-// method not needed: put_Height
-// method not needed: get_MaxHeight
-// method not needed: put_MaxHeight
-// method not needed: get_MinHeight
-// method not needed: put_MinHeight
-// method not needed: get_ActualHeight
+    // [IsSpecialName] Microsoft.UI.Xaml.GridLength get_Height()
+    private func _n_get_Height(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CGridLength>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Height(pThis, __presult))
+        }
+    }
+    public func get_Height() throws -> Microsoft.UI.Xaml.GridLength {
+        var __result : _q_CMicrosoft_CUI_CXaml_CGridLength = _q_CMicrosoft_CUI_CXaml_CGridLength(Value: 0, GridUnitType: _q_CMicrosoft_CUI_CXaml_CGridUnitType_Auto);
+        try self._n_get_Height(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Height(Microsoft.UI.Xaml.GridLength)
+    private func _n_put_Height(_ value : _q_CMicrosoft_CUI_CXaml_CGridLength) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Height(pThis, value))
+        }
+    }
+    public func put_Height(value : Microsoft.UI.Xaml.GridLength) throws -> Void {
+        try self._n_put_Height(value);
+    }
+    // [IsSpecialName] System.Double get_MaxHeight()
+    private func _n_get_MaxHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxHeight(pThis, __presult))
+        }
+    }
+    public func get_MaxHeight() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_MaxHeight(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MaxHeight(System.Double)
+    private func _n_put_MaxHeight(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MaxHeight(pThis, value))
+        }
+    }
+    public func put_MaxHeight(value : Swift.Double) throws -> Void {
+        try self._n_put_MaxHeight(value);
+    }
+    // [IsSpecialName] System.Double get_MinHeight()
+    private func _n_get_MinHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinHeight(pThis, __presult))
+        }
+    }
+    public func get_MinHeight() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_MinHeight(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_MinHeight(System.Double)
+    private func _n_put_MinHeight(_ value : DOUBLE) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_MinHeight(pThis, value))
+        }
+    }
+    public func put_MinHeight(value : Swift.Double) throws -> Void {
+        try self._n_put_MinHeight(value);
+    }
+    // [IsSpecialName] System.Double get_ActualHeight()
+    private func _n_get_ActualHeight(_ __presult: UnsafeMutablePointer<DOUBLE>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ActualHeight(pThis, __presult))
+        }
+    }
+    public func get_ActualHeight() throws -> Swift.Double {
+        var __result : DOUBLE = 0;
+        try self._n_get_ActualHeight(&__result);
+        return __result;
+    }
+    public var ActualHeight : Swift.Double {
+        get throws {
+            return try get_ActualHeight();
+        }
+    }
+    public var Height : Microsoft.UI.Xaml.GridLength {
+        get throws {
+            return try get_Height();
+        }
+    }
+    public var MaxHeight : Swift.Double {
+        get throws {
+            return try get_MaxHeight();
+        }
+    }
+    public var MinHeight : Swift.Double {
+        get throws {
+            return try get_MinHeight();
+        }
+    }
 } // IRowDefinition
+
+
+// type: Microsoft.UI.Xaml.Controls.IRowDefinitionStatics
+// interface type
+open class IRowDefinitionStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x7317c7c5, Data2: 0xfd6f, Data3 : 0x58d9, Data4 : (0x9b, 0x53, 0x49, 0x78, 0xdb, 0xac, 0xde, 0x23)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_HeightProperty()
+    private func _n_get_HeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_HeightProperty(pThis, __presult))
+        }
+    }
+    public func get_HeightProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_HeightProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MaxHeightProperty()
+    private func _n_get_MaxHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MaxHeightProperty(pThis, __presult))
+        }
+    }
+    public func get_MaxHeightProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MaxHeightProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_MinHeightProperty()
+    private func _n_get_MinHeightProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_MinHeightProperty(pThis, __presult))
+        }
+    }
+    public func get_MinHeightProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_MinHeightProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var HeightProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_HeightProperty();
+        }
+    }
+    public var MaxHeightProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MaxHeightProperty();
+        }
+    }
+    public var MinHeightProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_MinHeightProperty();
+        }
+    }
+} // IRowDefinitionStatics
 
 
 // type: Microsoft.UI.Xaml.Controls.ISelectionChangedEventArgs
@@ -7900,8 +8259,8 @@ open class ITextBlock
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
         }
     }
-    public func put_Text(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Text(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Text(__hstr_value.Raw());
         }
@@ -9022,8 +9381,8 @@ open class ITextBox
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
         }
     }
-    public func put_Text(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Text(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Text(__hstr_value.Raw());
         }
@@ -9045,8 +9404,8 @@ open class ITextBox
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectedText(pThis, value))
         }
     }
-    public func put_SelectedText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_SelectedText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_SelectedText(__hstr_value.Raw());
         }
@@ -9308,8 +9667,8 @@ open class ITextBox
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_PlaceholderText(pThis, value))
         }
     }
-    public func put_PlaceholderText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_PlaceholderText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_PlaceholderText(__hstr_value.Raw());
         }
@@ -12183,14 +12542,89 @@ public class RowDefinition
         _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.RowDefinition")
         try super.init(plok: _self.QueryInterface())
     }
-    // static interface not needed: Microsoft.UI.Xaml.Controls.IRowDefinitionStatics
-    // method not needed: get_Height
-    // method not needed: put_Height
-    // method not needed: get_MaxHeight
-    // method not needed: put_MaxHeight
-    // method not needed: get_MinHeight
-    // method not needed: put_MinHeight
-    // method not needed: get_ActualHeight
+    private struct _IRowDefinitionStatics {
+        static var x : IRowDefinitionStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.RowDefinition")
+    }
+    public static var RowDefinitionStatics : IRowDefinitionStatics {
+        _IRowDefinitionStatics.x
+    }
+    public static func get_HeightProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: RowDefinitionStatics.get_HeightProperty());
+    }
+    public static func get_MaxHeightProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: RowDefinitionStatics.get_MaxHeightProperty());
+    }
+    public static func get_MinHeightProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: RowDefinitionStatics.get_MinHeightProperty());
+    }
+    public static var HeightProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: RowDefinitionStatics.HeightProperty);
+        }
+    }
+    public static var MaxHeightProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: RowDefinitionStatics.MaxHeightProperty);
+        }
+    }
+    public static var MinHeightProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: RowDefinitionStatics.MinHeightProperty);
+        }
+    }
+    public func get_Height() throws -> Microsoft.UI.Xaml.GridLength {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.get_Height();
+    }
+    public func put_Height(value : Microsoft.UI.Xaml.GridLength) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.put_Height(value: value);
+    }
+    public func get_MaxHeight() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.get_MaxHeight();
+    }
+    public func put_MaxHeight(value : Swift.Double) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.put_MaxHeight(value: value);
+    }
+    public func get_MinHeight() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.get_MinHeight();
+    }
+    public func put_MinHeight(value : Swift.Double) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.put_MinHeight(value: value);
+    }
+    public func get_ActualHeight() throws -> Swift.Double {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.get_ActualHeight();
+    }
+    public var ActualHeight : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.ActualHeight;
+        }
+    }
+    public var Height : Microsoft.UI.Xaml.GridLength {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.Height;
+        }
+    }
+    public var MaxHeight : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.MaxHeight;
+        }
+    }
+    public var MinHeight : Swift.Double {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IRowDefinition = try _self.QueryInterface();
+        return try _ifc.MinHeight;
+        }
+    }
 }
 
 // type: Microsoft.UI.Xaml.Controls.RowDefinitionCollection

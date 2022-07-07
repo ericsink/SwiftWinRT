@@ -379,8 +379,8 @@ open class IDnssdServiceInstance
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DnssdServiceInstanceName(pThis, value))
         }
     }
-    public func put_DnssdServiceInstanceName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DnssdServiceInstanceName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DnssdServiceInstanceName(__hstr_value.Raw());
         }
@@ -603,8 +603,8 @@ open class IDnssdServiceInstanceFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, dnssdServiceInstanceName, hostName, port, __presult))
         }
     }
-    public func Create(dnssdServiceInstanceName : Swift.String, hostName : Optional<Windows.Networking.IHostName>, port : Swift.UInt16) throws -> Optional<Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance> {
-        let __hstr_dnssdServiceInstanceName = try HString(dnssdServiceInstanceName);
+    public func Create(dnssdServiceInstanceName : Optional<Swift.String>, hostName : Optional<Windows.Networking.IHostName>, port : Swift.UInt16) throws -> Optional<Windows.Networking.ServiceDiscovery.Dnssd.IDnssdServiceInstance> {
+        let __hstr_dnssdServiceInstanceName = try HString(dnssdServiceInstanceName!);
         return try withExtendedLifetime(__hstr_dnssdServiceInstanceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CServiceDiscovery_CDnssd_CIDnssdServiceInstance>> = nil;
         try self._n_Create(__hstr_dnssdServiceInstanceName.Raw(), RawPointer(hostName), port, &__result);

@@ -355,8 +355,8 @@ open class IPeerFinderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayName(pThis, value))
         }
     }
-    public func put_DisplayName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DisplayName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DisplayName(__hstr_value.Raw());
         }
@@ -398,8 +398,8 @@ open class IPeerFinderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.StartWithMessage(pThis, peerMessage))
         }
     }
-    public func StartWithMessage(peerMessage : Swift.String) throws -> Void {
-        let __hstr_peerMessage = try HString(peerMessage);
+    public func StartWithMessage(peerMessage : Optional<Swift.String>) throws -> Void {
+        let __hstr_peerMessage = try HString(peerMessage!);
         return try withExtendedLifetime(__hstr_peerMessage) {
         try self._n_StartWithMessage(__hstr_peerMessage.Raw());
         }
@@ -864,8 +864,8 @@ open class IProximityDevice
             try CHECKED(pThis.pointee.lpVtbl.pointee.SubscribeForMessage(pThis, messageType, messageReceivedHandler, __presult))
         }
     }
-    public func SubscribeForMessage(messageType : Swift.String, messageReceivedHandler : Optional<Windows.Networking.Proximity.IMessageReceivedHandler>) throws -> Swift.Int64 {
-        let __hstr_messageType = try HString(messageType);
+    public func SubscribeForMessage(messageType : Optional<Swift.String>, messageReceivedHandler : Optional<Windows.Networking.Proximity.IMessageReceivedHandler>) throws -> Swift.Int64 {
+        let __hstr_messageType = try HString(messageType!);
         return try withExtendedLifetime(__hstr_messageType) {
         var __result : INT64 = 0;
         try self._n_SubscribeForMessage(__hstr_messageType.Raw(), RawPointer(messageReceivedHandler), &__result);
@@ -878,10 +878,10 @@ open class IProximityDevice
             try CHECKED(pThis.pointee.lpVtbl.pointee.PublishMessage(pThis, messageType, message, __presult))
         }
     }
-    public func PublishMessage(messageType : Swift.String, message : Swift.String) throws -> Swift.Int64 {
-        let __hstr_messageType = try HString(messageType);
+    public func PublishMessage(messageType : Optional<Swift.String>, message : Optional<Swift.String>) throws -> Swift.Int64 {
+        let __hstr_messageType = try HString(messageType!);
         return try withExtendedLifetime(__hstr_messageType) {
-        let __hstr_message = try HString(message);
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         var __result : INT64 = 0;
         try self._n_PublishMessage(__hstr_messageType.Raw(), __hstr_message.Raw(), &__result);
@@ -895,10 +895,10 @@ open class IProximityDevice
             try CHECKED(pThis.pointee.lpVtbl.pointee.PublishMessageWithCallback(pThis, messageType, message, messageTransmittedHandler, __presult))
         }
     }
-    public func PublishMessageWithCallback(messageType : Swift.String, message : Swift.String, messageTransmittedHandler : Optional<Windows.Networking.Proximity.IMessageTransmittedHandler>) throws -> Swift.Int64 {
-        let __hstr_messageType = try HString(messageType);
+    public func PublishMessageWithCallback(messageType : Optional<Swift.String>, message : Optional<Swift.String>, messageTransmittedHandler : Optional<Windows.Networking.Proximity.IMessageTransmittedHandler>) throws -> Swift.Int64 {
+        let __hstr_messageType = try HString(messageType!);
         return try withExtendedLifetime(__hstr_messageType) {
-        let __hstr_message = try HString(message);
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         var __result : INT64 = 0;
         try self._n_PublishMessageWithCallback(__hstr_messageType.Raw(), __hstr_message.Raw(), RawPointer(messageTransmittedHandler), &__result);
@@ -912,8 +912,8 @@ open class IProximityDevice
             try CHECKED(pThis.pointee.lpVtbl.pointee.PublishBinaryMessage(pThis, messageType, message, __presult))
         }
     }
-    public func PublishBinaryMessage(messageType : Swift.String, message : Optional<Windows.Storage.Streams.IBuffer>) throws -> Swift.Int64 {
-        let __hstr_messageType = try HString(messageType);
+    public func PublishBinaryMessage(messageType : Optional<Swift.String>, message : Optional<Windows.Storage.Streams.IBuffer>) throws -> Swift.Int64 {
+        let __hstr_messageType = try HString(messageType!);
         return try withExtendedLifetime(__hstr_messageType) {
         var __result : INT64 = 0;
         try self._n_PublishBinaryMessage(__hstr_messageType.Raw(), RawPointer(message), &__result);
@@ -926,8 +926,8 @@ open class IProximityDevice
             try CHECKED(pThis.pointee.lpVtbl.pointee.PublishBinaryMessageWithCallback(pThis, messageType, message, messageTransmittedHandler, __presult))
         }
     }
-    public func PublishBinaryMessageWithCallback(messageType : Swift.String, message : Optional<Windows.Storage.Streams.IBuffer>, messageTransmittedHandler : Optional<Windows.Networking.Proximity.IMessageTransmittedHandler>) throws -> Swift.Int64 {
-        let __hstr_messageType = try HString(messageType);
+    public func PublishBinaryMessageWithCallback(messageType : Optional<Swift.String>, message : Optional<Windows.Storage.Streams.IBuffer>, messageTransmittedHandler : Optional<Windows.Networking.Proximity.IMessageTransmittedHandler>) throws -> Swift.Int64 {
+        let __hstr_messageType = try HString(messageType!);
         return try withExtendedLifetime(__hstr_messageType) {
         var __result : INT64 = 0;
         try self._n_PublishBinaryMessageWithCallback(__hstr_messageType.Raw(), RawPointer(message), RawPointer(messageTransmittedHandler), &__result);
@@ -1100,8 +1100,8 @@ open class IProximityDeviceStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.FromId(pThis, deviceId, __presult))
         }
     }
-    public func FromId(deviceId : Swift.String) throws -> Optional<Windows.Networking.Proximity.IProximityDevice> {
-        let __hstr_deviceId = try HString(deviceId);
+    public func FromId(deviceId : Optional<Swift.String>) throws -> Optional<Windows.Networking.Proximity.IProximityDevice> {
+        let __hstr_deviceId = try HString(deviceId!);
         return try withExtendedLifetime(__hstr_deviceId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CProximity_CIProximityDevice>> = nil;
         try self._n_FromId(__hstr_deviceId.Raw(), &__result);

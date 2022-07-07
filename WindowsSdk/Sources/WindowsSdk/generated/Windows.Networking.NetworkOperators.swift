@@ -1181,15 +1181,15 @@ open class IESim
             try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteProfileAsync(pThis, profileId, __presult))
         }
     }
-    public func DeleteProfileAsync(profileId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult> {
-        let __hstr_profileId = try HString(profileId);
+    public func DeleteProfileAsync(profileId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult> {
+        let __hstr_profileId = try HString(profileId!);
         return try withExtendedLifetime(__hstr_profileId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult>> = nil;
         try self._n_DeleteProfileAsync(__hstr_profileId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(consuming: __result);
         }
     }
-    public func DeleteProfile(profileId : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IESimOperationResult> {
+    public func DeleteProfile(profileId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IESimOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.DeleteProfileAsync(profileId: profileId)!.get())
@@ -1204,15 +1204,15 @@ open class IESim
             try CHECKED(pThis.pointee.lpVtbl.pointee.DownloadProfileMetadataAsync(pThis, activationCode, __presult))
         }
     }
-    public func DownloadProfileMetadataAsync(activationCode : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult> {
-        let __hstr_activationCode = try HString(activationCode);
+    public func DownloadProfileMetadataAsync(activationCode : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult> {
+        let __hstr_activationCode = try HString(activationCode!);
         return try withExtendedLifetime(__hstr_activationCode) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult>> = nil;
         try self._n_DownloadProfileMetadataAsync(__hstr_activationCode.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDownloadProfileMetadataResult(consuming: __result);
         }
     }
-    public func DownloadProfileMetadata(activationCode : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IESimDownloadProfileMetadataResult> {
+    public func DownloadProfileMetadata(activationCode : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IESimDownloadProfileMetadataResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.DownloadProfileMetadataAsync(activationCode: activationCode)!.get())
@@ -1318,10 +1318,10 @@ open class IESim2
             try CHECKED(pThis.pointee.lpVtbl.pointee.DiscoverWithServerAddressAndMatchingId(pThis, serverAddress, matchingId, __presult))
         }
     }
-    public func DiscoverWithServerAddressAndMatchingId(serverAddress : Swift.String, matchingId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IESimDiscoverResult> {
-        let __hstr_serverAddress = try HString(serverAddress);
+    public func DiscoverWithServerAddressAndMatchingId(serverAddress : Optional<Swift.String>, matchingId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IESimDiscoverResult> {
+        let __hstr_serverAddress = try HString(serverAddress!);
         return try withExtendedLifetime(__hstr_serverAddress) {
-        let __hstr_matchingId = try HString(matchingId);
+        let __hstr_matchingId = try HString(matchingId!);
         return try withExtendedLifetime(__hstr_matchingId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIESimDiscoverResult>> = nil;
         try self._n_DiscoverWithServerAddressAndMatchingId(__hstr_serverAddress.Raw(), __hstr_matchingId.Raw(), &__result);
@@ -1355,10 +1355,10 @@ open class IESim2
             try CHECKED(pThis.pointee.lpVtbl.pointee.DiscoverWithServerAddressAndMatchingIdAsync(pThis, serverAddress, matchingId, __presult))
         }
     }
-    public func DiscoverWithServerAddressAndMatchingIdAsync(serverAddress : Swift.String, matchingId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult> {
-        let __hstr_serverAddress = try HString(serverAddress);
+    public func DiscoverWithServerAddressAndMatchingIdAsync(serverAddress : Optional<Swift.String>, matchingId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult> {
+        let __hstr_serverAddress = try HString(serverAddress!);
         return try withExtendedLifetime(__hstr_serverAddress) {
-        let __hstr_matchingId = try HString(matchingId);
+        let __hstr_matchingId = try HString(matchingId!);
         return try withExtendedLifetime(__hstr_matchingId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimDiscoverResult>> = nil;
         try self._n_DiscoverWithServerAddressAndMatchingIdAsync(__hstr_serverAddress.Raw(), __hstr_matchingId.Raw(), &__result);
@@ -1366,7 +1366,7 @@ open class IESim2
         }
         }
     }
-    public func DiscoverWithServerAddressAndMatchingId(serverAddress : Swift.String, matchingId : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IESimDiscoverResult> {
+    public func DiscoverWithServerAddressAndMatchingId(serverAddress : Optional<Swift.String>, matchingId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IESimDiscoverResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.DiscoverWithServerAddressAndMatchingIdAsync(serverAddress: serverAddress, matchingId: matchingId)!.get())
@@ -1812,15 +1812,15 @@ open class IESimProfile
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetNicknameAsync(pThis, newNickname, __presult))
         }
     }
-    public func SetNicknameAsync(newNickname : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult> {
-        let __hstr_newNickname = try HString(newNickname);
+    public func SetNicknameAsync(newNickname : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult> {
+        let __hstr_newNickname = try HString(newNickname!);
         return try withExtendedLifetime(__hstr_newNickname) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult>> = nil;
         try self._n_SetNicknameAsync(__hstr_newNickname.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult(consuming: __result);
         }
     }
-    public func SetNickname(newNickname : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IESimOperationResult> {
+    public func SetNickname(newNickname : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IESimOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.SetNicknameAsync(newNickname: newNickname)!.get())
@@ -2002,15 +2002,15 @@ open class IESimProfileMetadata
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConfirmInstallWithConfirmationCodeAsync(pThis, confirmationCode, __presult))
         }
     }
-    public func ConfirmInstallWithConfirmationCodeAsync(confirmationCode : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress> {
-        let __hstr_confirmationCode = try HString(confirmationCode);
+    public func ConfirmInstallWithConfirmationCodeAsync(confirmationCode : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress> {
+        let __hstr_confirmationCode = try HString(confirmationCode!);
         return try withExtendedLifetime(__hstr_confirmationCode) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress>> = nil;
         try self._n_ConfirmInstallWithConfirmationCodeAsync(__hstr_confirmationCode.Raw(), &__result);
         return ClosedGenerics.IAsyncOperationWithProgress_2__q_CWindows_CNetworking_CNetworkOperators_CESimOperationResult__q_CWindows_CNetworking_CNetworkOperators_CESimProfileInstallProgress(consuming: __result);
         }
     }
-    public func ConfirmInstallWithConfirmationCode(confirmationCode : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IESimOperationResult> {
+    public func ConfirmInstallWithConfirmationCode(confirmationCode : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IESimOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ConfirmInstallWithConfirmationCodeAsync(confirmationCode: confirmationCode)!.get())
@@ -2462,12 +2462,12 @@ open class IHotspotAuthenticationContext
             try CHECKED(pThis.pointee.lpVtbl.pointee.IssueCredentials(pThis, userName, password, extraParameters, markAsManualConnectOnFailure))
         }
     }
-    public func IssueCredentials(userName : Swift.String, password : Swift.String, extraParameters : Swift.String, markAsManualConnectOnFailure : boolean) throws -> Void {
-        let __hstr_userName = try HString(userName);
+    public func IssueCredentials(userName : Optional<Swift.String>, password : Optional<Swift.String>, extraParameters : Optional<Swift.String>, markAsManualConnectOnFailure : boolean) throws -> Void {
+        let __hstr_userName = try HString(userName!);
         return try withExtendedLifetime(__hstr_userName) {
-        let __hstr_password = try HString(password);
+        let __hstr_password = try HString(password!);
         return try withExtendedLifetime(__hstr_password) {
-        let __hstr_extraParameters = try HString(extraParameters);
+        let __hstr_extraParameters = try HString(extraParameters!);
         return try withExtendedLifetime(__hstr_extraParameters) {
         try self._n_IssueCredentials(__hstr_userName.Raw(), __hstr_password.Raw(), __hstr_extraParameters.Raw(), markAsManualConnectOnFailure);
         }
@@ -2498,10 +2498,10 @@ open class IHotspotAuthenticationContext
             try CHECKED(pThis.pointee.lpVtbl.pointee.TriggerAttentionRequired(pThis, packageRelativeApplicationId, applicationParameters))
         }
     }
-    public func TriggerAttentionRequired(packageRelativeApplicationId : Swift.String, applicationParameters : Swift.String) throws -> Void {
-        let __hstr_packageRelativeApplicationId = try HString(packageRelativeApplicationId);
+    public func TriggerAttentionRequired(packageRelativeApplicationId : Optional<Swift.String>, applicationParameters : Optional<Swift.String>) throws -> Void {
+        let __hstr_packageRelativeApplicationId = try HString(packageRelativeApplicationId!);
         return try withExtendedLifetime(__hstr_packageRelativeApplicationId) {
-        let __hstr_applicationParameters = try HString(applicationParameters);
+        let __hstr_applicationParameters = try HString(applicationParameters!);
         return try withExtendedLifetime(__hstr_applicationParameters) {
         try self._n_TriggerAttentionRequired(__hstr_packageRelativeApplicationId.Raw(), __hstr_applicationParameters.Raw());
         }
@@ -2548,12 +2548,12 @@ open class IHotspotAuthenticationContext2
             try CHECKED(pThis.pointee.lpVtbl.pointee.IssueCredentialsAsync(pThis, userName, password, extraParameters, markAsManualConnectOnFailure, __presult))
         }
     }
-    public func IssueCredentialsAsync(userName : Swift.String, password : Swift.String, extraParameters : Swift.String, markAsManualConnectOnFailure : boolean) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult> {
-        let __hstr_userName = try HString(userName);
+    public func IssueCredentialsAsync(userName : Optional<Swift.String>, password : Optional<Swift.String>, extraParameters : Optional<Swift.String>, markAsManualConnectOnFailure : boolean) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult> {
+        let __hstr_userName = try HString(userName!);
         return try withExtendedLifetime(__hstr_userName) {
-        let __hstr_password = try HString(password);
+        let __hstr_password = try HString(password!);
         return try withExtendedLifetime(__hstr_password) {
-        let __hstr_extraParameters = try HString(extraParameters);
+        let __hstr_extraParameters = try HString(extraParameters!);
         return try withExtendedLifetime(__hstr_extraParameters) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CHotspotCredentialsAuthenticationResult>> = nil;
         try self._n_IssueCredentialsAsync(__hstr_userName.Raw(), __hstr_password.Raw(), __hstr_extraParameters.Raw(), markAsManualConnectOnFailure, &__result);
@@ -2562,7 +2562,7 @@ open class IHotspotAuthenticationContext2
         }
         }
     }
-    public func IssueCredentials(userName : Swift.String, password : Swift.String, extraParameters : Swift.String, markAsManualConnectOnFailure : boolean) async throws -> Optional<Windows.Networking.NetworkOperators.IHotspotCredentialsAuthenticationResult> {
+    public func IssueCredentials(userName : Optional<Swift.String>, password : Optional<Swift.String>, extraParameters : Optional<Swift.String>, markAsManualConnectOnFailure : boolean) async throws -> Optional<Windows.Networking.NetworkOperators.IHotspotCredentialsAuthenticationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.IssueCredentialsAsync(userName: userName, password: password, extraParameters: extraParameters, markAsManualConnectOnFailure: markAsManualConnectOnFailure)!.get())
@@ -2587,8 +2587,8 @@ open class IHotspotAuthenticationContextStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryGetAuthenticationContext(pThis, evenToken, context, __presult))
         }
     }
-    public func TryGetAuthenticationContext(evenToken : Swift.String, context : inout Optional<Windows.Networking.NetworkOperators.IHotspotAuthenticationContext>) throws -> boolean {
-        let __hstr_evenToken = try HString(evenToken);
+    public func TryGetAuthenticationContext(evenToken : Optional<Swift.String>, context : inout Optional<Windows.Networking.NetworkOperators.IHotspotAuthenticationContext>) throws -> boolean {
+        let __hstr_evenToken = try HString(evenToken!);
         return try withExtendedLifetime(__hstr_evenToken) {
         var __result : boolean = 0;
             var _tmp_out_context: Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIHotspotAuthenticationContext>> = nil;
@@ -3167,8 +3167,8 @@ open class IMobileBroadbandAccountStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNetworkAccountId(pThis, networkAccountId, __presult))
         }
     }
-    public func CreateFromNetworkAccountId(networkAccountId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandAccount> {
-        let __hstr_networkAccountId = try HString(networkAccountId);
+    public func CreateFromNetworkAccountId(networkAccountId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandAccount> {
+        let __hstr_networkAccountId = try HString(networkAccountId!);
         return try withExtendedLifetime(__hstr_networkAccountId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandAccount>> = nil;
         try self._n_CreateFromNetworkAccountId(__hstr_networkAccountId.Raw(), &__result);
@@ -5712,10 +5712,10 @@ open class IMobileBroadbandModemIsolationFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, modemDeviceId, ruleGroupId, __presult))
         }
     }
-    public func Create(modemDeviceId : Swift.String, ruleGroupId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandModemIsolation> {
-        let __hstr_modemDeviceId = try HString(modemDeviceId);
+    public func Create(modemDeviceId : Optional<Swift.String>, ruleGroupId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandModemIsolation> {
+        let __hstr_modemDeviceId = try HString(modemDeviceId!);
         return try withExtendedLifetime(__hstr_modemDeviceId) {
-        let __hstr_ruleGroupId = try HString(ruleGroupId);
+        let __hstr_ruleGroupId = try HString(ruleGroupId!);
         return try withExtendedLifetime(__hstr_ruleGroupId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModemIsolation>> = nil;
         try self._n_Create(__hstr_modemDeviceId.Raw(), __hstr_ruleGroupId.Raw(), &__result);
@@ -5750,8 +5750,8 @@ open class IMobileBroadbandModemStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.FromId(pThis, deviceId, __presult))
         }
     }
-    public func FromId(deviceId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandModem> {
-        let __hstr_deviceId = try HString(deviceId);
+    public func FromId(deviceId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandModem> {
+        let __hstr_deviceId = try HString(deviceId!);
         return try withExtendedLifetime(__hstr_deviceId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIMobileBroadbandModem>> = nil;
         try self._n_FromId(__hstr_deviceId.Raw(), &__result);
@@ -6253,15 +6253,15 @@ open class IMobileBroadbandPin
             try CHECKED(pThis.pointee.lpVtbl.pointee.EnableAsync(pThis, currentPin, __presult))
         }
     }
-    public func EnableAsync(currentPin : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
-        let __hstr_currentPin = try HString(currentPin);
+    public func EnableAsync(currentPin : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
+        let __hstr_currentPin = try HString(currentPin!);
         return try withExtendedLifetime(__hstr_currentPin) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>> = nil;
         try self._n_EnableAsync(__hstr_currentPin.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(consuming: __result);
         }
     }
-    public func Enable(currentPin : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
+    public func Enable(currentPin : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.EnableAsync(currentPin: currentPin)!.get())
@@ -6276,15 +6276,15 @@ open class IMobileBroadbandPin
             try CHECKED(pThis.pointee.lpVtbl.pointee.DisableAsync(pThis, currentPin, __presult))
         }
     }
-    public func DisableAsync(currentPin : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
-        let __hstr_currentPin = try HString(currentPin);
+    public func DisableAsync(currentPin : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
+        let __hstr_currentPin = try HString(currentPin!);
         return try withExtendedLifetime(__hstr_currentPin) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>> = nil;
         try self._n_DisableAsync(__hstr_currentPin.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(consuming: __result);
         }
     }
-    public func Disable(currentPin : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
+    public func Disable(currentPin : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.DisableAsync(currentPin: currentPin)!.get())
@@ -6299,15 +6299,15 @@ open class IMobileBroadbandPin
             try CHECKED(pThis.pointee.lpVtbl.pointee.EnterAsync(pThis, currentPin, __presult))
         }
     }
-    public func EnterAsync(currentPin : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
-        let __hstr_currentPin = try HString(currentPin);
+    public func EnterAsync(currentPin : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
+        let __hstr_currentPin = try HString(currentPin!);
         return try withExtendedLifetime(__hstr_currentPin) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>> = nil;
         try self._n_EnterAsync(__hstr_currentPin.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult(consuming: __result);
         }
     }
-    public func Enter(currentPin : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
+    public func Enter(currentPin : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.EnterAsync(currentPin: currentPin)!.get())
@@ -6322,10 +6322,10 @@ open class IMobileBroadbandPin
             try CHECKED(pThis.pointee.lpVtbl.pointee.ChangeAsync(pThis, currentPin, newPin, __presult))
         }
     }
-    public func ChangeAsync(currentPin : Swift.String, newPin : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
-        let __hstr_currentPin = try HString(currentPin);
+    public func ChangeAsync(currentPin : Optional<Swift.String>, newPin : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
+        let __hstr_currentPin = try HString(currentPin!);
         return try withExtendedLifetime(__hstr_currentPin) {
-        let __hstr_newPin = try HString(newPin);
+        let __hstr_newPin = try HString(newPin!);
         return try withExtendedLifetime(__hstr_newPin) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>> = nil;
         try self._n_ChangeAsync(__hstr_currentPin.Raw(), __hstr_newPin.Raw(), &__result);
@@ -6333,7 +6333,7 @@ open class IMobileBroadbandPin
         }
         }
     }
-    public func Change(currentPin : Swift.String, newPin : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
+    public func Change(currentPin : Optional<Swift.String>, newPin : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ChangeAsync(currentPin: currentPin, newPin: newPin)!.get())
@@ -6348,10 +6348,10 @@ open class IMobileBroadbandPin
             try CHECKED(pThis.pointee.lpVtbl.pointee.UnblockAsync(pThis, pinUnblockKey, newPin, __presult))
         }
     }
-    public func UnblockAsync(pinUnblockKey : Swift.String, newPin : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
-        let __hstr_pinUnblockKey = try HString(pinUnblockKey);
+    public func UnblockAsync(pinUnblockKey : Optional<Swift.String>, newPin : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult> {
+        let __hstr_pinUnblockKey = try HString(pinUnblockKey!);
         return try withExtendedLifetime(__hstr_pinUnblockKey) {
-        let __hstr_newPin = try HString(newPin);
+        let __hstr_newPin = try HString(newPin!);
         return try withExtendedLifetime(__hstr_newPin) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CMobileBroadbandPinOperationResult>> = nil;
         try self._n_UnblockAsync(__hstr_pinUnblockKey.Raw(), __hstr_newPin.Raw(), &__result);
@@ -6359,7 +6359,7 @@ open class IMobileBroadbandPin
         }
         }
     }
-    public func Unblock(pinUnblockKey : Swift.String, newPin : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
+    public func Unblock(pinUnblockKey : Optional<Swift.String>, newPin : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IMobileBroadbandPinOperationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.UnblockAsync(pinUnblockKey: pinUnblockKey, newPin: newPin)!.get())
@@ -7566,8 +7566,8 @@ open class INetworkOperatorTetheringAccessPointConfiguration
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Ssid(pThis, value))
         }
     }
-    public func put_Ssid(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Ssid(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Ssid(__hstr_value.Raw());
         }
@@ -7589,8 +7589,8 @@ open class INetworkOperatorTetheringAccessPointConfiguration
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Passphrase(pThis, value))
         }
     }
-    public func put_Passphrase(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Passphrase(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Passphrase(__hstr_value.Raw());
         }
@@ -7750,8 +7750,8 @@ open class INetworkOperatorTetheringEntitlementCheck
             try CHECKED(pThis.pointee.lpVtbl.pointee.AuthorizeTethering(pThis, allow, entitlementFailureReason))
         }
     }
-    public func AuthorizeTethering(allow : boolean, entitlementFailureReason : Swift.String) throws -> Void {
-        let __hstr_entitlementFailureReason = try HString(entitlementFailureReason);
+    public func AuthorizeTethering(allow : boolean, entitlementFailureReason : Optional<Swift.String>) throws -> Void {
+        let __hstr_entitlementFailureReason = try HString(entitlementFailureReason!);
         return try withExtendedLifetime(__hstr_entitlementFailureReason) {
         try self._n_AuthorizeTethering(allow, __hstr_entitlementFailureReason.Raw());
         }
@@ -7901,8 +7901,8 @@ open class INetworkOperatorTetheringManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTetheringCapability(pThis, networkAccountId, __presult))
         }
     }
-    public func GetTetheringCapability(networkAccountId : Swift.String) throws -> Windows.Networking.NetworkOperators.TetheringCapability {
-        let __hstr_networkAccountId = try HString(networkAccountId);
+    public func GetTetheringCapability(networkAccountId : Optional<Swift.String>) throws -> Windows.Networking.NetworkOperators.TetheringCapability {
+        let __hstr_networkAccountId = try HString(networkAccountId!);
         return try withExtendedLifetime(__hstr_networkAccountId) {
         var __result : _q_CWindows_CNetworking_CNetworkOperators_CTetheringCapability = _q_CWindows_CNetworking_CNetworkOperators_CTetheringCapability_Enabled;
         try self._n_GetTetheringCapability(__hstr_networkAccountId.Raw(), &__result);
@@ -7915,8 +7915,8 @@ open class INetworkOperatorTetheringManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNetworkAccountId(pThis, networkAccountId, __presult))
         }
     }
-    public func CreateFromNetworkAccountId(networkAccountId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager> {
-        let __hstr_networkAccountId = try HString(networkAccountId);
+    public func CreateFromNetworkAccountId(networkAccountId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.INetworkOperatorTetheringManager> {
+        let __hstr_networkAccountId = try HString(networkAccountId!);
         return try withExtendedLifetime(__hstr_networkAccountId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CINetworkOperatorTetheringManager>> = nil;
         try self._n_CreateFromNetworkAccountId(__hstr_networkAccountId.Raw(), &__result);
@@ -8183,15 +8183,15 @@ open class IProvisioningAgent
             try CHECKED(pThis.pointee.lpVtbl.pointee.ProvisionFromXmlDocumentAsync(pThis, provisioningXmlDocument, __presult))
         }
     }
-    public func ProvisionFromXmlDocumentAsync(provisioningXmlDocument : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults> {
-        let __hstr_provisioningXmlDocument = try HString(provisioningXmlDocument);
+    public func ProvisionFromXmlDocumentAsync(provisioningXmlDocument : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults> {
+        let __hstr_provisioningXmlDocument = try HString(provisioningXmlDocument!);
         return try withExtendedLifetime(__hstr_provisioningXmlDocument) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults>> = nil;
         try self._n_ProvisionFromXmlDocumentAsync(__hstr_provisioningXmlDocument.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CNetworkOperators_CProvisionFromXmlDocumentResults(consuming: __result);
         }
     }
-    public func ProvisionFromXmlDocument(provisioningXmlDocument : Swift.String) async throws -> Optional<Windows.Networking.NetworkOperators.IProvisionFromXmlDocumentResults> {
+    public func ProvisionFromXmlDocument(provisioningXmlDocument : Optional<Swift.String>) async throws -> Optional<Windows.Networking.NetworkOperators.IProvisionFromXmlDocumentResults> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ProvisionFromXmlDocumentAsync(provisioningXmlDocument: provisioningXmlDocument)!.get())
@@ -8206,8 +8206,8 @@ open class IProvisioningAgent
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetProvisionedProfile(pThis, mediaType, profileName, __presult))
         }
     }
-    public func GetProvisionedProfile(mediaType : Windows.Networking.NetworkOperators.ProfileMediaType, profileName : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IProvisionedProfile> {
-        let __hstr_profileName = try HString(profileName);
+    public func GetProvisionedProfile(mediaType : Windows.Networking.NetworkOperators.ProfileMediaType, profileName : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IProvisionedProfile> {
+        let __hstr_profileName = try HString(profileName!);
         return try withExtendedLifetime(__hstr_profileName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIProvisionedProfile>> = nil;
         try self._n_GetProvisionedProfile(mediaType, __hstr_profileName.Raw(), &__result);
@@ -8230,8 +8230,8 @@ open class IProvisioningAgentStaticMethods
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNetworkAccountId(pThis, networkAccountId, __presult))
         }
     }
-    public func CreateFromNetworkAccountId(networkAccountId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IProvisioningAgent> {
-        let __hstr_networkAccountId = try HString(networkAccountId);
+    public func CreateFromNetworkAccountId(networkAccountId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IProvisioningAgent> {
+        let __hstr_networkAccountId = try HString(networkAccountId!);
         return try withExtendedLifetime(__hstr_networkAccountId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIProvisioningAgent>> = nil;
         try self._n_CreateFromNetworkAccountId(__hstr_networkAccountId.Raw(), &__result);
@@ -8274,8 +8274,8 @@ open class ITetheringEntitlementCheckTriggerDetails
             try CHECKED(pThis.pointee.lpVtbl.pointee.DenyTethering(pThis, entitlementFailureReason))
         }
     }
-    public func DenyTethering(entitlementFailureReason : Swift.String) throws -> Void {
-        let __hstr_entitlementFailureReason = try HString(entitlementFailureReason);
+    public func DenyTethering(entitlementFailureReason : Optional<Swift.String>) throws -> Void {
+        let __hstr_entitlementFailureReason = try HString(entitlementFailureReason!);
         return try withExtendedLifetime(__hstr_entitlementFailureReason) {
         try self._n_DenyTethering(__hstr_entitlementFailureReason.Raw());
         }
@@ -8353,8 +8353,8 @@ open class IUssdMessage
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_PayloadAsText(pThis, value))
         }
     }
-    public func put_PayloadAsText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_PayloadAsText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_PayloadAsText(__hstr_value.Raw());
         }
@@ -8386,8 +8386,8 @@ open class IUssdMessageFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateMessage(pThis, messageText, __presult))
         }
     }
-    public func CreateMessage(messageText : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IUssdMessage> {
-        let __hstr_messageText = try HString(messageText);
+    public func CreateMessage(messageText : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IUssdMessage> {
+        let __hstr_messageText = try HString(messageText!);
         return try withExtendedLifetime(__hstr_messageText) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIUssdMessage>> = nil;
         try self._n_CreateMessage(__hstr_messageText.Raw(), &__result);
@@ -8491,8 +8491,8 @@ open class IUssdSessionStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNetworkAccountId(pThis, networkAccountId, __presult))
         }
     }
-    public func CreateFromNetworkAccountId(networkAccountId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IUssdSession> {
-        let __hstr_networkAccountId = try HString(networkAccountId);
+    public func CreateFromNetworkAccountId(networkAccountId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IUssdSession> {
+        let __hstr_networkAccountId = try HString(networkAccountId!);
         return try withExtendedLifetime(__hstr_networkAccountId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIUssdSession>> = nil;
         try self._n_CreateFromNetworkAccountId(__hstr_networkAccountId.Raw(), &__result);
@@ -8505,8 +8505,8 @@ open class IUssdSessionStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromNetworkInterfaceId(pThis, networkInterfaceId, __presult))
         }
     }
-    public func CreateFromNetworkInterfaceId(networkInterfaceId : Swift.String) throws -> Optional<Windows.Networking.NetworkOperators.IUssdSession> {
-        let __hstr_networkInterfaceId = try HString(networkInterfaceId);
+    public func CreateFromNetworkInterfaceId(networkInterfaceId : Optional<Swift.String>) throws -> Optional<Windows.Networking.NetworkOperators.IUssdSession> {
+        let __hstr_networkInterfaceId = try HString(networkInterfaceId!);
         return try withExtendedLifetime(__hstr_networkInterfaceId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CNetworkOperators_CIUssdSession>> = nil;
         try self._n_CreateFromNetworkInterfaceId(__hstr_networkInterfaceId.Raw(), &__result);

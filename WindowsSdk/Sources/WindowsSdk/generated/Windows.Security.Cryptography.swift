@@ -128,8 +128,8 @@ open class ICryptographicBufferStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.DecodeFromHexString(pThis, value, __presult))
         }
     }
-    public func DecodeFromHexString(value : Swift.String) throws -> Optional<Windows.Storage.Streams.IBuffer> {
-        let __hstr_value = try HString(value);
+    public func DecodeFromHexString(value : Optional<Swift.String>) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
         try self._n_DecodeFromHexString(__hstr_value.Raw(), &__result);
@@ -153,8 +153,8 @@ open class ICryptographicBufferStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.DecodeFromBase64String(pThis, value, __presult))
         }
     }
-    public func DecodeFromBase64String(value : Swift.String) throws -> Optional<Windows.Storage.Streams.IBuffer> {
-        let __hstr_value = try HString(value);
+    public func DecodeFromBase64String(value : Optional<Swift.String>) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
         try self._n_DecodeFromBase64String(__hstr_value.Raw(), &__result);
@@ -178,8 +178,8 @@ open class ICryptographicBufferStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertStringToBinary(pThis, value, encoding, __presult))
         }
     }
-    public func ConvertStringToBinary(value : Swift.String, encoding : Windows.Security.Cryptography.BinaryStringEncoding) throws -> Optional<Windows.Storage.Streams.IBuffer> {
-        let __hstr_value = try HString(value);
+    public func ConvertStringToBinary(value : Optional<Swift.String>, encoding : Windows.Security.Cryptography.BinaryStringEncoding) throws -> Optional<Windows.Storage.Streams.IBuffer> {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
         try self._n_ConvertStringToBinary(__hstr_value.Raw(), encoding, &__result);

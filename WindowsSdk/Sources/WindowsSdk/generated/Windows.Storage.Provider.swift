@@ -238,8 +238,8 @@ open class ICachedFileUpdaterStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetUpdateInformation(pThis, file, contentId, readMode, writeMode, options))
         }
     }
-    public func SetUpdateInformation(file : Optional<Windows.Storage.IStorageFile>, contentId : Swift.String, readMode : Windows.Storage.Provider.ReadActivationMode, writeMode : Windows.Storage.Provider.WriteActivationMode, options : Windows.Storage.Provider.CachedFileOptions) throws -> Void {
-        let __hstr_contentId = try HString(contentId);
+    public func SetUpdateInformation(file : Optional<Windows.Storage.IStorageFile>, contentId : Optional<Swift.String>, readMode : Windows.Storage.Provider.ReadActivationMode, writeMode : Windows.Storage.Provider.WriteActivationMode, options : Windows.Storage.Provider.CachedFileOptions) throws -> Void {
+        let __hstr_contentId = try HString(contentId!);
         return try withExtendedLifetime(__hstr_contentId) {
         try self._n_SetUpdateInformation(RawPointer(file), __hstr_contentId.Raw(), readMode, writeMode, options);
         }
@@ -271,8 +271,8 @@ open class ICachedFileUpdaterUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -505,8 +505,8 @@ open class IFileUpdateRequest2
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_UserInputNeededMessage(pThis, value))
         }
     }
-    public func put_UserInputNeededMessage(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_UserInputNeededMessage(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_UserInputNeededMessage(__hstr_value.Raw());
         }
@@ -621,8 +621,8 @@ open class IStorageProviderError
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FilePath(pThis, value))
         }
     }
-    public func put_FilePath(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_FilePath(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_FilePath(__hstr_value.Raw());
         }
@@ -781,8 +781,8 @@ open class IStorageProviderErrorCommandFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, label, actionUri, __presult))
         }
     }
-    public func CreateInstance(label : Swift.String, actionUri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Storage.Provider.IStorageProviderErrorCommand> {
-        let __hstr_label = try HString(label);
+    public func CreateInstance(label : Optional<Swift.String>, actionUri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Storage.Provider.IStorageProviderErrorCommand> {
+        let __hstr_label = try HString(label!);
         return try withExtendedLifetime(__hstr_label) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderErrorCommand>> = nil;
         try self._n_CreateInstance(__hstr_label.Raw(), RawPointer(actionUri), &__result);
@@ -806,12 +806,12 @@ open class IStorageProviderErrorFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, id, title, message, __presult))
         }
     }
-    public func CreateInstance(id : Swift.String, title : Swift.String, message : Swift.String) throws -> Optional<Windows.Storage.Provider.IStorageProviderError> {
-        let __hstr_id = try HString(id);
+    public func CreateInstance(id : Optional<Swift.String>, title : Optional<Swift.String>, message : Optional<Swift.String>) throws -> Optional<Windows.Storage.Provider.IStorageProviderError> {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
-        let __hstr_title = try HString(title);
+        let __hstr_title = try HString(title!);
         return try withExtendedLifetime(__hstr_title) {
-        let __hstr_message = try HString(message);
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderError>> = nil;
         try self._n_CreateInstance(__hstr_id.Raw(), __hstr_title.Raw(), __hstr_message.Raw(), &__result);
@@ -879,10 +879,10 @@ open class IStorageProviderFileTypeInfoFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, fileExtension, iconResource, __presult))
         }
     }
-    public func CreateInstance(fileExtension : Swift.String, iconResource : Swift.String) throws -> Optional<Windows.Storage.Provider.IStorageProviderFileTypeInfo> {
-        let __hstr_fileExtension = try HString(fileExtension);
+    public func CreateInstance(fileExtension : Optional<Swift.String>, iconResource : Optional<Swift.String>) throws -> Optional<Windows.Storage.Provider.IStorageProviderFileTypeInfo> {
+        let __hstr_fileExtension = try HString(fileExtension!);
         return try withExtendedLifetime(__hstr_fileExtension) {
-        let __hstr_iconResource = try HString(iconResource);
+        let __hstr_iconResource = try HString(iconResource!);
         return try withExtendedLifetime(__hstr_iconResource) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderFileTypeInfo>> = nil;
         try self._n_CreateInstance(__hstr_fileExtension.Raw(), __hstr_iconResource.Raw(), &__result);
@@ -937,8 +937,8 @@ open class IStorageProviderGetContentInfoForPathResult
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentUri(pThis, value))
         }
     }
-    public func put_ContentUri(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ContentUri(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ContentUri(__hstr_value.Raw());
         }
@@ -960,8 +960,8 @@ open class IStorageProviderGetContentInfoForPathResult
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ContentId(pThis, value))
         }
     }
-    public func put_ContentId(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ContentId(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ContentId(__hstr_value.Raw());
         }
@@ -1028,8 +1028,8 @@ open class IStorageProviderGetPathForContentUriResult
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Path(pThis, value))
         }
     }
-    public func put_Path(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Path(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Path(__hstr_value.Raw());
         }
@@ -1110,8 +1110,8 @@ open class IStorageProviderItemProperty
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
     }
-    public func put_Value(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Value(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Value(__hstr_value.Raw());
         }
@@ -1133,8 +1133,8 @@ open class IStorageProviderItemProperty
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IconResource(pThis, value))
         }
     }
-    public func put_IconResource(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_IconResource(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_IconResource(__hstr_value.Raw());
         }
@@ -1212,8 +1212,8 @@ open class IStorageProviderItemPropertyDefinition
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayNameResource(pThis, value))
         }
     }
-    public func put_DisplayNameResource(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DisplayNameResource(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DisplayNameResource(__hstr_value.Raw());
         }
@@ -1303,8 +1303,8 @@ open class IStorageProviderStatusFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance(pThis, state, message, __presult))
         }
     }
-    public func CreateInstance(state : Windows.Storage.Provider.StorageProviderState, message : Swift.String) throws -> Optional<Windows.Storage.Provider.IStorageProviderStatus> {
-        let __hstr_message = try HString(message);
+    public func CreateInstance(state : Windows.Storage.Provider.StorageProviderState, message : Optional<Swift.String>) throws -> Optional<Windows.Storage.Provider.IStorageProviderStatus> {
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderStatus>> = nil;
         try self._n_CreateInstance(state, __hstr_message.Raw(), &__result);
@@ -1317,8 +1317,8 @@ open class IStorageProviderStatusFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstance2(pThis, state, message, errorMessages, __presult))
         }
     }
-    public func CreateInstance2(state : Windows.Storage.Provider.StorageProviderState, message : Swift.String, errorMessages : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderError>) throws -> Optional<Windows.Storage.Provider.IStorageProviderStatus> {
-        let __hstr_message = try HString(message);
+    public func CreateInstance2(state : Windows.Storage.Provider.StorageProviderState, message : Optional<Swift.String>, errorMessages : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CProvider_CStorageProviderError>) throws -> Optional<Windows.Storage.Provider.IStorageProviderStatus> {
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderStatus>> = nil;
         try self._n_CreateInstance2(state, __hstr_message.Raw(), RawPointer(errorMessages), &__result);
@@ -1352,8 +1352,8 @@ open class IStorageProviderSyncRootInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Id(pThis, value))
         }
     }
-    public func put_Id(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Id(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Id(__hstr_value.Raw());
         }
@@ -1415,8 +1415,8 @@ open class IStorageProviderSyncRootInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayNameResource(pThis, value))
         }
     }
-    public func put_DisplayNameResource(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DisplayNameResource(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DisplayNameResource(__hstr_value.Raw());
         }
@@ -1438,8 +1438,8 @@ open class IStorageProviderSyncRootInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_IconResource(pThis, value))
         }
     }
-    public func put_IconResource(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_IconResource(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_IconResource(__hstr_value.Raw());
         }
@@ -1581,8 +1581,8 @@ open class IStorageProviderSyncRootInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Version(pThis, value))
         }
     }
-    public func put_Version(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Version(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Version(__hstr_value.Raw());
         }
@@ -1824,8 +1824,8 @@ open class IStorageProviderSyncRootManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Unregister(pThis, id))
         }
     }
-    public func Unregister(id : Swift.String) throws -> Void {
-        let __hstr_id = try HString(id);
+    public func Unregister(id : Optional<Swift.String>) throws -> Void {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         try self._n_Unregister(__hstr_id.Raw());
         }
@@ -1847,8 +1847,8 @@ open class IStorageProviderSyncRootManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSyncRootInformationForId(pThis, id, __presult))
         }
     }
-    public func GetSyncRootInformationForId(id : Swift.String) throws -> Optional<Windows.Storage.Provider.IStorageProviderSyncRootInfo> {
-        let __hstr_id = try HString(id);
+    public func GetSyncRootInformationForId(id : Optional<Swift.String>) throws -> Optional<Windows.Storage.Provider.IStorageProviderSyncRootInfo> {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CProvider_CIStorageProviderSyncRootInfo>> = nil;
         try self._n_GetSyncRootInformationForId(__hstr_id.Raw(), &__result);

@@ -162,6 +162,12 @@ typedef enum _q_CMicrosoft_CUI_CXaml_CFocusVisualKind
     _q_CMicrosoft_CUI_CXaml_CFocusVisualKind_HighVisibility = 1,
     _q_CMicrosoft_CUI_CXaml_CFocusVisualKind_Reveal = 2,
 } _q_CMicrosoft_CUI_CXaml_CFocusVisualKind;
+typedef enum _q_CMicrosoft_CUI_CXaml_CGridUnitType
+{
+    _q_CMicrosoft_CUI_CXaml_CGridUnitType_Auto = 0,
+    _q_CMicrosoft_CUI_CXaml_CGridUnitType_Pixel = 1,
+    _q_CMicrosoft_CUI_CXaml_CGridUnitType_Star = 2,
+} _q_CMicrosoft_CUI_CXaml_CGridUnitType;
 typedef enum _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment
 {
     _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment_Left = 0,
@@ -384,6 +390,7 @@ typedef enum _q_CMicrosoft_CWindows_CSystem_CPower_CUserPresenceStatus
 // forward decls for value types
 typedef struct _q_CMicrosoft_CUI_CXaml_CCornerRadius _q_CMicrosoft_CUI_CXaml_CCornerRadius;
 typedef struct _q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult _q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult;
+typedef struct _q_CMicrosoft_CUI_CXaml_CGridLength _q_CMicrosoft_CUI_CXaml_CGridLength;
 typedef struct _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition;
 typedef struct _q_CMicrosoft_CUI_CXaml_CThickness _q_CMicrosoft_CUI_CXaml_CThickness;
 // forward decls for interfaces
@@ -413,6 +420,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CICandidateWindowBoundsChangedE
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIChoosingGroupHeaderContainerEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIChoosingGroupHeaderContainerEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIChoosingItemContainerEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIChoosingItemContainerEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContainerContentChangingEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CIContainerContentChangingEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl _q_CMicrosoft_CUI_CXaml_CControls_CIContentControl;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory _q_CMicrosoft_CUI_CXaml_CControls_CIContentControlFactory;
@@ -455,6 +463,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanel _q_CMicrosoft_CUI_CXaml
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanelFactory _q_CMicrosoft_CUI_CXaml_CControls_CIPanelFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics _q_CMicrosoft_CUI_CXaml_CControls_CIPanelStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgs;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgsFactory _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgsFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoom _q_CMicrosoft_CUI_CXaml_CControls_CISemanticZoom;
@@ -739,6 +748,11 @@ struct _q_CMicrosoft_CUI_CXaml_CCornerRadius
 struct _q_CMicrosoft_CUI_CXaml_CData_CLoadMoreItemsResult
 {
     UINT32 Count;
+};
+struct _q_CMicrosoft_CUI_CXaml_CGridLength
+{
+    DOUBLE Value;
+    _q_CMicrosoft_CUI_CXaml_CGridUnitType GridUnitType;
 };
 struct _q_CMicrosoft_CUI_CXaml_CMarkup_CXmlnsDefinition
 {
@@ -1704,17 +1718,33 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* This, TrustLevel* trustLevel);
-    void* unneeded_get_Width;
-    void* unneeded_put_Width;
-    void* unneeded_get_MaxWidth;
-    void* unneeded_put_MaxWidth;
-    void* unneeded_get_MinWidth;
-    void* unneeded_put_MinWidth;
-    void* unneeded_get_ActualWidth;
+    HRESULT (STDMETHODCALLTYPE* get_Width)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CGridLength* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Width)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CGridLength value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxWidth)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaxWidth)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_MinWidth)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MinWidth)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_ActualWidth)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition* pThis, DOUBLE* __pret);
 } _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl;
 struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinition
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_WidthProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaxWidthProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MinWidthProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIColumnDefinitionStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIContainerContentChangingEventArgsVtbl
 {
@@ -2621,17 +2651,33 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* This, TrustLevel* trustLevel);
-    void* unneeded_get_Height;
-    void* unneeded_put_Height;
-    void* unneeded_get_MaxHeight;
-    void* unneeded_put_MaxHeight;
-    void* unneeded_get_MinHeight;
-    void* unneeded_put_MinHeight;
-    void* unneeded_get_ActualHeight;
+    HRESULT (STDMETHODCALLTYPE* get_Height)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CGridLength* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Height)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, _q_CMicrosoft_CUI_CXaml_CGridLength value);
+    HRESULT (STDMETHODCALLTYPE* get_MaxHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MaxHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_MinHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, DOUBLE* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_MinHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, DOUBLE value);
+    HRESULT (STDMETHODCALLTYPE* get_ActualHeight)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition* pThis, DOUBLE* __pret);
 } _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionVtbl;
 struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinition
 {
     _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_HeightProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MaxHeightProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_MinHeightProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIRowDefinitionStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CISelectionChangedEventArgsVtbl
 {

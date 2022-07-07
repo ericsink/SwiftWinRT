@@ -333,8 +333,8 @@ open class IDocumentProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -367,8 +367,8 @@ open class IDocumentProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Comment(pThis, value))
         }
     }
-    public func put_Comment(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Comment(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Comment(__hstr_value.Raw());
         }
@@ -563,8 +563,8 @@ open class IImageProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -608,8 +608,8 @@ open class IImageProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CameraManufacturer(pThis, value))
         }
     }
-    public func put_CameraManufacturer(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CameraManufacturer(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CameraManufacturer(__hstr_value.Raw());
         }
@@ -631,8 +631,8 @@ open class IImageProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CameraModel(pThis, value))
         }
     }
-    public func put_CameraModel(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CameraModel(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CameraModel(__hstr_value.Raw());
         }
@@ -746,8 +746,8 @@ open class IMusicProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Album(pThis, value))
         }
     }
-    public func put_Album(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Album(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Album(__hstr_value.Raw());
         }
@@ -769,8 +769,8 @@ open class IMusicProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Artist(pThis, value))
         }
     }
-    public func put_Artist(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Artist(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Artist(__hstr_value.Raw());
         }
@@ -823,8 +823,8 @@ open class IMusicProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -888,8 +888,8 @@ open class IMusicProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AlbumArtist(pThis, value))
         }
     }
-    public func put_AlbumArtist(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_AlbumArtist(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_AlbumArtist(__hstr_value.Raw());
         }
@@ -933,8 +933,8 @@ open class IMusicProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Subtitle(pThis, value))
         }
     }
-    public func put_Subtitle(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Subtitle(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Subtitle(__hstr_value.Raw());
         }
@@ -967,8 +967,8 @@ open class IMusicProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Publisher(pThis, value))
         }
     }
-    public func put_Publisher(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Publisher(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Publisher(__hstr_value.Raw());
         }
@@ -1431,8 +1431,8 @@ open class IVideoProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -1454,8 +1454,8 @@ open class IVideoProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Subtitle(pThis, value))
         }
     }
-    public func put_Subtitle(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Subtitle(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Subtitle(__hstr_value.Raw());
         }
@@ -1488,8 +1488,8 @@ open class IVideoProperties
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Publisher(pThis, value))
         }
     }
-    public func put_Publisher(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Publisher(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Publisher(__hstr_value.Raw());
         }

@@ -225,8 +225,8 @@ open class IEndpointPair
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LocalServiceName(pThis, value))
         }
     }
-    public func put_LocalServiceName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_LocalServiceName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_LocalServiceName(__hstr_value.Raw());
         }
@@ -268,8 +268,8 @@ open class IEndpointPair
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RemoteServiceName(pThis, value))
         }
     }
-    public func put_RemoteServiceName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_RemoteServiceName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_RemoteServiceName(__hstr_value.Raw());
         }
@@ -311,10 +311,10 @@ open class IEndpointPairFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEndpointPair(pThis, localHostName, localServiceName, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func CreateEndpointPair(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Swift.String, remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<Windows.Networking.IEndpointPair> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func CreateEndpointPair(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Optional<Swift.String>, remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) throws -> Optional<Windows.Networking.IEndpointPair> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CIEndpointPair>> = nil;
         try self._n_CreateEndpointPair(RawPointer(localHostName), __hstr_localServiceName.Raw(), RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), &__result);
@@ -440,8 +440,8 @@ open class IHostNameFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateHostName(pThis, hostName, __presult))
         }
     }
-    public func CreateHostName(hostName : Swift.String) throws -> Optional<Windows.Networking.IHostName> {
-        let __hstr_hostName = try HString(hostName);
+    public func CreateHostName(hostName : Optional<Swift.String>) throws -> Optional<Windows.Networking.IHostName> {
+        let __hstr_hostName = try HString(hostName!);
         return try withExtendedLifetime(__hstr_hostName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CIHostName>> = nil;
         try self._n_CreateHostName(__hstr_hostName.Raw(), &__result);
@@ -464,10 +464,10 @@ open class IHostNameStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Compare(pThis, value1, value2, __presult))
         }
     }
-    public func Compare(value1 : Swift.String, value2 : Swift.String) throws -> Swift.Int32 {
-        let __hstr_value1 = try HString(value1);
+    public func Compare(value1 : Optional<Swift.String>, value2 : Optional<Swift.String>) throws -> Swift.Int32 {
+        let __hstr_value1 = try HString(value1!);
         return try withExtendedLifetime(__hstr_value1) {
-        let __hstr_value2 = try HString(value2);
+        let __hstr_value2 = try HString(value2!);
         return try withExtendedLifetime(__hstr_value2) {
         var __result : INT32 = 0;
         try self._n_Compare(__hstr_value1.Raw(), __hstr_value2.Raw(), &__result);

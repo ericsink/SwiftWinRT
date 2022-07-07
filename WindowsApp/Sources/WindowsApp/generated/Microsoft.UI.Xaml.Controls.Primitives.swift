@@ -1041,8 +1041,8 @@ open class ISelector
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SelectedValuePath(pThis, value))
         }
     }
-    public func put_SelectedValuePath(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_SelectedValuePath(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_SelectedValuePath(__hstr_value.Raw());
         }

@@ -85,8 +85,8 @@ open class IJsonArrayStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Data.Json.IJsonArray> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonArray> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonArray>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -99,8 +99,8 @@ open class IJsonArrayStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, result, __presult))
         }
     }
-    public func TryParse(input : Swift.String, result : inout Optional<Windows.Data.Json.IJsonArray>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, result : inout Optional<Windows.Data.Json.IJsonArray>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_result: Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonArray>> = nil;
@@ -146,8 +146,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedValue(pThis, name, __presult))
         }
     }
-    public func GetNamedValue(name : Swift.String) throws -> Optional<Windows.Data.Json.IJsonValue> {
-        let __hstr_name = try HString(name);
+    public func GetNamedValue(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonValue>> = nil;
         try self._n_GetNamedValue(__hstr_name.Raw(), &__result);
@@ -160,8 +160,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetNamedValue(pThis, name, value))
         }
     }
-    public func SetNamedValue(name : Swift.String, value : Optional<Windows.Data.Json.IJsonValue>) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func SetNamedValue(name : Optional<Swift.String>, value : Optional<Windows.Data.Json.IJsonValue>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         try self._n_SetNamedValue(__hstr_name.Raw(), RawPointer(value));
         }
@@ -172,8 +172,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedObject(pThis, name, __presult))
         }
     }
-    public func GetNamedObject(name : Swift.String) throws -> Optional<Windows.Data.Json.IJsonObject> {
-        let __hstr_name = try HString(name);
+    public func GetNamedObject(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonObject> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonObject>> = nil;
         try self._n_GetNamedObject(__hstr_name.Raw(), &__result);
@@ -186,8 +186,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedArray(pThis, name, __presult))
         }
     }
-    public func GetNamedArray(name : Swift.String) throws -> Optional<Windows.Data.Json.IJsonArray> {
-        let __hstr_name = try HString(name);
+    public func GetNamedArray(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonArray> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonArray>> = nil;
         try self._n_GetNamedArray(__hstr_name.Raw(), &__result);
@@ -200,8 +200,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedString(pThis, name, __presult))
         }
     }
-    public func GetNamedString(name : Swift.String) throws -> Swift.String {
-        let __hstr_name = try HString(name);
+    public func GetNamedString(name : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<HSTRING> = nil;
         try self._n_GetNamedString(__hstr_name.Raw(), &__result);
@@ -214,8 +214,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedNumber(pThis, name, __presult))
         }
     }
-    public func GetNamedNumber(name : Swift.String) throws -> Swift.Double {
-        let __hstr_name = try HString(name);
+    public func GetNamedNumber(name : Optional<Swift.String>) throws -> Swift.Double {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : DOUBLE = 0;
         try self._n_GetNamedNumber(__hstr_name.Raw(), &__result);
@@ -228,8 +228,8 @@ open class IJsonObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedBoolean(pThis, name, __presult))
         }
     }
-    public func GetNamedBoolean(name : Swift.String) throws -> boolean {
-        let __hstr_name = try HString(name);
+    public func GetNamedBoolean(name : Optional<Swift.String>) throws -> boolean {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : boolean = 0;
         try self._n_GetNamedBoolean(__hstr_name.Raw(), &__result);
@@ -252,8 +252,8 @@ open class IJsonObjectStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Data.Json.IJsonObject> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonObject> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonObject>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -266,8 +266,8 @@ open class IJsonObjectStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, result, __presult))
         }
     }
-    public func TryParse(input : Swift.String, result : inout Optional<Windows.Data.Json.IJsonObject>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, result : inout Optional<Windows.Data.Json.IJsonObject>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_result: Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonObject>> = nil;
@@ -292,8 +292,8 @@ open class IJsonObjectWithDefaultValues
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedValueOrDefault(pThis, name, defaultValue, __presult))
         }
     }
-    public func GetNamedValueOrDefault(name : Swift.String, defaultValue : Optional<Windows.Data.Json.IJsonValue>) throws -> Optional<Windows.Data.Json.IJsonValue> {
-        let __hstr_name = try HString(name);
+    public func GetNamedValueOrDefault(name : Optional<Swift.String>, defaultValue : Optional<Windows.Data.Json.IJsonValue>) throws -> Optional<Windows.Data.Json.IJsonValue> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonValue>> = nil;
         try self._n_GetNamedValueOrDefault(__hstr_name.Raw(), RawPointer(defaultValue), &__result);
@@ -306,8 +306,8 @@ open class IJsonObjectWithDefaultValues
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedObjectOrDefault(pThis, name, defaultValue, __presult))
         }
     }
-    public func GetNamedObjectOrDefault(name : Swift.String, defaultValue : Optional<Windows.Data.Json.IJsonObject>) throws -> Optional<Windows.Data.Json.IJsonObject> {
-        let __hstr_name = try HString(name);
+    public func GetNamedObjectOrDefault(name : Optional<Swift.String>, defaultValue : Optional<Windows.Data.Json.IJsonObject>) throws -> Optional<Windows.Data.Json.IJsonObject> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonObject>> = nil;
         try self._n_GetNamedObjectOrDefault(__hstr_name.Raw(), RawPointer(defaultValue), &__result);
@@ -320,10 +320,10 @@ open class IJsonObjectWithDefaultValues
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedStringOrDefault(pThis, name, defaultValue, __presult))
         }
     }
-    public func GetNamedStringOrDefault(name : Swift.String, defaultValue : Swift.String) throws -> Swift.String {
-        let __hstr_name = try HString(name);
+    public func GetNamedStringOrDefault(name : Optional<Swift.String>, defaultValue : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_defaultValue = try HString(defaultValue);
+        let __hstr_defaultValue = try HString(defaultValue!);
         return try withExtendedLifetime(__hstr_defaultValue) {
         var __result : Optional<HSTRING> = nil;
         try self._n_GetNamedStringOrDefault(__hstr_name.Raw(), __hstr_defaultValue.Raw(), &__result);
@@ -337,8 +337,8 @@ open class IJsonObjectWithDefaultValues
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedArrayOrDefault(pThis, name, defaultValue, __presult))
         }
     }
-    public func GetNamedArrayOrDefault(name : Swift.String, defaultValue : Optional<Windows.Data.Json.IJsonArray>) throws -> Optional<Windows.Data.Json.IJsonArray> {
-        let __hstr_name = try HString(name);
+    public func GetNamedArrayOrDefault(name : Optional<Swift.String>, defaultValue : Optional<Windows.Data.Json.IJsonArray>) throws -> Optional<Windows.Data.Json.IJsonArray> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonArray>> = nil;
         try self._n_GetNamedArrayOrDefault(__hstr_name.Raw(), RawPointer(defaultValue), &__result);
@@ -351,8 +351,8 @@ open class IJsonObjectWithDefaultValues
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedNumberOrDefault(pThis, name, defaultValue, __presult))
         }
     }
-    public func GetNamedNumberOrDefault(name : Swift.String, defaultValue : Swift.Double) throws -> Swift.Double {
-        let __hstr_name = try HString(name);
+    public func GetNamedNumberOrDefault(name : Optional<Swift.String>, defaultValue : Swift.Double) throws -> Swift.Double {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : DOUBLE = 0;
         try self._n_GetNamedNumberOrDefault(__hstr_name.Raw(), defaultValue, &__result);
@@ -365,8 +365,8 @@ open class IJsonObjectWithDefaultValues
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedBooleanOrDefault(pThis, name, defaultValue, __presult))
         }
     }
-    public func GetNamedBooleanOrDefault(name : Swift.String, defaultValue : boolean) throws -> boolean {
-        let __hstr_name = try HString(name);
+    public func GetNamedBooleanOrDefault(name : Optional<Swift.String>, defaultValue : boolean) throws -> boolean {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : boolean = 0;
         try self._n_GetNamedBooleanOrDefault(__hstr_name.Raw(), defaultValue, &__result);
@@ -481,8 +481,8 @@ open class IJsonValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.Parse(pThis, input, __presult))
         }
     }
-    public func Parse(input : Swift.String) throws -> Optional<Windows.Data.Json.IJsonValue> {
-        let __hstr_input = try HString(input);
+    public func Parse(input : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonValue>> = nil;
         try self._n_Parse(__hstr_input.Raw(), &__result);
@@ -495,8 +495,8 @@ open class IJsonValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryParse(pThis, input, result, __presult))
         }
     }
-    public func TryParse(input : Swift.String, result : inout Optional<Windows.Data.Json.IJsonValue>) throws -> boolean {
-        let __hstr_input = try HString(input);
+    public func TryParse(input : Optional<Swift.String>, result : inout Optional<Windows.Data.Json.IJsonValue>) throws -> boolean {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : boolean = 0;
             var _tmp_out_result: Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonValue>> = nil;
@@ -533,8 +533,8 @@ open class IJsonValueStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateStringValue(pThis, input, __presult))
         }
     }
-    public func CreateStringValue(input : Swift.String) throws -> Optional<Windows.Data.Json.IJsonValue> {
-        let __hstr_input = try HString(input);
+    public func CreateStringValue(input : Optional<Swift.String>) throws -> Optional<Windows.Data.Json.IJsonValue> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CJson_CIJsonValue>> = nil;
         try self._n_CreateStringValue(__hstr_input.Raw(), &__result);

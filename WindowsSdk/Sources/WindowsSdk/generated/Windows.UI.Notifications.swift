@@ -356,8 +356,8 @@ open class IToastNotification2
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Tag(pThis, value))
         }
     }
-    public func put_Tag(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Tag(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Tag(__hstr_value.Raw());
         }
@@ -379,8 +379,8 @@ open class IToastNotification2
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Group(pThis, value))
         }
     }
-    public func put_Group(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Group(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Group(__hstr_value.Raw());
         }
@@ -478,8 +478,8 @@ open class IToastNotification3
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_RemoteId(pThis, value))
         }
     }
-    public func put_RemoteId(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_RemoteId(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_RemoteId(__hstr_value.Raw());
         }
@@ -669,8 +669,8 @@ open class IToastNotificationManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateToastNotifierWithId(pThis, applicationId, __presult))
         }
     }
-    public func CreateToastNotifierWithId(applicationId : Swift.String) throws -> Optional<Windows.UI.Notifications.IToastNotifier> {
-        let __hstr_applicationId = try HString(applicationId);
+    public func CreateToastNotifierWithId(applicationId : Optional<Swift.String>) throws -> Optional<Windows.UI.Notifications.IToastNotifier> {
+        let __hstr_applicationId = try HString(applicationId!);
         return try withExtendedLifetime(__hstr_applicationId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CUI_CNotifications_CIToastNotifier>> = nil;
         try self._n_CreateToastNotifierWithId(__hstr_applicationId.Raw(), &__result);
@@ -854,10 +854,10 @@ open class IToastNotifier2
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateWithTagAndGroup(pThis, data, tag, group, __presult))
         }
     }
-    public func UpdateWithTagAndGroup(data : Optional<Windows.UI.Notifications.INotificationData>, tag : Swift.String, group : Swift.String) throws -> Windows.UI.Notifications.NotificationUpdateResult {
-        let __hstr_tag = try HString(tag);
+    public func UpdateWithTagAndGroup(data : Optional<Windows.UI.Notifications.INotificationData>, tag : Optional<Swift.String>, group : Optional<Swift.String>) throws -> Windows.UI.Notifications.NotificationUpdateResult {
+        let __hstr_tag = try HString(tag!);
         return try withExtendedLifetime(__hstr_tag) {
-        let __hstr_group = try HString(group);
+        let __hstr_group = try HString(group!);
         return try withExtendedLifetime(__hstr_group) {
         var __result : _q_CWindows_CUI_CNotifications_CNotificationUpdateResult = _q_CWindows_CUI_CNotifications_CNotificationUpdateResult_Succeeded;
         try self._n_UpdateWithTagAndGroup(RawPointer(data), __hstr_tag.Raw(), __hstr_group.Raw(), &__result);
@@ -871,8 +871,8 @@ open class IToastNotifier2
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateWithTag(pThis, data, tag, __presult))
         }
     }
-    public func UpdateWithTag(data : Optional<Windows.UI.Notifications.INotificationData>, tag : Swift.String) throws -> Windows.UI.Notifications.NotificationUpdateResult {
-        let __hstr_tag = try HString(tag);
+    public func UpdateWithTag(data : Optional<Windows.UI.Notifications.INotificationData>, tag : Optional<Swift.String>) throws -> Windows.UI.Notifications.NotificationUpdateResult {
+        let __hstr_tag = try HString(tag!);
         return try withExtendedLifetime(__hstr_tag) {
         var __result : _q_CWindows_CUI_CNotifications_CNotificationUpdateResult = _q_CWindows_CUI_CNotifications_CNotificationUpdateResult_Succeeded;
         try self._n_UpdateWithTag(RawPointer(data), __hstr_tag.Raw(), &__result);

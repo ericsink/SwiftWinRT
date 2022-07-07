@@ -699,8 +699,8 @@ open class ICanvasSvgDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindElementById(pThis, id, __presult))
         }
     }
-    public func FindElementById(id : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgNamedElement> {
-        let __hstr_id = try HString(id);
+    public func FindElementById(id : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgNamedElement> {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement>> = nil;
         try self._n_FindElementById(__hstr_id.Raw(), &__result);
@@ -724,8 +724,8 @@ open class ICanvasSvgDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePaintAttribute(pThis, paintType, color, id, __presult))
         }
     }
-    public func CreatePaintAttribute(paintType : Microsoft.Graphics.Canvas.Svg.CanvasSvgPaintType, color : Windows.UI.Color, id : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgPaintAttribute> {
-        let __hstr_id = try HString(id);
+    public func CreatePaintAttribute(paintType : Microsoft.Graphics.Canvas.Svg.CanvasSvgPaintType, color : Windows.UI.Color, id : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgPaintAttribute> {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgPaintAttribute>> = nil;
         try self._n_CreatePaintAttribute(paintType, color, __hstr_id.Raw(), &__result);
@@ -804,8 +804,8 @@ open class ICanvasSvgDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadElementFromXml(pThis, xmlString, __presult))
         }
     }
-    public func LoadElementFromXml(xmlString : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgNamedElement> {
-        let __hstr_xmlString = try HString(xmlString);
+    public func LoadElementFromXml(xmlString : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgNamedElement> {
+        let __hstr_xmlString = try HString(xmlString!);
         return try withExtendedLifetime(__hstr_xmlString) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement>> = nil;
         try self._n_LoadElementFromXml(__hstr_xmlString.Raw(), &__result);
@@ -880,8 +880,8 @@ open class ICanvasSvgDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromXml(pThis, resourceCreator, xmlString, __presult))
         }
     }
-    public func LoadFromXml(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, xmlString : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgDocument> {
-        let __hstr_xmlString = try HString(xmlString);
+    public func LoadFromXml(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, xmlString : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgDocument> {
+        let __hstr_xmlString = try HString(xmlString!);
         return try withExtendedLifetime(__hstr_xmlString) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgDocument>> = nil;
         try self._n_LoadFromXml(RawPointer(resourceCreator), __hstr_xmlString.Raw(), &__result);
@@ -1002,8 +1002,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateAndAppendNamedChildElement(pThis, childName, __presult))
         }
     }
-    public func CreateAndAppendNamedChildElement(childName : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgNamedElement> {
-        let __hstr_childName = try HString(childName);
+    public func CreateAndAppendNamedChildElement(childName : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgNamedElement> {
+        let __hstr_childName = try HString(childName!);
         return try withExtendedLifetime(__hstr_childName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgNamedElement>> = nil;
         try self._n_CreateAndAppendNamedChildElement(__hstr_childName.Raw(), &__result);
@@ -1016,8 +1016,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateAndAppendTextChildElement(pThis, textContent, __presult))
         }
     }
-    public func CreateAndAppendTextChildElement(textContent : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgTextElement> {
-        let __hstr_textContent = try HString(textContent);
+    public func CreateAndAppendTextChildElement(textContent : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgTextElement> {
+        let __hstr_textContent = try HString(textContent!);
         return try withExtendedLifetime(__hstr_textContent) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgTextElement>> = nil;
         try self._n_CreateAndAppendTextChildElement(__hstr_textContent.Raw(), &__result);
@@ -1117,8 +1117,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.IsAttributeSpecified(pThis, attributeName, __presult))
         }
     }
-    public func IsAttributeSpecified(attributeName : Swift.String) throws -> boolean {
-        let __hstr_attributeName = try HString(attributeName);
+    public func IsAttributeSpecified(attributeName : Optional<Swift.String>) throws -> boolean {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : boolean = 0;
         try self._n_IsAttributeSpecified(__hstr_attributeName.Raw(), &__result);
@@ -1131,8 +1131,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.IsAttributeSpecifiedWithInherhited(pThis, attributeName, inherited, __presult))
         }
     }
-    public func IsAttributeSpecifiedWithInherhited(attributeName : Swift.String, inherited : boolean) throws -> boolean {
-        let __hstr_attributeName = try HString(attributeName);
+    public func IsAttributeSpecifiedWithInherhited(attributeName : Optional<Swift.String>, inherited : boolean) throws -> boolean {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : boolean = 0;
         try self._n_IsAttributeSpecifiedWithInherhited(__hstr_attributeName.Raw(), inherited, &__result);
@@ -1145,8 +1145,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAttribute(pThis, attributeName))
         }
     }
-    public func RemoveAttribute(attributeName : Swift.String) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func RemoveAttribute(attributeName : Optional<Swift.String>) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_RemoveAttribute(__hstr_attributeName.Raw());
         }
@@ -1175,10 +1175,10 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetStringAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetStringAttribute(attributeName : Swift.String, attributeValue : Swift.String) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetStringAttribute(attributeName : Optional<Swift.String>, attributeValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
-        let __hstr_attributeValue = try HString(attributeValue);
+        let __hstr_attributeValue = try HString(attributeValue!);
         return try withExtendedLifetime(__hstr_attributeValue) {
         try self._n_SetStringAttribute(__hstr_attributeName.Raw(), __hstr_attributeValue.Raw());
         }
@@ -1190,8 +1190,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetStringAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetStringAttribute(attributeName : Swift.String) throws -> Swift.String {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetStringAttribute(attributeName : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : Optional<HSTRING> = nil;
         try self._n_GetStringAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1204,8 +1204,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetAttribute(attributeName : Swift.String, attributeValue : Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgAttribute>) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetAttribute(attributeName : Optional<Swift.String>, attributeValue : Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgAttribute>) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetAttribute(__hstr_attributeName.Raw(), RawPointer(attributeValue));
         }
@@ -1216,8 +1216,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetAttribute(attributeName : Swift.String) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgAttribute> {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetAttribute(attributeName : Optional<Swift.String>) throws -> Optional<Microsoft.Graphics.Canvas.Svg.ICanvasSvgAttribute> {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CSvg_CICanvasSvgAttribute>> = nil;
         try self._n_GetAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1230,10 +1230,10 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetIdAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetIdAttribute(attributeName : Swift.String, attributeValue : Swift.String) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetIdAttribute(attributeName : Optional<Swift.String>, attributeValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
-        let __hstr_attributeValue = try HString(attributeValue);
+        let __hstr_attributeValue = try HString(attributeValue!);
         return try withExtendedLifetime(__hstr_attributeValue) {
         try self._n_SetIdAttribute(__hstr_attributeName.Raw(), __hstr_attributeValue.Raw());
         }
@@ -1245,8 +1245,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetIdAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetIdAttribute(attributeName : Swift.String) throws -> Swift.String {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetIdAttribute(attributeName : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : Optional<HSTRING> = nil;
         try self._n_GetIdAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1259,8 +1259,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetFloatAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetFloatAttribute(attributeName : Swift.String, attributeValue : Swift.Float) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetFloatAttribute(attributeName : Optional<Swift.String>, attributeValue : Swift.Float) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetFloatAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1271,8 +1271,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFloatAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetFloatAttribute(attributeName : Swift.String) throws -> Swift.Float {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetFloatAttribute(attributeName : Optional<Swift.String>) throws -> Swift.Float {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : FLOAT = 0;
         try self._n_GetFloatAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1285,8 +1285,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetColorAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetColorAttribute(attributeName : Swift.String, attributeValue : Windows.UI.Color) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetColorAttribute(attributeName : Optional<Swift.String>, attributeValue : Windows.UI.Color) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetColorAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1297,8 +1297,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetColorAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetColorAttribute(attributeName : Swift.String) throws -> Windows.UI.Color {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetColorAttribute(attributeName : Optional<Swift.String>) throws -> Windows.UI.Color {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CWindows_CUI_CColor = _q_CWindows_CUI_CColor(A: 0, R: 0, G: 0, B: 0);
         try self._n_GetColorAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1311,8 +1311,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetFilledRegionDeterminationAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetFilledRegionDeterminationAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Geometry.CanvasFilledRegionDetermination) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetFilledRegionDeterminationAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Geometry.CanvasFilledRegionDetermination) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetFilledRegionDeterminationAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1323,8 +1323,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFilledRegionDeterminationAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetFilledRegionDeterminationAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Geometry.CanvasFilledRegionDetermination {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetFilledRegionDeterminationAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Geometry.CanvasFilledRegionDetermination {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination = _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasFilledRegionDetermination_Alternate;
         try self._n_GetFilledRegionDeterminationAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1337,8 +1337,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetDisplayAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetDisplayAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgDisplay) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetDisplayAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgDisplay) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetDisplayAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1349,8 +1349,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetDisplayAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetDisplayAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgDisplay {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetDisplayAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgDisplay {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgDisplay_Inline;
         try self._n_GetDisplayAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1363,8 +1363,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetOverflowAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetOverflowAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgOverflow) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetOverflowAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgOverflow) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetOverflowAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1375,8 +1375,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetOverflowAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetOverflowAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgOverflow {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetOverflowAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgOverflow {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgOverflow_DoNotClipToViewport;
         try self._n_GetOverflowAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1389,8 +1389,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetCapStyleAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetCapStyleAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Geometry.CanvasCapStyle) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetCapStyleAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Geometry.CanvasCapStyle) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetCapStyleAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1401,8 +1401,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCapStyleAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetCapStyleAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Geometry.CanvasCapStyle {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetCapStyleAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Geometry.CanvasCapStyle {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle = _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasCapStyle_Flat;
         try self._n_GetCapStyleAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1415,8 +1415,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetLineJoinAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetLineJoinAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Geometry.CanvasLineJoin) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetLineJoinAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Geometry.CanvasLineJoin) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetLineJoinAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1427,8 +1427,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetLineJoinAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetLineJoinAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Geometry.CanvasLineJoin {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetLineJoinAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Geometry.CanvasLineJoin {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin = _q_CMicrosoft_CGraphics_CCanvas_CGeometry_CCanvasLineJoin_Miter;
         try self._n_GetLineJoinAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1441,8 +1441,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetVisibilityAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetVisibilityAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgVisibility) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetVisibilityAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgVisibility) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetVisibilityAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1453,8 +1453,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetVisibilityAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetVisibilityAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgVisibility {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetVisibilityAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgVisibility {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgVisibility_Visible;
         try self._n_GetVisibilityAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1467,8 +1467,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetTransformAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetTransformAttribute(attributeName : Swift.String, attributeValue : Windows.Foundation.Numerics.Matrix3x2) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetTransformAttribute(attributeName : Optional<Swift.String>, attributeValue : Windows.Foundation.Numerics.Matrix3x2) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetTransformAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1479,8 +1479,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTransformAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetTransformAttribute(attributeName : Swift.String) throws -> Windows.Foundation.Numerics.Matrix3x2 {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetTransformAttribute(attributeName : Optional<Swift.String>) throws -> Windows.Foundation.Numerics.Matrix3x2 {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CWindows_CFoundation_CNumerics_CMatrix3x2 = _q_CWindows_CFoundation_CNumerics_CMatrix3x2(M11: 0, M12: 0, M21: 0, M22: 0, M31: 0, M32: 0);
         try self._n_GetTransformAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1493,8 +1493,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetUnitsAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetUnitsAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgUnits) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetUnitsAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.Svg.CanvasSvgUnits) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetUnitsAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1505,8 +1505,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetUnitsAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetUnitsAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgUnits {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetUnitsAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgUnits {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgUnits_UserSpaceOnUse;
         try self._n_GetUnitsAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1519,8 +1519,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetEdgeBehaviorAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetEdgeBehaviorAttribute(attributeName : Swift.String, attributeValue : Microsoft.Graphics.Canvas.CanvasEdgeBehavior) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetEdgeBehaviorAttribute(attributeName : Optional<Swift.String>, attributeValue : Microsoft.Graphics.Canvas.CanvasEdgeBehavior) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetEdgeBehaviorAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1531,8 +1531,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEdgeBehaviorAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetEdgeBehaviorAttribute(attributeName : Swift.String) throws -> Microsoft.Graphics.Canvas.CanvasEdgeBehavior {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetEdgeBehaviorAttribute(attributeName : Optional<Swift.String>) throws -> Microsoft.Graphics.Canvas.CanvasEdgeBehavior {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior = _q_CMicrosoft_CGraphics_CCanvas_CCanvasEdgeBehavior_Clamp;
         try self._n_GetEdgeBehaviorAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1545,8 +1545,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetRectangleAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetRectangleAttribute(attributeName : Swift.String, attributeValue : Windows.Foundation.Rect) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetRectangleAttribute(attributeName : Optional<Swift.String>, attributeValue : Windows.Foundation.Rect) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetRectangleAttribute(__hstr_attributeName.Raw(), attributeValue);
         }
@@ -1557,8 +1557,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetRectangleAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetRectangleAttribute(attributeName : Swift.String) throws -> Windows.Foundation.Rect {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetRectangleAttribute(attributeName : Optional<Swift.String>) throws -> Windows.Foundation.Rect {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CWindows_CFoundation_CRect = _q_CWindows_CFoundation_CRect(X: 0, Y: 0, Width: 0, Height: 0);
         try self._n_GetRectangleAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1571,8 +1571,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetLengthAttribute(pThis, attributeName, value, units))
         }
     }
-    public func SetLengthAttribute(attributeName : Swift.String, value : Swift.Float, units : Microsoft.Graphics.Canvas.Svg.CanvasSvgLengthUnits) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetLengthAttribute(attributeName : Optional<Swift.String>, value : Swift.Float, units : Microsoft.Graphics.Canvas.Svg.CanvasSvgLengthUnits) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetLengthAttribute(__hstr_attributeName.Raw(), value, units);
         }
@@ -1583,8 +1583,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetLengthAttribute(pThis, attributeName, units, __presult))
         }
     }
-    public func GetLengthAttribute(attributeName : Swift.String, units : inout Microsoft.Graphics.Canvas.Svg.CanvasSvgLengthUnits) throws -> Swift.Float {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetLengthAttribute(attributeName : Optional<Swift.String>, units : inout Microsoft.Graphics.Canvas.Svg.CanvasSvgLengthUnits) throws -> Swift.Float {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : FLOAT = 0;
             var _tmp_out_units: _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgLengthUnits_Number;
@@ -1599,8 +1599,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAspectRatioAttribute(pThis, attributeName, alignment, meetOrSlice))
         }
     }
-    public func SetAspectRatioAttribute(attributeName : Swift.String, alignment : Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectAlignment, meetOrSlice : Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectScaling) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetAspectRatioAttribute(attributeName : Optional<Swift.String>, alignment : Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectAlignment, meetOrSlice : Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectScaling) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_SetAspectRatioAttribute(__hstr_attributeName.Raw(), alignment, meetOrSlice);
         }
@@ -1611,8 +1611,8 @@ open class ICanvasSvgNamedElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAspectRatioAttribute(pThis, attributeName, meetOrSlice, __presult))
         }
     }
-    public func GetAspectRatioAttribute(attributeName : Swift.String, meetOrSlice : inout Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectScaling) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectAlignment {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetAspectRatioAttribute(attributeName : Optional<Swift.String>, meetOrSlice : inout Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectScaling) throws -> Microsoft.Graphics.Canvas.Svg.CanvasSvgAspectAlignment {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectAlignment_None;
             var _tmp_out_meetOrSlice: _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling = _q_CMicrosoft_CGraphics_CCanvas_CSvg_CCanvasSvgAspectScaling_Meet;
@@ -1728,8 +1728,8 @@ open class ICanvasSvgTextElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
         }
     }
-    public func put_Text(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Text(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Text(__hstr_value.Raw());
         }

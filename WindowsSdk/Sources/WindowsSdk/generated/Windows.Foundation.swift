@@ -868,8 +868,8 @@ open class IUriEscapeStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.UnescapeComponent(pThis, toUnescape, __presult))
         }
     }
-    public func UnescapeComponent(toUnescape : Swift.String) throws -> Swift.String {
-        let __hstr_toUnescape = try HString(toUnescape);
+    public func UnescapeComponent(toUnescape : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_toUnescape = try HString(toUnescape!);
         return try withExtendedLifetime(__hstr_toUnescape) {
         var __result : Optional<HSTRING> = nil;
         try self._n_UnescapeComponent(__hstr_toUnescape.Raw(), &__result);
@@ -882,8 +882,8 @@ open class IUriEscapeStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.EscapeComponent(pThis, toEscape, __presult))
         }
     }
-    public func EscapeComponent(toEscape : Swift.String) throws -> Swift.String {
-        let __hstr_toEscape = try HString(toEscape);
+    public func EscapeComponent(toEscape : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_toEscape = try HString(toEscape!);
         return try withExtendedLifetime(__hstr_toEscape) {
         var __result : Optional<HSTRING> = nil;
         try self._n_EscapeComponent(__hstr_toEscape.Raw(), &__result);
@@ -1082,8 +1082,8 @@ open class IUriRuntimeClass
             try CHECKED(pThis.pointee.lpVtbl.pointee.CombineUri(pThis, relativeUri, __presult))
         }
     }
-    public func CombineUri(relativeUri : Swift.String) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
-        let __hstr_relativeUri = try HString(relativeUri);
+    public func CombineUri(relativeUri : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
+        let __hstr_relativeUri = try HString(relativeUri!);
         return try withExtendedLifetime(__hstr_relativeUri) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
         try self._n_CombineUri(__hstr_relativeUri.Raw(), &__result);
@@ -1182,8 +1182,8 @@ open class IUriRuntimeClassFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateUri(pThis, uri, __presult))
         }
     }
-    public func CreateUri(uri : Swift.String) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
-        let __hstr_uri = try HString(uri);
+    public func CreateUri(uri : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
+        let __hstr_uri = try HString(uri!);
         return try withExtendedLifetime(__hstr_uri) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
         try self._n_CreateUri(__hstr_uri.Raw(), &__result);
@@ -1196,10 +1196,10 @@ open class IUriRuntimeClassFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithRelativeUri(pThis, baseUri, relativeUri, __presult))
         }
     }
-    public func CreateWithRelativeUri(baseUri : Swift.String, relativeUri : Swift.String) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
-        let __hstr_baseUri = try HString(baseUri);
+    public func CreateWithRelativeUri(baseUri : Optional<Swift.String>, relativeUri : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
+        let __hstr_baseUri = try HString(baseUri!);
         return try withExtendedLifetime(__hstr_baseUri) {
-        let __hstr_relativeUri = try HString(relativeUri);
+        let __hstr_relativeUri = try HString(relativeUri!);
         return try withExtendedLifetime(__hstr_relativeUri) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
         try self._n_CreateWithRelativeUri(__hstr_baseUri.Raw(), __hstr_relativeUri.Raw(), &__result);
@@ -1277,8 +1277,8 @@ open class IWwwFormUrlDecoderRuntimeClassFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWwwFormUrlDecoder(pThis, query, __presult))
         }
     }
-    public func CreateWwwFormUrlDecoder(query : Swift.String) throws -> Optional<Windows.Foundation.IWwwFormUrlDecoderRuntimeClass> {
-        let __hstr_query = try HString(query);
+    public func CreateWwwFormUrlDecoder(query : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IWwwFormUrlDecoderRuntimeClass> {
+        let __hstr_query = try HString(query!);
         return try withExtendedLifetime(__hstr_query) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIWwwFormUrlDecoderRuntimeClass>> = nil;
         try self._n_CreateWwwFormUrlDecoder(__hstr_query.Raw(), &__result);

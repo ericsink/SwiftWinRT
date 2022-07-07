@@ -37,12 +37,12 @@ open class ISyndicationAttributeFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationAttribute(pThis, attributeName, attributeNamespace, attributeValue, __presult))
         }
     }
-    public func CreateSyndicationAttribute(attributeName : Swift.String, attributeNamespace : Swift.String, attributeValue : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationAttribute> {
-        let __hstr_attributeName = try HString(attributeName);
+    public func CreateSyndicationAttribute(attributeName : Optional<Swift.String>, attributeNamespace : Optional<Swift.String>, attributeValue : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationAttribute> {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
-        let __hstr_attributeNamespace = try HString(attributeNamespace);
+        let __hstr_attributeNamespace = try HString(attributeNamespace!);
         return try withExtendedLifetime(__hstr_attributeNamespace) {
-        let __hstr_attributeValue = try HString(attributeValue);
+        let __hstr_attributeValue = try HString(attributeValue!);
         return try withExtendedLifetime(__hstr_attributeValue) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationAttribute>> = nil;
         try self._n_CreateSyndicationAttribute(__hstr_attributeName.Raw(), __hstr_attributeNamespace.Raw(), __hstr_attributeValue.Raw(), &__result);
@@ -78,8 +78,8 @@ open class ISyndicationCategory
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Label(pThis, value))
         }
     }
-    public func put_Label(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Label(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Label(__hstr_value.Raw());
         }
@@ -101,8 +101,8 @@ open class ISyndicationCategory
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Scheme(pThis, value))
         }
     }
-    public func put_Scheme(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Scheme(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Scheme(__hstr_value.Raw());
         }
@@ -124,8 +124,8 @@ open class ISyndicationCategory
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Term(pThis, value))
         }
     }
-    public func put_Term(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Term(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Term(__hstr_value.Raw());
         }
@@ -162,8 +162,8 @@ open class ISyndicationCategoryFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationCategory(pThis, term, __presult))
         }
     }
-    public func CreateSyndicationCategory(term : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationCategory> {
-        let __hstr_term = try HString(term);
+    public func CreateSyndicationCategory(term : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationCategory> {
+        let __hstr_term = try HString(term!);
         return try withExtendedLifetime(__hstr_term) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationCategory>> = nil;
         try self._n_CreateSyndicationCategory(__hstr_term.Raw(), &__result);
@@ -176,12 +176,12 @@ open class ISyndicationCategoryFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationCategoryEx(pThis, term, scheme, label, __presult))
         }
     }
-    public func CreateSyndicationCategoryEx(term : Swift.String, scheme : Swift.String, label : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationCategory> {
-        let __hstr_term = try HString(term);
+    public func CreateSyndicationCategoryEx(term : Optional<Swift.String>, scheme : Optional<Swift.String>, label : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationCategory> {
+        let __hstr_term = try HString(term!);
         return try withExtendedLifetime(__hstr_term) {
-        let __hstr_scheme = try HString(scheme);
+        let __hstr_scheme = try HString(scheme!);
         return try withExtendedLifetime(__hstr_scheme) {
-        let __hstr_label = try HString(label);
+        let __hstr_label = try HString(label!);
         return try withExtendedLifetime(__hstr_label) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationCategory>> = nil;
         try self._n_CreateSyndicationCategoryEx(__hstr_term.Raw(), __hstr_scheme.Raw(), __hstr_label.Raw(), &__result);
@@ -306,10 +306,10 @@ open class ISyndicationClient
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetRequestHeader(pThis, name, value))
         }
     }
-    public func SetRequestHeader(name : Swift.String, value : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func SetRequestHeader(name : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_SetRequestHeader(__hstr_name.Raw(), __hstr_value.Raw());
         }
@@ -434,8 +434,8 @@ open class ISyndicationContentFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationContent(pThis, text, type, __presult))
         }
     }
-    public func CreateSyndicationContent(text : Swift.String, type : Windows.Web.Syndication.SyndicationTextType) throws -> Optional<Windows.Web.Syndication.ISyndicationContent> {
-        let __hstr_text = try HString(text);
+    public func CreateSyndicationContent(text : Optional<Swift.String>, type : Windows.Web.Syndication.SyndicationTextType) throws -> Optional<Windows.Web.Syndication.ISyndicationContent> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationContent>> = nil;
         try self._n_CreateSyndicationContent(__hstr_text.Raw(), type, &__result);
@@ -574,8 +574,8 @@ open class ISyndicationFeed
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Id(pThis, value))
         }
     }
-    public func put_Id(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Id(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Id(__hstr_value.Raw());
         }
@@ -763,8 +763,8 @@ open class ISyndicationFeed
             try CHECKED(pThis.pointee.lpVtbl.pointee.Load(pThis, feed))
         }
     }
-    public func Load(feed : Swift.String) throws -> Void {
-        let __hstr_feed = try HString(feed);
+    public func Load(feed : Optional<Swift.String>) throws -> Void {
+        let __hstr_feed = try HString(feed!);
         return try withExtendedLifetime(__hstr_feed) {
         try self._n_Load(__hstr_feed.Raw());
         }
@@ -885,10 +885,10 @@ open class ISyndicationFeedFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationFeed(pThis, title, subtitle, uri, __presult))
         }
     }
-    public func CreateSyndicationFeed(title : Swift.String, subtitle : Swift.String, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Web.Syndication.ISyndicationFeed> {
-        let __hstr_title = try HString(title);
+    public func CreateSyndicationFeed(title : Optional<Swift.String>, subtitle : Optional<Swift.String>, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Web.Syndication.ISyndicationFeed> {
+        let __hstr_title = try HString(title!);
         return try withExtendedLifetime(__hstr_title) {
-        let __hstr_subtitle = try HString(subtitle);
+        let __hstr_subtitle = try HString(subtitle!);
         return try withExtendedLifetime(__hstr_subtitle) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationFeed>> = nil;
         try self._n_CreateSyndicationFeed(__hstr_title.Raw(), __hstr_subtitle.Raw(), RawPointer(uri), &__result);
@@ -923,8 +923,8 @@ open class ISyndicationGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
         }
     }
-    public func put_Text(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Text(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Text(__hstr_value.Raw());
         }
@@ -966,8 +966,8 @@ open class ISyndicationGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Version(pThis, value))
         }
     }
-    public func put_Version(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Version(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Version(__hstr_value.Raw());
         }
@@ -1004,8 +1004,8 @@ open class ISyndicationGeneratorFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationGenerator(pThis, text, __presult))
         }
     }
-    public func CreateSyndicationGenerator(text : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationGenerator> {
-        let __hstr_text = try HString(text);
+    public func CreateSyndicationGenerator(text : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationGenerator> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationGenerator>> = nil;
         try self._n_CreateSyndicationGenerator(__hstr_text.Raw(), &__result);
@@ -1092,8 +1092,8 @@ open class ISyndicationItem
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Id(pThis, value))
         }
     }
-    public func put_Id(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Id(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Id(__hstr_value.Raw());
         }
@@ -1299,8 +1299,8 @@ open class ISyndicationItem
             try CHECKED(pThis.pointee.lpVtbl.pointee.Load(pThis, item))
         }
     }
-    public func Load(item : Swift.String) throws -> Void {
-        let __hstr_item = try HString(item);
+    public func Load(item : Optional<Swift.String>) throws -> Void {
+        let __hstr_item = try HString(item!);
         return try withExtendedLifetime(__hstr_item) {
         try self._n_Load(__hstr_item.Raw());
         }
@@ -1416,8 +1416,8 @@ open class ISyndicationItemFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationItem(pThis, title, content, uri, __presult))
         }
     }
-    public func CreateSyndicationItem(title : Swift.String, content : Optional<Windows.Web.Syndication.ISyndicationContent>, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Web.Syndication.ISyndicationItem> {
-        let __hstr_title = try HString(title);
+    public func CreateSyndicationItem(title : Optional<Swift.String>, content : Optional<Windows.Web.Syndication.ISyndicationContent>, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Web.Syndication.ISyndicationItem> {
+        let __hstr_title = try HString(title!);
         return try withExtendedLifetime(__hstr_title) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationItem>> = nil;
         try self._n_CreateSyndicationItem(__hstr_title.Raw(), RawPointer(content), RawPointer(uri), &__result);
@@ -1471,8 +1471,8 @@ open class ISyndicationLink
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_MediaType(pThis, value))
         }
     }
-    public func put_MediaType(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_MediaType(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_MediaType(__hstr_value.Raw());
         }
@@ -1494,8 +1494,8 @@ open class ISyndicationLink
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Relationship(pThis, value))
         }
     }
-    public func put_Relationship(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Relationship(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Relationship(__hstr_value.Raw());
         }
@@ -1517,8 +1517,8 @@ open class ISyndicationLink
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -1560,8 +1560,8 @@ open class ISyndicationLink
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ResourceLanguage(pThis, value))
         }
     }
-    public func put_ResourceLanguage(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ResourceLanguage(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ResourceLanguage(__hstr_value.Raw());
         }
@@ -1624,12 +1624,12 @@ open class ISyndicationLinkFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationLinkEx(pThis, uri, relationship, title, mediaType, length, __presult))
         }
     }
-    public func CreateSyndicationLinkEx(uri : Optional<Windows.Foundation.IUriRuntimeClass>, relationship : Swift.String, title : Swift.String, mediaType : Swift.String, length : Swift.UInt32) throws -> Optional<Windows.Web.Syndication.ISyndicationLink> {
-        let __hstr_relationship = try HString(relationship);
+    public func CreateSyndicationLinkEx(uri : Optional<Windows.Foundation.IUriRuntimeClass>, relationship : Optional<Swift.String>, title : Optional<Swift.String>, mediaType : Optional<Swift.String>, length : Swift.UInt32) throws -> Optional<Windows.Web.Syndication.ISyndicationLink> {
+        let __hstr_relationship = try HString(relationship!);
         return try withExtendedLifetime(__hstr_relationship) {
-        let __hstr_title = try HString(title);
+        let __hstr_title = try HString(title!);
         return try withExtendedLifetime(__hstr_title) {
-        let __hstr_mediaType = try HString(mediaType);
+        let __hstr_mediaType = try HString(mediaType!);
         return try withExtendedLifetime(__hstr_mediaType) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationLink>> = nil;
         try self._n_CreateSyndicationLinkEx(RawPointer(uri), __hstr_relationship.Raw(), __hstr_title.Raw(), __hstr_mediaType.Raw(), length, &__result);
@@ -1665,8 +1665,8 @@ open class ISyndicationNode
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_NodeName(pThis, value))
         }
     }
-    public func put_NodeName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_NodeName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_NodeName(__hstr_value.Raw());
         }
@@ -1688,8 +1688,8 @@ open class ISyndicationNode
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_NodeNamespace(pThis, value))
         }
     }
-    public func put_NodeNamespace(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_NodeNamespace(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_NodeNamespace(__hstr_value.Raw());
         }
@@ -1711,8 +1711,8 @@ open class ISyndicationNode
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_NodeValue(pThis, value))
         }
     }
-    public func put_NodeValue(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_NodeValue(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_NodeValue(__hstr_value.Raw());
         }
@@ -1734,8 +1734,8 @@ open class ISyndicationNode
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Language(pThis, value))
         }
     }
-    public func put_Language(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Language(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Language(__hstr_value.Raw());
         }
@@ -1845,12 +1845,12 @@ open class ISyndicationNodeFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationNode(pThis, nodeName, nodeNamespace, nodeValue, __presult))
         }
     }
-    public func CreateSyndicationNode(nodeName : Swift.String, nodeNamespace : Swift.String, nodeValue : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationNode> {
-        let __hstr_nodeName = try HString(nodeName);
+    public func CreateSyndicationNode(nodeName : Optional<Swift.String>, nodeNamespace : Optional<Swift.String>, nodeValue : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationNode> {
+        let __hstr_nodeName = try HString(nodeName!);
         return try withExtendedLifetime(__hstr_nodeName) {
-        let __hstr_nodeNamespace = try HString(nodeNamespace);
+        let __hstr_nodeNamespace = try HString(nodeNamespace!);
         return try withExtendedLifetime(__hstr_nodeNamespace) {
-        let __hstr_nodeValue = try HString(nodeValue);
+        let __hstr_nodeValue = try HString(nodeValue!);
         return try withExtendedLifetime(__hstr_nodeValue) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationNode>> = nil;
         try self._n_CreateSyndicationNode(__hstr_nodeName.Raw(), __hstr_nodeNamespace.Raw(), __hstr_nodeValue.Raw(), &__result);
@@ -1886,8 +1886,8 @@ open class ISyndicationPerson
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Email(pThis, value))
         }
     }
-    public func put_Email(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Email(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Email(__hstr_value.Raw());
         }
@@ -1909,8 +1909,8 @@ open class ISyndicationPerson
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Name(pThis, value))
         }
     }
-    public func put_Name(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Name(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Name(__hstr_value.Raw());
         }
@@ -1967,8 +1967,8 @@ open class ISyndicationPersonFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationPerson(pThis, name, __presult))
         }
     }
-    public func CreateSyndicationPerson(name : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationPerson> {
-        let __hstr_name = try HString(name);
+    public func CreateSyndicationPerson(name : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationPerson> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationPerson>> = nil;
         try self._n_CreateSyndicationPerson(__hstr_name.Raw(), &__result);
@@ -1981,10 +1981,10 @@ open class ISyndicationPersonFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationPersonEx(pThis, name, email, uri, __presult))
         }
     }
-    public func CreateSyndicationPersonEx(name : Swift.String, email : Swift.String, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Web.Syndication.ISyndicationPerson> {
-        let __hstr_name = try HString(name);
+    public func CreateSyndicationPersonEx(name : Optional<Swift.String>, email : Optional<Swift.String>, uri : Optional<Windows.Foundation.IUriRuntimeClass>) throws -> Optional<Windows.Web.Syndication.ISyndicationPerson> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_email = try HString(email);
+        let __hstr_email = try HString(email!);
         return try withExtendedLifetime(__hstr_email) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationPerson>> = nil;
         try self._n_CreateSyndicationPersonEx(__hstr_name.Raw(), __hstr_email.Raw(), RawPointer(uri), &__result);
@@ -2019,8 +2019,8 @@ open class ISyndicationText
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
         }
     }
-    public func put_Text(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Text(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Text(__hstr_value.Raw());
         }
@@ -2042,8 +2042,8 @@ open class ISyndicationText
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Type(pThis, value))
         }
     }
-    public func put_Type(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Type(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Type(__hstr_value.Raw());
         }
@@ -2100,8 +2100,8 @@ open class ISyndicationTextFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationText(pThis, text, __presult))
         }
     }
-    public func CreateSyndicationText(text : Swift.String) throws -> Optional<Windows.Web.Syndication.ISyndicationText> {
-        let __hstr_text = try HString(text);
+    public func CreateSyndicationText(text : Optional<Swift.String>) throws -> Optional<Windows.Web.Syndication.ISyndicationText> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationText>> = nil;
         try self._n_CreateSyndicationText(__hstr_text.Raw(), &__result);
@@ -2114,8 +2114,8 @@ open class ISyndicationTextFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateSyndicationTextEx(pThis, text, type, __presult))
         }
     }
-    public func CreateSyndicationTextEx(text : Swift.String, type : Windows.Web.Syndication.SyndicationTextType) throws -> Optional<Windows.Web.Syndication.ISyndicationText> {
-        let __hstr_text = try HString(text);
+    public func CreateSyndicationTextEx(text : Optional<Swift.String>, type : Windows.Web.Syndication.SyndicationTextType) throws -> Optional<Windows.Web.Syndication.ISyndicationText> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CWeb_CSyndication_CISyndicationText>> = nil;
         try self._n_CreateSyndicationTextEx(__hstr_text.Raw(), type, &__result);

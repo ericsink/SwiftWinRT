@@ -31,8 +31,8 @@ open class IGraphicsEffect
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Name(pThis, name))
         }
     }
-    public func put_Name(name : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func put_Name(name : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         try self._n_put_Name(__hstr_name.Raw());
         }

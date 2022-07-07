@@ -142,8 +142,8 @@ open class IXboxLiveDeviceAddressStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromSnapshotBase64(pThis, base64, __presult))
         }
     }
-    public func CreateFromSnapshotBase64(base64 : Swift.String) throws -> Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress> {
-        let __hstr_base64 = try HString(base64);
+    public func CreateFromSnapshotBase64(base64 : Optional<Swift.String>) throws -> Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress> {
+        let __hstr_base64 = try HString(base64!);
         return try withExtendedLifetime(__hstr_base64) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveDeviceAddress>> = nil;
         try self._n_CreateFromSnapshotBase64(__hstr_base64.Raw(), &__result);
@@ -522,10 +522,10 @@ open class IXboxLiveEndpointPairStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindEndpointPairByHostNamesAndPorts(pThis, localHostName, localPort, remoteHostName, remotePort, __presult))
         }
     }
-    public func FindEndpointPairByHostNamesAndPorts(localHostName : Optional<Windows.Networking.IHostName>, localPort : Swift.String, remoteHostName : Optional<Windows.Networking.IHostName>, remotePort : Swift.String) throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPair> {
-        let __hstr_localPort = try HString(localPort);
+    public func FindEndpointPairByHostNamesAndPorts(localHostName : Optional<Windows.Networking.IHostName>, localPort : Optional<Swift.String>, remoteHostName : Optional<Windows.Networking.IHostName>, remotePort : Optional<Swift.String>) throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPair> {
+        let __hstr_localPort = try HString(localPort!);
         return try withExtendedLifetime(__hstr_localPort) {
-        let __hstr_remotePort = try HString(remotePort);
+        let __hstr_remotePort = try HString(remotePort!);
         return try withExtendedLifetime(__hstr_remotePort) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPair>> = nil;
         try self._n_FindEndpointPairByHostNamesAndPorts(RawPointer(localHostName), __hstr_localPort.Raw(), RawPointer(remoteHostName), __hstr_remotePort.Raw(), &__result);
@@ -609,10 +609,10 @@ open class IXboxLiveEndpointPairTemplate
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEndpointPairForPortsDefaultAsync(pThis, deviceAddress, initiatorPort, acceptorPort, __presult))
         }
     }
-    public func CreateEndpointPairForPortsDefaultAsync(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Swift.String, acceptorPort : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult> {
-        let __hstr_initiatorPort = try HString(initiatorPort);
+    public func CreateEndpointPairForPortsDefaultAsync(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Optional<Swift.String>, acceptorPort : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult> {
+        let __hstr_initiatorPort = try HString(initiatorPort!);
         return try withExtendedLifetime(__hstr_initiatorPort) {
-        let __hstr_acceptorPort = try HString(acceptorPort);
+        let __hstr_acceptorPort = try HString(acceptorPort!);
         return try withExtendedLifetime(__hstr_acceptorPort) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult>> = nil;
         try self._n_CreateEndpointPairForPortsDefaultAsync(RawPointer(deviceAddress), __hstr_initiatorPort.Raw(), __hstr_acceptorPort.Raw(), &__result);
@@ -620,7 +620,7 @@ open class IXboxLiveEndpointPairTemplate
         }
         }
     }
-    public func CreateEndpointPairForPortsDefault(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Swift.String, acceptorPort : Swift.String) async throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult> {
+    public func CreateEndpointPairForPortsDefault(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Optional<Swift.String>, acceptorPort : Optional<Swift.String>) async throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateEndpointPairForPortsDefaultAsync(deviceAddress: deviceAddress, initiatorPort: initiatorPort, acceptorPort: acceptorPort)!.get())
@@ -635,10 +635,10 @@ open class IXboxLiveEndpointPairTemplate
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEndpointPairForPortsWithBehaviorsAsync(pThis, deviceAddress, initiatorPort, acceptorPort, behaviors, __presult))
         }
     }
-    public func CreateEndpointPairForPortsWithBehaviorsAsync(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Swift.String, acceptorPort : Swift.String, behaviors : Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult> {
-        let __hstr_initiatorPort = try HString(initiatorPort);
+    public func CreateEndpointPairForPortsWithBehaviorsAsync(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Optional<Swift.String>, acceptorPort : Optional<Swift.String>, behaviors : Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult> {
+        let __hstr_initiatorPort = try HString(initiatorPort!);
         return try withExtendedLifetime(__hstr_initiatorPort) {
-        let __hstr_acceptorPort = try HString(acceptorPort);
+        let __hstr_acceptorPort = try HString(acceptorPort!);
         return try withExtendedLifetime(__hstr_acceptorPort) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CXboxLive_CXboxLiveEndpointPairCreationResult>> = nil;
         try self._n_CreateEndpointPairForPortsWithBehaviorsAsync(RawPointer(deviceAddress), __hstr_initiatorPort.Raw(), __hstr_acceptorPort.Raw(), behaviors, &__result);
@@ -646,7 +646,7 @@ open class IXboxLiveEndpointPairTemplate
         }
         }
     }
-    public func CreateEndpointPairForPortsWithBehaviors(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Swift.String, acceptorPort : Swift.String, behaviors : Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors) async throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult> {
+    public func CreateEndpointPairForPortsWithBehaviors(deviceAddress : Optional<Windows.Networking.XboxLive.IXboxLiveDeviceAddress>, initiatorPort : Optional<Swift.String>, acceptorPort : Optional<Swift.String>, behaviors : Windows.Networking.XboxLive.XboxLiveEndpointPairCreationBehaviors) async throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPairCreationResult> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateEndpointPairForPortsWithBehaviorsAsync(deviceAddress: deviceAddress, initiatorPort: initiatorPort, acceptorPort: acceptorPort, behaviors: behaviors)!.get())
@@ -783,8 +783,8 @@ open class IXboxLiveEndpointPairTemplateStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTemplateByName(pThis, name, __presult))
         }
     }
-    public func GetTemplateByName(name : Swift.String) throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate> {
-        let __hstr_name = try HString(name);
+    public func GetTemplateByName(name : Optional<Swift.String>) throws -> Optional<Windows.Networking.XboxLive.IXboxLiveEndpointPairTemplate> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CXboxLive_CIXboxLiveEndpointPairTemplate>> = nil;
         try self._n_GetTemplateByName(__hstr_name.Raw(), &__result);

@@ -1519,8 +1519,8 @@ open class IDataWriter
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteString(pThis, value, __presult))
         }
     }
-    public func WriteString(value : Swift.String) throws -> Swift.UInt32 {
-        let __hstr_value = try HString(value);
+    public func WriteString(value : Optional<Swift.String>) throws -> Swift.UInt32 {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : UINT32 = 0;
         try self._n_WriteString(__hstr_value.Raw(), &__result);
@@ -1533,8 +1533,8 @@ open class IDataWriter
             try CHECKED(pThis.pointee.lpVtbl.pointee.MeasureString(pThis, value, __presult))
         }
     }
-    public func MeasureString(value : Swift.String) throws -> Swift.UInt32 {
-        let __hstr_value = try HString(value);
+    public func MeasureString(value : Optional<Swift.String>) throws -> Swift.UInt32 {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : UINT32 = 0;
         try self._n_MeasureString(__hstr_value.Raw(), &__result);
@@ -1647,15 +1647,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenAsync(pThis, filePath, accessMode, __presult))
         }
     }
-    public func OpenAsync(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenAsync(filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
         try self._n_OpenAsync(__hstr_filePath.Raw(), accessMode, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
         }
     }
-    public func Open(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+    public func Open(filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenAsync(filePath: filePath, accessMode: accessMode)!.get())
@@ -1670,15 +1670,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenWithOptionsAsync(pThis, filePath, accessMode, sharingOptions, openDisposition, __presult))
         }
     }
-    public func OpenWithOptionsAsync(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenWithOptionsAsync(filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
         try self._n_OpenWithOptionsAsync(__hstr_filePath.Raw(), accessMode, sharingOptions, openDisposition, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
         }
     }
-    public func OpenWithOptions(filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+    public func OpenWithOptions(filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenWithOptionsAsync(filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition)!.get())
@@ -1693,15 +1693,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteAsync(pThis, filePath, __presult))
         }
     }
-    public func OpenTransactedWriteAsync(filePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenTransactedWriteAsync(filePath : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
         try self._n_OpenTransactedWriteAsync(__hstr_filePath.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
         }
     }
-    public func OpenTransactedWrite(filePath : Swift.String) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+    public func OpenTransactedWrite(filePath : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenTransactedWriteAsync(filePath: filePath)!.get())
@@ -1716,15 +1716,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteWithOptionsAsync(pThis, filePath, openOptions, openDisposition, __presult))
         }
     }
-    public func OpenTransactedWriteWithOptionsAsync(filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenTransactedWriteWithOptionsAsync(filePath : Optional<Swift.String>, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
         try self._n_OpenTransactedWriteWithOptionsAsync(__hstr_filePath.Raw(), openOptions, openDisposition, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
         }
     }
-    public func OpenTransactedWriteWithOptions(filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+    public func OpenTransactedWriteWithOptions(filePath : Optional<Swift.String>, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenTransactedWriteWithOptionsAsync(filePath: filePath, openOptions: openOptions, openDisposition: openDisposition)!.get())
@@ -1739,15 +1739,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenForUserAsync(pThis, user, filePath, accessMode, __presult))
         }
     }
-    public func OpenForUserAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenForUserAsync(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
         try self._n_OpenForUserAsync(RawPointer(user), __hstr_filePath.Raw(), accessMode, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
         }
     }
-    public func OpenForUser(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+    public func OpenForUser(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenForUserAsync(user: user, filePath: filePath, accessMode: accessMode)!.get())
@@ -1762,15 +1762,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenForUserWithOptionsAsync(pThis, user, filePath, accessMode, sharingOptions, openDisposition, __presult))
         }
     }
-    public func OpenForUserWithOptionsAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenForUserWithOptionsAsync(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream>> = nil;
         try self._n_OpenForUserWithOptionsAsync(RawPointer(user), __hstr_filePath.Raw(), accessMode, sharingOptions, openDisposition, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIRandomAccessStream(consuming: __result);
         }
     }
-    public func OpenForUserWithOptions(user : Optional<Windows.System.IUser>, filePath : Swift.String, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
+    public func OpenForUserWithOptions(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>, accessMode : Windows.Storage.FileAccessMode, sharingOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.Streams.IRandomAccessStream> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenForUserWithOptionsAsync(user: user, filePath: filePath, accessMode: accessMode, sharingOptions: sharingOptions, openDisposition: openDisposition)!.get())
@@ -1785,15 +1785,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteForUserAsync(pThis, user, filePath, __presult))
         }
     }
-    public func OpenTransactedWriteForUserAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenTransactedWriteForUserAsync(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
         try self._n_OpenTransactedWriteForUserAsync(RawPointer(user), __hstr_filePath.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
         }
     }
-    public func OpenTransactedWriteForUser(user : Optional<Windows.System.IUser>, filePath : Swift.String) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+    public func OpenTransactedWriteForUser(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenTransactedWriteForUserAsync(user: user, filePath: filePath)!.get())
@@ -1808,15 +1808,15 @@ open class IFileRandomAccessStreamStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.OpenTransactedWriteForUserWithOptionsAsync(pThis, user, filePath, openOptions, openDisposition, __presult))
         }
     }
-    public func OpenTransactedWriteForUserWithOptionsAsync(user : Optional<Windows.System.IUser>, filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
-        let __hstr_filePath = try HString(filePath);
+    public func OpenTransactedWriteForUserWithOptionsAsync(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction> {
+        let __hstr_filePath = try HString(filePath!);
         return try withExtendedLifetime(__hstr_filePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction>> = nil;
         try self._n_OpenTransactedWriteForUserWithOptionsAsync(RawPointer(user), __hstr_filePath.Raw(), openOptions, openDisposition, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageStreamTransaction(consuming: __result);
         }
     }
-    public func OpenTransactedWriteForUserWithOptions(user : Optional<Windows.System.IUser>, filePath : Swift.String, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
+    public func OpenTransactedWriteForUserWithOptions(user : Optional<Windows.System.IUser>, filePath : Optional<Swift.String>, openOptions : Windows.Storage.StorageOpenOptions, openDisposition : Windows.Storage.Streams.FileOpenDisposition) async throws -> Optional<Windows.Storage.IStorageStreamTransaction> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.OpenTransactedWriteForUserWithOptionsAsync(user: user, filePath: filePath, openOptions: openOptions, openDisposition: openDisposition)!.get())

@@ -608,8 +608,8 @@ open class IBrushOverrides
             try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfoOverride(pThis, propertyName, animationPropertyInfo))
         }
     }
-    public func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
-        let __hstr_propertyName = try HString(propertyName);
+    public func PopulatePropertyInfoOverride(propertyName : Optional<Swift.String>, animationPropertyInfo : Optional<Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
+        let __hstr_propertyName = try HString(propertyName!);
         return try withExtendedLifetime(__hstr_propertyName) {
         try self._n_PopulatePropertyInfoOverride(__hstr_propertyName.Raw(), RawPointer(animationPropertyInfo));
         }
@@ -734,8 +734,8 @@ open class IFontFamilyFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateInstanceWithName(pThis, familyName, baseInterface, innerInterface, __presult))
         }
     }
-    public func CreateInstanceWithName(familyName : Swift.String, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Media.IFontFamily> {
-        let __hstr_familyName = try HString(familyName);
+    public func CreateInstanceWithName(familyName : Optional<Swift.String>, baseInterface : Optional<WinRT.IInspectable>, innerInterface : inout Optional<WinRT.IInspectable>) throws -> Optional<Microsoft.UI.Xaml.Media.IFontFamily> {
+        let __hstr_familyName = try HString(familyName!);
         return try withExtendedLifetime(__hstr_familyName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIFontFamily>> = nil;
             var _tmp_out_innerInterface: Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;

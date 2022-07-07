@@ -400,8 +400,8 @@ open class IXamlMetadataProvider
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetXamlTypeByFullName(pThis, fullName, __presult))
         }
     }
-    public func GetXamlTypeByFullName(fullName : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlType> {
-        let __hstr_fullName = try HString(fullName);
+    public func GetXamlTypeByFullName(fullName : Optional<Swift.String>) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlType> {
+        let __hstr_fullName = try HString(fullName!);
         return try withExtendedLifetime(__hstr_fullName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlType>> = nil;
         try self._n_GetXamlTypeByFullName(__hstr_fullName.Raw(), &__result);
@@ -590,8 +590,8 @@ open class IXamlType
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFromString(pThis, value, __presult))
         }
     }
-    public func CreateFromString(value : Swift.String) throws -> Optional<WinRT.IInspectable> {
-        let __hstr_value = try HString(value);
+    public func CreateFromString(value : Optional<Swift.String>) throws -> Optional<WinRT.IInspectable> {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
         try self._n_CreateFromString(__hstr_value.Raw(), &__result);
@@ -604,8 +604,8 @@ open class IXamlType
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMember(pThis, name, __presult))
         }
     }
-    public func GetMember(name : Swift.String) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlMember> {
-        let __hstr_name = try HString(name);
+    public func GetMember(name : Optional<Swift.String>) throws -> Optional<Microsoft.UI.Xaml.Markup.IXamlMember> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMarkup_CIXamlMember>> = nil;
         try self._n_GetMember(__hstr_name.Raw(), &__result);

@@ -111,15 +111,15 @@ open class IPushNotificationChannelManagerForUser
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForApplicationAsyncWithId(pThis, applicationId, __presult))
         }
     }
-    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
-        let __hstr_applicationId = try HString(applicationId);
+    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_applicationId = try HString(applicationId!);
         return try withExtendedLifetime(__hstr_applicationId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
         try self._n_CreatePushNotificationChannelForApplicationAsyncWithId(__hstr_applicationId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
         }
     }
-    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreatePushNotificationChannelForApplicationAsyncWithId(applicationId: applicationId)!.get())
@@ -134,15 +134,15 @@ open class IPushNotificationChannelManagerForUser
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForSecondaryTileAsync(pThis, tileId, __presult))
         }
     }
-    public func CreatePushNotificationChannelForSecondaryTileAsync(tileId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
-        let __hstr_tileId = try HString(tileId);
+    public func CreatePushNotificationChannelForSecondaryTileAsync(tileId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_tileId = try HString(tileId!);
         return try withExtendedLifetime(__hstr_tileId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
         try self._n_CreatePushNotificationChannelForSecondaryTileAsync(__hstr_tileId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
         }
     }
-    public func CreatePushNotificationChannelForSecondaryTile(tileId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+    public func CreatePushNotificationChannelForSecondaryTile(tileId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreatePushNotificationChannelForSecondaryTileAsync(tileId: tileId)!.get())
@@ -183,15 +183,15 @@ open class IPushNotificationChannelManagerForUser2
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(pThis, appServerKey, channelId, __presult))
         }
     }
-    public func CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
-        let __hstr_channelId = try HString(channelId);
+    public func CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_channelId = try HString(channelId!);
         return try withExtendedLifetime(__hstr_channelId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
         try self._n_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(RawPointer(appServerKey), __hstr_channelId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
         }
     }
-    public func CreateRawPushNotificationChannelWithAlternateKeyForApplication(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+    public func CreateRawPushNotificationChannelWithAlternateKeyForApplication(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsync(appServerKey: appServerKey, channelId: channelId)!.get())
@@ -206,10 +206,10 @@ open class IPushNotificationChannelManagerForUser2
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(pThis, appServerKey, channelId, appId, __presult))
         }
     }
-    public func CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Swift.String, appId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
-        let __hstr_channelId = try HString(channelId);
+    public func CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Optional<Swift.String>, appId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_channelId = try HString(channelId!);
         return try withExtendedLifetime(__hstr_channelId) {
-        let __hstr_appId = try HString(appId);
+        let __hstr_appId = try HString(appId!);
         return try withExtendedLifetime(__hstr_appId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
         try self._n_CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(RawPointer(appServerKey), __hstr_channelId.Raw(), __hstr_appId.Raw(), &__result);
@@ -217,7 +217,7 @@ open class IPushNotificationChannelManagerForUser2
         }
         }
     }
-    public func CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Swift.String, appId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+    public func CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(appServerKey : Optional<Windows.Storage.Streams.IBuffer>, channelId : Optional<Swift.String>, appId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateRawPushNotificationChannelWithAlternateKeyForApplicationAsyncWithId(appServerKey: appServerKey, channelId: channelId, appId: appId)!.get())
@@ -262,15 +262,15 @@ open class IPushNotificationChannelManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForApplicationAsyncWithId(pThis, applicationId, __presult))
         }
     }
-    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
-        let __hstr_applicationId = try HString(applicationId);
+    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_applicationId = try HString(applicationId!);
         return try withExtendedLifetime(__hstr_applicationId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
         try self._n_CreatePushNotificationChannelForApplicationAsyncWithId(__hstr_applicationId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
         }
     }
-    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+    public func CreatePushNotificationChannelForApplicationAsyncWithId(applicationId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreatePushNotificationChannelForApplicationAsyncWithId(applicationId: applicationId)!.get())
@@ -285,15 +285,15 @@ open class IPushNotificationChannelManagerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePushNotificationChannelForSecondaryTileAsync(pThis, tileId, __presult))
         }
     }
-    public func CreatePushNotificationChannelForSecondaryTileAsync(tileId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
-        let __hstr_tileId = try HString(tileId);
+    public func CreatePushNotificationChannelForSecondaryTileAsync(tileId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel> {
+        let __hstr_tileId = try HString(tileId!);
         return try withExtendedLifetime(__hstr_tileId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel>> = nil;
         try self._n_CreatePushNotificationChannelForSecondaryTileAsync(__hstr_tileId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CPushNotifications_CPushNotificationChannel(consuming: __result);
         }
     }
-    public func CreatePushNotificationChannelForSecondaryTile(tileId : Swift.String) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
+    public func CreatePushNotificationChannelForSecondaryTile(tileId : Optional<Swift.String>) async throws -> Optional<Windows.Networking.PushNotifications.IPushNotificationChannel> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreatePushNotificationChannelForSecondaryTileAsync(tileId: tileId)!.get())

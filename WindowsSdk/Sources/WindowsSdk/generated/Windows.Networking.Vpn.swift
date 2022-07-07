@@ -51,8 +51,8 @@ open class IVpnAppId
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Value(pThis, value))
         }
     }
-    public func put_Value(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Value(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Value(__hstr_value.Raw());
         }
@@ -84,8 +84,8 @@ open class IVpnAppIdFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, type, value, __presult))
         }
     }
-    public func Create(type : Windows.Networking.Vpn.VpnAppIdType, value : Swift.String) throws -> Optional<Windows.Networking.Vpn.IVpnAppId> {
-        let __hstr_value = try HString(value);
+    public func Create(type : Windows.Networking.Vpn.VpnAppIdType, value : Optional<Swift.String>) throws -> Optional<Windows.Networking.Vpn.IVpnAppId> {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnAppId>> = nil;
         try self._n_Create(type, __hstr_value.Raw(), &__result);
@@ -157,8 +157,8 @@ open class IVpnChannel
             try CHECKED(pThis.pointee.lpVtbl.pointee.LogDiagnosticMessage(pThis, message))
         }
     }
-    public func LogDiagnosticMessage(message : Swift.String) throws -> Void {
-        let __hstr_message = try HString(message);
+    public func LogDiagnosticMessage(message : Optional<Swift.String>) throws -> Void {
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         try self._n_LogDiagnosticMessage(__hstr_message.Raw());
         }
@@ -251,8 +251,8 @@ open class IVpnChannel
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetErrorMessage(pThis, message))
         }
     }
-    public func SetErrorMessage(message : Swift.String) throws -> Void {
-        let __hstr_message = try HString(message);
+    public func SetErrorMessage(message : Optional<Swift.String>) throws -> Void {
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         try self._n_SetErrorMessage(__hstr_message.Raw());
         }
@@ -442,8 +442,8 @@ open class IVpnChannel2
             try CHECKED(pThis.pointee.lpVtbl.pointee.TerminateConnection(pThis, message))
         }
     }
-    public func TerminateConnection(message : Swift.String) throws -> Void {
-        let __hstr_message = try HString(message);
+    public func TerminateConnection(message : Optional<Swift.String>) throws -> Void {
+        let __hstr_message = try HString(message!);
         return try withExtendedLifetime(__hstr_message) {
         try self._n_TerminateConnection(__hstr_message.Raw());
         }
@@ -592,8 +592,8 @@ open class IVpnChannel6
             try CHECKED(pThis.pointee.lpVtbl.pointee.ActivateForeground(pThis, packageRelativeAppId, sharedContext, __presult))
         }
     }
-    public func ActivateForeground(packageRelativeAppId : Swift.String, sharedContext : Optional<Windows.Foundation.Collections.IPropertySet>) throws -> Optional<Windows.Foundation.Collections.IPropertySet> {
-        let __hstr_packageRelativeAppId = try HString(packageRelativeAppId);
+    public func ActivateForeground(packageRelativeAppId : Optional<Swift.String>, sharedContext : Optional<Windows.Foundation.Collections.IPropertySet>) throws -> Optional<Windows.Foundation.Collections.IPropertySet> {
+        let __hstr_packageRelativeAppId = try HString(packageRelativeAppId!);
         return try withExtendedLifetime(__hstr_packageRelativeAppId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CCollections_CIPropertySet>> = nil;
         try self._n_ActivateForeground(__hstr_packageRelativeAppId.Raw(), RawPointer(sharedContext), &__result);
@@ -947,8 +947,8 @@ open class IVpnCustomEditBox
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DefaultText(pThis, value))
         }
     }
-    public func put_DefaultText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DefaultText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DefaultText(__hstr_value.Raw());
         }
@@ -1036,8 +1036,8 @@ open class IVpnCustomPrompt
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Label(pThis, value))
         }
     }
-    public func put_Label(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Label(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Label(__hstr_value.Raw());
         }
@@ -1175,8 +1175,8 @@ open class IVpnCustomPromptElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayName(pThis, value))
         }
     }
-    public func put_DisplayName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DisplayName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DisplayName(__hstr_value.Raw());
         }
@@ -1305,8 +1305,8 @@ open class IVpnCustomPromptText
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Text(pThis, value))
         }
     }
-    public func put_Text(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Text(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Text(__hstr_value.Raw());
         }
@@ -1343,8 +1343,8 @@ open class IVpnCustomPromptTextInput
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_PlaceholderText(pThis, value))
         }
     }
-    public func put_PlaceholderText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_PlaceholderText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_PlaceholderText(__hstr_value.Raw());
         }
@@ -1422,8 +1422,8 @@ open class IVpnCustomTextBox
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DisplayText(pThis, value))
         }
     }
-    public func put_DisplayText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DisplayText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DisplayText(__hstr_value.Raw());
         }
@@ -1629,8 +1629,8 @@ open class IVpnDomainNameInfoFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateVpnDomainNameInfo(pThis, name, nameType, dnsServerList, proxyServerList, __presult))
         }
     }
-    public func CreateVpnDomainNameInfo(name : Swift.String, nameType : Windows.Networking.Vpn.VpnDomainNameType, dnsServerList : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CHostName>, proxyServerList : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CHostName>) throws -> Optional<Windows.Networking.Vpn.IVpnDomainNameInfo> {
-        let __hstr_name = try HString(name);
+    public func CreateVpnDomainNameInfo(name : Optional<Swift.String>, nameType : Windows.Networking.Vpn.VpnDomainNameType, dnsServerList : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CHostName>, proxyServerList : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CHostName>) throws -> Optional<Windows.Networking.Vpn.IVpnDomainNameInfo> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnDomainNameInfo>> = nil;
         try self._n_CreateVpnDomainNameInfo(__hstr_name.Raw(), nameType, RawPointer(dnsServerList), RawPointer(proxyServerList), &__result);
@@ -1773,15 +1773,15 @@ open class IVpnManagementAgent
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddProfileFromXmlAsync(pThis, xml, __presult))
         }
     }
-    public func AddProfileFromXmlAsync(xml : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus> {
-        let __hstr_xml = try HString(xml);
+    public func AddProfileFromXmlAsync(xml : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus> {
+        let __hstr_xml = try HString(xml!);
         return try withExtendedLifetime(__hstr_xml) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus>> = nil;
         try self._n_AddProfileFromXmlAsync(__hstr_xml.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(consuming: __result);
         }
     }
-    public func AddProfileFromXml(xml : Swift.String) async throws -> Windows.Networking.Vpn.VpnManagementErrorStatus {
+    public func AddProfileFromXml(xml : Optional<Swift.String>) async throws -> Windows.Networking.Vpn.VpnManagementErrorStatus {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AddProfileFromXmlAsync(xml: xml)!.get())
@@ -1816,15 +1816,15 @@ open class IVpnManagementAgent
             try CHECKED(pThis.pointee.lpVtbl.pointee.UpdateProfileFromXmlAsync(pThis, xml, __presult))
         }
     }
-    public func UpdateProfileFromXmlAsync(xml : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus> {
-        let __hstr_xml = try HString(xml);
+    public func UpdateProfileFromXmlAsync(xml : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus> {
+        let __hstr_xml = try HString(xml!);
         return try withExtendedLifetime(__hstr_xml) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus>> = nil;
         try self._n_UpdateProfileFromXmlAsync(__hstr_xml.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CVpn_CVpnManagementErrorStatus(consuming: __result);
         }
     }
-    public func UpdateProfileFromXml(xml : Swift.String) async throws -> Windows.Networking.Vpn.VpnManagementErrorStatus {
+    public func UpdateProfileFromXml(xml : Optional<Swift.String>) async throws -> Windows.Networking.Vpn.VpnManagementErrorStatus {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.UpdateProfileFromXmlAsync(xml: xml)!.get())
@@ -2029,8 +2029,8 @@ open class IVpnNamespaceInfo
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Namespace(pThis, value))
         }
     }
-    public func put_Namespace(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Namespace(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Namespace(__hstr_value.Raw());
         }
@@ -2117,8 +2117,8 @@ open class IVpnNamespaceInfoFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateVpnNamespaceInfo(pThis, name, dnsServerList, proxyServerList, __presult))
         }
     }
-    public func CreateVpnNamespaceInfo(name : Swift.String, dnsServerList : Optional<ClosedGenerics.IVector_1__q_CWindows_CNetworking_CHostName>, proxyServerList : Optional<ClosedGenerics.IVector_1__q_CWindows_CNetworking_CHostName>) throws -> Optional<Windows.Networking.Vpn.IVpnNamespaceInfo> {
-        let __hstr_name = try HString(name);
+    public func CreateVpnNamespaceInfo(name : Optional<Swift.String>, dnsServerList : Optional<ClosedGenerics.IVector_1__q_CWindows_CNetworking_CHostName>, proxyServerList : Optional<ClosedGenerics.IVector_1__q_CWindows_CNetworking_CHostName>) throws -> Optional<Windows.Networking.Vpn.IVpnNamespaceInfo> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CVpn_CIVpnNamespaceInfo>> = nil;
         try self._n_CreateVpnNamespaceInfo(__hstr_name.Raw(), RawPointer(dnsServerList), RawPointer(proxyServerList), &__result);
@@ -2243,8 +2243,8 @@ open class IVpnNativeProfile
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EapConfiguration(pThis, value))
         }
     }
-    public func put_EapConfiguration(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_EapConfiguration(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_EapConfiguration(__hstr_value.Raw());
         }
@@ -2684,8 +2684,8 @@ open class IVpnPlugInProfile
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CustomConfiguration(pThis, value))
         }
     }
-    public func put_CustomConfiguration(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CustomConfiguration(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CustomConfiguration(__hstr_value.Raw());
         }
@@ -2707,8 +2707,8 @@ open class IVpnPlugInProfile
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_VpnPluginPackageFamilyName(pThis, value))
         }
     }
-    public func put_VpnPluginPackageFamilyName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_VpnPluginPackageFamilyName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_VpnPluginPackageFamilyName(__hstr_value.Raw());
         }
@@ -2806,8 +2806,8 @@ open class IVpnProfile
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ProfileName(pThis, value))
         }
     }
-    public func put_ProfileName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ProfileName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ProfileName(__hstr_value.Raw());
         }

@@ -2192,6 +2192,14 @@ open class FrameworkTemplate
     }
 }
 
+// type: Microsoft.UI.Xaml.GridLength
+// struct type
+public typealias GridLength = _q_CMicrosoft_CUI_CXaml_CGridLength;
+
+// type: Microsoft.UI.Xaml.GridUnitType
+// enum type
+public typealias GridUnitType = _q_CMicrosoft_CUI_CXaml_CGridUnitType;
+
 // type: Microsoft.UI.Xaml.HorizontalAlignment
 // enum type
 public typealias HorizontalAlignment = _q_CMicrosoft_CUI_CXaml_CHorizontalAlignment;
@@ -3032,8 +3040,8 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Language(pThis, value))
         }
     }
-    public func put_Language(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Language(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Language(__hstr_value.Raw());
         }
@@ -3257,8 +3265,8 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Name(pThis, value))
         }
     }
-    public func put_Name(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Name(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Name(__hstr_value.Raw());
         }
@@ -3693,8 +3701,8 @@ open class IFrameworkElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindName(pThis, name, __presult))
         }
     }
-    public func FindName(name : Swift.String) throws -> Optional<WinRT.IInspectable> {
-        let __hstr_name = try HString(name);
+    public func FindName(name : Optional<Swift.String>) throws -> Optional<WinRT.IInspectable> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
         try self._n_FindName(__hstr_name.Raw(), &__result);
@@ -3947,8 +3955,8 @@ open class IFrameworkElementOverrides
             try CHECKED(pThis.pointee.lpVtbl.pointee.GoToElementStateCore(pThis, stateName, useTransitions, __presult))
         }
     }
-    public func GoToElementStateCore(stateName : Swift.String, useTransitions : boolean) throws -> boolean {
-        let __hstr_stateName = try HString(stateName);
+    public func GoToElementStateCore(stateName : Optional<Swift.String>, useTransitions : boolean) throws -> boolean {
+        let __hstr_stateName = try HString(stateName!);
         return try withExtendedLifetime(__hstr_stateName) {
         var __result : boolean = 0;
         try self._n_GoToElementStateCore(__hstr_stateName.Raw(), useTransitions, &__result);
@@ -5201,8 +5209,8 @@ open class IUIElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_AccessKey(pThis, value))
         }
     }
-    public func put_AccessKey(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_AccessKey(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_AccessKey(__hstr_value.Raw());
         }
@@ -7316,8 +7324,8 @@ open class IUIElementOverrides
             try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfoOverride(pThis, propertyName, animationPropertyInfo))
         }
     }
-    public func PopulatePropertyInfoOverride(propertyName : Swift.String, animationPropertyInfo : Optional<Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
-        let __hstr_propertyName = try HString(propertyName);
+    public func PopulatePropertyInfoOverride(propertyName : Optional<Swift.String>, animationPropertyInfo : Optional<Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
+        let __hstr_propertyName = try HString(propertyName!);
         return try withExtendedLifetime(__hstr_propertyName) {
         try self._n_PopulatePropertyInfoOverride(__hstr_propertyName.Raw(), RawPointer(animationPropertyInfo));
         }
@@ -8832,8 +8840,8 @@ open class IWindow
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -12172,6 +12180,23 @@ extension Microsoft.UI.Xaml.FocusVisualKind {
     public static var Reveal : Self {
         get {
             return _q_CMicrosoft_CUI_CXaml_CFocusVisualKind_Reveal;
+        }
+    }
+}
+extension Microsoft.UI.Xaml.GridUnitType {
+    public static var Auto : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CGridUnitType_Auto;
+        }
+    }
+    public static var Pixel : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CGridUnitType_Pixel;
+        }
+    }
+    public static var Star : Self {
+        get {
+            return _q_CMicrosoft_CUI_CXaml_CGridUnitType_Star;
         }
     }
 }

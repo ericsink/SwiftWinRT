@@ -220,8 +220,8 @@ open class IFileOpenPickerUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddFile(pThis, id, file, __presult))
         }
     }
-    public func AddFile(id : Swift.String, file : Optional<Windows.Storage.IStorageFile>) throws -> Windows.Storage.Pickers.Provider.AddFileResult {
-        let __hstr_id = try HString(id);
+    public func AddFile(id : Optional<Swift.String>, file : Optional<Windows.Storage.IStorageFile>) throws -> Windows.Storage.Pickers.Provider.AddFileResult {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         var __result : _q_CWindows_CStorage_CPickers_CProvider_CAddFileResult = _q_CWindows_CStorage_CPickers_CProvider_CAddFileResult_Added;
         try self._n_AddFile(__hstr_id.Raw(), RawPointer(file), &__result);
@@ -234,8 +234,8 @@ open class IFileOpenPickerUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveFile(pThis, id))
         }
     }
-    public func RemoveFile(id : Swift.String) throws -> Void {
-        let __hstr_id = try HString(id);
+    public func RemoveFile(id : Optional<Swift.String>) throws -> Void {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         try self._n_RemoveFile(__hstr_id.Raw());
         }
@@ -246,8 +246,8 @@ open class IFileOpenPickerUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.ContainsFile(pThis, id, __presult))
         }
     }
-    public func ContainsFile(id : Swift.String) throws -> boolean {
-        let __hstr_id = try HString(id);
+    public func ContainsFile(id : Optional<Swift.String>) throws -> boolean {
+        let __hstr_id = try HString(id!);
         return try withExtendedLifetime(__hstr_id) {
         var __result : boolean = 0;
         try self._n_ContainsFile(__hstr_id.Raw(), &__result);
@@ -315,8 +315,8 @@ open class IFileOpenPickerUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -434,8 +434,8 @@ open class IFileSavePickerUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Title(pThis, value))
         }
     }
-    public func put_Title(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Title(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Title(__hstr_value.Raw());
         }
@@ -479,8 +479,8 @@ open class IFileSavePickerUI
             try CHECKED(pThis.pointee.lpVtbl.pointee.TrySetFileName(pThis, value, __presult))
         }
     }
-    public func TrySetFileName(value : Swift.String) throws -> Windows.Storage.Pickers.Provider.SetFileNameResult {
-        let __hstr_value = try HString(value);
+    public func TrySetFileName(value : Optional<Swift.String>) throws -> Windows.Storage.Pickers.Provider.SetFileNameResult {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : _q_CWindows_CStorage_CPickers_CProvider_CSetFileNameResult = _q_CWindows_CStorage_CPickers_CProvider_CSetFileNameResult_Succeeded;
         try self._n_TrySetFileName(__hstr_value.Raw(), &__result);

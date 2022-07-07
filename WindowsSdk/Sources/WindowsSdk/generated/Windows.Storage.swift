@@ -1352,8 +1352,8 @@ open class IApplicationData3
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetPublisherCacheFolder(pThis, folderName, __presult))
         }
     }
-    public func GetPublisherCacheFolder(folderName : Swift.String) throws -> Optional<Windows.Storage.IStorageFolder> {
-        let __hstr_folderName = try HString(folderName);
+    public func GetPublisherCacheFolder(folderName : Optional<Swift.String>) throws -> Optional<Windows.Storage.IStorageFolder> {
+        let __hstr_folderName = try HString(folderName!);
         return try withExtendedLifetime(__hstr_folderName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIStorageFolder>> = nil;
         try self._n_GetPublisherCacheFolder(__hstr_folderName.Raw(), &__result);
@@ -1366,15 +1366,15 @@ open class IApplicationData3
             try CHECKED(pThis.pointee.lpVtbl.pointee.ClearPublisherCacheFolderAsync(pThis, folderName, __presult))
         }
     }
-    public func ClearPublisherCacheFolderAsync(folderName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_folderName = try HString(folderName);
+    public func ClearPublisherCacheFolderAsync(folderName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_folderName = try HString(folderName!);
         return try withExtendedLifetime(__hstr_folderName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_ClearPublisherCacheFolderAsync(__hstr_folderName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func ClearPublisherCacheFolder(folderName : Swift.String) async throws -> Void {
+    public func ClearPublisherCacheFolder(folderName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ClearPublisherCacheFolderAsync(folderName: folderName)!.get())
@@ -1459,8 +1459,8 @@ open class IApplicationDataContainer
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateContainer(pThis, name, disposition, __presult))
         }
     }
-    public func CreateContainer(name : Swift.String, disposition : Windows.Storage.ApplicationDataCreateDisposition) throws -> Optional<Windows.Storage.IApplicationDataContainer> {
-        let __hstr_name = try HString(name);
+    public func CreateContainer(name : Optional<Swift.String>, disposition : Windows.Storage.ApplicationDataCreateDisposition) throws -> Optional<Windows.Storage.IApplicationDataContainer> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CIApplicationDataContainer>> = nil;
         try self._n_CreateContainer(__hstr_name.Raw(), disposition, &__result);
@@ -1473,8 +1473,8 @@ open class IApplicationDataContainer
             try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteContainer(pThis, name))
         }
     }
-    public func DeleteContainer(name : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func DeleteContainer(name : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         try self._n_DeleteContainer(__hstr_name.Raw());
         }
@@ -1610,15 +1610,15 @@ open class IDownloadsFolderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileAsync(pThis, desiredName, __presult))
         }
     }
-    public func CreateFileAsync(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFileAsync(desiredName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateFileAsync(__hstr_desiredName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateFile(desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateFile(desiredName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFileAsync(desiredName: desiredName)!.get())
@@ -1633,15 +1633,15 @@ open class IDownloadsFolderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderAsync(pThis, desiredName, __presult))
         }
     }
-    public func CreateFolderAsync(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFolderAsync(desiredName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_CreateFolderAsync(__hstr_desiredName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func CreateFolder(desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func CreateFolder(desiredName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFolderAsync(desiredName: desiredName)!.get())
@@ -1656,15 +1656,15 @@ open class IDownloadsFolderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileWithCollisionOptionAsync(pThis, desiredName, option, __presult))
         }
     }
-    public func CreateFileWithCollisionOptionAsync(desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFileWithCollisionOptionAsync(desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateFileWithCollisionOptionAsync(__hstr_desiredName.Raw(), option, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateFileWithCollisionOption(desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateFileWithCollisionOption(desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFileWithCollisionOptionAsync(desiredName: desiredName, option: option)!.get())
@@ -1679,15 +1679,15 @@ open class IDownloadsFolderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderWithCollisionOptionAsync(pThis, desiredName, option, __presult))
         }
     }
-    public func CreateFolderWithCollisionOptionAsync(desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFolderWithCollisionOptionAsync(desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_CreateFolderWithCollisionOptionAsync(__hstr_desiredName.Raw(), option, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func CreateFolderWithCollisionOption(desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func CreateFolderWithCollisionOption(desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFolderWithCollisionOptionAsync(desiredName: desiredName, option: option)!.get())
@@ -1712,15 +1712,15 @@ open class IDownloadsFolderStatics2
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileForUserAsync(pThis, user, desiredName, __presult))
         }
     }
-    public func CreateFileForUserAsync(user : Optional<Windows.System.IUser>, desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFileForUserAsync(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateFileForUserAsync(RawPointer(user), __hstr_desiredName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateFileForUser(user : Optional<Windows.System.IUser>, desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateFileForUser(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFileForUserAsync(user: user, desiredName: desiredName)!.get())
@@ -1735,15 +1735,15 @@ open class IDownloadsFolderStatics2
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderForUserAsync(pThis, user, desiredName, __presult))
         }
     }
-    public func CreateFolderForUserAsync(user : Optional<Windows.System.IUser>, desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFolderForUserAsync(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_CreateFolderForUserAsync(RawPointer(user), __hstr_desiredName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func CreateFolderForUser(user : Optional<Windows.System.IUser>, desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func CreateFolderForUser(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFolderForUserAsync(user: user, desiredName: desiredName)!.get())
@@ -1758,15 +1758,15 @@ open class IDownloadsFolderStatics2
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileForUserWithCollisionOptionAsync(pThis, user, desiredName, option, __presult))
         }
     }
-    public func CreateFileForUserWithCollisionOptionAsync(user : Optional<Windows.System.IUser>, desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFileForUserWithCollisionOptionAsync(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateFileForUserWithCollisionOptionAsync(RawPointer(user), __hstr_desiredName.Raw(), option, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateFileForUserWithCollisionOption(user : Optional<Windows.System.IUser>, desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateFileForUserWithCollisionOption(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFileForUserWithCollisionOptionAsync(user: user, desiredName: desiredName, option: option)!.get())
@@ -1781,15 +1781,15 @@ open class IDownloadsFolderStatics2
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderForUserWithCollisionOptionAsync(pThis, user, desiredName, option, __presult))
         }
     }
-    public func CreateFolderForUserWithCollisionOptionAsync(user : Optional<Windows.System.IUser>, desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFolderForUserWithCollisionOptionAsync(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_CreateFolderForUserWithCollisionOptionAsync(RawPointer(user), __hstr_desiredName.Raw(), option, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func CreateFolderForUserWithCollisionOption(user : Optional<Windows.System.IUser>, desiredName : Swift.String, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func CreateFolderForUserWithCollisionOption(user : Optional<Windows.System.IUser>, desiredName : Optional<Swift.String>, option : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFolderForUserWithCollisionOptionAsync(user: user, desiredName: desiredName, option: option)!.get())
@@ -1854,15 +1854,15 @@ open class IFileIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteTextAsync(pThis, file, contents, __presult))
         }
     }
-    public func WriteTextAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_contents = try HString(contents);
+    public func WriteTextAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteTextAsync(RawPointer(file), __hstr_contents.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func WriteText(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String) async throws -> Void {
+    public func WriteText(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteTextAsync(file: file, contents: contents)!.get())
@@ -1877,15 +1877,15 @@ open class IFileIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteTextWithEncodingAsync(pThis, file, contents, encoding, __presult))
         }
     }
-    public func WriteTextWithEncodingAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_contents = try HString(contents);
+    public func WriteTextWithEncodingAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteTextWithEncodingAsync(RawPointer(file), __hstr_contents.Raw(), encoding, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func WriteTextWithEncoding(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
+    public func WriteTextWithEncoding(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteTextWithEncodingAsync(file: file, contents: contents, encoding: encoding)!.get())
@@ -1900,15 +1900,15 @@ open class IFileIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendTextAsync(pThis, file, contents, __presult))
         }
     }
-    public func AppendTextAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_contents = try HString(contents);
+    public func AppendTextAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_AppendTextAsync(RawPointer(file), __hstr_contents.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func AppendText(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String) async throws -> Void {
+    public func AppendText(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AppendTextAsync(file: file, contents: contents)!.get())
@@ -1923,15 +1923,15 @@ open class IFileIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendTextWithEncodingAsync(pThis, file, contents, encoding, __presult))
         }
     }
-    public func AppendTextWithEncodingAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_contents = try HString(contents);
+    public func AppendTextWithEncodingAsync(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_AppendTextWithEncodingAsync(RawPointer(file), __hstr_contents.Raw(), encoding, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func AppendTextWithEncoding(file : Optional<Windows.Storage.IStorageFile>, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
+    public func AppendTextWithEncoding(file : Optional<Windows.Storage.IStorageFile>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AppendTextWithEncodingAsync(file: file, contents: contents, encoding: encoding)!.get())
@@ -2494,15 +2494,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadTextAsync(pThis, absolutePath, __presult))
         }
     }
-    public func ReadTextAsync(absolutePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func ReadTextAsync(absolutePath : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_HSTRING>> = nil;
         try self._n_ReadTextAsync(__hstr_absolutePath.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1_HSTRING(consuming: __result);
         }
     }
-    public func ReadText(absolutePath : Swift.String) async throws -> Swift.String {
+    public func ReadText(absolutePath : Optional<Swift.String>) async throws -> Swift.String {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ReadTextAsync(absolutePath: absolutePath)!.get())
@@ -2517,15 +2517,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadTextWithEncodingAsync(pThis, absolutePath, encoding, __presult))
         }
     }
-    public func ReadTextWithEncodingAsync(absolutePath : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func ReadTextWithEncodingAsync(absolutePath : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_HSTRING>> = nil;
         try self._n_ReadTextWithEncodingAsync(__hstr_absolutePath.Raw(), encoding, &__result);
         return ClosedGenerics.IAsyncOperation_1_HSTRING(consuming: __result);
         }
     }
-    public func ReadTextWithEncoding(absolutePath : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Swift.String {
+    public func ReadTextWithEncoding(absolutePath : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Swift.String {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ReadTextWithEncodingAsync(absolutePath: absolutePath, encoding: encoding)!.get())
@@ -2540,10 +2540,10 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteTextAsync(pThis, absolutePath, contents, __presult))
         }
     }
-    public func WriteTextAsync(absolutePath : Swift.String, contents : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func WriteTextAsync(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
-        let __hstr_contents = try HString(contents);
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteTextAsync(__hstr_absolutePath.Raw(), __hstr_contents.Raw(), &__result);
@@ -2551,7 +2551,7 @@ open class IPathIOStatics
         }
         }
     }
-    public func WriteText(absolutePath : Swift.String, contents : Swift.String) async throws -> Void {
+    public func WriteText(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteTextAsync(absolutePath: absolutePath, contents: contents)!.get())
@@ -2566,10 +2566,10 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteTextWithEncodingAsync(pThis, absolutePath, contents, encoding, __presult))
         }
     }
-    public func WriteTextWithEncodingAsync(absolutePath : Swift.String, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func WriteTextWithEncodingAsync(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
-        let __hstr_contents = try HString(contents);
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteTextWithEncodingAsync(__hstr_absolutePath.Raw(), __hstr_contents.Raw(), encoding, &__result);
@@ -2577,7 +2577,7 @@ open class IPathIOStatics
         }
         }
     }
-    public func WriteTextWithEncoding(absolutePath : Swift.String, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
+    public func WriteTextWithEncoding(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteTextWithEncodingAsync(absolutePath: absolutePath, contents: contents, encoding: encoding)!.get())
@@ -2592,10 +2592,10 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendTextAsync(pThis, absolutePath, contents, __presult))
         }
     }
-    public func AppendTextAsync(absolutePath : Swift.String, contents : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func AppendTextAsync(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
-        let __hstr_contents = try HString(contents);
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_AppendTextAsync(__hstr_absolutePath.Raw(), __hstr_contents.Raw(), &__result);
@@ -2603,7 +2603,7 @@ open class IPathIOStatics
         }
         }
     }
-    public func AppendText(absolutePath : Swift.String, contents : Swift.String) async throws -> Void {
+    public func AppendText(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AppendTextAsync(absolutePath: absolutePath, contents: contents)!.get())
@@ -2618,10 +2618,10 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendTextWithEncodingAsync(pThis, absolutePath, contents, encoding, __presult))
         }
     }
-    public func AppendTextWithEncodingAsync(absolutePath : Swift.String, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func AppendTextWithEncodingAsync(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
-        let __hstr_contents = try HString(contents);
+        let __hstr_contents = try HString(contents!);
         return try withExtendedLifetime(__hstr_contents) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_AppendTextWithEncodingAsync(__hstr_absolutePath.Raw(), __hstr_contents.Raw(), encoding, &__result);
@@ -2629,7 +2629,7 @@ open class IPathIOStatics
         }
         }
     }
-    public func AppendTextWithEncoding(absolutePath : Swift.String, contents : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
+    public func AppendTextWithEncoding(absolutePath : Optional<Swift.String>, contents : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AppendTextWithEncodingAsync(absolutePath: absolutePath, contents: contents, encoding: encoding)!.get())
@@ -2644,15 +2644,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadLinesAsync(pThis, absolutePath, __presult))
         }
     }
-    public func ReadLinesAsync(absolutePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func ReadLinesAsync(absolutePath : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>> = nil;
         try self._n_ReadLinesAsync(__hstr_absolutePath.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(consuming: __result);
         }
     }
-    public func ReadLines(absolutePath : Swift.String) async throws -> Optional<ClosedGenerics.IVector_1_HSTRING> {
+    public func ReadLines(absolutePath : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVector_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ReadLinesAsync(absolutePath: absolutePath)!.get())
@@ -2667,15 +2667,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadLinesWithEncodingAsync(pThis, absolutePath, encoding, __presult))
         }
     }
-    public func ReadLinesWithEncodingAsync(absolutePath : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func ReadLinesWithEncodingAsync(absolutePath : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING>> = nil;
         try self._n_ReadLinesWithEncodingAsync(__hstr_absolutePath.Raw(), encoding, &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVector_1_HSTRING(consuming: __result);
         }
     }
-    public func ReadLinesWithEncoding(absolutePath : Swift.String, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Optional<ClosedGenerics.IVector_1_HSTRING> {
+    public func ReadLinesWithEncoding(absolutePath : Optional<Swift.String>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Optional<ClosedGenerics.IVector_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ReadLinesWithEncodingAsync(absolutePath: absolutePath, encoding: encoding)!.get())
@@ -2690,15 +2690,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteLinesAsync(pThis, absolutePath, lines, __presult))
         }
     }
-    public func WriteLinesAsync(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func WriteLinesAsync(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteLinesAsync(__hstr_absolutePath.Raw(), RawPointer(lines), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func WriteLines(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Void {
+    public func WriteLines(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteLinesAsync(absolutePath: absolutePath, lines: lines)!.get())
@@ -2713,15 +2713,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteLinesWithEncodingAsync(pThis, absolutePath, lines, encoding, __presult))
         }
     }
-    public func WriteLinesWithEncodingAsync(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func WriteLinesWithEncodingAsync(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteLinesWithEncodingAsync(__hstr_absolutePath.Raw(), RawPointer(lines), encoding, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func WriteLinesWithEncoding(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
+    public func WriteLinesWithEncoding(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteLinesWithEncodingAsync(absolutePath: absolutePath, lines: lines, encoding: encoding)!.get())
@@ -2736,15 +2736,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendLinesAsync(pThis, absolutePath, lines, __presult))
         }
     }
-    public func AppendLinesAsync(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func AppendLinesAsync(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_AppendLinesAsync(__hstr_absolutePath.Raw(), RawPointer(lines), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func AppendLines(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Void {
+    public func AppendLines(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AppendLinesAsync(absolutePath: absolutePath, lines: lines)!.get())
@@ -2759,15 +2759,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendLinesWithEncodingAsync(pThis, absolutePath, lines, encoding, __presult))
         }
     }
-    public func AppendLinesWithEncodingAsync(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func AppendLinesWithEncodingAsync(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_AppendLinesWithEncodingAsync(__hstr_absolutePath.Raw(), RawPointer(lines), encoding, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func AppendLinesWithEncoding(absolutePath : Swift.String, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
+    public func AppendLinesWithEncoding(absolutePath : Optional<Swift.String>, lines : Optional<ClosedGenerics.IIterable_1_HSTRING>, encoding : Windows.Storage.Streams.UnicodeEncoding) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.AppendLinesWithEncodingAsync(absolutePath: absolutePath, lines: lines, encoding: encoding)!.get())
@@ -2782,15 +2782,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReadBufferAsync(pThis, absolutePath, __presult))
         }
     }
-    public func ReadBufferAsync(absolutePath : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func ReadBufferAsync(absolutePath : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer>> = nil;
         try self._n_ReadBufferAsync(__hstr_absolutePath.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIBuffer(consuming: __result);
         }
     }
-    public func ReadBuffer(absolutePath : Swift.String) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
+    public func ReadBuffer(absolutePath : Optional<Swift.String>) async throws -> Optional<Windows.Storage.Streams.IBuffer> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ReadBufferAsync(absolutePath: absolutePath)!.get())
@@ -2805,15 +2805,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteBufferAsync(pThis, absolutePath, buffer, __presult))
         }
     }
-    public func WriteBufferAsync(absolutePath : Swift.String, buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func WriteBufferAsync(absolutePath : Optional<Swift.String>, buffer : Optional<Windows.Storage.Streams.IBuffer>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteBufferAsync(__hstr_absolutePath.Raw(), RawPointer(buffer), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func WriteBuffer(absolutePath : Swift.String, buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Void {
+    public func WriteBuffer(absolutePath : Optional<Swift.String>, buffer : Optional<Windows.Storage.Streams.IBuffer>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteBufferAsync(absolutePath: absolutePath, buffer: buffer)!.get())
@@ -2828,15 +2828,15 @@ open class IPathIOStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.WriteBytesAsync(pThis, absolutePath, bufferLength, buffer, __presult))
         }
     }
-    public func WriteBytesAsync(absolutePath : Swift.String, bufferLength : UINT32, buffer : Optional<UnsafeMutablePointer<UINT8>>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_absolutePath = try HString(absolutePath);
+    public func WriteBytesAsync(absolutePath : Optional<Swift.String>, bufferLength : UINT32, buffer : Optional<UnsafeMutablePointer<UINT8>>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_absolutePath = try HString(absolutePath!);
         return try withExtendedLifetime(__hstr_absolutePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_WriteBytesAsync(__hstr_absolutePath.Raw(), bufferLength, buffer, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func WriteBytes(absolutePath : Swift.String, bufferLength : UINT32, buffer : Optional<UnsafeMutablePointer<UINT8>>) async throws -> Void {
+    public func WriteBytes(absolutePath : Optional<Swift.String>, bufferLength : UINT32, buffer : Optional<UnsafeMutablePointer<UINT8>>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.WriteBytesAsync(absolutePath: absolutePath, bufferLength: bufferLength, buffer: buffer)!.get())
@@ -3015,15 +3015,15 @@ open class IStorageFile
             try CHECKED(pThis.pointee.lpVtbl.pointee.CopyOverloadDefaultOptions(pThis, destinationFolder, desiredNewName, __presult))
         }
     }
-    public func CopyOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredNewName = try HString(desiredNewName);
+    public func CopyOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredNewName = try HString(desiredNewName!);
         return try withExtendedLifetime(__hstr_desiredNewName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CopyOverloadDefaultOptions(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CopyOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CopyOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CopyOverloadDefaultOptions(destinationFolder: destinationFolder, desiredNewName: desiredNewName)!.get())
@@ -3038,15 +3038,15 @@ open class IStorageFile
             try CHECKED(pThis.pointee.lpVtbl.pointee.CopyOverload(pThis, destinationFolder, desiredNewName, option, __presult))
         }
     }
-    public func CopyOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredNewName = try HString(desiredNewName);
+    public func CopyOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>, option : Windows.Storage.NameCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredNewName = try HString(desiredNewName!);
         return try withExtendedLifetime(__hstr_desiredNewName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CopyOverload(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), option, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CopyOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CopyOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>, option : Windows.Storage.NameCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CopyOverload(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option)!.get())
@@ -3101,15 +3101,15 @@ open class IStorageFile
             try CHECKED(pThis.pointee.lpVtbl.pointee.MoveOverloadDefaultOptions(pThis, destinationFolder, desiredNewName, __presult))
         }
     }
-    public func MoveOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_desiredNewName = try HString(desiredNewName);
+    public func MoveOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredNewName = try HString(desiredNewName!);
         return try withExtendedLifetime(__hstr_desiredNewName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_MoveOverloadDefaultOptions(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func MoveOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String) async throws -> Void {
+    public func MoveOverloadDefaultOptions(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.MoveOverloadDefaultOptions(destinationFolder: destinationFolder, desiredNewName: desiredNewName)!.get())
@@ -3124,15 +3124,15 @@ open class IStorageFile
             try CHECKED(pThis.pointee.lpVtbl.pointee.MoveOverload(pThis, destinationFolder, desiredNewName, option, __presult))
         }
     }
-    public func MoveOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_desiredNewName = try HString(desiredNewName);
+    public func MoveOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredNewName = try HString(desiredNewName!);
         return try withExtendedLifetime(__hstr_desiredNewName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_MoveOverload(RawPointer(destinationFolder), __hstr_desiredNewName.Raw(), option, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func MoveOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+    public func MoveOverload(destinationFolder : Optional<Windows.Storage.IStorageFolder>, desiredNewName : Optional<Swift.String>, option : Windows.Storage.NameCollisionOption) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.MoveOverload(destinationFolder: destinationFolder, desiredNewName: desiredNewName, option: option)!.get())
@@ -3263,15 +3263,15 @@ open class IStorageFileStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileFromPathAsync(pThis, path, __presult))
         }
     }
-    public func GetFileFromPathAsync(path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_path = try HString(path);
+    public func GetFileFromPathAsync(path : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_path = try HString(path!);
         return try withExtendedLifetime(__hstr_path) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_GetFileFromPathAsync(__hstr_path.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func GetFileFromPath(path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func GetFileFromPath(path : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFileFromPathAsync(path: path)!.get())
@@ -3306,15 +3306,15 @@ open class IStorageFileStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateStreamedFileAsync(pThis, displayNameWithExtension, dataRequested, thumbnail, __presult))
         }
     }
-    public func CreateStreamedFileAsync(displayNameWithExtension : Swift.String, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_displayNameWithExtension = try HString(displayNameWithExtension);
+    public func CreateStreamedFileAsync(displayNameWithExtension : Optional<Swift.String>, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_displayNameWithExtension = try HString(displayNameWithExtension!);
         return try withExtendedLifetime(__hstr_displayNameWithExtension) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateStreamedFileAsync(__hstr_displayNameWithExtension.Raw(), RawPointer(dataRequested), RawPointer(thumbnail), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateStreamedFile(displayNameWithExtension : Swift.String, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateStreamedFile(displayNameWithExtension : Optional<Swift.String>, dataRequested : Optional<Windows.Storage.IStreamedFileDataRequestedHandler>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateStreamedFileAsync(displayNameWithExtension: displayNameWithExtension, dataRequested: dataRequested, thumbnail: thumbnail)!.get())
@@ -3349,15 +3349,15 @@ open class IStorageFileStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateStreamedFileFromUriAsync(pThis, displayNameWithExtension, uri, thumbnail, __presult))
         }
     }
-    public func CreateStreamedFileFromUriAsync(displayNameWithExtension : Swift.String, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_displayNameWithExtension = try HString(displayNameWithExtension);
+    public func CreateStreamedFileFromUriAsync(displayNameWithExtension : Optional<Swift.String>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_displayNameWithExtension = try HString(displayNameWithExtension!);
         return try withExtendedLifetime(__hstr_displayNameWithExtension) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateStreamedFileFromUriAsync(__hstr_displayNameWithExtension.Raw(), RawPointer(uri), RawPointer(thumbnail), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateStreamedFileFromUri(displayNameWithExtension : Swift.String, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateStreamedFileFromUri(displayNameWithExtension : Optional<Swift.String>, uri : Optional<Windows.Foundation.IUriRuntimeClass>, thumbnail : Optional<Windows.Storage.Streams.IRandomAccessStreamReference>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateStreamedFileFromUriAsync(displayNameWithExtension: displayNameWithExtension, uri: uri, thumbnail: thumbnail)!.get())
@@ -3402,15 +3402,15 @@ open class IStorageFileStatics2
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileFromPathForUserAsync(pThis, user, path, __presult))
         }
     }
-    public func GetFileFromPathForUserAsync(user : Optional<Windows.System.IUser>, path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_path = try HString(path);
+    public func GetFileFromPathForUserAsync(user : Optional<Windows.System.IUser>, path : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_path = try HString(path!);
         return try withExtendedLifetime(__hstr_path) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_GetFileFromPathForUserAsync(RawPointer(user), __hstr_path.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func GetFileFromPathForUser(user : Optional<Windows.System.IUser>, path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func GetFileFromPathForUser(user : Optional<Windows.System.IUser>, path : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFileFromPathForUserAsync(user: user, path: path)!.get())
@@ -3435,15 +3435,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileAsyncOverloadDefaultOptions(pThis, desiredName, __presult))
         }
     }
-    public func CreateFileAsyncOverloadDefaultOptions(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFileAsyncOverloadDefaultOptions(desiredName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateFileAsyncOverloadDefaultOptions(__hstr_desiredName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateFileAsyncOverloadDefaultOptions(desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateFileAsyncOverloadDefaultOptions(desiredName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFileAsyncOverloadDefaultOptions(desiredName: desiredName)!.get())
@@ -3458,15 +3458,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFileAsync(pThis, desiredName, options, __presult))
         }
     }
-    public func CreateFileAsync(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFileAsync(desiredName : Optional<Swift.String>, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_CreateFileAsync(__hstr_desiredName.Raw(), options, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func CreateFile(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func CreateFile(desiredName : Optional<Swift.String>, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFileAsync(desiredName: desiredName, options: options)!.get())
@@ -3481,15 +3481,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderAsyncOverloadDefaultOptions(pThis, desiredName, __presult))
         }
     }
-    public func CreateFolderAsyncOverloadDefaultOptions(desiredName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFolderAsyncOverloadDefaultOptions(desiredName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_CreateFolderAsyncOverloadDefaultOptions(__hstr_desiredName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func CreateFolderAsyncOverloadDefaultOptions(desiredName : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func CreateFolderAsyncOverloadDefaultOptions(desiredName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFolderAsyncOverloadDefaultOptions(desiredName: desiredName)!.get())
@@ -3504,15 +3504,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateFolderAsync(pThis, desiredName, options, __presult))
         }
     }
-    public func CreateFolderAsync(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func CreateFolderAsync(desiredName : Optional<Swift.String>, options : Windows.Storage.CreationCollisionOption) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_CreateFolderAsync(__hstr_desiredName.Raw(), options, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func CreateFolder(desiredName : Swift.String, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func CreateFolder(desiredName : Optional<Swift.String>, options : Windows.Storage.CreationCollisionOption) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateFolderAsync(desiredName: desiredName, options: options)!.get())
@@ -3527,15 +3527,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileAsync(pThis, name, __presult))
         }
     }
-    public func GetFileAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_name = try HString(name);
+    public func GetFileAsync(name : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_GetFileAsync(__hstr_name.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func GetFile(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func GetFile(name : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFileAsync(name: name)!.get())
@@ -3550,15 +3550,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderAsync(pThis, name, __presult))
         }
     }
-    public func GetFolderAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_name = try HString(name);
+    public func GetFolderAsync(name : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_GetFolderAsync(__hstr_name.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func GetFolder(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func GetFolder(name : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFolderAsync(name: name)!.get())
@@ -3573,15 +3573,15 @@ open class IStorageFolder
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetItemAsync(pThis, name, __presult))
         }
     }
-    public func GetItemAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
-        let __hstr_name = try HString(name);
+    public func GetItemAsync(name : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
         try self._n_GetItemAsync(__hstr_name.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
         }
     }
-    public func GetItem(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+    public func GetItem(name : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageItem> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetItemAsync(name: name)!.get())
@@ -3666,15 +3666,15 @@ open class IStorageFolder2
             try CHECKED(pThis.pointee.lpVtbl.pointee.TryGetItemAsync(pThis, name, __presult))
         }
     }
-    public func TryGetItemAsync(name : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
-        let __hstr_name = try HString(name);
+    public func TryGetItemAsync(name : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
         try self._n_TryGetItemAsync(__hstr_name.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
         }
     }
-    public func TryGetItem(name : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+    public func TryGetItem(name : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageItem> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.TryGetItemAsync(name: name)!.get())
@@ -3720,15 +3720,15 @@ open class IStorageFolderStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderFromPathAsync(pThis, path, __presult))
         }
     }
-    public func GetFolderFromPathAsync(path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_path = try HString(path);
+    public func GetFolderFromPathAsync(path : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_path = try HString(path!);
         return try withExtendedLifetime(__hstr_path) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_GetFolderFromPathAsync(__hstr_path.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func GetFolderFromPath(path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func GetFolderFromPath(path : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFolderFromPathAsync(path: path)!.get())
@@ -3753,15 +3753,15 @@ open class IStorageFolderStatics2
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderFromPathForUserAsync(pThis, user, path, __presult))
         }
     }
-    public func GetFolderFromPathForUserAsync(user : Optional<Windows.System.IUser>, path : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_path = try HString(path);
+    public func GetFolderFromPathForUserAsync(user : Optional<Windows.System.IUser>, path : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_path = try HString(path!);
         return try withExtendedLifetime(__hstr_path) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_GetFolderFromPathForUserAsync(RawPointer(user), __hstr_path.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func GetFolderFromPathForUser(user : Optional<Windows.System.IUser>, path : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func GetFolderFromPathForUser(user : Optional<Windows.System.IUser>, path : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFolderFromPathForUserAsync(user: user, path: path)!.get())
@@ -3786,15 +3786,15 @@ open class IStorageItem
             try CHECKED(pThis.pointee.lpVtbl.pointee.RenameAsyncOverloadDefaultOptions(pThis, desiredName, __presult))
         }
     }
-    public func RenameAsyncOverloadDefaultOptions(desiredName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func RenameAsyncOverloadDefaultOptions(desiredName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_RenameAsyncOverloadDefaultOptions(__hstr_desiredName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func RenameAsyncOverloadDefaultOptions(desiredName : Swift.String) async throws -> Void {
+    public func RenameAsyncOverloadDefaultOptions(desiredName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.RenameAsyncOverloadDefaultOptions(desiredName: desiredName)!.get())
@@ -3809,15 +3809,15 @@ open class IStorageItem
             try CHECKED(pThis.pointee.lpVtbl.pointee.RenameAsync(pThis, desiredName, option, __presult))
         }
     }
-    public func RenameAsync(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_desiredName = try HString(desiredName);
+    public func RenameAsync(desiredName : Optional<Swift.String>, option : Windows.Storage.NameCollisionOption) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_desiredName = try HString(desiredName!);
         return try withExtendedLifetime(__hstr_desiredName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_RenameAsync(__hstr_desiredName.Raw(), option, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func Rename(desiredName : Swift.String, option : Windows.Storage.NameCollisionOption) async throws -> Void {
+    public func Rename(desiredName : Optional<Swift.String>, option : Windows.Storage.NameCollisionOption) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.RenameAsync(desiredName: desiredName, option: option)!.get())
@@ -4806,15 +4806,15 @@ open class IStorageProvider2
             try CHECKED(pThis.pointee.lpVtbl.pointee.IsPropertySupportedForPartialFileAsync(pThis, propertyCanonicalName, __presult))
         }
     }
-    public func IsPropertySupportedForPartialFileAsync(propertyCanonicalName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
-        let __hstr_propertyCanonicalName = try HString(propertyCanonicalName);
+    public func IsPropertySupportedForPartialFileAsync(propertyCanonicalName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_boolean> {
+        let __hstr_propertyCanonicalName = try HString(propertyCanonicalName!);
         return try withExtendedLifetime(__hstr_propertyCanonicalName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_boolean>> = nil;
         try self._n_IsPropertySupportedForPartialFileAsync(__hstr_propertyCanonicalName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1_boolean(consuming: __result);
         }
     }
-    public func IsPropertySupportedForPartialFile(propertyCanonicalName : Swift.String) async throws -> boolean {
+    public func IsPropertySupportedForPartialFile(propertyCanonicalName : Optional<Swift.String>) async throws -> boolean {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.IsPropertySupportedForPartialFileAsync(propertyCanonicalName: propertyCanonicalName)!.get())

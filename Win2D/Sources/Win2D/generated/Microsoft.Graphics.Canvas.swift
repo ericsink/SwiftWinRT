@@ -2240,15 +2240,15 @@ open class ICanvasBitmap
             try CHECKED(pThis.pointee.lpVtbl.pointee.SaveToFileAsync(pThis, fileName, __presult))
         }
     }
-    public func SaveToFileAsync(fileName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_fileName = try HString(fileName);
+    public func SaveToFileAsync(fileName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_SaveToFileAsync(__hstr_fileName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func SaveToFile(fileName : Swift.String) async throws -> Void {
+    public func SaveToFile(fileName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.SaveToFileAsync(fileName: fileName)!.get())
@@ -2263,15 +2263,15 @@ open class ICanvasBitmap
             try CHECKED(pThis.pointee.lpVtbl.pointee.SaveToFileWithBitmapFileFormatAsync(pThis, fileName, fileFormat, __presult))
         }
     }
-    public func SaveToFileWithBitmapFileFormatAsync(fileName : Swift.String, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_fileName = try HString(fileName);
+    public func SaveToFileWithBitmapFileFormatAsync(fileName : Optional<Swift.String>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_SaveToFileWithBitmapFileFormatAsync(__hstr_fileName.Raw(), fileFormat, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func SaveToFileWithBitmapFileFormat(fileName : Swift.String, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) async throws -> Void {
+    public func SaveToFileWithBitmapFileFormat(fileName : Optional<Swift.String>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.SaveToFileWithBitmapFileFormatAsync(fileName: fileName, fileFormat: fileFormat)!.get())
@@ -2286,15 +2286,15 @@ open class ICanvasBitmap
             try CHECKED(pThis.pointee.lpVtbl.pointee.SaveToFileWithBitmapFileFormatAndQualityAsync(pThis, fileName, fileFormat, quality, __presult))
         }
     }
-    public func SaveToFileWithBitmapFileFormatAndQualityAsync(fileName : Swift.String, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_fileName = try HString(fileName);
+    public func SaveToFileWithBitmapFileFormatAndQualityAsync(fileName : Optional<Swift.String>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_SaveToFileWithBitmapFileFormatAndQualityAsync(__hstr_fileName.Raw(), fileFormat, quality, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func SaveToFileWithBitmapFileFormatAndQuality(fileName : Swift.String, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) async throws -> Void {
+    public func SaveToFileWithBitmapFileFormatAndQuality(fileName : Optional<Swift.String>, fileFormat : Microsoft.Graphics.Canvas.CanvasBitmapFileFormat, quality : Swift.Float) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.SaveToFileWithBitmapFileFormatAndQualityAsync(fileName: fileName, fileFormat: fileFormat, quality: quality)!.get())
@@ -2674,15 +2674,15 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromHstring(pThis, resourceCreator, fileName, __presult))
         }
     }
-    public func LoadAsyncFromHstring(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
-        let __hstr_fileName = try HString(fileName);
+    public func LoadAsyncFromHstring(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromHstring(RawPointer(resourceCreator), __hstr_fileName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
         }
     }
-    public func LoadAsyncFromHstring(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
+    public func LoadAsyncFromHstring(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadAsyncFromHstring(resourceCreator: resourceCreator, fileName: fileName)!.get())
@@ -2697,15 +2697,15 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromHstringWithDpi(pThis, resourceCreator, fileName, dpi, __presult))
         }
     }
-    public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
-        let __hstr_fileName = try HString(fileName);
+    public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, dpi : Swift.Float) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromHstringWithDpi(RawPointer(resourceCreator), __hstr_fileName.Raw(), dpi, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
         }
     }
-    public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
+    public func LoadAsyncFromHstringWithDpi(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, dpi : Swift.Float) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadAsyncFromHstringWithDpi(resourceCreator: resourceCreator, fileName: fileName, dpi: dpi)!.get())
@@ -2720,15 +2720,15 @@ open class ICanvasBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromHstringWithDpiAndAlpha(pThis, resourceCreator, fileName, dpi, alpha, __presult))
         }
     }
-    public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
-        let __hstr_fileName = try HString(fileName);
+    public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, dpi : Swift.Float, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap>> = nil;
         try self._n_LoadAsyncFromHstringWithDpiAndAlpha(RawPointer(resourceCreator), __hstr_fileName.Raw(), dpi, alpha, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasBitmap(consuming: __result);
         }
     }
-    public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, dpi : Swift.Float, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
+    public func LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, dpi : Swift.Float, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadAsyncFromHstringWithDpiAndAlpha(resourceCreator: resourceCreator, fileName: fileName, dpi: dpi, alpha: alpha)!.get())
@@ -4087,8 +4087,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointWithColor(pThis, text, point, color))
         }
     }
-    public func DrawTextAtPointWithColor(text : Swift.String, point : Windows.Foundation.Numerics.Vector2, color : Windows.UI.Color) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtPointWithColor(text : Optional<Swift.String>, point : Windows.Foundation.Numerics.Vector2, color : Windows.UI.Color) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtPointWithColor(__hstr_text.Raw(), point, color);
         }
@@ -4099,8 +4099,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointCoordsWithColor(pThis, text, x, y, color))
         }
     }
-    public func DrawTextAtPointCoordsWithColor(text : Swift.String, x : Swift.Float, y : Swift.Float, color : Windows.UI.Color) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtPointCoordsWithColor(text : Optional<Swift.String>, x : Swift.Float, y : Swift.Float, color : Windows.UI.Color) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtPointCoordsWithColor(__hstr_text.Raw(), x, y, color);
         }
@@ -4111,8 +4111,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointWithBrushAndFormat(pThis, text, point, brush, format))
         }
     }
-    public func DrawTextAtPointWithBrushAndFormat(text : Swift.String, point : Windows.Foundation.Numerics.Vector2, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtPointWithBrushAndFormat(text : Optional<Swift.String>, point : Windows.Foundation.Numerics.Vector2, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtPointWithBrushAndFormat(__hstr_text.Raw(), point, RawPointer(brush), RawPointer(format));
         }
@@ -4123,8 +4123,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectWithBrushAndFormat(pThis, text, rectangle, brush, format))
         }
     }
-    public func DrawTextAtRectWithBrushAndFormat(text : Swift.String, rectangle : Windows.Foundation.Rect, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtRectWithBrushAndFormat(text : Optional<Swift.String>, rectangle : Windows.Foundation.Rect, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtRectWithBrushAndFormat(__hstr_text.Raw(), rectangle, RawPointer(brush), RawPointer(format));
         }
@@ -4135,8 +4135,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointCoordsWithBrushAndFormat(pThis, text, x, y, brush, format))
         }
     }
-    public func DrawTextAtPointCoordsWithBrushAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtPointCoordsWithBrushAndFormat(text : Optional<Swift.String>, x : Swift.Float, y : Swift.Float, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtPointCoordsWithBrushAndFormat(__hstr_text.Raw(), x, y, RawPointer(brush), RawPointer(format));
         }
@@ -4147,8 +4147,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectCoordsWithBrushAndFormat(pThis, text, x, y, w, h, brush, format))
         }
     }
-    public func DrawTextAtRectCoordsWithBrushAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtRectCoordsWithBrushAndFormat(text : Optional<Swift.String>, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtRectCoordsWithBrushAndFormat(__hstr_text.Raw(), x, y, w, h, RawPointer(brush), RawPointer(format));
         }
@@ -4159,8 +4159,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointWithColorAndFormat(pThis, text, point, color, format))
         }
     }
-    public func DrawTextAtPointWithColorAndFormat(text : Swift.String, point : Windows.Foundation.Numerics.Vector2, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtPointWithColorAndFormat(text : Optional<Swift.String>, point : Windows.Foundation.Numerics.Vector2, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtPointWithColorAndFormat(__hstr_text.Raw(), point, color, RawPointer(format));
         }
@@ -4171,8 +4171,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectWithColorAndFormat(pThis, text, rectangle, color, format))
         }
     }
-    public func DrawTextAtRectWithColorAndFormat(text : Swift.String, rectangle : Windows.Foundation.Rect, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtRectWithColorAndFormat(text : Optional<Swift.String>, rectangle : Windows.Foundation.Rect, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtRectWithColorAndFormat(__hstr_text.Raw(), rectangle, color, RawPointer(format));
         }
@@ -4183,8 +4183,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtPointCoordsWithColorAndFormat(pThis, text, x, y, color, format))
         }
     }
-    public func DrawTextAtPointCoordsWithColorAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtPointCoordsWithColorAndFormat(text : Optional<Swift.String>, x : Swift.Float, y : Swift.Float, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtPointCoordsWithColorAndFormat(__hstr_text.Raw(), x, y, color, RawPointer(format));
         }
@@ -4195,8 +4195,8 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawTextAtRectCoordsWithColorAndFormat(pThis, text, x, y, w, h, color, format))
         }
     }
-    public func DrawTextAtRectCoordsWithColorAndFormat(text : Swift.String, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func DrawTextAtRectCoordsWithColorAndFormat(text : Optional<Swift.String>, x : Swift.Float, y : Swift.Float, w : Swift.Float, h : Swift.Float, color : Windows.UI.Color, format : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_DrawTextAtRectCoordsWithColorAndFormat(__hstr_text.Raw(), x, y, w, h, color, RawPointer(format));
         }
@@ -4871,10 +4871,10 @@ open class ICanvasDrawingSession
             try CHECKED(pThis.pointee.lpVtbl.pointee.DrawGlyphRunWithMeasuringModeAndDescription(pThis, point, fontFace, fontSize, glyphsLength, glyphs, isSideways, bidiLevel, brush, measuringMode, localeName, textString, clusterMapIndicesLength, clusterMapIndices, textPosition))
         }
     }
-    public func DrawGlyphRunWithMeasuringModeAndDescription(point : Windows.Foundation.Numerics.Vector2, fontFace : Optional<Microsoft.Graphics.Canvas.Text.ICanvasFontFace>, fontSize : Swift.Float, glyphsLength : UINT32, glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, isSideways : boolean, bidiLevel : Swift.UInt32, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, measuringMode : Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode, localeName : Swift.String, textString : Swift.String, clusterMapIndicesLength : UINT32, clusterMapIndices : Optional<UnsafeMutablePointer<INT32>>, textPosition : Swift.UInt32) throws -> Void {
-        let __hstr_localeName = try HString(localeName);
+    public func DrawGlyphRunWithMeasuringModeAndDescription(point : Windows.Foundation.Numerics.Vector2, fontFace : Optional<Microsoft.Graphics.Canvas.Text.ICanvasFontFace>, fontSize : Swift.Float, glyphsLength : UINT32, glyphs : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, isSideways : boolean, bidiLevel : Swift.UInt32, brush : Optional<Microsoft.Graphics.Canvas.Brushes.ICanvasBrush>, measuringMode : Microsoft.Graphics.Canvas.Text.CanvasTextMeasuringMode, localeName : Optional<Swift.String>, textString : Optional<Swift.String>, clusterMapIndicesLength : UINT32, clusterMapIndices : Optional<UnsafeMutablePointer<INT32>>, textPosition : Swift.UInt32) throws -> Void {
+        let __hstr_localeName = try HString(localeName!);
         return try withExtendedLifetime(__hstr_localeName) {
-        let __hstr_textString = try HString(textString);
+        let __hstr_textString = try HString(textString!);
         return try withExtendedLifetime(__hstr_textString) {
         try self._n_DrawGlyphRunWithMeasuringModeAndDescription(point, RawPointer(fontFace), fontSize, glyphsLength, glyphs, isSideways, bidiLevel, RawPointer(brush), measuringMode, __hstr_localeName.Raw(), __hstr_textString.Raw(), clusterMapIndicesLength, clusterMapIndices, textPosition);
         }
@@ -5887,15 +5887,15 @@ open class ICanvasVirtualBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromFileName(pThis, resourceCreator, fileName, __presult))
         }
     }
-    public func LoadAsyncFromFileName(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
-        let __hstr_fileName = try HString(fileName);
+    public func LoadAsyncFromFileName(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
         try self._n_LoadAsyncFromFileName(RawPointer(resourceCreator), __hstr_fileName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
         }
     }
-    public func LoadAsyncFromFileName(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+    public func LoadAsyncFromFileName(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadAsyncFromFileName(resourceCreator: resourceCreator, fileName: fileName)!.get())
@@ -5910,15 +5910,15 @@ open class ICanvasVirtualBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromFileNameWithOptions(pThis, resourceCreator, fileName, options, __presult))
         }
     }
-    public func LoadAsyncFromFileNameWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
-        let __hstr_fileName = try HString(fileName);
+    public func LoadAsyncFromFileNameWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
         try self._n_LoadAsyncFromFileNameWithOptions(RawPointer(resourceCreator), __hstr_fileName.Raw(), options, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
         }
     }
-    public func LoadAsyncFromFileNameWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+    public func LoadAsyncFromFileNameWithOptions(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadAsyncFromFileNameWithOptions(resourceCreator: resourceCreator, fileName: fileName, options: options)!.get())
@@ -5933,15 +5933,15 @@ open class ICanvasVirtualBitmapStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadAsyncFromFileNameWithOptionsAndAlpha(pThis, resourceCreator, fileName, options, alpha, __presult))
         }
     }
-    public func LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
-        let __hstr_fileName = try HString(fileName);
+    public func LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap> {
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap>> = nil;
         try self._n_LoadAsyncFromFileNameWithOptionsAndAlpha(RawPointer(resourceCreator), __hstr_fileName.Raw(), options, alpha, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CMicrosoft_CGraphics_CCanvas_CCanvasVirtualBitmap(consuming: __result);
         }
     }
-    public func LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Swift.String, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
+    public func LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, fileName : Optional<Swift.String>, options : Microsoft.Graphics.Canvas.CanvasVirtualBitmapOptions, alpha : Microsoft.Graphics.Canvas.CanvasAlphaMode) async throws -> Optional<Microsoft.Graphics.Canvas.ICanvasVirtualBitmap> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadAsyncFromFileNameWithOptionsAndAlpha(resourceCreator: resourceCreator, fileName: fileName, options: options, alpha: alpha)!.get())

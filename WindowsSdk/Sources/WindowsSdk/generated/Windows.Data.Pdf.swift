@@ -93,15 +93,15 @@ open class IPdfDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromFileWithPasswordAsync(pThis, file, password, __presult))
         }
     }
-    public func LoadFromFileWithPasswordAsync(file : Optional<Windows.Storage.IStorageFile>, password : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument> {
-        let __hstr_password = try HString(password);
+    public func LoadFromFileWithPasswordAsync(file : Optional<Windows.Storage.IStorageFile>, password : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument> {
+        let __hstr_password = try HString(password!);
         return try withExtendedLifetime(__hstr_password) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument>> = nil;
         try self._n_LoadFromFileWithPasswordAsync(RawPointer(file), __hstr_password.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument(consuming: __result);
         }
     }
-    public func LoadFromFileWithPassword(file : Optional<Windows.Storage.IStorageFile>, password : Swift.String) async throws -> Optional<Windows.Data.Pdf.IPdfDocument> {
+    public func LoadFromFileWithPassword(file : Optional<Windows.Storage.IStorageFile>, password : Optional<Swift.String>) async throws -> Optional<Windows.Data.Pdf.IPdfDocument> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadFromFileWithPasswordAsync(file: file, password: password)!.get())
@@ -136,15 +136,15 @@ open class IPdfDocumentStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromStreamWithPasswordAsync(pThis, inputStream, password, __presult))
         }
     }
-    public func LoadFromStreamWithPasswordAsync(inputStream : Optional<Windows.Storage.Streams.IRandomAccessStream>, password : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument> {
-        let __hstr_password = try HString(password);
+    public func LoadFromStreamWithPasswordAsync(inputStream : Optional<Windows.Storage.Streams.IRandomAccessStream>, password : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument> {
+        let __hstr_password = try HString(password!);
         return try withExtendedLifetime(__hstr_password) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument>> = nil;
         try self._n_LoadFromStreamWithPasswordAsync(RawPointer(inputStream), __hstr_password.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CData_CPdf_CPdfDocument(consuming: __result);
         }
     }
-    public func LoadFromStreamWithPassword(inputStream : Optional<Windows.Storage.Streams.IRandomAccessStream>, password : Swift.String) async throws -> Optional<Windows.Data.Pdf.IPdfDocument> {
+    public func LoadFromStreamWithPassword(inputStream : Optional<Windows.Storage.Streams.IRandomAccessStream>, password : Optional<Swift.String>) async throws -> Optional<Windows.Data.Pdf.IPdfDocument> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.LoadFromStreamWithPasswordAsync(inputStream: inputStream, password: password)!.get())

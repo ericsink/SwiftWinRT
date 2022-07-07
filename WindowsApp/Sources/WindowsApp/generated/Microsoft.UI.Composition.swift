@@ -184,8 +184,8 @@ open class IAnimationObject
             try CHECKED(pThis.pointee.lpVtbl.pointee.PopulatePropertyInfo(pThis, propertyName, propertyInfo))
         }
     }
-    public func PopulatePropertyInfo(propertyName : Swift.String, propertyInfo : Optional<Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
-        let __hstr_propertyName = try HString(propertyName);
+    public func PopulatePropertyInfo(propertyName : Optional<Swift.String>, propertyInfo : Optional<Microsoft.UI.Composition.IAnimationPropertyInfo>) throws -> Void {
+        let __hstr_propertyName = try HString(propertyName!);
         return try withExtendedLifetime(__hstr_propertyName) {
         try self._n_PopulatePropertyInfo(__hstr_propertyName.Raw(), RawPointer(propertyInfo));
         }

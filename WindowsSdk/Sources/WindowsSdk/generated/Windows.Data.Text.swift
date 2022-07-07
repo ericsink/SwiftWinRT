@@ -179,8 +179,8 @@ open class ISelectableWordsSegmenter
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTokenAt(pThis, text, startIndex, __presult))
         }
     }
-    public func GetTokenAt(text : Swift.String, startIndex : Swift.UInt32) throws -> Optional<Windows.Data.Text.ISelectableWordSegment> {
-        let __hstr_text = try HString(text);
+    public func GetTokenAt(text : Optional<Swift.String>, startIndex : Swift.UInt32) throws -> Optional<Windows.Data.Text.ISelectableWordSegment> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CISelectableWordSegment>> = nil;
         try self._n_GetTokenAt(__hstr_text.Raw(), startIndex, &__result);
@@ -193,8 +193,8 @@ open class ISelectableWordsSegmenter
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTokens(pThis, text, __presult))
         }
     }
-    public func GetTokens(text : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CSelectableWordSegment> {
-        let __hstr_text = try HString(text);
+    public func GetTokens(text : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CSelectableWordSegment> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CSelectableWordSegment>> = nil;
         try self._n_GetTokens(__hstr_text.Raw(), &__result);
@@ -207,8 +207,8 @@ open class ISelectableWordsSegmenter
             try CHECKED(pThis.pointee.lpVtbl.pointee.Tokenize(pThis, text, startIndex, handler))
         }
     }
-    public func Tokenize(text : Swift.String, startIndex : Swift.UInt32, handler : Optional<Windows.Data.Text.ISelectableWordSegmentsTokenizingHandler>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func Tokenize(text : Optional<Swift.String>, startIndex : Swift.UInt32, handler : Optional<Windows.Data.Text.ISelectableWordSegmentsTokenizingHandler>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_Tokenize(__hstr_text.Raw(), startIndex, RawPointer(handler));
         }
@@ -235,8 +235,8 @@ open class ISelectableWordsSegmenterFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithLanguage(pThis, language, __presult))
         }
     }
-    public func CreateWithLanguage(language : Swift.String) throws -> Optional<Windows.Data.Text.ISelectableWordsSegmenter> {
-        let __hstr_language = try HString(language);
+    public func CreateWithLanguage(language : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.ISelectableWordsSegmenter> {
+        let __hstr_language = try HString(language!);
         return try withExtendedLifetime(__hstr_language) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CISelectableWordsSegmenter>> = nil;
         try self._n_CreateWithLanguage(__hstr_language.Raw(), &__result);
@@ -259,8 +259,8 @@ open class ISemanticTextQuery
             try CHECKED(pThis.pointee.lpVtbl.pointee.Find(pThis, content, __presult))
         }
     }
-    public func Find(content : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CTextSegment> {
-        let __hstr_content = try HString(content);
+    public func Find(content : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CTextSegment> {
+        let __hstr_content = try HString(content!);
         return try withExtendedLifetime(__hstr_content) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CTextSegment>> = nil;
         try self._n_Find(__hstr_content.Raw(), &__result);
@@ -273,10 +273,10 @@ open class ISemanticTextQuery
             try CHECKED(pThis.pointee.lpVtbl.pointee.FindInProperty(pThis, propertyContent, propertyName, __presult))
         }
     }
-    public func FindInProperty(propertyContent : Swift.String, propertyName : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CTextSegment> {
-        let __hstr_propertyContent = try HString(propertyContent);
+    public func FindInProperty(propertyContent : Optional<Swift.String>, propertyName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CTextSegment> {
+        let __hstr_propertyContent = try HString(propertyContent!);
         return try withExtendedLifetime(__hstr_propertyContent) {
-        let __hstr_propertyName = try HString(propertyName);
+        let __hstr_propertyName = try HString(propertyName!);
         return try withExtendedLifetime(__hstr_propertyName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CTextSegment>> = nil;
         try self._n_FindInProperty(__hstr_propertyContent.Raw(), __hstr_propertyName.Raw(), &__result);
@@ -301,8 +301,8 @@ open class ISemanticTextQueryFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, aqsFilter, __presult))
         }
     }
-    public func Create(aqsFilter : Swift.String) throws -> Optional<Windows.Data.Text.ISemanticTextQuery> {
-        let __hstr_aqsFilter = try HString(aqsFilter);
+    public func Create(aqsFilter : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.ISemanticTextQuery> {
+        let __hstr_aqsFilter = try HString(aqsFilter!);
         return try withExtendedLifetime(__hstr_aqsFilter) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CISemanticTextQuery>> = nil;
         try self._n_Create(__hstr_aqsFilter.Raw(), &__result);
@@ -315,10 +315,10 @@ open class ISemanticTextQueryFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithLanguage(pThis, aqsFilter, filterLanguage, __presult))
         }
     }
-    public func CreateWithLanguage(aqsFilter : Swift.String, filterLanguage : Swift.String) throws -> Optional<Windows.Data.Text.ISemanticTextQuery> {
-        let __hstr_aqsFilter = try HString(aqsFilter);
+    public func CreateWithLanguage(aqsFilter : Optional<Swift.String>, filterLanguage : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.ISemanticTextQuery> {
+        let __hstr_aqsFilter = try HString(aqsFilter!);
         return try withExtendedLifetime(__hstr_aqsFilter) {
-        let __hstr_filterLanguage = try HString(filterLanguage);
+        let __hstr_filterLanguage = try HString(filterLanguage!);
         return try withExtendedLifetime(__hstr_filterLanguage) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CISemanticTextQuery>> = nil;
         try self._n_CreateWithLanguage(__hstr_aqsFilter.Raw(), __hstr_filterLanguage.Raw(), &__result);
@@ -364,15 +364,15 @@ open class ITextConversionGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCandidatesAsync(pThis, input, __presult))
         }
     }
-    public func GetCandidatesAsync(input : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
-        let __hstr_input = try HString(input);
+    public func GetCandidatesAsync(input : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>> = nil;
         try self._n_GetCandidatesAsync(__hstr_input.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(consuming: __result);
         }
     }
-    public func GetCandidates(input : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+    public func GetCandidates(input : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCandidatesAsync(input: input)!.get())
@@ -387,15 +387,15 @@ open class ITextConversionGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCandidatesWithMaxCountAsync(pThis, input, maxCandidates, __presult))
         }
     }
-    public func GetCandidatesWithMaxCountAsync(input : Swift.String, maxCandidates : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
-        let __hstr_input = try HString(input);
+    public func GetCandidatesWithMaxCountAsync(input : Optional<Swift.String>, maxCandidates : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>> = nil;
         try self._n_GetCandidatesWithMaxCountAsync(__hstr_input.Raw(), maxCandidates, &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(consuming: __result);
         }
     }
-    public func GetCandidatesWithMaxCount(input : Swift.String, maxCandidates : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+    public func GetCandidatesWithMaxCount(input : Optional<Swift.String>, maxCandidates : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCandidatesWithMaxCountAsync(input: input, maxCandidates: maxCandidates)!.get())
@@ -431,8 +431,8 @@ open class ITextConversionGeneratorFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, languageTag, __presult))
         }
     }
-    public func Create(languageTag : Swift.String) throws -> Optional<Windows.Data.Text.ITextConversionGenerator> {
-        let __hstr_languageTag = try HString(languageTag);
+    public func Create(languageTag : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.ITextConversionGenerator> {
+        let __hstr_languageTag = try HString(languageTag!);
         return try withExtendedLifetime(__hstr_languageTag) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CITextConversionGenerator>> = nil;
         try self._n_Create(__hstr_languageTag.Raw(), &__result);
@@ -519,15 +519,15 @@ open class ITextPredictionGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCandidatesAsync(pThis, input, __presult))
         }
     }
-    public func GetCandidatesAsync(input : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
-        let __hstr_input = try HString(input);
+    public func GetCandidatesAsync(input : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>> = nil;
         try self._n_GetCandidatesAsync(__hstr_input.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(consuming: __result);
         }
     }
-    public func GetCandidates(input : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+    public func GetCandidates(input : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCandidatesAsync(input: input)!.get())
@@ -542,15 +542,15 @@ open class ITextPredictionGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCandidatesWithMaxCountAsync(pThis, input, maxCandidates, __presult))
         }
     }
-    public func GetCandidatesWithMaxCountAsync(input : Swift.String, maxCandidates : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
-        let __hstr_input = try HString(input);
+    public func GetCandidatesWithMaxCountAsync(input : Optional<Swift.String>, maxCandidates : Swift.UInt32) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>> = nil;
         try self._n_GetCandidatesWithMaxCountAsync(__hstr_input.Raw(), maxCandidates, &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(consuming: __result);
         }
     }
-    public func GetCandidatesWithMaxCount(input : Swift.String, maxCandidates : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+    public func GetCandidatesWithMaxCount(input : Optional<Swift.String>, maxCandidates : Swift.UInt32) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCandidatesWithMaxCountAsync(input: input, maxCandidates: maxCandidates)!.get())
@@ -585,15 +585,15 @@ open class ITextPredictionGenerator2
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCandidatesWithParametersAsync(pThis, input, maxCandidates, predictionOptions, previousStrings, __presult))
         }
     }
-    public func GetCandidatesWithParametersAsync(input : Swift.String, maxCandidates : Swift.UInt32, predictionOptions : Windows.Data.Text.TextPredictionOptions, previousStrings : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
-        let __hstr_input = try HString(input);
+    public func GetCandidatesWithParametersAsync(input : Optional<Swift.String>, maxCandidates : Swift.UInt32, predictionOptions : Windows.Data.Text.TextPredictionOptions, previousStrings : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING>> = nil;
         try self._n_GetCandidatesWithParametersAsync(__hstr_input.Raw(), maxCandidates, predictionOptions, RawPointer(previousStrings), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1_HSTRING(consuming: __result);
         }
     }
-    public func GetCandidatesWithParameters(input : Swift.String, maxCandidates : Swift.UInt32, predictionOptions : Windows.Data.Text.TextPredictionOptions, previousStrings : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
+    public func GetCandidatesWithParameters(input : Optional<Swift.String>, maxCandidates : Swift.UInt32, predictionOptions : Windows.Data.Text.TextPredictionOptions, previousStrings : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Optional<ClosedGenerics.IVectorView_1_HSTRING> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCandidatesWithParametersAsync(input: input, maxCandidates: maxCandidates, predictionOptions: predictionOptions, previousStrings: previousStrings)!.get())
@@ -664,8 +664,8 @@ open class ITextPredictionGeneratorFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, languageTag, __presult))
         }
     }
-    public func Create(languageTag : Swift.String) throws -> Optional<Windows.Data.Text.ITextPredictionGenerator> {
-        let __hstr_languageTag = try HString(languageTag);
+    public func Create(languageTag : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.ITextPredictionGenerator> {
+        let __hstr_languageTag = try HString(languageTag!);
         return try withExtendedLifetime(__hstr_languageTag) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CITextPredictionGenerator>> = nil;
         try self._n_Create(__hstr_languageTag.Raw(), &__result);
@@ -710,15 +710,15 @@ open class ITextReverseConversionGenerator
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertBackAsync(pThis, input, __presult))
         }
     }
-    public func ConvertBackAsync(input : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
-        let __hstr_input = try HString(input);
+    public func ConvertBackAsync(input : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_HSTRING>> = nil;
         try self._n_ConvertBackAsync(__hstr_input.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1_HSTRING(consuming: __result);
         }
     }
-    public func ConvertBack(input : Swift.String) async throws -> Swift.String {
+    public func ConvertBack(input : Optional<Swift.String>) async throws -> Swift.String {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ConvertBackAsync(input: input)!.get())
@@ -753,15 +753,15 @@ open class ITextReverseConversionGenerator2
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetPhonemesAsync(pThis, input, __presult))
         }
     }
-    public func GetPhonemesAsync(input : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CTextPhoneme> {
-        let __hstr_input = try HString(input);
+    public func GetPhonemesAsync(input : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CTextPhoneme> {
+        let __hstr_input = try HString(input!);
         return try withExtendedLifetime(__hstr_input) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CTextPhoneme>> = nil;
         try self._n_GetPhonemesAsync(__hstr_input.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CTextPhoneme(consuming: __result);
         }
     }
-    public func GetPhonemes(input : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CTextPhoneme> {
+    public func GetPhonemes(input : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CTextPhoneme> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetPhonemesAsync(input: input)!.get())
@@ -787,8 +787,8 @@ open class ITextReverseConversionGeneratorFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, languageTag, __presult))
         }
     }
-    public func Create(languageTag : Swift.String) throws -> Optional<Windows.Data.Text.ITextReverseConversionGenerator> {
-        let __hstr_languageTag = try HString(languageTag);
+    public func Create(languageTag : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.ITextReverseConversionGenerator> {
+        let __hstr_languageTag = try HString(languageTag!);
         return try withExtendedLifetime(__hstr_languageTag) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CITextReverseConversionGenerator>> = nil;
         try self._n_Create(__hstr_languageTag.Raw(), &__result);
@@ -1079,8 +1079,8 @@ open class IWordsSegmenter
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTokenAt(pThis, text, startIndex, __presult))
         }
     }
-    public func GetTokenAt(text : Swift.String, startIndex : Swift.UInt32) throws -> Optional<Windows.Data.Text.IWordSegment> {
-        let __hstr_text = try HString(text);
+    public func GetTokenAt(text : Optional<Swift.String>, startIndex : Swift.UInt32) throws -> Optional<Windows.Data.Text.IWordSegment> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CIWordSegment>> = nil;
         try self._n_GetTokenAt(__hstr_text.Raw(), startIndex, &__result);
@@ -1093,8 +1093,8 @@ open class IWordsSegmenter
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTokens(pThis, text, __presult))
         }
     }
-    public func GetTokens(text : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CWordSegment> {
-        let __hstr_text = try HString(text);
+    public func GetTokens(text : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CData_CText_CWordSegment> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CData_CText_CWordSegment>> = nil;
         try self._n_GetTokens(__hstr_text.Raw(), &__result);
@@ -1107,8 +1107,8 @@ open class IWordsSegmenter
             try CHECKED(pThis.pointee.lpVtbl.pointee.Tokenize(pThis, text, startIndex, handler))
         }
     }
-    public func Tokenize(text : Swift.String, startIndex : Swift.UInt32, handler : Optional<Windows.Data.Text.IWordSegmentsTokenizingHandler>) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func Tokenize(text : Optional<Swift.String>, startIndex : Swift.UInt32, handler : Optional<Windows.Data.Text.IWordSegmentsTokenizingHandler>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_Tokenize(__hstr_text.Raw(), startIndex, RawPointer(handler));
         }
@@ -1135,8 +1135,8 @@ open class IWordsSegmenterFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithLanguage(pThis, language, __presult))
         }
     }
-    public func CreateWithLanguage(language : Swift.String) throws -> Optional<Windows.Data.Text.IWordsSegmenter> {
-        let __hstr_language = try HString(language);
+    public func CreateWithLanguage(language : Optional<Swift.String>) throws -> Optional<Windows.Data.Text.IWordsSegmenter> {
+        let __hstr_language = try HString(language!);
         return try withExtendedLifetime(__hstr_language) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CText_CIWordsSegmenter>> = nil;
         try self._n_CreateWithLanguage(__hstr_language.Raw(), &__result);

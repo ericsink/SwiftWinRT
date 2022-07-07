@@ -285,8 +285,8 @@ open class IWebViewControlProcessOptions
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EnterpriseId(pThis, value))
         }
     }
-    public func put_EnterpriseId(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_EnterpriseId(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_EnterpriseId(__hstr_value.Raw());
         }

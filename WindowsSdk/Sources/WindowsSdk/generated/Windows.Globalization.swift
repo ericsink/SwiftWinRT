@@ -35,8 +35,8 @@ open class ILanguageFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateLanguage(pThis, languageTag, __presult))
         }
     }
-    public func CreateLanguage(languageTag : Swift.String) throws -> Optional<Windows.Globalization.ILanguage> {
-        let __hstr_languageTag = try HString(languageTag);
+    public func CreateLanguage(languageTag : Optional<Swift.String>) throws -> Optional<Windows.Globalization.ILanguage> {
+        let __hstr_languageTag = try HString(languageTag!);
         return try withExtendedLifetime(__hstr_languageTag) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CGlobalization_CILanguage>> = nil;
         try self._n_CreateLanguage(__hstr_languageTag.Raw(), &__result);

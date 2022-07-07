@@ -2341,8 +2341,8 @@ open class ICanvasFontFace
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetSupportedTypographicFeatureNamesWithLocale(pThis, script, locale, __presultLength, __presult))
         }
     }
-    public func GetSupportedTypographicFeatureNamesWithLocale(script : Microsoft.Graphics.Canvas.Text.CanvasAnalyzedScript, locale : Swift.String) throws -> UINT32 {
-        let __hstr_locale = try HString(locale);
+    public func GetSupportedTypographicFeatureNamesWithLocale(script : Microsoft.Graphics.Canvas.Text.CanvasAnalyzedScript, locale : Optional<Swift.String>) throws -> UINT32 {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __resultLength : UINT32 = 0;
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypographyFeatureName>> = nil;
@@ -2368,8 +2368,8 @@ open class ICanvasFontFace
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetTypographicFeatureGlyphSupportWithLocale(pThis, script, typographicFeatureName, glyphsElementsLength, glyphsElements, locale, __presultLength, __presult))
         }
     }
-    public func GetTypographicFeatureGlyphSupportWithLocale(script : Microsoft.Graphics.Canvas.Text.CanvasAnalyzedScript, typographicFeatureName : Microsoft.Graphics.Canvas.Text.CanvasTypographyFeatureName, glyphsElementsLength : UINT32, glyphsElements : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, locale : Swift.String) throws -> UINT32 {
-        let __hstr_locale = try HString(locale);
+    public func GetTypographicFeatureGlyphSupportWithLocale(script : Microsoft.Graphics.Canvas.Text.CanvasAnalyzedScript, typographicFeatureName : Microsoft.Graphics.Canvas.Text.CanvasTypographyFeatureName, glyphsElementsLength : UINT32, glyphsElements : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>>, locale : Optional<Swift.String>) throws -> UINT32 {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __resultLength : UINT32 = 0;
         var __result : Optional<UnsafeMutablePointer<boolean>> = nil;
@@ -2583,8 +2583,8 @@ open class ICanvasFontSet
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetMatchingFontsFromWwsFamily(pThis, familyName, weight, stretch, style, __presult))
         }
     }
-    public func GetMatchingFontsFromWwsFamily(familyName : Swift.String, weight : Windows.UI.Text.FontWeight, stretch : Windows.UI.Text.FontStretch, style : Windows.UI.Text.FontStyle) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasFontSet> {
-        let __hstr_familyName = try HString(familyName);
+    public func GetMatchingFontsFromWwsFamily(familyName : Optional<Swift.String>, weight : Windows.UI.Text.FontWeight, stretch : Windows.UI.Text.FontStretch, style : Windows.UI.Text.FontStyle) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasFontSet> {
+        let __hstr_familyName = try HString(familyName!);
         return try withExtendedLifetime(__hstr_familyName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasFontSet>> = nil;
         try self._n_GetMatchingFontsFromWwsFamily(__hstr_familyName.Raw(), weight, stretch, style, &__result);
@@ -2619,8 +2619,8 @@ open class ICanvasFontSet
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetPropertyValuesFromIdentifier(pThis, propertyIdentifier, preferredLocaleNames, __presultLength, __presult))
         }
     }
-    public func GetPropertyValuesFromIdentifier(propertyIdentifier : Microsoft.Graphics.Canvas.Text.CanvasFontPropertyIdentifier, preferredLocaleNames : Swift.String) throws -> UINT32 {
-        let __hstr_preferredLocaleNames = try HString(preferredLocaleNames);
+    public func GetPropertyValuesFromIdentifier(propertyIdentifier : Microsoft.Graphics.Canvas.Text.CanvasFontPropertyIdentifier, preferredLocaleNames : Optional<Swift.String>) throws -> UINT32 {
+        let __hstr_preferredLocaleNames = try HString(preferredLocaleNames!);
         return try withExtendedLifetime(__hstr_preferredLocaleNames) {
         var __resultLength : UINT32 = 0;
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasFontProperty>> = nil;
@@ -2726,8 +2726,8 @@ open class ICanvasNumberSubstitutionFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithLocaleAndIgnoreOverrides(pThis, method, localeName, ignoreEnvironmentOverrides, __presult))
         }
     }
-    public func CreateWithLocaleAndIgnoreOverrides(method : Microsoft.Graphics.Canvas.Text.CanvasNumberSubstitutionMethod, localeName : Swift.String, ignoreEnvironmentOverrides : boolean) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasNumberSubstitution> {
-        let __hstr_localeName = try HString(localeName);
+    public func CreateWithLocaleAndIgnoreOverrides(method : Microsoft.Graphics.Canvas.Text.CanvasNumberSubstitutionMethod, localeName : Optional<Swift.String>, ignoreEnvironmentOverrides : boolean) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasNumberSubstitution> {
+        let __hstr_localeName = try HString(localeName!);
         return try withExtendedLifetime(__hstr_localeName) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasNumberSubstitution>> = nil;
         try self._n_CreateWithLocaleAndIgnoreOverrides(method, __hstr_localeName.Raw(), ignoreEnvironmentOverrides, &__result);
@@ -2825,8 +2825,8 @@ open class ICanvasTextAnalyzer
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetBidiWithLocale(pThis, locale, __presult))
         }
     }
-    public func GetBidiWithLocale(locale : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi> {
-        let __hstr_locale = try HString(locale);
+    public func GetBidiWithLocale(locale : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi> {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBidi>> = nil;
         try self._n_GetBidiWithLocale(__hstr_locale.Raw(), &__result);
@@ -2851,8 +2851,8 @@ open class ICanvasTextAnalyzer
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetBreakpointsWithLocale(pThis, locale, __presultLength, __presult))
         }
     }
-    public func GetBreakpointsWithLocale(locale : Swift.String) throws -> UINT32 {
-        let __hstr_locale = try HString(locale);
+    public func GetBreakpointsWithLocale(locale : Optional<Swift.String>) throws -> UINT32 {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __resultLength : UINT32 = 0;
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedBreakpoint>> = nil;
@@ -2888,8 +2888,8 @@ open class ICanvasTextAnalyzer
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetScriptWithLocale(pThis, locale, __presult))
         }
     }
-    public func GetScriptWithLocale(locale : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript> {
-        let __hstr_locale = try HString(locale);
+    public func GetScriptWithLocale(locale : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript> {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedScript>> = nil;
         try self._n_GetScriptWithLocale(__hstr_locale.Raw(), &__result);
@@ -2913,8 +2913,8 @@ open class ICanvasTextAnalyzer
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetGlyphOrientationsWithLocale(pThis, locale, __presult))
         }
     }
-    public func GetGlyphOrientationsWithLocale(locale : Swift.String) throws -> Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation> {
-        let __hstr_locale = try HString(locale);
+    public func GetGlyphOrientationsWithLocale(locale : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation> {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasAnalyzedGlyphOrientation>> = nil;
         try self._n_GetGlyphOrientationsWithLocale(__hstr_locale.Raw(), &__result);
@@ -2950,8 +2950,8 @@ open class ICanvasTextAnalyzer
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetGlyphsWithAllOptions(pThis, characterRange, fontFace, fontSize, isSideways, isRightToLeft, script, locale, numberSubstitution, typographyRanges, clusterMapIndicesElementsLength, clusterMapIndicesElements, isShapedAloneGlyphsElementsLength, isShapedAloneGlyphsElements, glyphShapingResultsElementsLength, glyphShapingResultsElements, __presultLength, __presult))
         }
     }
-    public func GetGlyphsWithAllOptions(characterRange : Microsoft.Graphics.Canvas.Text.CanvasCharacterRange, fontFace : Optional<Microsoft.Graphics.Canvas.Text.ICanvasFontFace>, fontSize : Swift.Float, isSideways : boolean, isRightToLeft : boolean, script : Microsoft.Graphics.Canvas.Text.CanvasAnalyzedScript, locale : Swift.String, numberSubstitution : Optional<Microsoft.Graphics.Canvas.Text.ICanvasNumberSubstitution>, typographyRanges : Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography>, clusterMapIndicesElementsLength : inout UINT32, clusterMapIndicesElements : inout Optional<UnsafeMutablePointer<INT32>>, isShapedAloneGlyphsElementsLength : inout UINT32, isShapedAloneGlyphsElements : inout Optional<UnsafeMutablePointer<boolean>>, glyphShapingResultsElementsLength : inout UINT32, glyphShapingResultsElements : inout Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping>>) throws -> UINT32 {
-        let __hstr_locale = try HString(locale);
+    public func GetGlyphsWithAllOptions(characterRange : Microsoft.Graphics.Canvas.Text.CanvasCharacterRange, fontFace : Optional<Microsoft.Graphics.Canvas.Text.ICanvasFontFace>, fontSize : Swift.Float, isSideways : boolean, isRightToLeft : boolean, script : Microsoft.Graphics.Canvas.Text.CanvasAnalyzedScript, locale : Optional<Swift.String>, numberSubstitution : Optional<Microsoft.Graphics.Canvas.Text.ICanvasNumberSubstitution>, typographyRanges : Optional<ClosedGenerics.IVectorView_1__cg_CWindows_CFoundation_CCollections_IKeyValuePair_2__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasCharacterRange__q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasTypography>, clusterMapIndicesElementsLength : inout UINT32, clusterMapIndicesElements : inout Optional<UnsafeMutablePointer<INT32>>, isShapedAloneGlyphsElementsLength : inout UINT32, isShapedAloneGlyphsElements : inout Optional<UnsafeMutablePointer<boolean>>, glyphShapingResultsElementsLength : inout UINT32, glyphShapingResultsElements : inout Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyphShaping>>) throws -> UINT32 {
+        let __hstr_locale = try HString(locale!);
         return try withExtendedLifetime(__hstr_locale) {
         var __resultLength : UINT32 = 0;
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CCanvasGlyph>> = nil;
@@ -3036,8 +3036,8 @@ open class ICanvasTextAnalyzerFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, text, textDirection, __presult))
         }
     }
-    public func Create(text : Swift.String, textDirection : Microsoft.Graphics.Canvas.Text.CanvasTextDirection) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzer> {
-        let __hstr_text = try HString(text);
+    public func Create(text : Optional<Swift.String>, textDirection : Microsoft.Graphics.Canvas.Text.CanvasTextDirection) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzer> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer>> = nil;
         try self._n_Create(__hstr_text.Raw(), textDirection, &__result);
@@ -3050,8 +3050,8 @@ open class ICanvasTextAnalyzerFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithNumberSubstitutionAndVerticalGlyphOrientationAndBidiLevel(pThis, text, textDirection, numberSubstitution, verticalGlyphOrientation, bidiLevel, __presult))
         }
     }
-    public func CreateWithNumberSubstitutionAndVerticalGlyphOrientationAndBidiLevel(text : Swift.String, textDirection : Microsoft.Graphics.Canvas.Text.CanvasTextDirection, numberSubstitution : Optional<Microsoft.Graphics.Canvas.Text.ICanvasNumberSubstitution>, verticalGlyphOrientation : Microsoft.Graphics.Canvas.Text.CanvasVerticalGlyphOrientation, bidiLevel : Swift.UInt32) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzer> {
-        let __hstr_text = try HString(text);
+    public func CreateWithNumberSubstitutionAndVerticalGlyphOrientationAndBidiLevel(text : Optional<Swift.String>, textDirection : Microsoft.Graphics.Canvas.Text.CanvasTextDirection, numberSubstitution : Optional<Microsoft.Graphics.Canvas.Text.ICanvasNumberSubstitution>, verticalGlyphOrientation : Microsoft.Graphics.Canvas.Text.CanvasVerticalGlyphOrientation, bidiLevel : Swift.UInt32) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzer> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer>> = nil;
         try self._n_CreateWithNumberSubstitutionAndVerticalGlyphOrientationAndBidiLevel(__hstr_text.Raw(), textDirection, RawPointer(numberSubstitution), verticalGlyphOrientation, bidiLevel, &__result);
@@ -3064,8 +3064,8 @@ open class ICanvasTextAnalyzerFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithOptions(pThis, text, textDirection, options, __presult))
         }
     }
-    public func CreateWithOptions(text : Swift.String, textDirection : Microsoft.Graphics.Canvas.Text.CanvasTextDirection, options : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzerOptions>) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzer> {
-        let __hstr_text = try HString(text);
+    public func CreateWithOptions(text : Optional<Swift.String>, textDirection : Microsoft.Graphics.Canvas.Text.CanvasTextDirection, options : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzerOptions>) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextAnalyzer> {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextAnalyzer>> = nil;
         try self._n_CreateWithOptions(__hstr_text.Raw(), textDirection, RawPointer(options), &__result);
@@ -3133,8 +3133,8 @@ open class ICanvasTextFormat
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_FontFamily(pThis, value))
         }
     }
-    public func put_FontFamily(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_FontFamily(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_FontFamily(__hstr_value.Raw());
         }
@@ -3296,8 +3296,8 @@ open class ICanvasTextFormat
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_LocaleName(pThis, value))
         }
     }
-    public func put_LocaleName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_LocaleName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_LocaleName(__hstr_value.Raw());
         }
@@ -3379,8 +3379,8 @@ open class ICanvasTextFormat
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrimmingDelimiter(pThis, value))
         }
     }
-    public func put_TrimmingDelimiter(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_TrimmingDelimiter(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_TrimmingDelimiter(__hstr_value.Raw());
         }
@@ -3976,8 +3976,8 @@ open class ICanvasTextLayout
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_TrimmingDelimiter(pThis, value))
         }
     }
-    public func put_TrimmingDelimiter(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_TrimmingDelimiter(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_TrimmingDelimiter(__hstr_value.Raw());
         }
@@ -4287,8 +4287,8 @@ open class ICanvasTextLayout
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetFontFamily(pThis, characterIndex, characterCount, fontFamily))
         }
     }
-    public func SetFontFamily(characterIndex : Swift.Int32, characterCount : Swift.Int32, fontFamily : Swift.String) throws -> Void {
-        let __hstr_fontFamily = try HString(fontFamily);
+    public func SetFontFamily(characterIndex : Swift.Int32, characterCount : Swift.Int32, fontFamily : Optional<Swift.String>) throws -> Void {
+        let __hstr_fontFamily = try HString(fontFamily!);
         return try withExtendedLifetime(__hstr_fontFamily) {
         try self._n_SetFontFamily(characterIndex, characterCount, __hstr_fontFamily.Raw());
         }
@@ -4335,8 +4335,8 @@ open class ICanvasTextLayout
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetLocaleName(pThis, characterIndex, characterCount, name))
         }
     }
-    public func SetLocaleName(characterIndex : Swift.Int32, characterCount : Swift.Int32, name : Swift.String) throws -> Void {
-        let __hstr_name = try HString(name);
+    public func SetLocaleName(characterIndex : Swift.Int32, characterCount : Swift.Int32, name : Optional<Swift.String>) throws -> Void {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         try self._n_SetLocaleName(characterIndex, characterCount, __hstr_name.Raw());
         }
@@ -4909,8 +4909,8 @@ open class ICanvasTextLayoutFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.Create(pThis, resourceCreator, textString, textFormat, requestedWidth, requestedHeight, __presult))
         }
     }
-    public func Create(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, textString : Swift.String, textFormat : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>, requestedWidth : Swift.Float, requestedHeight : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextLayout> {
-        let __hstr_textString = try HString(textString);
+    public func Create(resourceCreator : Optional<Microsoft.Graphics.Canvas.ICanvasResourceCreator>, textString : Optional<Swift.String>, textFormat : Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextFormat>, requestedWidth : Swift.Float, requestedHeight : Swift.Float) throws -> Optional<Microsoft.Graphics.Canvas.Text.ICanvasTextLayout> {
+        let __hstr_textString = try HString(textString!);
         return try withExtendedLifetime(__hstr_textString) {
         var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CGraphics_CCanvas_CText_CICanvasTextLayout>> = nil;
         try self._n_Create(RawPointer(resourceCreator), __hstr_textString.Raw(), RawPointer(textFormat), requestedWidth, requestedHeight, &__result);

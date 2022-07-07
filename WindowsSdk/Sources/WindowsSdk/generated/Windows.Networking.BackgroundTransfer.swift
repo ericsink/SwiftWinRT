@@ -1357,15 +1357,15 @@ open class IBackgroundDownloaderStaticMethods
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCurrentDownloadsForGroupAsync(pThis, group, __presult))
         }
     }
-    public func GetCurrentDownloadsForGroupAsync(group : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation> {
-        let __hstr_group = try HString(group);
+    public func GetCurrentDownloadsForGroupAsync(group : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation> {
+        let __hstr_group = try HString(group!);
         return try withExtendedLifetime(__hstr_group) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation>> = nil;
         try self._n_GetCurrentDownloadsForGroupAsync(__hstr_group.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation(consuming: __result);
         }
     }
-    public func GetCurrentDownloadsForGroup(group : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation> {
+    public func GetCurrentDownloadsForGroup(group : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CDownloadOperation> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCurrentDownloadsForGroupAsync(group: group)!.get())
@@ -1450,10 +1450,10 @@ open class IBackgroundTransferBase
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetRequestHeader(pThis, headerName, headerValue))
         }
     }
-    public func SetRequestHeader(headerName : Swift.String, headerValue : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func SetRequestHeader(headerName : Optional<Swift.String>, headerValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
-        let __hstr_headerValue = try HString(headerValue);
+        let __hstr_headerValue = try HString(headerValue!);
         return try withExtendedLifetime(__hstr_headerValue) {
         try self._n_SetRequestHeader(__hstr_headerName.Raw(), __hstr_headerValue.Raw());
         }
@@ -1516,8 +1516,8 @@ open class IBackgroundTransferBase
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Method(pThis, value))
         }
     }
-    public func put_Method(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Method(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Method(__hstr_value.Raw());
         }
@@ -1539,8 +1539,8 @@ open class IBackgroundTransferBase
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Group(pThis, value))
         }
     }
-    public func put_Group(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Group(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Group(__hstr_value.Raw());
         }
@@ -1699,10 +1699,10 @@ open class IBackgroundTransferContentPart
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetHeader(pThis, headerName, headerValue))
         }
     }
-    public func SetHeader(headerName : Swift.String, headerValue : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func SetHeader(headerName : Optional<Swift.String>, headerValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
-        let __hstr_headerValue = try HString(headerValue);
+        let __hstr_headerValue = try HString(headerValue!);
         return try withExtendedLifetime(__hstr_headerValue) {
         try self._n_SetHeader(__hstr_headerName.Raw(), __hstr_headerValue.Raw());
         }
@@ -1714,8 +1714,8 @@ open class IBackgroundTransferContentPart
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetText(pThis, value))
         }
     }
-    public func SetText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func SetText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_SetText(__hstr_value.Raw());
         }
@@ -1745,8 +1745,8 @@ open class IBackgroundTransferContentPartFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithName(pThis, name, __presult))
         }
     }
-    public func CreateWithName(name : Swift.String) throws -> Optional<Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart> {
-        let __hstr_name = try HString(name);
+    public func CreateWithName(name : Optional<Swift.String>) throws -> Optional<Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPart>> = nil;
         try self._n_CreateWithName(__hstr_name.Raw(), &__result);
@@ -1759,10 +1759,10 @@ open class IBackgroundTransferContentPartFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateWithNameAndFileName(pThis, name, fileName, __presult))
         }
     }
-    public func CreateWithNameAndFileName(name : Swift.String, fileName : Swift.String) throws -> Optional<Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart> {
-        let __hstr_name = try HString(name);
+    public func CreateWithNameAndFileName(name : Optional<Swift.String>, fileName : Optional<Swift.String>) throws -> Optional<Windows.Networking.BackgroundTransfer.IBackgroundTransferContentPart> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
-        let __hstr_fileName = try HString(fileName);
+        let __hstr_fileName = try HString(fileName!);
         return try withExtendedLifetime(__hstr_fileName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferContentPart>> = nil;
         try self._n_CreateWithNameAndFileName(__hstr_name.Raw(), __hstr_fileName.Raw(), &__result);
@@ -1858,8 +1858,8 @@ open class IBackgroundTransferGroupStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateGroup(pThis, name, __presult))
         }
     }
-    public func CreateGroup(name : Swift.String) throws -> Optional<Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup> {
-        let __hstr_name = try HString(name);
+    public func CreateGroup(name : Optional<Swift.String>) throws -> Optional<Windows.Networking.BackgroundTransfer.IBackgroundTransferGroup> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CBackgroundTransfer_CIBackgroundTransferGroup>> = nil;
         try self._n_CreateGroup(__hstr_name.Raw(), &__result);
@@ -2142,15 +2142,15 @@ open class IBackgroundUploader
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateUploadWithSubTypeAsync(pThis, uri, parts, subType, __presult))
         }
     }
-    public func CreateUploadWithSubTypeAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
-        let __hstr_subType = try HString(subType);
+    public func CreateUploadWithSubTypeAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
+        let __hstr_subType = try HString(subType!);
         return try withExtendedLifetime(__hstr_subType) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>> = nil;
         try self._n_CreateUploadWithSubTypeAsync(RawPointer(uri), RawPointer(parts), __hstr_subType.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(consuming: __result);
         }
     }
-    public func CreateUploadWithSubType(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Swift.String) async throws -> Optional<Windows.Networking.BackgroundTransfer.IUploadOperation> {
+    public func CreateUploadWithSubType(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Optional<Swift.String>) async throws -> Optional<Windows.Networking.BackgroundTransfer.IUploadOperation> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateUploadWithSubTypeAsync(uri: uri, parts: parts, subType: subType)!.get())
@@ -2165,10 +2165,10 @@ open class IBackgroundUploader
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateUploadWithSubTypeAndBoundaryAsync(pThis, uri, parts, subType, boundary, __presult))
         }
     }
-    public func CreateUploadWithSubTypeAndBoundaryAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Swift.String, boundary : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
-        let __hstr_subType = try HString(subType);
+    public func CreateUploadWithSubTypeAndBoundaryAsync(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Optional<Swift.String>, boundary : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
+        let __hstr_subType = try HString(subType!);
         return try withExtendedLifetime(__hstr_subType) {
-        let __hstr_boundary = try HString(boundary);
+        let __hstr_boundary = try HString(boundary!);
         return try withExtendedLifetime(__hstr_boundary) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>> = nil;
         try self._n_CreateUploadWithSubTypeAndBoundaryAsync(RawPointer(uri), RawPointer(parts), __hstr_subType.Raw(), __hstr_boundary.Raw(), &__result);
@@ -2176,7 +2176,7 @@ open class IBackgroundUploader
         }
         }
     }
-    public func CreateUploadWithSubTypeAndBoundary(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Swift.String, boundary : Swift.String) async throws -> Optional<Windows.Networking.BackgroundTransfer.IUploadOperation> {
+    public func CreateUploadWithSubTypeAndBoundary(uri : Optional<Windows.Foundation.IUriRuntimeClass>, parts : Optional<ClosedGenerics.IIterable_1__q_CWindows_CNetworking_CBackgroundTransfer_CBackgroundTransferContentPart>, subType : Optional<Swift.String>, boundary : Optional<Swift.String>) async throws -> Optional<Windows.Networking.BackgroundTransfer.IUploadOperation> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.CreateUploadWithSubTypeAndBoundaryAsync(uri: uri, parts: parts, subType: subType, boundary: boundary)!.get())
@@ -2404,15 +2404,15 @@ open class IBackgroundUploaderStaticMethods
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetCurrentUploadsForGroupAsync(pThis, group, __presult))
         }
     }
-    public func GetCurrentUploadsForGroupAsync(group : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
-        let __hstr_group = try HString(group);
+    public func GetCurrentUploadsForGroupAsync(group : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
+        let __hstr_group = try HString(group!);
         return try withExtendedLifetime(__hstr_group) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation>> = nil;
         try self._n_GetCurrentUploadsForGroupAsync(__hstr_group.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation(consuming: __result);
         }
     }
-    public func GetCurrentUploadsForGroup(group : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
+    public func GetCurrentUploadsForGroup(group : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CBackgroundTransfer_CUploadOperation> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetCurrentUploadsForGroupAsync(group: group)!.get())
@@ -2837,10 +2837,10 @@ open class IDownloadOperation5
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetRequestHeader(pThis, headerName, headerValue))
         }
     }
-    public func SetRequestHeader(headerName : Swift.String, headerValue : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func SetRequestHeader(headerName : Optional<Swift.String>, headerValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
-        let __hstr_headerValue = try HString(headerValue);
+        let __hstr_headerValue = try HString(headerValue!);
         return try withExtendedLifetime(__hstr_headerValue) {
         try self._n_SetRequestHeader(__hstr_headerName.Raw(), __hstr_headerValue.Raw());
         }
@@ -2852,8 +2852,8 @@ open class IDownloadOperation5
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveRequestHeader(pThis, headerName))
         }
     }
-    public func RemoveRequestHeader(headerName : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func RemoveRequestHeader(headerName : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
         try self._n_RemoveRequestHeader(__hstr_headerName.Raw());
         }
@@ -3101,10 +3101,10 @@ open class IUploadOperation4
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetRequestHeader(pThis, headerName, headerValue))
         }
     }
-    public func SetRequestHeader(headerName : Swift.String, headerValue : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func SetRequestHeader(headerName : Optional<Swift.String>, headerValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
-        let __hstr_headerValue = try HString(headerValue);
+        let __hstr_headerValue = try HString(headerValue!);
         return try withExtendedLifetime(__hstr_headerValue) {
         try self._n_SetRequestHeader(__hstr_headerName.Raw(), __hstr_headerValue.Raw());
         }
@@ -3116,8 +3116,8 @@ open class IUploadOperation4
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveRequestHeader(pThis, headerName))
         }
     }
-    public func RemoveRequestHeader(headerName : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func RemoveRequestHeader(headerName : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
         try self._n_RemoveRequestHeader(__hstr_headerName.Raw());
         }

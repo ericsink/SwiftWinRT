@@ -21,12 +21,12 @@ open class ICredentialFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreatePasswordCredential(pThis, resource, userName, password, __presult))
         }
     }
-    public func CreatePasswordCredential(resource : Swift.String, userName : Swift.String, password : Swift.String) throws -> Optional<Windows.Security.Credentials.IPasswordCredential> {
-        let __hstr_resource = try HString(resource);
+    public func CreatePasswordCredential(resource : Optional<Swift.String>, userName : Optional<Swift.String>, password : Optional<Swift.String>) throws -> Optional<Windows.Security.Credentials.IPasswordCredential> {
+        let __hstr_resource = try HString(resource!);
         return try withExtendedLifetime(__hstr_resource) {
-        let __hstr_userName = try HString(userName);
+        let __hstr_userName = try HString(userName!);
         return try withExtendedLifetime(__hstr_userName) {
-        let __hstr_password = try HString(password);
+        let __hstr_password = try HString(password!);
         return try withExtendedLifetime(__hstr_password) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CSecurity_CCredentials_CIPasswordCredential>> = nil;
         try self._n_CreatePasswordCredential(__hstr_resource.Raw(), __hstr_userName.Raw(), __hstr_password.Raw(), &__result);

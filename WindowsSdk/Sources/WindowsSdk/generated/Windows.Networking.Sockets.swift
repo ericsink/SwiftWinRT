@@ -739,8 +739,8 @@ open class IControlChannelTriggerFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateControlChannelTrigger(pThis, channelId, serverKeepAliveIntervalInMinutes, __presult))
         }
     }
-    public func CreateControlChannelTrigger(channelId : Swift.String, serverKeepAliveIntervalInMinutes : Swift.UInt32) throws -> Optional<Windows.Networking.Sockets.IControlChannelTrigger> {
-        let __hstr_channelId = try HString(channelId);
+    public func CreateControlChannelTrigger(channelId : Optional<Swift.String>, serverKeepAliveIntervalInMinutes : Swift.UInt32) throws -> Optional<Windows.Networking.Sockets.IControlChannelTrigger> {
+        let __hstr_channelId = try HString(channelId!);
         return try withExtendedLifetime(__hstr_channelId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIControlChannelTrigger>> = nil;
         try self._n_CreateControlChannelTrigger(__hstr_channelId.Raw(), serverKeepAliveIntervalInMinutes, &__result);
@@ -753,8 +753,8 @@ open class IControlChannelTriggerFactory
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateControlChannelTriggerEx(pThis, channelId, serverKeepAliveIntervalInMinutes, resourceRequestType, __presult))
         }
     }
-    public func CreateControlChannelTriggerEx(channelId : Swift.String, serverKeepAliveIntervalInMinutes : Swift.UInt32, resourceRequestType : Windows.Networking.Sockets.ControlChannelTriggerResourceType) throws -> Optional<Windows.Networking.Sockets.IControlChannelTrigger> {
-        let __hstr_channelId = try HString(channelId);
+    public func CreateControlChannelTriggerEx(channelId : Optional<Swift.String>, serverKeepAliveIntervalInMinutes : Swift.UInt32, resourceRequestType : Windows.Networking.Sockets.ControlChannelTriggerResourceType) throws -> Optional<Windows.Networking.Sockets.IControlChannelTrigger> {
+        let __hstr_channelId = try HString(channelId!);
         return try withExtendedLifetime(__hstr_channelId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CNetworking_CSockets_CIControlChannelTrigger>> = nil;
         try self._n_CreateControlChannelTriggerEx(__hstr_channelId.Raw(), serverKeepAliveIntervalInMinutes, resourceRequestType, &__result);
@@ -810,15 +810,15 @@ open class IDatagramSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConnectAsync(pThis, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func ConnectAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func ConnectAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_ConnectAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func Connect(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) async throws -> Void {
+    public func Connect(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ConnectAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!.get())
@@ -853,15 +853,15 @@ open class IDatagramSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindServiceNameAsync(pThis, localServiceName, __presult))
         }
     }
-    public func BindServiceNameAsync(localServiceName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindServiceNameAsync(localServiceName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindServiceNameAsync(__hstr_localServiceName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindServiceName(localServiceName : Swift.String) async throws -> Void {
+    public func BindServiceName(localServiceName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindServiceNameAsync(localServiceName: localServiceName)!.get())
@@ -876,15 +876,15 @@ open class IDatagramSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindEndpointAsync(pThis, localHostName, localServiceName, __presult))
         }
     }
-    public func BindEndpointAsync(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindEndpointAsync(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindEndpointAsync(RawPointer(localHostName), __hstr_localServiceName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindEndpoint(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Swift.String) async throws -> Void {
+    public func BindEndpoint(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindEndpointAsync(localHostName: localHostName, localServiceName: localServiceName)!.get())
@@ -908,15 +908,15 @@ open class IDatagramSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetOutputStreamAsync(pThis, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func GetOutputStreamAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func GetOutputStreamAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream>> = nil;
         try self._n_GetOutputStreamAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStreams_CIOutputStream(consuming: __result);
         }
     }
-    public func GetOutputStream(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) async throws -> Optional<Windows.Storage.Streams.IOutputStream> {
+    public func GetOutputStream(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) async throws -> Optional<Windows.Storage.Streams.IOutputStream> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetOutputStreamAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!.get())
@@ -996,15 +996,15 @@ open class IDatagramSocket2
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindServiceNameAndAdapterAsync(pThis, localServiceName, adapter, __presult))
         }
     }
-    public func BindServiceNameAndAdapterAsync(localServiceName : Swift.String, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindServiceNameAndAdapterAsync(localServiceName : Optional<Swift.String>, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindServiceNameAndAdapterAsync(__hstr_localServiceName.Raw(), RawPointer(adapter), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindServiceNameAndAdapter(localServiceName : Swift.String, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) async throws -> Void {
+    public func BindServiceNameAndAdapter(localServiceName : Optional<Swift.String>, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindServiceNameAndAdapterAsync(localServiceName: localServiceName, adapter: adapter)!.get())
@@ -1067,8 +1067,8 @@ open class IDatagramSocket3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnership(pThis, socketId))
         }
     }
-    public func TransferOwnership(socketId : Swift.String) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnership(socketId : Optional<Swift.String>) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnership(__hstr_socketId.Raw());
         }
@@ -1079,8 +1079,8 @@ open class IDatagramSocket3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnershipWithContext(pThis, socketId, data))
         }
     }
-    public func TransferOwnershipWithContext(socketId : Swift.String, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnershipWithContext(socketId : Optional<Swift.String>, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnershipWithContext(__hstr_socketId.Raw(), RawPointer(data));
         }
@@ -1091,8 +1091,8 @@ open class IDatagramSocket3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnershipWithContextAndKeepAliveTime(pThis, socketId, data, keepAliveTime))
         }
     }
-    public func TransferOwnershipWithContextAndKeepAliveTime(socketId : Swift.String, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>, keepAliveTime : Windows.Foundation.TimeSpan) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnershipWithContextAndKeepAliveTime(socketId : Optional<Swift.String>, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>, keepAliveTime : Windows.Foundation.TimeSpan) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnershipWithContextAndKeepAliveTime(__hstr_socketId.Raw(), RawPointer(data), keepAliveTime);
         }
@@ -1422,15 +1422,15 @@ open class IDatagramSocketStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEndpointPairsAsync(pThis, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func GetEndpointPairsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func GetEndpointPairsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
         try self._n_GetEndpointPairsAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
         }
     }
-    public func GetEndpointPairs(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairs(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetEndpointPairsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!.get())
@@ -1445,15 +1445,15 @@ open class IDatagramSocketStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEndpointPairsWithSortOptionsAsync(pThis, remoteHostName, remoteServiceName, sortOptions, __presult))
         }
     }
-    public func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : Windows.Networking.HostNameSortOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, sortOptions : Windows.Networking.HostNameSortOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
         try self._n_GetEndpointPairsWithSortOptionsAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), sortOptions, &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
         }
     }
-    public func GetEndpointPairsWithSortOptions(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : Windows.Networking.HostNameSortOptions) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairsWithSortOptions(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, sortOptions : Windows.Networking.HostNameSortOptions) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetEndpointPairsWithSortOptionsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, sortOptions: sortOptions)!.get())
@@ -1928,8 +1928,8 @@ open class IServerMessageWebSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.CloseWithStatus(pThis, code, reason))
         }
     }
-    public func CloseWithStatus(code : Swift.UInt16, reason : Swift.String) throws -> Void {
-        let __hstr_reason = try HString(reason);
+    public func CloseWithStatus(code : Swift.UInt16, reason : Optional<Swift.String>) throws -> Void {
+        let __hstr_reason = try HString(reason!);
         return try withExtendedLifetime(__hstr_reason) {
         try self._n_CloseWithStatus(code, __hstr_reason.Raw());
         }
@@ -2111,8 +2111,8 @@ open class IServerStreamWebSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.CloseWithStatus(pThis, code, reason))
         }
     }
-    public func CloseWithStatus(code : Swift.UInt16, reason : Swift.String) throws -> Void {
-        let __hstr_reason = try HString(reason);
+    public func CloseWithStatus(code : Swift.UInt16, reason : Optional<Swift.String>) throws -> Void {
+        let __hstr_reason = try HString(reason!);
         return try withExtendedLifetime(__hstr_reason) {
         try self._n_CloseWithStatus(code, __hstr_reason.Raw());
         }
@@ -2529,15 +2529,15 @@ open class IStreamSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConnectAsync(pThis, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func ConnectAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func ConnectAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_ConnectAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func Connect(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) async throws -> Void {
+    public func Connect(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ConnectAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!.get())
@@ -2572,15 +2572,15 @@ open class IStreamSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConnectWithProtectionLevelAsync(pThis, remoteHostName, remoteServiceName, protectionLevel, __presult))
         }
     }
-    public func ConnectWithProtectionLevelAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func ConnectWithProtectionLevelAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_ConnectWithProtectionLevelAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), protectionLevel, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func ConnectWithProtectionLevel(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) async throws -> Void {
+    public func ConnectWithProtectionLevel(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ConnectWithProtectionLevelAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, protectionLevel: protectionLevel)!.get())
@@ -2645,15 +2645,15 @@ open class IStreamSocket2
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConnectWithProtectionLevelAndAdapterAsync(pThis, remoteHostName, remoteServiceName, protectionLevel, adapter, __presult))
         }
     }
-    public func ConnectWithProtectionLevelAndAdapterAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func ConnectWithProtectionLevelAndAdapterAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_ConnectWithProtectionLevelAndAdapterAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), protectionLevel, RawPointer(adapter), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func ConnectWithProtectionLevelAndAdapter(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) async throws -> Void {
+    public func ConnectWithProtectionLevelAndAdapter(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.ConnectWithProtectionLevelAndAdapterAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, protectionLevel: protectionLevel, adapter: adapter)!.get())
@@ -2716,8 +2716,8 @@ open class IStreamSocket3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnership(pThis, socketId))
         }
     }
-    public func TransferOwnership(socketId : Swift.String) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnership(socketId : Optional<Swift.String>) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnership(__hstr_socketId.Raw());
         }
@@ -2728,8 +2728,8 @@ open class IStreamSocket3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnershipWithContext(pThis, socketId, data))
         }
     }
-    public func TransferOwnershipWithContext(socketId : Swift.String, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnershipWithContext(socketId : Optional<Swift.String>, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnershipWithContext(__hstr_socketId.Raw(), RawPointer(data));
         }
@@ -2740,8 +2740,8 @@ open class IStreamSocket3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnershipWithContextAndKeepAliveTime(pThis, socketId, data, keepAliveTime))
         }
     }
-    public func TransferOwnershipWithContextAndKeepAliveTime(socketId : Swift.String, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>, keepAliveTime : Windows.Foundation.TimeSpan) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnershipWithContextAndKeepAliveTime(socketId : Optional<Swift.String>, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>, keepAliveTime : Windows.Foundation.TimeSpan) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnershipWithContextAndKeepAliveTime(__hstr_socketId.Raw(), RawPointer(data), keepAliveTime);
         }
@@ -3284,15 +3284,15 @@ open class IStreamSocketListener
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindServiceNameAsync(pThis, localServiceName, __presult))
         }
     }
-    public func BindServiceNameAsync(localServiceName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindServiceNameAsync(localServiceName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindServiceNameAsync(__hstr_localServiceName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindServiceName(localServiceName : Swift.String) async throws -> Void {
+    public func BindServiceName(localServiceName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindServiceNameAsync(localServiceName: localServiceName)!.get())
@@ -3307,15 +3307,15 @@ open class IStreamSocketListener
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindEndpointAsync(pThis, localHostName, localServiceName, __presult))
         }
     }
-    public func BindEndpointAsync(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindEndpointAsync(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindEndpointAsync(RawPointer(localHostName), __hstr_localServiceName.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindEndpoint(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Swift.String) async throws -> Void {
+    public func BindEndpoint(localHostName : Optional<Windows.Networking.IHostName>, localServiceName : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindEndpointAsync(localHostName: localHostName, localServiceName: localServiceName)!.get())
@@ -3370,15 +3370,15 @@ open class IStreamSocketListener2
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindServiceNameWithProtectionLevelAsync(pThis, localServiceName, protectionLevel, __presult))
         }
     }
-    public func BindServiceNameWithProtectionLevelAsync(localServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindServiceNameWithProtectionLevelAsync(localServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindServiceNameWithProtectionLevelAsync(__hstr_localServiceName.Raw(), protectionLevel, &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindServiceNameWithProtectionLevel(localServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) async throws -> Void {
+    public func BindServiceNameWithProtectionLevel(localServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindServiceNameWithProtectionLevelAsync(localServiceName: localServiceName, protectionLevel: protectionLevel)!.get())
@@ -3393,15 +3393,15 @@ open class IStreamSocketListener2
             try CHECKED(pThis.pointee.lpVtbl.pointee.BindServiceNameWithProtectionLevelAndAdapterAsync(pThis, localServiceName, protectionLevel, adapter, __presult))
         }
     }
-    public func BindServiceNameWithProtectionLevelAndAdapterAsync(localServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_localServiceName = try HString(localServiceName);
+    public func BindServiceNameWithProtectionLevelAndAdapterAsync(localServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_localServiceName = try HString(localServiceName!);
         return try withExtendedLifetime(__hstr_localServiceName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_BindServiceNameWithProtectionLevelAndAdapterAsync(__hstr_localServiceName.Raw(), protectionLevel, RawPointer(adapter), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func BindServiceNameWithProtectionLevelAndAdapter(localServiceName : Swift.String, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) async throws -> Void {
+    public func BindServiceNameWithProtectionLevelAndAdapter(localServiceName : Optional<Swift.String>, protectionLevel : Windows.Networking.Sockets.SocketProtectionLevel, adapter : Optional<Windows.Networking.Connectivity.INetworkAdapter>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.BindServiceNameWithProtectionLevelAndAdapterAsync(localServiceName: localServiceName, protectionLevel: protectionLevel, adapter: adapter)!.get())
@@ -3464,8 +3464,8 @@ open class IStreamSocketListener3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnership(pThis, socketId))
         }
     }
-    public func TransferOwnership(socketId : Swift.String) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnership(socketId : Optional<Swift.String>) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnership(__hstr_socketId.Raw());
         }
@@ -3476,8 +3476,8 @@ open class IStreamSocketListener3
             try CHECKED(pThis.pointee.lpVtbl.pointee.TransferOwnershipWithContext(pThis, socketId, data))
         }
     }
-    public func TransferOwnershipWithContext(socketId : Swift.String, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>) throws -> Void {
-        let __hstr_socketId = try HString(socketId);
+    public func TransferOwnershipWithContext(socketId : Optional<Swift.String>, data : Optional<Windows.Networking.Sockets.ISocketActivityContext>) throws -> Void {
+        let __hstr_socketId = try HString(socketId!);
         return try withExtendedLifetime(__hstr_socketId) {
         try self._n_TransferOwnershipWithContext(__hstr_socketId.Raw(), RawPointer(data));
         }
@@ -3695,15 +3695,15 @@ open class IStreamSocketStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEndpointPairsAsync(pThis, remoteHostName, remoteServiceName, __presult))
         }
     }
-    public func GetEndpointPairsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func GetEndpointPairsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
         try self._n_GetEndpointPairsAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
         }
     }
-    public func GetEndpointPairs(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairs(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetEndpointPairsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName)!.get())
@@ -3718,15 +3718,15 @@ open class IStreamSocketStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetEndpointPairsWithSortOptionsAsync(pThis, remoteHostName, remoteServiceName, sortOptions, __presult))
         }
     }
-    public func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : Windows.Networking.HostNameSortOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
-        let __hstr_remoteServiceName = try HString(remoteServiceName);
+    public func GetEndpointPairsWithSortOptionsAsync(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, sortOptions : Windows.Networking.HostNameSortOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+        let __hstr_remoteServiceName = try HString(remoteServiceName!);
         return try withExtendedLifetime(__hstr_remoteServiceName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair>> = nil;
         try self._n_GetEndpointPairsWithSortOptionsAsync(RawPointer(remoteHostName), __hstr_remoteServiceName.Raw(), sortOptions, &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IVectorView_1__q_CWindows_CNetworking_CEndpointPair(consuming: __result);
         }
     }
-    public func GetEndpointPairsWithSortOptions(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Swift.String, sortOptions : Windows.Networking.HostNameSortOptions) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
+    public func GetEndpointPairsWithSortOptions(remoteHostName : Optional<Windows.Networking.IHostName>, remoteServiceName : Optional<Swift.String>, sortOptions : Windows.Networking.HostNameSortOptions) async throws -> Optional<ClosedGenerics.IVectorView_1__q_CWindows_CNetworking_CEndpointPair> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetEndpointPairsWithSortOptionsAsync(remoteHostName: remoteHostName, remoteServiceName: remoteServiceName, sortOptions: sortOptions)!.get())
@@ -3981,10 +3981,10 @@ open class IWebSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetRequestHeader(pThis, headerName, headerValue))
         }
     }
-    public func SetRequestHeader(headerName : Swift.String, headerValue : Swift.String) throws -> Void {
-        let __hstr_headerName = try HString(headerName);
+    public func SetRequestHeader(headerName : Optional<Swift.String>, headerValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_headerName = try HString(headerName!);
         return try withExtendedLifetime(__hstr_headerName) {
-        let __hstr_headerValue = try HString(headerValue);
+        let __hstr_headerValue = try HString(headerValue!);
         return try withExtendedLifetime(__hstr_headerValue) {
         try self._n_SetRequestHeader(__hstr_headerName.Raw(), __hstr_headerValue.Raw());
         }
@@ -4016,8 +4016,8 @@ open class IWebSocket
             try CHECKED(pThis.pointee.lpVtbl.pointee.CloseWithStatus(pThis, code, reason))
         }
     }
-    public func CloseWithStatus(code : Swift.UInt16, reason : Swift.String) throws -> Void {
-        let __hstr_reason = try HString(reason);
+    public func CloseWithStatus(code : Swift.UInt16, reason : Optional<Swift.String>) throws -> Void {
+        let __hstr_reason = try HString(reason!);
         return try withExtendedLifetime(__hstr_reason) {
         try self._n_CloseWithStatus(code, __hstr_reason.Raw());
         }

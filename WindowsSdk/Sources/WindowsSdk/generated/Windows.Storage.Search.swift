@@ -292,15 +292,15 @@ open class IContentIndexer
             try CHECKED(pThis.pointee.lpVtbl.pointee.DeleteAsync(pThis, contentId, __presult))
         }
     }
-    public func DeleteAsync(contentId : Swift.String) throws -> Optional<Windows.Foundation.IAsyncAction> {
-        let __hstr_contentId = try HString(contentId);
+    public func DeleteAsync(contentId : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IAsyncAction> {
+        let __hstr_contentId = try HString(contentId!);
         return try withExtendedLifetime(__hstr_contentId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIAsyncAction>> = nil;
         try self._n_DeleteAsync(__hstr_contentId.Raw(), &__result);
         return Windows.Foundation.IAsyncAction(consuming: __result);
         }
     }
-    public func Delete(contentId : Swift.String) async throws -> Void {
+    public func Delete(contentId : Optional<Swift.String>) async throws -> Void {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.DeleteAsync(contentId: contentId)!.get())
@@ -355,15 +355,15 @@ open class IContentIndexer
             try CHECKED(pThis.pointee.lpVtbl.pointee.RetrievePropertiesAsync(pThis, contentId, propertiesToRetrieve, __presult))
         }
     }
-    public func RetrievePropertiesAsync(contentId : Swift.String, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable> {
-        let __hstr_contentId = try HString(contentId);
+    public func RetrievePropertiesAsync(contentId : Optional<Swift.String>, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable> {
+        let __hstr_contentId = try HString(contentId!);
         return try withExtendedLifetime(__hstr_contentId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable>> = nil;
         try self._n_RetrievePropertiesAsync(__hstr_contentId.Raw(), RawPointer(propertiesToRetrieve), &__result);
         return ClosedGenerics.IAsyncOperation_1__cg_CWindows_CFoundation_CCollections_IMapView_2_HSTRING_IInspectable(consuming: __result);
         }
     }
-    public func RetrieveProperties(contentId : Swift.String, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Optional<ClosedGenerics.IMapView_2_HSTRING_IInspectable> {
+    public func RetrieveProperties(contentId : Optional<Swift.String>, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Optional<ClosedGenerics.IMapView_2_HSTRING_IInspectable> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.RetrievePropertiesAsync(contentId: contentId, propertiesToRetrieve: propertiesToRetrieve)!.get())
@@ -530,10 +530,10 @@ open class IContentIndexerQueryOperations
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateQueryWithSortOrderAndLanguage(pThis, searchFilter, propertiesToRetrieve, sortOrder, searchFilterLanguage, __presult))
         }
     }
-    public func CreateQueryWithSortOrderAndLanguage(searchFilter : Swift.String, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>, sortOrder : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CSearch_CSortEntry>, searchFilterLanguage : Swift.String) throws -> Optional<Windows.Storage.Search.IContentIndexerQuery> {
-        let __hstr_searchFilter = try HString(searchFilter);
+    public func CreateQueryWithSortOrderAndLanguage(searchFilter : Optional<Swift.String>, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>, sortOrder : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CSearch_CSortEntry>, searchFilterLanguage : Optional<Swift.String>) throws -> Optional<Windows.Storage.Search.IContentIndexerQuery> {
+        let __hstr_searchFilter = try HString(searchFilter!);
         return try withExtendedLifetime(__hstr_searchFilter) {
-        let __hstr_searchFilterLanguage = try HString(searchFilterLanguage);
+        let __hstr_searchFilterLanguage = try HString(searchFilterLanguage!);
         return try withExtendedLifetime(__hstr_searchFilterLanguage) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CSearch_CIContentIndexerQuery>> = nil;
         try self._n_CreateQueryWithSortOrderAndLanguage(__hstr_searchFilter.Raw(), RawPointer(propertiesToRetrieve), RawPointer(sortOrder), __hstr_searchFilterLanguage.Raw(), &__result);
@@ -547,8 +547,8 @@ open class IContentIndexerQueryOperations
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateQueryWithSortOrder(pThis, searchFilter, propertiesToRetrieve, sortOrder, __presult))
         }
     }
-    public func CreateQueryWithSortOrder(searchFilter : Swift.String, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>, sortOrder : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CSearch_CSortEntry>) throws -> Optional<Windows.Storage.Search.IContentIndexerQuery> {
-        let __hstr_searchFilter = try HString(searchFilter);
+    public func CreateQueryWithSortOrder(searchFilter : Optional<Swift.String>, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>, sortOrder : Optional<ClosedGenerics.IIterable_1__q_CWindows_CStorage_CSearch_CSortEntry>) throws -> Optional<Windows.Storage.Search.IContentIndexerQuery> {
+        let __hstr_searchFilter = try HString(searchFilter!);
         return try withExtendedLifetime(__hstr_searchFilter) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CSearch_CIContentIndexerQuery>> = nil;
         try self._n_CreateQueryWithSortOrder(__hstr_searchFilter.Raw(), RawPointer(propertiesToRetrieve), RawPointer(sortOrder), &__result);
@@ -561,8 +561,8 @@ open class IContentIndexerQueryOperations
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateQuery(pThis, searchFilter, propertiesToRetrieve, __presult))
         }
     }
-    public func CreateQuery(searchFilter : Swift.String, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<Windows.Storage.Search.IContentIndexerQuery> {
-        let __hstr_searchFilter = try HString(searchFilter);
+    public func CreateQuery(searchFilter : Optional<Swift.String>, propertiesToRetrieve : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<Windows.Storage.Search.IContentIndexerQuery> {
+        let __hstr_searchFilter = try HString(searchFilter!);
         return try withExtendedLifetime(__hstr_searchFilter) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CSearch_CIContentIndexerQuery>> = nil;
         try self._n_CreateQuery(__hstr_searchFilter.Raw(), RawPointer(propertiesToRetrieve), &__result);
@@ -585,8 +585,8 @@ open class IContentIndexerStatics
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetIndexerWithName(pThis, indexName, __presult))
         }
     }
-    public func GetIndexerWithName(indexName : Swift.String) throws -> Optional<Windows.Storage.Search.IContentIndexer> {
-        let __hstr_indexName = try HString(indexName);
+    public func GetIndexerWithName(indexName : Optional<Swift.String>) throws -> Optional<Windows.Storage.Search.IContentIndexer> {
+        let __hstr_indexName = try HString(indexName!);
         return try withExtendedLifetime(__hstr_indexName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CStorage_CSearch_CIContentIndexer>> = nil;
         try self._n_GetIndexerWithName(__hstr_indexName.Raw(), &__result);
@@ -631,8 +631,8 @@ open class IIndexableContent
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Id(pThis, value))
         }
     }
-    public func put_Id(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Id(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Id(__hstr_value.Raw());
         }
@@ -685,8 +685,8 @@ open class IIndexableContent
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_StreamContentType(pThis, value))
         }
     }
-    public func put_StreamContentType(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_StreamContentType(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_StreamContentType(__hstr_value.Raw());
         }
@@ -769,8 +769,8 @@ open class IQueryOptions
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_ApplicationSearchFilter(pThis, value))
         }
     }
-    public func put_ApplicationSearchFilter(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_ApplicationSearchFilter(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_ApplicationSearchFilter(__hstr_value.Raw());
         }
@@ -792,8 +792,8 @@ open class IQueryOptions
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_UserSearchFilter(pThis, value))
         }
     }
-    public func put_UserSearchFilter(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_UserSearchFilter(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_UserSearchFilter(__hstr_value.Raw());
         }
@@ -815,8 +815,8 @@ open class IQueryOptions
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Language(pThis, value))
         }
     }
-    public func put_Language(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Language(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Language(__hstr_value.Raw());
         }
@@ -891,8 +891,8 @@ open class IQueryOptions
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadFromString(pThis, value))
         }
     }
-    public func LoadFromString(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func LoadFromString(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_LoadFromString(__hstr_value.Raw());
         }
@@ -1673,8 +1673,8 @@ open class IValueAndLanguage
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Language(pThis, value))
         }
     }
-    public func put_Language(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Language(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Language(__hstr_value.Raw());
         }

@@ -646,8 +646,8 @@ open class IFileOpenPicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SettingsIdentifier(pThis, value))
         }
     }
-    public func put_SettingsIdentifier(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_SettingsIdentifier(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_SettingsIdentifier(__hstr_value.Raw());
         }
@@ -689,8 +689,8 @@ open class IFileOpenPicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CommitButtonText(pThis, value))
         }
     }
-    public func put_CommitButtonText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CommitButtonText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CommitButtonText(__hstr_value.Raw());
         }
@@ -908,15 +908,15 @@ open class IFileOpenPickerWithOperationId
             try CHECKED(pThis.pointee.lpVtbl.pointee.PickSingleFileAsync(pThis, pickerOperationId, __presult))
         }
     }
-    public func PickSingleFileAsync(pickerOperationId : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_pickerOperationId = try HString(pickerOperationId);
+    public func PickSingleFileAsync(pickerOperationId : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_pickerOperationId = try HString(pickerOperationId!);
         return try withExtendedLifetime(__hstr_pickerOperationId) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_PickSingleFileAsync(__hstr_pickerOperationId.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func PickSingleFile(pickerOperationId : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func PickSingleFile(pickerOperationId : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.PickSingleFileAsync(pickerOperationId: pickerOperationId)!.get())
@@ -952,8 +952,8 @@ open class IFileSavePicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SettingsIdentifier(pThis, value))
         }
     }
-    public func put_SettingsIdentifier(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_SettingsIdentifier(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_SettingsIdentifier(__hstr_value.Raw());
         }
@@ -995,8 +995,8 @@ open class IFileSavePicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CommitButtonText(pThis, value))
         }
     }
-    public func put_CommitButtonText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CommitButtonText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CommitButtonText(__hstr_value.Raw());
         }
@@ -1029,8 +1029,8 @@ open class IFileSavePicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_DefaultFileExtension(pThis, value))
         }
     }
-    public func put_DefaultFileExtension(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_DefaultFileExtension(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_DefaultFileExtension(__hstr_value.Raw());
         }
@@ -1072,8 +1072,8 @@ open class IFileSavePicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SuggestedFileName(pThis, value))
         }
     }
-    public func put_SuggestedFileName(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_SuggestedFileName(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_SuggestedFileName(__hstr_value.Raw());
         }
@@ -1195,8 +1195,8 @@ open class IFileSavePicker3
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_EnterpriseId(pThis, value))
         }
     }
-    public func put_EnterpriseId(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_EnterpriseId(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_EnterpriseId(__hstr_value.Raw());
         }
@@ -1300,8 +1300,8 @@ open class IFolderPicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_SettingsIdentifier(pThis, value))
         }
     }
-    public func put_SettingsIdentifier(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_SettingsIdentifier(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_SettingsIdentifier(__hstr_value.Raw());
         }
@@ -1343,8 +1343,8 @@ open class IFolderPicker
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_CommitButtonText(pThis, value))
         }
     }
-    public func put_CommitButtonText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_CommitButtonText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_CommitButtonText(__hstr_value.Raw());
         }

@@ -36,8 +36,8 @@ open class IHtmlUtilities
             try CHECKED(pThis.pointee.lpVtbl.pointee.ConvertToText(pThis, html, __presult))
         }
     }
-    public func ConvertToText(html : Swift.String) throws -> Swift.String {
-        let __hstr_html = try HString(html);
+    public func ConvertToText(html : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_html = try HString(html!);
         return try withExtendedLifetime(__hstr_html) {
         var __result : Optional<HSTRING> = nil;
         try self._n_ConvertToText(__hstr_html.Raw(), &__result);

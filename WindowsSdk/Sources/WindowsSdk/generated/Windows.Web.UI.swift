@@ -171,8 +171,8 @@ open class IWebViewControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.NavigateToString(pThis, text))
         }
     }
-    public func NavigateToString(text : Swift.String) throws -> Void {
-        let __hstr_text = try HString(text);
+    public func NavigateToString(text : Optional<Swift.String>) throws -> Void {
+        let __hstr_text = try HString(text!);
         return try withExtendedLifetime(__hstr_text) {
         try self._n_NavigateToString(__hstr_text.Raw());
         }
@@ -201,15 +201,15 @@ open class IWebViewControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.InvokeScriptAsync(pThis, scriptName, arguments, __presult))
         }
     }
-    public func InvokeScriptAsync(scriptName : Swift.String, arguments : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
-        let __hstr_scriptName = try HString(scriptName);
+    public func InvokeScriptAsync(scriptName : Optional<Swift.String>, arguments : Optional<ClosedGenerics.IIterable_1_HSTRING>) throws -> Optional<ClosedGenerics.IAsyncOperation_1_HSTRING> {
+        let __hstr_scriptName = try HString(scriptName!);
         return try withExtendedLifetime(__hstr_scriptName) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1_HSTRING>> = nil;
         try self._n_InvokeScriptAsync(__hstr_scriptName.Raw(), RawPointer(arguments), &__result);
         return ClosedGenerics.IAsyncOperation_1_HSTRING(consuming: __result);
         }
     }
-    public func InvokeScript(scriptName : Swift.String, arguments : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Swift.String {
+    public func InvokeScript(scriptName : Optional<Swift.String>, arguments : Optional<ClosedGenerics.IIterable_1_HSTRING>) async throws -> Swift.String {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.InvokeScriptAsync(scriptName: scriptName, arguments: arguments)!.get())
@@ -264,10 +264,10 @@ open class IWebViewControl
             try CHECKED(pThis.pointee.lpVtbl.pointee.BuildLocalStreamUri(pThis, contentIdentifier, relativePath, __presult))
         }
     }
-    public func BuildLocalStreamUri(contentIdentifier : Swift.String, relativePath : Swift.String) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
-        let __hstr_contentIdentifier = try HString(contentIdentifier);
+    public func BuildLocalStreamUri(contentIdentifier : Optional<Swift.String>, relativePath : Optional<Swift.String>) throws -> Optional<Windows.Foundation.IUriRuntimeClass> {
+        let __hstr_contentIdentifier = try HString(contentIdentifier!);
         return try withExtendedLifetime(__hstr_contentIdentifier) {
-        let __hstr_relativePath = try HString(relativePath);
+        let __hstr_relativePath = try HString(relativePath!);
         return try withExtendedLifetime(__hstr_relativePath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CFoundation_CIUriRuntimeClass>> = nil;
         try self._n_BuildLocalStreamUri(__hstr_contentIdentifier.Raw(), __hstr_relativePath.Raw(), &__result);
@@ -682,8 +682,8 @@ open class IWebViewControl2
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddInitializeScript(pThis, script))
         }
     }
-    public func AddInitializeScript(script : Swift.String) throws -> Void {
-        let __hstr_script = try HString(script);
+    public func AddInitializeScript(script : Optional<Swift.String>) throws -> Void {
+        let __hstr_script = try HString(script!);
         return try withExtendedLifetime(__hstr_script) {
         try self._n_AddInitializeScript(__hstr_script.Raw());
         }

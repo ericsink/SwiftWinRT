@@ -653,8 +653,8 @@ open class IXmlCharacterData
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Data(pThis, value))
         }
     }
-    public func put_Data(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Data(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Data(__hstr_value.Raw());
         }
@@ -687,8 +687,8 @@ open class IXmlCharacterData
             try CHECKED(pThis.pointee.lpVtbl.pointee.AppendData(pThis, data))
         }
     }
-    public func AppendData(data : Swift.String) throws -> Void {
-        let __hstr_data = try HString(data);
+    public func AppendData(data : Optional<Swift.String>) throws -> Void {
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         try self._n_AppendData(__hstr_data.Raw());
         }
@@ -699,8 +699,8 @@ open class IXmlCharacterData
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertData(pThis, offset, data))
         }
     }
-    public func InsertData(offset : Swift.UInt32, data : Swift.String) throws -> Void {
-        let __hstr_data = try HString(data);
+    public func InsertData(offset : Swift.UInt32, data : Optional<Swift.String>) throws -> Void {
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         try self._n_InsertData(offset, __hstr_data.Raw());
         }
@@ -720,8 +720,8 @@ open class IXmlCharacterData
             try CHECKED(pThis.pointee.lpVtbl.pointee.ReplaceData(pThis, offset, count, data))
         }
     }
-    public func ReplaceData(offset : Swift.UInt32, count : Swift.UInt32, data : Swift.String) throws -> Void {
-        let __hstr_data = try HString(data);
+    public func ReplaceData(offset : Swift.UInt32, count : Swift.UInt32, data : Optional<Swift.String>) throws -> Void {
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         try self._n_ReplaceData(offset, count, __hstr_data.Raw());
         }
@@ -795,8 +795,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateElement(pThis, tagName, __presult))
         }
     }
-    public func CreateElement(tagName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlElement> {
-        let __hstr_tagName = try HString(tagName);
+    public func CreateElement(tagName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlElement> {
+        let __hstr_tagName = try HString(tagName!);
         return try withExtendedLifetime(__hstr_tagName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>> = nil;
         try self._n_CreateElement(__hstr_tagName.Raw(), &__result);
@@ -820,8 +820,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateTextNode(pThis, data, __presult))
         }
     }
-    public func CreateTextNode(data : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlText> {
-        let __hstr_data = try HString(data);
+    public func CreateTextNode(data : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlText> {
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlText>> = nil;
         try self._n_CreateTextNode(__hstr_data.Raw(), &__result);
@@ -834,8 +834,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateComment(pThis, data, __presult))
         }
     }
-    public func CreateComment(data : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlComment> {
-        let __hstr_data = try HString(data);
+    public func CreateComment(data : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlComment> {
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlComment>> = nil;
         try self._n_CreateComment(__hstr_data.Raw(), &__result);
@@ -848,10 +848,10 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateProcessingInstruction(pThis, target, data, __presult))
         }
     }
-    public func CreateProcessingInstruction(target : Swift.String, data : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlProcessingInstruction> {
-        let __hstr_target = try HString(target);
+    public func CreateProcessingInstruction(target : Optional<Swift.String>, data : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlProcessingInstruction> {
+        let __hstr_target = try HString(target!);
         return try withExtendedLifetime(__hstr_target) {
-        let __hstr_data = try HString(data);
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlProcessingInstruction>> = nil;
         try self._n_CreateProcessingInstruction(__hstr_target.Raw(), __hstr_data.Raw(), &__result);
@@ -865,8 +865,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateAttribute(pThis, name, __presult))
         }
     }
-    public func CreateAttribute(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
-        let __hstr_name = try HString(name);
+    public func CreateAttribute(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
         try self._n_CreateAttribute(__hstr_name.Raw(), &__result);
@@ -879,8 +879,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateEntityReference(pThis, name, __presult))
         }
     }
-    public func CreateEntityReference(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlEntityReference> {
-        let __hstr_name = try HString(name);
+    public func CreateEntityReference(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlEntityReference> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlEntityReference>> = nil;
         try self._n_CreateEntityReference(__hstr_name.Raw(), &__result);
@@ -893,8 +893,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetElementsByTagName(pThis, tagName, __presult))
         }
     }
-    public func GetElementsByTagName(tagName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
-        let __hstr_tagName = try HString(tagName);
+    public func GetElementsByTagName(tagName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
+        let __hstr_tagName = try HString(tagName!);
         return try withExtendedLifetime(__hstr_tagName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>> = nil;
         try self._n_GetElementsByTagName(__hstr_tagName.Raw(), &__result);
@@ -907,8 +907,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateCDataSection(pThis, data, __presult))
         }
     }
-    public func CreateCDataSection(data : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlCDataSection> {
-        let __hstr_data = try HString(data);
+    public func CreateCDataSection(data : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlCDataSection> {
+        let __hstr_data = try HString(data!);
         return try withExtendedLifetime(__hstr_data) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlCDataSection>> = nil;
         try self._n_CreateCDataSection(__hstr_data.Raw(), &__result);
@@ -932,8 +932,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateAttributeNS(pThis, namespaceUri, qualifiedName, __presult))
         }
     }
-    public func CreateAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
-        let __hstr_qualifiedName = try HString(qualifiedName);
+    public func CreateAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        let __hstr_qualifiedName = try HString(qualifiedName!);
         return try withExtendedLifetime(__hstr_qualifiedName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
         try self._n_CreateAttributeNS(RawPointer(namespaceUri), __hstr_qualifiedName.Raw(), &__result);
@@ -946,8 +946,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.CreateElementNS(pThis, namespaceUri, qualifiedName, __presult))
         }
     }
-    public func CreateElementNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlElement> {
-        let __hstr_qualifiedName = try HString(qualifiedName);
+    public func CreateElementNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlElement> {
+        let __hstr_qualifiedName = try HString(qualifiedName!);
         return try withExtendedLifetime(__hstr_qualifiedName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>> = nil;
         try self._n_CreateElementNS(RawPointer(namespaceUri), __hstr_qualifiedName.Raw(), &__result);
@@ -960,8 +960,8 @@ open class IXmlDocument
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetElementById(pThis, elementId, __presult))
         }
     }
-    public func GetElementById(elementId : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlElement> {
-        let __hstr_elementId = try HString(elementId);
+    public func GetElementById(elementId : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlElement> {
+        let __hstr_elementId = try HString(elementId!);
         return try withExtendedLifetime(__hstr_elementId) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlElement>> = nil;
         try self._n_GetElementById(__hstr_elementId.Raw(), &__result);
@@ -1025,8 +1025,8 @@ open class IXmlDocumentIO
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXml(pThis, xml))
         }
     }
-    public func LoadXml(xml : Swift.String) throws -> Void {
-        let __hstr_xml = try HString(xml);
+    public func LoadXml(xml : Optional<Swift.String>) throws -> Void {
+        let __hstr_xml = try HString(xml!);
         return try withExtendedLifetime(__hstr_xml) {
         try self._n_LoadXml(__hstr_xml.Raw());
         }
@@ -1037,8 +1037,8 @@ open class IXmlDocumentIO
             try CHECKED(pThis.pointee.lpVtbl.pointee.LoadXmlWithSettings(pThis, xml, loadSettings))
         }
     }
-    public func LoadXmlWithSettings(xml : Swift.String, loadSettings : Optional<Windows.Data.Xml.Dom.IXmlLoadSettings>) throws -> Void {
-        let __hstr_xml = try HString(xml);
+    public func LoadXmlWithSettings(xml : Optional<Swift.String>, loadSettings : Optional<Windows.Data.Xml.Dom.IXmlLoadSettings>) throws -> Void {
+        let __hstr_xml = try HString(xml!);
         return try withExtendedLifetime(__hstr_xml) {
         try self._n_LoadXmlWithSettings(__hstr_xml.Raw(), RawPointer(loadSettings));
         }
@@ -1255,8 +1255,8 @@ open class IXmlDomImplementation
             try CHECKED(pThis.pointee.lpVtbl.pointee.HasFeature(pThis, feature, version, __presult))
         }
     }
-    public func HasFeature(feature : Swift.String, version : Optional<WinRT.IInspectable>) throws -> boolean {
-        let __hstr_feature = try HString(feature);
+    public func HasFeature(feature : Optional<Swift.String>, version : Optional<WinRT.IInspectable>) throws -> boolean {
+        let __hstr_feature = try HString(feature!);
         return try withExtendedLifetime(__hstr_feature) {
         var __result : boolean = 0;
         try self._n_HasFeature(__hstr_feature.Raw(), RawPointer(version), &__result);
@@ -1290,8 +1290,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttribute(pThis, attributeName, __presult))
         }
     }
-    public func GetAttribute(attributeName : Swift.String) throws -> Swift.String {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetAttribute(attributeName : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : Optional<HSTRING> = nil;
         try self._n_GetAttribute(__hstr_attributeName.Raw(), &__result);
@@ -1304,10 +1304,10 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttribute(pThis, attributeName, attributeValue))
         }
     }
-    public func SetAttribute(attributeName : Swift.String, attributeValue : Swift.String) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func SetAttribute(attributeName : Optional<Swift.String>, attributeValue : Optional<Swift.String>) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
-        let __hstr_attributeValue = try HString(attributeValue);
+        let __hstr_attributeValue = try HString(attributeValue!);
         return try withExtendedLifetime(__hstr_attributeValue) {
         try self._n_SetAttribute(__hstr_attributeName.Raw(), __hstr_attributeValue.Raw());
         }
@@ -1319,8 +1319,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAttribute(pThis, attributeName))
         }
     }
-    public func RemoveAttribute(attributeName : Swift.String) throws -> Void {
-        let __hstr_attributeName = try HString(attributeName);
+    public func RemoveAttribute(attributeName : Optional<Swift.String>) throws -> Void {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         try self._n_RemoveAttribute(__hstr_attributeName.Raw());
         }
@@ -1331,8 +1331,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttributeNode(pThis, attributeName, __presult))
         }
     }
-    public func GetAttributeNode(attributeName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
-        let __hstr_attributeName = try HString(attributeName);
+    public func GetAttributeNode(attributeName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        let __hstr_attributeName = try HString(attributeName!);
         return try withExtendedLifetime(__hstr_attributeName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
         try self._n_GetAttributeNode(__hstr_attributeName.Raw(), &__result);
@@ -1367,8 +1367,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetElementsByTagName(pThis, tagName, __presult))
         }
     }
-    public func GetElementsByTagName(tagName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
-        let __hstr_tagName = try HString(tagName);
+    public func GetElementsByTagName(tagName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
+        let __hstr_tagName = try HString(tagName!);
         return try withExtendedLifetime(__hstr_tagName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>> = nil;
         try self._n_GetElementsByTagName(__hstr_tagName.Raw(), &__result);
@@ -1381,10 +1381,10 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAttributeNS(pThis, namespaceUri, qualifiedName, value))
         }
     }
-    public func SetAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Swift.String, value : Swift.String) throws -> Void {
-        let __hstr_qualifiedName = try HString(qualifiedName);
+    public func SetAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, qualifiedName : Optional<Swift.String>, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_qualifiedName = try HString(qualifiedName!);
         return try withExtendedLifetime(__hstr_qualifiedName) {
-        let __hstr_value = try HString(value);
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_SetAttributeNS(RawPointer(namespaceUri), __hstr_qualifiedName.Raw(), __hstr_value.Raw());
         }
@@ -1396,8 +1396,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttributeNS(pThis, namespaceUri, localName, __presult))
         }
     }
-    public func GetAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Swift.String) throws -> Swift.String {
-        let __hstr_localName = try HString(localName);
+    public func GetAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_localName = try HString(localName!);
         return try withExtendedLifetime(__hstr_localName) {
         var __result : Optional<HSTRING> = nil;
         try self._n_GetAttributeNS(RawPointer(namespaceUri), __hstr_localName.Raw(), &__result);
@@ -1410,8 +1410,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveAttributeNS(pThis, namespaceUri, localName))
         }
     }
-    public func RemoveAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Swift.String) throws -> Void {
-        let __hstr_localName = try HString(localName);
+    public func RemoveAttributeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Optional<Swift.String>) throws -> Void {
+        let __hstr_localName = try HString(localName!);
         return try withExtendedLifetime(__hstr_localName) {
         try self._n_RemoveAttributeNS(RawPointer(namespaceUri), __hstr_localName.Raw());
         }
@@ -1433,8 +1433,8 @@ open class IXmlElement
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetAttributeNodeNS(pThis, namespaceUri, localName, __presult))
         }
     }
-    public func GetAttributeNodeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
-        let __hstr_localName = try HString(localName);
+    public func GetAttributeNodeNS(namespaceUri : Optional<WinRT.IInspectable>, localName : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlAttribute> {
+        let __hstr_localName = try HString(localName!);
         return try withExtendedLifetime(__hstr_localName) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlAttribute>> = nil;
         try self._n_GetAttributeNodeNS(RawPointer(namespaceUri), __hstr_localName.Raw(), &__result);
@@ -1629,8 +1629,8 @@ open class IXmlNamedNodeMap
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedItem(pThis, name, __presult))
         }
     }
-    public func GetNamedItem(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
-        let __hstr_name = try HString(name);
+    public func GetNamedItem(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
         try self._n_GetNamedItem(__hstr_name.Raw(), &__result);
@@ -1654,8 +1654,8 @@ open class IXmlNamedNodeMap
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveNamedItem(pThis, name, __presult))
         }
     }
-    public func RemoveNamedItem(name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
-        let __hstr_name = try HString(name);
+    public func RemoveNamedItem(name : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
         try self._n_RemoveNamedItem(__hstr_name.Raw(), &__result);
@@ -1668,8 +1668,8 @@ open class IXmlNamedNodeMap
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetNamedItemNS(pThis, namespaceUri, name, __presult))
         }
     }
-    public func GetNamedItemNS(namespaceUri : Optional<WinRT.IInspectable>, name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
-        let __hstr_name = try HString(name);
+    public func GetNamedItemNS(namespaceUri : Optional<WinRT.IInspectable>, name : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
         try self._n_GetNamedItemNS(RawPointer(namespaceUri), __hstr_name.Raw(), &__result);
@@ -1682,8 +1682,8 @@ open class IXmlNamedNodeMap
             try CHECKED(pThis.pointee.lpVtbl.pointee.RemoveNamedItemNS(pThis, namespaceUri, name, __presult))
         }
     }
-    public func RemoveNamedItemNS(namespaceUri : Optional<WinRT.IInspectable>, name : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
-        let __hstr_name = try HString(name);
+    public func RemoveNamedItemNS(namespaceUri : Optional<WinRT.IInspectable>, name : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_name = try HString(name!);
         return try withExtendedLifetime(__hstr_name) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
         try self._n_RemoveNamedItemNS(RawPointer(namespaceUri), __hstr_name.Raw(), &__result);
@@ -2086,8 +2086,8 @@ open class IXmlNodeSelector
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectSingleNode(pThis, xpath, __presult))
         }
     }
-    public func SelectSingleNode(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
-        let __hstr_xpath = try HString(xpath);
+    public func SelectSingleNode(xpath : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_xpath = try HString(xpath!);
         return try withExtendedLifetime(__hstr_xpath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
         try self._n_SelectSingleNode(__hstr_xpath.Raw(), &__result);
@@ -2100,8 +2100,8 @@ open class IXmlNodeSelector
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectNodes(pThis, xpath, __presult))
         }
     }
-    public func SelectNodes(xpath : Swift.String) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
-        let __hstr_xpath = try HString(xpath);
+    public func SelectNodes(xpath : Optional<Swift.String>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
+        let __hstr_xpath = try HString(xpath!);
         return try withExtendedLifetime(__hstr_xpath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>> = nil;
         try self._n_SelectNodes(__hstr_xpath.Raw(), &__result);
@@ -2114,8 +2114,8 @@ open class IXmlNodeSelector
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectSingleNodeNS(pThis, xpath, namespaces, __presult))
         }
     }
-    public func SelectSingleNodeNS(xpath : Swift.String, namespaces : Optional<WinRT.IInspectable>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
-        let __hstr_xpath = try HString(xpath);
+    public func SelectSingleNodeNS(xpath : Optional<Swift.String>, namespaces : Optional<WinRT.IInspectable>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNode> {
+        let __hstr_xpath = try HString(xpath!);
         return try withExtendedLifetime(__hstr_xpath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNode>> = nil;
         try self._n_SelectSingleNodeNS(__hstr_xpath.Raw(), RawPointer(namespaces), &__result);
@@ -2128,8 +2128,8 @@ open class IXmlNodeSelector
             try CHECKED(pThis.pointee.lpVtbl.pointee.SelectNodesNS(pThis, xpath, namespaces, __presult))
         }
     }
-    public func SelectNodesNS(xpath : Swift.String, namespaces : Optional<WinRT.IInspectable>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
-        let __hstr_xpath = try HString(xpath);
+    public func SelectNodesNS(xpath : Optional<Swift.String>, namespaces : Optional<WinRT.IInspectable>) throws -> Optional<Windows.Data.Xml.Dom.IXmlNodeList> {
+        let __hstr_xpath = try HString(xpath!);
         return try withExtendedLifetime(__hstr_xpath) {
         var __result : Optional<UnsafeMutablePointer<_q_CWindows_CData_CXml_CDom_CIXmlNodeList>> = nil;
         try self._n_SelectNodesNS(__hstr_xpath.Raw(), RawPointer(namespaces), &__result);
@@ -2174,8 +2174,8 @@ open class IXmlNodeSerializer
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_InnerText(pThis, value))
         }
     }
-    public func put_InnerText(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_InnerText(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_InnerText(__hstr_value.Raw());
         }
@@ -2223,8 +2223,8 @@ open class IXmlProcessingInstruction
             try CHECKED(pThis.pointee.lpVtbl.pointee.put_Data(pThis, value))
         }
     }
-    public func put_Data(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func put_Data(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_put_Data(__hstr_value.Raw());
         }

@@ -158,8 +158,8 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.Add(pThis, file, metadata, __presult))
         }
     }
-    public func Add(file : Optional<Windows.Storage.IStorageItem>, metadata : Swift.String) throws -> Swift.String {
-        let __hstr_metadata = try HString(metadata);
+    public func Add(file : Optional<Windows.Storage.IStorageItem>, metadata : Optional<Swift.String>) throws -> Swift.String {
+        let __hstr_metadata = try HString(metadata!);
         return try withExtendedLifetime(__hstr_metadata) {
         var __result : Optional<HSTRING> = nil;
         try self._n_Add(RawPointer(file), __hstr_metadata.Raw(), &__result);
@@ -172,8 +172,8 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddOrReplaceOverloadDefaultMetadata(pThis, token, file))
         }
     }
-    public func AddOrReplaceOverloadDefaultMetadata(token : Swift.String, file : Optional<Windows.Storage.IStorageItem>) throws -> Void {
-        let __hstr_token = try HString(token);
+    public func AddOrReplaceOverloadDefaultMetadata(token : Optional<Swift.String>, file : Optional<Windows.Storage.IStorageItem>) throws -> Void {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         try self._n_AddOrReplaceOverloadDefaultMetadata(__hstr_token.Raw(), RawPointer(file));
         }
@@ -184,10 +184,10 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddOrReplace(pThis, token, file, metadata))
         }
     }
-    public func AddOrReplace(token : Swift.String, file : Optional<Windows.Storage.IStorageItem>, metadata : Swift.String) throws -> Void {
-        let __hstr_token = try HString(token);
+    public func AddOrReplace(token : Optional<Swift.String>, file : Optional<Windows.Storage.IStorageItem>, metadata : Optional<Swift.String>) throws -> Void {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
-        let __hstr_metadata = try HString(metadata);
+        let __hstr_metadata = try HString(metadata!);
         return try withExtendedLifetime(__hstr_metadata) {
         try self._n_AddOrReplace(__hstr_token.Raw(), RawPointer(file), __hstr_metadata.Raw());
         }
@@ -199,15 +199,15 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetItemAsync(pThis, token, __presult))
         }
     }
-    public func GetItemAsync(token : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
-        let __hstr_token = try HString(token);
+    public func GetItemAsync(token : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
         try self._n_GetItemAsync(__hstr_token.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
         }
     }
-    public func GetItem(token : Swift.String) async throws -> Optional<Windows.Storage.IStorageItem> {
+    public func GetItem(token : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageItem> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetItemAsync(token: token)!.get())
@@ -222,15 +222,15 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileAsync(pThis, token, __presult))
         }
     }
-    public func GetFileAsync(token : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_token = try HString(token);
+    public func GetFileAsync(token : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_GetFileAsync(__hstr_token.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func GetFile(token : Swift.String) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func GetFile(token : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFileAsync(token: token)!.get())
@@ -245,15 +245,15 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderAsync(pThis, token, __presult))
         }
     }
-    public func GetFolderAsync(token : Swift.String) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_token = try HString(token);
+    public func GetFolderAsync(token : Optional<Swift.String>) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_GetFolderAsync(__hstr_token.Raw(), &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func GetFolder(token : Swift.String) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func GetFolder(token : Optional<Swift.String>) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFolderAsync(token: token)!.get())
@@ -268,15 +268,15 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetItemWithOptionsAsync(pThis, token, options, __presult))
         }
     }
-    public func GetItemWithOptionsAsync(token : Swift.String, options : Windows.Storage.AccessCache.AccessCacheOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
-        let __hstr_token = try HString(token);
+    public func GetItemWithOptionsAsync(token : Optional<Swift.String>, options : Windows.Storage.AccessCache.AccessCacheOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem>> = nil;
         try self._n_GetItemWithOptionsAsync(__hstr_token.Raw(), options, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CIStorageItem(consuming: __result);
         }
     }
-    public func GetItemWithOptions(token : Swift.String, options : Windows.Storage.AccessCache.AccessCacheOptions) async throws -> Optional<Windows.Storage.IStorageItem> {
+    public func GetItemWithOptions(token : Optional<Swift.String>, options : Windows.Storage.AccessCache.AccessCacheOptions) async throws -> Optional<Windows.Storage.IStorageItem> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetItemWithOptionsAsync(token: token, options: options)!.get())
@@ -291,15 +291,15 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFileWithOptionsAsync(pThis, token, options, __presult))
         }
     }
-    public func GetFileWithOptionsAsync(token : Swift.String, options : Windows.Storage.AccessCache.AccessCacheOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
-        let __hstr_token = try HString(token);
+    public func GetFileWithOptionsAsync(token : Optional<Swift.String>, options : Windows.Storage.AccessCache.AccessCacheOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFile>> = nil;
         try self._n_GetFileWithOptionsAsync(__hstr_token.Raw(), options, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFile(consuming: __result);
         }
     }
-    public func GetFileWithOptions(token : Swift.String, options : Windows.Storage.AccessCache.AccessCacheOptions) async throws -> Optional<Windows.Storage.IStorageFile> {
+    public func GetFileWithOptions(token : Optional<Swift.String>, options : Windows.Storage.AccessCache.AccessCacheOptions) async throws -> Optional<Windows.Storage.IStorageFile> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFileWithOptionsAsync(token: token, options: options)!.get())
@@ -314,15 +314,15 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.GetFolderWithOptionsAsync(pThis, token, options, __presult))
         }
     }
-    public func GetFolderWithOptionsAsync(token : Swift.String, options : Windows.Storage.AccessCache.AccessCacheOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
-        let __hstr_token = try HString(token);
+    public func GetFolderWithOptionsAsync(token : Optional<Swift.String>, options : Windows.Storage.AccessCache.AccessCacheOptions) throws -> Optional<ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder> {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder>> = nil;
         try self._n_GetFolderWithOptionsAsync(__hstr_token.Raw(), options, &__result);
         return ClosedGenerics.IAsyncOperation_1__q_CWindows_CStorage_CStorageFolder(consuming: __result);
         }
     }
-    public func GetFolderWithOptions(token : Swift.String, options : Windows.Storage.AccessCache.AccessCacheOptions) async throws -> Optional<Windows.Storage.IStorageFolder> {
+    public func GetFolderWithOptions(token : Optional<Swift.String>, options : Windows.Storage.AccessCache.AccessCacheOptions) async throws -> Optional<Windows.Storage.IStorageFolder> {
         return try await withUnsafeThrowingContinuation { continuation in
             do {
                 return try continuation.resume(returning: self.GetFolderWithOptionsAsync(token: token, options: options)!.get())
@@ -337,8 +337,8 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.Remove(pThis, token))
         }
     }
-    public func Remove(token : Swift.String) throws -> Void {
-        let __hstr_token = try HString(token);
+    public func Remove(token : Optional<Swift.String>) throws -> Void {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         try self._n_Remove(__hstr_token.Raw());
         }
@@ -349,8 +349,8 @@ open class IStorageItemAccessList
             try CHECKED(pThis.pointee.lpVtbl.pointee.ContainsItem(pThis, token, __presult))
         }
     }
-    public func ContainsItem(token : Swift.String) throws -> boolean {
-        let __hstr_token = try HString(token);
+    public func ContainsItem(token : Optional<Swift.String>) throws -> boolean {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
         var __result : boolean = 0;
         try self._n_ContainsItem(__hstr_token.Raw(), &__result);
@@ -455,8 +455,8 @@ open class IStorageItemMostRecentlyUsedList2
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddWithMetadataAndVisibility(pThis, file, metadata, visibility, __presult))
         }
     }
-    public func AddWithMetadataAndVisibility(file : Optional<Windows.Storage.IStorageItem>, metadata : Swift.String, visibility : Windows.Storage.AccessCache.RecentStorageItemVisibility) throws -> Swift.String {
-        let __hstr_metadata = try HString(metadata);
+    public func AddWithMetadataAndVisibility(file : Optional<Windows.Storage.IStorageItem>, metadata : Optional<Swift.String>, visibility : Windows.Storage.AccessCache.RecentStorageItemVisibility) throws -> Swift.String {
+        let __hstr_metadata = try HString(metadata!);
         return try withExtendedLifetime(__hstr_metadata) {
         var __result : Optional<HSTRING> = nil;
         try self._n_AddWithMetadataAndVisibility(RawPointer(file), __hstr_metadata.Raw(), visibility, &__result);
@@ -469,10 +469,10 @@ open class IStorageItemMostRecentlyUsedList2
             try CHECKED(pThis.pointee.lpVtbl.pointee.AddOrReplaceWithMetadataAndVisibility(pThis, token, file, metadata, visibility))
         }
     }
-    public func AddOrReplaceWithMetadataAndVisibility(token : Swift.String, file : Optional<Windows.Storage.IStorageItem>, metadata : Swift.String, visibility : Windows.Storage.AccessCache.RecentStorageItemVisibility) throws -> Void {
-        let __hstr_token = try HString(token);
+    public func AddOrReplaceWithMetadataAndVisibility(token : Optional<Swift.String>, file : Optional<Windows.Storage.IStorageItem>, metadata : Optional<Swift.String>, visibility : Windows.Storage.AccessCache.RecentStorageItemVisibility) throws -> Void {
+        let __hstr_token = try HString(token!);
         return try withExtendedLifetime(__hstr_token) {
-        let __hstr_metadata = try HString(metadata);
+        let __hstr_metadata = try HString(metadata!);
         return try withExtendedLifetime(__hstr_metadata) {
         try self._n_AddOrReplaceWithMetadataAndVisibility(__hstr_token.Raw(), RawPointer(file), __hstr_metadata.Raw(), visibility);
         }

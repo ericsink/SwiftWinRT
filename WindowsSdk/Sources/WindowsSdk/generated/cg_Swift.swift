@@ -611,8 +611,8 @@ public class IVector_1_HSTRING
             try CHECKED(pThis.pointee.lpVtbl.pointee.IndexOf(pThis, value, index, __presult))
         }
     }
-    public func IndexOf(value : Swift.String, index : inout Swift.UInt32) throws -> boolean {
-        let __hstr_value = try HString(value);
+    public func IndexOf(value : Optional<Swift.String>, index : inout Swift.UInt32) throws -> boolean {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         var __result : boolean = 0;
             var _tmp_out_index: UINT32 = 0;
@@ -627,8 +627,8 @@ public class IVector_1_HSTRING
             try CHECKED(pThis.pointee.lpVtbl.pointee.SetAt(pThis, index, value))
         }
     }
-    public func SetAt(index : Swift.UInt32, value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func SetAt(index : Swift.UInt32, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_SetAt(index, __hstr_value.Raw());
         }
@@ -639,8 +639,8 @@ public class IVector_1_HSTRING
             try CHECKED(pThis.pointee.lpVtbl.pointee.InsertAt(pThis, index, value))
         }
     }
-    public func InsertAt(index : Swift.UInt32, value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func InsertAt(index : Swift.UInt32, value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_InsertAt(index, __hstr_value.Raw());
         }
@@ -660,8 +660,8 @@ public class IVector_1_HSTRING
             try CHECKED(pThis.pointee.lpVtbl.pointee.Append(pThis, value))
         }
     }
-    public func Append(value : Swift.String) throws -> Void {
-        let __hstr_value = try HString(value);
+    public func Append(value : Optional<Swift.String>) throws -> Void {
+        let __hstr_value = try HString(value!);
         return try withExtendedLifetime(__hstr_value) {
         try self._n_Append(__hstr_value.Raw());
         }
