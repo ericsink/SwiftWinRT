@@ -225,12 +225,34 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
             },
         ]
 
+    func do_entry(txt : String) throws {
+        if let f = words[txt] {
+            do {
+                try f.f()
+                try tb_error.put_Text(value: "")
+            } catch {
+                try tb_error.put_Text(value: "\(error)")
+            }
+        } else {
+            try tb_error.put_Text(value: "")
+            if let n = Double(txt) {
+                let v = Value.Num(n)
+                stk += [v]
+            } else {
+                let v = Value.Str(txt)
+                stk += [v]
+            }
+        }
+
+        try show_stack()
+    }
+
     let wordsView = try Microsoft.UI.Xaml.Controls.ListView()
     for (name, _) in words {
         try wordsView.Items!.Append(value: TextBlock(text: name, fontSize: 16))
     }
-    // TODO tap on an item in this list should apply it
     try wordsView.put_IsTabStop(value: 0);
+    try wordsView.put_IsItemClickEnabled(value: 1);
 
     let wordsBorder = try Microsoft.UI.Xaml.Controls.Border()
     try wordsBorder.put_BorderThickness(value: Microsoft.UI.Xaml.Thickness(Left: 4, Top: 4, Right: 4, Bottom: 4))
@@ -253,31 +275,21 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
             let txt = try tf.Text!
             // TODO should trim the string
             if txt.count > 0 {
-                if let f = words[txt] {
-                    do {
-                        try f.f()
-                        try tb_error.put_Text(value: "")
-                    } catch {
-                        try tb_error.put_Text(value: "\(error)")
-                    }
-                } else {
-                    try tb_error.put_Text(value: "")
-                    if let n = Double(txt) {
-                        let v = Value.Num(n)
-                        stk += [v]
-                    } else {
-                        let v = Value.Str(txt)
-                        stk += [v]
-                    }
-                }
-
-                try show_stack()
+                try do_entry(txt: txt)
             } else {
                 // enter with an empty string is ignored
             }
         } else {
             // ignore other keys
         }
+    }
+    _ = try wordsView.add_ItemClick
+    {
+        (_, e) in
+        let item = try e!.ClickedItem
+        let tb : Microsoft.UI.Xaml.Controls.ITextBlock = try item!.QueryInterface()
+        let s = try tb.get_Text();
+        try do_entry(txt: s)
     }
 
     let tfBorder = try Microsoft.UI.Xaml.Controls.Border()

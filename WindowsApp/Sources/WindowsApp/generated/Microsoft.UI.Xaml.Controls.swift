@@ -5093,7 +5093,22 @@ open class IItemClickEventArgs
     WinRT.IInspectable
 {
     override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1cf87a70, Data2: 0x6348, Data3 : 0x57ec, Data4 : (0x9e, 0xac, 0xfa, 0x05, 0x65, 0xad, 0xc6, 0x0f)) }
-// method not needed: get_ClickedItem
+    // [IsSpecialName] System.Object get_ClickedItem()
+    private func _n_get_ClickedItem(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<CWinRT.IInspectable>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ClickedItem(pThis, __presult))
+        }
+    }
+    public func get_ClickedItem() throws -> Optional<WinRT.IInspectable> {
+        var __result : Optional<UnsafeMutablePointer<CWinRT.IInspectable>> = nil;
+        try self._n_get_ClickedItem(&__result);
+        return WinRT.IInspectable(consuming: __result);
+    }
+    public var ClickedItem : Optional<WinRT.IInspectable> {
+        get throws {
+            return try get_ClickedItem();
+        }
+    }
 } // IItemClickEventArgs
 
 
@@ -11741,7 +11756,16 @@ public class ItemClickEventArgs
         _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.ItemClickEventArgs")
         try super.init(plok: _self.QueryInterface())
     }
-    // method not needed: get_ClickedItem
+    public func get_ClickedItem() throws -> Optional<WinRT.IInspectable> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemClickEventArgs = try _self.QueryInterface();
+        return try _ifc.get_ClickedItem();
+    }
+    public var ClickedItem : Optional<WinRT.IInspectable> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IItemClickEventArgs = try _self.QueryInterface();
+        return try _ifc.ClickedItem;
+        }
+    }
 }
 
 // type: Microsoft.UI.Xaml.Controls.ItemClickEventHandler

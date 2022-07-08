@@ -2333,7 +2333,7 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgsVtbl
     HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs* This, ULONG* iidCount, IID** iids);
     HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs* This, HSTRING* className);
     HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs* This, TrustLevel* trustLevel);
-    void* unneeded_get_ClickedItem;
+    HRESULT (STDMETHODCALLTYPE* get_ClickedItem)(_q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs* pThis, IInspectable** __pret);
 } _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgsVtbl;
 struct _q_CMicrosoft_CUI_CXaml_CControls_CIItemClickEventArgs
 {
