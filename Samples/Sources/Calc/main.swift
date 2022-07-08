@@ -16,6 +16,13 @@ extension Microsoft.UI.Xaml.Controls.TextBlock {
     }
 }
 
+extension Microsoft.UI.Xaml.Media.SolidColorBrush {
+    public convenience init(color: Windows.UI.Color) throws {
+        try self.init()
+        try self.put_Color(value: color);
+    }
+}
+
 func do_make_window() throws -> Microsoft.UI.Xaml.Window {
     let w = try Microsoft.UI.Xaml.Window();
     try w.put_Title(value: "Hello from Swift");
@@ -38,22 +45,26 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
     try r1.put_Height(value: GridLength(Value: 1, GridUnitType: GridUnitType.Star))
 
     let r2 = try Microsoft.UI.Xaml.Controls.RowDefinition()
-    try r2.put_Height(value: GridLength(Value: 100, GridUnitType: GridUnitType.Pixel))
+    try r2.put_Height(value: GridLength(Value: 40, GridUnitType: GridUnitType.Pixel))
 
     let r3 = try Microsoft.UI.Xaml.Controls.RowDefinition()
-    try r3.put_Height(value: GridLength(Value: 60, GridUnitType: GridUnitType.Pixel))
+    try r3.put_Height(value: GridLength(Value: 80, GridUnitType: GridUnitType.Pixel))
 
     try grid.RowDefinitions!.Append(value: r0)
     try grid.RowDefinitions!.Append(value: r1)
     try grid.RowDefinitions!.Append(value: r2)
     try grid.RowDefinitions!.Append(value: r3)
 
-    let tb_title = try TextBlock(text: "Swifty Calc", fontSize: 48)
-    try grid.Children!.Append(value: tb_title)
-    try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: tb_title, value: 0)
-    try Microsoft.UI.Xaml.Controls.Grid.SetColumn(element: tb_title, value: 0)
+    let titleBorder = try Microsoft.UI.Xaml.Controls.Border()
+    try titleBorder.put_BorderThickness(value: Microsoft.UI.Xaml.Thickness(Left: 4, Top: 4, Right: 4, Bottom: 4))
+    try titleBorder.put_BorderBrush(value: Microsoft.UI.Xaml.Media.SolidColorBrush(color: Microsoft.UI.Colors.Black))
+    try titleBorder.put_Child(value: TextBlock(text: "Swifty Calc", fontSize: 36))
 
-    let tb_error = try TextBlock(text: "", fontSize: 24)
+    try grid.Children!.Append(value: titleBorder)
+    try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: titleBorder, value: 0)
+    try Microsoft.UI.Xaml.Controls.Grid.SetColumn(element: titleBorder, value: 0)
+
+    let tb_error = try TextBlock(text: "", fontSize: 16)
     // TODO foreground text color red
     try grid.Children!.Append(value: tb_error)
     try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: tb_error, value: 2)
@@ -118,7 +129,7 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
 
     func show_stack() throws {
         let a = stk.map { to_string(value: $0) }
-        let s = "\(a)"
+        let s = a.joined(separator: "\r\n")
         try stkView.put_Text(value: s)
         try tf.put_Text(value: "") // TODO not here
     }
@@ -150,6 +161,12 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
             {
                 let x = try pop_number()
                 let res = Value.Num(-x)
+                stk += [res]
+            },
+            "pi":
+            Func
+            {
+                let res = Value.Num(3.14159265358979323846)
                 stk += [res]
             },
             "sqrt":
@@ -212,11 +229,17 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
     for (name, _) in words {
         try wordsView.Items!.Append(value: TextBlock(text: name, fontSize: 16))
     }
-    try wordsView.put_IsTabStop(value: 0);
     // TODO tap on an item in this list should apply it
-    try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: wordsView, value: 1)
-    try Microsoft.UI.Xaml.Controls.Grid.SetColumn(element: wordsView, value: 1)
-    try grid.Children!.Append(value: wordsView)
+    try wordsView.put_IsTabStop(value: 0);
+
+    let wordsBorder = try Microsoft.UI.Xaml.Controls.Border()
+    try wordsBorder.put_BorderThickness(value: Microsoft.UI.Xaml.Thickness(Left: 4, Top: 4, Right: 4, Bottom: 4))
+    try wordsBorder.put_BorderBrush(value: Microsoft.UI.Xaml.Media.SolidColorBrush(color: Microsoft.UI.Colors.Black))
+    try wordsBorder.put_Child(value: wordsView)
+
+    try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: wordsBorder, value: 1)
+    try Microsoft.UI.Xaml.Controls.Grid.SetColumn(element: wordsBorder, value: 1)
+    try grid.Children!.Append(value: wordsBorder)
 
     let tf = try Microsoft.UI.Xaml.Controls.TextBox()
     try tf.put_Text(value: "")
@@ -256,9 +279,15 @@ func do_make_window() throws -> Microsoft.UI.Xaml.Window {
             // ignore other keys
         }
     }
-    try grid.Children!.Append(value: tf)
-    try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: tf, value: 3)
-    try Microsoft.UI.Xaml.Controls.Grid.SetColumn(element: tf, value: 0)
+
+    let tfBorder = try Microsoft.UI.Xaml.Controls.Border()
+    try tfBorder.put_BorderThickness(value: Microsoft.UI.Xaml.Thickness(Left: 4, Top: 4, Right: 4, Bottom: 4))
+    try tfBorder.put_BorderBrush(value: Microsoft.UI.Xaml.Media.SolidColorBrush(color: Microsoft.UI.Colors.Black))
+    try tfBorder.put_Child(value: tf)
+
+    try grid.Children!.Append(value: tfBorder)
+    try Microsoft.UI.Xaml.Controls.Grid.SetRow(element: tfBorder, value: 3)
+    try Microsoft.UI.Xaml.Controls.Grid.SetColumn(element: tfBorder, value: 0)
 
     try w.put_Content(value: grid);
 

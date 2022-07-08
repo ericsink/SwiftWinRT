@@ -413,6 +413,8 @@ typedef struct _q_CMicrosoft_CUI_CInput_CIInputPointerSource _q_CMicrosoft_CUI_C
 typedef struct _q_CMicrosoft_CUI_CInput_CIPointerPoint _q_CMicrosoft_CUI_CInput_CIPointerPoint;
 typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeer;
 typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactory _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactory;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIBorder _q_CMicrosoft_CUI_CXaml_CControls_CIBorder;
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButton _q_CMicrosoft_CUI_CXaml_CControls_CIButton;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory _q_CMicrosoft_CUI_CXaml_CControls_CIButtonFactory;
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics _q_CMicrosoft_CUI_CXaml_CControls_CIButtonStatics;
@@ -1616,6 +1618,57 @@ typedef struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactor
 struct _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactory
 {
     _q_CMicrosoft_CUI_CXaml_CAutomation_CPeers_CIAutomationPeerFactoryVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIBorderVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BorderBrush)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderBrush)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_BorderThickness)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CThickness* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BorderThickness)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CThickness value);
+    HRESULT (STDMETHODCALLTYPE* get_Background)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Background)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CMedia_CIBrush* value);
+    HRESULT (STDMETHODCALLTYPE* get_BackgroundSizing)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BackgroundSizing)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing value);
+    HRESULT (STDMETHODCALLTYPE* get_CornerRadius)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CCornerRadius* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_CornerRadius)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CCornerRadius value);
+    HRESULT (STDMETHODCALLTYPE* get_Padding)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CThickness* __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Padding)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CThickness value);
+    HRESULT (STDMETHODCALLTYPE* get_Child)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_Child)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CIUIElement* value);
+    HRESULT (STDMETHODCALLTYPE* get_ChildTransitions)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_ChildTransitions)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition* value);
+    HRESULT (STDMETHODCALLTYPE* get_BackgroundTransition)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CIBrushTransition** __pret);
+    HRESULT (STDMETHODCALLTYPE* put_BackgroundTransition)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorder* pThis, _q_CMicrosoft_CUI_CXaml_CIBrushTransition* value);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIBorderVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIBorder
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIBorderVtbl* lpVtbl;
+};
+typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStaticsVtbl
+{
+    HRESULT (STDMETHODCALLTYPE* QueryInterface)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* This, REFIID riid, void** ppvObject);
+    ULONG (STDMETHODCALLTYPE* AddRef)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* This);
+    ULONG (STDMETHODCALLTYPE* Release)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* This);
+    HRESULT (STDMETHODCALLTYPE* GetIids)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* This, ULONG* iidCount, IID** iids);
+    HRESULT (STDMETHODCALLTYPE* GetRuntimeClassName)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* This, HSTRING* className);
+    HRESULT (STDMETHODCALLTYPE* GetTrustLevel)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* This, TrustLevel* trustLevel);
+    HRESULT (STDMETHODCALLTYPE* get_BorderBrushProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BorderThicknessProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BackgroundProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_BackgroundSizingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_CornerRadiusProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_PaddingProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+    HRESULT (STDMETHODCALLTYPE* get_ChildTransitionsProperty)(_q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics* pThis, _q_CMicrosoft_CUI_CXaml_CIDependencyProperty** __pret);
+} _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStaticsVtbl;
+struct _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics
+{
+    _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStaticsVtbl* lpVtbl;
 };
 typedef struct _q_CMicrosoft_CUI_CXaml_CControls_CIButtonVtbl
 {

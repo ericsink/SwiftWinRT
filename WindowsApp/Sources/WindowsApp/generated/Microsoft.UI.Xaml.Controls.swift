@@ -13,6 +13,213 @@ extension Microsoft.UI.Xaml.Controls {
 // enum type
 public typealias BackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing;
 
+// type: Microsoft.UI.Xaml.Controls.Border
+// runtime class
+public class Border
+    :
+    Microsoft.UI.Xaml.FrameworkElement
+{
+    private var _self : Microsoft.UI.Xaml.Controls.IBorder;
+    public init(plok: Microsoft.UI.Xaml.Controls.IBorder?) throws {
+        _self = plok!
+        try super.init(plok: _self.QueryInterface())
+    }
+    public func Interface() -> Microsoft.UI.Xaml.Controls.IBorder { return _self; }
+    public override init() throws {
+        _self = try RoActivateInstance("Microsoft.UI.Xaml.Controls.Border")
+        try super.init(plok: _self.QueryInterface())
+    }
+    private struct _IBorderStatics {
+        static var x : IBorderStatics =
+            try! RoGetActivationFactory("Microsoft.UI.Xaml.Controls.Border")
+    }
+    public static var BorderStatics : IBorderStatics {
+        _IBorderStatics.x
+    }
+    public static func get_BorderBrushProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_BorderBrushProperty());
+    }
+    public static func get_BorderThicknessProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_BorderThicknessProperty());
+    }
+    public static func get_BackgroundProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_BackgroundProperty());
+    }
+    public static func get_BackgroundSizingProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_BackgroundSizingProperty());
+    }
+    public static func get_CornerRadiusProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_CornerRadiusProperty());
+    }
+    public static func get_PaddingProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_PaddingProperty());
+    }
+    public static func get_ChildTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.get_ChildTransitionsProperty());
+    }
+    public static var BackgroundProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.BackgroundProperty);
+        }
+    }
+    public static var BackgroundSizingProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.BackgroundSizingProperty);
+        }
+    }
+    public static var BorderBrushProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.BorderBrushProperty);
+        }
+    }
+    public static var BorderThicknessProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.BorderThicknessProperty);
+        }
+    }
+    public static var ChildTransitionsProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.ChildTransitionsProperty);
+        }
+    }
+    public static var CornerRadiusProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.CornerRadiusProperty);
+        }
+    }
+    public static var PaddingProperty : Optional<Microsoft.UI.Xaml.DependencyProperty> {
+        get throws {
+        return try Microsoft.UI.Xaml.DependencyProperty(plok: BorderStatics.PaddingProperty);
+        }
+    }
+    public func get_BorderBrush() throws -> Optional<Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_BorderBrush());
+    }
+    public func put_BorderBrush(value : Optional<Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_BorderBrush(value: value!.Interface());
+    }
+    public func get_BorderThickness() throws -> Microsoft.UI.Xaml.Thickness {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.get_BorderThickness();
+    }
+    public func put_BorderThickness(value : Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_BorderThickness(value: value);
+    }
+    public func get_Background() throws -> Optional<Microsoft.UI.Xaml.Media.Brush> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.get_Background());
+    }
+    public func put_Background(value : Optional<Microsoft.UI.Xaml.Media.Brush>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_Background(value: value!.Interface());
+    }
+    public func get_BackgroundSizing() throws -> Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.get_BackgroundSizing();
+    }
+    public func put_BackgroundSizing(value : Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_BackgroundSizing(value: value);
+    }
+    public func get_CornerRadius() throws -> Microsoft.UI.Xaml.CornerRadius {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.get_CornerRadius();
+    }
+    public func put_CornerRadius(value : Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_CornerRadius(value: value);
+    }
+    public func get_Padding() throws -> Microsoft.UI.Xaml.Thickness {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.get_Padding();
+    }
+    public func put_Padding(value : Microsoft.UI.Xaml.Thickness) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_Padding(value: value);
+    }
+    public func get_Child() throws -> Optional<Microsoft.UI.Xaml.UIElement> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.UIElement(plok: _ifc.get_Child());
+    }
+    public func put_Child(value : Optional<Microsoft.UI.Xaml.UIElement>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_Child(value: value!.Interface());
+    }
+    public func get_ChildTransitions() throws -> Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.get_ChildTransitions());
+    }
+    public func put_ChildTransitions(value : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_ChildTransitions(value: value!.Interface());
+    }
+    public func get_BackgroundTransition() throws -> Optional<Microsoft.UI.Xaml.BrushTransition> {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.BrushTransition(plok: _ifc.get_BackgroundTransition());
+    }
+    public func put_BackgroundTransition(value : Optional<Microsoft.UI.Xaml.BrushTransition>) throws -> Void {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.put_BackgroundTransition(value: value!.Interface());
+    }
+    public var Background : Optional<Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.Background);
+        }
+    }
+    public var BackgroundSizing : Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.BackgroundSizing;
+        }
+    }
+    public var BackgroundTransition : Optional<Microsoft.UI.Xaml.BrushTransition> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.BrushTransition(plok: _ifc.BackgroundTransition);
+        }
+    }
+    public var BorderBrush : Optional<Microsoft.UI.Xaml.Media.Brush> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Brush(plok: _ifc.BorderBrush);
+        }
+    }
+    public var BorderThickness : Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.BorderThickness;
+        }
+    }
+    public var Child : Optional<Microsoft.UI.Xaml.UIElement> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.UIElement(plok: _ifc.Child);
+        }
+    }
+    public var ChildTransitions : Optional<Microsoft.UI.Xaml.Media.Animation.TransitionCollection> {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try Microsoft.UI.Xaml.Media.Animation.TransitionCollection(plok: _ifc.ChildTransitions);
+        }
+    }
+    public var CornerRadius : Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.CornerRadius;
+        }
+    }
+    public var Padding : Microsoft.UI.Xaml.Thickness {
+        get throws {
+        let _ifc : Microsoft.UI.Xaml.Controls.IBorder = try _self.QueryInterface();
+        return try _ifc.Padding;
+        }
+    }
+}
+
 // type: Microsoft.UI.Xaml.Controls.Button
 // runtime class
 open class Button
@@ -1764,6 +1971,363 @@ open class GroupStyleSelector
     // method not needed: SelectGroupStyle
     // instance interface not needed: Microsoft.UI.Xaml.Controls.IGroupStyleSelectorOverrides
 }
+
+// type: Microsoft.UI.Xaml.Controls.IBorder
+// interface type
+open class IBorder
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x1ca13b47, Data2: 0xff5c, Data3 : 0x5abc, Data4 : (0xa4, 0x11, 0xa1, 0x77, 0xdf, 0x94, 0x82, 0xa9)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_BorderBrush()
+    private func _n_get_BorderBrush(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrush(pThis, __presult))
+        }
+    }
+    public func get_BorderBrush() throws -> Optional<Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_BorderBrush(&__result);
+        return Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_BorderBrush(Microsoft.UI.Xaml.Media.Brush)
+    private func _n_put_BorderBrush(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderBrush(pThis, value))
+        }
+    }
+    public func put_BorderBrush(value : Optional<Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_BorderBrush(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_BorderThickness()
+    private func _n_get_BorderThickness(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThickness(pThis, __presult))
+        }
+    }
+    public func get_BorderThickness() throws -> Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_BorderThickness(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BorderThickness(Microsoft.UI.Xaml.Thickness)
+    private func _n_put_BorderThickness(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BorderThickness(pThis, value))
+        }
+    }
+    public func put_BorderThickness(value : Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_BorderThickness(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Brush get_Background()
+    private func _n_get_Background(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Background(pThis, __presult))
+        }
+    }
+    public func get_Background() throws -> Optional<Microsoft.UI.Xaml.Media.IBrush> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>> = nil;
+        try self._n_get_Background(&__result);
+        return Microsoft.UI.Xaml.Media.IBrush(consuming: __result);
+    }
+    // [IsSpecialName] void put_Background(Microsoft.UI.Xaml.Media.Brush)
+    private func _n_put_Background(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CMedia_CIBrush>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Background(pThis, value))
+        }
+    }
+    public func put_Background(value : Optional<Microsoft.UI.Xaml.Media.IBrush>) throws -> Void {
+        try self._n_put_Background(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Controls.BackgroundSizing get_BackgroundSizing()
+    private func _n_get_BackgroundSizing(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizing(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizing() throws -> Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        var __result : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing = _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing_InnerBorderEdge;
+        try self._n_get_BackgroundSizing(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_BackgroundSizing(Microsoft.UI.Xaml.Controls.BackgroundSizing)
+    private func _n_put_BackgroundSizing(_ value : _q_CMicrosoft_CUI_CXaml_CControls_CBackgroundSizing) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BackgroundSizing(pThis, value))
+        }
+    }
+    public func put_BackgroundSizing(value : Microsoft.UI.Xaml.Controls.BackgroundSizing) throws -> Void {
+        try self._n_put_BackgroundSizing(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.CornerRadius get_CornerRadius()
+    private func _n_get_CornerRadius(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CCornerRadius>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadius(pThis, __presult))
+        }
+    }
+    public func get_CornerRadius() throws -> Microsoft.UI.Xaml.CornerRadius {
+        var __result : _q_CMicrosoft_CUI_CXaml_CCornerRadius = _q_CMicrosoft_CUI_CXaml_CCornerRadius(TopLeft: 0, TopRight: 0, BottomRight: 0, BottomLeft: 0);
+        try self._n_get_CornerRadius(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_CornerRadius(Microsoft.UI.Xaml.CornerRadius)
+    private func _n_put_CornerRadius(_ value : _q_CMicrosoft_CUI_CXaml_CCornerRadius) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_CornerRadius(pThis, value))
+        }
+    }
+    public func put_CornerRadius(value : Microsoft.UI.Xaml.CornerRadius) throws -> Void {
+        try self._n_put_CornerRadius(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Thickness get_Padding()
+    private func _n_get_Padding(_ __presult: UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CThickness>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Padding(pThis, __presult))
+        }
+    }
+    public func get_Padding() throws -> Microsoft.UI.Xaml.Thickness {
+        var __result : _q_CMicrosoft_CUI_CXaml_CThickness = _q_CMicrosoft_CUI_CXaml_CThickness(Left: 0, Top: 0, Right: 0, Bottom: 0);
+        try self._n_get_Padding(&__result);
+        return __result;
+    }
+    // [IsSpecialName] void put_Padding(Microsoft.UI.Xaml.Thickness)
+    private func _n_put_Padding(_ value : _q_CMicrosoft_CUI_CXaml_CThickness) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Padding(pThis, value))
+        }
+    }
+    public func put_Padding(value : Microsoft.UI.Xaml.Thickness) throws -> Void {
+        try self._n_put_Padding(value);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.UIElement get_Child()
+    private func _n_get_Child(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_Child(pThis, __presult))
+        }
+    }
+    public func get_Child() throws -> Optional<Microsoft.UI.Xaml.IUIElement> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>> = nil;
+        try self._n_get_Child(&__result);
+        return Microsoft.UI.Xaml.IUIElement(consuming: __result);
+    }
+    // [IsSpecialName] void put_Child(Microsoft.UI.Xaml.UIElement)
+    private func _n_put_Child(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIUIElement>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_Child(pThis, value))
+        }
+    }
+    public func put_Child(value : Optional<Microsoft.UI.Xaml.IUIElement>) throws -> Void {
+        try self._n_put_Child(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.Media.Animation.TransitionCollection get_ChildTransitions()
+    private func _n_get_ChildTransitions(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildTransitions(pThis, __presult))
+        }
+    }
+    public func get_ChildTransitions() throws -> Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        var __result : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>> = nil;
+        try self._n_get_ChildTransitions(&__result);
+        return ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition(consuming: __result);
+    }
+    // [IsSpecialName] void put_ChildTransitions(Microsoft.UI.Xaml.Media.Animation.TransitionCollection)
+    private func _n_put_ChildTransitions(_ value : Optional<UnsafeMutablePointer<_cg_CWindows_CFoundation_CCollections_IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_ChildTransitions(pThis, value))
+        }
+    }
+    public func put_ChildTransitions(value : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition>) throws -> Void {
+        try self._n_put_ChildTransitions(RawPointer(value));
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.BrushTransition get_BackgroundTransition()
+    private func _n_get_BackgroundTransition(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundTransition(pThis, __presult))
+        }
+    }
+    public func get_BackgroundTransition() throws -> Optional<Microsoft.UI.Xaml.IBrushTransition> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>> = nil;
+        try self._n_get_BackgroundTransition(&__result);
+        return Microsoft.UI.Xaml.IBrushTransition(consuming: __result);
+    }
+    // [IsSpecialName] void put_BackgroundTransition(Microsoft.UI.Xaml.BrushTransition)
+    private func _n_put_BackgroundTransition(_ value : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIBrushTransition>>) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorder.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.put_BackgroundTransition(pThis, value))
+        }
+    }
+    public func put_BackgroundTransition(value : Optional<Microsoft.UI.Xaml.IBrushTransition>) throws -> Void {
+        try self._n_put_BackgroundTransition(RawPointer(value));
+    }
+    public var Background : Optional<Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_Background();
+        }
+    }
+    public var BackgroundSizing : Microsoft.UI.Xaml.Controls.BackgroundSizing {
+        get throws {
+            return try get_BackgroundSizing();
+        }
+    }
+    public var BackgroundTransition : Optional<Microsoft.UI.Xaml.IBrushTransition> {
+        get throws {
+            return try get_BackgroundTransition();
+        }
+    }
+    public var BorderBrush : Optional<Microsoft.UI.Xaml.Media.IBrush> {
+        get throws {
+            return try get_BorderBrush();
+        }
+    }
+    public var BorderThickness : Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_BorderThickness();
+        }
+    }
+    public var Child : Optional<Microsoft.UI.Xaml.IUIElement> {
+        get throws {
+            return try get_Child();
+        }
+    }
+    public var ChildTransitions : Optional<ClosedGenerics.IVector_1__q_CMicrosoft_CUI_CXaml_CMedia_CAnimation_CTransition> {
+        get throws {
+            return try get_ChildTransitions();
+        }
+    }
+    public var CornerRadius : Microsoft.UI.Xaml.CornerRadius {
+        get throws {
+            return try get_CornerRadius();
+        }
+    }
+    public var Padding : Microsoft.UI.Xaml.Thickness {
+        get throws {
+            return try get_Padding();
+        }
+    }
+} // IBorder
+
+
+// type: Microsoft.UI.Xaml.Controls.IBorderStatics
+// interface type
+open class IBorderStatics
+    :
+    WinRT.IInspectable
+{
+    override public class var IID : CWinRT.IID { CWinRT.IID(Data1: 0x9385cd66, Data2: 0xc178, Data3 : 0x5176, Data4 : (0xb4, 0xa5, 0x16, 0x0e, 0x00, 0xe9, 0x39, 0x35)) }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderBrushProperty()
+    private func _n_get_BorderBrushProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderBrushProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderBrushProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderBrushProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BorderThicknessProperty()
+    private func _n_get_BorderThicknessProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BorderThicknessProperty(pThis, __presult))
+        }
+    }
+    public func get_BorderThicknessProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BorderThicknessProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundProperty()
+    private func _n_get_BackgroundProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_BackgroundSizingProperty()
+    private func _n_get_BackgroundSizingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_BackgroundSizingProperty(pThis, __presult))
+        }
+    }
+    public func get_BackgroundSizingProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_BackgroundSizingProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_CornerRadiusProperty()
+    private func _n_get_CornerRadiusProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_CornerRadiusProperty(pThis, __presult))
+        }
+    }
+    public func get_CornerRadiusProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_CornerRadiusProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_PaddingProperty()
+    private func _n_get_PaddingProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_PaddingProperty(pThis, __presult))
+        }
+    }
+    public func get_PaddingProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_PaddingProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    // [IsSpecialName] Microsoft.UI.Xaml.DependencyProperty get_ChildTransitionsProperty()
+    private func _n_get_ChildTransitionsProperty(_ __presult: UnsafeMutablePointer<Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>>>?) throws {
+        return try perform(as: _q_CMicrosoft_CUI_CXaml_CControls_CIBorderStatics.self) { pThis in
+            try CHECKED(pThis.pointee.lpVtbl.pointee.get_ChildTransitionsProperty(pThis, __presult))
+        }
+    }
+    public func get_ChildTransitionsProperty() throws -> Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        var __result : Optional<UnsafeMutablePointer<_q_CMicrosoft_CUI_CXaml_CIDependencyProperty>> = nil;
+        try self._n_get_ChildTransitionsProperty(&__result);
+        return Microsoft.UI.Xaml.IDependencyProperty(consuming: __result);
+    }
+    public var BackgroundProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundProperty();
+        }
+    }
+    public var BackgroundSizingProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BackgroundSizingProperty();
+        }
+    }
+    public var BorderBrushProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderBrushProperty();
+        }
+    }
+    public var BorderThicknessProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_BorderThicknessProperty();
+        }
+    }
+    public var ChildTransitionsProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_ChildTransitionsProperty();
+        }
+    }
+    public var CornerRadiusProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_CornerRadiusProperty();
+        }
+    }
+    public var PaddingProperty : Optional<Microsoft.UI.Xaml.IDependencyProperty> {
+        get throws {
+            return try get_PaddingProperty();
+        }
+    }
+} // IBorderStatics
+
 
 // type: Microsoft.UI.Xaml.Controls.IButton
 // interface type
