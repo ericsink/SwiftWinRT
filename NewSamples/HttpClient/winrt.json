@@ -1,0 +1,15 @@
+{
+    "swift_output_dir" : "./Sources/HttpClient/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "classes" :
+    [
+        "Windows.Foundation.Uri",
+        "Windows.Web.Http.HttpClient",
+        "Windows.Web.Http.HttpResponseMessage"
+    ],
+    "interfaces" :
+    [
+        "Windows.Web.Http.IHttpContent"
+    ]
+}
+

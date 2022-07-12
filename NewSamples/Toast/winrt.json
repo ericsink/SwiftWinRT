@@ -1,0 +1,15 @@
+{
+    "swift_output_dir" : "./Sources/Toast/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "classes" :
+    [
+        "Windows.Data.Xml.Dom.XmlDocument",
+        "Windows.UI.Notifications.ToastNotification",
+        "Windows.UI.Notifications.ToastNotifier"
+    ],
+    "statics" :
+    [
+        "Windows.UI.Notifications.ToastNotificationManager"
+    ]
+}
+

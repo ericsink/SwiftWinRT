@@ -1,0 +1,17 @@
+{
+    "swift_output_dir" : "./Sources/SystemIdentification/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "statics" :
+    [
+        "Windows.System.Profile.SystemIdentification",
+        "Windows.Security.Cryptography.CryptographicBuffer"
+    ],
+    "classes" :
+    [
+        "Windows.System.Profile.SystemIdentificationInfo"
+    ],
+    "interfaces" :
+    [
+    ]
+}
+

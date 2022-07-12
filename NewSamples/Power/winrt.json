@@ -1,0 +1,9 @@
+{
+    "swift_output_dir" : "./Sources/Power/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "namespaces" :
+    [
+        "Microsoft.Windows.System.Power"
+    ]
+}
+

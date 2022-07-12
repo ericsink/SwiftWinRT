@@ -1,0 +1,30 @@
+{
+    "swift_output_dir" : "./Sources/XamlApp/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "classes" :
+    [
+        "Microsoft.UI.Xaml.Window",
+        "Microsoft.UI.Xaml.DispatcherTimer",
+        "Microsoft.UI.Xaml.Controls.TextBlock",
+        "Microsoft.UI.Xaml.Controls.TextBox",
+        "Microsoft.UI.Xaml.Controls.StackPanel",
+        "Microsoft.UI.Xaml.Controls.Slider",
+        "Microsoft.UI.Xaml.Controls.Button",
+        "Microsoft.UI.Xaml.Media.LinearGradientBrush",
+        "Microsoft.UI.Xaml.Media.GradientStop",
+        "Microsoft.UI.Colors"
+    ],
+    "interfaces" :
+    [
+        "Microsoft.UI.Xaml.Markup.IXamlMetadataProvider",
+        "Microsoft.UI.Xaml.Markup.IXamlType",
+        "Microsoft.UI.Xaml.Markup.IXamlMember"
+    ],
+    "namespaces" :
+    [
+    ],
+    "blacklist" :
+    [
+    ]
+}
+

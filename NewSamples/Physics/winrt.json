@@ -1,0 +1,28 @@
+{
+    "swift_output_dir" : "./Sources/Physics/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "classes" :
+    [
+        "Microsoft.UI.Xaml.Application",
+        "Microsoft.UI.Xaml.Window",
+        "Microsoft.UI.Xaml.DispatcherTimer",
+        "Microsoft.UI.Colors"
+    ],
+    "interfaces" :
+    [
+        "Microsoft.UI.Xaml.Markup.IXamlMetadataProvider",
+        "Microsoft.UI.Xaml.Markup.IXamlType",
+        "Microsoft.UI.Xaml.Markup.IXamlMember"
+    ],
+    "namespaces" :
+    [
+        "Microsoft.Graphics.Canvas"
+    ],
+    "blacklist" :
+    [
+        "Microsoft.Graphics.Canvas.ICanvasRenderTargetStatics:CreateFromDirect3D11Surface",
+        "Microsoft.Graphics.Canvas.ICanvasRenderTargetStatics:CreateFromDirect3D11SurfaceWithDpi",
+        "Microsoft.Graphics.Canvas.ICanvasRenderTargetStatics:CreateFromDirect3D11SurfaceWithDpiAndAlpha"
+    ]
+}
+

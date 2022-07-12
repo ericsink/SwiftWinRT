@@ -11,6 +11,7 @@ let SwiftWinRT = Package(
     .target(name: "CWinRT"),
     .target(name: "WinRT", dependencies: ["CWinRT"],
             linkerSettings: [
+              .linkedLibrary("Microsoft.WindowsAppRuntime.Bootstrap"),
               .linkedLibrary("Ole32"),
             ]
             ),

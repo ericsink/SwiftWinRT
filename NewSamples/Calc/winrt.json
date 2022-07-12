@@ -1,0 +1,33 @@
+{
+    "swift_output_dir" : "./Sources/Calc/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "classes" :
+    [
+        "Microsoft.UI.Xaml.Window",
+        "Microsoft.UI.Xaml.DispatcherTimer",
+        "Microsoft.UI.Xaml.Controls.TextBlock",
+        "Microsoft.UI.Xaml.Controls.TextBox",
+        "Microsoft.UI.Xaml.Controls.ListView",
+        "Microsoft.UI.Xaml.Controls.Grid",
+        "Microsoft.UI.Xaml.Controls.ColumnDefinition",
+        "Microsoft.UI.Xaml.Controls.RowDefinition",
+        "Microsoft.UI.Xaml.Controls.Border",
+        "Microsoft.UI.Xaml.Controls.ItemClickEventArgs",
+        "Microsoft.UI.Xaml.Input.KeyRoutedEventArgs",
+        "Microsoft.UI.Xaml.Media.SolidColorBrush",
+        "Microsoft.UI.Colors"
+    ],
+    "interfaces" :
+    [
+        "Microsoft.UI.Xaml.Markup.IXamlMetadataProvider",
+        "Microsoft.UI.Xaml.Markup.IXamlType",
+        "Microsoft.UI.Xaml.Markup.IXamlMember"
+    ],
+    "namespaces" :
+    [
+    ],
+    "blacklist" :
+    [
+    ]
+}
+

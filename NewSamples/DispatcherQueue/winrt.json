@@ -1,0 +1,12 @@
+{
+    "swift_output_dir" : "./Sources/DispatcherQueue/generated",
+    "c_output_dir" : "./Sources/C/include",
+    "classes" :
+    [
+        "Windows.System.DispatcherQueueController"
+    ],
+    "interfaces" :
+    [
+    ]
+}
+
